@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -71,9 +69,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -166,9 +162,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -207,7 +201,7 @@
                       "newPage": false,
                       "searchKey": "ecdsa.GenerateKey",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -251,7 +245,7 @@
                       "newPage": false,
                       "searchKey": "ecdsa.PrivateKey.Public",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -438,9 +432,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -459,7 +451,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.BenchmarkGenerateKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -483,7 +475,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.BenchmarkSign",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -507,7 +499,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.BenchmarkVerify",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -531,7 +523,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.Sign",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -553,7 +545,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.SignASN1",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -575,7 +567,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.TestINDCCA",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -599,7 +591,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.TestKeyGeneration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -623,7 +615,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.TestNegativeInputs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -647,7 +639,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.TestNonceSafety",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -671,7 +663,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.TestSignAndVerify",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -695,7 +687,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.TestSignAndVerifyASN1",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -719,7 +711,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.TestVectors",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -743,7 +735,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.TestZeroHashSignature",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -767,7 +759,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.Verify",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -789,7 +781,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.VerifyASN1",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -811,7 +803,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.benchmarkAllCurves",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -834,7 +826,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.fermatInverse",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -857,7 +849,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.fromHex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -880,7 +872,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.hashToInt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -903,7 +895,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.randFieldElement",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -926,7 +918,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.sign",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -949,7 +941,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.signGeneric",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -972,7 +964,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.testAllCurves",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -995,7 +987,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.testINDCCA",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1018,7 +1010,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.testKeyGeneration",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1041,7 +1033,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.testNegativeInputs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1064,7 +1056,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.testNonceSafety",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1087,7 +1079,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.testSignAndVerify",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1110,7 +1102,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.testSignAndVerifyASN1",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1133,7 +1125,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.testZeroHashSignature",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1156,7 +1148,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.verify",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1179,7 +1171,7 @@
                 "newPage": false,
                 "searchKey": "ecdsa.verifyGeneric",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -12,14 +12,14 @@ Package obscuretestdata contains functionality used by tests to more easily work
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DecodeToTempFile" href="#DecodeToTempFile">func DecodeToTempFile(name string) (path string, err error)</a>
 
 ```
 searchKey: obscuretestdata.DecodeToTempFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -32,7 +32,7 @@ DecodeToTempFile decodes the named file to a temporary location. If successful, 
 
 ```
 searchKey: obscuretestdata.ReadFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go

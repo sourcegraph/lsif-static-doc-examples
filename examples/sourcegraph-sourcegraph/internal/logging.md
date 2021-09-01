@@ -22,7 +22,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="logColors" href="#logColors">var logColors</a>
@@ -52,7 +52,7 @@ We'd prefer these in caps, not lowercase, and don't need the 4-character alignme
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrorLogger" href="#ErrorLogger">type ErrorLogger interface</a>
@@ -87,7 +87,7 @@ If this idiom seems strange: [https://github.com/tmrts/go-patterns/blob/master/i
 
 ```
 searchKey: logging.Filter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -98,7 +98,7 @@ func Filter(f func(*log15.Record) bool) Option
 
 ```
 searchKey: logging.ServiceName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -124,14 +124,14 @@ Options control the behavior of a tracer.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Init" href="#Init">func Init(options ...Option)</a>
 
 ```
 searchKey: logging.Init
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -144,7 +144,7 @@ Init initializes log15's root logger based on Sourcegraph-wide logging configura
 
 ```
 searchKey: logging.Log
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -157,7 +157,7 @@ Log logs the given message and context when the given error is defined.
 
 ```
 searchKey: logging.LogEntryLevelString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -170,7 +170,7 @@ For severity field, see [https://cloud.google.com/logging/docs/reference/v2/rest
 
 ```
 searchKey: logging.condensedFormat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

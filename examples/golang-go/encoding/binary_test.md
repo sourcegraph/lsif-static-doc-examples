@@ -18,7 +18,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleByteOrder_get" href="#ExampleByteOrder_get">func ExampleByteOrder_get()</a>

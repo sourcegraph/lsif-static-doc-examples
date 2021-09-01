@@ -65,7 +65,7 @@ It is a library, not a main package, so that other test packages may use its def
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="corsAllowHeader" href="#corsAllowHeader">const corsAllowHeader</a>
@@ -108,7 +108,7 @@ const skipSysReqsEnvVar = "SRC_SKIP_REQS"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="devExtension" href="#devExtension">var devExtension</a>
@@ -250,7 +250,7 @@ var traceThreshold = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="configurationSource" href="#configurationSource">type configurationSource struct{}</a>
@@ -289,7 +289,7 @@ func (c configurationSource) Write(ctx context.Context, input conftypes.RawUnifi
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="InitDB" href="#InitDB">func InitDB() (*sql.DB, error)</a>
@@ -309,7 +309,7 @@ InitDB initializes and returns the global database connection and sets the versi
 
 ```
 searchKey: cli.Main
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -322,7 +322,7 @@ Main is the main entrypoint for the frontend server program.
 
 ```
 searchKey: cli.TestServiceConnections
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -333,7 +333,7 @@ func TestServiceConnections(t *testing.T)
 
 ```
 searchKey: cli.checkSysReqs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -346,7 +346,7 @@ checkSysReqs uses package sysreq to check for the presence of system requirement
 
 ```
 searchKey: cli.comparePostgresDSNs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -359,7 +359,7 @@ comparePostgresDSNs returns an error if one of the given Postgres DSN values are
 
 ```
 searchKey: cli.defaultExternalURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -383,7 +383,7 @@ func gitServers() []string
 
 ```
 searchKey: cli.healthCheckMiddleware
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -405,7 +405,7 @@ func init()
 
 ```
 searchKey: cli.isAllowedOrigin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -416,7 +416,7 @@ func isAllowedOrigin(origin string, allowedOrigins []string) bool
 
 ```
 searchKey: cli.isTrustedOrigin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -429,7 +429,7 @@ isTrustedOrigin returns whether the HTTP request's Origin is trusted to initiate
 
 ```
 searchKey: cli.makeExternalAPI
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -440,7 +440,7 @@ func makeExternalAPI(db dbutil.DB, schema *graphql.Schema, enterprise enterprise
 
 ```
 searchKey: cli.makeInternalAPI
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -462,7 +462,7 @@ func makeRateLimitWatcher() (*graphqlbackend.BasicLimitWatcher, error)
 
 ```
 searchKey: cli.newExternalHTTPHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -475,7 +475,7 @@ newExternalHTTPHandler creates and returns the HTTP handler that serves the app 
 
 ```
 searchKey: cli.newInternalHTTPHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -488,7 +488,7 @@ newInternalHTTPHandler creates and returns the HTTP handler for the internal API
 
 ```
 searchKey: cli.newOutOfBandMigrationRunner
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -501,7 +501,7 @@ newOutOfBandMigrationRunner creates and validates an out of band migrator instan
 
 ```
 searchKey: cli.overrideExtSvcConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -512,7 +512,7 @@ func overrideExtSvcConfig(ctx context.Context, db dbutil.DB) error
 
 ```
 searchKey: cli.overrideGlobalSettings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -523,7 +523,7 @@ func overrideGlobalSettings(ctx context.Context, db dbutil.DB) error
 
 ```
 searchKey: cli.overrideSiteConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -545,7 +545,7 @@ func printConfigValidation()
 
 ```
 searchKey: cli.secureHeadersMiddleware
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -584,7 +584,7 @@ skippedSysReqs returns a list of sysreq names to skip (e.g., "Docker").
 
 ```
 searchKey: cli.validateOutOfBandMigrationRunner
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -595,7 +595,7 @@ func validateOutOfBandMigrationRunner(ctx context.Context, outOfBandMigrationRun
 
 ```
 searchKey: cli.watchPaths
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -610,7 +610,7 @@ Note: This can send many events even if the file content hasn't changed. For exa
 
 ```
 searchKey: cli.watchUpdate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -621,7 +621,7 @@ func watchUpdate(ctx context.Context, path string, update func(context.Context) 
 
 ```
 searchKey: cli.withInternalActor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

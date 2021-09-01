@@ -18,10 +18,6 @@ Package envvar contains helpers for reading common environment variables.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="HTTPAddrInternal" href="#HTTPAddrInternal">var HTTPAddrInternal</a>
 
 ```
@@ -68,10 +64,6 @@ var sourcegraphDotComMode, _ = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DisableProfiler" href="#DisableProfiler">func DisableProfiler() bool</a>
 
 ```
@@ -87,7 +79,7 @@ func DisableProfiler() bool
 
 ```
 searchKey: envvar.MockSourcegraphDotComMode
-tags: [method]
+tags: [function]
 ```
 
 ```Go

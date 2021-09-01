@@ -42,7 +42,7 @@ pipeline.AddStep("check_mark", buildkite.Cmd("./dev/check/all.sh"))
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AfterEveryStepOpts" href="#AfterEveryStepOpts">var AfterEveryStepOpts</a>
@@ -85,7 +85,7 @@ var Plugins = make(map[string]interface{})
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AutomaticRetryOptions" href="#AutomaticRetryOptions">type AutomaticRetryOptions struct</a>
@@ -158,7 +158,7 @@ func (p *Pipeline) AddTrigger(label string, opts ...StepOpt)
 
 ```
 searchKey: buildkite.Pipeline.AddWait
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -230,7 +230,7 @@ type StepOpt func(step *Step)
 
 ```
 searchKey: buildkite.Agent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -241,7 +241,7 @@ func Agent(key, value string) StepOpt
 
 ```
 searchKey: buildkite.ArtifactPaths
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -252,7 +252,7 @@ func ArtifactPaths(paths string) StepOpt
 
 ```
 searchKey: buildkite.Async
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -263,7 +263,7 @@ func Async(async bool) StepOpt
 
 ```
 searchKey: buildkite.AutomaticRetry
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -274,7 +274,7 @@ func AutomaticRetry(limit int) StepOpt
 
 ```
 searchKey: buildkite.Build
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -285,7 +285,7 @@ func Build(buildOptions BuildOptions) StepOpt
 
 ```
 searchKey: buildkite.Cmd
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -296,7 +296,7 @@ func Cmd(command string) StepOpt
 
 ```
 searchKey: buildkite.Concurrency
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -307,7 +307,7 @@ func Concurrency(limit int) StepOpt
 
 ```
 searchKey: buildkite.ConcurrencyGroup
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -318,7 +318,7 @@ func ConcurrencyGroup(group string) StepOpt
 
 ```
 searchKey: buildkite.Env
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -329,7 +329,7 @@ func Env(name, value string) StepOpt
 
 ```
 searchKey: buildkite.SoftFail
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -340,7 +340,7 @@ func SoftFail(softFail bool) StepOpt
 
 ```
 searchKey: buildkite.Trigger
-tags: [method]
+tags: [function]
 ```
 
 ```Go

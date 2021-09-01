@@ -18,7 +18,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="defaultRing" href="#defaultRing">var defaultRing</a>
@@ -46,7 +46,7 @@ var mu sync.RWMutex
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Ring" href="#Ring">type Ring struct</a>
@@ -81,7 +81,7 @@ Default returns the default keyring, if you can avoid using this from arbitrary 
 
 ```
 searchKey: keyring.NewRing
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -93,14 +93,14 @@ NewRing creates a keyring.Ring containing all the keys configured in site config
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Init" href="#Init">func Init(ctx context.Context) error</a>
 
 ```
 searchKey: keyring.Init
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -111,7 +111,7 @@ func Init(ctx context.Context) error
 
 ```
 searchKey: keyring.MockDefault
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -124,7 +124,7 @@ MockDefault overrides the default keyring. Note: This function is defined for te
 
 ```
 searchKey: keyring.NewKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go

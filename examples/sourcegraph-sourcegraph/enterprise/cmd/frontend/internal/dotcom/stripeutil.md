@@ -16,7 +16,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="stripePublishableKey" href="#stripePublishableKey">var stripePublishableKey</a>
@@ -44,14 +44,14 @@ var stripeSecretKey = env.Get("STRIPE_SECRET_KEY", "", "billing: Stripe API secr
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CustomerURL" href="#CustomerURL">func CustomerURL(id string) string</a>
 
 ```
 searchKey: stripeutil.CustomerURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -64,7 +64,7 @@ CustomerURL returns the URL to the customer with the given ID on the billing sys
 
 ```
 searchKey: stripeutil.SubscriptionURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go

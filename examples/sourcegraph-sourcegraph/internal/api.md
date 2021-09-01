@@ -67,7 +67,7 @@ Package api contains an API client and types for cross-service communication.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="InternalClient" href="#InternalClient">var InternalClient</a>
@@ -141,7 +141,7 @@ var requestDuration = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CommitID" href="#CommitID">type CommitID string</a>
@@ -161,7 +161,7 @@ CommitID is the 40-character SHA-1 hash for a Git commit.
 
 ```
 searchKey: api.CommitID.Short
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -267,7 +267,7 @@ Equal returns true if r is equal to s.
 
 ```
 searchKey: api.ExternalRepoSpec.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -557,7 +557,7 @@ A SettingsSubject is something that can have settings. Exactly 1 field must be n
 
 ```
 searchKey: api.SettingsSubject.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -860,14 +860,14 @@ postInternal sends an HTTP post request to the internal route.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="checkAPIResponse" href="#checkAPIResponse">func checkAPIResponse(resp *http.Response) error</a>
 
 ```
 searchKey: api.checkAPIResponse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -878,7 +878,7 @@ func checkAPIResponse(resp *http.Response) error
 
 ```
 searchKey: api.cmp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -9,7 +9,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleParseFile" href="#ExampleParseFile">func ExampleParseFile()</a>

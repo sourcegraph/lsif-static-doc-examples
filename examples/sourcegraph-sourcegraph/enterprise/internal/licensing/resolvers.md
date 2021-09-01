@@ -12,7 +12,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="LicenseResolver" href="#LicenseResolver">type LicenseResolver struct{}</a>
@@ -40,14 +40,14 @@ func (LicenseResolver) EnterpriseLicenseHasFeature(ctx context.Context, args *gr
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestEnterpriseLicenseHasFeature" href="#TestEnterpriseLicenseHasFeature">func TestEnterpriseLicenseHasFeature(t *testing.T)</a>
 
 ```
 searchKey: resolvers.TestEnterpriseLicenseHasFeature
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

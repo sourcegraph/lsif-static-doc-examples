@@ -56,7 +56,7 @@ Package router contains the URL router for the HTTP API.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BitbucketServerWebhooks" href="#BitbucketServerWebhooks">const BitbucketServerWebhooks</a>
@@ -513,14 +513,14 @@ const UsersGetByUsername = "internal.users.get-by-username"
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="New" href="#New">func New(base *mux.Router) *mux.Router</a>
 
 ```
 searchKey: router.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -533,7 +533,7 @@ New creates a new API router with route URL pattern definitions but no handlers 
 
 ```
 searchKey: router.NewInternal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -546,7 +546,7 @@ NewInternal creates a new API router for internal endpoints.
 
 ```
 searchKey: router.addGraphQLRoute
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -557,7 +557,7 @@ func addGraphQLRoute(m *mux.Router)
 
 ```
 searchKey: router.addRegistryRoute
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

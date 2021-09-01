@@ -22,7 +22,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="bbig" href="#bbig">var bbig</a>
@@ -138,14 +138,14 @@ var sbig2 = sbig
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestXGlobal" href="#TestXGlobal">func TestXGlobal(t *testing.T)</a>
 
 ```
 searchKey: embedtest_test.TestXGlobal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -156,7 +156,7 @@ func TestXGlobal(t *testing.T)
 
 ```
 searchKey: embedtest_test.testFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -167,7 +167,7 @@ func testFiles(t *testing.T, f embed.FS, name, data string)
 
 ```
 searchKey: embedtest_test.testString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

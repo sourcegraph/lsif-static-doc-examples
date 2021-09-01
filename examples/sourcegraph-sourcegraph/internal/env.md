@@ -49,7 +49,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CritOut" href="#CritOut">var CritOut</a>
@@ -212,7 +212,7 @@ var locked = false
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BaseConfig" href="#BaseConfig">type BaseConfig struct</a>
@@ -367,7 +367,7 @@ SetMockGetter sets mock to use in place of this packge's Get function.
 
 ```
 searchKey: env.BaseConfig.Validate
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -437,14 +437,14 @@ type envflag struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Ensure" href="#Ensure">func Ensure(name, defaultValue, description string) string</a>
 
 ```
 searchKey: env.Ensure
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -457,7 +457,7 @@ Ensure behaves like Get except that it sets the environment variable if it doesn
 
 ```
 searchKey: env.Get
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -498,7 +498,7 @@ Lock makes later calls to Get fail with a panic. Call this at the beginning of t
 
 ```
 searchKey: env.MustGetDuration
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -511,7 +511,7 @@ MustGetDuration is similar to Get but ensures that the value is a valid time.Dur
 
 ```
 searchKey: env.MustGetInt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -537,7 +537,7 @@ PrintHelp prints a list of all registered environment variables and their descri
 
 ```
 searchKey: env.TestEnvironMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -548,7 +548,7 @@ func TestEnvironMap(t *testing.T)
 
 ```
 searchKey: env.TestLock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -559,7 +559,7 @@ func TestLock(t *testing.T)
 
 ```
 searchKey: env.environMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

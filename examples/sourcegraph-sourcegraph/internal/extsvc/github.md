@@ -237,7 +237,7 @@ Package github implements a GitHub API client.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="VisibilityAll" href="#VisibilityAll">const VisibilityAll</a>
@@ -385,7 +385,7 @@ versionCacheResetTime stores the time until a version cache is reset. It's set t
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrBatchTooLarge" href="#ErrBatchTooLarge">var ErrBatchTooLarge</a>
@@ -614,7 +614,7 @@ var updateRegex = flag.String("update", "", "Update testdata of tests matching t
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="APIError" href="#APIError">type APIError struct</a>
@@ -639,7 +639,7 @@ APIError is an error type returned by Client when the GitHub API responds with a
 
 ```
 searchKey: github.APIError.AccountSuspended
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -650,7 +650,7 @@ func (e *APIError) AccountSuspended() bool
 
 ```
 searchKey: github.APIError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -661,7 +661,7 @@ func (e *APIError) Error() string
 
 ```
 searchKey: github.APIError.Unauthorized
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -706,7 +706,7 @@ AssignedEvent represents an 'assigned' event on a PullRequest.
 
 ```
 searchKey: github.AssignedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -740,7 +740,7 @@ CheckRun represents the status of a checkrun
 
 ```
 searchKey: github.CheckRun.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -773,7 +773,7 @@ CheckSuite represents the status of a checksuite
 
 ```
 searchKey: github.CheckSuite.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -801,7 +801,7 @@ ClosedEvent represents a 'closed' event on a PullRequest.
 
 ```
 searchKey: github.ClosedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -869,7 +869,7 @@ CommitStatus represents the state of a commit context received via the StatusEve
 
 ```
 searchKey: github.CommitStatus.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -934,7 +934,7 @@ ConvertToDraftEvent represents a 'convert_to_draft' event on a pull request.
 
 ```
 searchKey: github.ConvertToDraftEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -985,7 +985,7 @@ ErrPullRequestNotFound is when the requested GitHub Pull Request doesn't exist.
 
 ```
 searchKey: github.ErrPullRequestNotFound.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1037,7 +1037,7 @@ IssueComment represents a comment on an PullRequest that isn't a commit or revie
 
 ```
 searchKey: github.IssueComment.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1085,7 +1085,7 @@ LabelEvent represents a label being added or removed from a pull request
 
 ```
 searchKey: github.LabelEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1115,7 +1115,7 @@ MergedEvent represents a 'merged' event on a given pull request.
 
 ```
 searchKey: github.MergedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1203,7 +1203,7 @@ type PullRequestCommit struct {
 
 ```
 searchKey: github.PullRequestCommit.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1238,7 +1238,7 @@ PullRequestReview represents a review on a given pull request.
 
 ```
 searchKey: github.PullRequestReview.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1276,7 +1276,7 @@ PullRequestReviewComment represents a review comment on a given pull request.
 
 ```
 searchKey: github.PullRequestReviewComment.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1320,7 +1320,7 @@ ReadyForReviewEvent represents a 'ready_for_review' event on a pull request.
 
 ```
 searchKey: github.ReadyForReviewEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1351,7 +1351,7 @@ RenamedTitleEvent represents a 'renamed' event on a given pull request.
 
 ```
 searchKey: github.RenamedTitleEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1380,7 +1380,7 @@ ReopenedEvent represents a 'reopened' event on a pull request.
 
 ```
 searchKey: github.ReopenedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1424,7 +1424,7 @@ Repository is a GitHub repository.
 
 ```
 searchKey: github.convertRestRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1493,7 +1493,7 @@ ReviewDismissedEvent represents a 'review_dismissed' event on a pull request.
 
 ```
 searchKey: github.ReviewDismissedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1524,7 +1524,7 @@ ReviewRequestRemovedEvent represents a 'review_request_removed' event on a pull 
 
 ```
 searchKey: github.ReviewRequestRemovedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1555,7 +1555,7 @@ ReviewRequestedRevent represents a 'review_requested' event on a pull request.
 
 ```
 searchKey: github.ReviewRequestedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1568,7 +1568,7 @@ Key is a unique key identifying this event in the context of its pull request.
 
 ```
 searchKey: github.ReviewRequestedEvent.ReviewerDeleted
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1673,7 +1673,7 @@ UnassignedEvent represents an 'unassigned' event on a pull request.
 
 ```
 searchKey: github.UnassignedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1784,7 +1784,7 @@ All instances use a map of rcache.Cache instances for caching (see the `repoCach
 
 ```
 searchKey: github.NewV3Client
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1799,7 +1799,7 @@ apiURL must point to the base URL of the GitHub API. See the docstring for V3Cli
 
 ```
 searchKey: github.NewV3SearchClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1814,7 +1814,7 @@ apiURL must point to the base URL of the GitHub API. See the docstring for V3Cli
 
 ```
 searchKey: github.newTestClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1825,7 +1825,7 @@ func newTestClient(t *testing.T, cli httpcli.Doer) *V3Client
 
 ```
 searchKey: github.newTestClientWithAuthenticator
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1836,7 +1836,7 @@ func newTestClientWithAuthenticator(t *testing.T, auth auth.Authenticator, cli h
 
 ```
 searchKey: github.newV3Client
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1847,7 +1847,7 @@ func newV3Client(apiURL *url.URL, a auth.Authenticator, resource string, cli htt
 
 ```
 searchKey: github.newV3TestClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2026,7 +2026,7 @@ ListUserRepositories lists GitHub repositories from the specified user. Pages ar
 
 ```
 searchKey: github.V3Client.RateLimitMonitor
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2215,7 +2215,7 @@ V4Client is a GitHub GraphQL API client.
 
 ```
 searchKey: github.NewV4Client
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2230,7 +2230,7 @@ apiURL must point to the base URL of the GitHub API. See the docstring for V4Cli
 
 ```
 searchKey: github.newV4Client
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2360,7 +2360,7 @@ MergePullRequest tries to merge the PullRequest on Github.
 
 ```
 searchKey: github.V4Client.RateLimitMonitor
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2554,7 +2554,7 @@ graphqlErrors describes the errors in a GraphQL response. It contains at least 1
 
 ```
 searchKey: github.graphqlErrors.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2713,14 +2713,14 @@ type versionCache struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="APIRoot" href="#APIRoot">func APIRoot(baseURL *url.URL) (apiURL *url.URL, githubDotCom bool)</a>
 
 ```
 searchKey: github.APIRoot
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2733,7 +2733,7 @@ APIRoot returns the root URL of the API using the base URL of the GitHub instanc
 
 ```
 searchKey: github.ExternalRepoSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2746,7 +2746,7 @@ ExternalRepoSpec returns an api.ExternalRepoSpec that refers to the specified Gi
 
 ```
 searchKey: github.GetExternalAccountData
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2757,7 +2757,7 @@ func GetExternalAccountData(data *extsvc.AccountData) (usr *github.User, tok *oa
 
 ```
 searchKey: github.HTTPErrorCode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2770,7 +2770,7 @@ HTTPErrorCode returns err's HTTP status code, if it is an HTTP error from this p
 
 ```
 searchKey: github.IsNotFound
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2783,7 +2783,7 @@ IsNotFound reports whether err is a GitHub API error of type NOT_FOUND, the equi
 
 ```
 searchKey: github.IsNotMergeable
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2796,7 +2796,7 @@ IsNotMergeable reports whether err is a GitHub API error reporting that a PR was
 
 ```
 searchKey: github.IsRateLimitExceeded
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2809,7 +2809,7 @@ IsRateLimitExceeded reports whether err is a GitHub API error reporting that the
 
 ```
 searchKey: github.SetExternalAccountData
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2820,7 +2820,7 @@ func SetExternalAccountData(data *extsvc.AccountData, user *github.User, token *
 
 ```
 searchKey: github.SplitRepositoryNameWithOwner
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2833,7 +2833,7 @@ SplitRepositoryNameWithOwner splits a GitHub repository's "owner/name" string in
 
 ```
 searchKey: github.TestClient_GetReposByNameWithOwner
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2844,7 +2844,7 @@ func TestClient_GetReposByNameWithOwner(t *testing.T)
 
 ```
 searchKey: github.TestClient_GetRepository
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2857,7 +2857,7 @@ TestClient_GetRepository tests the behavior of GetRepository.
 
 ```
 searchKey: github.TestClient_GetRepository_nonexistent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2870,7 +2870,7 @@ TestClient_GetRepository_nonexistent tests the behavior of GetRepository when ca
 
 ```
 searchKey: github.TestClient_ListOrgRepositories
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2881,7 +2881,7 @@ func TestClient_ListOrgRepositories(t *testing.T)
 
 ```
 searchKey: github.TestClient_ListRepositoriesForSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2892,7 +2892,7 @@ func TestClient_ListRepositoriesForSearch(t *testing.T)
 
 ```
 searchKey: github.TestClient_ListRepositoriesForSearch_incomplete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2903,7 +2903,7 @@ func TestClient_ListRepositoriesForSearch_incomplete(t *testing.T)
 
 ```
 searchKey: github.TestClient_buildGetRepositoriesBatchQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2914,7 +2914,7 @@ func TestClient_buildGetRepositoriesBatchQuery(t *testing.T)
 
 ```
 searchKey: github.TestClosePullRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2925,7 +2925,7 @@ func TestClosePullRequest(t *testing.T)
 
 ```
 searchKey: github.TestCreatePullRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2936,7 +2936,7 @@ func TestCreatePullRequest(t *testing.T)
 
 ```
 searchKey: github.TestCreatePullRequestComment
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2947,7 +2947,7 @@ func TestCreatePullRequestComment(t *testing.T)
 
 ```
 searchKey: github.TestEstimateGraphQLCost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2958,7 +2958,7 @@ func TestEstimateGraphQLCost(t *testing.T)
 
 ```
 searchKey: github.TestGetAuthenticatedUserOrgs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2969,7 +2969,7 @@ func TestGetAuthenticatedUserOrgs(t *testing.T)
 
 ```
 searchKey: github.TestGetAuthenticatedUserV4
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2980,7 +2980,7 @@ func TestGetAuthenticatedUserV4(t *testing.T)
 
 ```
 searchKey: github.TestListAffiliatedRepositories
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2993,7 +2993,7 @@ NOTE: To update VCR for this test, please use the token of "sourcegraph-vcr" for
 
 ```
 searchKey: github.TestListRepositoryCollaborators
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3006,7 +3006,7 @@ NOTE: To update VCR for this test, please use the token of "sourcegraph-vcr" for
 
 ```
 searchKey: github.TestLoadPullRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3017,7 +3017,7 @@ func TestLoadPullRequest(t *testing.T)
 
 ```
 searchKey: github.TestMarkPullRequestReadyForReview
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3028,7 +3028,7 @@ func TestMarkPullRequestReadyForReview(t *testing.T)
 
 ```
 searchKey: github.TestMergePullRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3039,7 +3039,7 @@ func TestMergePullRequest(t *testing.T)
 
 ```
 searchKey: github.TestNewRepoCache
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3050,7 +3050,7 @@ func TestNewRepoCache(t *testing.T)
 
 ```
 searchKey: github.TestReopenPullRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3061,7 +3061,7 @@ func TestReopenPullRequest(t *testing.T)
 
 ```
 searchKey: github.TestSplitRepositoryNameWithOwner
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3072,7 +3072,7 @@ func TestSplitRepositoryNameWithOwner(t *testing.T)
 
 ```
 searchKey: github.TestUnmarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3083,7 +3083,7 @@ func TestUnmarshal(t *testing.T)
 
 ```
 searchKey: github.TestV3Client_WithAuthenticator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3094,7 +3094,7 @@ func TestV3Client_WithAuthenticator(t *testing.T)
 
 ```
 searchKey: github.TestV4Client_WithAuthenticator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3105,7 +3105,7 @@ func TestV4Client_WithAuthenticator(t *testing.T)
 
 ```
 searchKey: github.Test_GetAuthenticatedUserOAuthScopes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3118,7 +3118,7 @@ NOTE: To update VCR for this test, please use the token of "sourcegraph-vcr" for
 
 ```
 searchKey: github.abbreviateRef
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3133,7 +3133,7 @@ Copied from internal/vcs/git to avoid a cyclic import
 
 ```
 searchKey: github.calcDefinitionCost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3144,7 +3144,7 @@ func calcDefinitionCost(def ast.Node) int
 
 ```
 searchKey: github.canonicalizedURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3155,7 +3155,7 @@ func canonicalizedURL(apiURL *url.URL) *url.URL
 
 ```
 searchKey: github.convertRestRepoPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3168,7 +3168,7 @@ convertRestRepoPermissions converts repo information returned by the rest API to
 
 ```
 searchKey: github.doRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3179,7 +3179,7 @@ func doRequest(ctx context.Context, apiURL *url.URL, auth auth.Authenticator, ra
 
 ```
 searchKey: github.estimateGraphQLCost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3192,7 +3192,7 @@ estimateGraphQLCost estimates the cost of the query as described here: [https://
 
 ```
 searchKey: github.filterInPlace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3203,7 +3203,7 @@ func filterInPlace(limitStack []limitDepth, depth int) []limitDepth
 
 ```
 searchKey: github.nameWithOwnerCacheKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3214,7 +3214,7 @@ func nameWithOwnerCacheKey(nameWithOwner string) string
 
 ```
 searchKey: github.newRepoCache
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3227,7 +3227,7 @@ newRepoCache creates a new cache for GitHub repository metadata. The backing sto
 
 ```
 searchKey: github.nodeIDCacheKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3238,7 +3238,7 @@ func nodeIDCacheKey(id string) string
 
 ```
 searchKey: github.normalizeURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3251,7 +3251,7 @@ normalizeURL will attempt to normalize rawURL. If there is an error parsing it, 
 
 ```
 searchKey: github.ownerNameCacheKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3262,7 +3262,7 @@ func ownerNameCacheKey(owner, name string) string
 
 ```
 searchKey: github.pullRequestFragments
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3273,7 +3273,7 @@ func pullRequestFragments(version *semver.Version) (string, error)
 
 ```
 searchKey: github.repoListsAreEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3284,7 +3284,7 @@ func repoListsAreEqual(a []*Repository, b []*Repository) bool
 
 ```
 searchKey: github.stringForRepoList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3295,7 +3295,7 @@ func stringForRepoList(repos []*Repository) string
 
 ```
 searchKey: github.timelineItemTypes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3306,7 +3306,7 @@ func timelineItemTypes(version *semver.Version) (string, error)
 
 ```
 searchKey: github.timelineItemsFragment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3317,7 +3317,7 @@ func timelineItemsFragment(version *semver.Version) (string, error)
 
 ```
 searchKey: github.unmarshal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3330,7 +3330,7 @@ unmarshal wraps json.Unmarshal, but includes extra context in the case of json.U
 
 ```
 searchKey: github.update
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3341,7 +3341,7 @@ func update(name string) bool
 
 ```
 searchKey: github.urlIsGitHubDotCom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/background",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -359,7 +358,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -587,7 +585,7 @@
                       "newPage": false,
                       "searchKey": "background.bulkProcessorWorker.HandlerFunc",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -820,7 +818,7 @@
                       "newPage": false,
                       "searchKey": "background.unknownJobTypeErr.Error",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -843,7 +841,7 @@
                       "newPage": false,
                       "searchKey": "background.unknownJobTypeErr.NonRetryable",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -965,7 +963,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -986,7 +983,7 @@
                 "newPage": false,
                 "searchKey": "background.RegisterMigrations",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1008,7 +1005,7 @@
                 "newPage": false,
                 "searchKey": "background.Routines",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1030,7 +1027,7 @@
                 "newPage": false,
                 "searchKey": "background.TestBulkProcessor",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1054,7 +1051,7 @@
                 "newPage": false,
                 "searchKey": "background.TestReconcilerWorkerView",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1078,7 +1075,7 @@
                 "newPage": false,
                 "searchKey": "background.TestSSHMigrator",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1102,7 +1099,7 @@
                 "newPage": false,
                 "searchKey": "background.TestSiteCredentialMigrator",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1126,7 +1123,7 @@
                 "newPage": false,
                 "searchKey": "background.TestUserCredentialMigrator",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1150,7 +1147,7 @@
                 "newPage": false,
                 "searchKey": "background.assertProgress",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1173,7 +1170,7 @@
                 "newPage": false,
                 "searchKey": "background.assertReturnedChangesetIDs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1196,7 +1193,7 @@
                 "newPage": false,
                 "searchKey": "background.createBulkOperationDBWorkerStore",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1219,7 +1216,7 @@
                 "newPage": false,
                 "searchKey": "background.createPreviouslyEncryptedUserCredential",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1242,7 +1239,7 @@
                 "newPage": false,
                 "searchKey": "background.createReconcilerDBWorkerStore",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1265,7 +1262,7 @@
                 "newPage": false,
                 "searchKey": "background.createUnencryptedUserCredential",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1288,7 +1285,7 @@
                 "newPage": false,
                 "searchKey": "background.makeResetterMetrics",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1311,7 +1308,7 @@
                 "newPage": false,
                 "searchKey": "background.newBulkOperationWorker",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1334,7 +1331,7 @@
                 "newPage": false,
                 "searchKey": "background.newBulkOperationWorkerResetter",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1357,7 +1354,7 @@
                 "newPage": false,
                 "searchKey": "background.newReconcilerWorker",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1380,7 +1377,7 @@
                 "newPage": false,
                 "searchKey": "background.newReconcilerWorkerResetter",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1403,7 +1400,7 @@
                 "newPage": false,
                 "searchKey": "background.newSpecExpireWorker",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1426,7 +1423,7 @@
                 "newPage": false,
                 "searchKey": "background.scanFirstChangesetJobRecord",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1449,7 +1446,7 @@
                 "newPage": false,
                 "searchKey": "background.scanFirstChangesetRecord",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/auth/saml",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -170,7 +169,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -337,7 +335,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -379,7 +376,7 @@
                       "newPage": false,
                       "searchKey": "saml.readAuthnResponse",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -449,7 +446,7 @@
                       "newPage": false,
                       "searchKey": "saml.getProvider",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -472,7 +469,7 @@
                       "newPage": false,
                       "searchKey": "saml.handleGetProvider",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -495,7 +492,7 @@
                       "newPage": false,
                       "searchKey": "saml.provider.CachedInfo",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -518,7 +515,7 @@
                       "newPage": false,
                       "searchKey": "saml.provider.Config",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -541,7 +538,7 @@
                       "newPage": false,
                       "searchKey": "saml.provider.ConfigID",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -587,7 +584,7 @@
                       "newPage": false,
                       "searchKey": "saml.provider.getCachedInfoAndError",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -634,7 +631,7 @@
                       "newPage": false,
                       "searchKey": "saml.readProviderConfig",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -704,7 +701,7 @@
                       "newPage": false,
                       "searchKey": "saml.relayState.encode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -780,7 +777,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -801,7 +797,7 @@
                 "newPage": false,
                 "searchKey": "saml.SignOut",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -823,7 +819,7 @@
                 "newPage": false,
                 "searchKey": "saml.TestMiddleware",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -847,7 +843,7 @@
                 "newPage": false,
                 "searchKey": "saml.TestProviderConfigID",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -871,7 +867,7 @@
                 "newPage": false,
                 "searchKey": "saml.TestReadAuthnResponse",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -895,7 +891,7 @@
                 "newPage": false,
                 "searchKey": "saml.TestValidateCustom",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -919,7 +915,7 @@
                 "newPage": false,
                 "searchKey": "saml.authHandler",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -942,7 +938,7 @@
                 "newPage": false,
                 "searchKey": "saml.buildAuthURLRedirect",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -988,7 +984,7 @@
                 "newPage": false,
                 "searchKey": "saml.getNameIDFormat",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1011,7 +1007,7 @@
                 "newPage": false,
                 "searchKey": "saml.getOrCreateUser",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1057,7 +1053,7 @@
                 "newPage": false,
                 "searchKey": "saml.getServiceProvider",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1126,7 +1122,7 @@
                 "newPage": false,
                 "searchKey": "saml.mightBeEmail",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1149,7 +1145,7 @@
                 "newPage": false,
                 "searchKey": "saml.newLogoutRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1172,7 +1168,7 @@
                 "newPage": false,
                 "searchKey": "saml.newSAMLIDPServer",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1195,7 +1191,7 @@
                 "newPage": false,
                 "searchKey": "saml.providerConfigID",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1218,7 +1214,7 @@
                 "newPage": false,
                 "searchKey": "saml.providerIDQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1241,7 +1237,7 @@
                 "newPage": false,
                 "searchKey": "saml.readIdentityProviderMetadata",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1264,7 +1260,7 @@
                 "newPage": false,
                 "searchKey": "saml.redirectToAuthURL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1287,7 +1283,7 @@
                 "newPage": false,
                 "searchKey": "saml.samlSPHandler",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1310,7 +1306,7 @@
                 "newPage": false,
                 "searchKey": "saml.traceLog",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1333,7 +1329,7 @@
                 "newPage": false,
                 "searchKey": "saml.unexpiredCookies",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1356,7 +1352,7 @@
                 "newPage": false,
                 "searchKey": "saml.unmarshalEntityDescriptor",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1379,7 +1375,7 @@
                 "newPage": false,
                 "searchKey": "saml.validateConfig",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1402,7 +1398,7 @@
                 "newPage": false,
                 "searchKey": "saml.withConfigDefaults",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -209,7 +209,7 @@ Package xcoff implements access to XCOFF (Extended Common Object File Format) fi
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AIAFMAG" href="#AIAFMAG">const AIAFMAG</a>
@@ -1983,7 +1983,7 @@ Auxiliary type
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="archTest" href="#archTest">var archTest</a>
@@ -2011,7 +2011,7 @@ var fileTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Archive" href="#Archive">type Archive struct</a>
@@ -2036,7 +2036,7 @@ Archive represents an open AIX big archive.
 
 ```
 searchKey: xcoff.NewArchive
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2049,7 +2049,7 @@ NewArchive creates a new Archive for accessing an AIX big archive in an underlyi
 
 ```
 searchKey: xcoff.OpenArchive
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2062,7 +2062,7 @@ OpenArchive opens the named archive using os.Open and prepares it for use as an 
 
 ```
 searchKey: xcoff.Archive.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2266,7 +2266,7 @@ A File represents an open XCOFF file.
 
 ```
 searchKey: xcoff.NewFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2279,7 +2279,7 @@ NewFile creates a new File for accessing an XCOFF binary in an underlying reader
 
 ```
 searchKey: xcoff.Open
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2305,7 +2305,7 @@ CSect reads and returns the contents of a csect.
 
 ```
 searchKey: xcoff.File.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2318,7 +2318,7 @@ Close closes the File. If the File was created using NewFile directly instead of
 
 ```
 searchKey: xcoff.File.DWARF
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2329,7 +2329,7 @@ func (f *File) DWARF() (*dwarf.Data, error)
 
 ```
 searchKey: xcoff.File.ImportedLibraries
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2342,7 +2342,7 @@ ImportedLibraries returns the names of all libraries referred to by the binary f
 
 ```
 searchKey: xcoff.File.ImportedSymbols
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2647,7 +2647,7 @@ type Section struct {
 
 ```
 searchKey: xcoff.Section.Data
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2880,14 +2880,14 @@ ReadAt writes len(p) 0s into p.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestOpen" href="#TestOpen">func TestOpen(t *testing.T)</a>
 
 ```
 searchKey: xcoff.TestOpen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2898,7 +2898,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: xcoff.TestOpenArchive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2909,7 +2909,7 @@ func TestOpenArchive(t *testing.T)
 
 ```
 searchKey: xcoff.TestOpenFailure
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2920,7 +2920,7 @@ func TestOpenFailure(t *testing.T)
 
 ```
 searchKey: xcoff.cstring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2933,7 +2933,7 @@ cstring converts ASCII byte sequence b to string. It stops once it finds 0 or re
 
 ```
 searchKey: xcoff.getString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

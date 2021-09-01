@@ -39,7 +39,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MaxDisplayLines" href="#MaxDisplayLines">const MaxDisplayLines</a>
@@ -71,7 +71,7 @@ MaxDisplayWidth is the number of columns that can be used to draw a progress bar
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="braille" href="#braille">var braille</a>
@@ -90,7 +90,7 @@ braille is an animated spinner based off of the characters used by yarn.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrorPayload" href="#ErrorPayload">type ErrorPayload struct</a>
@@ -138,7 +138,7 @@ Limiter implements a counting semaphore.
 
 ```
 searchKey: util.NewLimiter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -164,7 +164,7 @@ Acquire blocks until it can acquire a value from the inner channel.
 
 ```
 searchKey: util.Limiter.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -177,7 +177,7 @@ Close closes the underlying channel.
 
 ```
 searchKey: util.Limiter.Release
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -238,7 +238,7 @@ type pendingMap struct {
 
 ```
 searchKey: util.newPendingMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -262,7 +262,7 @@ func (m *pendingMap) get(i int) bool
 
 ```
 searchKey: util.pendingMap.keys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -295,7 +295,7 @@ func (m *pendingMap) set(i int)
 
 ```
 searchKey: util.pendingMap.size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -305,14 +305,14 @@ func (m *pendingMap) size() int
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="QueryGraphQL" href="#QueryGraphQL">func QueryGraphQL(ctx context.Context, endpoint, queryName string, token, query string, variables map[string]interface{}, target interface{}) error</a>
 
 ```
 searchKey: util.QueryGraphQL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -327,7 +327,7 @@ The queryName is the name of the GraphQL query, which uniquely identifies the so
 
 ```
 searchKey: util.RunParallel
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -353,7 +353,7 @@ SignalSensitiveContext returns a background context that is canceled after recei
 
 ```
 searchKey: util.digits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -366,7 +366,7 @@ digits returns the number of digits of n.
 
 ```
 searchKey: util.formatProgressBar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -379,7 +379,7 @@ formatProgressBar constructs a progress bar string based on the relationship bet
 
 ```
 searchKey: util.formatUpdate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -392,7 +392,7 @@ formatUpdate constructs a content object with a number of lines indicating the i
 
 ```
 searchKey: util.monitor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -405,7 +405,7 @@ monitor waits for all functions to complete, an error, or the context to be canc
 
 ```
 searchKey: util.numLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -418,7 +418,7 @@ numLines determines how many lines to display in formatUpdate.
 
 ```
 searchKey: util.runFunctions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

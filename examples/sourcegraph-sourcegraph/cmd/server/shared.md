@@ -64,10 +64,6 @@ Package shared provides the entrypoint to Sourcegraph's single docker image. It 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="FrontendInternalHost" href="#FrontendInternalHost">const FrontendInternalHost</a>
 
 ```
@@ -115,10 +111,6 @@ const prometheusProcLine = ...
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="DataDir" href="#DataDir">var DataDir</a>
 
@@ -239,10 +231,6 @@ Set verbosity based on simple interpretation of env var to avoid external depend
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="errorFilter" href="#errorFilter">type errorFilter func(err error, out string) bool</a>
 
 ```
@@ -304,7 +292,7 @@ CommandWithFilter is like Command but will not set an error on the command objec
 
 ```
 searchKey: shared.execer.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -385,10 +373,6 @@ func (r *yesReader) Read(p []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Main" href="#Main">func Main()</a>
 
 ```
@@ -406,7 +390,7 @@ Main is the main server command function which is shared between Sourcegraph ser
 
 ```
 searchKey: shared.SetDefaultEnv
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -419,7 +403,7 @@ SetDefaultEnv will set the environment variable if it is not set.
 
 ```
 searchKey: shared.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -430,7 +414,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: shared.TestNginx
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -441,7 +425,7 @@ func TestNginx(t *testing.T)
 
 ```
 searchKey: shared.TestRedisFixAOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -452,7 +436,7 @@ func TestRedisFixAOF(t *testing.T)
 
 ```
 searchKey: shared.TestYesReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -463,7 +447,7 @@ func TestYesReader(t *testing.T)
 
 ```
 searchKey: shared.convertLogLevel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -502,7 +486,7 @@ copySSH will copy the files at /etc/sourcegraph/ssh and put them into ~/.ssh
 
 ```
 searchKey: shared.defaultErrorFilter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -513,7 +497,7 @@ func defaultErrorFilter(err error, out string) bool
 
 ```
 searchKey: shared.fileExists
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -524,7 +508,7 @@ func fileExists(path string) (bool, error)
 
 ```
 searchKey: shared.isPostgresConfigured
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -579,7 +563,7 @@ func maybeRedisCacheProcFile() (string, error)
 
 ```
 searchKey: shared.maybeRedisProcFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -625,7 +609,7 @@ nginxProcFile will return a procfile entry for nginx, as well as setup configura
 
 ```
 searchKey: shared.nginxWriteFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -638,7 +622,7 @@ nginxWriteFiles writes the nginx related configuration files to configDir. It re
 
 ```
 searchKey: shared.pgPrintf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -660,7 +644,7 @@ func postgresProcfile() (string, error)
 
 ```
 searchKey: shared.redisCmd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -671,7 +655,7 @@ func redisCmd(out io.Writer, parts ...string)
 
 ```
 searchKey: shared.redisFixAOF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -684,7 +668,7 @@ redisFixAOF does a best-effort repair of the AOF file in case it is corrupted [h
 
 ```
 searchKey: shared.redisProcFileEntry
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -695,7 +679,7 @@ func redisProcFileEntry(name, conf string) string
 
 ```
 searchKey: shared.tryCreateRedisConf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -15,7 +15,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="uintptrType" href="#uintptrType">var uintptrType</a>
@@ -43,14 +43,14 @@ var unsafePointerType = reflect.TypeOf(unsafe.Pointer(nil))
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestTypeMatchesReflectType" href="#TestTypeMatchesReflectType">func TestTypeMatchesReflectType(t *testing.T)</a>
 
 ```
 searchKey: unsafeheader_test.TestTypeMatchesReflectType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -63,7 +63,7 @@ TestTypeMatchesReflectType ensures that the name and layout of the unsafeheader 
 
 ```
 searchKey: unsafeheader_test.TestWriteThroughHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -78,7 +78,7 @@ This test is expected to fail under -race (which implicitly enables -d=checkptr)
 
 ```
 searchKey: unsafeheader_test.testHeaderMatchesReflect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -89,7 +89,7 @@ func testHeaderMatchesReflect(t *testing.T, header, reflectHeader interface{})
 
 ```
 searchKey: unsafeheader_test.typeCompatible
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

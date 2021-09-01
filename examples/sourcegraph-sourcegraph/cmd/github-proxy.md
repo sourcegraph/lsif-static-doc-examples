@@ -17,10 +17,6 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="port" href="#port">const port</a>
 
 ```
@@ -33,10 +29,6 @@ const port = "3180"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="hopHeaders" href="#hopHeaders">var hopHeaders</a>
 
@@ -88,15 +80,11 @@ requestMu ensures we only do one request at a time to prevent tripping abuse det
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestInstrumentHandler" href="#TestInstrumentHandler">func TestInstrumentHandler(t *testing.T)</a>
 
 ```
 searchKey: main.TestInstrumentHandler
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -107,7 +95,7 @@ func TestInstrumentHandler(t *testing.T)
 
 ```
 searchKey: main.instrumentHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

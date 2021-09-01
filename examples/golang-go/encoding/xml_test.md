@@ -27,7 +27,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Gopher" href="#Gopher">const Gopher</a>
@@ -99,7 +99,7 @@ const Zebra
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Animal" href="#Animal">type Animal int</a>
@@ -150,7 +150,7 @@ type Size int
 
 ```
 searchKey: xml_test.Size.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -171,7 +171,7 @@ func (s *Size) UnmarshalText(text []byte) error
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleEncoder" href="#ExampleEncoder">func ExampleEncoder()</a>

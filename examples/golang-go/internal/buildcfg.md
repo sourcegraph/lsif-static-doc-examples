@@ -46,7 +46,7 @@ Note that it does NOT provide access to the build configuration used to build th
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Error" href="#Error">var Error</a>
@@ -254,7 +254,7 @@ var regabiSupported = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="gowasmFeatures" href="#gowasmFeatures">type gowasmFeatures struct</a>
@@ -286,7 +286,7 @@ func gowasm() (f gowasmFeatures)
 
 ```
 searchKey: buildcfg.gowasmFeatures.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -296,7 +296,7 @@ func (f gowasmFeatures) String() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AllExperiments" href="#AllExperiments">func AllExperiments() []string</a>
@@ -366,7 +366,7 @@ func Getgoextlinkenabled() string
 
 ```
 searchKey: buildcfg.envOr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -377,7 +377,7 @@ func envOr(key, value string) string
 
 ```
 searchKey: buildcfg.expList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

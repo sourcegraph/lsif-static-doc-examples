@@ -27,9 +27,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -3110,9 +3108,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -5941,9 +5937,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -6116,7 +6110,7 @@
                       "newPage": false,
                       "searchKey": "x509.CertPool.Subjects",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -6207,7 +6201,7 @@
                       "newPage": false,
                       "searchKey": "x509.CertPool.copy",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6253,7 +6247,7 @@
                       "newPage": false,
                       "searchKey": "x509.CertPool.len",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6322,7 +6316,7 @@
                       "newPage": false,
                       "searchKey": "x509.ParseCertificate",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -6344,7 +6338,7 @@
                       "newPage": false,
                       "searchKey": "x509.certificateFromPEM",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6367,7 +6361,7 @@
                       "newPage": false,
                       "searchKey": "x509.exportCertificate",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6390,7 +6384,7 @@
                       "newPage": false,
                       "searchKey": "x509.generateCert",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6413,7 +6407,7 @@
                       "newPage": false,
                       "searchKey": "x509.makeConstraintsCACert",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6436,7 +6430,7 @@
                       "newPage": false,
                       "searchKey": "x509.makeConstraintsLeafCert",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6459,7 +6453,7 @@
                       "newPage": false,
                       "searchKey": "x509.parseCertificate",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6482,7 +6476,7 @@
                       "newPage": false,
                       "searchKey": "x509.serialiseAndParse",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6705,7 +6699,7 @@
                       "newPage": false,
                       "searchKey": "x509.Certificate.getSANExtension",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6728,7 +6722,7 @@
                       "newPage": false,
                       "searchKey": "x509.Certificate.hasNameConstraints",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6751,7 +6745,7 @@
                       "newPage": false,
                       "searchKey": "x509.Certificate.hasSANExtension",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6843,7 +6837,7 @@
                       "newPage": false,
                       "searchKey": "x509.CertificateInvalidError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -6888,7 +6882,7 @@
                       "newPage": false,
                       "searchKey": "x509.ParseCertificateRequest",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -6910,7 +6904,7 @@
                       "newPage": false,
                       "searchKey": "x509.marshalAndParseCSR",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6933,7 +6927,7 @@
                       "newPage": false,
                       "searchKey": "x509.parseCertificateRequest",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6956,7 +6950,7 @@
                       "newPage": false,
                       "searchKey": "x509.CertificateRequest.CheckSignature",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -7001,7 +6995,7 @@
                       "newPage": false,
                       "searchKey": "x509.ConstraintViolationError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -7046,7 +7040,7 @@
                       "newPage": false,
                       "searchKey": "x509.extKeyUsageFromOID",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7092,7 +7086,7 @@
                       "newPage": false,
                       "searchKey": "x509.HostnameError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -7137,7 +7131,7 @@
                       "newPage": false,
                       "searchKey": "x509.InsecureAlgorithmError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -7204,7 +7198,7 @@
                       "newPage": false,
                       "searchKey": "x509.parseKeyUsageExtension",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7272,7 +7266,7 @@
                       "newPage": false,
                       "searchKey": "x509.getPublicKeyAlgorithmFromOID",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7295,7 +7289,7 @@
                       "newPage": false,
                       "searchKey": "x509.PublicKeyAlgorithm.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -7362,7 +7356,7 @@
                       "newPage": false,
                       "searchKey": "x509.getSignatureAlgorithmFromAI",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7385,7 +7379,7 @@
                       "newPage": false,
                       "searchKey": "x509.SignatureAlgorithm.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -7407,7 +7401,7 @@
                       "newPage": false,
                       "searchKey": "x509.SignatureAlgorithm.isRSAPSS",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7453,7 +7447,7 @@
                       "newPage": false,
                       "searchKey": "x509.SystemRootsError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -7475,7 +7469,7 @@
                       "newPage": false,
                       "searchKey": "x509.SystemRootsError.Unwrap",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -7520,7 +7514,7 @@
                       "newPage": false,
                       "searchKey": "x509.UnhandledCriticalExtension.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -7565,7 +7559,7 @@
                       "newPage": false,
                       "searchKey": "x509.UnknownAuthorityError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -7702,7 +7696,7 @@
                       "newPage": false,
                       "searchKey": "x509.brokenSigner.Public",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -8209,7 +8203,7 @@
                       "newPage": false,
                       "searchKey": "x509.cipherByKey",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -8232,7 +8226,7 @@
                       "newPage": false,
                       "searchKey": "x509.cipherByName",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -8302,7 +8296,7 @@
                       "newPage": false,
                       "searchKey": "x509.parseRFC2821Mailbox",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -8446,9 +8440,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -8467,7 +8459,7 @@
                 "newPage": false,
                 "searchKey": "x509.BenchmarkCreateCertificate",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8491,7 +8483,7 @@
                 "newPage": false,
                 "searchKey": "x509.BenchmarkParseCertificate",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8515,7 +8507,7 @@
                 "newPage": false,
                 "searchKey": "x509.CreateCertificate",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8537,7 +8529,7 @@
                 "newPage": false,
                 "searchKey": "x509.CreateCertificateRequest",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8559,7 +8551,7 @@
                 "newPage": false,
                 "searchKey": "x509.CreateRevocationList",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8581,7 +8573,7 @@
                 "newPage": false,
                 "searchKey": "x509.DecryptPEMBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "deprecated"
                 ]
               },
@@ -8604,7 +8596,7 @@
                 "newPage": false,
                 "searchKey": "x509.EncryptPEMBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "deprecated"
                 ]
               },
@@ -8627,7 +8619,7 @@
                 "newPage": false,
                 "searchKey": "x509.IsEncryptedPEMBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "deprecated"
                 ]
               },
@@ -8650,7 +8642,7 @@
                 "newPage": false,
                 "searchKey": "x509.MarshalECPrivateKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8672,7 +8664,7 @@
                 "newPage": false,
                 "searchKey": "x509.MarshalPKCS1PrivateKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8694,7 +8686,7 @@
                 "newPage": false,
                 "searchKey": "x509.MarshalPKCS1PublicKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8716,7 +8708,7 @@
                 "newPage": false,
                 "searchKey": "x509.MarshalPKCS8PrivateKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8738,7 +8730,7 @@
                 "newPage": false,
                 "searchKey": "x509.MarshalPKIXPublicKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8760,7 +8752,7 @@
                 "newPage": false,
                 "searchKey": "x509.ParseCRL",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8782,7 +8774,7 @@
                 "newPage": false,
                 "searchKey": "x509.ParseCertificates",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8804,7 +8796,7 @@
                 "newPage": false,
                 "searchKey": "x509.ParseDERCRL",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8826,7 +8818,7 @@
                 "newPage": false,
                 "searchKey": "x509.ParseECPrivateKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8848,7 +8840,7 @@
                 "newPage": false,
                 "searchKey": "x509.ParsePKCS1PrivateKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8870,7 +8862,7 @@
                 "newPage": false,
                 "searchKey": "x509.ParsePKCS1PublicKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8892,7 +8884,7 @@
                 "newPage": false,
                 "searchKey": "x509.ParsePKCS8PrivateKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8914,7 +8906,7 @@
                 "newPage": false,
                 "searchKey": "x509.ParsePKIXPublicKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8936,7 +8928,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestASN1BitLength",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8960,7 +8952,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestAdditionFieldsInGeneralSubtree",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8984,7 +8976,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestBadIPMask",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9008,7 +9000,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestBadNamesInConstraints",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9032,7 +9024,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestBadNamesInSANs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9056,7 +9048,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCRLCreation",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9080,7 +9072,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCRLWithoutExpiry",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9104,7 +9096,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCertificateEqualOnNil",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9128,7 +9120,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCertificateParse",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9152,7 +9144,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCertificateRequestOverrides",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9176,7 +9168,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCertificateRequestRoundtripFields",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9200,7 +9192,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestConstraintCases",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9224,7 +9216,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCreateCertificateBrokenSigner",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9248,7 +9240,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCreateCertificateMD5",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9272,7 +9264,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCreateCertificateRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9296,7 +9288,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCreateRevocationList",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9320,7 +9312,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCreateSelfSignedCertificate",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9344,7 +9336,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCriticalFlagInCSRRequestedExtensions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9368,7 +9360,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestCriticalNameConstraintWithUnknownType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9392,7 +9384,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestDecrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9416,7 +9408,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestECDSA",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9440,7 +9432,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestECMismatchKeyFormat",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9464,7 +9456,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestEd25519SelfSigned",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9488,7 +9480,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestEmptyNameConstraints",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9512,7 +9504,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestEmptySubject",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9536,7 +9528,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestEncrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9560,7 +9552,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestGoVerify",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9584,7 +9576,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestIA5SANEnforcement",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9608,7 +9600,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestISOOIDInCertificate",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9632,7 +9624,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestImports",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9656,7 +9648,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestIncompleteBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9680,7 +9672,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestInsecureAlgorithmErrorString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9704,7 +9696,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestLongChain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9728,7 +9720,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestMD5",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9752,7 +9744,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestMarshalRSAPrivateKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9776,7 +9768,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestMarshalRSAPublicKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9800,7 +9792,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestMatchHostnames",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9824,7 +9816,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestMatchIP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9848,7 +9840,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestMaxPathLen",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9872,7 +9864,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestMaxPathLenNotCA",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9896,7 +9888,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestMismatchedSignatureAlgorithm",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9920,7 +9912,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestMultipleRDN",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9944,7 +9936,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestMultipleURLsInCRLDP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9968,7 +9960,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestNameConstraints",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9992,7 +9984,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestNoAuthorityKeyIdInSelfSignedCert",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10016,7 +10008,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestNoSubjectKeyIdInCert",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10040,7 +10032,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestPKCS1MismatchKeyFormat",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10064,7 +10056,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestPKCS1MismatchPublicKeyFormat",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10088,7 +10080,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestPKCS8",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10112,7 +10104,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestPKCS8MismatchKeyFormat",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10136,7 +10128,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestPKIXMismatchPublicKeyFormat",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10160,7 +10152,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestPKIXNameString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10184,7 +10176,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestParseCertificateRawEquals",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10208,7 +10200,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestParseCertificateRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10232,7 +10224,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestParseCertificateWithDSASignatureAlgorithm",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10256,7 +10248,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestParseCertificateWithDsaPublicKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10280,7 +10272,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestParseDERCRL",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10304,7 +10296,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestParseECPrivateKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10328,7 +10320,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestParsePEMCRL",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10352,7 +10344,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestParsePKCS1PrivateKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10376,7 +10368,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestParsePKIXPublicKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10400,7 +10392,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestPathologicalChain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10424,7 +10416,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestRDNSequenceString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10448,7 +10440,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestRFC2821Parsing",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10472,7 +10464,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestRSAMissingNULLParameters",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10496,7 +10488,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestRSAPSAParameters",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10520,7 +10512,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestRSAPSSSelfSigned",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10544,7 +10536,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestSigAlgMismatch",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10568,7 +10560,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestSystemCertPool",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10592,7 +10584,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestSystemRoots",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10616,7 +10608,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestSystemRootsError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10640,7 +10632,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestSystemRootsErrorUnwrap",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10664,7 +10656,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestSystemVerify",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10688,7 +10680,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestUnknownAuthorityError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10712,7 +10704,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestUnknownExtKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10736,7 +10728,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestValidHostname",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10760,7 +10752,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestVerifyCertificateWithDSASignature",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10784,7 +10776,7 @@
                 "newPage": false,
                 "searchKey": "x509.TestVerifyEmptyCertificate",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10808,7 +10800,7 @@
                 "newPage": false,
                 "searchKey": "x509.addConstraintsToTemplate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10831,7 +10823,7 @@
                 "newPage": false,
                 "searchKey": "x509.allCerts",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10854,7 +10846,7 @@
                 "newPage": false,
                 "searchKey": "x509.appendToFreshChain",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10877,7 +10869,7 @@
                 "newPage": false,
                 "searchKey": "x509.asn1BitLength",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10900,7 +10892,7 @@
                 "newPage": false,
                 "searchKey": "x509.bigFromHexString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10923,7 +10915,7 @@
                 "newPage": false,
                 "searchKey": "x509.bigFromString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10946,7 +10938,7 @@
                 "newPage": false,
                 "searchKey": "x509.buildCSRExtensions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10969,7 +10961,7 @@
                 "newPage": false,
                 "searchKey": "x509.buildCertExtensions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10992,7 +10984,7 @@
                 "newPage": false,
                 "searchKey": "x509.certPoolEqual",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11015,7 +11007,7 @@
                 "newPage": false,
                 "searchKey": "x509.chainToDebugString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11038,7 +11030,7 @@
                 "newPage": false,
                 "searchKey": "x509.checkChainForKeyUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11061,7 +11053,7 @@
                 "newPage": false,
                 "searchKey": "x509.checkSignature",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11084,7 +11076,7 @@
                 "newPage": false,
                 "searchKey": "x509.customConstraintsExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11107,7 +11099,7 @@
                 "newPage": false,
                 "searchKey": "x509.domainToReverseLabels",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11130,7 +11122,7 @@
                 "newPage": false,
                 "searchKey": "x509.expectAuthorityUnknown",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11153,7 +11145,7 @@
                 "newPage": false,
                 "searchKey": "x509.expectExpired",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11176,7 +11168,7 @@
                 "newPage": false,
                 "searchKey": "x509.expectHashError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11199,7 +11191,7 @@
                 "newPage": false,
                 "searchKey": "x509.expectHostnameError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11222,7 +11214,7 @@
                 "newPage": false,
                 "searchKey": "x509.expectNameConstraintsError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11245,7 +11237,7 @@
                 "newPage": false,
                 "searchKey": "x509.expectNotAuthorizedError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11268,7 +11260,7 @@
                 "newPage": false,
                 "searchKey": "x509.expectUnhandledCriticalExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11291,7 +11283,7 @@
                 "newPage": false,
                 "searchKey": "x509.expectUsageError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11314,7 +11306,7 @@
                 "newPage": false,
                 "searchKey": "x509.forEachSAN",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11337,7 +11329,7 @@
                 "newPage": false,
                 "searchKey": "x509.fromBase10",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11360,7 +11352,7 @@
                 "newPage": false,
                 "searchKey": "x509.fromBase64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11429,7 +11421,7 @@
                 "newPage": false,
                 "searchKey": "x509.isIA5String",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11452,7 +11444,7 @@
                 "newPage": false,
                 "searchKey": "x509.isPrintable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11475,7 +11467,7 @@
                 "newPage": false,
                 "searchKey": "x509.isRootCertificate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11498,7 +11490,7 @@
                 "newPage": false,
                 "searchKey": "x509.isValidIPMask",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11521,7 +11513,7 @@
                 "newPage": false,
                 "searchKey": "x509.marshalBasicConstraints",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11544,7 +11536,7 @@
                 "newPage": false,
                 "searchKey": "x509.marshalCertificatePolicies",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11567,7 +11559,7 @@
                 "newPage": false,
                 "searchKey": "x509.marshalECPrivateKeyWithOID",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11590,7 +11582,7 @@
                 "newPage": false,
                 "searchKey": "x509.marshalExtKeyUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11613,7 +11605,7 @@
                 "newPage": false,
                 "searchKey": "x509.marshalKeyUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11636,7 +11628,7 @@
                 "newPage": false,
                 "searchKey": "x509.marshalPublicKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11659,7 +11651,7 @@
                 "newPage": false,
                 "searchKey": "x509.marshalSANs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11682,7 +11674,7 @@
                 "newPage": false,
                 "searchKey": "x509.matchDomainConstraint",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11705,7 +11697,7 @@
                 "newPage": false,
                 "searchKey": "x509.matchEmailConstraint",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11728,7 +11720,7 @@
                 "newPage": false,
                 "searchKey": "x509.matchExactly",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11751,7 +11743,7 @@
                 "newPage": false,
                 "searchKey": "x509.matchHostnames",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11774,7 +11766,7 @@
                 "newPage": false,
                 "searchKey": "x509.matchIPConstraint",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11797,7 +11789,7 @@
                 "newPage": false,
                 "searchKey": "x509.matchURIConstraint",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11820,7 +11812,7 @@
                 "newPage": false,
                 "searchKey": "x509.nameToKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11843,7 +11835,7 @@
                 "newPage": false,
                 "searchKey": "x509.namedCurveFromOID",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11866,7 +11858,7 @@
                 "newPage": false,
                 "searchKey": "x509.newRawAttributes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11889,7 +11881,7 @@
                 "newPage": false,
                 "searchKey": "x509.oidFromExtKeyUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11912,7 +11904,7 @@
                 "newPage": false,
                 "searchKey": "x509.oidFromNamedCurve",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11935,7 +11927,7 @@
                 "newPage": false,
                 "searchKey": "x509.oidInExtensions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11958,7 +11950,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseAI",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11981,7 +11973,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseASN1String",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12004,7 +11996,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseBasicConstraintsExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12027,7 +12019,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseCIDR",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12050,7 +12042,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseCSRExtensions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12073,7 +12065,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseCertificatePoliciesExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12096,7 +12088,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseECPrivateKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12119,7 +12111,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseEKUs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12142,7 +12134,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseExtKeyUsageExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12165,7 +12157,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12188,7 +12180,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseName",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12211,7 +12203,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseNameConstraintsExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12234,7 +12226,7 @@
                 "newPage": false,
                 "searchKey": "x509.parsePublicKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12257,7 +12249,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseRawAttributes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12280,7 +12272,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseSANExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12303,7 +12295,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseURI",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12326,7 +12318,7 @@
                 "newPage": false,
                 "searchKey": "x509.parseValidity",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12349,7 +12341,7 @@
                 "newPage": false,
                 "searchKey": "x509.processExtensions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12372,7 +12364,7 @@
                 "newPage": false,
                 "searchKey": "x509.reverseBitsInAByte",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12395,7 +12387,7 @@
                 "newPage": false,
                 "searchKey": "x509.signaturePublicKeyAlgoMismatchError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12418,7 +12410,7 @@
                 "newPage": false,
                 "searchKey": "x509.signingParamsForPublicKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12441,7 +12433,7 @@
                 "newPage": false,
                 "searchKey": "x509.sslTrustSettingsResult",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12464,7 +12456,7 @@
                 "newPage": false,
                 "searchKey": "x509.subjectBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12487,7 +12479,7 @@
                 "newPage": false,
                 "searchKey": "x509.testChainAgainstOpenSSL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12510,7 +12502,7 @@
                 "newPage": false,
                 "searchKey": "x509.testParsePKIXPublicKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12533,7 +12525,7 @@
                 "newPage": false,
                 "searchKey": "x509.testVerify",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12556,7 +12548,7 @@
                 "newPage": false,
                 "searchKey": "x509.testingKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12579,7 +12571,7 @@
                 "newPage": false,
                 "searchKey": "x509.toLowerCaseASCII",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12602,7 +12594,7 @@
                 "newPage": false,
                 "searchKey": "x509.validHostname",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12625,7 +12617,7 @@
                 "newPage": false,
                 "searchKey": "x509.validHostnameInput",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12648,7 +12640,7 @@
                 "newPage": false,
                 "searchKey": "x509.validHostnamePattern",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12671,7 +12663,7 @@
                 "newPage": false,
                 "searchKey": "x509.writePEMsToTempFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -236,9 +234,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1264,9 +1260,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1394,7 +1388,7 @@
                       "newPage": false,
                       "searchKey": "build.Context.SrcDirs",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1462,7 +1456,7 @@
                       "newPage": false,
                       "searchKey": "build.Context.gopath",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1898,7 +1892,7 @@
                       "newPage": false,
                       "searchKey": "build.MultiplePackageError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1943,7 +1937,7 @@
                       "newPage": false,
                       "searchKey": "build.NoGoError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1988,7 +1982,7 @@
                       "newPage": false,
                       "searchKey": "build.Import",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -2010,7 +2004,7 @@
                       "newPage": false,
                       "searchKey": "build.ImportDir",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -2032,7 +2026,7 @@
                       "newPage": false,
                       "searchKey": "build.Package.IsCommand",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2078,7 +2072,7 @@
                       "newPage": false,
                       "searchKey": "build.depsParser.nextList",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2101,7 +2095,7 @@
                       "newPage": false,
                       "searchKey": "build.depsParser.nextToken",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2240,7 +2234,7 @@
                       "newPage": false,
                       "searchKey": "build.newImportReader",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2332,7 +2326,7 @@
                       "newPage": false,
                       "searchKey": "build.importReader.readByte",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2355,7 +2349,7 @@
                       "newPage": false,
                       "searchKey": "build.importReader.readByteNoBuf",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2378,7 +2372,7 @@
                       "newPage": false,
                       "searchKey": "build.importReader.readIdent",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2401,7 +2395,7 @@
                       "newPage": false,
                       "searchKey": "build.importReader.readImport",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2447,7 +2441,7 @@
                       "newPage": false,
                       "searchKey": "build.importReader.readString",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2470,7 +2464,7 @@
                       "newPage": false,
                       "searchKey": "build.importReader.syntaxError",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2517,7 +2511,7 @@
                       "newPage": false,
                       "searchKey": "build.readNopCloser.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2568,9 +2562,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2589,7 +2581,7 @@
                 "newPage": false,
                 "searchKey": "build.ArchChar",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2611,7 +2603,7 @@
                 "newPage": false,
                 "searchKey": "build.IsLocalImport",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2633,7 +2625,7 @@
                 "newPage": false,
                 "searchKey": "build.TestCgoImportsIgnored",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2657,7 +2649,7 @@
                 "newPage": false,
                 "searchKey": "build.TestDependencies",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2681,7 +2673,7 @@
                 "newPage": false,
                 "searchKey": "build.TestDotSlashImport",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2705,7 +2697,7 @@
                 "newPage": false,
                 "searchKey": "build.TestEmptyFolderImport",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2729,7 +2721,7 @@
                 "newPage": false,
                 "searchKey": "build.TestEmptyImport",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2753,7 +2745,7 @@
                 "newPage": false,
                 "searchKey": "build.TestExpandSrcDir",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2777,7 +2769,7 @@
                 "newPage": false,
                 "searchKey": "build.TestFindImports",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2801,7 +2793,7 @@
                 "newPage": false,
                 "searchKey": "build.TestGoodOSArch",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2825,7 +2817,7 @@
                 "newPage": false,
                 "searchKey": "build.TestGoodOSArchFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2849,7 +2841,7 @@
                 "newPage": false,
                 "searchKey": "build.TestImportCmd",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2873,7 +2865,7 @@
                 "newPage": false,
                 "searchKey": "build.TestImportDirNotExist",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2897,7 +2889,7 @@
                 "newPage": false,
                 "searchKey": "build.TestImportDirTarget",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2921,7 +2913,7 @@
                 "newPage": false,
                 "searchKey": "build.TestImportPackageOutsideModule",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2945,7 +2937,7 @@
                 "newPage": false,
                 "searchKey": "build.TestImportVendor",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2969,7 +2961,7 @@
                 "newPage": false,
                 "searchKey": "build.TestImportVendorFailure",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2993,7 +2985,7 @@
                 "newPage": false,
                 "searchKey": "build.TestImportVendorParentFailure",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3017,7 +3009,7 @@
                 "newPage": false,
                 "searchKey": "build.TestIssue23594",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3041,7 +3033,7 @@
                 "newPage": false,
                 "searchKey": "build.TestLocalDirectory",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3065,7 +3057,7 @@
                 "newPage": false,
                 "searchKey": "build.TestMain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3089,7 +3081,7 @@
                 "newPage": false,
                 "searchKey": "build.TestMatch",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3113,7 +3105,7 @@
                 "newPage": false,
                 "searchKey": "build.TestMatchFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3137,7 +3129,7 @@
                 "newPage": false,
                 "searchKey": "build.TestMissingImportErrorRepetition",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3161,7 +3153,7 @@
                 "newPage": false,
                 "searchKey": "build.TestMultiplePackageImport",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3185,7 +3177,7 @@
                 "newPage": false,
                 "searchKey": "build.TestReadComments",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3209,7 +3201,7 @@
                 "newPage": false,
                 "searchKey": "build.TestReadEmbed",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3233,7 +3225,7 @@
                 "newPage": false,
                 "searchKey": "build.TestReadFailuresIgnored",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3257,7 +3249,7 @@
                 "newPage": false,
                 "searchKey": "build.TestReadGoInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3281,7 +3273,7 @@
                 "newPage": false,
                 "searchKey": "build.TestShellSafety",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3305,7 +3297,7 @@
                 "newPage": false,
                 "searchKey": "build.TestShouldBuild",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3329,7 +3321,7 @@
                 "newPage": false,
                 "searchKey": "build.TestStdlibLowercase",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3399,7 +3391,7 @@
                 "newPage": false,
                 "searchKey": "build.cleanDecls",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3445,7 +3437,7 @@
                 "newPage": false,
                 "searchKey": "build.depsPolicy",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3468,7 +3460,7 @@
                 "newPage": false,
                 "searchKey": "build.envOr",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3491,7 +3483,7 @@
                 "newPage": false,
                 "searchKey": "build.equal",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3514,7 +3506,7 @@
                 "newPage": false,
                 "searchKey": "build.expandSrcDir",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3537,7 +3529,7 @@
                 "newPage": false,
                 "searchKey": "build.fileListForExt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3560,7 +3552,7 @@
                 "newPage": false,
                 "searchKey": "build.findImportComment",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3583,7 +3575,7 @@
                 "newPage": false,
                 "searchKey": "build.findImports",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3629,7 +3621,7 @@
                 "newPage": false,
                 "searchKey": "build.hasGoFiles",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3652,7 +3644,7 @@
                 "newPage": false,
                 "searchKey": "build.hasSubdir",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3698,7 +3690,7 @@
                 "newPage": false,
                 "searchKey": "build.isGoBuildComment",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3721,7 +3713,7 @@
                 "newPage": false,
                 "searchKey": "build.isIdent",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3744,7 +3736,7 @@
                 "newPage": false,
                 "searchKey": "build.listStdPkgs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3767,7 +3759,7 @@
                 "newPage": false,
                 "searchKey": "build.nameExt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3790,7 +3782,7 @@
                 "newPage": false,
                 "searchKey": "build.parseDepsRules",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3813,7 +3805,7 @@
                 "newPage": false,
                 "searchKey": "build.parseFileHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3836,7 +3828,7 @@
                 "newPage": false,
                 "searchKey": "build.parseGoEmbed",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3859,7 +3851,7 @@
                 "newPage": false,
                 "searchKey": "build.parseWord",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3882,7 +3874,7 @@
                 "newPage": false,
                 "searchKey": "build.readComments",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3905,7 +3897,7 @@
                 "newPage": false,
                 "searchKey": "build.readGoInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3928,7 +3920,7 @@
                 "newPage": false,
                 "searchKey": "build.safeCgoName",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3951,7 +3943,7 @@
                 "newPage": false,
                 "searchKey": "build.skipSpaceOrComment",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3974,7 +3966,7 @@
                 "newPage": false,
                 "searchKey": "build.splitQuoted",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3997,7 +3989,7 @@
                 "newPage": false,
                 "searchKey": "build.testRead",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4020,7 +4012,7 @@
                 "newPage": false,
                 "searchKey": "build.uniq",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

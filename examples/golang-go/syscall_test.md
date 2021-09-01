@@ -45,7 +45,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MNT_NOWAIT" href="#MNT_NOWAIT">const MNT_NOWAIT</a>
@@ -73,7 +73,7 @@ const MNT_WAIT = 1
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="command" href="#command">type command struct</a>
@@ -95,7 +95,7 @@ type command struct {
 
 ```
 searchKey: syscall_test.create
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -106,7 +106,7 @@ func create(t *testing.T) *command
 
 ```
 searchKey: syscall_test.command.Info
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -117,7 +117,7 @@ func (c *command) Info() (pid, pgrp int)
 
 ```
 searchKey: syscall_test.command.Start
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -128,7 +128,7 @@ func (c *command) Start()
 
 ```
 searchKey: syscall_test.command.Stop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -138,14 +138,14 @@ func (c *command) Stop()
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestDirent" href="#TestDirent">func TestDirent(t *testing.T)</a>
 
 ```
 searchKey: syscall_test.TestDirent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -156,7 +156,7 @@ func TestDirent(t *testing.T)
 
 ```
 searchKey: syscall_test.TestDirentRepeat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -167,7 +167,7 @@ func TestDirentRepeat(t *testing.T)
 
 ```
 searchKey: syscall_test.TestENFILETemporary
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -178,7 +178,7 @@ func TestENFILETemporary(t *testing.T)
 
 ```
 searchKey: syscall_test.TestEnv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -189,7 +189,7 @@ func TestEnv(t *testing.T)
 
 ```
 searchKey: syscall_test.TestExec
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -202,7 +202,7 @@ TestExec is for issue #41702.
 
 ```
 searchKey: syscall_test.TestExecErrPermutedFds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -215,7 +215,7 @@ Check that permuting child process fds doesn't interfere with reporting of fork/
 
 ```
 searchKey: syscall_test.TestExecHelper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -228,7 +228,7 @@ TestExecHelper is used by TestExec. It does nothing by itself. In testing on mac
 
 ```
 searchKey: syscall_test.TestExecPtrace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -239,7 +239,7 @@ func TestExecPtrace(t *testing.T)
 
 ```
 searchKey: syscall_test.TestFcntlFlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -252,7 +252,7 @@ TestFcntlFlock tests whether the file locking structure matches the calling conv
 
 ```
 searchKey: syscall_test.TestForeground
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -263,7 +263,7 @@ func TestForeground(t *testing.T)
 
 ```
 searchKey: syscall_test.TestForegroundSignal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -274,7 +274,7 @@ func TestForegroundSignal(t *testing.T)
 
 ```
 searchKey: syscall_test.TestGetdirentries
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -285,7 +285,7 @@ func TestGetdirentries(t *testing.T)
 
 ```
 searchKey: syscall_test.TestGetfsstat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -296,7 +296,7 @@ func TestGetfsstat(t *testing.T)
 
 ```
 searchKey: syscall_test.TestGettimeofday
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -307,7 +307,7 @@ func TestGettimeofday(t *testing.T)
 
 ```
 searchKey: syscall_test.TestInvalidExec
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -320,7 +320,7 @@ Test a couple of cases that SysProcAttr can't handle. Issue 29458.
 
 ```
 searchKey: syscall_test.TestMmap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -331,7 +331,7 @@ func TestMmap(t *testing.T)
 
 ```
 searchKey: syscall_test.TestPassFD
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -346,7 +346,7 @@ This test involved both a parent and child process. The parent process is invoke
 
 ```
 searchKey: syscall_test.TestPgid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -357,7 +357,7 @@ func TestPgid(t *testing.T)
 
 ```
 searchKey: syscall_test.TestRlimit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -368,7 +368,7 @@ func TestRlimit(t *testing.T)
 
 ```
 searchKey: syscall_test.TestSeekFailure
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -379,7 +379,7 @@ func TestSeekFailure(t *testing.T)
 
 ```
 searchKey: syscall_test.TestSetpgid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -390,7 +390,7 @@ func TestSetpgid(t *testing.T)
 
 ```
 searchKey: syscall_test.TestSetsockoptString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -401,7 +401,7 @@ func TestSetsockoptString(t *testing.T)
 
 ```
 searchKey: syscall_test.TestUnixRightsRoundtrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -414,7 +414,7 @@ TestUnixRightsRoundtrip tests that UnixRights, ParseSocketControlMessage, and Pa
 
 ```
 searchKey: syscall_test.TestZeroSysProcAttr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -449,7 +449,7 @@ passFDChild is the child process used by TestPassFD.
 
 ```
 searchKey: syscall_test.testGetdirentries
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -460,7 +460,7 @@ func testGetdirentries(t *testing.T, count int)
 
 ```
 searchKey: syscall_test.testSetGetenv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

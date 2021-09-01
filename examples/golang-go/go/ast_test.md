@@ -22,7 +22,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="golden" href="#golden">const golden</a>
@@ -63,7 +63,7 @@ const src = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="res" href="#res">var res</a>
@@ -82,7 +82,7 @@ res maps a key of the form "line number: node type" to the associated comments' 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleCommentMap" href="#ExampleCommentMap">func ExampleCommentMap()</a>
@@ -128,7 +128,7 @@ This example shows what an AST looks like when printed for debugging.
 
 ```
 searchKey: ast_test.TestCommentMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -139,7 +139,7 @@ func TestCommentMap(t *testing.T)
 
 ```
 searchKey: ast_test.TestFilter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -150,7 +150,7 @@ func TestFilter(t *testing.T)
 
 ```
 searchKey: ast_test.TestFilterDuplicates
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -161,7 +161,7 @@ func TestFilterDuplicates(t *testing.T)
 
 ```
 searchKey: ast_test.TestIssue33649
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ func TestIssue33649(t *testing.T)
 
 ```
 searchKey: ast_test.ctext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

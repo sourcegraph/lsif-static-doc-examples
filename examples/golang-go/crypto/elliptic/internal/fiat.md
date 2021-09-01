@@ -43,7 +43,7 @@ Package fiat implements prime order fields using formally verified algorithms fr
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="p521ZeroEncoding" href="#p521ZeroEncoding">var p521ZeroEncoding</a>
@@ -60,7 +60,7 @@ var p521ZeroEncoding = new(P521Element).Bytes()
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="P521Element" href="#P521Element">type P521Element struct</a>
@@ -104,7 +104,7 @@ Add sets e = t1 + t2, and returns e.
 
 ```
 searchKey: fiat.P521Element.Bytes
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -145,7 +145,7 @@ If t == 0, Invert returns e = 0.
 
 ```
 searchKey: fiat.P521Element.IsZero
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -171,7 +171,7 @@ Mul sets e = t1 * t2, and returns e.
 
 ```
 searchKey: fiat.P521Element.One
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -271,7 +271,7 @@ type p521Uint1 uint8
 
 ```
 searchKey: fiat.p521AddcarryxU64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -284,7 +284,7 @@ p521AddcarryxU64 is a thin wrapper around bits.Add64 that uses p521Uint1 rather 
 
 ```
 searchKey: fiat.p521SubborrowxU64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -296,14 +296,14 @@ p521SubborrowxU64 is a thin wrapper around bits.Sub64 that uses p521Uint1 rather
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="p521Add" href="#p521Add">func p521Add(out1 *[9]uint64, arg1 *[9]uint64, arg2 *[9]uint64)</a>
 
 ```
 searchKey: fiat.p521Add
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -335,7 +335,7 @@ out1: [[0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc000000
 
 ```
 searchKey: fiat.p521AddcarryxU57
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -370,7 +370,7 @@ out2: [0x0 ~> 0x1]
 
 ```
 searchKey: fiat.p521AddcarryxU58
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -405,7 +405,7 @@ out2: [0x0 ~> 0x1]
 
 ```
 searchKey: fiat.p521Carry
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -436,7 +436,7 @@ out1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x4000000
 
 ```
 searchKey: fiat.p521CarryMul
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -468,7 +468,7 @@ out1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x4000000
 
 ```
 searchKey: fiat.p521CarrySquare
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -499,7 +499,7 @@ out1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x4000000
 
 ```
 searchKey: fiat.p521CmovznzU64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -532,7 +532,7 @@ out1: [0x0 ~> 0xffffffffffffffff]
 
 ```
 searchKey: fiat.p521FromBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -563,7 +563,7 @@ out1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x4000000
 
 ```
 searchKey: fiat.p521Selectznz
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -596,7 +596,7 @@ out1: [[0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xfffff
 
 ```
 searchKey: fiat.p521Sub
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -628,7 +628,7 @@ out1: [[0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc000000
 
 ```
 searchKey: fiat.p521SubborrowxU57
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -663,7 +663,7 @@ out2: [0x0 ~> 0x1]
 
 ```
 searchKey: fiat.p521SubborrowxU58
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -698,7 +698,7 @@ out2: [0x0 ~> 0x1]
 
 ```
 searchKey: fiat.p521ToBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

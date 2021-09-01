@@ -16,7 +16,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultClient" href="#DefaultClient">var DefaultClient</a>
@@ -46,7 +46,7 @@ var symbolsURL = env.Get("SYMBOLS_URL", "k8s+http://symbols:3184", "symbols serv
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>

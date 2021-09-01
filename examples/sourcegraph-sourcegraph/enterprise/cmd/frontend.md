@@ -18,10 +18,6 @@ It wraps the open source frontend command and merely injects a few proprietary t
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="initFunctions" href="#initFunctions">var initFunctions</a>
 
 ```
@@ -35,15 +31,11 @@ var initFunctions = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="enterpriseSetupHook" href="#enterpriseSetupHook">func enterpriseSetupHook(db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner) enterprise.Services</a>
 
 ```
 searchKey: main.enterpriseSetupHook
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

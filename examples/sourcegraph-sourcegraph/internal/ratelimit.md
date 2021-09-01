@@ -32,7 +32,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultMonitorRegistry" href="#DefaultMonitorRegistry">var DefaultMonitorRegistry</a>
@@ -64,7 +64,7 @@ DefaultRegistry is the default global rate limit registry. It will hold rate lim
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MetricsCollector" href="#MetricsCollector">type MetricsCollector struct</a>
@@ -114,7 +114,7 @@ It is intended to be embedded in an API client struct.
 
 ```
 searchKey: ratelimit.Monitor.Get
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -180,7 +180,7 @@ Update updates the monitor's rate limit information based on the HTTP response h
 
 ```
 searchKey: ratelimit.Monitor.now
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -222,7 +222,7 @@ NewMonitorRegistry creates a new empty registry.
 
 ```
 searchKey: ratelimit.MonitorRegistry.Count
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -279,7 +279,7 @@ NewRegistry creates a new empty registry.
 
 ```
 searchKey: ratelimit.Registry.Count
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -317,14 +317,14 @@ GetOrSet fetches the rate limiter associated with the given code host. If none h
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestMonitor_RecommendedWaitForBackgroundOp" href="#TestMonitor_RecommendedWaitForBackgroundOp">func TestMonitor_RecommendedWaitForBackgroundOp(t *testing.T)</a>
 
 ```
 searchKey: ratelimit.TestMonitor_RecommendedWaitForBackgroundOp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -335,7 +335,7 @@ func TestMonitor_RecommendedWaitForBackgroundOp(t *testing.T)
 
 ```
 searchKey: ratelimit.TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -346,7 +346,7 @@ func TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter(t *testing.T)
 
 ```
 searchKey: ratelimit.TestMonitor_Update
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -357,7 +357,7 @@ func TestMonitor_Update(t *testing.T)
 
 ```
 searchKey: ratelimit.normaliseURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

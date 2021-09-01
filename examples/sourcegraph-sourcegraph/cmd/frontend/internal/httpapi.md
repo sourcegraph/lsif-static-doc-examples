@@ -89,7 +89,7 @@ Package httpapi contains the HTTP API.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="allowedFilenames" href="#allowedFilenames">var allowedFilenames</a>
@@ -139,7 +139,7 @@ var traceGraphQLQueriesSample = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="errorHandler" href="#errorHandler">type errorHandler struct</a>
@@ -355,7 +355,7 @@ suffixIndexers mocks Indexers. ReposSubset will return all repoNames with the su
 
 ```
 searchKey: httpapi.suffixIndexers.Enabled
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -403,14 +403,14 @@ type traceData struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AccessTokenAuthMiddleware" href="#AccessTokenAuthMiddleware">func AccessTokenAuthMiddleware(db dbutil.DB, next http.Handler) http.Handler</a>
 
 ```
 searchKey: httpapi.AccessTokenAuthMiddleware
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -423,7 +423,7 @@ AccessTokenAuthMiddleware authenticates the user based on the token query parame
 
 ```
 searchKey: httpapi.NewHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -438,7 +438,7 @@ NewHandler returns a new API handler that uses the provided API router, which mu
 
 ```
 searchKey: httpapi.NewInternalHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -453,7 +453,7 @@ NewInternalHandler returns a new API handler for internal endpoints that uses th
 
 ```
 searchKey: httpapi.TestAccessTokenAuthMiddleware
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -464,7 +464,7 @@ func TestAccessTokenAuthMiddleware(t *testing.T)
 
 ```
 searchKey: httpapi.TestGitServiceHandlers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -475,7 +475,7 @@ func TestGitServiceHandlers(t *testing.T)
 
 ```
 searchKey: httpapi.TestRepoRankFromConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -486,7 +486,7 @@ func TestRepoRankFromConfig(t *testing.T)
 
 ```
 searchKey: httpapi.TestRepoRefresh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -497,7 +497,7 @@ func TestRepoRefresh(t *testing.T)
 
 ```
 searchKey: httpapi.TestRepoShield
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -508,7 +508,7 @@ func TestRepoShield(t *testing.T)
 
 ```
 searchKey: httpapi.TestRepoShieldFmt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -519,7 +519,7 @@ func TestRepoShieldFmt(t *testing.T)
 
 ```
 searchKey: httpapi.TestReposIndex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -530,7 +530,7 @@ func TestReposIndex(t *testing.T)
 
 ```
 searchKey: httpapi.badgeValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -543,7 +543,7 @@ NOTE: Keep in sync with services/backend/httpapi/repo_shield.go
 
 ```
 searchKey: httpapi.badgeValueFmt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -556,7 +556,7 @@ NOTE: Keep in sync with services/backend/httpapi/repo_shield.go
 
 ```
 searchKey: httpapi.getUID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -567,7 +567,7 @@ func getUID(r *http.Request) (uid string, ip bool, anonymous bool)
 
 ```
 searchKey: httpapi.handlePing
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -611,7 +611,7 @@ func init()
 
 ```
 searchKey: httpapi.isExpectedRelease
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -622,7 +622,7 @@ func isExpectedRelease(filename string) bool
 
 ```
 searchKey: httpapi.jsonMiddleware
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -644,7 +644,7 @@ func newTest() *httptestutil.Client
 
 ```
 searchKey: httpapi.repoRankFromConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -655,7 +655,7 @@ func repoRankFromConfig(siteConfig schema.SiteConfiguration, repoName string) fl
 
 ```
 searchKey: httpapi.serveCanSendEmail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -666,7 +666,7 @@ func serveCanSendEmail(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveConfiguration
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -677,7 +677,7 @@ func serveConfiguration(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveExternalServiceConfigs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -690,7 +690,7 @@ serveExternalServiceConfigs serves a JSON response that is an array of all exter
 
 ```
 searchKey: httpapi.serveExternalServicesList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -703,7 +703,7 @@ serveExternalServicesList serves a JSON response that is an array of all externa
 
 ```
 searchKey: httpapi.serveExternalURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -714,7 +714,7 @@ func serveExternalURL(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveGitExec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -725,7 +725,7 @@ func serveGitExec(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveGitResolveRevision
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -736,7 +736,7 @@ func serveGitResolveRevision(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveGitTar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -747,7 +747,7 @@ func serveGitTar(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveGraphQL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -758,7 +758,7 @@ func serveGraphQL(schema *graphql.Schema, rlw graphqlbackend.LimitWatcher, isInt
 
 ```
 searchKey: httpapi.serveOrgsGetByName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -769,7 +769,7 @@ func serveOrgsGetByName(db dbutil.DB) func(w http.ResponseWriter, r *http.Reques
 
 ```
 searchKey: httpapi.serveOrgsListUsers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -780,7 +780,7 @@ func serveOrgsListUsers(db dbutil.DB) func(w http.ResponseWriter, r *http.Reques
 
 ```
 searchKey: httpapi.servePhabricatorRepoCreate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -791,7 +791,7 @@ func servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *htt
 
 ```
 searchKey: httpapi.serveRepoRefresh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -802,7 +802,7 @@ func serveRepoRefresh(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveRepoShield
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -813,7 +813,7 @@ func serveRepoShield(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveReposGetByName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -824,7 +824,7 @@ func serveReposGetByName(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveReposListEnabled
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -835,7 +835,7 @@ func serveReposListEnabled(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveSavedQueriesDeleteInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -846,7 +846,7 @@ func serveSavedQueriesDeleteInfo(db dbutil.DB) func(w http.ResponseWriter, r *ht
 
 ```
 searchKey: httpapi.serveSavedQueriesGetInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -857,7 +857,7 @@ func serveSavedQueriesGetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.
 
 ```
 searchKey: httpapi.serveSavedQueriesListAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -868,7 +868,7 @@ func serveSavedQueriesListAll(db dbutil.DB) func(w http.ResponseWriter, r *http.
 
 ```
 searchKey: httpapi.serveSavedQueriesSetInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -879,7 +879,7 @@ func serveSavedQueriesSetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.
 
 ```
 searchKey: httpapi.serveSearchConfiguration
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -894,7 +894,7 @@ This endpoint also supports batch requests to avoid managing concurrency in zoek
 
 ```
 searchKey: httpapi.serveSendEmail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -905,7 +905,7 @@ func serveSendEmail(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveSettingsGetForSubject
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -916,7 +916,7 @@ func serveSettingsGetForSubject(db dbutil.DB) func(w http.ResponseWriter, r *htt
 
 ```
 searchKey: httpapi.serveUserEmailsGetEmail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -927,7 +927,7 @@ func serveUserEmailsGetEmail(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.serveUsersGetByUsername
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -938,7 +938,7 @@ func serveUsersGetByUsername(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.srcCliDownloadServe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -960,7 +960,7 @@ func srcCliVersion() string
 
 ```
 searchKey: httpapi.srcCliVersionServe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -971,7 +971,7 @@ func srcCliVersionServe(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.telemetryHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -982,7 +982,7 @@ func telemetryHandler(db dbutil.DB) http.Handler
 
 ```
 searchKey: httpapi.traceGraphQL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -993,7 +993,7 @@ func traceGraphQL(data traceData)
 
 ```
 searchKey: httpapi.writeJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

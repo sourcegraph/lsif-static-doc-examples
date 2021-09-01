@@ -46,7 +46,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="authPrefix" href="#authPrefix">const authPrefix</a>
@@ -74,7 +74,7 @@ const sessionKey = "githuboauth@0"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="clientIDSecretValidator" href="#clientIDSecretValidator">var clientIDSecretValidator</a>
@@ -91,7 +91,7 @@ var clientIDSecretValidator = lazyregexp.New("^[a-z0-9]*$")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockProvider" href="#MockProvider">type MockProvider struct</a>
@@ -112,7 +112,7 @@ type MockProvider struct {
 
 ```
 searchKey: githuboauth.newMockProvider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -218,14 +218,14 @@ func (s *sessionIssuerHelper) verifyUserOrgs(ctx context.Context, ghClient *gith
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Middleware" href="#Middleware">func Middleware(db dbutil.DB) *auth.Middleware</a>
 
 ```
 searchKey: githuboauth.Middleware
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -236,7 +236,7 @@ func Middleware(db dbutil.DB) *auth.Middleware
 
 ```
 searchKey: githuboauth.TestMiddleware
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -249,7 +249,7 @@ TestMiddleware exercises the Middleware with requests that simulate the OAuth 2 
 
 ```
 searchKey: githuboauth.TestParseConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -260,7 +260,7 @@ func TestParseConfig(t *testing.T)
 
 ```
 searchKey: githuboauth.TestRequestedScopes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -271,7 +271,7 @@ func TestRequestedScopes(t *testing.T)
 
 ```
 searchKey: githuboauth.TestSessionIssuerHelper_CreateCodeHostConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -282,7 +282,7 @@ func TestSessionIssuerHelper_CreateCodeHostConnection(t *testing.T)
 
 ```
 searchKey: githuboauth.TestSessionIssuerHelper_CreateCodeHostConnectionHandlesExistingService
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -293,7 +293,7 @@ func TestSessionIssuerHelper_CreateCodeHostConnectionHandlesExistingService(t *t
 
 ```
 searchKey: githuboauth.TestSessionIssuerHelper_GetOrCreateUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -304,7 +304,7 @@ func TestSessionIssuerHelper_GetOrCreateUser(t *testing.T)
 
 ```
 searchKey: githuboauth.acct
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -315,7 +315,7 @@ func acct(serviceType, serviceID, clientID, accountID string) extsvc.AccountSpec
 
 ```
 searchKey: githuboauth.createCodeHostConnectionHelper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -326,7 +326,7 @@ func createCodeHostConnectionHelper(t *testing.T, serviceExists bool)
 
 ```
 searchKey: githuboauth.deref
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -337,7 +337,7 @@ func deref(s *string) string
 
 ```
 searchKey: githuboauth.derefInt64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -359,7 +359,7 @@ func getStateConfig() gologin.CookieConfig
 
 ```
 searchKey: githuboauth.getVerifiedEmails
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -405,7 +405,7 @@ func init()
 
 ```
 searchKey: githuboauth.parseConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -416,7 +416,7 @@ func parseConfig(cfg *conf.Unified) (ps []Provider, problems conf.Problems)
 
 ```
 searchKey: githuboauth.parseProvider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -427,7 +427,7 @@ func parseProvider(p *schema.GitHubAuthProvider, sourceCfg schema.AuthProviders)
 
 ```
 searchKey: githuboauth.provider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -438,7 +438,7 @@ func provider(serviceID string, oauth2Config oauth2.Config) *oauth.Provider
 
 ```
 searchKey: githuboauth.requestedScopes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -449,7 +449,7 @@ func requestedScopes(p *schema.GitHubAuthProvider, extraScopes []string) []strin
 
 ```
 searchKey: githuboauth.u
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -460,7 +460,7 @@ func u(username, email string, emailIsVerified bool) database.NewUser
 
 ```
 searchKey: githuboauth.validateClientIDAndSecret
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

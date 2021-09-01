@@ -26,7 +26,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExternalServicesStore" href="#ExternalServicesStore">type ExternalServicesStore interface</a>
@@ -131,7 +131,7 @@ func (m gitlabAuthzProviderParams) Repos(ctx context.Context, repos []*types.Rep
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.ServiceID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -142,7 +142,7 @@ func (m gitlabAuthzProviderParams) ServiceID() string
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.ServiceType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -153,7 +153,7 @@ func (m gitlabAuthzProviderParams) ServiceType() string
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.URN
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -164,7 +164,7 @@ func (m gitlabAuthzProviderParams) URN() string
 
 ```
 searchKey: authz.gitlabAuthzProviderParams.Validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -174,14 +174,14 @@ func (m gitlabAuthzProviderParams) Validate() []string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ProvidersFromConfig" href="#ProvidersFromConfig">func ProvidersFromConfig(ctx context.Context,...</a>
 
 ```
 searchKey: authz.ProvidersFromConfig
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -203,7 +203,7 @@ ProvidersFromConfig returns the set of permission-related providers derived from
 
 ```
 searchKey: authz.TestAuthzProvidersFromConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -214,7 +214,7 @@ func TestAuthzProvidersFromConfig(t *testing.T)
 
 ```
 searchKey: authz.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -225,7 +225,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: authz.asJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -236,7 +236,7 @@ func asJSON(t *testing.T, v interface{}) string
 
 ```
 searchKey: authz.mustURLParse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

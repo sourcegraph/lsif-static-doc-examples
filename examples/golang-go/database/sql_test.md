@@ -33,7 +33,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ctx" href="#ctx">var ctx</a>
@@ -73,7 +73,7 @@ var pool *sql.DB // Database connection pool.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Service" href="#Service">type Service struct</a>
@@ -103,7 +103,7 @@ func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleConn_ExecContext" href="#ExampleConn_ExecContext">func ExampleConn_ExecContext()</a>
@@ -286,7 +286,7 @@ func Example_openDBService()
 
 ```
 searchKey: sql_test.Ping
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -299,7 +299,7 @@ Ping the database to verify DSN provided by the user is valid and the server acc
 
 ```
 searchKey: sql_test.Query
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

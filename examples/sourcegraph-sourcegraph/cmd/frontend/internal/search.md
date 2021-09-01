@@ -64,7 +64,7 @@ package search is search specific logic for the frontend. Also see github.com/so
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="commitMatch" href="#commitMatch">const commitMatch</a>
@@ -114,7 +114,7 @@ const symbolMatch
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="metricLatency" href="#metricLatency">var metricLatency</a>
@@ -142,7 +142,7 @@ var searchBlitzUserAgentRegexp = lazyregexp.New(`^SearchBlitz \(([^\)]+)\)$`)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="args" href="#args">type args struct</a>
@@ -166,7 +166,7 @@ type args struct {
 
 ```
 searchKey: search.parseURLQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -208,7 +208,7 @@ Append marshals v and adds it to the json array buffer. If the size of the buffe
 
 ```
 searchKey: search.jsonArrayBuf.Flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -221,7 +221,7 @@ Flush writes and resets the buffer if there is data to write.
 
 ```
 searchKey: search.jsonArrayBuf.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -243,7 +243,7 @@ type matchType int
 
 ```
 searchKey: search.matchType.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -269,7 +269,7 @@ type mockSearchResolver struct {
 
 ```
 searchKey: search.mockSearchResolver.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -280,7 +280,7 @@ func (h *mockSearchResolver) Close()
 
 ```
 searchKey: search.mockSearchResolver.Inputs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -313,7 +313,7 @@ type namerFunc string
 
 ```
 searchKey: search.namerFunc.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -345,7 +345,7 @@ type progressAggregator struct {
 
 ```
 searchKey: search.progressAggregator.Current
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -358,7 +358,7 @@ Current returns the current progress event.
 
 ```
 searchKey: search.progressAggregator.Final
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -382,7 +382,7 @@ func (p *progressAggregator) Update(event streaming.SearchEvent)
 
 ```
 searchKey: search.progressAggregator.currentStats
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -407,7 +407,7 @@ type searchResolver interface {
 
 ```
 searchKey: search.defaultNewSearchResolver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -468,14 +468,14 @@ startSearch will start a search. It returns the events channel which streams out
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GuessSource" href="#GuessSource">func GuessSource(r *http.Request) trace.SourceType</a>
 
 ```
 searchKey: search.GuessSource
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -488,7 +488,7 @@ GuessSource guesses the source the request came from (browser, other HTTP client
 
 ```
 searchKey: search.StreamHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -501,7 +501,7 @@ StreamHandler is an http handler which streams back search results.
 
 ```
 searchKey: search.TestDefaultNewSearchResolver
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -514,7 +514,7 @@ Ensures graphqlbackend matches the interface we expect
 
 ```
 searchKey: search.TestDisplayLimit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -525,7 +525,7 @@ func TestDisplayLimit(t *testing.T)
 
 ```
 searchKey: search.TestServeStream_empty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -536,7 +536,7 @@ func TestServeStream_empty(t *testing.T)
 
 ```
 searchKey: search.batchEvents
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -549,7 +549,7 @@ batchEvents takes an event stream and merges events that come through close in t
 
 ```
 searchKey: search.eventStreamOTHook
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -562,7 +562,7 @@ eventStreamOTHook returns a StatHook which logs to log.
 
 ```
 searchKey: search.fromCommit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -573,7 +573,7 @@ func fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo
 
 ```
 searchKey: search.fromFileMatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -584,7 +584,7 @@ func fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) s
 
 ```
 searchKey: search.fromMatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -595,7 +595,7 @@ func fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamh
 
 ```
 searchKey: search.fromRepository
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -606,7 +606,7 @@ func fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) 
 
 ```
 searchKey: search.fromStrPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -617,7 +617,7 @@ func fromStrPtr(s *string) string
 
 ```
 searchKey: search.fromSymbolMatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -628,7 +628,7 @@ func fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo)
 
 ```
 searchKey: search.getNames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -639,7 +639,7 @@ func getNames(stats streaming.Stats, status searchshared.RepoStatus) []api.Namer
 
 ```
 searchKey: search.intPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -650,7 +650,7 @@ func intPtr(i int) *int
 
 ```
 searchKey: search.mkRepoMatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -661,7 +661,7 @@ func mkRepoMatch(id int) *result.RepoMatch
 
 ```
 searchKey: search.repoIDs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -672,7 +672,7 @@ func repoIDs(results []result.Match) []api.RepoID
 
 ```
 searchKey: search.strPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

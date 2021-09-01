@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -143,9 +141,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -238,9 +234,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -279,7 +273,7 @@
                       "newPage": false,
                       "searchKey": "user.LookupGroup",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -301,7 +295,7 @@
                       "newPage": false,
                       "searchKey": "user.LookupGroupId",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -323,7 +317,7 @@
                       "newPage": false,
                       "searchKey": "user.buildGroup",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -346,7 +340,7 @@
                       "newPage": false,
                       "searchKey": "user.lookupGroup",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -369,7 +363,7 @@
                       "newPage": false,
                       "searchKey": "user.lookupGroupId",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -392,7 +386,7 @@
                       "newPage": false,
                       "searchKey": "user.lookupUnixGid",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -438,7 +432,7 @@
                       "newPage": false,
                       "searchKey": "user.UnknownGroupError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -483,7 +477,7 @@
                       "newPage": false,
                       "searchKey": "user.UnknownGroupIdError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -528,7 +522,7 @@
                       "newPage": false,
                       "searchKey": "user.UnknownUserError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -573,7 +567,7 @@
                       "newPage": false,
                       "searchKey": "user.UnknownUserIdError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -640,7 +634,7 @@
                       "newPage": false,
                       "searchKey": "user.Lookup",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -662,7 +656,7 @@
                       "newPage": false,
                       "searchKey": "user.LookupId",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -684,7 +678,7 @@
                       "newPage": false,
                       "searchKey": "user.buildUser",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -730,7 +724,7 @@
                       "newPage": false,
                       "searchKey": "user.lookupUnixUid",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -753,7 +747,7 @@
                       "newPage": false,
                       "searchKey": "user.lookupUser",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -776,7 +770,7 @@
                       "newPage": false,
                       "searchKey": "user.lookupUserId",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -799,7 +793,7 @@
                       "newPage": false,
                       "searchKey": "user.User.GroupIds",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -845,7 +839,7 @@
                       "newPage": false,
                       "searchKey": "user.bufferKind.initialSize",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -892,7 +886,7 @@
                       "newPage": false,
                       "searchKey": "user.alloc",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -915,7 +909,7 @@
                       "newPage": false,
                       "searchKey": "user.memBuffer.free",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -966,9 +960,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -987,7 +979,7 @@
                 "newPage": false,
                 "searchKey": "user.BenchmarkCurrent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1011,7 +1003,7 @@
                 "newPage": false,
                 "searchKey": "user.TestCurrent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1035,7 +1027,7 @@
                 "newPage": false,
                 "searchKey": "user.TestGroupIds",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1059,7 +1051,7 @@
                 "newPage": false,
                 "searchKey": "user.TestLookup",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1083,7 +1075,7 @@
                 "newPage": false,
                 "searchKey": "user.TestLookupGroup",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1107,7 +1099,7 @@
                 "newPage": false,
                 "searchKey": "user.TestLookupId",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1131,7 +1123,7 @@
                 "newPage": false,
                 "searchKey": "user.TestNegativeUid",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1155,7 +1147,7 @@
                 "newPage": false,
                 "searchKey": "user.checkGroup",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1178,7 +1170,7 @@
                 "newPage": false,
                 "searchKey": "user.checkUser",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1201,7 +1193,7 @@
                 "newPage": false,
                 "searchKey": "user.compare",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1224,7 +1216,7 @@
                 "newPage": false,
                 "searchKey": "user.containsID",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1247,7 +1239,7 @@
                 "newPage": false,
                 "searchKey": "user.getGroupList",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1270,7 +1262,7 @@
                 "newPage": false,
                 "searchKey": "user.groupRetry",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1293,7 +1285,7 @@
                 "newPage": false,
                 "searchKey": "user.isSizeReasonable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1316,7 +1308,7 @@
                 "newPage": false,
                 "searchKey": "user.listGroups",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1339,7 +1331,7 @@
                 "newPage": false,
                 "searchKey": "user.retryWithBuffer",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

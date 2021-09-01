@@ -35,10 +35,6 @@ Package subtle implements functions that are often useful in cryptographic code 
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="benchmarkGlobal" href="#benchmarkGlobal">var benchmarkGlobal</a>
 
 ```
@@ -85,10 +81,6 @@ var testConstantTimeCompareData = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestConstantTimeByteEqStruct" href="#TestConstantTimeByteEqStruct">type TestConstantTimeByteEqStruct struct</a>
 
 ```
@@ -119,15 +111,11 @@ type TestConstantTimeCompareStruct struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkConstantTimeByteEq" href="#BenchmarkConstantTimeByteEq">func BenchmarkConstantTimeByteEq(b *testing.B)</a>
 
 ```
 searchKey: subtle.BenchmarkConstantTimeByteEq
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -138,7 +126,7 @@ func BenchmarkConstantTimeByteEq(b *testing.B)
 
 ```
 searchKey: subtle.BenchmarkConstantTimeEq
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -149,7 +137,7 @@ func BenchmarkConstantTimeEq(b *testing.B)
 
 ```
 searchKey: subtle.BenchmarkConstantTimeLessOrEq
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -160,7 +148,7 @@ func BenchmarkConstantTimeLessOrEq(b *testing.B)
 
 ```
 searchKey: subtle.ConstantTimeByteEq
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -173,7 +161,7 @@ ConstantTimeByteEq returns 1 if x == y and 0 otherwise.
 
 ```
 searchKey: subtle.ConstantTimeCompare
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -186,7 +174,7 @@ ConstantTimeCompare returns 1 if the two slices, x and y, have equal contents an
 
 ```
 searchKey: subtle.ConstantTimeCopy
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -199,7 +187,7 @@ ConstantTimeCopy copies the contents of y into x (a slice of equal length) if v 
 
 ```
 searchKey: subtle.ConstantTimeEq
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -212,7 +200,7 @@ ConstantTimeEq returns 1 if x == y and 0 otherwise.
 
 ```
 searchKey: subtle.ConstantTimeLessOrEq
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -225,7 +213,7 @@ ConstantTimeLessOrEq returns 1 if x <= y and 0 otherwise. Its behavior is undefi
 
 ```
 searchKey: subtle.ConstantTimeSelect
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -238,7 +226,7 @@ ConstantTimeSelect returns x if v == 1 and y if v == 0. Its behavior is undefine
 
 ```
 searchKey: subtle.TestConstantTimeByteEq
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -249,7 +237,7 @@ func TestConstantTimeByteEq(t *testing.T)
 
 ```
 searchKey: subtle.TestConstantTimeCompare
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -260,7 +248,7 @@ func TestConstantTimeCompare(t *testing.T)
 
 ```
 searchKey: subtle.TestConstantTimeCopy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -271,7 +259,7 @@ func TestConstantTimeCopy(t *testing.T)
 
 ```
 searchKey: subtle.TestConstantTimeEq
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -282,7 +270,7 @@ func TestConstantTimeEq(t *testing.T)
 
 ```
 searchKey: subtle.TestConstantTimeLessOrEq
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -293,7 +281,7 @@ func TestConstantTimeLessOrEq(t *testing.T)
 
 ```
 searchKey: subtle.byteEq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -304,7 +292,7 @@ func byteEq(a, b uint8) int
 
 ```
 searchKey: subtle.constantTimeCopyWrapper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -315,7 +303,7 @@ func constantTimeCopyWrapper(v int, x, y []byte) []byte
 
 ```
 searchKey: subtle.eq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -326,7 +314,7 @@ func eq(a, b int32) int
 
 ```
 searchKey: subtle.makeCopy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

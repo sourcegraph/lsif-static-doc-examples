@@ -69,7 +69,7 @@ Package saml provides HTTP middleware that provides the necessary endpoints for 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="authPrefix" href="#authPrefix">const authPrefix</a>
@@ -132,7 +132,7 @@ const testSAMLSPKey = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Middleware" href="#Middleware">var Middleware</a>
@@ -208,7 +208,7 @@ var traceLogEnabled, _ = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="authnResponseInfo" href="#authnResponseInfo">type authnResponseInfo struct</a>
@@ -231,7 +231,7 @@ type authnResponseInfo struct {
 
 ```
 searchKey: saml.readAuthnResponse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -282,7 +282,7 @@ type provider struct {
 
 ```
 searchKey: saml.getProvider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -295,7 +295,7 @@ getProvider looks up the registered saml auth provider with the given ID.
 
 ```
 searchKey: saml.handleGetProvider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ func handleGetProvider(ctx context.Context, w http.ResponseWriter, pcID string) 
 
 ```
 searchKey: saml.provider.CachedInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -319,7 +319,7 @@ CachedInfo implements providers.Provider.
 
 ```
 searchKey: saml.provider.Config
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -332,7 +332,7 @@ Config implements providers.Provider.
 
 ```
 searchKey: saml.provider.ConfigID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -358,7 +358,7 @@ Refresh implements providers.Provider.
 
 ```
 searchKey: saml.provider.getCachedInfoAndError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -386,7 +386,7 @@ type providerConfig struct {
 
 ```
 searchKey: saml.readProviderConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -439,7 +439,7 @@ Decode decodes the base64-encoded JSON representation of the relay state into th
 
 ```
 searchKey: saml.relayState.encode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -473,14 +473,14 @@ func (v samlAssertionValues) Get(key string) string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SignOut" href="#SignOut">func SignOut(w http.ResponseWriter, r *http.Request) (logoutURL string, err error)</a>
 
 ```
 searchKey: saml.SignOut
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -493,7 +493,7 @@ SignOut returns the URL where the user can initiate a logout from the SAML Ident
 
 ```
 searchKey: saml.TestMiddleware
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -504,7 +504,7 @@ func TestMiddleware(t *testing.T)
 
 ```
 searchKey: saml.TestProviderConfigID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -515,7 +515,7 @@ func TestProviderConfigID(t *testing.T)
 
 ```
 searchKey: saml.TestReadAuthnResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -526,7 +526,7 @@ func TestReadAuthnResponse(t *testing.T)
 
 ```
 searchKey: saml.TestValidateCustom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -537,7 +537,7 @@ func TestValidateCustom(t *testing.T)
 
 ```
 searchKey: saml.authHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -552,7 +552,7 @@ It uses github.com/russelhaering/gosaml2 and (unlike authHandler1) makes it poss
 
 ```
 searchKey: saml.buildAuthURLRedirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -576,7 +576,7 @@ getFirstProviderConfig returns the SAML auth provider config. At most 1 can be s
 
 ```
 searchKey: saml.getNameIDFormat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -587,7 +587,7 @@ func getNameIDFormat(pc *schema.SAMLAuthProvider) string
 
 ```
 searchKey: saml.getOrCreateUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -611,7 +611,7 @@ func getProviders() []providers.Provider
 
 ```
 searchKey: saml.getServiceProvider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -644,7 +644,7 @@ func init()
 
 ```
 searchKey: saml.mightBeEmail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -655,7 +655,7 @@ func mightBeEmail(s string) bool
 
 ```
 searchKey: saml.newLogoutRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -666,7 +666,7 @@ func newLogoutRequest(p *provider) (*etree.Document, error)
 
 ```
 searchKey: saml.newSAMLIDPServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -679,7 +679,7 @@ newSAMLIDPServer returns a new running SAML IDP server. It is the caller's respo
 
 ```
 searchKey: saml.providerConfigID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -694,7 +694,7 @@ If there is only a single saml auth provider, it returns the empty string becaus
 
 ```
 searchKey: saml.providerIDQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -705,7 +705,7 @@ func providerIDQuery(pc *schema.SAMLAuthProvider, multiple bool) url.Values
 
 ```
 searchKey: saml.readIdentityProviderMetadata
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -716,7 +716,7 @@ func readIdentityProviderMetadata(ctx context.Context, c *providerConfig) ([]byt
 
 ```
 searchKey: saml.redirectToAuthURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -727,7 +727,7 @@ func redirectToAuthURL(w http.ResponseWriter, r *http.Request, p *provider, retu
 
 ```
 searchKey: saml.samlSPHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -738,7 +738,7 @@ func samlSPHandler(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: saml.traceLog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -749,7 +749,7 @@ func traceLog(description, body string)
 
 ```
 searchKey: saml.unexpiredCookies
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -762,7 +762,7 @@ unexpiredCookies returns the list of unexpired cookies set by the response
 
 ```
 searchKey: saml.unmarshalEntityDescriptor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -777,7 +777,7 @@ Taken from github.com/crewjam/saml.
 
 ```
 searchKey: saml.validateConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -788,7 +788,7 @@ func validateConfig(c conf.Unified) (problems conf.Problems)
 
 ```
 searchKey: saml.withConfigDefaults
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

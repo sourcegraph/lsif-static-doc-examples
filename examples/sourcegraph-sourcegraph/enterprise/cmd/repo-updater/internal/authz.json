@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/repo-updater/internal/authz",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -146,7 +145,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -386,7 +384,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -427,7 +424,7 @@
                       "newPage": false,
                       "searchKey": "authz.NewPermsSyncer",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -449,7 +446,7 @@
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.DebugDump",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -560,7 +557,7 @@
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.isDisabled",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -606,7 +603,7 @@
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.providersByServiceID",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -629,7 +626,7 @@
                       "newPage": false,
                       "searchKey": "authz.PermsSyncer.providersByURNs",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1044,7 +1041,7 @@
                       "newPage": false,
                       "searchKey": "authz.mockProvider.ServiceID",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1067,7 +1064,7 @@
                       "newPage": false,
                       "searchKey": "authz.mockProvider.ServiceType",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1090,7 +1087,7 @@
                       "newPage": false,
                       "searchKey": "authz.mockProvider.URN",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1113,7 +1110,7 @@
                       "newPage": false,
                       "searchKey": "authz.mockProvider.Validate",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1229,7 +1226,7 @@
                       "newPage": false,
                       "searchKey": "authz.requestQueue.Len",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1275,7 +1272,7 @@
                       "newPage": false,
                       "searchKey": "authz.requestQueue.Pop",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1344,7 +1341,7 @@
                       "newPage": false,
                       "searchKey": "authz.requestQueue.acquireNext",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1604,7 +1601,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1625,7 +1621,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestIntegration_GitHubPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1649,7 +1645,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestMain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1673,7 +1669,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_ScheduleRepos",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1697,7 +1693,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_ScheduleUsers",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1721,7 +1717,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_syncPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1745,7 +1741,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_syncRepoPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1769,7 +1765,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_syncUserPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1793,7 +1789,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_syncUserPerms_prefixSpecs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1817,7 +1813,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_syncUserPerms_tokenExpire",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1841,7 +1837,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsSyncer_waitForRateLimit",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1865,7 +1861,7 @@
                 "newPage": false,
                 "searchKey": "authz.Test_requestQueue_Less",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1889,7 +1885,7 @@
                 "newPage": false,
                 "searchKey": "authz.Test_requestQueue_acquireNext",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1913,7 +1909,7 @@
                 "newPage": false,
                 "searchKey": "authz.Test_requestQueue_enqueue",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1937,7 +1933,7 @@
                 "newPage": false,
                 "searchKey": "authz.Test_requestQueue_release",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1961,7 +1957,7 @@
                 "newPage": false,
                 "searchKey": "authz.Test_requestQueue_remove",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1985,7 +1981,7 @@
                 "newPage": false,
                 "searchKey": "authz.notify",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2008,7 +2004,7 @@
                 "newPage": false,
                 "searchKey": "authz.update",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

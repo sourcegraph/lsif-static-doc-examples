@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -165,9 +163,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -551,9 +547,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -893,9 +887,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -914,7 +906,7 @@
                 "newPage": false,
                 "searchKey": "mime.AddExtensionType",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -936,7 +928,7 @@
                 "newPage": false,
                 "searchKey": "mime.BenchmarkExtensionsByType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -960,7 +952,7 @@
                 "newPage": false,
                 "searchKey": "mime.BenchmarkQDecodeHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -984,7 +976,7 @@
                 "newPage": false,
                 "searchKey": "mime.BenchmarkQDecodeWord",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1008,7 +1000,7 @@
                 "newPage": false,
                 "searchKey": "mime.BenchmarkQEncodeWord",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1032,7 +1024,7 @@
                 "newPage": false,
                 "searchKey": "mime.BenchmarkTypeByExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1056,7 +1048,7 @@
                 "newPage": false,
                 "searchKey": "mime.ExtensionsByType",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1078,7 +1070,7 @@
                 "newPage": false,
                 "searchKey": "mime.FormatMediaType",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1100,7 +1092,7 @@
                 "newPage": false,
                 "searchKey": "mime.ParseMediaType",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1122,7 +1114,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestCharsetDecoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1146,7 +1138,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestCharsetDecoderError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1170,7 +1162,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestConsumeMediaParam",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1194,7 +1186,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestConsumeToken",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1218,7 +1210,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestConsumeValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1242,7 +1234,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestDecodeHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1266,7 +1258,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestDecodeWord",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1290,7 +1282,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestEncodeWord",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1314,7 +1306,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestEncodedWordLength",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1338,7 +1330,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestExtensionsByType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1362,7 +1354,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestExtensionsByType2",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1386,7 +1378,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestFormatMediaType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1410,7 +1402,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestLookupMallocs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1434,7 +1426,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestParseMediaType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1458,7 +1450,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestParseMediaTypeBogus",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1482,7 +1474,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestTypeByExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1506,7 +1498,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestTypeByExtensionCase",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1530,7 +1522,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestTypeByExtensionUNIX",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1554,7 +1546,7 @@
                 "newPage": false,
                 "searchKey": "mime.TestTypeByExtension_LocalData",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1578,7 +1570,7 @@
                 "newPage": false,
                 "searchKey": "mime.TypeByExtension",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1600,7 +1592,7 @@
                 "newPage": false,
                 "searchKey": "mime.checkMediaTypeDisposition",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1646,7 +1638,7 @@
                 "newPage": false,
                 "searchKey": "mime.clearSyncMap",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1669,7 +1661,7 @@
                 "newPage": false,
                 "searchKey": "mime.closeWord",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1692,7 +1684,7 @@
                 "newPage": false,
                 "searchKey": "mime.consumeMediaParam",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1715,7 +1707,7 @@
                 "newPage": false,
                 "searchKey": "mime.consumeToken",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1738,7 +1730,7 @@
                 "newPage": false,
                 "searchKey": "mime.consumeValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1761,7 +1753,7 @@
                 "newPage": false,
                 "searchKey": "mime.decode",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1784,7 +1776,7 @@
                 "newPage": false,
                 "searchKey": "mime.decode2231Enc",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1807,7 +1799,7 @@
                 "newPage": false,
                 "searchKey": "mime.fromHex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1830,7 +1822,7 @@
                 "newPage": false,
                 "searchKey": "mime.hasNonWhitespace",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1945,7 +1937,7 @@
                 "newPage": false,
                 "searchKey": "mime.initMimeUnixTest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1968,7 +1960,7 @@
                 "newPage": false,
                 "searchKey": "mime.isNotTokenChar",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1991,7 +1983,7 @@
                 "newPage": false,
                 "searchKey": "mime.isTSpecial",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2014,7 +2006,7 @@
                 "newPage": false,
                 "searchKey": "mime.isToken",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2037,7 +2029,7 @@
                 "newPage": false,
                 "searchKey": "mime.isTokenChar",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2060,7 +2052,7 @@
                 "newPage": false,
                 "searchKey": "mime.isUTF8",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2083,7 +2075,7 @@
                 "newPage": false,
                 "searchKey": "mime.ishex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2106,7 +2098,7 @@
                 "newPage": false,
                 "searchKey": "mime.loadMimeFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2129,7 +2121,7 @@
                 "newPage": false,
                 "searchKey": "mime.loadMimeGlobsFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2152,7 +2144,7 @@
                 "newPage": false,
                 "searchKey": "mime.needsEncoding",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2175,7 +2167,7 @@
                 "newPage": false,
                 "searchKey": "mime.percentHexUnescape",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2198,7 +2190,7 @@
                 "newPage": false,
                 "searchKey": "mime.qDecode",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2221,7 +2213,7 @@
                 "newPage": false,
                 "searchKey": "mime.readHexByte",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2244,7 +2236,7 @@
                 "newPage": false,
                 "searchKey": "mime.setExtensionType",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2267,7 +2259,7 @@
                 "newPage": false,
                 "searchKey": "mime.setMimeInit",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2290,7 +2282,7 @@
                 "newPage": false,
                 "searchKey": "mime.setMimeTypes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2313,7 +2305,7 @@
                 "newPage": false,
                 "searchKey": "mime.setType",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2336,7 +2328,7 @@
                 "newPage": false,
                 "searchKey": "mime.unhex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2359,7 +2351,7 @@
                 "newPage": false,
                 "searchKey": "mime.writeQString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

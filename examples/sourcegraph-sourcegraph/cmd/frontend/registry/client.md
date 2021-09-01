@@ -32,10 +32,6 @@ Package client contains a partial implementation of the extension registry.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="APIVersion" href="#APIVersion">const APIVersion</a>
 
 ```
@@ -101,10 +97,6 @@ const remoteRegistryErrorMessage = "unable to contact extension registry"
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Extension" href="#Extension">type Extension struct</a>
 
 ```
@@ -138,7 +130,7 @@ It is the external form of github.com/sourcegraph/sourcegraph/cmd/frontend/types
 
 ```
 searchKey: client.GetByExtensionID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -151,7 +143,7 @@ GetByExtensionID gets the extension from the remote registry with the given exte
 
 ```
 searchKey: client.GetByUUID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -164,7 +156,7 @@ GetByUUID gets the extension from the remote registry with the given UUID. If th
 
 ```
 searchKey: client.getBy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -202,7 +194,7 @@ type httpError int
 
 ```
 searchKey: client.httpError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -224,7 +216,7 @@ type notFoundError struct{ field, value string }
 
 ```
 searchKey: client.notFoundError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -235,7 +227,7 @@ func (e *notFoundError) Error() string
 
 ```
 searchKey: client.notFoundError.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -244,15 +236,11 @@ func (notFoundError) NotFound() bool
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="GetFeaturedExtensions" href="#GetFeaturedExtensions">func GetFeaturedExtensions(ctx context.Context, registry *url.URL) ([]*Extension, error)</a>
 
 ```
 searchKey: client.GetFeaturedExtensions
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -263,7 +251,7 @@ func GetFeaturedExtensions(ctx context.Context, registry *url.URL) ([]*Extension
 
 ```
 searchKey: client.IsRemoteRegistryError
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -276,7 +264,7 @@ IsRemoteRegistryError reports whether the err is (likely) from this package's in
 
 ```
 searchKey: client.List
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -289,7 +277,7 @@ List lists extensions on the remote registry matching the query (or all if the q
 
 ```
 searchKey: client.Name
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -302,7 +290,7 @@ Name returns the registry name given its URL.
 
 ```
 searchKey: client.httpGet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -313,7 +301,7 @@ func httpGet(ctx context.Context, op, urlStr string, result interface{}) (err er
 
 ```
 searchKey: client.toURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

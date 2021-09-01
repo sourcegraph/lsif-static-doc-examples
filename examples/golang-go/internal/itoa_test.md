@@ -14,7 +14,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="maxInt64" href="#maxInt64">var maxInt64</a>
@@ -53,14 +53,14 @@ var minInt64 int64 = math.MinInt64
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestItoa" href="#TestItoa">func TestItoa(t *testing.T)</a>
 
 ```
 searchKey: itoa_test.TestItoa
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -71,7 +71,7 @@ func TestItoa(t *testing.T)
 
 ```
 searchKey: itoa_test.TestUitoa
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

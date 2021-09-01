@@ -114,10 +114,6 @@ Package mime implements parts of the MIME spec.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BEncoding" href="#BEncoding">const BEncoding</a>
 
 ```
@@ -182,10 +178,6 @@ const upperhex = "0123456789ABCDEF"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ErrInvalidMediaParameter" href="#ErrInvalidMediaParameter">var ErrInvalidMediaParameter</a>
 
@@ -369,10 +361,6 @@ var typeFiles = ...
 Common locations for mime.types files on unix. 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="WordDecoder" href="#WordDecoder">type WordDecoder struct</a>
 
@@ -570,15 +558,11 @@ type mediaTypeTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AddExtensionType" href="#AddExtensionType">func AddExtensionType(ext, typ string) error</a>
 
 ```
 searchKey: mime.AddExtensionType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -591,7 +575,7 @@ AddExtensionType sets the MIME type associated with the extension ext to typ. Th
 
 ```
 searchKey: mime.BenchmarkExtensionsByType
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -602,7 +586,7 @@ func BenchmarkExtensionsByType(b *testing.B)
 
 ```
 searchKey: mime.BenchmarkQDecodeHeader
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -613,7 +597,7 @@ func BenchmarkQDecodeHeader(b *testing.B)
 
 ```
 searchKey: mime.BenchmarkQDecodeWord
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -624,7 +608,7 @@ func BenchmarkQDecodeWord(b *testing.B)
 
 ```
 searchKey: mime.BenchmarkQEncodeWord
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -635,7 +619,7 @@ func BenchmarkQEncodeWord(b *testing.B)
 
 ```
 searchKey: mime.BenchmarkTypeByExtension
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -646,7 +630,7 @@ func BenchmarkTypeByExtension(b *testing.B)
 
 ```
 searchKey: mime.ExtensionsByType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -659,7 +643,7 @@ ExtensionsByType returns the extensions known to be associated with the MIME typ
 
 ```
 searchKey: mime.FormatMediaType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -672,7 +656,7 @@ FormatMediaType serializes mediatype t and the parameters param as a media type 
 
 ```
 searchKey: mime.ParseMediaType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -685,7 +669,7 @@ ParseMediaType parses a media type value and any optional parameters, per RFC 15
 
 ```
 searchKey: mime.TestCharsetDecoder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -696,7 +680,7 @@ func TestCharsetDecoder(t *testing.T)
 
 ```
 searchKey: mime.TestCharsetDecoderError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -707,7 +691,7 @@ func TestCharsetDecoderError(t *testing.T)
 
 ```
 searchKey: mime.TestConsumeMediaParam
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -718,7 +702,7 @@ func TestConsumeMediaParam(t *testing.T)
 
 ```
 searchKey: mime.TestConsumeToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -729,7 +713,7 @@ func TestConsumeToken(t *testing.T)
 
 ```
 searchKey: mime.TestConsumeValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -740,7 +724,7 @@ func TestConsumeValue(t *testing.T)
 
 ```
 searchKey: mime.TestDecodeHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -751,7 +735,7 @@ func TestDecodeHeader(t *testing.T)
 
 ```
 searchKey: mime.TestDecodeWord
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -762,7 +746,7 @@ func TestDecodeWord(t *testing.T)
 
 ```
 searchKey: mime.TestEncodeWord
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -773,7 +757,7 @@ func TestEncodeWord(t *testing.T)
 
 ```
 searchKey: mime.TestEncodedWordLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -784,7 +768,7 @@ func TestEncodedWordLength(t *testing.T)
 
 ```
 searchKey: mime.TestExtensionsByType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -795,7 +779,7 @@ func TestExtensionsByType(t *testing.T)
 
 ```
 searchKey: mime.TestExtensionsByType2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -806,7 +790,7 @@ func TestExtensionsByType2(t *testing.T)
 
 ```
 searchKey: mime.TestFormatMediaType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -817,7 +801,7 @@ func TestFormatMediaType(t *testing.T)
 
 ```
 searchKey: mime.TestLookupMallocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -828,7 +812,7 @@ func TestLookupMallocs(t *testing.T)
 
 ```
 searchKey: mime.TestParseMediaType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -839,7 +823,7 @@ func TestParseMediaType(t *testing.T)
 
 ```
 searchKey: mime.TestParseMediaTypeBogus
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -850,7 +834,7 @@ func TestParseMediaTypeBogus(t *testing.T)
 
 ```
 searchKey: mime.TestTypeByExtension
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -861,7 +845,7 @@ func TestTypeByExtension(t *testing.T)
 
 ```
 searchKey: mime.TestTypeByExtensionCase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -872,7 +856,7 @@ func TestTypeByExtensionCase(t *testing.T)
 
 ```
 searchKey: mime.TestTypeByExtensionUNIX
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -883,7 +867,7 @@ func TestTypeByExtensionUNIX(t *testing.T)
 
 ```
 searchKey: mime.TestTypeByExtension_LocalData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -894,7 +878,7 @@ func TestTypeByExtension_LocalData(t *testing.T)
 
 ```
 searchKey: mime.TypeByExtension
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -923,7 +907,7 @@ Text types have the charset parameter set to "utf-8" by default.
 
 ```
 searchKey: mime.checkMediaTypeDisposition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -945,7 +929,7 @@ func clearMimeTypes()
 
 ```
 searchKey: mime.clearSyncMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -956,7 +940,7 @@ func clearSyncMap(m *sync.Map)
 
 ```
 searchKey: mime.closeWord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -969,7 +953,7 @@ closeWord writes the end of an encoded-word into buf.
 
 ```
 searchKey: mime.consumeMediaParam
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -980,7 +964,7 @@ func consumeMediaParam(v string) (param, value, rest string)
 
 ```
 searchKey: mime.consumeToken
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -993,7 +977,7 @@ consumeToken consumes a token from the beginning of provided string, per RFC 204
 
 ```
 searchKey: mime.consumeValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1006,7 +990,7 @@ consumeValue consumes a "value" per RFC 2045, where a value is either a 'token' 
 
 ```
 searchKey: mime.decode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1017,7 +1001,7 @@ func decode(encoding byte, text string) ([]byte, error)
 
 ```
 searchKey: mime.decode2231Enc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1028,7 +1012,7 @@ func decode2231Enc(v string) (string, bool)
 
 ```
 searchKey: mime.fromHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1039,7 +1023,7 @@ func fromHex(b byte) (byte, error)
 
 ```
 searchKey: mime.hasNonWhitespace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1096,7 +1080,7 @@ func initMimeUnix()
 
 ```
 searchKey: mime.initMimeUnixTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1107,7 +1091,7 @@ func initMimeUnixTest(t *testing.T)
 
 ```
 searchKey: mime.isNotTokenChar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1118,7 +1102,7 @@ func isNotTokenChar(r rune) bool
 
 ```
 searchKey: mime.isTSpecial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1131,7 +1115,7 @@ isTSpecial reports whether rune is in 'tspecials' as defined by RFC 1521 and RFC
 
 ```
 searchKey: mime.isToken
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1144,7 +1128,7 @@ isToken reports whether s is a 'token' as defined by RFC 1521 and RFC 2045.
 
 ```
 searchKey: mime.isTokenChar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1157,7 +1141,7 @@ isTokenChar reports whether rune is in 'token' as defined by RFC 1521 and RFC 20
 
 ```
 searchKey: mime.isUTF8
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1168,7 +1152,7 @@ func isUTF8(charset string) bool
 
 ```
 searchKey: mime.ishex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1179,7 +1163,7 @@ func ishex(c byte) bool
 
 ```
 searchKey: mime.loadMimeFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1190,7 +1174,7 @@ func loadMimeFile(filename string)
 
 ```
 searchKey: mime.loadMimeGlobsFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1201,7 +1185,7 @@ func loadMimeGlobsFile(filename string) error
 
 ```
 searchKey: mime.needsEncoding
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1212,7 +1196,7 @@ func needsEncoding(s string) bool
 
 ```
 searchKey: mime.percentHexUnescape
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1223,7 +1207,7 @@ func percentHexUnescape(s string) (string, error)
 
 ```
 searchKey: mime.qDecode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1236,7 +1220,7 @@ qDecode decodes a Q encoded string.
 
 ```
 searchKey: mime.readHexByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1249,7 +1233,7 @@ readHexByte returns the byte from its quoted-printable representation.
 
 ```
 searchKey: mime.setExtensionType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1260,7 +1244,7 @@ func setExtensionType(extension, mimeType string) error
 
 ```
 searchKey: mime.setMimeInit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1271,7 +1255,7 @@ func setMimeInit(fn func()) (cleanup func())
 
 ```
 searchKey: mime.setMimeTypes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1284,7 +1268,7 @@ setMimeTypes is used by initMime's non-test path, and by tests.
 
 ```
 searchKey: mime.setType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1295,7 +1279,7 @@ func setType(ext, typ string)
 
 ```
 searchKey: mime.unhex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1306,7 +1290,7 @@ func unhex(c byte) byte
 
 ```
 searchKey: mime.writeQString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

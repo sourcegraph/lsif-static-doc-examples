@@ -44,7 +44,7 @@ It is an internal package because these details are specific to the Go team's te
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="execPaths" href="#execPaths">var execPaths</a>
@@ -84,7 +84,7 @@ var haveCGO bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Builder" href="#Builder">func Builder() string</a>
@@ -130,7 +130,7 @@ CanInternalLink reports whether the current system can link programs with intern
 
 ```
 searchKey: testenv.CleanCmdEnv
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -156,7 +156,7 @@ GoTool reports the path to the Go tool.
 
 ```
 searchKey: testenv.GoToolPath
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -273,7 +273,7 @@ HasSymlink reports whether the current system can use os.Symlink.
 
 ```
 searchKey: testenv.MustHaveCGO
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -286,7 +286,7 @@ MustHaveCGO calls t.Skip if cgo is not available.
 
 ```
 searchKey: testenv.MustHaveExec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -299,7 +299,7 @@ MustHaveExec checks that the current system can start new processes using os.Sta
 
 ```
 searchKey: testenv.MustHaveExecPath
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -312,7 +312,7 @@ MustHaveExecPath checks that the current system can start the named executable u
 
 ```
 searchKey: testenv.MustHaveExternalNetwork
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -325,7 +325,7 @@ MustHaveExternalNetwork checks that the current system can use external (non-loc
 
 ```
 searchKey: testenv.MustHaveGoBuild
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -338,7 +338,7 @@ MustHaveGoBuild checks that the current system can build programs with `go build
 
 ```
 searchKey: testenv.MustHaveGoRun
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -351,7 +351,7 @@ MustHaveGoRun checks that the current system can run programs with `go run.' If 
 
 ```
 searchKey: testenv.MustHaveLink
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -364,7 +364,7 @@ MustHaveLink reports whether the current system can use os.Link. If not, MustHav
 
 ```
 searchKey: testenv.MustHaveSymlink
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -377,7 +377,7 @@ MustHaveSymlink reports whether the current system can use os.Symlink. If not, M
 
 ```
 searchKey: testenv.MustInternalLink
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -390,7 +390,7 @@ MustInternalLink checks that the current system can link programs with internal 
 
 ```
 searchKey: testenv.SkipFlaky
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -401,7 +401,7 @@ func SkipFlaky(t testing.TB, issue int)
 
 ```
 searchKey: testenv.SkipFlakyNet
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -412,7 +412,7 @@ func SkipFlakyNet(t testing.TB)
 
 ```
 searchKey: testenv.SkipIfShortAndSlow
-tags: [method]
+tags: [function]
 ```
 
 ```Go

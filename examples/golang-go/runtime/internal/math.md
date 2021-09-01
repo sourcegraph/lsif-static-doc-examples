@@ -12,7 +12,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MaxUintptr" href="#MaxUintptr">const MaxUintptr</a>
@@ -29,14 +29,14 @@ const MaxUintptr = ^uintptr(0)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Mul64" href="#Mul64">func Mul64(x, y uint64) (hi, lo uint64)</a>
 
 ```
 searchKey: math.Mul64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -49,7 +49,7 @@ Mul64 returns the 128-bit product of x and y: (hi, lo) = x * y with the product 
 
 ```
 searchKey: math.MulUintptr
-tags: [method]
+tags: [function]
 ```
 
 ```Go

@@ -49,10 +49,6 @@ The text/tabwriter package is frozen and is not accepting new features.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AlignRight" href="#AlignRight">const AlignRight</a>
 
 ```
@@ -160,10 +156,6 @@ Always use tabs for indentation columns (i.e., padding of leading empty cells on
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="hbar" href="#hbar">var hbar</a>
 
 ```
@@ -209,10 +201,6 @@ var vbar = []byte{'|'}
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Writer" href="#Writer">type Writer struct</a>
 
@@ -272,7 +260,7 @@ The Writer must buffer input internally, because proper spacing of one line may 
 
 ```
 searchKey: tabwriter.NewWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -285,7 +273,7 @@ NewWriter allocates and initializes a new tabwriter.Writer. The parameters are t
 
 ```
 searchKey: tabwriter.Writer.Flush
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -363,7 +351,7 @@ Append text to current cell.
 
 ```
 searchKey: tabwriter.Writer.dump
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -376,7 +364,7 @@ debugging support (keep code around)
 
 ```
 searchKey: tabwriter.Writer.endEscape
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -389,7 +377,7 @@ Terminate escaped mode. If the escaped text was an HTML tag, its width is assume
 
 ```
 searchKey: tabwriter.Writer.flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -402,7 +390,7 @@ flush is the internal version of Flush, with a named return value which we don't
 
 ```
 searchKey: tabwriter.Writer.flushNoDefers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -439,7 +427,7 @@ func (b *Writer) handlePanic(err *error, op string)
 
 ```
 searchKey: tabwriter.Writer.reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -478,7 +466,7 @@ Terminate the current cell by adding it to the list of cells of the current line
 
 ```
 searchKey: tabwriter.Writer.updateWidth
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go

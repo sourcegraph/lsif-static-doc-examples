@@ -69,7 +69,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ChangesetSpecAuthorEmail" href="#ChangesetSpecAuthorEmail">const ChangesetSpecAuthorEmail</a>
@@ -119,7 +119,7 @@ const TestRawBatchSpecYAML = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ChangesetSpecDiffStat" href="#ChangesetSpecDiffStat">var ChangesetSpecDiffStat</a>
@@ -180,7 +180,7 @@ var baseChangesetSpecGitBranch = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ChangesetAssertions" href="#ChangesetAssertions">type ChangesetAssertions struct</a>
@@ -352,7 +352,7 @@ type MockedChangesetSyncState struct {
 
 ```
 searchKey: testing.MockChangesetSyncState
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -367,7 +367,7 @@ state.Unmock() must called to clean up, usually via defer.
 
 ```
 searchKey: testing.MockedChangesetSyncState.Unmock
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -446,7 +446,7 @@ func (c *TestClock) Add(d time.Duration) time.Time
 
 ```
 searchKey: testing.TestClock.Now
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -520,14 +520,14 @@ type createSiteCredentialer interface {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AssertChangeset" href="#AssertChangeset">func AssertChangeset(t *testing.T, c *btypes.Changeset, a ChangesetAssertions)</a>
 
 ```
 searchKey: testing.AssertChangeset
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -538,7 +538,7 @@ func AssertChangeset(t *testing.T, c *btypes.Changeset, a ChangesetAssertions)
 
 ```
 searchKey: testing.BuildBatchChange
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -549,7 +549,7 @@ func BuildBatchChange(store CreateBatchChanger, name string, userID int32, spec 
 
 ```
 searchKey: testing.BuildChangeset
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -560,7 +560,7 @@ func BuildChangeset(opts TestChangesetOpts) *btypes.Changeset
 
 ```
 searchKey: testing.BuildChangesetSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -571,7 +571,7 @@ func BuildChangesetSpec(t *testing.T, opts TestSpecOpts) *btypes.ChangesetSpec
 
 ```
 searchKey: testing.CreateBatchChange
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -582,7 +582,7 @@ func CreateBatchChange(t *testing.T, ctx context.Context, store CreateBatchChang
 
 ```
 searchKey: testing.CreateBatchSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -593,7 +593,7 @@ func CreateBatchSpec(t *testing.T, ctx context.Context, store CreateBatchSpecer,
 
 ```
 searchKey: testing.CreateBbsSSHTestRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -604,7 +604,7 @@ func CreateBbsSSHTestRepos(t *testing.T, ctx context.Context, db dbutil.DB, coun
 
 ```
 searchKey: testing.CreateBbsTestRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -615,7 +615,7 @@ func CreateBbsTestRepos(t *testing.T, ctx context.Context, db *sql.DB, count int
 
 ```
 searchKey: testing.CreateChangeset
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -631,7 +631,7 @@ func CreateChangeset(
 
 ```
 searchKey: testing.CreateChangesetSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -647,7 +647,7 @@ func CreateChangesetSpec(
 
 ```
 searchKey: testing.CreateGitHubSSHTestRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -658,7 +658,7 @@ func CreateGitHubSSHTestRepos(t *testing.T, ctx context.Context, db dbutil.DB, c
 
 ```
 searchKey: testing.CreateGitlabTestRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -669,7 +669,7 @@ func CreateGitlabTestRepos(t *testing.T, ctx context.Context, db *sql.DB, count 
 
 ```
 searchKey: testing.CreateTestRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -680,7 +680,7 @@ func CreateTestRepos(t *testing.T, ctx context.Context, db dbutil.DB, count int)
 
 ```
 searchKey: testing.CreateTestSiteCredential
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -691,7 +691,7 @@ func CreateTestSiteCredential(t *testing.T, bstore createSiteCredentialer, repo 
 
 ```
 searchKey: testing.InsertTestOrg
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -702,7 +702,7 @@ func InsertTestOrg(t *testing.T, db dbutil.DB, name string) (orgID int32)
 
 ```
 searchKey: testing.MarshalJSON
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -713,7 +713,7 @@ func MarshalJSON(t testing.TB, v interface{}) string
 
 ```
 searchKey: testing.MockConfig
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -724,7 +724,7 @@ func MockConfig(t testing.TB, mockery *conf.Unified)
 
 ```
 searchKey: testing.MockRSAKeygen
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -735,7 +735,7 @@ func MockRSAKeygen(t *testing.T)
 
 ```
 searchKey: testing.MockRepoPermissions
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -748,7 +748,7 @@ MockRepoPermissions mocks repository permissions to include repositories by IDs 
 
 ```
 searchKey: testing.NewPublishedRawChangesetSpecGitBranch
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -759,7 +759,7 @@ func NewPublishedRawChangesetSpecGitBranch(repo graphql.ID, baseRev string, publ
 
 ```
 searchKey: testing.NewRawChangesetSpecExisting
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -770,7 +770,7 @@ func NewRawChangesetSpecExisting(repo graphql.ID, externalID string) string
 
 ```
 searchKey: testing.NewRawChangesetSpecGitBranch
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -781,7 +781,7 @@ func NewRawChangesetSpecGitBranch(repo graphql.ID, baseRev string) string
 
 ```
 searchKey: testing.ReloadAndAssertChangeset
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -792,7 +792,7 @@ func ReloadAndAssertChangeset(t *testing.T, ctx context.Context, s GetChangesetB
 
 ```
 searchKey: testing.SetChangesetClosed
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -803,7 +803,7 @@ func SetChangesetClosed(t *testing.T, ctx context.Context, s UpdateChangeseter, 
 
 ```
 searchKey: testing.SetChangesetFailed
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -814,7 +814,7 @@ func SetChangesetFailed(t *testing.T, ctx context.Context, s UpdateChangeseter, 
 
 ```
 searchKey: testing.SetChangesetPublished
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -825,7 +825,7 @@ func SetChangesetPublished(t *testing.T, ctx context.Context, s UpdateChangesete
 
 ```
 searchKey: testing.TestRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -836,7 +836,7 @@ func TestRepo(t *testing.T, store *database.ExternalServiceStore, serviceKind st
 
 ```
 searchKey: testing.TestRepoWithService
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -847,7 +847,7 @@ func TestRepoWithService(t *testing.T, store *database.ExternalServiceStore, nam
 
 ```
 searchKey: testing.TruncateTables
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -858,7 +858,7 @@ func TruncateTables(t *testing.T, db *sql.DB, tables ...string)
 
 ```
 searchKey: testing.createBbsRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

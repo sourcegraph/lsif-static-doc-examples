@@ -62,10 +62,6 @@ Learn more about monitoring in [https://about.sourcegraph.com/handbook/engineeri
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TitleContainerMonitoring" href="#TitleContainerMonitoring">const TitleContainerMonitoring</a>
 
 ```
@@ -129,10 +125,6 @@ Provisioning indicator overviews - these provide long-term overviews of containe
 These observables should only use cAdvisor metrics, and are thus only available on Kubernetes and docker-compose deployments. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ContainerCPUUsage" href="#ContainerCPUUsage">var ContainerCPUUsage</a>
 
@@ -270,10 +262,6 @@ var ProvisioningMemoryUsageShortTerm sharedObservable = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Observable" href="#Observable">type Observable monitoring.Observable</a>
 
 ```
@@ -291,7 +279,7 @@ Observable is a variant of normal Observables that offer convenience functions f
 
 ```
 searchKey: shared.Observable.Observable
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -354,15 +342,11 @@ sharedObservable defines the type all shared observable variables should have in
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CadvisorNameMatcher" href="#CadvisorNameMatcher">func CadvisorNameMatcher(containerName string) string</a>
 
 ```
 searchKey: shared.CadvisorNameMatcher
-tags: [method]
+tags: [function]
 ```
 
 ```Go

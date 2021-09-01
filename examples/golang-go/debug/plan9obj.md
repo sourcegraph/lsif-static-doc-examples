@@ -39,10 +39,6 @@ Package plan9obj implements access to Plan 9 a.out object files.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Magic386" href="#Magic386">const Magic386</a>
 
 ```
@@ -90,10 +86,6 @@ const MagicARM = (4*20+0)*20 + 7
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="fileTests" href="#fileTests">var fileTests</a>
 
 ```
@@ -106,10 +98,6 @@ var fileTests = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="File" href="#File">type File struct</a>
 
@@ -132,7 +120,7 @@ A File represents an open Plan 9 a.out file.
 
 ```
 searchKey: plan9obj.NewFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -145,7 +133,7 @@ NewFile creates a new File for accessing a Plan 9 binary in an underlying reader
 
 ```
 searchKey: plan9obj.Open
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -158,7 +146,7 @@ Open opens the named file using os.Open and prepares it for use as a Plan 9 a.ou
 
 ```
 searchKey: plan9obj.File.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -184,7 +172,7 @@ Section returns a section with the given name, or nil if no such section exists.
 
 ```
 searchKey: plan9obj.File.Symbols
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -241,7 +229,7 @@ A Section represents a single section in a Plan 9 a.out file.
 
 ```
 searchKey: plan9obj.Section.Data
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -254,7 +242,7 @@ Data reads and returns the contents of the Plan 9 a.out section.
 
 ```
 searchKey: plan9obj.Section.Open
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -333,7 +321,7 @@ formatError is returned by some operations if the data does not have the correct
 
 ```
 searchKey: plan9obj.formatError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -381,15 +369,11 @@ Plan 9 symbol table entries.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestOpen" href="#TestOpen">func TestOpen(t *testing.T)</a>
 
 ```
 searchKey: plan9obj.TestOpen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -400,7 +384,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: plan9obj.TestOpenFailure
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -411,7 +395,7 @@ func TestOpenFailure(t *testing.T)
 
 ```
 searchKey: plan9obj.newTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -424,7 +408,7 @@ NewTable decodes the Go symbol table in data, returning an in-memory representat
 
 ```
 searchKey: plan9obj.parseMagic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -435,7 +419,7 @@ func parseMagic(magic []byte) (uint32, error)
 
 ```
 searchKey: plan9obj.walksymtab
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

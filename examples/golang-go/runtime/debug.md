@@ -32,10 +32,6 @@ Package debug contains facilities for programs to debug themselves while they ar
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BuildInfo" href="#BuildInfo">type BuildInfo struct</a>
 
 ```
@@ -70,7 +66,7 @@ ReadBuildInfo returns the build information embedded in the running binary. The 
 
 ```
 searchKey: debug.readBuildInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -117,10 +113,6 @@ Module represents a module.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="FreeOSMemory" href="#FreeOSMemory">func FreeOSMemory()</a>
 
 ```
@@ -151,7 +143,7 @@ PrintStack prints to standard error the stack trace returned by runtime.Stack.
 
 ```
 searchKey: debug.ReadGCStats
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -164,7 +156,7 @@ ReadGCStats reads statistics about garbage collection into stats. The number of 
 
 ```
 searchKey: debug.SetGCPercent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -177,7 +169,7 @@ SetGCPercent sets the garbage collection target percentage: a collection is trig
 
 ```
 searchKey: debug.SetMaxStack
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -192,7 +184,7 @@ SetMaxStack is useful mainly for limiting the damage done by goroutines that ent
 
 ```
 searchKey: debug.SetMaxThreads
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -209,7 +201,7 @@ SetMaxThreads is useful mainly for limiting the damage done by programs that cre
 
 ```
 searchKey: debug.SetPanicOnFault
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -228,7 +220,7 @@ If that method exists, it returns the memory address which triggered the fault. 
 
 ```
 searchKey: debug.SetTraceback
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -254,7 +246,7 @@ Stack returns a formatted stack trace of the goroutine that calls it. It calls r
 
 ```
 searchKey: debug.WriteHeapDump
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -295,7 +287,7 @@ exported from runtime
 
 ```
 searchKey: debug.readGCStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -308,7 +300,7 @@ Implemented in package runtime.
 
 ```
 searchKey: debug.setGCPercent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -319,7 +311,7 @@ func setGCPercent(int32) int32
 
 ```
 searchKey: debug.setMaxStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -330,7 +322,7 @@ func setMaxStack(int) int
 
 ```
 searchKey: debug.setMaxThreads
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -341,7 +333,7 @@ func setMaxThreads(int) int
 
 ```
 searchKey: debug.setPanicOnFault
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

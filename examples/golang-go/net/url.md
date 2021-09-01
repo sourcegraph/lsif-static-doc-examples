@@ -145,10 +145,6 @@ Package url parses URLs and implements query escaping.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="encodeFragment" href="#encodeFragment">const encodeFragment</a>
 
 ```
@@ -249,10 +245,6 @@ const upperhex = "0123456789ABCDEF"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="encodeQueryTests" href="#encodeQueryTests">var encodeQueryTests</a>
 
@@ -421,10 +413,6 @@ var urltests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="EncodeQueryTest" href="#EncodeQueryTest">type EncodeQueryTest struct</a>
 
 ```
@@ -460,7 +448,7 @@ Error reports an error and the operation and URL that caused it.
 
 ```
 searchKey: url.Error.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -471,7 +459,7 @@ func (e *Error) Error() string
 
 ```
 searchKey: url.Error.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -482,7 +470,7 @@ func (e *Error) Temporary() bool
 
 ```
 searchKey: url.Error.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -493,7 +481,7 @@ func (e *Error) Timeout() bool
 
 ```
 searchKey: url.Error.Unwrap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -515,7 +503,7 @@ type EscapeError string
 
 ```
 searchKey: url.EscapeError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -552,7 +540,7 @@ type InvalidHostError string
 
 ```
 searchKey: url.InvalidHostError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -617,7 +605,7 @@ URL's String method uses the EscapedPath method to obtain the path. See the Esca
 
 ```
 searchKey: url.Parse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -632,7 +620,7 @@ The url may be relative (a path, without a host) or absolute (starting with a sc
 
 ```
 searchKey: url.ParseRequestURI
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -645,7 +633,7 @@ ParseRequestURI parses a raw url into a URL structure. It assumes that url was r
 
 ```
 searchKey: url.parse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -658,7 +646,7 @@ parse parses a URL from a string in one of two contexts. If viaRequest is true, 
 
 ```
 searchKey: url.URL.EscapedFragment
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -671,7 +659,7 @@ EscapedFragment returns the escaped form of u.Fragment. In general there are mul
 
 ```
 searchKey: url.URL.EscapedPath
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -684,7 +672,7 @@ EscapedPath returns the escaped form of u.Path. In general there are multiple po
 
 ```
 searchKey: url.URL.Hostname
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -699,7 +687,7 @@ If the result is enclosed in square brackets, as literal IPv6 addresses are, the
 
 ```
 searchKey: url.URL.IsAbs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -712,7 +700,7 @@ IsAbs reports whether the URL is absolute. Absolute means that it has a non-empt
 
 ```
 searchKey: url.URL.MarshalBinary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -736,7 +724,7 @@ Parse parses a URL in the context of the receiver. The provided URL may be relat
 
 ```
 searchKey: url.URL.Port
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -751,7 +739,7 @@ If u.Host doesn't contain a valid numeric port, Port returns an empty string.
 
 ```
 searchKey: url.URL.Query
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -764,7 +752,7 @@ Query parses RawQuery and returns the corresponding values. It silently discards
 
 ```
 searchKey: url.URL.Redacted
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -777,7 +765,7 @@ Redacted is like String but replaces any password with "xxxxx". Only the passwor
 
 ```
 searchKey: url.URL.RequestURI
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -803,7 +791,7 @@ ResolveReference resolves a URI reference to an absolute URI from an absolute ba
 
 ```
 searchKey: url.URL.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -906,7 +894,7 @@ The Userinfo type is an immutable encapsulation of username and password details
 
 ```
 searchKey: url.User
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -919,7 +907,7 @@ User returns a Userinfo containing the provided username and no password set.
 
 ```
 searchKey: url.UserPassword
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -934,7 +922,7 @@ This functionality should only be used with legacy web sites. RFC 2396 warns tha
 
 ```
 searchKey: url.parseAuthority
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -945,7 +933,7 @@ func parseAuthority(authority string) (user *Userinfo, host string, err error)
 
 ```
 searchKey: url.Userinfo.Password
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -958,7 +946,7 @@ Password returns the password in case it is set, and whether it is set.
 
 ```
 searchKey: url.Userinfo.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -971,7 +959,7 @@ String returns the encoded userinfo information in the standard form of "usernam
 
 ```
 searchKey: url.Userinfo.Username
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -997,7 +985,7 @@ Values maps a string key to a list of values. It is typically used for query par
 
 ```
 searchKey: url.ParseQuery
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1038,7 +1026,7 @@ Del deletes the values associated with key.
 
 ```
 searchKey: url.Values.Encode
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1144,7 +1132,7 @@ type temporaryError struct {
 
 ```
 searchKey: url.temporaryError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1155,7 +1143,7 @@ func (e *temporaryError) Error() string
 
 ```
 searchKey: url.temporaryError.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1179,7 +1167,7 @@ type timeoutError struct {
 
 ```
 searchKey: url.timeoutError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1190,7 +1178,7 @@ func (e *timeoutError) Error() string
 
 ```
 searchKey: url.timeoutError.Timeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1215,7 +1203,7 @@ type timeoutTemporaryError struct {
 
 ```
 searchKey: url.timeoutTemporaryError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1224,15 +1212,11 @@ func (e *timeoutTemporaryError) Error() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkPathEscape" href="#BenchmarkPathEscape">func BenchmarkPathEscape(b *testing.B)</a>
 
 ```
 searchKey: url.BenchmarkPathEscape
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1243,7 +1227,7 @@ func BenchmarkPathEscape(b *testing.B)
 
 ```
 searchKey: url.BenchmarkPathUnescape
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1254,7 +1238,7 @@ func BenchmarkPathUnescape(b *testing.B)
 
 ```
 searchKey: url.BenchmarkQueryEscape
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1265,7 +1249,7 @@ func BenchmarkQueryEscape(b *testing.B)
 
 ```
 searchKey: url.BenchmarkQueryUnescape
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1276,7 +1260,7 @@ func BenchmarkQueryUnescape(b *testing.B)
 
 ```
 searchKey: url.BenchmarkResolvePath
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1287,7 +1271,7 @@ func BenchmarkResolvePath(b *testing.B)
 
 ```
 searchKey: url.BenchmarkSplit
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1298,7 +1282,7 @@ func BenchmarkSplit(b *testing.B)
 
 ```
 searchKey: url.BenchmarkString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1309,7 +1293,7 @@ func BenchmarkString(b *testing.B)
 
 ```
 searchKey: url.PathEscape
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1322,7 +1306,7 @@ PathEscape escapes the string so it can be safely placed inside a URL path segme
 
 ```
 searchKey: url.PathUnescape
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1337,7 +1321,7 @@ PathUnescape is identical to QueryUnescape except that it does not unescape '+' 
 
 ```
 searchKey: url.QueryEscape
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1350,7 +1334,7 @@ QueryEscape escapes the string so it can be safely placed inside a URL query.
 
 ```
 searchKey: url.QueryUnescape
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1363,7 +1347,7 @@ QueryUnescape does the inverse transformation of QueryEscape, converting each 3-
 
 ```
 searchKey: url.TestEncodeQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1374,7 +1358,7 @@ func TestEncodeQuery(t *testing.T)
 
 ```
 searchKey: url.TestGob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1385,7 +1369,7 @@ func TestGob(t *testing.T)
 
 ```
 searchKey: url.TestInvalidUserPassword
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1396,7 +1380,7 @@ func TestInvalidUserPassword(t *testing.T)
 
 ```
 searchKey: url.TestJSON
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1407,7 +1391,7 @@ func TestJSON(t *testing.T)
 
 ```
 searchKey: url.TestNilUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1418,7 +1402,7 @@ func TestNilUser(t *testing.T)
 
 ```
 searchKey: url.TestParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1429,7 +1413,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: url.TestParseErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1440,7 +1424,7 @@ func TestParseErrors(t *testing.T)
 
 ```
 searchKey: url.TestParseFailure
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1451,7 +1435,7 @@ func TestParseFailure(t *testing.T)
 
 ```
 searchKey: url.TestParseQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1462,7 +1446,7 @@ func TestParseQuery(t *testing.T)
 
 ```
 searchKey: url.TestParseRequestURI
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1473,7 +1457,7 @@ func TestParseRequestURI(t *testing.T)
 
 ```
 searchKey: url.TestPathEscape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1484,7 +1468,7 @@ func TestPathEscape(t *testing.T)
 
 ```
 searchKey: url.TestQueryEscape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1495,7 +1479,7 @@ func TestQueryEscape(t *testing.T)
 
 ```
 searchKey: url.TestQueryValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1506,7 +1490,7 @@ func TestQueryValues(t *testing.T)
 
 ```
 searchKey: url.TestRejectControlCharacters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1517,7 +1501,7 @@ func TestRejectControlCharacters(t *testing.T)
 
 ```
 searchKey: url.TestRequestURI
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1528,7 +1512,7 @@ func TestRequestURI(t *testing.T)
 
 ```
 searchKey: url.TestResolvePath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1539,7 +1523,7 @@ func TestResolvePath(t *testing.T)
 
 ```
 searchKey: url.TestResolveReference
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1550,7 +1534,7 @@ func TestResolveReference(t *testing.T)
 
 ```
 searchKey: url.TestShouldEscape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1561,7 +1545,7 @@ func TestShouldEscape(t *testing.T)
 
 ```
 searchKey: url.TestStarRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1574,7 +1558,7 @@ Issue 11202
 
 ```
 searchKey: url.TestURLErrorImplementsNetError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1587,7 +1571,7 @@ Test that url.Error implements net.Error and that it forwards
 
 ```
 searchKey: url.TestURLHostnameAndPort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1598,7 +1582,7 @@ func TestURLHostnameAndPort(t *testing.T)
 
 ```
 searchKey: url.TestURLRedacted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1609,7 +1593,7 @@ func TestURLRedacted(t *testing.T)
 
 ```
 searchKey: url.TestURLString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1620,7 +1604,7 @@ func TestURLString(t *testing.T)
 
 ```
 searchKey: url.TestUnescape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1631,7 +1615,7 @@ func TestUnescape(t *testing.T)
 
 ```
 searchKey: url.escape
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1642,7 +1626,7 @@ func escape(s string, mode encoding) string
 
 ```
 searchKey: url.getScheme
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1655,7 +1639,7 @@ Maybe rawURL is of the form scheme:path. (Scheme must be [a-zA-Z][a-zA-Z0-9+-.]*
 
 ```
 searchKey: url.ishex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1666,7 +1650,7 @@ func ishex(c byte) bool
 
 ```
 searchKey: url.parseHost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1679,7 +1663,7 @@ parseHost parses host as an authority without user information. That is, as host
 
 ```
 searchKey: url.parseQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1690,7 +1674,7 @@ func parseQuery(m Values, query string) (err error)
 
 ```
 searchKey: url.resolvePath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1703,7 +1687,7 @@ resolvePath applies special path segments from refs and applies them to base, pe
 
 ```
 searchKey: url.shouldEscape
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1718,7 +1702,7 @@ Please be informed that for now shouldEscape does not check all reserved charact
 
 ```
 searchKey: url.split
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1731,7 +1715,7 @@ split slices s into two substrings separated by the first occurrence of sep. If 
 
 ```
 searchKey: url.splitHostPort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1744,7 +1728,7 @@ splitHostPort separates host and port. If the port is not valid, it returns the 
 
 ```
 searchKey: url.stringContainsCTLByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1757,7 +1741,7 @@ stringContainsCTLByte reports whether s contains any ASCII control character.
 
 ```
 searchKey: url.ufmt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1770,7 +1754,7 @@ more useful string for debugging than fmt's struct printer
 
 ```
 searchKey: url.unescape
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1783,7 +1767,7 @@ unescape unescapes a string; the mode specifies which section of the URL string 
 
 ```
 searchKey: url.unhex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1794,7 +1778,7 @@ func unhex(c byte) byte
 
 ```
 searchKey: url.validEncoded
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1807,7 +1791,7 @@ validEncoded reports whether s is a valid encoded path or fragment, according to
 
 ```
 searchKey: url.validOptionalPort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1820,7 +1804,7 @@ validOptionalPort reports whether port is either an empty string or matches /^:\
 
 ```
 searchKey: url.validUserinfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

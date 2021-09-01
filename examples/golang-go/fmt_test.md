@@ -298,7 +298,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="intCount" href="#intCount">const intCount</a>
@@ -317,7 +317,7 @@ const intCount = 800
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NaN" href="#NaN">var NaN</a>
@@ -1217,7 +1217,7 @@ var z IntString
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="A" href="#A">type A struct</a>
@@ -1273,7 +1273,7 @@ Animal has a Name and an Age to represent an animal.
 
 ```
 searchKey: fmt_test.Animal.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1347,7 +1347,7 @@ type G int
 
 ```
 searchKey: fmt_test.G.GoString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1369,7 +1369,7 @@ type I int
 
 ```
 searchKey: fmt_test.I.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1420,7 +1420,7 @@ P is a type with a String method with pointer receiver for testing %p.
 
 ```
 searchKey: fmt_test.P.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1474,7 +1474,7 @@ PanicGo is a type that panics in GoString.
 
 ```
 searchKey: fmt_test.PanicGo.GoString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1502,7 +1502,7 @@ PanicS is a type that panics in String.
 
 ```
 searchKey: fmt_test.PanicS.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1532,7 +1532,7 @@ Person has a Name, Age and Address.
 
 ```
 searchKey: fmt_test.Person.GoString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1559,7 +1559,7 @@ type Recur struct {
 
 ```
 searchKey: fmt_test.Recur.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1695,7 +1695,7 @@ type TB bool
 
 ```
 searchKey: fmt_test.TB.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1717,7 +1717,7 @@ type TF float64
 
 ```
 searchKey: fmt_test.TF.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1739,7 +1739,7 @@ type TF32 float32
 
 ```
 searchKey: fmt_test.TF32.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1761,7 +1761,7 @@ type TF64 float64
 
 ```
 searchKey: fmt_test.TF64.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1783,7 +1783,7 @@ type TI int
 
 ```
 searchKey: fmt_test.TI.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1805,7 +1805,7 @@ type TI16 int16
 
 ```
 searchKey: fmt_test.TI16.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1827,7 +1827,7 @@ type TI32 int32
 
 ```
 searchKey: fmt_test.TI32.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1849,7 +1849,7 @@ type TI64 int64
 
 ```
 searchKey: fmt_test.TI64.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1871,7 +1871,7 @@ type TI8 int8
 
 ```
 searchKey: fmt_test.TI8.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1893,7 +1893,7 @@ type TS string
 
 ```
 searchKey: fmt_test.TS.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1915,7 +1915,7 @@ type TU uint
 
 ```
 searchKey: fmt_test.TU.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1937,7 +1937,7 @@ type TU16 uint16
 
 ```
 searchKey: fmt_test.TU16.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1959,7 +1959,7 @@ type TU32 uint32
 
 ```
 searchKey: fmt_test.TU32.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1981,7 +1981,7 @@ type TU64 uint64
 
 ```
 searchKey: fmt_test.TU64.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2003,7 +2003,7 @@ type TU8 uint8
 
 ```
 searchKey: fmt_test.TU8.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2025,7 +2025,7 @@ type TUI uintptr
 
 ```
 searchKey: fmt_test.TUI.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2117,7 +2117,7 @@ type byteStringer byte
 
 ```
 searchKey: fmt_test.byteStringer.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2166,7 +2166,7 @@ type errString string
 
 ```
 searchKey: fmt_test.errString.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2467,14 +2467,14 @@ func (sf writeStringFormatter) Format(f State, c rune)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkFprintInt" href="#BenchmarkFprintInt">func BenchmarkFprintInt(b *testing.B)</a>
 
 ```
 searchKey: fmt_test.BenchmarkFprintInt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2485,7 +2485,7 @@ func BenchmarkFprintInt(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkFprintIntNoAlloc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2496,7 +2496,7 @@ func BenchmarkFprintIntNoAlloc(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkFprintfBytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2507,7 +2507,7 @@ func BenchmarkFprintfBytes(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkManyArgs
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2518,7 +2518,7 @@ func BenchmarkManyArgs(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkScanInts
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2529,7 +2529,7 @@ func BenchmarkScanInts(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkScanRecursiveInt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2540,7 +2540,7 @@ func BenchmarkScanRecursiveInt(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkScanRecursiveIntReaderWrapper
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2551,7 +2551,7 @@ func BenchmarkScanRecursiveIntReaderWrapper(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfBoolean
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2562,7 +2562,7 @@ func BenchmarkSprintfBoolean(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfBytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2573,7 +2573,7 @@ func BenchmarkSprintfBytes(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfComplex
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2584,7 +2584,7 @@ func BenchmarkSprintfComplex(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfEmpty
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2595,7 +2595,7 @@ func BenchmarkSprintfEmpty(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfFloat
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2606,7 +2606,7 @@ func BenchmarkSprintfFloat(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfHexBytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2617,7 +2617,7 @@ func BenchmarkSprintfHexBytes(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfHexString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2628,7 +2628,7 @@ func BenchmarkSprintfHexString(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfInt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2639,7 +2639,7 @@ func BenchmarkSprintfInt(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfIntInt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2650,7 +2650,7 @@ func BenchmarkSprintfIntInt(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfPadding
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2661,7 +2661,7 @@ func BenchmarkSprintfPadding(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfPrefixedInt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2672,7 +2672,7 @@ func BenchmarkSprintfPrefixedInt(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfQuoteString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2683,7 +2683,7 @@ func BenchmarkSprintfQuoteString(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfSlowParsingPath
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2694,7 +2694,7 @@ func BenchmarkSprintfSlowParsingPath(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2705,7 +2705,7 @@ func BenchmarkSprintfString(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfStringer
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2716,7 +2716,7 @@ func BenchmarkSprintfStringer(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfStructure
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2727,7 +2727,7 @@ func BenchmarkSprintfStructure(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfTruncateBytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2738,7 +2738,7 @@ func BenchmarkSprintfTruncateBytes(b *testing.B)
 
 ```
 searchKey: fmt_test.BenchmarkSprintfTruncateString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2942,7 +2942,7 @@ Print, Println, and Printf lay out their arguments differently. In this example 
 
 ```
 searchKey: fmt_test.TestBadVerbRecursion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2953,7 +2953,7 @@ func TestBadVerbRecursion(t *testing.T)
 
 ```
 searchKey: fmt_test.TestBlank
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2966,7 +2966,7 @@ TestBlank checks that Sprint (and hence Print, Fprint) puts spaces in the right 
 
 ```
 searchKey: fmt_test.TestBlankln
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2979,7 +2979,7 @@ TestBlankln checks that Sprintln (and hence Println, Fprintln) puts spaces in th
 
 ```
 searchKey: fmt_test.TestComplexFormatting
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2992,7 +2992,7 @@ TestComplexFormatting checks that a complex always formats to the same thing as 
 
 ```
 searchKey: fmt_test.TestCountMallocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3003,7 +3003,7 @@ func TestCountMallocs(t *testing.T)
 
 ```
 searchKey: fmt_test.TestEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3016,7 +3016,7 @@ TestEOF verifies that when we scan, we see at most EOF once per call to a Scan f
 
 ```
 searchKey: fmt_test.TestEOFAllTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3027,7 +3027,7 @@ func TestEOFAllTypes(t *testing.T)
 
 ```
 searchKey: fmt_test.TestEOFAtEndOfInput
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3040,7 +3040,7 @@ TestEOFAtEndOfInput verifies that we see an EOF error if we run out of input. Th
 
 ```
 searchKey: fmt_test.TestEmptyMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3051,7 +3051,7 @@ func TestEmptyMap(t *testing.T)
 
 ```
 searchKey: fmt_test.TestErrorf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3062,7 +3062,7 @@ func TestErrorf(t *testing.T)
 
 ```
 searchKey: fmt_test.TestFlagParser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3073,7 +3073,7 @@ func TestFlagParser(t *testing.T)
 
 ```
 searchKey: fmt_test.TestFmtInterface
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3084,7 +3084,7 @@ func TestFmtInterface(t *testing.T)
 
 ```
 searchKey: fmt_test.TestFormatterFlags
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3095,7 +3095,7 @@ func TestFormatterFlags(t *testing.T)
 
 ```
 searchKey: fmt_test.TestFormatterPrintln
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3108,7 +3108,7 @@ TestFormatterPrintln checks Formatter with Sprint, Sprintln, Sprintf.
 
 ```
 searchKey: fmt_test.TestHexByte
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3119,7 +3119,7 @@ func TestHexByte(t *testing.T)
 
 ```
 searchKey: fmt_test.TestHexBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3132,7 +3132,7 @@ Issue 9124. %x on bytes couldn't handle non-space bytes terminating the scan.
 
 ```
 searchKey: fmt_test.TestInf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3143,7 +3143,7 @@ func TestInf(t *testing.T)
 
 ```
 searchKey: fmt_test.TestIsSpace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3154,7 +3154,7 @@ func TestIsSpace(t *testing.T)
 
 ```
 searchKey: fmt_test.TestLineByLineFscanf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3167,7 +3167,7 @@ TestLineByLineFscanf tests that Fscanf does not read past newline. Issue 3481.
 
 ```
 searchKey: fmt_test.TestMapPrinter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3178,7 +3178,7 @@ func TestMapPrinter(t *testing.T)
 
 ```
 searchKey: fmt_test.TestMultiLine
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3189,7 +3189,7 @@ func TestMultiLine(t *testing.T)
 
 ```
 searchKey: fmt_test.TestNaN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3200,7 +3200,7 @@ func TestNaN(t *testing.T)
 
 ```
 searchKey: fmt_test.TestNilDoesNotBecomeTyped
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3211,7 +3211,7 @@ func TestNilDoesNotBecomeTyped(t *testing.T)
 
 ```
 searchKey: fmt_test.TestPanics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3222,7 +3222,7 @@ func TestPanics(t *testing.T)
 
 ```
 searchKey: fmt_test.TestParsenum
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3233,7 +3233,7 @@ func TestParsenum(t *testing.T)
 
 ```
 searchKey: fmt_test.TestReorder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3244,7 +3244,7 @@ func TestReorder(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3255,7 +3255,7 @@ func TestScan(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3268,7 +3268,7 @@ Empty strings are not valid input when scanning a string.
 
 ```
 searchKey: fmt_test.TestScanInts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3279,7 +3279,7 @@ func TestScanInts(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanMultiple
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3290,7 +3290,7 @@ func TestScanMultiple(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanNewlinesAreSpaces
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3301,7 +3301,7 @@ func TestScanNewlinesAreSpaces(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanNotPointer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3312,7 +3312,7 @@ func TestScanNotPointer(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3323,7 +3323,7 @@ func TestScanOverflow(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanStateCount
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3334,7 +3334,7 @@ func TestScanStateCount(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3345,7 +3345,7 @@ func TestScanf(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanfMulti
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3356,7 +3356,7 @@ func TestScanfMulti(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanfNewlineMatchFormat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3367,7 +3367,7 @@ func TestScanfNewlineMatchFormat(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanln
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3378,7 +3378,7 @@ func TestScanln(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanlnNewlinesTerminate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3389,7 +3389,7 @@ func TestScanlnNewlinesTerminate(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanlnNoNewline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3400,7 +3400,7 @@ func TestScanlnNoNewline(t *testing.T)
 
 ```
 searchKey: fmt_test.TestScanlnWithMiddleNewline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3411,7 +3411,7 @@ func TestScanlnWithMiddleNewline(t *testing.T)
 
 ```
 searchKey: fmt_test.TestSlicePrinter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3422,7 +3422,7 @@ func TestSlicePrinter(t *testing.T)
 
 ```
 searchKey: fmt_test.TestSprintf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3433,7 +3433,7 @@ func TestSprintf(t *testing.T)
 
 ```
 searchKey: fmt_test.TestStringer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3444,7 +3444,7 @@ func TestStringer(t *testing.T)
 
 ```
 searchKey: fmt_test.TestStructPrinter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3455,7 +3455,7 @@ func TestStructPrinter(t *testing.T)
 
 ```
 searchKey: fmt_test.TestUnreadRuneWithBufio
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3468,7 +3468,7 @@ TestUnreadRuneWithBufio verifies that, at least when using bufio, successive cal
 
 ```
 searchKey: fmt_test.TestWidthAndPrecision
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3479,7 +3479,7 @@ func TestWidthAndPrecision(t *testing.T)
 
 ```
 searchKey: fmt_test.args
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3490,7 +3490,7 @@ func args(a ...interface{}) []interface{}
 
 ```
 searchKey: fmt_test.check
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3501,7 +3501,7 @@ func check(t *testing.T, got, want string)
 
 ```
 searchKey: fmt_test.hideFromVet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3512,7 +3512,7 @@ func hideFromVet(s string) string
 
 ```
 searchKey: fmt_test.makeInts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3523,7 +3523,7 @@ func makeInts(n int) []byte
 
 ```
 searchKey: fmt_test.presentInMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3536,7 +3536,7 @@ presentInMap checks map printing using substrings so we don't depend on the prin
 
 ```
 searchKey: fmt_test.scanInts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3549,7 +3549,7 @@ scanInts performs the same scanning task as RecursiveInt.Scan but without recurr
 
 ```
 searchKey: fmt_test.testScan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3560,7 +3560,7 @@ func testScan(t *testing.T, f func(string) io.Reader, scan func(r io.Reader, a .
 
 ```
 searchKey: fmt_test.testScanInts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3571,7 +3571,7 @@ func testScanInts(t *testing.T, scan func(*RecursiveInt, *bytes.Buffer) error)
 
 ```
 searchKey: fmt_test.testScanfMulti
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3582,7 +3582,7 @@ func testScanfMulti(t *testing.T, f func(string) io.Reader)
 
 ```
 searchKey: fmt_test.verifyInf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3593,7 +3593,7 @@ func verifyInf(str string, t *testing.T)
 
 ```
 searchKey: fmt_test.verifyNaN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3604,7 +3604,7 @@ func verifyNaN(str string, t *testing.T)
 
 ```
 searchKey: fmt_test.zeroFill
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

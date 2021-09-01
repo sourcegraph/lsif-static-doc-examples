@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "internal/extsvc/gitlab",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -717,7 +716,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1297,7 +1295,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1338,7 +1335,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.newTestClient",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1691,7 +1688,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.Client.RateLimitMonitor",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1963,7 +1960,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.NewClientProvider",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1985,7 +1982,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.createTestProvider",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2030,7 +2027,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.ClientProvider.GetClient",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2253,7 +2250,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.NewHTTPError",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -2275,7 +2272,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.HTTPError.Code",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2297,7 +2294,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.HTTPError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2319,7 +2316,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.HTTPError.Forbidden",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2341,7 +2338,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.HTTPError.Message",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2363,7 +2360,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.HTTPError.Unauthorized",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2496,7 +2493,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.MarkWorkInProgressEvent.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2585,7 +2582,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.MergeRequestClosedEvent.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2630,7 +2627,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.MergeRequestMergedEvent.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2675,7 +2672,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.MergeRequestReopenedEvent.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2742,7 +2739,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.Note.ToEvent",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2787,7 +2784,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.Pipeline.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2854,7 +2851,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.Project.RequiresAuthentication",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2921,7 +2918,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.ResourceStateEvent.ToEvent",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2988,7 +2985,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.ReviewApprovedEvent.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3033,7 +3030,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.ReviewUnapprovedEvent.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3100,7 +3097,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.SudoableToken.Hash",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3256,7 +3253,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.UnmarkWorkInProgressEvent.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3345,7 +3342,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.GetExternalAccountData",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -3535,7 +3532,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -3556,7 +3552,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.ExternalRepoSpec",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3578,7 +3574,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.HTTPErrorCode",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3600,7 +3596,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.IsNotFound",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3622,7 +3618,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.IsWIP",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3644,7 +3640,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.MockGetProject_Return",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3666,7 +3662,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.SetExternalAccountData",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3688,7 +3684,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.SetWIP",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3710,7 +3706,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestClient_GetProject",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3734,7 +3730,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestClient_GetProject_nonexistent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3758,7 +3754,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestCreateMergeRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3782,7 +3778,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestCreateMergeRequestNote",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3806,7 +3802,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestGetAuthenticatedUserOAuthScopes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3830,7 +3826,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestGetMergeRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3854,7 +3850,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestGetMergeRequestNotes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3878,7 +3874,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestGetMergeRequestPipelines",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3902,7 +3898,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestGetOpenMergeRequestByRefs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3926,7 +3922,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestListTree",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3950,7 +3946,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestMergeMergeRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3974,7 +3970,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestNoteToEvent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3998,7 +3994,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestPipelineKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4022,7 +4018,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestSudoableToken",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4046,7 +4042,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestTimeUnmarshal",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4070,7 +4066,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestUpdateMergeRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4094,7 +4090,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestWIP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4118,7 +4114,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.UnsetWIP",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4140,7 +4136,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.idCacheKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4186,7 +4182,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.isGitLabDotComURL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4209,7 +4205,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.pathWithNamespaceCacheKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4232,7 +4228,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.trace",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4255,7 +4251,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.update",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -20,7 +20,7 @@ package mutablelimiter provides a Limiter (Semaphore) which supports havings its
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Limiter" href="#Limiter">type Limiter struct</a>
@@ -46,7 +46,7 @@ Note: Each Limiter has an associated goroutine managing the semaphore state. We 
 
 ```
 searchKey: mutablelimiter.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -74,7 +74,7 @@ If ctx is Done before we can acquire, then the context error is returned.
 
 ```
 searchKey: mutablelimiter.Limiter.GetLimit
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -138,14 +138,14 @@ type acquireResponse struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestLimiter" href="#TestLimiter">func TestLimiter(t *testing.T)</a>
 
 ```
 searchKey: mutablelimiter.TestLimiter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

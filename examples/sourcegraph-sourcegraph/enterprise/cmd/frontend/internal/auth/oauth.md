@@ -49,7 +49,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="LoginStateOpCreateAccount" href="#LoginStateOpCreateAccount">const LoginStateOpCreateAccount</a>
@@ -79,7 +79,7 @@ const LoginStateOpCreateCodeHostConnection LoginStateOp = "createCodeHostConnect
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="extraScopes" href="#extraScopes">var extraScopes</a>
@@ -120,7 +120,7 @@ var traceLogEnabled, _ = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="LoginState" href="#LoginState">type LoginState struct</a>
@@ -151,7 +151,7 @@ type LoginState struct {
 
 ```
 searchKey: oauth.DecodeState
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -162,7 +162,7 @@ func DecodeState(encoded string) (*LoginState, error)
 
 ```
 searchKey: oauth.LoginState.Encode
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -200,7 +200,7 @@ type Provider struct {
 
 ```
 searchKey: oauth.GetProvider
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -213,7 +213,7 @@ GetProvider returns a provider with given serviceType and ID. It returns nil if 
 
 ```
 searchKey: oauth.NewProvider
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -235,7 +235,7 @@ func getExactlyOneOAuthProvider() *Provider
 
 ```
 searchKey: oauth.Provider.CachedInfo
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -246,7 +246,7 @@ func (p *Provider) CachedInfo() *providers.Info
 
 ```
 searchKey: oauth.Provider.Config
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -257,7 +257,7 @@ func (p *Provider) Config() schema.AuthProviders
 
 ```
 searchKey: oauth.Provider.ConfigID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -356,14 +356,14 @@ func (l *loggingRoundTripper) RoundTrip(req *http.Request) (*http.Response, erro
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AddIsOAuth" href="#AddIsOAuth">func AddIsOAuth(f func(p schema.AuthProviders) bool)</a>
 
 ```
 searchKey: oauth.AddIsOAuth
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -374,7 +374,7 @@ func AddIsOAuth(f func(p schema.AuthProviders) bool)
 
 ```
 searchKey: oauth.NewCookie
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -389,7 +389,7 @@ The MaxAge field is used to determine whether an Expires field should be added f
 
 ```
 searchKey: oauth.NewHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -400,7 +400,7 @@ func NewHandler(db dbutil.DB, serviceType, authPrefix string, isAPIHandler bool,
 
 ```
 searchKey: oauth.SessionIssuer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -411,7 +411,7 @@ func SessionIssuer(s SessionIssuerHelper, sessionKey string) http.Handler
 
 ```
 searchKey: oauth.TestCanRedirect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -422,7 +422,7 @@ func TestCanRedirect(t *testing.T)
 
 ```
 searchKey: oauth.canRedirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -435,7 +435,7 @@ canRedirect is used to limit the set of URLs we will redirect to after login to 
 
 ```
 searchKey: oauth.expiresTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -448,7 +448,7 @@ expiresTime converts a maxAge time in seconds to a time.Time in the future if th
 
 ```
 searchKey: oauth.getExtraScopes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -459,7 +459,7 @@ func getExtraScopes(ctx context.Context, db dbutil.DB, serviceType string) ([]st
 
 ```
 searchKey: oauth.getRedirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -472,7 +472,7 @@ if we have a redirect param use that, otherwise we'll try and pull the 'returnTo
 
 ```
 searchKey: oauth.isHuman
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -485,7 +485,7 @@ isHuman returns true if the request probably came from a human, rather than a bo
 
 ```
 searchKey: oauth.isOAuth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -496,7 +496,7 @@ func isOAuth(p schema.AuthProviders) bool
 
 ```
 searchKey: oauth.newOAuthFlowHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -507,7 +507,7 @@ func newOAuthFlowHandler(db dbutil.DB, serviceType string) http.Handler
 
 ```
 searchKey: oauth.previewAndDuplicateReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -531,7 +531,7 @@ Returns a base64 encoded random 32 byte string.
 
 ```
 searchKey: oauth.stateHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -546,7 +546,7 @@ This is very similar to gologin's default StateHandler function, but we define o
 
 ```
 searchKey: oauth.withOAuthExternalHTTPClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

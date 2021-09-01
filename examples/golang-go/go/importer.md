@@ -21,10 +21,6 @@ Package importer provides access to export data importers.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Lookup" href="#Lookup">type Lookup func(path string) (io.ReadCloser, error)</a>
 
 ```
@@ -114,10 +110,6 @@ func (m *gcimports) ImportFrom(path, srcDir string, mode types.ImportMode) (*typ
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Default" href="#Default">func Default() types.Importer</a>
 
 ```
@@ -135,7 +127,7 @@ Default returns an Importer for the compiler that built the running binary. If a
 
 ```
 searchKey: importer.For
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -150,7 +142,7 @@ Deprecated: Use ForCompiler, which populates a FileSet with the positions of obj
 
 ```
 searchKey: importer.ForCompiler
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -167,7 +159,7 @@ A lookup function must be provided for correct module-aware operation. Deprecate
 
 ```
 searchKey: importer.TestForCompiler
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

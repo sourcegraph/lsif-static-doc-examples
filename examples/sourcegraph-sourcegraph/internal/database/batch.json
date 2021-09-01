@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "internal/database/batch",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -74,7 +73,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -170,7 +168,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -211,7 +208,7 @@
                       "newPage": false,
                       "searchKey": "batch.NewInserter",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -233,7 +230,7 @@
                       "newPage": false,
                       "searchKey": "batch.NewInserterWithReturn",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -322,7 +319,7 @@
                       "newPage": false,
                       "searchKey": "batch.Inserter.pop",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -373,7 +370,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -394,7 +390,7 @@
                 "newPage": false,
                 "searchKey": "batch.BenchmarkBatchInserter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -418,7 +414,7 @@
                 "newPage": false,
                 "searchKey": "batch.BenchmarkBatchInserterLargePayload",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -442,7 +438,7 @@
                 "newPage": false,
                 "searchKey": "batch.InsertValues",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -464,7 +460,7 @@
                 "newPage": false,
                 "searchKey": "batch.TestBatchInserter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -488,7 +484,7 @@
                 "newPage": false,
                 "searchKey": "batch.TestBatchInserterWithReturn",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -512,7 +508,7 @@
                 "newPage": false,
                 "searchKey": "batch.WithInserter",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -534,7 +530,7 @@
                 "newPage": false,
                 "searchKey": "batch.WithInserterWithReturn",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -556,7 +552,7 @@
                 "newPage": false,
                 "searchKey": "batch.getMaxBatchSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -602,7 +598,7 @@
                 "newPage": false,
                 "searchKey": "batch.makePayload",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -625,7 +621,7 @@
                 "newPage": false,
                 "searchKey": "batch.makeQueryPrefix",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -648,7 +644,7 @@
                 "newPage": false,
                 "searchKey": "batch.makeQuerySuffix",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -671,7 +667,7 @@
                 "newPage": false,
                 "searchKey": "batch.makeReturningSuffix",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -694,7 +690,7 @@
                 "newPage": false,
                 "searchKey": "batch.makeTestValues",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -717,7 +713,7 @@
                 "newPage": false,
                 "searchKey": "batch.setupTestTable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -740,7 +736,7 @@
                 "newPage": false,
                 "searchKey": "batch.testInsert",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -763,7 +759,7 @@
                 "newPage": false,
                 "searchKey": "batch.testInsertWithReturn",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -786,7 +782,7 @@
                 "newPage": false,
                 "searchKey": "batch.with",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

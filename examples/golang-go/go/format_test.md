@@ -15,7 +15,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="debug" href="#debug">var debug</a>
@@ -54,14 +54,14 @@ var tests = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkFormat" href="#BenchmarkFormat">func BenchmarkFormat(b *testing.B)</a>
 
 ```
 searchKey: format_test.BenchmarkFormat
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -83,7 +83,7 @@ func ExampleNode()
 
 ```
 searchKey: format_test.array1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

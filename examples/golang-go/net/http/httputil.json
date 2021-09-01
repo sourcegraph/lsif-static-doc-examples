@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -71,9 +69,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -409,9 +405,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -472,7 +466,7 @@
                       "newPage": false,
                       "searchKey": "httputil.NewClientConn",
                       "tags": [
-                        "method",
+                        "function",
                         "deprecated"
                       ]
                     },
@@ -495,7 +489,7 @@
                       "newPage": false,
                       "searchKey": "httputil.NewProxyClientConn",
                       "tags": [
-                        "method",
+                        "function",
                         "deprecated"
                       ]
                     },
@@ -518,7 +512,7 @@
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -562,7 +556,7 @@
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Hijack",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -584,7 +578,7 @@
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Pending",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -673,7 +667,7 @@
                       "newPage": false,
                       "searchKey": "httputil.NewSingleHostReverseProxy",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -809,7 +803,7 @@
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.getErrorHandler",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -971,7 +965,7 @@
                       "newPage": false,
                       "searchKey": "httputil.NewServerConn",
                       "tags": [
-                        "method",
+                        "function",
                         "deprecated"
                       ]
                     },
@@ -994,7 +988,7 @@
                       "newPage": false,
                       "searchKey": "httputil.ServerConn.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1016,7 +1010,7 @@
                       "newPage": false,
                       "searchKey": "httputil.ServerConn.Hijack",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1038,7 +1032,7 @@
                       "newPage": false,
                       "searchKey": "httputil.ServerConn.Pending",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1060,7 +1054,7 @@
                       "newPage": false,
                       "searchKey": "httputil.ServerConn.Read",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1128,7 +1122,7 @@
                       "newPage": false,
                       "searchKey": "httputil.bufferPool.Get",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1198,7 +1192,7 @@
                       "newPage": false,
                       "searchKey": "httputil.checkCloser.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1315,7 +1309,7 @@
                       "newPage": false,
                       "searchKey": "httputil.dumpConn.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1338,7 +1332,7 @@
                       "newPage": false,
                       "searchKey": "httputil.dumpConn.LocalAddr",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1361,7 +1355,7 @@
                       "newPage": false,
                       "searchKey": "httputil.dumpConn.RemoteAddr",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1500,7 +1494,7 @@
                       "newPage": false,
                       "searchKey": "httputil.eofReader.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1617,7 +1611,7 @@
                       "newPage": false,
                       "searchKey": "httputil.failureToReadBody.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1710,7 +1704,7 @@
                       "newPage": false,
                       "searchKey": "httputil.maxLatencyWriter.delayedFlush",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1733,7 +1727,7 @@
                       "newPage": false,
                       "searchKey": "httputil.maxLatencyWriter.stop",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2042,9 +2036,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2063,7 +2055,7 @@
                 "newPage": false,
                 "searchKey": "httputil.BenchmarkServeHTTP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -2087,7 +2079,7 @@
                 "newPage": false,
                 "searchKey": "httputil.DumpRequest",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2109,7 +2101,7 @@
                 "newPage": false,
                 "searchKey": "httputil.DumpRequestOut",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2131,7 +2123,7 @@
                 "newPage": false,
                 "searchKey": "httputil.DumpResponse",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2153,7 +2145,7 @@
                 "newPage": false,
                 "searchKey": "httputil.NewChunkedReader",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2175,7 +2167,7 @@
                 "newPage": false,
                 "searchKey": "httputil.NewChunkedWriter",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2197,7 +2189,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestClonesRequestHeaders",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2221,7 +2213,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestDumpRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2245,7 +2237,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestDumpRequestOutIssue38352",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2269,7 +2261,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestDumpResponse",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2293,7 +2285,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestJoinURLPath",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2317,7 +2309,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestModifyResponseClosesBody",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2341,7 +2333,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestNilBody",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2365,7 +2357,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2389,7 +2381,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyCancellation",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2413,7 +2405,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyErrorHandler",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2437,7 +2429,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyFlushInterval",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2461,7 +2453,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyFlushIntervalHeaders",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2485,7 +2477,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyGetPutBuffer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2509,7 +2501,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyModifyResponse",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2533,7 +2525,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2557,7 +2549,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyStripEmptyConnection",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2581,7 +2573,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyStripHeadersPresentInConnection",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2605,7 +2597,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyWebSocket",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2629,7 +2621,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyWebSocketCancellation",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2653,7 +2645,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy_AllocatedHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2677,7 +2669,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy_CopyBuffer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2701,7 +2693,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy_NilBody",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2725,7 +2717,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy_PanicBodyError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2749,7 +2741,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy_Post",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2773,7 +2765,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestSelectFlushInterval",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2797,7 +2789,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestServeHTTPDeepCopy",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2821,7 +2813,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestSingleJoinSlash",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2845,7 +2837,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestUnannouncedTrailer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2869,7 +2861,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestUserAgentHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2893,7 +2885,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestXForwardedFor",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2917,7 +2909,7 @@
                 "newPage": false,
                 "searchKey": "httputil.TestXForwardedFor_Omit",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2941,7 +2933,7 @@
                 "newPage": false,
                 "searchKey": "httputil.chunk",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2964,7 +2956,7 @@
                 "newPage": false,
                 "searchKey": "httputil.copyHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2987,7 +2979,7 @@
                 "newPage": false,
                 "searchKey": "httputil.deadline",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3010,7 +3002,7 @@
                 "newPage": false,
                 "searchKey": "httputil.drainBody",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3056,7 +3048,7 @@
                 "newPage": false,
                 "searchKey": "httputil.joinURLPath",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3079,7 +3071,7 @@
                 "newPage": false,
                 "searchKey": "httputil.mustNewRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3102,7 +3094,7 @@
                 "newPage": false,
                 "searchKey": "httputil.mustParseURL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3125,7 +3117,7 @@
                 "newPage": false,
                 "searchKey": "httputil.mustReadRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3148,7 +3140,7 @@
                 "newPage": false,
                 "searchKey": "httputil.outgoingLength",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3171,7 +3163,7 @@
                 "newPage": false,
                 "searchKey": "httputil.removeConnectionHeaders",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3194,7 +3186,7 @@
                 "newPage": false,
                 "searchKey": "httputil.req",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3217,7 +3209,7 @@
                 "newPage": false,
                 "searchKey": "httputil.shouldPanicOnCopyError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3240,7 +3232,7 @@
                 "newPage": false,
                 "searchKey": "httputil.singleJoiningSlash",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3263,7 +3255,7 @@
                 "newPage": false,
                 "searchKey": "httputil.upgradeType",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3286,7 +3278,7 @@
                 "newPage": false,
                 "searchKey": "httputil.valueOrDefault",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

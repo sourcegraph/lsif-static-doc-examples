@@ -26,7 +26,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="client" href="#client">var client</a>
@@ -93,14 +93,14 @@ var sharedUsername = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Init" href="#Init">func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error</a>
 
 ```
 searchKey: executor.Init
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -111,7 +111,7 @@ func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigrat
 
 ```
 searchKey: executor.TestInternalProxyAuthTokenMiddleware
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -122,7 +122,7 @@ func TestInternalProxyAuthTokenMiddleware(t *testing.T)
 
 ```
 searchKey: executor.TestReverseProxyHeaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -133,7 +133,7 @@ func TestReverseProxyHeaders(t *testing.T)
 
 ```
 searchKey: executor.TestReverseProxyRedirectWithPayload
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -144,7 +144,7 @@ func TestReverseProxyRedirectWithPayload(t *testing.T)
 
 ```
 searchKey: executor.TestReverseProxySimple
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -155,7 +155,7 @@ func TestReverseProxySimple(t *testing.T)
 
 ```
 searchKey: executor.TestReverseProxyTargetPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -166,7 +166,7 @@ func TestReverseProxyTargetPath(t *testing.T)
 
 ```
 searchKey: executor.basicAuthMiddleware
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -179,7 +179,7 @@ basicAuthMiddleware rejects requests that do not have a basic auth username and 
 
 ```
 searchKey: executor.copyHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -203,7 +203,7 @@ func init()
 
 ```
 searchKey: executor.makeProxyRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -216,7 +216,7 @@ makeProxyRequest returns a new HTTP request object with the given HTTP request's
 
 ```
 searchKey: executor.newInternalProxyHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -227,7 +227,7 @@ func newInternalProxyHandler(uploadHandler http.Handler) (func() http.Handler, e
 
 ```
 searchKey: executor.reverseProxy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

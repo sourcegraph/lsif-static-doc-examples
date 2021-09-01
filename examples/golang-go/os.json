@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -978,9 +976,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1660,9 +1656,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1701,7 +1695,7 @@
                       "newPage": false,
                       "searchKey": "os.newUnixDirent",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1747,7 +1741,7 @@
                       "newPage": false,
                       "searchKey": "os.Create",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1769,7 +1763,7 @@
                       "newPage": false,
                       "searchKey": "os.CreateTemp",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1791,7 +1785,7 @@
                       "newPage": false,
                       "searchKey": "os.NewFile",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1813,7 +1807,7 @@
                       "newPage": false,
                       "searchKey": "os.Open",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1835,7 +1829,7 @@
                       "newPage": false,
                       "searchKey": "os.OpenFile",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1857,7 +1851,7 @@
                       "newPage": false,
                       "searchKey": "os.newFile",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1880,7 +1874,7 @@
                       "newPage": false,
                       "searchKey": "os.openFdAt",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1903,7 +1897,7 @@
                       "newPage": false,
                       "searchKey": "os.openFileNolog",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1926,7 +1920,7 @@
                       "newPage": false,
                       "searchKey": "os.File.Chdir",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1992,7 +1986,7 @@
                       "newPage": false,
                       "searchKey": "os.File.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2014,7 +2008,7 @@
                       "newPage": false,
                       "searchKey": "os.File.Fd",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2036,7 +2030,7 @@
                       "newPage": false,
                       "searchKey": "os.File.Name",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2278,7 +2272,7 @@
                       "newPage": false,
                       "searchKey": "os.File.Stat",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2300,7 +2294,7 @@
                       "newPage": false,
                       "searchKey": "os.File.Sync",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2322,7 +2316,7 @@
                       "newPage": false,
                       "searchKey": "os.File.SyscallConn",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2754,7 +2748,7 @@
                       "newPage": false,
                       "searchKey": "os.Lstat",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -2776,7 +2770,7 @@
                       "newPage": false,
                       "searchKey": "os.Stat",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -2798,7 +2792,7 @@
                       "newPage": false,
                       "searchKey": "os.lstatNolog",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2821,7 +2815,7 @@
                       "newPage": false,
                       "searchKey": "os.statNolog",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2867,7 +2861,7 @@
                       "newPage": false,
                       "searchKey": "os.dtToType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2913,7 +2907,7 @@
                       "newPage": false,
                       "searchKey": "os.LinkError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2935,7 +2929,7 @@
                       "newPage": false,
                       "searchKey": "os.LinkError.Unwrap",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3024,7 +3018,7 @@
                       "newPage": false,
                       "searchKey": "os.FindProcess",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -3046,7 +3040,7 @@
                       "newPage": false,
                       "searchKey": "os.StartProcess",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -3068,7 +3062,7 @@
                       "newPage": false,
                       "searchKey": "os.findProcess",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -3091,7 +3085,7 @@
                       "newPage": false,
                       "searchKey": "os.newProcess",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -3114,7 +3108,7 @@
                       "newPage": false,
                       "searchKey": "os.startProcess",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -3137,7 +3131,7 @@
                       "newPage": false,
                       "searchKey": "os.Process.Kill",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3159,7 +3153,7 @@
                       "newPage": false,
                       "searchKey": "os.Process.Release",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3203,7 +3197,7 @@
                       "newPage": false,
                       "searchKey": "os.Process.Wait",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3225,7 +3219,7 @@
                       "newPage": false,
                       "searchKey": "os.Process.blockUntilWaitable",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3248,7 +3242,7 @@
                       "newPage": false,
                       "searchKey": "os.Process.done",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3271,7 +3265,7 @@
                       "newPage": false,
                       "searchKey": "os.Process.kill",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3294,7 +3288,7 @@
                       "newPage": false,
                       "searchKey": "os.Process.release",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3317,7 +3311,7 @@
                       "newPage": false,
                       "searchKey": "os.Process.setDone",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3363,7 +3357,7 @@
                       "newPage": false,
                       "searchKey": "os.Process.wait",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3409,7 +3403,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.ExitCode",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3431,7 +3425,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.Exited",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3453,7 +3447,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.Pid",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3475,7 +3469,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3497,7 +3491,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.Success",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3519,7 +3513,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.Sys",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3541,7 +3535,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.SysUsage",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3563,7 +3557,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.SystemTime",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3585,7 +3579,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.UserTime",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3607,7 +3601,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.exited",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3630,7 +3624,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.success",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3653,7 +3647,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.sys",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3676,7 +3670,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.sysUsage",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3699,7 +3693,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.systemTime",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3722,7 +3716,7 @@
                       "newPage": false,
                       "searchKey": "os.ProcessState.userTime",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3790,7 +3784,7 @@
                       "newPage": false,
                       "searchKey": "os.SyscallError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3812,7 +3806,7 @@
                       "newPage": false,
                       "searchKey": "os.SyscallError.Timeout",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3834,7 +3828,7 @@
                       "newPage": false,
                       "searchKey": "os.SyscallError.Unwrap",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3950,7 +3944,7 @@
                       "newPage": false,
                       "searchKey": "os.dirInfo.close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3997,7 +3991,7 @@
                       "newPage": false,
                       "searchKey": "os.file.close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4044,7 +4038,7 @@
                       "newPage": false,
                       "searchKey": "os.fileStat.IsDir",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4067,7 +4061,7 @@
                       "newPage": false,
                       "searchKey": "os.fileStat.ModTime",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4090,7 +4084,7 @@
                       "newPage": false,
                       "searchKey": "os.fileStat.Mode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4113,7 +4107,7 @@
                       "newPage": false,
                       "searchKey": "os.fileStat.Name",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4136,7 +4130,7 @@
                       "newPage": false,
                       "searchKey": "os.fileStat.Size",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4159,7 +4153,7 @@
                       "newPage": false,
                       "searchKey": "os.fileStat.Sys",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4252,7 +4246,7 @@
                       "newPage": false,
                       "searchKey": "os.newRawConn",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -4391,7 +4385,7 @@
                       "newPage": false,
                       "searchKey": "os.readdir_r",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -4461,7 +4455,7 @@
                       "newPage": false,
                       "searchKey": "os.unixDirent.Info",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4484,7 +4478,7 @@
                       "newPage": false,
                       "searchKey": "os.unixDirent.IsDir",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4507,7 +4501,7 @@
                       "newPage": false,
                       "searchKey": "os.unixDirent.Name",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4530,7 +4524,7 @@
                       "newPage": false,
                       "searchKey": "os.unixDirent.Type",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4558,9 +4552,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -4579,7 +4571,7 @@
                 "newPage": false,
                 "searchKey": "os.Chdir",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4601,7 +4593,7 @@
                 "newPage": false,
                 "searchKey": "os.Chmod",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4623,7 +4615,7 @@
                 "newPage": false,
                 "searchKey": "os.Chown",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4645,7 +4637,7 @@
                 "newPage": false,
                 "searchKey": "os.Chtimes",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4689,7 +4681,7 @@
                 "newPage": false,
                 "searchKey": "os.DirFS",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4755,7 +4747,7 @@
                 "newPage": false,
                 "searchKey": "os.Exit",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4777,7 +4769,7 @@
                 "newPage": false,
                 "searchKey": "os.Expand",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4799,7 +4791,7 @@
                 "newPage": false,
                 "searchKey": "os.ExpandEnv",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4843,7 +4835,7 @@
                 "newPage": false,
                 "searchKey": "os.Getenv",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5063,7 +5055,7 @@
                 "newPage": false,
                 "searchKey": "os.IsExist",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5085,7 +5077,7 @@
                 "newPage": false,
                 "searchKey": "os.IsNotExist",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5107,7 +5099,7 @@
                 "newPage": false,
                 "searchKey": "os.IsPathSeparator",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5129,7 +5121,7 @@
                 "newPage": false,
                 "searchKey": "os.IsPermission",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5151,7 +5143,7 @@
                 "newPage": false,
                 "searchKey": "os.IsTimeout",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5173,7 +5165,7 @@
                 "newPage": false,
                 "searchKey": "os.Lchown",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5195,7 +5187,7 @@
                 "newPage": false,
                 "searchKey": "os.Link",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5217,7 +5209,7 @@
                 "newPage": false,
                 "searchKey": "os.LookupEnv",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5239,7 +5231,7 @@
                 "newPage": false,
                 "searchKey": "os.Mkdir",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5261,7 +5253,7 @@
                 "newPage": false,
                 "searchKey": "os.MkdirAll",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5283,7 +5275,7 @@
                 "newPage": false,
                 "searchKey": "os.MkdirTemp",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5305,7 +5297,7 @@
                 "newPage": false,
                 "searchKey": "os.NewSyscallError",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5349,7 +5341,7 @@
                 "newPage": false,
                 "searchKey": "os.ReadDir",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5371,7 +5363,7 @@
                 "newPage": false,
                 "searchKey": "os.ReadFile",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5393,7 +5385,7 @@
                 "newPage": false,
                 "searchKey": "os.Readlink",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5415,7 +5407,7 @@
                 "newPage": false,
                 "searchKey": "os.Remove",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5437,7 +5429,7 @@
                 "newPage": false,
                 "searchKey": "os.RemoveAll",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5459,7 +5451,7 @@
                 "newPage": false,
                 "searchKey": "os.Rename",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5481,7 +5473,7 @@
                 "newPage": false,
                 "searchKey": "os.SameFile",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5503,7 +5495,7 @@
                 "newPage": false,
                 "searchKey": "os.Setenv",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5525,7 +5517,7 @@
                 "newPage": false,
                 "searchKey": "os.Symlink",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5569,7 +5561,7 @@
                 "newPage": false,
                 "searchKey": "os.Truncate",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5591,7 +5583,7 @@
                 "newPage": false,
                 "searchKey": "os.Unsetenv",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5679,7 +5671,7 @@
                 "newPage": false,
                 "searchKey": "os.WriteFile",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -5701,7 +5693,7 @@
                 "newPage": false,
                 "searchKey": "os.atime",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5724,7 +5716,7 @@
                 "newPage": false,
                 "searchKey": "os.basename",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5747,7 +5739,7 @@
                 "newPage": false,
                 "searchKey": "os.chmod",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5770,7 +5762,7 @@
                 "newPage": false,
                 "searchKey": "os.closedir",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5793,7 +5785,7 @@
                 "newPage": false,
                 "searchKey": "os.containsAny",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5816,7 +5808,7 @@
                 "newPage": false,
                 "searchKey": "os.endsWithDot",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5839,7 +5831,7 @@
                 "newPage": false,
                 "searchKey": "os.epipecheck",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5977,7 +5969,7 @@
                 "newPage": false,
                 "searchKey": "os.fillFileStatFromSys",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6000,7 +5992,7 @@
                 "newPage": false,
                 "searchKey": "os.fixCount",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6023,7 +6015,7 @@
                 "newPage": false,
                 "searchKey": "os.fixLongPath",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6046,7 +6038,7 @@
                 "newPage": false,
                 "searchKey": "os.fixRootDirectory",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6069,7 +6061,7 @@
                 "newPage": false,
                 "searchKey": "os.genericReadFrom",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6092,7 +6084,7 @@
                 "newPage": false,
                 "searchKey": "os.getShellName",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6138,7 +6130,7 @@
                 "newPage": false,
                 "searchKey": "os.ignoringEINTR",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6184,7 +6176,7 @@
                 "newPage": false,
                 "searchKey": "os.isAlphaNum",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6207,7 +6199,7 @@
                 "newPage": false,
                 "searchKey": "os.isShellSpecialVar",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6230,7 +6222,7 @@
                 "newPage": false,
                 "searchKey": "os.isWindowsNulName",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6253,7 +6245,7 @@
                 "newPage": false,
                 "searchKey": "os.itox",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6276,7 +6268,7 @@
                 "newPage": false,
                 "searchKey": "os.joinPath",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6299,7 +6291,7 @@
                 "newPage": false,
                 "searchKey": "os.lastIndex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6345,7 +6337,7 @@
                 "newPage": false,
                 "searchKey": "os.prefixAndSuffix",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6368,7 +6360,7 @@
                 "newPage": false,
                 "searchKey": "os.removeAll",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6391,7 +6383,7 @@
                 "newPage": false,
                 "searchKey": "os.removeAllFrom",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6414,7 +6406,7 @@
                 "newPage": false,
                 "searchKey": "os.rename",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6483,7 +6475,7 @@
                 "newPage": false,
                 "searchKey": "os.sameFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6506,7 +6498,7 @@
                 "newPage": false,
                 "searchKey": "os.setStickyBit",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6552,7 +6544,7 @@
                 "newPage": false,
                 "searchKey": "os.splitPath",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6575,7 +6567,7 @@
                 "newPage": false,
                 "searchKey": "os.syscallMode",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6621,7 +6613,7 @@
                 "newPage": false,
                 "searchKey": "os.timespecToTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6644,7 +6636,7 @@
                 "newPage": false,
                 "searchKey": "os.uitox",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6667,7 +6659,7 @@
                 "newPage": false,
                 "searchKey": "os.underlyingError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6690,7 +6682,7 @@
                 "newPage": false,
                 "searchKey": "os.underlyingErrorIs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6713,7 +6705,7 @@
                 "newPage": false,
                 "searchKey": "os.wrapSyscallError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

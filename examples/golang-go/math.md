@@ -422,10 +422,6 @@ This package does not guarantee bit-identical results across architectures.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="E" href="#E">const E</a>
 
 ```
@@ -2584,10 +2580,6 @@ const uvone = 0x3FF0000000000000
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Exp2Go" href="#Exp2Go">var Exp2Go</a>
 
 ```
@@ -3276,15 +3268,11 @@ var _tanQ = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Abs" href="#Abs">func Abs(x float64) float64</a>
 
 ```
 searchKey: math.Abs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3304,7 +3292,7 @@ Abs(NaN) = NaN
 
 ```
 searchKey: math.Acos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3323,7 +3311,7 @@ Acos(x) = NaN if x < -1 or x > 1
 
 ```
 searchKey: math.Acosh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3344,7 +3332,7 @@ Acosh(NaN) = NaN
 
 ```
 searchKey: math.Asin
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3364,7 +3352,7 @@ Asin(x) = NaN if x < -1 or x > 1
 
 ```
 searchKey: math.Asinh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3385,7 +3373,7 @@ Asinh(NaN) = NaN
 
 ```
 searchKey: math.Atan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3405,7 +3393,7 @@ Atan(±Inf) = ±Pi/2
 
 ```
 searchKey: math.Atan2
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3440,7 +3428,7 @@ Atan2(-Inf, x) = -Pi/2
 
 ```
 searchKey: math.Atanh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3463,7 +3451,7 @@ Atanh(NaN) = NaN
 
 ```
 searchKey: math.Cbrt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3484,7 +3472,7 @@ Cbrt(NaN) = NaN
 
 ```
 searchKey: math.Ceil
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3505,7 +3493,7 @@ Ceil(NaN) = NaN
 
 ```
 searchKey: math.Copysign
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3518,7 +3506,7 @@ Copysign returns a value with the magnitude of x and the sign of y.
 
 ```
 searchKey: math.Cos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3538,7 +3526,7 @@ Cos(NaN) = NaN
 
 ```
 searchKey: math.Cosh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3559,7 +3547,7 @@ Cosh(NaN) = NaN
 
 ```
 searchKey: math.Dim
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3580,7 +3568,7 @@ Dim(x, NaN) = Dim(NaN, x) = NaN
 
 ```
 searchKey: math.Erf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3601,7 +3589,7 @@ Erf(NaN) = NaN
 
 ```
 searchKey: math.Erfc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3622,7 +3610,7 @@ Erfc(NaN) = NaN
 
 ```
 searchKey: math.Erfcinv
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3644,7 +3632,7 @@ Erfcinv(NaN) = NaN
 
 ```
 searchKey: math.Erfinv
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3666,7 +3654,7 @@ Erfinv(NaN) = NaN
 
 ```
 searchKey: math.Exp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3688,7 +3676,7 @@ Very large values overflow to 0 or +Inf. Very small values underflow to 1.
 
 ```
 searchKey: math.Exp2
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3703,7 +3691,7 @@ Special cases are the same as Exp.
 
 ```
 searchKey: math.Expm1
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3726,7 +3714,7 @@ Very large values overflow to -1 or +Inf.
 
 ```
 searchKey: math.FMA
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3739,7 +3727,7 @@ FMA returns x * y + z, computed with only one rounding. (That is, FMA returns th
 
 ```
 searchKey: math.Float32bits
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3752,7 +3740,7 @@ Float32bits returns the IEEE 754 binary representation of f, with the sign bit o
 
 ```
 searchKey: math.Float32frombits
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3765,7 +3753,7 @@ Float32frombits returns the floating-point number corresponding to the IEEE 754 
 
 ```
 searchKey: math.Float64bits
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3778,7 +3766,7 @@ Float64bits returns the IEEE 754 binary representation of f, with the sign bit o
 
 ```
 searchKey: math.Float64frombits
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3791,7 +3779,7 @@ Float64frombits returns the floating-point number corresponding to the IEEE 754 
 
 ```
 searchKey: math.Floor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3812,7 +3800,7 @@ Floor(NaN) = NaN
 
 ```
 searchKey: math.Frexp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3833,7 +3821,7 @@ Frexp(NaN) = NaN, 0
 
 ```
 searchKey: math.Gamma
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3857,7 +3845,7 @@ Gamma(NaN) = NaN
 
 ```
 searchKey: math.Hypot
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3879,7 +3867,7 @@ Hypot(p, NaN) = NaN
 
 ```
 searchKey: math.Ilogb
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3900,7 +3888,7 @@ Ilogb(NaN) = MaxInt32
 
 ```
 searchKey: math.Inf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3913,7 +3901,7 @@ Inf returns positive infinity if sign >= 0, negative infinity if sign < 0.
 
 ```
 searchKey: math.IsInf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3926,7 +3914,7 @@ IsInf reports whether f is an infinity, according to sign. If sign > 0, IsInf re
 
 ```
 searchKey: math.IsNaN
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3939,7 +3927,7 @@ IsNaN reports whether f is an IEEE 754 `not-a-number' value.
 
 ```
 searchKey: math.J0
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3960,7 +3948,7 @@ J0(NaN) = NaN
 
 ```
 searchKey: math.J1
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3980,7 +3968,7 @@ J1(NaN) = NaN
 
 ```
 searchKey: math.Jn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4000,7 +3988,7 @@ Jn(n, NaN) = NaN
 
 ```
 searchKey: math.Ldexp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4021,7 +4009,7 @@ Ldexp(NaN, exp) = NaN
 
 ```
 searchKey: math.Lgamma
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4044,7 +4032,7 @@ Lgamma(NaN) = NaN
 
 ```
 searchKey: math.Log
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4066,7 +4054,7 @@ Log(NaN) = NaN
 
 ```
 searchKey: math.Log10
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4079,7 +4067,7 @@ Log10 returns the decimal logarithm of x. The special cases are the same as for 
 
 ```
 searchKey: math.Log1p
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4102,7 +4090,7 @@ Log1p(NaN) = NaN
 
 ```
 searchKey: math.Log2
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4115,7 +4103,7 @@ Log2 returns the binary logarithm of x. The special cases are the same as for Lo
 
 ```
 searchKey: math.Logb
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4136,7 +4124,7 @@ Logb(NaN) = NaN
 
 ```
 searchKey: math.Max
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4158,7 +4146,7 @@ Max(-0, -0) = -0
 
 ```
 searchKey: math.Min
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4179,7 +4167,7 @@ Min(-0, ±0) = Min(±0, -0) = -0
 
 ```
 searchKey: math.Mod
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4202,7 +4190,7 @@ Mod(x, NaN) = NaN
 
 ```
 searchKey: math.Modf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4235,7 +4223,7 @@ NaN returns an IEEE 754 `not-a-number' value.
 
 ```
 searchKey: math.Nextafter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4256,7 +4244,7 @@ Nextafter(x, NaN) = NaN
 
 ```
 searchKey: math.Nextafter32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4277,7 +4265,7 @@ Nextafter32(x, NaN) = NaN
 
 ```
 searchKey: math.Pow
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4315,7 +4303,7 @@ Pow(x, y) = NaN for finite x < 0 and finite non-integer y
 
 ```
 searchKey: math.Pow10
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4335,7 +4323,7 @@ Pow10(n) = +Inf for n > 308
 
 ```
 searchKey: math.Remainder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4358,7 +4346,7 @@ Remainder(x, NaN) = NaN
 
 ```
 searchKey: math.Round
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4379,7 +4367,7 @@ Round(NaN) = NaN
 
 ```
 searchKey: math.RoundToEven
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4400,7 +4388,7 @@ RoundToEven(NaN) = NaN
 
 ```
 searchKey: math.Signbit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4413,7 +4401,7 @@ Signbit reports whether x is negative or negative zero.
 
 ```
 searchKey: math.Sin
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4434,7 +4422,7 @@ Sin(NaN) = NaN
 
 ```
 searchKey: math.Sincos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4455,7 +4443,7 @@ Sincos(NaN) = NaN, NaN
 
 ```
 searchKey: math.Sinh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4476,7 +4464,7 @@ Sinh(NaN) = NaN
 
 ```
 searchKey: math.Sqrt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4498,7 +4486,7 @@ Sqrt(NaN) = NaN
 
 ```
 searchKey: math.Tan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4519,7 +4507,7 @@ Tan(NaN) = NaN
 
 ```
 searchKey: math.Tanh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4540,7 +4528,7 @@ Tanh(NaN) = NaN
 
 ```
 searchKey: math.Trunc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4561,7 +4549,7 @@ Trunc(NaN) = NaN
 
 ```
 searchKey: math.Y0
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4583,7 +4571,7 @@ Y0(NaN) = NaN
 
 ```
 searchKey: math.Y1
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4605,7 +4593,7 @@ Y1(NaN) = NaN
 
 ```
 searchKey: math.Yn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4628,7 +4616,7 @@ Yn(n, NaN) = NaN
 
 ```
 searchKey: math.acos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4639,7 +4627,7 @@ func acos(x float64) float64
 
 ```
 searchKey: math.acosh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4650,7 +4638,7 @@ func acosh(x float64) float64
 
 ```
 searchKey: math.archAcos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4661,7 +4649,7 @@ func archAcos(x float64) float64
 
 ```
 searchKey: math.archAcosh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4672,7 +4660,7 @@ func archAcosh(x float64) float64
 
 ```
 searchKey: math.archAsin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4683,7 +4671,7 @@ func archAsin(x float64) float64
 
 ```
 searchKey: math.archAsinh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4694,7 +4682,7 @@ func archAsinh(x float64) float64
 
 ```
 searchKey: math.archAtan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4705,7 +4693,7 @@ func archAtan(x float64) float64
 
 ```
 searchKey: math.archAtan2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4716,7 +4704,7 @@ func archAtan2(y, x float64) float64
 
 ```
 searchKey: math.archAtanh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4727,7 +4715,7 @@ func archAtanh(x float64) float64
 
 ```
 searchKey: math.archCbrt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4738,7 +4726,7 @@ func archCbrt(x float64) float64
 
 ```
 searchKey: math.archCeil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4749,7 +4737,7 @@ func archCeil(x float64) float64
 
 ```
 searchKey: math.archCos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4760,7 +4748,7 @@ func archCos(x float64) float64
 
 ```
 searchKey: math.archCosh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4771,7 +4759,7 @@ func archCosh(x float64) float64
 
 ```
 searchKey: math.archErf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4782,7 +4770,7 @@ func archErf(x float64) float64
 
 ```
 searchKey: math.archErfc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4793,7 +4781,7 @@ func archErfc(x float64) float64
 
 ```
 searchKey: math.archExp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4804,7 +4792,7 @@ func archExp(x float64) float64
 
 ```
 searchKey: math.archExp2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4815,7 +4803,7 @@ func archExp2(x float64) float64
 
 ```
 searchKey: math.archExpm1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4826,7 +4814,7 @@ func archExpm1(x float64) float64
 
 ```
 searchKey: math.archFloor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4837,7 +4825,7 @@ func archFloor(x float64) float64
 
 ```
 searchKey: math.archFrexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4848,7 +4836,7 @@ func archFrexp(x float64) (float64, int)
 
 ```
 searchKey: math.archHypot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4859,7 +4847,7 @@ func archHypot(p, q float64) float64
 
 ```
 searchKey: math.archLdexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4870,7 +4858,7 @@ func archLdexp(frac float64, exp int) float64
 
 ```
 searchKey: math.archLog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4881,7 +4869,7 @@ func archLog(x float64) float64
 
 ```
 searchKey: math.archLog10
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4892,7 +4880,7 @@ func archLog10(x float64) float64
 
 ```
 searchKey: math.archLog1p
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4903,7 +4891,7 @@ func archLog1p(x float64) float64
 
 ```
 searchKey: math.archLog2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4914,7 +4902,7 @@ func archLog2(x float64) float64
 
 ```
 searchKey: math.archMax
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4925,7 +4913,7 @@ func archMax(x, y float64) float64
 
 ```
 searchKey: math.archMin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4936,7 +4924,7 @@ func archMin(x, y float64) float64
 
 ```
 searchKey: math.archMod
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4947,7 +4935,7 @@ func archMod(x, y float64) float64
 
 ```
 searchKey: math.archModf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4958,7 +4946,7 @@ func archModf(f float64) (int float64, frac float64)
 
 ```
 searchKey: math.archPow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4969,7 +4957,7 @@ func archPow(x, y float64) float64
 
 ```
 searchKey: math.archRemainder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4980,7 +4968,7 @@ func archRemainder(x, y float64) float64
 
 ```
 searchKey: math.archSin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4991,7 +4979,7 @@ func archSin(x float64) float64
 
 ```
 searchKey: math.archSinh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5002,7 +4990,7 @@ func archSinh(x float64) float64
 
 ```
 searchKey: math.archSqrt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5013,7 +5001,7 @@ func archSqrt(x float64) float64
 
 ```
 searchKey: math.archTan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5024,7 +5012,7 @@ func archTan(x float64) float64
 
 ```
 searchKey: math.archTanh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5035,7 +5023,7 @@ func archTanh(x float64) float64
 
 ```
 searchKey: math.archTrunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5046,7 +5034,7 @@ func archTrunc(x float64) float64
 
 ```
 searchKey: math.asin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5057,7 +5045,7 @@ func asin(x float64) float64
 
 ```
 searchKey: math.asinh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5068,7 +5056,7 @@ func asinh(x float64) float64
 
 ```
 searchKey: math.atan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5079,7 +5067,7 @@ func atan(x float64) float64
 
 ```
 searchKey: math.atan2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5090,7 +5078,7 @@ func atan2(y, x float64) float64
 
 ```
 searchKey: math.atanh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5101,7 +5089,7 @@ func atanh(x float64) float64
 
 ```
 searchKey: math.cbrt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5112,7 +5100,7 @@ func cbrt(x float64) float64
 
 ```
 searchKey: math.ceil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5123,7 +5111,7 @@ func ceil(x float64) float64
 
 ```
 searchKey: math.cos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5134,7 +5122,7 @@ func cos(x float64) float64
 
 ```
 searchKey: math.cosh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5145,7 +5133,7 @@ func cosh(x float64) float64
 
 ```
 searchKey: math.erf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5156,7 +5144,7 @@ func erf(x float64) float64
 
 ```
 searchKey: math.erfc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5167,7 +5155,7 @@ func erfc(x float64) float64
 
 ```
 searchKey: math.exp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5178,7 +5166,7 @@ func exp(x float64) float64
 
 ```
 searchKey: math.exp2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5189,7 +5177,7 @@ func exp2(x float64) float64
 
 ```
 searchKey: math.expm1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5200,7 +5188,7 @@ func expm1(x float64) float64
 
 ```
 searchKey: math.expmulti
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5213,7 +5201,7 @@ exp1 returns e**r × 2**k where r = hi - lo and |r| ≤ ln(2)/2.
 
 ```
 searchKey: math.floor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5224,7 +5212,7 @@ func floor(x float64) float64
 
 ```
 searchKey: math.frexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5235,7 +5223,7 @@ func frexp(f float64) (frac float64, exp int)
 
 ```
 searchKey: math.hypot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5246,7 +5234,7 @@ func hypot(p, q float64) float64
 
 ```
 searchKey: math.ilogb
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5259,7 +5247,7 @@ logb returns the binary exponent of x. It assumes x is finite and non-zero.
 
 ```
 searchKey: math.isNegInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5270,7 +5258,7 @@ func isNegInt(x float64) bool
 
 ```
 searchKey: math.isOddInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5281,7 +5269,7 @@ func isOddInt(x float64) bool
 
 ```
 searchKey: math.ldexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5292,7 +5280,7 @@ func ldexp(frac float64, exp int) float64
 
 ```
 searchKey: math.log
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5303,7 +5291,7 @@ func log(x float64) float64
 
 ```
 searchKey: math.log10
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5314,7 +5302,7 @@ func log10(x float64) float64
 
 ```
 searchKey: math.log1p
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5325,7 +5313,7 @@ func log1p(x float64) float64
 
 ```
 searchKey: math.log2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5336,7 +5324,7 @@ func log2(x float64) float64
 
 ```
 searchKey: math.lz
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5347,7 +5335,7 @@ func lz(u1, u2 uint64) (l int32)
 
 ```
 searchKey: math.max
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5358,7 +5346,7 @@ func max(x, y float64) float64
 
 ```
 searchKey: math.min
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5369,7 +5357,7 @@ func min(x, y float64) float64
 
 ```
 searchKey: math.mod
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5380,7 +5368,7 @@ func mod(x, y float64) float64
 
 ```
 searchKey: math.modf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5391,7 +5379,7 @@ func modf(f float64) (int float64, frac float64)
 
 ```
 searchKey: math.nonzero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5402,7 +5390,7 @@ func nonzero(x uint64) uint64
 
 ```
 searchKey: math.normalize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5415,7 +5403,7 @@ normalize returns a normal number y and exponent exp satisfying x == y × 2**exp
 
 ```
 searchKey: math.pone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5426,7 +5414,7 @@ func pone(x float64) float64
 
 ```
 searchKey: math.pow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5437,7 +5425,7 @@ func pow(x, y float64) float64
 
 ```
 searchKey: math.pzero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5448,7 +5436,7 @@ func pzero(x float64) float64
 
 ```
 searchKey: math.qone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5459,7 +5447,7 @@ func qone(x float64) float64
 
 ```
 searchKey: math.qzero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5470,7 +5458,7 @@ func qzero(x float64) float64
 
 ```
 searchKey: math.remainder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5481,7 +5469,7 @@ func remainder(x, y float64) float64
 
 ```
 searchKey: math.satan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5494,7 +5482,7 @@ satan reduces its argument (known to be positive) to the range [0, 0.66] and cal
 
 ```
 searchKey: math.shl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5505,7 +5493,7 @@ func shl(u1, u2 uint64, n uint) (r1, r2 uint64)
 
 ```
 searchKey: math.shr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5516,7 +5504,7 @@ func shr(u1, u2 uint64, n uint) (r1, r2 uint64)
 
 ```
 searchKey: math.shrcompress
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5529,7 +5517,7 @@ shrcompress compresses the bottom n+1 bits of the two-word value into a single b
 
 ```
 searchKey: math.sin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5540,7 +5528,7 @@ func sin(x float64) float64
 
 ```
 searchKey: math.sinPi
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5553,7 +5541,7 @@ sinPi(x) is a helper function for negative x
 
 ```
 searchKey: math.sinh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5564,7 +5552,7 @@ func sinh(x float64) float64
 
 ```
 searchKey: math.split
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5577,7 +5565,7 @@ split splits b into sign, biased exponent, and mantissa. It adds the implicit 1 
 
 ```
 searchKey: math.sqrt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5588,7 +5576,7 @@ func sqrt(x float64) float64
 
 ```
 searchKey: math.stirling
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5601,7 +5589,7 @@ Gamma function computed by Stirling's formula. The pair of results must be multi
 
 ```
 searchKey: math.tan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5612,7 +5600,7 @@ func tan(x float64) float64
 
 ```
 searchKey: math.tanh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5623,7 +5611,7 @@ func tanh(x float64) float64
 
 ```
 searchKey: math.trigReduce
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5636,7 +5624,7 @@ trigReduce implements Payne-Hanek range reduction by Pi/4 for x > 0. It returns 
 
 ```
 searchKey: math.trunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5647,7 +5635,7 @@ func trunc(x float64) float64
 
 ```
 searchKey: math.xatan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5660,7 +5648,7 @@ xatan evaluates a series valid in the range [0, 0.66].
 
 ```
 searchKey: math.zero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

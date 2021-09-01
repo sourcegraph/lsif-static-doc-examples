@@ -9,7 +9,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Version" href="#Version">const Version</a>

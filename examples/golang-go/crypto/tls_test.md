@@ -17,7 +17,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="zeroSource" href="#zeroSource">type zeroSource struct{}</a>
@@ -47,7 +47,7 @@ func (zeroSource) Read(b []byte) (n int, err error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleConfig_keyLogWriter" href="#ExampleConfig_keyLogWriter">func ExampleConfig_keyLogWriter()</a>

@@ -17,7 +17,7 @@ Package assetsutil is a utils package for static files.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="assetsRoot" href="#assetsRoot">var assetsRoot</a>
@@ -47,14 +47,14 @@ baseURL is the path prefix under which static assets should be served.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Mount" href="#Mount">func Mount(mux *http.ServeMux)</a>
 
 ```
 searchKey: assetsutil.Mount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -67,7 +67,7 @@ Mount mounts the static asset handler.
 
 ```
 searchKey: assetsutil.URL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -91,7 +91,7 @@ func init()
 
 ```
 searchKey: assetsutil.isPhabricatorAsset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

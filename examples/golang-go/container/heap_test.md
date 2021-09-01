@@ -29,7 +29,7 @@ This example demonstrates a priority queue built using the heap interface.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="IntHeap" href="#IntHeap">type IntHeap []int</a>
@@ -49,7 +49,7 @@ An IntHeap is a min-heap of ints.
 
 ```
 searchKey: heap_test.IntHeap.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -71,7 +71,7 @@ func (h IntHeap) Less(i, j int) bool
 
 ```
 searchKey: heap_test.IntHeap.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -135,7 +135,7 @@ A PriorityQueue implements heap.Interface and holds Items.
 
 ```
 searchKey: heap_test.PriorityQueue.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -157,7 +157,7 @@ func (pq PriorityQueue) Less(i, j int) bool
 
 ```
 searchKey: heap_test.PriorityQueue.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -202,7 +202,7 @@ update modifies the priority and value of an Item in the queue.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Example_intHeap" href="#Example_intHeap">func Example_intHeap()</a>

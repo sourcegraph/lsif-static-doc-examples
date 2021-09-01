@@ -33,10 +33,6 @@ The path package should only be used for paths separated by forward slashes, suc
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrBadPattern" href="#ErrBadPattern">var ErrBadPattern</a>
 
 ```
@@ -51,10 +47,6 @@ var ErrBadPattern = errors.New("syntax error in pattern")
 ErrBadPattern indicates a pattern was malformed. 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="lazybuf" href="#lazybuf">type lazybuf struct</a>
 
@@ -99,7 +91,7 @@ func (b *lazybuf) index(i int) byte
 
 ```
 searchKey: path.lazybuf.string
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -108,15 +100,11 @@ func (b *lazybuf) string() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Base" href="#Base">func Base(path string) string</a>
 
 ```
 searchKey: path.Base
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -129,7 +117,7 @@ Base returns the last element of path. Trailing slashes are removed before extra
 
 ```
 searchKey: path.Clean
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -157,7 +145,7 @@ See also Rob Pike, `Lexical File Names in Plan 9 or Getting Dot-Dot Right,' [htt
 
 ```
 searchKey: path.Dir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -170,7 +158,7 @@ Dir returns all but the last element of path, typically the path's directory. Af
 
 ```
 searchKey: path.Ext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -183,7 +171,7 @@ Ext returns the file name extension used by path. The extension is the suffix be
 
 ```
 searchKey: path.IsAbs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -196,7 +184,7 @@ IsAbs reports whether the path is absolute.
 
 ```
 searchKey: path.Join
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -209,7 +197,7 @@ Join joins any number of path elements into a single path, separating them with 
 
 ```
 searchKey: path.Match
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -241,7 +229,7 @@ Match requires pattern to match all of name, not just a substring. The only poss
 
 ```
 searchKey: path.Split
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -254,7 +242,7 @@ Split splits path immediately following the final slash, separating it into a di
 
 ```
 searchKey: path.getEsc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -267,7 +255,7 @@ getEsc gets a possibly-escaped character from chunk, for a character class.
 
 ```
 searchKey: path.lastSlash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -280,7 +268,7 @@ lastSlash(s) is strings.LastIndex(s, "/") but we can't import strings.
 
 ```
 searchKey: path.matchChunk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -293,7 +281,7 @@ matchChunk checks whether chunk matches the beginning of s. If so, it returns th
 
 ```
 searchKey: path.scanChunk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

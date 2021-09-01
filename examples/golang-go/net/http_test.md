@@ -932,7 +932,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="boundary" href="#boundary">const boundary</a>
@@ -1081,7 +1081,7 @@ const withTLS = true
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ServeFileRangeTests" href="#ServeFileRangeTests">var ServeFileRangeTests</a>
@@ -1425,7 +1425,7 @@ var vtests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="RecordingJar" href="#RecordingJar">type RecordingJar struct</a>
@@ -1568,7 +1568,7 @@ type blockingRemoteAddrConn struct {
 
 ```
 searchKey: http_test.blockingRemoteAddrConn.RemoteAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1593,7 +1593,7 @@ type blockingRemoteAddrListener struct {
 
 ```
 searchKey: http_test.blockingRemoteAddrListener.Accept
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1615,7 +1615,7 @@ type bodyCloser bool
 
 ```
 searchKey: http_test.bodyCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1766,7 +1766,7 @@ type clientServerTest struct {
 
 ```
 searchKey: http_test.newClientServerTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1777,7 +1777,7 @@ func newClientServerTest(t *testing.T, h2 bool, h Handler, opts ...interface{}) 
 
 ```
 searchKey: http_test.clientServerTest.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1799,7 +1799,7 @@ func (t *clientServerTest) getURL(u string) string
 
 ```
 searchKey: http_test.clientServerTest.scheme
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1824,7 +1824,7 @@ type closeWriteTestConn struct {
 
 ```
 searchKey: http_test.closeWriteTestConn.CloseWrite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1846,7 +1846,7 @@ type closerFunc func() error
 
 ```
 searchKey: http_test.closerFunc.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1871,7 +1871,7 @@ type contextCounter struct {
 
 ```
 searchKey: http_test.contextCounter.Read
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1920,7 +1920,7 @@ countCloseListener is a Listener wrapper that counts the number of Close calls.
 
 ```
 searchKey: http_test.countCloseListener.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1945,7 +1945,7 @@ type countCloseReader struct {
 
 ```
 searchKey: http_test.countCloseReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2062,7 +2062,7 @@ func (d *countingDialer) DialContext(ctx context.Context, network, address strin
 
 ```
 searchKey: http_test.countingDialer.Read
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2151,7 +2151,7 @@ type doneContext struct {
 
 ```
 searchKey: http_test.doneContext.Done
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2162,7 +2162,7 @@ func (doneContext) Done() <-chan struct{}
 
 ```
 searchKey: http_test.doneContext.Err
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2240,7 +2240,7 @@ type dummyAddr string
 
 ```
 searchKey: http_test.dummyAddr.Network
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2251,7 +2251,7 @@ func (a dummyAddr) Network() string
 
 ```
 searchKey: http_test.dummyAddr.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2278,7 +2278,7 @@ dumpConn is a net.Conn which writes to Writer and reads from Reader
 
 ```
 searchKey: http_test.dumpConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2289,7 +2289,7 @@ func (c *dumpConn) Close() error
 
 ```
 searchKey: http_test.dumpConn.LocalAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2300,7 +2300,7 @@ func (c *dumpConn) LocalAddr() net.Addr
 
 ```
 searchKey: http_test.dumpConn.RemoteAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2357,7 +2357,7 @@ Listener for TestServerListenNotComparableListener.
 
 ```
 searchKey: http_test.eofListenerNotComparable.Accept
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2368,7 +2368,7 @@ func (eofListenerNotComparable) Accept() (net.Conn, error)
 
 ```
 searchKey: http_test.eofListenerNotComparable.Addr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2379,7 +2379,7 @@ func (eofListenerNotComparable) Addr() net.Addr
 
 ```
 searchKey: http_test.eofListenerNotComparable.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2427,7 +2427,7 @@ type errorListener struct {
 
 ```
 searchKey: http_test.errorListener.Accept
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2438,7 +2438,7 @@ func (l *errorListener) Accept() (c net.Conn, err error)
 
 ```
 searchKey: http_test.errorListener.Addr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2449,7 +2449,7 @@ func (l *errorListener) Addr() net.Addr
 
 ```
 searchKey: http_test.errorListener.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2498,7 +2498,7 @@ type fakeFile struct {
 
 ```
 searchKey: http_test.fakeFile.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2520,7 +2520,7 @@ func (f *fakeFile) Readdir(count int) ([]fs.FileInfo, error)
 
 ```
 searchKey: http_test.fakeFile.Stat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2549,7 +2549,7 @@ type fakeFileInfo struct {
 
 ```
 searchKey: http_test.fakeFileInfo.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2560,7 +2560,7 @@ func (f *fakeFileInfo) IsDir() bool
 
 ```
 searchKey: http_test.fakeFileInfo.ModTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2571,7 +2571,7 @@ func (f *fakeFileInfo) ModTime() time.Time
 
 ```
 searchKey: http_test.fakeFileInfo.Mode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2582,7 +2582,7 @@ func (f *fakeFileInfo) Mode() fs.FileMode
 
 ```
 searchKey: http_test.fakeFileInfo.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2593,7 +2593,7 @@ func (f *fakeFileInfo) Name() string
 
 ```
 searchKey: http_test.fakeFileInfo.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2604,7 +2604,7 @@ func (f *fakeFileInfo) Size() int64
 
 ```
 searchKey: http_test.fakeFileInfo.Sys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2676,7 +2676,7 @@ type funcConn struct {
 
 ```
 searchKey: http_test.funcConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2797,7 +2797,7 @@ func (tt h12Compare) normalizeRes(t *testing.T, res *Response, wantProto string)
 
 ```
 searchKey: http_test.h12Compare.reqFunc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2837,7 +2837,7 @@ type handlerBodyCloseTest struct {
 
 ```
 searchKey: http_test.handlerBodyCloseTest.connectionHeader
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2862,7 +2862,7 @@ type handlerTest struct {
 
 ```
 searchKey: http_test.newHandlerTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2898,7 +2898,7 @@ type http09Writer struct {
 
 ```
 searchKey: http_test.http09Writer.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2980,7 +2980,7 @@ type issue12991File struct{ File }
 
 ```
 searchKey: http_test.issue12991File.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2991,7 +2991,7 @@ func (issue12991File) Close() error
 
 ```
 searchKey: http_test.issue12991File.Stat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3043,7 +3043,7 @@ issue18239Body is an io.ReadCloser for TestTransportBodyReadError. Its Read retu
 
 ```
 searchKey: http_test.issue18239Body.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3082,7 +3082,7 @@ issue40382Body is an io.ReadCloser for TestClientCallsCloseOnlyOnce. Its Read re
 
 ```
 searchKey: http_test.issue40382Body.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3188,7 +3188,7 @@ logWritesConn is a net.Conn that logs each Write call to writes and then proxies
 
 ```
 searchKey: http_test.logWritesConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3276,7 +3276,7 @@ type noopConn struct{}
 
 ```
 searchKey: http_test.noopConn.LocalAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3287,7 +3287,7 @@ func (noopConn) LocalAddr() net.Addr
 
 ```
 searchKey: http_test.noopConn.RemoteAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3345,7 +3345,7 @@ type noteCloseConn struct {
 
 ```
 searchKey: http_test.noteCloseConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3369,7 +3369,7 @@ type oneConnListener struct {
 
 ```
 searchKey: http_test.oneConnListener.Accept
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3380,7 +3380,7 @@ func (l *oneConnListener) Accept() (c net.Conn, err error)
 
 ```
 searchKey: http_test.oneConnListener.Addr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3391,7 +3391,7 @@ func (l *oneConnListener) Addr() net.Addr
 
 ```
 searchKey: http_test.oneConnListener.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3434,7 +3434,7 @@ type proxyFromEnvTest struct {
 
 ```
 searchKey: http_test.proxyFromEnvTest.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3536,7 +3536,7 @@ type responseWriterJustWriter struct {
 
 ```
 searchKey: http_test.responseWriterJustWriter.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3592,7 +3592,7 @@ type roundTripperWithCloseIdle func() // underlying func is CloseIdleConnections
 
 ```
 searchKey: http_test.roundTripperWithCloseIdle.CloseIdleConnections
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3654,7 +3654,7 @@ type rwTestConn struct {
 
 ```
 searchKey: http_test.rwTestConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3682,7 +3682,7 @@ type serverExpectTest struct {
 
 ```
 searchKey: http_test.expectTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3714,7 +3714,7 @@ slowTestConn is a net.Conn that provides a means to simulate parts of a request 
 
 ```
 searchKey: http_test.slowTestConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3795,7 +3795,7 @@ type slurpResult struct {
 
 ```
 searchKey: http_test.slurpResult.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3866,7 +3866,7 @@ testCloseConn is a net.Conn tracked by a testConnSet.
 
 ```
 searchKey: http_test.testCloseConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3894,7 +3894,7 @@ type testConn struct {
 
 ```
 searchKey: http_test.testConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3945,7 +3945,7 @@ testConnSet tracks a set of TCP connections and whether they've been closed.
 
 ```
 searchKey: http_test.makeTestDial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4121,7 +4121,7 @@ trackLastConnListener tracks the last net.Conn that was accepted.
 
 ```
 searchKey: http_test.trackLastConnListener.Accept
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4194,14 +4194,14 @@ func (c writerFuncConn) Write(p []byte) (n int, err error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkClient" href="#BenchmarkClient">func BenchmarkClient(b *testing.B)</a>
 
 ```
 searchKey: http_test.BenchmarkClient
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4214,7 +4214,7 @@ A benchmark for profiling the client without the HTTP server code. The server co
 
 ```
 searchKey: http_test.BenchmarkClientServer
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4225,7 +4225,7 @@ func BenchmarkClientServer(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkClientServerParallel4
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4236,7 +4236,7 @@ func BenchmarkClientServerParallel4(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkClientServerParallel64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4247,7 +4247,7 @@ func BenchmarkClientServerParallel64(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkClientServerParallelTLS4
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4258,7 +4258,7 @@ func BenchmarkClientServerParallelTLS4(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkClientServerParallelTLS64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4269,7 +4269,7 @@ func BenchmarkClientServerParallelTLS64(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkCloseNotifier
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4280,7 +4280,7 @@ func BenchmarkCloseNotifier(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkFileAndServer_16MB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4291,7 +4291,7 @@ func BenchmarkFileAndServer_16MB(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkFileAndServer_1KB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4302,7 +4302,7 @@ func BenchmarkFileAndServer_1KB(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkFileAndServer_64MB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4313,7 +4313,7 @@ func BenchmarkFileAndServer_64MB(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkReadRequestApachebench
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4324,7 +4324,7 @@ func BenchmarkReadRequestApachebench(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkReadRequestChrome
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4335,7 +4335,7 @@ func BenchmarkReadRequestChrome(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkReadRequestCurl
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4346,7 +4346,7 @@ func BenchmarkReadRequestCurl(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkReadRequestSiege
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4357,7 +4357,7 @@ func BenchmarkReadRequestSiege(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkReadRequestWrk
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4368,7 +4368,7 @@ func BenchmarkReadRequestWrk(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkResponseStatusLine
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4379,7 +4379,7 @@ func BenchmarkResponseStatusLine(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkServeMux
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4390,7 +4390,7 @@ func BenchmarkServeMux(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkServeMux_SkipServe
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4401,7 +4401,7 @@ func BenchmarkServeMux_SkipServe(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkServer
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4423,7 +4423,7 @@ $ go tool pprof http.test http.prof
 
 ```
 searchKey: http_test.BenchmarkServerFakeConnNoKeepAlive
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4434,7 +4434,7 @@ func BenchmarkServerFakeConnNoKeepAlive(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkServerFakeConnWithKeepAlive
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4445,7 +4445,7 @@ func BenchmarkServerFakeConnWithKeepAlive(b *testing.B)
 
 ```
 searchKey: http_test.BenchmarkServerFakeConnWithKeepAliveLite
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4458,7 +4458,7 @@ same as above, but representing the most simple possible request and handler. No
 
 ```
 searchKey: http_test.BenchmarkServerHandlerNoHeader
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4471,7 +4471,7 @@ Neither a Content-Type or Content-Length, so sniffed and counted.
 
 ```
 searchKey: http_test.BenchmarkServerHandlerNoLen
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4484,7 +4484,7 @@ A Content-Type is set, but no length. No sniffing, but will count the Content-Le
 
 ```
 searchKey: http_test.BenchmarkServerHandlerNoType
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4497,7 +4497,7 @@ A Content-Length is set, but the Content-Type will be sniffed.
 
 ```
 searchKey: http_test.BenchmarkServerHandlerTypeLen
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4510,7 +4510,7 @@ Both Content-Type and Content-Length set. Should be no buffering.
 
 ```
 searchKey: http_test.BenchmarkServerHijack
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4677,7 +4677,7 @@ func ExampleStripPrefix()
 
 ```
 searchKey: http_test.Test304Responses_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4690,7 +4690,7 @@ Test304Responses verifies that 304s don't declare that they're chunking in their
 
 ```
 searchKey: http_test.Test304Responses_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4701,7 +4701,7 @@ func Test304Responses_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestAcceptMaxFds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4712,7 +4712,7 @@ func TestAcceptMaxFds(t *testing.T)
 
 ```
 searchKey: http_test.TestAltProtoCancellation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4725,7 +4725,7 @@ Issue 36820 Test that we use the older backward compatible cancellation protocol
 
 ```
 searchKey: http_test.TestAppendTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4736,7 +4736,7 @@ func TestAppendTime(t *testing.T)
 
 ```
 searchKey: http_test.TestAutomaticHTTP2_ListenAndServe
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4747,7 +4747,7 @@ func TestAutomaticHTTP2_ListenAndServe(t *testing.T)
 
 ```
 searchKey: http_test.TestAutomaticHTTP2_ListenAndServe_GetCertificate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4758,7 +4758,7 @@ func TestAutomaticHTTP2_ListenAndServe_GetCertificate(t *testing.T)
 
 ```
 searchKey: http_test.TestAutomaticHTTP2_Serve_H2TLSConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4769,7 +4769,7 @@ func TestAutomaticHTTP2_Serve_H2TLSConfig(t *testing.T)
 
 ```
 searchKey: http_test.TestAutomaticHTTP2_Serve_NoTLSConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4782,7 +4782,7 @@ Issue 15908
 
 ```
 searchKey: http_test.TestAutomaticHTTP2_Serve_NonH2TLSConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4793,7 +4793,7 @@ func TestAutomaticHTTP2_Serve_NonH2TLSConfig(t *testing.T)
 
 ```
 searchKey: http_test.TestAutomaticHTTP2_Serve_WithTLSConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4804,7 +4804,7 @@ func TestAutomaticHTTP2_Serve_WithTLSConfig(t *testing.T)
 
 ```
 searchKey: http_test.TestBadResponseAfterReadingBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4815,7 +4815,7 @@ func TestBadResponseAfterReadingBody(t *testing.T)
 
 ```
 searchKey: http_test.TestBasicAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4826,7 +4826,7 @@ func TestBasicAuth(t *testing.T)
 
 ```
 searchKey: http_test.TestBasicAuthHeadersPreserved
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4837,7 +4837,7 @@ func TestBasicAuthHeadersPreserved(t *testing.T)
 
 ```
 searchKey: http_test.TestBidiStreamReverseProxy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4848,7 +4848,7 @@ func TestBidiStreamReverseProxy(t *testing.T)
 
 ```
 searchKey: http_test.TestCancelRequestMidBody_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4861,7 +4861,7 @@ Tests that closing the Request.Cancel channel also while still reading the respo
 
 ```
 searchKey: http_test.TestCancelRequestMidBody_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4872,7 +4872,7 @@ func TestCancelRequestMidBody_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestCancelRequestWhenSharingConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4885,7 +4885,7 @@ Issue 41600 Test that a new request which uses the connection of an active reque
 
 ```
 searchKey: http_test.TestCancelRequestWithChannel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4896,7 +4896,7 @@ func TestCancelRequestWithChannel(t *testing.T)
 
 ```
 searchKey: http_test.TestCancelRequestWithChannelBeforeDo_Cancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4907,7 +4907,7 @@ func TestCancelRequestWithChannelBeforeDo_Cancel(t *testing.T)
 
 ```
 searchKey: http_test.TestCancelRequestWithChannelBeforeDo_Context
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4918,7 +4918,7 @@ func TestCancelRequestWithChannelBeforeDo_Context(t *testing.T)
 
 ```
 searchKey: http_test.TestCaseSensitiveMethod_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4929,7 +4929,7 @@ func TestCaseSensitiveMethod_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestCaseSensitiveMethod_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4940,7 +4940,7 @@ func TestCaseSensitiveMethod_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestChunkedNoContent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4953,7 +4953,7 @@ From [https://golang.org/issue/4454](https://golang.org/issue/4454) , "client fa
 
 ```
 searchKey: http_test.TestChunkedResponseHeaders_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4964,7 +4964,7 @@ func TestChunkedResponseHeaders_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestChunkedResponseHeaders_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4975,7 +4975,7 @@ func TestChunkedResponseHeaders_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestClient
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4986,7 +4986,7 @@ func TestClient(t *testing.T)
 
 ```
 searchKey: http_test.TestClientAltersCookiesOnRedirect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4999,7 +4999,7 @@ Issue 17494: cookies should be altered when Client follows redirects.
 
 ```
 searchKey: http_test.TestClientCallsCloseOnlyOnce
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5012,7 +5012,7 @@ Issue 40382: Client calls Close multiple times on Request.Body.
 
 ```
 searchKey: http_test.TestClientCanClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5025,7 +5025,7 @@ TestClientCanClose verifies that clients can also force a connection to close.
 
 ```
 searchKey: http_test.TestClientCloseIdleConnections
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5036,7 +5036,7 @@ func TestClientCloseIdleConnections(t *testing.T)
 
 ```
 searchKey: http_test.TestClientCopyHeadersOnRedirect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5049,7 +5049,7 @@ Issue 4800: copy (some) headers when Client follows a redirect.
 
 ```
 searchKey: http_test.TestClientCopyHostOnRedirect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5062,7 +5062,7 @@ Issue 22233: copy host when Client follows a relative redirect.
 
 ```
 searchKey: http_test.TestClientDoCanceledVsTimeout_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5073,7 +5073,7 @@ func TestClientDoCanceledVsTimeout_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestClientDoCanceledVsTimeout_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5084,7 +5084,7 @@ func TestClientDoCanceledVsTimeout_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestClientErrorWithRequestURI
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5095,7 +5095,7 @@ func TestClientErrorWithRequestURI(t *testing.T)
 
 ```
 searchKey: http_test.TestClientHeadContentLength_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5108,7 +5108,7 @@ Verify Response.ContentLength is populated. [https://golang.org/issue/4126](http
 
 ```
 searchKey: http_test.TestClientHeadContentLength_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5119,7 +5119,7 @@ func TestClientHeadContentLength_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestClientHead_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5130,7 +5130,7 @@ func TestClientHead_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestClientHead_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5141,7 +5141,7 @@ func TestClientHead_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestClientInsecureTransport
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5152,7 +5152,7 @@ func TestClientInsecureTransport(t *testing.T)
 
 ```
 searchKey: http_test.TestClientPopulatesNilResponseBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5163,7 +5163,7 @@ func TestClientPopulatesNilResponseBody(t *testing.T)
 
 ```
 searchKey: http_test.TestClientPropagatesTimeoutToContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5174,7 +5174,7 @@ func TestClientPropagatesTimeoutToContext(t *testing.T)
 
 ```
 searchKey: http_test.TestClientRedirect308NoGetBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5187,7 +5187,7 @@ Don't follow a 307/308 if we can't resent the request body.
 
 ```
 searchKey: http_test.TestClientRedirect308NoLocation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5200,7 +5200,7 @@ Issue 17773: don't follow a 308 (or 307) if the response doesn't have a Location
 
 ```
 searchKey: http_test.TestClientRedirectContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5213,7 +5213,7 @@ Tests that Client redirects' contexts are derived from the original request's co
 
 ```
 searchKey: http_test.TestClientRedirectEatsBody_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5224,7 +5224,7 @@ func TestClientRedirectEatsBody_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestClientRedirectEatsBody_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5235,7 +5235,7 @@ func TestClientRedirectEatsBody_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestClientRedirectResponseWithoutRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5248,7 +5248,7 @@ Issue 15577: don't assume the roundtripper's response populates its Request fiel
 
 ```
 searchKey: http_test.TestClientRedirectTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5259,7 +5259,7 @@ func TestClientRedirectTypes(t *testing.T)
 
 ```
 searchKey: http_test.TestClientRedirectUseResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5270,7 +5270,7 @@ func TestClientRedirectUseResponse(t *testing.T)
 
 ```
 searchKey: http_test.TestClientRedirects
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5281,7 +5281,7 @@ func TestClientRedirects(t *testing.T)
 
 ```
 searchKey: http_test.TestClientSendsCookieFromJar
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5292,7 +5292,7 @@ func TestClientSendsCookieFromJar(t *testing.T)
 
 ```
 searchKey: http_test.TestClientTimeoutCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5305,7 +5305,7 @@ Issue 16094: if Client.Timeout is set but not hit, a Timeout error shouldn't be 
 
 ```
 searchKey: http_test.TestClientTimeoutKillsConn_AfterHeaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5320,7 +5320,7 @@ This is the test variant that has the server send response headers first, and ti
 
 ```
 searchKey: http_test.TestClientTimeoutKillsConn_BeforeHeaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5335,7 +5335,7 @@ This is the test variant that times out before the server replies with any respo
 
 ```
 searchKey: http_test.TestClientTimeout_Headers_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5346,7 +5346,7 @@ func TestClientTimeout_Headers_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestClientTimeout_Headers_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5357,7 +5357,7 @@ func TestClientTimeout_Headers_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestClientTimeout_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5368,7 +5368,7 @@ func TestClientTimeout_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestClientTimeout_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5379,7 +5379,7 @@ func TestClientTimeout_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestClientWithCorrectTLSServerName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5390,7 +5390,7 @@ func TestClientWithCorrectTLSServerName(t *testing.T)
 
 ```
 searchKey: http_test.TestClientWithIncorrectTLSServerName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5401,7 +5401,7 @@ func TestClientWithIncorrectTLSServerName(t *testing.T)
 
 ```
 searchKey: http_test.TestClientWriteShutdown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5414,7 +5414,7 @@ TestClientWriteShutdown tests that if the client shuts down the write side of th
 
 ```
 searchKey: http_test.TestClientWrites
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5427,7 +5427,7 @@ TestClientWrites verifies that client requests are buffered and we don't send a 
 
 ```
 searchKey: http_test.TestCloseIdleConnections_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5440,7 +5440,7 @@ Issue 14607
 
 ```
 searchKey: http_test.TestCloseIdleConnections_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5451,7 +5451,7 @@ func TestCloseIdleConnections_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestCloseNotifier
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5462,7 +5462,7 @@ func TestCloseNotifier(t *testing.T)
 
 ```
 searchKey: http_test.TestCloseNotifierChanLeak
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5473,7 +5473,7 @@ func TestCloseNotifierChanLeak(t *testing.T)
 
 ```
 searchKey: http_test.TestCloseNotifierPipelined
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5488,7 +5488,7 @@ Issue 13165 (where it used to deadlock), but behavior changed in Issue 23921.
 
 ```
 searchKey: http_test.TestCloseWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5499,7 +5499,7 @@ func TestCloseWrite(t *testing.T)
 
 ```
 searchKey: http_test.TestCodesPreventingContentTypeAndBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5512,7 +5512,7 @@ Issue 6157, Issue 6685
 
 ```
 searchKey: http_test.TestConcurrentReadWriteReqBody_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5523,7 +5523,7 @@ func TestConcurrentReadWriteReqBody_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestConcurrentReadWriteReqBody_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5534,7 +5534,7 @@ func TestConcurrentReadWriteReqBody_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestConcurrentServerServe
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5547,7 +5547,7 @@ Verify this doesn't race (Issue 16505)
 
 ```
 searchKey: http_test.TestConnContextNotModifyingAllContexts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5560,7 +5560,7 @@ Issue 35750: check ConnContext not modifying context for other connections
 
 ```
 searchKey: http_test.TestConnectRequest_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5571,7 +5571,7 @@ func TestConnectRequest_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestConnectRequest_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5582,7 +5582,7 @@ func TestConnectRequest_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestConsumingBodyOnNextConn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5593,7 +5593,7 @@ func TestConsumingBodyOnNextConn(t *testing.T)
 
 ```
 searchKey: http_test.TestContentEncodingNoSniffing_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5604,7 +5604,7 @@ func TestContentEncodingNoSniffing_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestContentEncodingNoSniffing_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5615,7 +5615,7 @@ func TestContentEncodingNoSniffing_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestContentLengthZero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5628,7 +5628,7 @@ TestContentLengthZero tests that for both an HTTP/1.0 and HTTP/1.1 request (both
 
 ```
 searchKey: http_test.TestContentTypeOkayOn204
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5639,7 +5639,7 @@ func TestContentTypeOkayOn204(t *testing.T)
 
 ```
 searchKey: http_test.TestContentTypeWithVariousSources_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5650,7 +5650,7 @@ func TestContentTypeWithVariousSources_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestContentTypeWithVariousSources_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5661,7 +5661,7 @@ func TestContentTypeWithVariousSources_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestDeleteRedirects
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5672,7 +5672,7 @@ func TestDeleteRedirects(t *testing.T)
 
 ```
 searchKey: http_test.TestDetectContentType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5683,7 +5683,7 @@ func TestDetectContentType(t *testing.T)
 
 ```
 searchKey: http_test.TestDirJoin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5694,7 +5694,7 @@ func TestDirJoin(t *testing.T)
 
 ```
 searchKey: http_test.TestDirectoryIfNotModified
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5705,7 +5705,7 @@ func TestDirectoryIfNotModified(t *testing.T)
 
 ```
 searchKey: http_test.TestDisableKeepAliveUpgrade
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5716,7 +5716,7 @@ func TestDisableKeepAliveUpgrade(t *testing.T)
 
 ```
 searchKey: http_test.TestDontCacheBrokenHTTP2Conn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5729,7 +5729,7 @@ Issue 34978: don't cache a broken HTTP/2 connection
 
 ```
 searchKey: http_test.TestDoubleHijack
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5740,7 +5740,7 @@ func TestDoubleHijack(t *testing.T)
 
 ```
 searchKey: http_test.TestEmptyDirOpenCWD
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5751,7 +5751,7 @@ func TestEmptyDirOpenCWD(t *testing.T)
 
 ```
 searchKey: http_test.TestEmptyPasswordAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5762,7 +5762,7 @@ func TestEmptyPasswordAuth(t *testing.T)
 
 ```
 searchKey: http_test.TestErrorWriteLoopRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5775,7 +5775,7 @@ Issue 37669 Test that a cancellation doesn't result in a data race due to the wr
 
 ```
 searchKey: http_test.TestFSRedirect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5786,7 +5786,7 @@ func TestFSRedirect(t *testing.T)
 
 ```
 searchKey: http_test.TestFileServerCleanPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5797,7 +5797,7 @@ func TestFileServerCleanPath(t *testing.T)
 
 ```
 searchKey: http_test.TestFileServerCleans
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5808,7 +5808,7 @@ func TestFileServerCleans(t *testing.T)
 
 ```
 searchKey: http_test.TestFileServerEscapesNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5819,7 +5819,7 @@ func TestFileServerEscapesNames(t *testing.T)
 
 ```
 searchKey: http_test.TestFileServerImplicitLeadingSlash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5830,7 +5830,7 @@ func TestFileServerImplicitLeadingSlash(t *testing.T)
 
 ```
 searchKey: http_test.TestFileServerNotDirError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5843,7 +5843,7 @@ Issue 18984: tests that requests for paths beyond files return not-found errors
 
 ```
 searchKey: http_test.TestFileServerSortsNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5854,7 +5854,7 @@ func TestFileServerSortsNames(t *testing.T)
 
 ```
 searchKey: http_test.TestFileServerZeroByte
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5865,7 +5865,7 @@ func TestFileServerZeroByte(t *testing.T)
 
 ```
 searchKey: http_test.TestFormFileCallsParseMultipartForm
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5878,7 +5878,7 @@ Test that FormFile invokes ParseMultipartForm.
 
 ```
 searchKey: http_test.TestFormFileOrder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5891,7 +5891,7 @@ Test that FormFile errors if called after MultipartReader on the same request.
 
 ```
 searchKey: http_test.TestFormValueCallsParseMultipartForm
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5904,7 +5904,7 @@ Test that FormValue invokes ParseMultipartForm.
 
 ```
 searchKey: http_test.TestGetBasicAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5915,7 +5915,7 @@ func TestGetBasicAuth(t *testing.T)
 
 ```
 searchKey: http_test.TestGetRequestFormat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5926,7 +5926,7 @@ func TestGetRequestFormat(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_200NoBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5937,7 +5937,7 @@ func TestH12_200NoBody(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_AutoGzip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5950,7 +5950,7 @@ Verify that both our HTTP/1 and HTTP/2 request and auto-decompress gzip. Some ho
 
 ```
 searchKey: http_test.TestH12_AutoGzipWithDumpResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5963,7 +5963,7 @@ Issue 15366
 
 ```
 searchKey: http_test.TestH12_AutoGzip_Disabled
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5974,7 +5974,7 @@ func TestH12_AutoGzip_Disabled(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_ExplicitContentLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5985,7 +5985,7 @@ func TestH12_ExplicitContentLength(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_FlushBeforeBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5996,7 +5996,7 @@ func TestH12_FlushBeforeBody(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_FlushMidBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6007,7 +6007,7 @@ func TestH12_FlushMidBody(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_HandlerWritesTooLittle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6018,7 +6018,7 @@ func TestH12_HandlerWritesTooLittle(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_HandlerWritesTooMuch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6031,7 +6031,7 @@ Tests that the HTTP/1 and HTTP/2 servers prevent handlers from writing more than
 
 ```
 searchKey: http_test.TestH12_HeadContentLengthLargeBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6042,7 +6042,7 @@ func TestH12_HeadContentLengthLargeBody(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_HeadContentLengthNoBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6055,7 +6055,7 @@ Issue 13532
 
 ```
 searchKey: http_test.TestH12_HeadContentLengthSmallBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6066,7 +6066,7 @@ func TestH12_HeadContentLengthSmallBody(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_Head_ExplicitLen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6077,7 +6077,7 @@ func TestH12_Head_ExplicitLen(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_Head_ImplicitLen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6088,7 +6088,7 @@ func TestH12_Head_ImplicitLen(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_RequestContentLength_Known_NonZero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6099,7 +6099,7 @@ func TestH12_RequestContentLength_Known_NonZero(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_RequestContentLength_Known_Zero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6110,7 +6110,7 @@ func TestH12_RequestContentLength_Known_Zero(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_RequestContentLength_Unknown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6121,7 +6121,7 @@ func TestH12_RequestContentLength_Unknown(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_ServerEmptyContentLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6132,7 +6132,7 @@ func TestH12_ServerEmptyContentLength(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_SmallBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6143,7 +6143,7 @@ func TestH12_SmallBody(t *testing.T)
 
 ```
 searchKey: http_test.TestH12_WebSocketUpgrade
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6156,7 +6156,7 @@ Always use HTTP/1.1 for WebSocket upgrades.
 
 ```
 searchKey: http_test.TestH2_204NoBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6167,7 +6167,7 @@ func TestH2_204NoBody(t *testing.T)
 
 ```
 searchKey: http_test.TestH2_304NoBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6178,7 +6178,7 @@ func TestH2_304NoBody(t *testing.T)
 
 ```
 searchKey: http_test.TestH2_404NoBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6189,7 +6189,7 @@ func TestH2_404NoBody(t *testing.T)
 
 ```
 searchKey: http_test.TestHTTP10ConnectionHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6202,7 +6202,7 @@ func TestHTTP10ConnectionHeader(t *testing.T)
 
 ```
 searchKey: http_test.TestHTTP10KeepAlive204Response
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6215,7 +6215,7 @@ Issue 15647: 204 responses can't have bodies, so HTTP/1.0 keep-alive conns shoul
 
 ```
 searchKey: http_test.TestHTTP10KeepAlive304Response
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6226,7 +6226,7 @@ func TestHTTP10KeepAlive304Response(t *testing.T)
 
 ```
 searchKey: http_test.TestHTTP11KeepAlive204Response
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6237,7 +6237,7 @@ func TestHTTP11KeepAlive204Response(t *testing.T)
 
 ```
 searchKey: http_test.TestHTTP2NoWriteDeadline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6250,7 +6250,7 @@ Test that the HTTP/2 server does not send RST when WriteDeadline not set.
 
 ```
 searchKey: http_test.TestHTTP2UpgradeClosesConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6261,7 +6261,7 @@ func TestHTTP2UpgradeClosesConnection(t *testing.T)
 
 ```
 searchKey: http_test.TestHTTP2WriteDeadlineEnforcedPerStream
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6274,7 +6274,7 @@ Test that the HTTP/2 server RSTs stream on slow write.
 
 ```
 searchKey: http_test.TestHTTP2WriteDeadlineExtendedOnNewRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6287,7 +6287,7 @@ Test that the HTTP/2 server handles Server.WriteTimeout (Issue 18437)
 
 ```
 searchKey: http_test.TestHTTPSClientDetectsHTTPServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6300,7 +6300,7 @@ Check that an HTTPS client can interpret a particular TLS error to determine tha
 
 ```
 searchKey: http_test.TestHandlerBodyClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6311,7 +6311,7 @@ func TestHandlerBodyClose(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlerFinishSkipBigContentLengthRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6324,7 +6324,7 @@ If a Handler finishes and there's an unread request body, verify the server try 
 
 ```
 searchKey: http_test.TestHandlerPanicNil_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6335,7 +6335,7 @@ func TestHandlerPanicNil_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlerPanicNil_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6346,7 +6346,7 @@ func TestHandlerPanicNil_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlerPanicWithHijack
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6357,7 +6357,7 @@ func TestHandlerPanicWithHijack(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlerPanic_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6368,7 +6368,7 @@ func TestHandlerPanic_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlerPanic_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6379,7 +6379,7 @@ func TestHandlerPanic_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlerSetTransferEncodingChunked
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6392,7 +6392,7 @@ func TestHandlerSetTransferEncodingChunked(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlerSetTransferEncodingGzip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6405,7 +6405,7 @@ func TestHandlerSetTransferEncodingGzip(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlerSetsBodyNil_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6416,7 +6416,7 @@ func TestHandlerSetsBodyNil_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlerSetsBodyNil_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6427,7 +6427,7 @@ func TestHandlerSetsBodyNil_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlersCanSetConnectionClose10
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6438,7 +6438,7 @@ func TestHandlersCanSetConnectionClose10(t *testing.T)
 
 ```
 searchKey: http_test.TestHandlersCanSetConnectionClose11
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6451,7 +6451,7 @@ TestHandlersCanSetConnectionClose verifies that handlers can force a connection 
 
 ```
 searchKey: http_test.TestHeadResponses_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6464,7 +6464,7 @@ TestHeadResponses verifies that all MIME type sniffing and Content-Length counti
 
 ```
 searchKey: http_test.TestHeadResponses_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6475,7 +6475,7 @@ func TestHeadResponses_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestHeaderToWire
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6488,7 +6488,7 @@ Tests regarding the ordering of Write, WriteHeader, Header, and Flush calls. In 
 
 ```
 searchKey: http_test.TestHijackAfterCloseNotifier
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6505,7 +6505,7 @@ Issue 9763. HTTP/1-only test. (http2 doesn't have Hijack)
 
 ```
 searchKey: http_test.TestHijackBeforeRequestBodyRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6516,7 +6516,7 @@ func TestHijackBeforeRequestBodyRead(t *testing.T)
 
 ```
 searchKey: http_test.TestHostHandlers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6527,7 +6527,7 @@ func TestHostHandlers(t *testing.T)
 
 ```
 searchKey: http_test.TestIdentityResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6540,7 +6540,7 @@ TestIdentityResponse verifies that a handler can unset
 
 ```
 searchKey: http_test.TestIdleConnChannelLeak
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6551,7 +6551,7 @@ func TestIdleConnChannelLeak(t *testing.T)
 
 ```
 searchKey: http_test.TestIdleConnH2Crash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6566,7 +6566,7 @@ This test reproduced the crash by setting the IdleConnTimeout low (to make the t
 
 ```
 searchKey: http_test.TestInterruptWithPanic_ErrAbortHandler_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6577,7 +6577,7 @@ func TestInterruptWithPanic_ErrAbortHandler_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestInterruptWithPanic_ErrAbortHandler_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6588,7 +6588,7 @@ func TestInterruptWithPanic_ErrAbortHandler_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestInterruptWithPanic_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6599,7 +6599,7 @@ func TestInterruptWithPanic_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestInterruptWithPanic_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6610,7 +6610,7 @@ func TestInterruptWithPanic_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestInterruptWithPanic_nil_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6621,7 +6621,7 @@ func TestInterruptWithPanic_nil_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestInterruptWithPanic_nil_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6632,7 +6632,7 @@ func TestInterruptWithPanic_nil_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestInvalidHeaderResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6643,7 +6643,7 @@ func TestInvalidHeaderResponse(t *testing.T)
 
 ```
 searchKey: http_test.TestInvalidTrailerClosesConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6654,7 +6654,7 @@ func TestInvalidTrailerClosesConnection(t *testing.T)
 
 ```
 searchKey: http_test.TestIs408
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6665,7 +6665,7 @@ func TestIs408(t *testing.T)
 
 ```
 searchKey: http_test.TestIssue10884_MaxBytesEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6676,7 +6676,7 @@ func TestIssue10884_MaxBytesEOF(t *testing.T)
 
 ```
 searchKey: http_test.TestIssue11549_Expect100
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6687,7 +6687,7 @@ func TestIssue11549_Expect100(t *testing.T)
 
 ```
 searchKey: http_test.TestIssue13893_Expect100
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6698,7 +6698,7 @@ func TestIssue13893_Expect100(t *testing.T)
 
 ```
 searchKey: http_test.TestIssue32441
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6711,7 +6711,7 @@ Issue 32441: body is not reset after ErrSkipAltProtocol
 
 ```
 searchKey: http_test.TestIssue3595
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6724,7 +6724,7 @@ Test that a client receives a server's reply, even if the server doesn't read th
 
 ```
 searchKey: http_test.TestIssue3644
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6737,7 +6737,7 @@ Test that the transport doesn't close the TCP connection early, before the respo
 
 ```
 searchKey: http_test.TestIssue4191_InfiniteGetTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6748,7 +6748,7 @@ func TestIssue4191_InfiniteGetTimeout(t *testing.T)
 
 ```
 searchKey: http_test.TestIssue4191_InfiniteGetToPutTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6759,7 +6759,7 @@ func TestIssue4191_InfiniteGetToPutTimeout(t *testing.T)
 
 ```
 searchKey: http_test.TestJarCalls
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6770,7 +6770,7 @@ func TestJarCalls(t *testing.T)
 
 ```
 searchKey: http_test.TestKeepAliveFinalChunkWithEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6783,7 +6783,7 @@ Issue 15703
 
 ```
 searchKey: http_test.TestLinuxSendfile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6796,7 +6796,7 @@ verifies that sendfile is being used on Linux
 
 ```
 searchKey: http_test.TestLinuxSendfileChild
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6809,7 +6809,7 @@ TestLinuxSendfileChild isn't a real test. It's used as a helper process for Test
 
 ```
 searchKey: http_test.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6820,7 +6820,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: http_test.TestMaxBytesReaderDifferentLimits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6833,7 +6833,7 @@ Issue 45101: maxBytesReader's Read panicked when n < -1. This test also ensures 
 
 ```
 searchKey: http_test.TestMaxBytesReaderStickyError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6846,7 +6846,7 @@ Issue 14981: MaxBytesReader's return error wasn't sticky. It doesn't technically
 
 ```
 searchKey: http_test.TestMaxInt64ForMultipartFormMaxMemoryOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6859,7 +6859,7 @@ Issue #40430: Test that if maxMemory for ParseMultipartForm when combined with t
 
 ```
 searchKey: http_test.TestMissingFileMultipartRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6870,7 +6870,7 @@ func TestMissingFileMultipartRequest(t *testing.T)
 
 ```
 searchKey: http_test.TestMissingStatusNoPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6883,7 +6883,7 @@ Ensure that a missing status doesn't make the server panic See Issue [https://go
 
 ```
 searchKey: http_test.TestMultipartReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6894,7 +6894,7 @@ func TestMultipartReader(t *testing.T)
 
 ```
 searchKey: http_test.TestMultipartReaderOrder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6907,7 +6907,7 @@ Test that MultipartReader errors if called after ParseMultipartForm on the same 
 
 ```
 searchKey: http_test.TestMultipartRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6918,7 +6918,7 @@ func TestMultipartRequest(t *testing.T)
 
 ```
 searchKey: http_test.TestMultipartRequestAuto
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6929,7 +6929,7 @@ func TestMultipartRequestAuto(t *testing.T)
 
 ```
 searchKey: http_test.TestMuxRedirectLeadingSlashes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6942,7 +6942,7 @@ Tests for [https://golang.org/issue/900](https://golang.org/issue/900)
 
 ```
 searchKey: http_test.TestMuxRedirectRelative
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6953,7 +6953,7 @@ func TestMuxRedirectRelative(t *testing.T)
 
 ```
 searchKey: http_test.TestNewClientServerTest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6966,7 +6966,7 @@ Testing the newClientServerTest helper itself.
 
 ```
 searchKey: http_test.TestNewRequestContentLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6977,7 +6977,7 @@ func TestNewRequestContentLength(t *testing.T)
 
 ```
 searchKey: http_test.TestNewRequestGetBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6990,7 +6990,7 @@ verify that NewRequest sets Request.GetBody and that it works
 
 ```
 searchKey: http_test.TestNewRequestHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7001,7 +7001,7 @@ func TestNewRequestHost(t *testing.T)
 
 ```
 searchKey: http_test.TestNextProtoUpgrade
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7012,7 +7012,7 @@ func TestNextProtoUpgrade(t *testing.T)
 
 ```
 searchKey: http_test.TestNoBodyOnChunked304Response
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7025,7 +7025,7 @@ Issue 22330: do not allow the response body to be read when the status code forb
 
 ```
 searchKey: http_test.TestNoContentLengthIfTransferEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7038,7 +7038,7 @@ Issue 9987: shouldn't add automatic Content-Length (or Content-Type) if a Transf
 
 ```
 searchKey: http_test.TestNoCrashReturningTransportAltConn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7051,7 +7051,7 @@ Issue 13839
 
 ```
 searchKey: http_test.TestNoPanicOnRoundTripWithBasicAuth_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7062,7 +7062,7 @@ func TestNoPanicOnRoundTripWithBasicAuth_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestNoPanicOnRoundTripWithBasicAuth_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7073,7 +7073,7 @@ func TestNoPanicOnRoundTripWithBasicAuth_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestNoSniffExpectRequestBody_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7084,7 +7084,7 @@ func TestNoSniffExpectRequestBody_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestNoSniffExpectRequestBody_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7095,7 +7095,7 @@ func TestNoSniffExpectRequestBody_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestOnlyWriteTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7108,7 +7108,7 @@ golang.org/issue/4741 -- setting only a write timeout that triggers shouldn't ca
 
 ```
 searchKey: http_test.TestOptions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7119,7 +7119,7 @@ func TestOptions(t *testing.T)
 
 ```
 searchKey: http_test.TestParseBasicAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7130,7 +7130,7 @@ func TestParseBasicAuth(t *testing.T)
 
 ```
 searchKey: http_test.TestParseFormInitializeOnError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7141,7 +7141,7 @@ func TestParseFormInitializeOnError(t *testing.T)
 
 ```
 searchKey: http_test.TestParseFormQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7152,7 +7152,7 @@ func TestParseFormQuery(t *testing.T)
 
 ```
 searchKey: http_test.TestParseFormQueryMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7165,7 +7165,7 @@ Tests that we only parse the form automatically for certain methods.
 
 ```
 searchKey: http_test.TestParseFormSemicolonSeparator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7178,7 +7178,7 @@ Issue #25192: Test that ParseForm fails but still parses the form when an URL co
 
 ```
 searchKey: http_test.TestParseFormUnknownContentType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7189,7 +7189,7 @@ func TestParseFormUnknownContentType(t *testing.T)
 
 ```
 searchKey: http_test.TestParseHTTPVersion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7200,7 +7200,7 @@ func TestParseHTTPVersion(t *testing.T)
 
 ```
 searchKey: http_test.TestParseMultipartForm
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7211,7 +7211,7 @@ func TestParseMultipartForm(t *testing.T)
 
 ```
 searchKey: http_test.TestParseMultipartFormFilename
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7224,7 +7224,7 @@ Issue 45789: multipart form should not include directory path in filename
 
 ```
 searchKey: http_test.TestParseMultipartFormOrder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7237,7 +7237,7 @@ Test that ParseMultipartForm errors if called after MultipartReader on the same 
 
 ```
 searchKey: http_test.TestParseMultipartFormPopulatesPostForm
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7250,7 +7250,7 @@ Issue 9305: ParseMultipartForm should populate PostForm too
 
 ```
 searchKey: http_test.TestParseMultipartFormSemicolonSeparator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7263,7 +7263,7 @@ Issue #25192: Test that ParseMultipartForm fails but still parses the multi-part
 
 ```
 searchKey: http_test.TestPostFormRequestFormat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7274,7 +7274,7 @@ func TestPostFormRequestFormat(t *testing.T)
 
 ```
 searchKey: http_test.TestPostRedirects
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7285,7 +7285,7 @@ func TestPostRedirects(t *testing.T)
 
 ```
 searchKey: http_test.TestPostRequestFormat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7296,7 +7296,7 @@ func TestPostRequestFormat(t *testing.T)
 
 ```
 searchKey: http_test.TestProxyFromEnvironment
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7307,7 +7307,7 @@ func TestProxyFromEnvironment(t *testing.T)
 
 ```
 searchKey: http_test.TestProxyFromEnvironmentLowerCase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7318,7 +7318,7 @@ func TestProxyFromEnvironmentLowerCase(t *testing.T)
 
 ```
 searchKey: http_test.TestQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7329,7 +7329,7 @@ func TestQuery(t *testing.T)
 
 ```
 searchKey: http_test.TestQuerySemicolon
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7342,7 +7342,7 @@ TestQuerySemicolon tests the behavior of semicolons in queries. See Issue 25192.
 
 ```
 searchKey: http_test.TestReadRequestErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7353,7 +7353,7 @@ func TestReadRequestErrors(t *testing.T)
 
 ```
 searchKey: http_test.TestRedirect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7366,7 +7366,7 @@ Test different URL formats and schemes
 
 ```
 searchKey: http_test.TestRedirectBadPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7377,7 +7377,7 @@ func TestRedirectBadPath(t *testing.T)
 
 ```
 searchKey: http_test.TestRedirectContentTypeAndBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7390,7 +7390,7 @@ Test that Redirect sets Content-Type header for GET and HEAD requests and writes
 
 ```
 searchKey: http_test.TestRedirectCookiesJar
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7401,7 +7401,7 @@ func TestRedirectCookiesJar(t *testing.T)
 
 ```
 searchKey: http_test.TestRedirect_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7412,7 +7412,7 @@ func TestRedirect_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestRedirect_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7423,7 +7423,7 @@ func TestRedirect_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestReferer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7434,7 +7434,7 @@ func TestReferer(t *testing.T)
 
 ```
 searchKey: http_test.TestRequestBadHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7445,7 +7445,7 @@ func TestRequestBadHost(t *testing.T)
 
 ```
 searchKey: http_test.TestRequestBodyCloseDoesntBlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7458,7 +7458,7 @@ Test that a hanging Request.Body.Read from another goroutine can't cause the Han
 
 ```
 searchKey: http_test.TestRequestBodyLimit_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7469,7 +7469,7 @@ func TestRequestBodyLimit_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestRequestBodyLimit_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7480,7 +7480,7 @@ func TestRequestBodyLimit_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestRequestBodyReadErrorClosesConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7491,7 +7491,7 @@ func TestRequestBodyReadErrorClosesConnection(t *testing.T)
 
 ```
 searchKey: http_test.TestRequestBodyTimeoutClosesConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7502,7 +7502,7 @@ func TestRequestBodyTimeoutClosesConnection(t *testing.T)
 
 ```
 searchKey: http_test.TestRequestCloneTransferEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7515,7 +7515,7 @@ Ensure that Request.Clone creates a deep copy of TransferEncoding. See issue 419
 
 ```
 searchKey: http_test.TestRequestInvalidMethod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7526,7 +7526,7 @@ func TestRequestInvalidMethod(t *testing.T)
 
 ```
 searchKey: http_test.TestRequestLimit_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7537,7 +7537,7 @@ func TestRequestLimit_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestRequestLimit_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7548,7 +7548,7 @@ func TestRequestLimit_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestRequestWriteBufferedWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7559,7 +7559,7 @@ func TestRequestWriteBufferedWriter(t *testing.T)
 
 ```
 searchKey: http_test.TestResponseBodyReadAfterClose_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7572,7 +7572,7 @@ Don't allow a Body.Read after Body.Close. Issue 13648.
 
 ```
 searchKey: http_test.TestResponseBodyReadAfterClose_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7583,7 +7583,7 @@ func TestResponseBodyReadAfterClose_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestResponseSetsTLSConnectionState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7594,7 +7594,7 @@ func TestResponseSetsTLSConnectionState(t *testing.T)
 
 ```
 searchKey: http_test.TestResponseWriterWriteString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7607,7 +7607,7 @@ test that ResponseWriter implements io.StringWriter.
 
 ```
 searchKey: http_test.TestRetryRequestsOnError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7630,7 +7630,7 @@ This automatically prevents an infinite resend loop because we'll run out of the
 
 ```
 searchKey: http_test.TestReuseRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7641,7 +7641,7 @@ func TestReuseRequest(t *testing.T)
 
 ```
 searchKey: http_test.TestRoundTripGzip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7654,7 +7654,7 @@ Test that the modification made to the Request by the RoundTripper is cleaned up
 
 ```
 searchKey: http_test.TestRoundTripReturnsProxyError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7667,7 +7667,7 @@ Test for issue 8755 Ensure that if a proxy returns an error, it is exposed by Ro
 
 ```
 searchKey: http_test.TestSOCKS5Proxy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7678,7 +7678,7 @@ func TestSOCKS5Proxy(t *testing.T)
 
 ```
 searchKey: http_test.TestServeContent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7689,7 +7689,7 @@ func TestServeContent(t *testing.T)
 
 ```
 searchKey: http_test.TestServeContentErrorMessages
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7700,7 +7700,7 @@ func TestServeContentErrorMessages(t *testing.T)
 
 ```
 searchKey: http_test.TestServeDirWithoutTrailingSlash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7713,7 +7713,7 @@ Issue 13996
 
 ```
 searchKey: http_test.TestServeFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7724,7 +7724,7 @@ func TestServeFile(t *testing.T)
 
 ```
 searchKey: http_test.TestServeFileContentType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7735,7 +7735,7 @@ func TestServeFileContentType(t *testing.T)
 
 ```
 searchKey: http_test.TestServeFileDirPanicEmptyPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7748,7 +7748,7 @@ Tests that this doesn't panic. (Issue 30165)
 
 ```
 searchKey: http_test.TestServeFileFromCWD
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7759,7 +7759,7 @@ func TestServeFileFromCWD(t *testing.T)
 
 ```
 searchKey: http_test.TestServeFileMimeType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7770,7 +7770,7 @@ func TestServeFileMimeType(t *testing.T)
 
 ```
 searchKey: http_test.TestServeFileRejectsInvalidSuffixLengths_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7783,7 +7783,7 @@ Issue 40940: Ensure that we only accept non-negative suffix-lengths in "Range": 
 
 ```
 searchKey: http_test.TestServeFileRejectsInvalidSuffixLengths_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7794,7 +7794,7 @@ func TestServeFileRejectsInvalidSuffixLengths_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServeFileWithContentEncoding_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7807,7 +7807,7 @@ Tests that ServeFile doesn't add a Content-Length if a Content-Encoding is speci
 
 ```
 searchKey: http_test.TestServeFileWithContentEncoding_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7818,7 +7818,7 @@ func TestServeFileWithContentEncoding_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServeFile_DotDot
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7829,7 +7829,7 @@ func TestServeFile_DotDot(t *testing.T)
 
 ```
 searchKey: http_test.TestServeHTTP10Close
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7842,7 +7842,7 @@ TestServeHTTP10Close verifies that HTTP/1.0 requests won't be kept alive.
 
 ```
 searchKey: http_test.TestServeIndexHtml
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7853,7 +7853,7 @@ func TestServeIndexHtml(t *testing.T)
 
 ```
 searchKey: http_test.TestServeIndexHtmlFS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7864,7 +7864,7 @@ func TestServeIndexHtmlFS(t *testing.T)
 
 ```
 searchKey: http_test.TestServeMuxHandleFuncWithNilHandler
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7877,7 +7877,7 @@ Issue 24297
 
 ```
 searchKey: http_test.TestServeMuxHandler
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7888,7 +7888,7 @@ func TestServeMuxHandler(t *testing.T)
 
 ```
 searchKey: http_test.TestServeMuxHandlerRedirects
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7901,7 +7901,7 @@ TestServeMuxHandlerRedirects tests that automatic redirects generated by mux.Han
 
 ```
 searchKey: http_test.TestServeTLS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7912,7 +7912,7 @@ func TestServeTLS(t *testing.T)
 
 ```
 searchKey: http_test.TestServeWithSlashRedirectForHostPatterns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7923,7 +7923,7 @@ func TestServeWithSlashRedirectForHostPatterns(t *testing.T)
 
 ```
 searchKey: http_test.TestServeWithSlashRedirectKeepsQueryString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7936,7 +7936,7 @@ Test that the special cased "/route" redirect implicitly created by a registered
 
 ```
 searchKey: http_test.TestServerAllowsBlockingRemoteAddr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7949,7 +7949,7 @@ Issue 12943
 
 ```
 searchKey: http_test.TestServerBufferedChunking
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7962,7 +7962,7 @@ Tests that chunked server responses that write 1 byte at a time are buffered bef
 
 ```
 searchKey: http_test.TestServerCancelsReadTimeoutWhenIdle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7975,7 +7975,7 @@ Issue 18447: test that the Server's ReadTimeout is stopped while the server's do
 
 ```
 searchKey: http_test.TestServerCloseDeadlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7988,7 +7988,7 @@ Issue 17878: tests that we can call Close twice.
 
 ```
 searchKey: http_test.TestServerCloseListenerOnce
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8001,7 +8001,7 @@ Issue 24803: don't call Listener.Close on Server.Shutdown.
 
 ```
 searchKey: http_test.TestServerConnState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8012,7 +8012,7 @@ func TestServerConnState(t *testing.T)
 
 ```
 searchKey: http_test.TestServerConnStateNew
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8023,7 +8023,7 @@ func TestServerConnStateNew(t *testing.T)
 
 ```
 searchKey: http_test.TestServerContentType_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8034,7 +8034,7 @@ func TestServerContentType_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestServerContentType_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8045,7 +8045,7 @@ func TestServerContentType_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerContext_LocalAddrContextKey_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8056,7 +8056,7 @@ func TestServerContext_LocalAddrContextKey_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestServerContext_LocalAddrContextKey_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8067,7 +8067,7 @@ func TestServerContext_LocalAddrContextKey_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerContext_ServerContextKey_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8078,7 +8078,7 @@ func TestServerContext_ServerContextKey_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestServerContext_ServerContextKey_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8089,7 +8089,7 @@ func TestServerContext_ServerContextKey_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerContexts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8100,7 +8100,7 @@ func TestServerContexts(t *testing.T)
 
 ```
 searchKey: http_test.TestServerContextsHTTP2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8111,7 +8111,7 @@ func TestServerContextsHTTP2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerDuplicateBackgroundRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8124,7 +8124,7 @@ Issue 18535: test that the Server doesn't try to do a background read if it's al
 
 ```
 searchKey: http_test.TestServerEmptyBodyRace_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8137,7 +8137,7 @@ golang.org/issue/7856
 
 ```
 searchKey: http_test.TestServerEmptyBodyRace_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8148,7 +8148,7 @@ func TestServerEmptyBodyRace_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerExpect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8161,7 +8161,7 @@ Tests that the server responds to the "Expect" request header correctly. http2 t
 
 ```
 searchKey: http_test.TestServerFileStatError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8174,7 +8174,7 @@ Issue 12991
 
 ```
 searchKey: http_test.TestServerFlushAndHijack
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8191,7 +8191,7 @@ So add an explicit test for this.
 
 ```
 searchKey: http_test.TestServerGracefulClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8204,7 +8204,7 @@ Tests that the server flushes its response headers out when it's ignoring the re
 
 ```
 searchKey: http_test.TestServerHandlersCanHandleH2PRI
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8215,7 +8215,7 @@ func TestServerHandlersCanHandleH2PRI(t *testing.T)
 
 ```
 searchKey: http_test.TestServerHijackGetsBackgroundByte
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8228,7 +8228,7 @@ Test that the bufio.Reader returned by Hijack includes any buffered byte (from t
 
 ```
 searchKey: http_test.TestServerHijackGetsBackgroundByte_big
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8241,7 +8241,7 @@ Like TestServerHijackGetsBackgroundByte above but sending a immediate 1MB of dat
 
 ```
 searchKey: http_test.TestServerIdleTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8252,7 +8252,7 @@ func TestServerIdleTimeout(t *testing.T)
 
 ```
 searchKey: http_test.TestServerIssue5953_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8265,7 +8265,7 @@ Issue 5953: shouldn't sniff if the handler set a Content-Type header, even if it
 
 ```
 searchKey: http_test.TestServerIssue5953_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8276,7 +8276,7 @@ func TestServerIssue5953_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerKeepAliveAfterWriteError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8291,7 +8291,7 @@ To test, verify we don't timeout or see fewer unique client addresses (== unique
 
 ```
 searchKey: http_test.TestServerKeepAlivesEnabled
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8302,7 +8302,7 @@ func TestServerKeepAlivesEnabled(t *testing.T)
 
 ```
 searchKey: http_test.TestServerKeepAlivesEnabled_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8315,7 +8315,7 @@ Issue 17717: tests that Server.SetKeepAlivesEnabled is respected by both HTTP/1 
 
 ```
 searchKey: http_test.TestServerKeepAlivesEnabled_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8326,7 +8326,7 @@ func TestServerKeepAlivesEnabled_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerListenNotComparableListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8339,7 +8339,7 @@ Issue 24812: don't crash on non-comparable Listener
 
 ```
 searchKey: http_test.TestServerNoContentType_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8350,7 +8350,7 @@ func TestServerNoContentType_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestServerNoContentType_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8361,7 +8361,7 @@ func TestServerNoContentType_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerNoDate_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8372,7 +8372,7 @@ func TestServerNoDate_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestServerNoDate_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8383,7 +8383,7 @@ func TestServerNoDate_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerReaderFromOrder_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8396,7 +8396,7 @@ See golang.org/issue/5660
 
 ```
 searchKey: http_test.TestServerReaderFromOrder_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8407,7 +8407,7 @@ func TestServerReaderFromOrder_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerRequestContextCancel_ConnClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8420,7 +8420,7 @@ Tests that the Request.Context available to the Handler is canceled if the peer 
 
 ```
 searchKey: http_test.TestServerRequestContextCancel_ServeHTTPDone_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8431,7 +8431,7 @@ func TestServerRequestContextCancel_ServeHTTPDone_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestServerRequestContextCancel_ServeHTTPDone_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8442,7 +8442,7 @@ func TestServerRequestContextCancel_ServeHTTPDone_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerSetKeepAlivesEnabledClosesConns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8455,7 +8455,7 @@ Tests that calls to Server.SetKeepAlivesEnabled(false) closes any currently-open
 
 ```
 searchKey: http_test.TestServerShutdownStateNew
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8466,7 +8466,7 @@ func TestServerShutdownStateNew(t *testing.T)
 
 ```
 searchKey: http_test.TestServerShutdownThenServe
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8479,7 +8479,7 @@ Issue 20239: don't block in Serve if Shutdown is called first.
 
 ```
 searchKey: http_test.TestServerShutdown_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8490,7 +8490,7 @@ func TestServerShutdown_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestServerShutdown_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8501,7 +8501,7 @@ func TestServerShutdown_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerTimeouts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8512,7 +8512,7 @@ func TestServerTimeouts(t *testing.T)
 
 ```
 searchKey: http_test.TestServerUndeclaredTrailers_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8523,7 +8523,7 @@ func TestServerUndeclaredTrailers_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestServerUndeclaredTrailers_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8534,7 +8534,7 @@ func TestServerUndeclaredTrailers_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestServerUnreadRequestBodyLarge
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8547,7 +8547,7 @@ Over a ~256KB (maxPostHandlerReadBytes) threshold, the server should ignore clie
 
 ```
 searchKey: http_test.TestServerUnreadRequestBodyLittle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8560,7 +8560,7 @@ Under a ~256KB (maxPostHandlerReadBytes) threshold, the server should consume cl
 
 ```
 searchKey: http_test.TestServerValidatesHeaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8573,7 +8573,7 @@ Test that we validate the valid bytes in HTTP/1 headers. Issue 11207.
 
 ```
 searchKey: http_test.TestServerValidatesHostHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8586,7 +8586,7 @@ Test that we validate the Host header. Issue 11206 (invalid bytes in Host) and 1
 
 ```
 searchKey: http_test.TestServerValidatesMethod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8599,7 +8599,7 @@ Issue 18319: test that the Server validates the request method.
 
 ```
 searchKey: http_test.TestServerWriteHijackZeroBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8612,7 +8612,7 @@ Issue 16456: allow writing 0 bytes on hijacked conn to test hijack without any l
 
 ```
 searchKey: http_test.TestSetBasicAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8623,7 +8623,7 @@ func TestSetBasicAuth(t *testing.T)
 
 ```
 searchKey: http_test.TestSetsRemoteAddr_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8634,7 +8634,7 @@ func TestSetsRemoteAddr_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestSetsRemoteAddr_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8645,7 +8645,7 @@ func TestSetsRemoteAddr_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestShouldCopyHeaderOnRedirect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8658,7 +8658,7 @@ Part of Issue 4800
 
 ```
 searchKey: http_test.TestShouldRedirectConcurrency
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8669,7 +8669,7 @@ func TestShouldRedirectConcurrency(t *testing.T)
 
 ```
 searchKey: http_test.TestSniffWriteSize_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8680,7 +8680,7 @@ func TestSniffWriteSize_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestSniffWriteSize_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8691,7 +8691,7 @@ func TestSniffWriteSize_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestStarRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8702,7 +8702,7 @@ func TestStarRequest(t *testing.T)
 
 ```
 searchKey: http_test.TestStarRequestFoo_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8713,7 +8713,7 @@ func TestStarRequestFoo_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestStarRequestFoo_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8724,7 +8724,7 @@ func TestStarRequestFoo_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestStarRequestOptions_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8735,7 +8735,7 @@ func TestStarRequestOptions_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestStarRequestOptions_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8746,7 +8746,7 @@ func TestStarRequestOptions_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestStreamingGet_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8757,7 +8757,7 @@ func TestStreamingGet_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestStreamingGet_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8768,7 +8768,7 @@ func TestStreamingGet_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestStressSurpriseServerCloses
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8781,7 +8781,7 @@ Test for [https://golang.org/issue/2616](https://golang.org/issue/2616) (appropr
 
 ```
 searchKey: http_test.TestStripPasswordFromError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8792,7 +8792,7 @@ func TestStripPasswordFromError(t *testing.T)
 
 ```
 searchKey: http_test.TestStripPortFromHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8805,7 +8805,7 @@ Issue 23351: document and test behavior of ServeMux with ports
 
 ```
 searchKey: http_test.TestStripPrefix
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8816,7 +8816,7 @@ func TestStripPrefix(t *testing.T)
 
 ```
 searchKey: http_test.TestStripPrefixNotModifyRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8829,7 +8829,7 @@ func TestStripPrefixNotModifyRequest(t *testing.T)
 
 ```
 searchKey: http_test.TestTLSHandshakeTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8840,7 +8840,7 @@ func TestTLSHandshakeTimeout(t *testing.T)
 
 ```
 searchKey: http_test.TestTLSHandshakeTrace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8853,7 +8853,7 @@ Test the httptrace.TLSHandshake{Start,Done} hooks with a https http1 connections
 
 ```
 searchKey: http_test.TestTLSServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8864,7 +8864,7 @@ func TestTLSServer(t *testing.T)
 
 ```
 searchKey: http_test.TestTLSServerClosesConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8877,7 +8877,7 @@ Trying to repro golang.org/issue/3514
 
 ```
 searchKey: http_test.TestTLSServerRejectHTTPRequests
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8890,7 +8890,7 @@ Test that the HTTPS server nicely rejects plaintext HTTP/1.x requests.
 
 ```
 searchKey: http_test.TestTimeoutHandlerEmptyResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8903,7 +8903,7 @@ func TestTimeoutHandlerEmptyResponse(t *testing.T)
 
 ```
 searchKey: http_test.TestTimeoutHandlerPanicRecovery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8916,7 +8916,7 @@ func TestTimeoutHandlerPanicRecovery(t *testing.T)
 
 ```
 searchKey: http_test.TestTimeoutHandlerRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8929,7 +8929,7 @@ See issues 8209 and 8414.
 
 ```
 searchKey: http_test.TestTimeoutHandlerRaceHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8942,7 +8942,7 @@ See issues 8209 and 8414. Both issues involved panics in the implementation of T
 
 ```
 searchKey: http_test.TestTimeoutHandlerRaceHeaderTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8955,7 +8955,7 @@ Issue 9162
 
 ```
 searchKey: http_test.TestTimeoutHandlerStartTimerWhenServing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8968,7 +8968,7 @@ Issue 14568.
 
 ```
 searchKey: http_test.TestTimeoutHandlerSuperfluousLogs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8981,7 +8981,7 @@ Issue 30803: ensure that TimeoutHandler logs spurious WriteHeader calls, for con
 
 ```
 searchKey: http_test.TestTimeoutHandler_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8992,7 +8992,7 @@ func TestTimeoutHandler_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestTimeoutHandler_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9003,7 +9003,7 @@ func TestTimeoutHandler_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTolerateCRLFBeforeRequestLine
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9016,7 +9016,7 @@ tolerate extra CRLF(s) before Request-Line on subsequent requests on a conn Issu
 
 ```
 searchKey: http_test.TestTrailersClientToServer_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9029,7 +9029,7 @@ Tests that clients can send trailers to a server and that the server can read th
 
 ```
 searchKey: http_test.TestTrailersClientToServer_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9040,7 +9040,7 @@ func TestTrailersClientToServer_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTrailersServerToClient_Flush_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9051,7 +9051,7 @@ func TestTrailersServerToClient_Flush_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestTrailersServerToClient_Flush_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9062,7 +9062,7 @@ func TestTrailersServerToClient_Flush_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTrailersServerToClient_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9075,7 +9075,7 @@ Tests that servers send trailers to a client and that the client can read them.
 
 ```
 searchKey: http_test.TestTrailersServerToClient_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9086,7 +9086,7 @@ func TestTrailersServerToClient_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportAltProto
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9097,7 +9097,7 @@ func TestTransportAltProto(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportAndServerSharedBodyRace_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9110,7 +9110,7 @@ Issue 6995 A server Handler can receive a Request, and then turn around and give
 
 ```
 searchKey: http_test.TestTransportAndServerSharedBodyRace_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9121,7 +9121,7 @@ func TestTransportAndServerSharedBodyRace_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportAutomaticHTTP2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9132,7 +9132,7 @@ func TestTransportAutomaticHTTP2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportAutomaticHTTP2_DefaultTransport
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9145,7 +9145,7 @@ golang.org/issue/14391: also check DefaultTransport
 
 ```
 searchKey: http_test.TestTransportAutomaticHTTP2_Dial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9156,7 +9156,7 @@ func TestTransportAutomaticHTTP2_Dial(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportAutomaticHTTP2_DialContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9167,7 +9167,7 @@ func TestTransportAutomaticHTTP2_DialContext(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportAutomaticHTTP2_DialTLS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9178,7 +9178,7 @@ func TestTransportAutomaticHTTP2_DialTLS(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportAutomaticHTTP2_DialerAndTLSConfigSupportsHTTP2AndTLSConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9189,7 +9189,7 @@ func TestTransportAutomaticHTTP2_DialerAndTLSConfigSupportsHTTP2AndTLSConfig(t *
 
 ```
 searchKey: http_test.TestTransportAutomaticHTTP2_ExpectContinueTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9200,7 +9200,7 @@ func TestTransportAutomaticHTTP2_ExpectContinueTimeout(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportAutomaticHTTP2_TLSConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9211,7 +9211,7 @@ func TestTransportAutomaticHTTP2_TLSConfig(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportAutomaticHTTP2_TLSNextProto
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9222,7 +9222,7 @@ func TestTransportAutomaticHTTP2_TLSNextProto(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportBodyReadError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9235,7 +9235,7 @@ Issue 18239: make sure the Transport doesn't retry requests with bodies if Reque
 
 ```
 searchKey: http_test.TestTransportCONNECTBidi
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9246,7 +9246,7 @@ func TestTransportCONNECTBidi(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportCancelBeforeResponseHeaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9259,7 +9259,7 @@ Issue 11020. The returned error message should be errRequestCanceled
 
 ```
 searchKey: http_test.TestTransportCancelRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9270,7 +9270,7 @@ func TestTransportCancelRequest(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportCancelRequestInDial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9281,7 +9281,7 @@ func TestTransportCancelRequestInDial(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportCancelRequestInDo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9292,7 +9292,7 @@ func TestTransportCancelRequestInDo(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportCancelRequestWithBodyInDo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9303,7 +9303,7 @@ func TestTransportCancelRequestWithBodyInDo(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportCheckContextDoneEarly
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9316,7 +9316,7 @@ Issue 25852: Transport should check whether Context is done early.
 
 ```
 searchKey: http_test.TestTransportClone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9327,7 +9327,7 @@ func TestTransportClone(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportCloseIdleConnsThenReturn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9340,7 +9340,7 @@ tests that putting an idle conn after a call to CloseIdleConns does return it
 
 ```
 searchKey: http_test.TestTransportCloseResponseBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9353,7 +9353,7 @@ golang.org/issue/3672 -- Client can't close HTTP stream Calling Close on a Respo
 
 ```
 searchKey: http_test.TestTransportClosesBodyOnError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9366,7 +9366,7 @@ Issue 6981
 
 ```
 searchKey: http_test.TestTransportClosesBodyOnInvalidRequests
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9379,7 +9379,7 @@ Issue 35015: ensure that Transport closes the body on any error with an invalid 
 
 ```
 searchKey: http_test.TestTransportClosesRequestBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9392,7 +9392,7 @@ Verify the status quo: that the Client.Post function coerces its body into a Rea
 
 ```
 searchKey: http_test.TestTransportConcurrency
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9403,7 +9403,7 @@ func TestTransportConcurrency(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportConnectionCloseOnRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9414,7 +9414,7 @@ func TestTransportConnectionCloseOnRequest(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportConnectionCloseOnRequestDisableKeepAlive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9427,7 +9427,7 @@ if the Transport's DisableKeepAlives is set, all requests should send Connection
 
 ```
 searchKey: http_test.TestTransportConnectionCloseOnResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9438,7 +9438,7 @@ func TestTransportConnectionCloseOnResponse(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportContentEncodingCaseInsensitive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9451,7 +9451,7 @@ Test for issue 19248: Content-Encoding's value is case insensitive.
 
 ```
 searchKey: http_test.TestTransportDecrementConnWhenIdleConnRemoved
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9464,7 +9464,7 @@ Issue 34941 When the client has too many concurrent requests on a single connect
 
 ```
 searchKey: http_test.TestTransportDialCancelRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9475,7 +9475,7 @@ func TestTransportDialCancelRace(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportDialContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9486,7 +9486,7 @@ func TestTransportDialContext(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportDialPreservesNetOpProxyError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9499,7 +9499,7 @@ Issue 16997: test transport dial preserves typed errors
 
 ```
 searchKey: http_test.TestTransportDialTLS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9510,7 +9510,7 @@ func TestTransportDialTLS(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportDialTLSContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9521,7 +9521,7 @@ func TestTransportDialTLSContext(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportDiscardsUnneededConns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9534,7 +9534,7 @@ Issue 13957
 
 ```
 searchKey: http_test.TestTransportEmptyMethod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9547,7 +9547,7 @@ Issue 13311
 
 ```
 searchKey: http_test.TestTransportEventTrace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9558,7 +9558,7 @@ func TestTransportEventTrace(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportEventTraceRealDNS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9569,7 +9569,7 @@ func TestTransportEventTraceRealDNS(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportEventTraceTLSVerify
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9580,7 +9580,7 @@ func TestTransportEventTraceTLSVerify(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportEventTrace_NoHooks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9593,7 +9593,7 @@ test a non-nil httptrace.ClientTrace but with all hooks set to zero.
 
 ```
 searchKey: http_test.TestTransportEventTrace_NoHooks_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9604,7 +9604,7 @@ func TestTransportEventTrace_NoHooks_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportEventTrace_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9615,7 +9615,7 @@ func TestTransportEventTrace_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportExpect100Continue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9628,7 +9628,7 @@ If a request has Expect:100-continue header, the request blocks sending body unt
 
 ```
 searchKey: http_test.TestTransportFlushesBodyChunks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9641,7 +9641,7 @@ Issue 6574
 
 ```
 searchKey: http_test.TestTransportFlushesRequestHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9654,7 +9654,7 @@ Issue 22088: flush Transport request headers if we're not sure the body won't bl
 
 ```
 searchKey: http_test.TestTransportGCRequest_Body_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9667,7 +9667,7 @@ tests that Transport doesn't retain a pointer to the provided request.
 
 ```
 searchKey: http_test.TestTransportGCRequest_Body_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9678,7 +9678,7 @@ func TestTransportGCRequest_Body_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportGCRequest_NoBody_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9689,7 +9689,7 @@ func TestTransportGCRequest_NoBody_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportGCRequest_NoBody_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9700,7 +9700,7 @@ func TestTransportGCRequest_NoBody_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportGzip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9711,7 +9711,7 @@ func TestTransportGzip(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportGzipRecursive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9724,7 +9724,7 @@ TestTransportGzipRecursive sends a gzip quine and checks that the client gets th
 
 ```
 searchKey: http_test.TestTransportGzipShort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9737,7 +9737,7 @@ golang.org/issue/7750: request fails when server replies with a short gzip body
 
 ```
 searchKey: http_test.TestTransportHeadChunkedResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9750,7 +9750,7 @@ TestTransportHeadChunkedResponse verifies that we ignore chunked transfer-encodi
 
 ```
 searchKey: http_test.TestTransportHeadResponses
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9763,7 +9763,7 @@ TestTransportHeadResponses verifies that we deal with Content-Lengths with no bo
 
 ```
 searchKey: http_test.TestTransportIDNA_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9776,7 +9776,7 @@ Issue 13835: international domain names should work
 
 ```
 searchKey: http_test.TestTransportIDNA_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9787,7 +9787,7 @@ func TestTransportIDNA_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportIdleCacheKeys
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9798,7 +9798,7 @@ func TestTransportIdleCacheKeys(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportIdleConnCrash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9811,7 +9811,7 @@ This used to crash; [https://golang.org/issue/3266](https://golang.org/issue/326
 
 ```
 searchKey: http_test.TestTransportIdleConnTimeout_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9822,7 +9822,7 @@ func TestTransportIdleConnTimeout_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportIdleConnTimeout_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9833,7 +9833,7 @@ func TestTransportIdleConnTimeout_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportIgnore1xxResponses
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9846,7 +9846,7 @@ Issue 17739: the HTTP client must ignore any unknown 1xx informational responses
 
 ```
 searchKey: http_test.TestTransportIgnores408
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9857,7 +9857,7 @@ func TestTransportIgnores408(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportIssue10457
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9870,7 +9870,7 @@ Tests that we don't leak Transport persistConn.readLoop goroutines when a server
 
 ```
 searchKey: http_test.TestTransportKeepAlives
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9883,7 +9883,7 @@ Two subsequent requests and verify their response is the same. The response from
 
 ```
 searchKey: http_test.TestTransportLimits1xxResponses
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9894,7 +9894,7 @@ func TestTransportLimits1xxResponses(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportMaxConnsPerHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9905,7 +9905,7 @@ func TestTransportMaxConnsPerHost(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportMaxConnsPerHostIncludeDialInProgress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9916,7 +9916,7 @@ func TestTransportMaxConnsPerHostIncludeDialInProgress(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportMaxIdleConns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9927,7 +9927,7 @@ func TestTransportMaxIdleConns(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportMaxPerHostIdleConns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9938,7 +9938,7 @@ func TestTransportMaxPerHostIdleConns(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportNoHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9949,7 +9949,7 @@ func TestTransportNoHost(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportNoReuseAfterEarlyResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9962,7 +9962,7 @@ Verifies that the Transport doesn't reuse a connection in the case where the ser
 
 ```
 searchKey: http_test.TestTransportPersistConnContextLeakMaxConnsPerHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9973,7 +9973,7 @@ func TestTransportPersistConnContextLeakMaxConnsPerHost(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportPersistConnLeak
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9986,7 +9986,7 @@ tests that persistent goroutine connections shut down when no longer desired.
 
 ```
 searchKey: http_test.TestTransportPersistConnLeakNeverIdle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9997,7 +9997,7 @@ func TestTransportPersistConnLeakNeverIdle(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportPersistConnLeakShortBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10010,7 +10010,7 @@ golang.org/issue/4531: Transport leaks goroutines when request.ContentLength is 
 
 ```
 searchKey: http_test.TestTransportPrefersResponseOverWriteError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10023,7 +10023,7 @@ Issue 11745.
 
 ```
 searchKey: http_test.TestTransportProxy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10034,7 +10034,7 @@ func TestTransportProxy(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportProxyConnectHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10047,7 +10047,7 @@ Issue 13290: send User-Agent in proxy CONNECT
 
 ```
 searchKey: http_test.TestTransportProxyDialDoesNotMutateProxyConnectHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10062,7 +10062,7 @@ Issue 36431: calls to RoundTrip should not mutate t.ProxyConnectHeader.
 
 ```
 searchKey: http_test.TestTransportProxyGetConnectHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10073,7 +10073,7 @@ func TestTransportProxyGetConnectHeader(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportProxyHTTPSConnectLeak
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10086,7 +10086,7 @@ Issue 28012: verify that the Transport closes its TCP connection to http proxies
 
 ```
 searchKey: http_test.TestTransportRangeAndGzip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10099,7 +10099,7 @@ This tests that a client requesting a content range won't also implicitly ask fo
 
 ```
 searchKey: http_test.TestTransportReadToEndReusesConn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10112,7 +10112,7 @@ Tests that the HTTP transport re-uses connections when a client reads to the end
 
 ```
 searchKey: http_test.TestTransportReading100Continue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10125,7 +10125,7 @@ Issue 2184
 
 ```
 searchKey: http_test.TestTransportRejectsAlphaPort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10138,7 +10138,7 @@ Issue 14353: port can only contain digits.
 
 ```
 searchKey: http_test.TestTransportRejectsInvalidHeaders_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10149,7 +10149,7 @@ func TestTransportRejectsInvalidHeaders_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportRejectsInvalidHeaders_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10160,7 +10160,7 @@ func TestTransportRejectsInvalidHeaders_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportRejectsSignInContentLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10173,7 +10173,7 @@ Issue 39017. Ensure that HTTP/1 transports reject Content-Length headers that co
 
 ```
 searchKey: http_test.TestTransportRemovesDeadIdleConnections
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10184,7 +10184,7 @@ func TestTransportRemovesDeadIdleConnections(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportRemovesH2ConnsAfterIdle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10195,7 +10195,7 @@ func TestTransportRemovesH2ConnsAfterIdle(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportRequestReplayable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10206,7 +10206,7 @@ func TestTransportRequestReplayable(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportRequestWriteRoundTrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10217,7 +10217,7 @@ func TestTransportRequestWriteRoundTrip(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportRespectRequestWantsClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10230,7 +10230,7 @@ Test that Transport only sends one "Connection: close", regardless of how "close
 
 ```
 searchKey: http_test.TestTransportResponseBodyWritableOnProtocolSwitch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10241,7 +10241,7 @@ func TestTransportResponseBodyWritableOnProtocolSwitch(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportResponseCancelRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10254,7 +10254,7 @@ Test for issue 10474
 
 ```
 searchKey: http_test.TestTransportResponseHeaderLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10265,7 +10265,7 @@ func TestTransportResponseHeaderLength(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportResponseHeaderTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10276,7 +10276,7 @@ func TestTransportResponseHeaderTimeout(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportReturnsPeekError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10289,7 +10289,7 @@ Issue 16465: Transport.RoundTrip should return the raw net.Conn.Read error from 
 
 ```
 searchKey: http_test.TestTransportReuseConnEmptyResponseBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10302,7 +10302,7 @@ Issue 13633: there was a race where we returned bodyless responses to callers be
 
 ```
 searchKey: http_test.TestTransportReuseConnection_Gzip_Chunked
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10313,7 +10313,7 @@ func TestTransportReuseConnection_Gzip_Chunked(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportReuseConnection_Gzip_ContentLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10324,7 +10324,7 @@ func TestTransportReuseConnection_Gzip_ContentLength(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportServerClosingUnexpectedly
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10337,7 +10337,7 @@ Test that the Transport notices when a server hangs up on its unexpectedly (a ke
 
 ```
 searchKey: http_test.TestTransportSocketLateBinding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10348,7 +10348,7 @@ func TestTransportSocketLateBinding(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportTLSHandshakeTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10359,7 +10359,7 @@ func TestTransportTLSHandshakeTimeout(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportTraceGotConnH2IdleConns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10372,7 +10372,7 @@ Test for issue 34282 Ensure that getConn doesn't call the GotConn trace hook on 
 
 ```
 searchKey: http_test.TestTransportTreat101Terminal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10385,7 +10385,7 @@ Issue 26161: the HTTP client must treat 101 responses as the final response.
 
 ```
 searchKey: http_test.TestTransportUserAgent_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10396,7 +10396,7 @@ func TestTransportUserAgent_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportUserAgent_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10407,7 +10407,7 @@ func TestTransportUserAgent_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestTransportUsesTLSConfigServerName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10424,7 +10424,7 @@ The httptest.Server has a cert with "example.com" as its name.
 
 ```
 searchKey: http_test.TestUnsupportedTransferEncodingsReturn501
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10437,7 +10437,7 @@ Issue 30710: ensure that as per the spec, a server responds with 501 Not Impleme
 
 ```
 searchKey: http_test.TestWithContextDeepCopiesURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10448,7 +10448,7 @@ func TestWithContextDeepCopiesURL(t *testing.T)
 
 ```
 searchKey: http_test.TestWriteAfterHijack
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10459,7 +10459,7 @@ func TestWriteAfterHijack(t *testing.T)
 
 ```
 searchKey: http_test.TestWriteHeader0_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10470,7 +10470,7 @@ func TestWriteHeader0_h1(t *testing.T)
 
 ```
 searchKey: http_test.TestWriteHeader0_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10481,7 +10481,7 @@ func TestWriteHeader0_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestWriteHeaderNoCodeCheck_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10494,7 +10494,7 @@ Issue 23010: don't be super strict checking WriteHeader's code if it's not even 
 
 ```
 searchKey: http_test.TestWriteHeaderNoCodeCheck_h1hijack
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10505,7 +10505,7 @@ func TestWriteHeaderNoCodeCheck_h1hijack(t *testing.T)
 
 ```
 searchKey: http_test.TestWriteHeaderNoCodeCheck_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10516,7 +10516,7 @@ func TestWriteHeaderNoCodeCheck_h2(t *testing.T)
 
 ```
 searchKey: http_test.TestZeroLengthPostAndResponse_h1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10529,7 +10529,7 @@ TestZeroLengthPostAndResponse exercises an optimization done by the Transport: w
 
 ```
 searchKey: http_test.TestZeroLengthPostAndResponse_h2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10540,7 +10540,7 @@ func TestZeroLengthPostAndResponse_h2(t *testing.T)
 
 ```
 searchKey: http_test.Test_scanETag
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10551,7 +10551,7 @@ func Test_scanETag(t *testing.T)
 
 ```
 searchKey: http_test.afterTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10562,7 +10562,7 @@ func afterTest(t testing.TB)
 
 ```
 searchKey: http_test.benchmarkClientServerParallel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10573,7 +10573,7 @@ func benchmarkClientServerParallel(b *testing.B, parallelism int, useTLS bool)
 
 ```
 searchKey: http_test.benchmarkFileAndServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10584,7 +10584,7 @@ func benchmarkFileAndServer(b *testing.B, n int64)
 
 ```
 searchKey: http_test.benchmarkHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10595,7 +10595,7 @@ func benchmarkHandler(b *testing.B, h Handler)
 
 ```
 searchKey: http_test.benchmarkReadRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10606,7 +10606,7 @@ func benchmarkReadRequest(b *testing.B, request string)
 
 ```
 searchKey: http_test.benchmarkServeMux
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10617,7 +10617,7 @@ func benchmarkServeMux(b *testing.B, runHandler bool)
 
 ```
 searchKey: http_test.checkQueryStringHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10630,7 +10630,7 @@ checkQueryStringHandler checks if r.URL.RawQuery has the same value as the URL e
 
 ```
 searchKey: http_test.containsDotFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10643,7 +10643,7 @@ containsDotFile reports whether name contains a path element starting with a per
 
 ```
 searchKey: http_test.doFetchCheckPanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10654,7 +10654,7 @@ func doFetchCheckPanic(tr *Transport, req *Request) (res *Response, err error, p
 
 ```
 searchKey: http_test.fetchWireResponse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10667,7 +10667,7 @@ fetchWireResponse is a helper for dialing to host, sending http1ReqBody as the p
 
 ```
 searchKey: http_test.get
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10678,7 +10678,7 @@ func get(t *testing.T, c *Client, url string) string
 
 ```
 searchKey: http_test.getBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10689,7 +10689,7 @@ func getBody(t *testing.T, testName string, req Request, client *Client) (*Respo
 
 ```
 searchKey: http_test.getNoBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10715,7 +10715,7 @@ Verify the other tests didn't leave any goroutines running.
 
 ```
 searchKey: http_test.h12requestContentLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10726,7 +10726,7 @@ func h12requestContentLength(t *testing.T, bodyfn func() io.Reader, wantLen int6
 
 ```
 searchKey: http_test.handleTLSProtocol09
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10750,7 +10750,7 @@ func interestingGoroutines() (gs []string)
 
 ```
 searchKey: http_test.matchReturnedCookies
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10761,7 +10761,7 @@ func matchReturnedCookies(t *testing.T, expected, given []*Cookie)
 
 ```
 searchKey: http_test.mostlyCopy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10772,7 +10772,7 @@ func mostlyCopy(r *Response) *Response
 
 ```
 searchKey: http_test.mustRemoveAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10783,7 +10783,7 @@ func mustRemoveAll(dir string)
 
 ```
 searchKey: http_test.mustStat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10794,7 +10794,7 @@ func mustStat(t *testing.T, fileName string) fs.FileInfo
 
 ```
 searchKey: http_test.newLocalListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10816,7 +10816,7 @@ func newPeopleHandler() http.Handler
 
 ```
 searchKey: http_test.newTestMultipartRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10827,7 +10827,7 @@ func newTestMultipartRequest(t *testing.T) *Request
 
 ```
 searchKey: http_test.optWithServerLog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10838,7 +10838,7 @@ func optWithServerLog(lg *log.Logger) func(*httptest.Server)
 
 ```
 searchKey: http_test.pedanticReadAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10851,7 +10851,7 @@ pedanticReadAll works like io.ReadAll but additionally verifies that r obeys the
 
 ```
 searchKey: http_test.removeCommonLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10862,7 +10862,7 @@ func removeCommonLines(a, b string) (asuffix, bsuffix string, commonLines int)
 
 ```
 searchKey: http_test.reqBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10875,7 +10875,7 @@ reqBytes treats req as a request (with \n delimiters) and returns it with \r\n d
 
 ```
 searchKey: http_test.runFileAndServerBenchmarks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10886,7 +10886,7 @@ func runFileAndServerBenchmarks(b *testing.B, tlsOption bool, f *os.File, n int6
 
 ```
 searchKey: http_test.runTimeSensitiveTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10910,7 +10910,7 @@ func runningBenchmarks() bool
 
 ```
 searchKey: http_test.send204
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10921,7 +10921,7 @@ func send204(w ResponseWriter, r *Request)
 
 ```
 searchKey: http_test.send304
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10932,7 +10932,7 @@ func send304(w ResponseWriter, r *Request)
 
 ```
 searchKey: http_test.serve
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10945,7 +10945,7 @@ serve returns a handler that sends a response with the given code.
 
 ```
 searchKey: http_test.setParallel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10958,7 +10958,7 @@ setParallel marks t as a parallel test if we're in short mode (all.bash), but as
 
 ```
 searchKey: http_test.skipIfDNSHijacked
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10969,7 +10969,7 @@ func skipIfDNSHijacked(t *testing.T)
 
 ```
 searchKey: http_test.test304Responses
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10980,7 +10980,7 @@ func test304Responses(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testAutomaticHTTP2_ListenAndServe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10991,7 +10991,7 @@ func testAutomaticHTTP2_ListenAndServe(t *testing.T, tlsConf *tls.Config)
 
 ```
 searchKey: http_test.testAutomaticHTTP2_Serve
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11002,7 +11002,7 @@ func testAutomaticHTTP2_Serve(t *testing.T, tlsConf *tls.Config, wantH2 bool)
 
 ```
 searchKey: http_test.testCancelRequestMidBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11013,7 +11013,7 @@ func testCancelRequestMidBody(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testCancelRequestWithChannelBeforeDo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11024,7 +11024,7 @@ func testCancelRequestWithChannelBeforeDo(t *testing.T, withCtx bool)
 
 ```
 searchKey: http_test.testCaseSensitiveMethod
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11035,7 +11035,7 @@ func testCaseSensitiveMethod(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testChunkedResponseHeaders
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11046,7 +11046,7 @@ func testChunkedResponseHeaders(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testClientDoCanceledVsTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11059,7 +11059,7 @@ Issue 33545: lock-in the behavior promised by Client.Do's docs about request can
 
 ```
 searchKey: http_test.testClientHead
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11070,7 +11070,7 @@ func testClientHead(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testClientHeadContentLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11081,7 +11081,7 @@ func testClientHeadContentLength(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testClientRedirectEatsBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11092,7 +11092,7 @@ func testClientRedirectEatsBody(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testClientTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11103,7 +11103,7 @@ func testClientTimeout(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testClientTimeout_Headers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11116,7 +11116,7 @@ Client.Timeout firing before getting to the body
 
 ```
 searchKey: http_test.testCloseIdleConnections
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11127,7 +11127,7 @@ func testCloseIdleConnections(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testConcurrentReadWriteReqBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11138,7 +11138,7 @@ func testConcurrentReadWriteReqBody(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testConnectRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11149,7 +11149,7 @@ func testConnectRequest(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testContentEncodingNoSniffing
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11162,7 +11162,7 @@ Issue 31753: don't sniff when Content-Encoding is set
 
 ```
 searchKey: http_test.testContentTypeWithVariousSources
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11173,7 +11173,7 @@ func testContentTypeWithVariousSources(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testH12_noBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11184,7 +11184,7 @@ func testH12_noBody(t *testing.T, status int)
 
 ```
 searchKey: http_test.testHTTP2NoWriteDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11195,7 +11195,7 @@ func testHTTP2NoWriteDeadline(timeout time.Duration) error
 
 ```
 searchKey: http_test.testHTTP2WriteDeadlineEnforcedPerStream
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11206,7 +11206,7 @@ func testHTTP2WriteDeadlineEnforcedPerStream(timeout time.Duration) error
 
 ```
 searchKey: http_test.testHandlerBodyClose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11217,7 +11217,7 @@ func testHandlerBodyClose(t *testing.T, i int, tt handlerBodyCloseTest)
 
 ```
 searchKey: http_test.testHandlerPanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11228,7 +11228,7 @@ func testHandlerPanic(t *testing.T, withHijack, h2 bool, wrapper func(Handler) H
 
 ```
 searchKey: http_test.testHandlerSetsBodyNil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11239,7 +11239,7 @@ func testHandlerSetsBodyNil(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testHeadResponses
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11250,7 +11250,7 @@ func testHeadResponses(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testInterruptWithPanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11261,7 +11261,7 @@ func testInterruptWithPanic(t *testing.T, h2 bool, panicValue interface{})
 
 ```
 searchKey: http_test.testMissingFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11272,7 +11272,7 @@ func testMissingFile(t *testing.T, req *Request)
 
 ```
 searchKey: http_test.testMultipartFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11283,7 +11283,7 @@ func testMultipartFile(t *testing.T, req *Request, key, expectFilename, expectCo
 
 ```
 searchKey: http_test.testNoPanicWithBasicAuth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11296,7 +11296,7 @@ Issue 34878: verify we don't panic when including basic auth (Go 1.13 regression
 
 ```
 searchKey: http_test.testNoSniffExpectRequestBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11307,7 +11307,7 @@ func testNoSniffExpectRequestBody(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testProxyForRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11318,7 +11318,7 @@ func testProxyForRequest(t *testing.T, tt proxyFromEnvTest, proxyForRequest func
 
 ```
 searchKey: http_test.testQuerySemicolon
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11329,7 +11329,7 @@ func testQuerySemicolon(t *testing.T, query string, wantX string, allowSemicolon
 
 ```
 searchKey: http_test.testRedirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11340,7 +11340,7 @@ func testRedirect(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testRedirectsByMethod
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11351,7 +11351,7 @@ func testRedirectsByMethod(t *testing.T, method string, table []redirectTest, wa
 
 ```
 searchKey: http_test.testRequestBodyLimit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11362,7 +11362,7 @@ func testRequestBodyLimit(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testRequestLimit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11373,7 +11373,7 @@ func testRequestLimit(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testResponseBodyReadAfterClose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11384,7 +11384,7 @@ func testResponseBodyReadAfterClose(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServeFileRejectsInvalidSuffixLengths
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11395,7 +11395,7 @@ func testServeFileRejectsInvalidSuffixLengths(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServeFileWithContentEncoding
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11406,7 +11406,7 @@ func testServeFileWithContentEncoding(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServerContentType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11417,7 +11417,7 @@ func testServerContentType(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServerContext_LocalAddrContextKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11428,7 +11428,7 @@ func testServerContext_LocalAddrContextKey(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServerContext_ServerContextKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11439,7 +11439,7 @@ func testServerContext_ServerContextKey(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServerEmptyBodyRace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11450,7 +11450,7 @@ func testServerEmptyBodyRace(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServerIssue5953
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11461,7 +11461,7 @@ func testServerIssue5953(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServerKeepAlivesEnabled
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11472,7 +11472,7 @@ func testServerKeepAlivesEnabled(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServerNoHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11483,7 +11483,7 @@ func testServerNoHeader(t *testing.T, h2 bool, header string)
 
 ```
 searchKey: http_test.testServerReaderFromOrder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11494,7 +11494,7 @@ func testServerReaderFromOrder(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServerRequestContextCancel_ServeHTTPDone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11505,7 +11505,7 @@ func testServerRequestContextCancel_ServeHTTPDone(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServerShutdown
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11516,7 +11516,7 @@ func testServerShutdown(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testServerTimeouts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11527,7 +11527,7 @@ func testServerTimeouts(timeout time.Duration) error
 
 ```
 searchKey: http_test.testServerUndeclaredTrailers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11538,7 +11538,7 @@ func testServerUndeclaredTrailers(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testSetsRemoteAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11549,7 +11549,7 @@ func testSetsRemoteAddr(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testSniffWriteSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11560,7 +11560,7 @@ func testSniffWriteSize(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testStarRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11571,7 +11571,7 @@ func testStarRequest(t *testing.T, method string, h2 bool)
 
 ```
 searchKey: http_test.testStreamingGet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11582,7 +11582,7 @@ func testStreamingGet(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testTCPConnectionCloses
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11593,7 +11593,7 @@ func testTCPConnectionCloses(t *testing.T, req string, h Handler)
 
 ```
 searchKey: http_test.testTCPConnectionStaysOpen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11604,7 +11604,7 @@ func testTCPConnectionStaysOpen(t *testing.T, req string, handler Handler)
 
 ```
 searchKey: http_test.testTimeoutHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11615,7 +11615,7 @@ func testTimeoutHandler(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testTrailersClientToServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11626,7 +11626,7 @@ func testTrailersClientToServer(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testTrailersServerToClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11637,7 +11637,7 @@ func testTrailersServerToClient(t *testing.T, h2, flush bool)
 
 ```
 searchKey: http_test.testTransportAndServerSharedBodyRace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11648,7 +11648,7 @@ func testTransportAndServerSharedBodyRace(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testTransportAutoHTTP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11659,7 +11659,7 @@ func testTransportAutoHTTP(t *testing.T, tr *Transport, wantH2 bool)
 
 ```
 searchKey: http_test.testTransportCancelRequestInDo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11670,7 +11670,7 @@ func testTransportCancelRequestInDo(t *testing.T, body io.Reader)
 
 ```
 searchKey: http_test.testTransportEventTrace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11681,7 +11681,7 @@ func testTransportEventTrace(t *testing.T, h2 bool, noHooks bool)
 
 ```
 searchKey: http_test.testTransportGCRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11692,7 +11692,7 @@ func testTransportGCRequest(t *testing.T, h2, body bool)
 
 ```
 searchKey: http_test.testTransportIDNA
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11703,7 +11703,7 @@ func testTransportIDNA(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testTransportIdleConnTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11714,7 +11714,7 @@ func testTransportIdleConnTimeout(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testTransportRace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11725,7 +11725,7 @@ func testTransportRace(req *Request)
 
 ```
 searchKey: http_test.testTransportRejectsInvalidHeaders
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11736,7 +11736,7 @@ func testTransportRejectsInvalidHeaders(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testTransportReuseConnection_Gzip
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11749,7 +11749,7 @@ Make sure we re-use underlying TCP connection for gzipped responses too.
 
 ```
 searchKey: http_test.testTransportUserAgent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11760,7 +11760,7 @@ func testTransportUserAgent(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testWriteHeader0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11771,7 +11771,7 @@ func testWriteHeader0(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.testWriteHeaderAfterWrite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11782,7 +11782,7 @@ func testWriteHeaderAfterWrite(t *testing.T, h2, hijack bool)
 
 ```
 searchKey: http_test.testZeroLengthPostAndResponse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11793,7 +11793,7 @@ func testZeroLengthPostAndResponse(t *testing.T, h2 bool)
 
 ```
 searchKey: http_test.tryTimeouts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11806,7 +11806,7 @@ tryTimeouts runs testFunc with increasing timeouts. Test passes on first success
 
 ```
 searchKey: http_test.validateTestMultipartContents
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11817,7 +11817,7 @@ func validateTestMultipartContents(t *testing.T, req *Request, allMem bool)
 
 ```
 searchKey: http_test.waitCondition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11830,7 +11830,7 @@ waitCondition reports whether fn eventually returned true, checking immediately 
 
 ```
 searchKey: http_test.waitErrCondition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11843,7 +11843,7 @@ waitErrCondition is like waitCondition but with errors instead of bools.
 
 ```
 searchKey: http_test.waitNumGoroutine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11856,7 +11856,7 @@ Wait until number of goroutines is no greater than nmax, or time out.
 
 ```
 searchKey: http_test.wantBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

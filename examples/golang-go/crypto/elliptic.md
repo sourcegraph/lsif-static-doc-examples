@@ -179,10 +179,6 @@ Package elliptic implements several standard elliptic curves over prime fields.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="bottom12Bits" href="#bottom12Bits">const bottom12Bits</a>
 
 ```
@@ -272,10 +268,6 @@ const two63p35 = 1<<63 + 1<<35
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="initonce" href="#initonce">var initonce</a>
 
@@ -478,10 +470,6 @@ weirdLimbs can be combined to generate a range of edge-case field elements.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Curve" href="#Curve">type Curve interface</a>
 
 ```
@@ -581,7 +569,7 @@ The cryptographic operations are implemented using constant-time algorithms.
 
 ```
 searchKey: elliptic.matchesSpecificCurve
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -612,7 +600,7 @@ CurveParams contains the parameters of an elliptic curve and also provides a gen
 
 ```
 searchKey: elliptic.genericParamsForCurve
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -658,7 +646,7 @@ func (curve *CurveParams) IsOnCurve(x, y *big.Int) bool
 
 ```
 searchKey: elliptic.CurveParams.Params
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -804,7 +792,7 @@ func (curve p224Curve) IsOnCurve(bigX, bigY *big.Int) bool
 
 ```
 searchKey: elliptic.p224Curve.Params
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -919,7 +907,7 @@ func (curve p256Curve) Inverse(k *big.Int) *big.Int
 
 ```
 searchKey: elliptic.p256Curve.Params
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -989,7 +977,7 @@ func (p *p256Point) p256BaseMult(scalar []uint64)
 
 ```
 searchKey: elliptic.p256Point.p256PointToAffine
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1068,7 +1056,7 @@ func (curve p521Curve) IsOnCurve(x, y *big.Int) bool
 
 ```
 searchKey: elliptic.p521Curve.Params
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1203,15 +1191,11 @@ func (s synthCombinedMult) CombinedMult(bigX, bigY *big.Int, baseScalar, scalar 
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkScalarBaseMult" href="#BenchmarkScalarBaseMult">func BenchmarkScalarBaseMult(b *testing.B)</a>
 
 ```
 searchKey: elliptic.BenchmarkScalarBaseMult
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1222,7 +1206,7 @@ func BenchmarkScalarBaseMult(b *testing.B)
 
 ```
 searchKey: elliptic.BenchmarkScalarMult
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1233,7 +1217,7 @@ func BenchmarkScalarMult(b *testing.B)
 
 ```
 searchKey: elliptic.GenerateKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1246,7 +1230,7 @@ GenerateKey returns a public/private key pair. The private key is generated usin
 
 ```
 searchKey: elliptic.Marshal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1259,7 +1243,7 @@ Marshal converts a point on the curve into the uncompressed form specified in se
 
 ```
 searchKey: elliptic.MarshalCompressed
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1272,7 +1256,7 @@ MarshalCompressed converts a point on the curve into the compressed form specifi
 
 ```
 searchKey: elliptic.TestFuzz
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1283,7 +1267,7 @@ func TestFuzz(t *testing.T)
 
 ```
 searchKey: elliptic.TestInfinity
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1294,7 +1278,7 @@ func TestInfinity(t *testing.T)
 
 ```
 searchKey: elliptic.TestMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1305,7 +1289,7 @@ func TestMarshal(t *testing.T)
 
 ```
 searchKey: elliptic.TestMarshalCompressed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1316,7 +1300,7 @@ func TestMarshalCompressed(t *testing.T)
 
 ```
 searchKey: elliptic.TestOffCurve
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1327,7 +1311,7 @@ func TestOffCurve(t *testing.T)
 
 ```
 searchKey: elliptic.TestOnCurve
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1338,7 +1322,7 @@ func TestOnCurve(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224Add
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1349,7 +1333,7 @@ func TestP224Add(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224BaseMult
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1360,7 +1344,7 @@ func TestP224BaseMult(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224Contract
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1371,7 +1355,7 @@ func TestP224Contract(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224GenericBaseMult
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1382,7 +1366,7 @@ func TestP224GenericBaseMult(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224Invert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1393,7 +1377,7 @@ func TestP224Invert(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224IsZero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1404,7 +1388,7 @@ func TestP224IsZero(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224Mul
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1415,7 +1399,7 @@ func TestP224Mul(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224Overflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1426,7 +1410,7 @@ func TestP224Overflow(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224Reduce
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1437,7 +1421,7 @@ func TestP224Reduce(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224Square
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1448,7 +1432,7 @@ func TestP224Square(t *testing.T)
 
 ```
 searchKey: elliptic.TestP224ToFromBig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1459,7 +1443,7 @@ func TestP224ToFromBig(t *testing.T)
 
 ```
 searchKey: elliptic.TestP256BaseMult
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1470,7 +1454,7 @@ func TestP256BaseMult(t *testing.T)
 
 ```
 searchKey: elliptic.TestP256CombinedMult
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1481,7 +1465,7 @@ func TestP256CombinedMult(t *testing.T)
 
 ```
 searchKey: elliptic.TestP256Mult
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1492,7 +1476,7 @@ func TestP256Mult(t *testing.T)
 
 ```
 searchKey: elliptic.TestP256PrecomputedTable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1503,7 +1487,7 @@ func TestP256PrecomputedTable(t *testing.T)
 
 ```
 searchKey: elliptic.TestUnmarshalToLargeCoordinates
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1514,7 +1498,7 @@ func TestUnmarshalToLargeCoordinates(t *testing.T)
 
 ```
 searchKey: elliptic.Unmarshal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1527,7 +1511,7 @@ Unmarshal converts a point, serialized by Marshal, into an x, y pair. It is an e
 
 ```
 searchKey: elliptic.UnmarshalCompressed
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1540,7 +1524,7 @@ UnmarshalCompressed converts a point, serialized by MarshalCompressed, into an x
 
 ```
 searchKey: elliptic.benchmarkAllCurves
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1551,7 +1535,7 @@ func benchmarkAllCurves(t *testing.B, f func(*testing.B, Curve))
 
 ```
 searchKey: elliptic.bigIntToFiatP521
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1562,7 +1546,7 @@ func bigIntToFiatP521(x *big.Int) *fiat.P521Element
 
 ```
 searchKey: elliptic.boothW5
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1573,7 +1557,7 @@ func boothW5(in uint) (int, int)
 
 ```
 searchKey: elliptic.boothW6
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1584,7 +1568,7 @@ func boothW6(in uint) (int, int)
 
 ```
 searchKey: elliptic.fiatP521ToBigInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1595,7 +1579,7 @@ func fiatP521ToBigInt(x *fiat.P521Element) *big.Int
 
 ```
 searchKey: elliptic.fromBig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1608,7 +1592,7 @@ fromBig converts a *big.Int into a format used by this code.
 
 ```
 searchKey: elliptic.generateLimb
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1619,7 +1603,7 @@ func generateLimb(rand *rand.Rand) uint32
 
 ```
 searchKey: elliptic.get28BitsFromEnd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1687,7 +1671,7 @@ func initP521()
 
 ```
 searchKey: elliptic.isInBounds
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1698,7 +1682,7 @@ func isInBounds(x *p224FieldElement) bool
 
 ```
 searchKey: elliptic.maybeReduceModP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1709,7 +1693,7 @@ func maybeReduceModP(in *big.Int) *big.Int
 
 ```
 searchKey: elliptic.p224Add
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1724,7 +1708,7 @@ a[i] + b[i] < 2**32
 
 ```
 searchKey: elliptic.p224AddJacobian
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1737,7 +1721,7 @@ p224AddJacobian computes *out = a+b where a != b.
 
 ```
 searchKey: elliptic.p224AlternativeToBig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1748,7 +1732,7 @@ func p224AlternativeToBig(in *p224FieldElement) *big.Int
 
 ```
 searchKey: elliptic.p224Contract
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1763,7 +1747,7 @@ On entry, in[i] < 2**29 On exit, out[i] < 2**28 and out < p
 
 ```
 searchKey: elliptic.p224CopyConditional
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1776,7 +1760,7 @@ p224CopyConditional sets *out = *in iff the least-significant-bit of control is 
 
 ```
 searchKey: elliptic.p224DoubleJacobian
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1789,7 +1773,7 @@ p224DoubleJacobian computes *out = a+a.
 
 ```
 searchKey: elliptic.p224FromBig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1802,7 +1786,7 @@ p224FromBig sets *out = *in.
 
 ```
 searchKey: elliptic.p224Invert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1815,7 +1799,7 @@ p224Invert calculates *out = in**-1 by computing in**(2**224 - 2**96 - 1), i.e. 
 
 ```
 searchKey: elliptic.p224IsZero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1830,7 +1814,7 @@ a[i] < 2**29
 
 ```
 searchKey: elliptic.p224Mul
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1845,7 +1829,7 @@ a[i] < 2**29, b[i] < 2**30 (or vice versa) out[i] < 2**29
 
 ```
 searchKey: elliptic.p224Reduce
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1860,7 +1844,7 @@ On entry: a[i] < 2**31 + 2**30 On exit: a[i] < 2**29
 
 ```
 searchKey: elliptic.p224ReduceLarge
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1875,7 +1859,7 @@ in[i] < 2**62
 
 ```
 searchKey: elliptic.p224ScalarMult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1886,7 +1870,7 @@ func p224ScalarMult(outX, outY, outZ, inX, inY, inZ *p224FieldElement, scalar []
 
 ```
 searchKey: elliptic.p224Square
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1901,7 +1885,7 @@ a[i] < 2**29 out[i] < 2**29
 
 ```
 searchKey: elliptic.p224Sub
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1916,7 +1900,7 @@ a[i], b[i] < 2**30 out[i] < 2**32
 
 ```
 searchKey: elliptic.p224ToAffine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1929,7 +1913,7 @@ p224ToAffine converts from Jacobian to affine form.
 
 ```
 searchKey: elliptic.p224ToBig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1942,7 +1926,7 @@ p224ToBig returns in as a big.Int.
 
 ```
 searchKey: elliptic.p256BigToLittle
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1955,7 +1939,7 @@ Endianness swap
 
 ```
 searchKey: elliptic.p256FromMont
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1968,7 +1952,7 @@ Montgomery multiplication by 1
 
 ```
 searchKey: elliptic.p256GetScalar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1981,7 +1965,7 @@ p256GetScalar endian-swaps the big-endian scalar value from in and writes it to 
 
 ```
 searchKey: elliptic.p256Inverse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1994,7 +1978,7 @@ p256Inverse sets out to in^-1 mod p.
 
 ```
 searchKey: elliptic.p256LittleToBig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2005,7 +1989,7 @@ func p256LittleToBig(res []byte, in []uint64)
 
 ```
 searchKey: elliptic.p256MovCond
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2018,7 +2002,7 @@ if cond == 0 res <- b; else res <- a
 
 ```
 searchKey: elliptic.p256Mul
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2031,7 +2015,7 @@ Functions implemented in p256_asm_*64.s Montgomery multiplication modulo P256
 
 ```
 searchKey: elliptic.p256NegCond
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2044,7 +2028,7 @@ iff cond == 1  val <- -val
 
 ```
 searchKey: elliptic.p256OrdMul
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2057,7 +2041,7 @@ Montgomery multiplication modulo Ord(G)
 
 ```
 searchKey: elliptic.p256OrdSqr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2070,7 +2054,7 @@ Montgomery square modulo Ord(G), repeated n times
 
 ```
 searchKey: elliptic.p256PointAddAffineAsm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2083,7 +2067,7 @@ Point add with in2 being affine point If sign == 1 -> in2 = -in2 If sel == 0 -> 
 
 ```
 searchKey: elliptic.p256PointAddAsm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2096,7 +2080,7 @@ Point add. Returns one if the two input points were equal and zero otherwise. (N
 
 ```
 searchKey: elliptic.p256PointDoubleAsm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2109,7 +2093,7 @@ Point double
 
 ```
 searchKey: elliptic.p256Select
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2122,7 +2106,7 @@ Constant time table access
 
 ```
 searchKey: elliptic.p256SelectBase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2133,7 +2117,7 @@ func p256SelectBase(point, table []uint64, idx int)
 
 ```
 searchKey: elliptic.p256Sqr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2146,7 +2130,7 @@ Montgomery square modulo P256, repeated n times (n >= 1)
 
 ```
 searchKey: elliptic.scalarIsZero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2159,7 +2143,7 @@ scalarIsZero returns 1 if scalar represents the zero value, and zero otherwise.
 
 ```
 searchKey: elliptic.testAllCurves
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2170,7 +2154,7 @@ func testAllCurves(t *testing.T, f func(*testing.T, Curve))
 
 ```
 searchKey: elliptic.testInfinity
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2181,7 +2165,7 @@ func testInfinity(t *testing.T, curve Curve)
 
 ```
 searchKey: elliptic.testMarshalCompressed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2192,7 +2176,7 @@ func testMarshalCompressed(t *testing.T, curve Curve, x, y *big.Int, want []byte
 
 ```
 searchKey: elliptic.testUnmarshalToLargeCoordinates
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2203,7 +2187,7 @@ func testUnmarshalToLargeCoordinates(t *testing.T, curve Curve)
 
 ```
 searchKey: elliptic.uint64IsZero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2216,7 +2200,7 @@ uint64IsZero returns 1 if x is zero and zero otherwise.
 
 ```
 searchKey: elliptic.zForAffine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

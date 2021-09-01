@@ -28,10 +28,6 @@ RC4 is cryptographically broken and should not be used for secure applications.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="golden" href="#golden">var golden</a>
 
 ```
@@ -44,10 +40,6 @@ var golden = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Cipher" href="#Cipher">type Cipher struct</a>
 
@@ -69,7 +61,7 @@ A Cipher is an instance of RC4 using a particular key.
 
 ```
 searchKey: rc4.NewCipher
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -82,7 +74,7 @@ NewCipher creates and returns a new Cipher. The key argument should be the RC4 k
 
 ```
 searchKey: rc4.Cipher.Reset
-tags: [function deprecated]
+tags: [method deprecated]
 ```
 
 ```Go
@@ -121,7 +113,7 @@ type KeySizeError int
 
 ```
 searchKey: rc4.KeySizeError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -143,15 +135,11 @@ type rc4Test struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkRC4_128" href="#BenchmarkRC4_128">func BenchmarkRC4_128(b *testing.B)</a>
 
 ```
 searchKey: rc4.BenchmarkRC4_128
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -162,7 +150,7 @@ func BenchmarkRC4_128(b *testing.B)
 
 ```
 searchKey: rc4.BenchmarkRC4_1K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -173,7 +161,7 @@ func BenchmarkRC4_1K(b *testing.B)
 
 ```
 searchKey: rc4.BenchmarkRC4_8K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -184,7 +172,7 @@ func BenchmarkRC4_8K(b *testing.B)
 
 ```
 searchKey: rc4.TestBlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -195,7 +183,7 @@ func TestBlock(t *testing.T)
 
 ```
 searchKey: rc4.TestGolden
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -206,7 +194,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: rc4.benchmark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -217,7 +205,7 @@ func benchmark(b *testing.B, size int64)
 
 ```
 searchKey: rc4.testEncrypt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

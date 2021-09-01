@@ -59,10 +59,6 @@ Package utf8 implements functions and constants to support text encoded in UTF-8
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="MaxRune" href="#MaxRune">const MaxRune</a>
 
 ```
@@ -424,10 +420,6 @@ These names of these constants are chosen to give nice alignment in the table be
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="acceptRanges" href="#acceptRanges">var acceptRanges</a>
 
 ```
@@ -456,10 +448,6 @@ first is information about the first byte in a UTF-8 sequence.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="acceptRange" href="#acceptRange">type acceptRange struct</a>
 
 ```
@@ -478,15 +466,11 @@ acceptRange gives the range of valid values for the second byte in a UTF-8 seque
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DecodeLastRune" href="#DecodeLastRune">func DecodeLastRune(p []byte) (r rune, size int)</a>
 
 ```
 searchKey: utf8.DecodeLastRune
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -501,7 +485,7 @@ An encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of r
 
 ```
 searchKey: utf8.DecodeLastRuneInString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -516,7 +500,7 @@ An encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of r
 
 ```
 searchKey: utf8.DecodeRune
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -531,7 +515,7 @@ An encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of r
 
 ```
 searchKey: utf8.DecodeRuneInString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -546,7 +530,7 @@ An encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of r
 
 ```
 searchKey: utf8.EncodeRune
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -559,7 +543,7 @@ EncodeRune writes into p (which must be large enough) the UTF-8 encoding of the 
 
 ```
 searchKey: utf8.FullRune
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -572,7 +556,7 @@ FullRune reports whether the bytes in p begin with a full UTF-8 encoding of a ru
 
 ```
 searchKey: utf8.FullRuneInString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -585,7 +569,7 @@ FullRuneInString is like FullRune but its input is a string.
 
 ```
 searchKey: utf8.RuneCount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -598,7 +582,7 @@ RuneCount returns the number of runes in p. Erroneous and short encodings are tr
 
 ```
 searchKey: utf8.RuneCountInString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -611,7 +595,7 @@ RuneCountInString is like RuneCount but its input is a string.
 
 ```
 searchKey: utf8.RuneLen
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -624,7 +608,7 @@ RuneLen returns the number of bytes required to encode the rune. It returns -1 i
 
 ```
 searchKey: utf8.RuneStart
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -637,7 +621,7 @@ RuneStart reports whether the byte could be the first byte of an encoded, possib
 
 ```
 searchKey: utf8.Valid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -650,7 +634,7 @@ Valid reports whether p consists entirely of valid UTF-8-encoded runes.
 
 ```
 searchKey: utf8.ValidRune
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -663,7 +647,7 @@ ValidRune reports whether r can be legally encoded as UTF-8. Code points that ar
 
 ```
 searchKey: utf8.ValidString
-tags: [method]
+tags: [function]
 ```
 
 ```Go

@@ -20,7 +20,7 @@ Package router contains the route names for our app UI.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="RoutePasswordReset" href="#RoutePasswordReset">const RoutePasswordReset</a>
@@ -91,7 +91,7 @@ These route names are used by other packages that can't import the ../ui package
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Router" href="#Router">var Router</a>
@@ -112,14 +112,14 @@ It is used by packages that can't import the ../ui package without creating an i
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Extension" href="#Extension">func Extension(extensionID string) string</a>
 
 ```
 searchKey: router.Extension
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -130,7 +130,7 @@ func Extension(extensionID string) string
 
 ```
 searchKey: router.RegistryPublisherExtensions
-tags: [method]
+tags: [function]
 ```
 
 ```Go

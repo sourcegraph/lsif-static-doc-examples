@@ -242,7 +242,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockQueryResolver" href="#MockQueryResolver">type MockQueryResolver struct</a>
@@ -294,7 +294,7 @@ NewMockQueryResolver creates a new mock of the QueryResolver interface. All meth
 
 ```
 searchKey: mocks.NewMockQueryResolverFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -452,7 +452,7 @@ NewMockResolver creates a new mock of the Resolver interface. All methods return
 
 ```
 searchKey: mocks.NewMockResolverFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -652,7 +652,7 @@ QueryResolverDefinitionsFunc describes the behavior when the Definitions method 
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -728,7 +728,7 @@ func (f *QueryResolverDefinitionsFunc) appendCall(r0 QueryResolverDefinitionsFun
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -768,7 +768,7 @@ QueryResolverDefinitionsFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -781,7 +781,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverDefinitionsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -812,7 +812,7 @@ QueryResolverDiagnosticsFunc describes the behavior when the Diagnostics method 
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -888,7 +888,7 @@ func (f *QueryResolverDiagnosticsFunc) appendCall(r0 QueryResolverDiagnosticsFun
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -928,7 +928,7 @@ QueryResolverDiagnosticsFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -941,7 +941,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverDiagnosticsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -972,7 +972,7 @@ QueryResolverDocumentationPageFunc describes the behavior when the Documentation
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1048,7 +1048,7 @@ func (f *QueryResolverDocumentationPageFunc) appendCall(r0 QueryResolverDocument
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1085,7 +1085,7 @@ QueryResolverDocumentationPageFuncCall is an object that describes an invocation
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1098,7 +1098,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverDocumentationPageFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1129,7 +1129,7 @@ QueryResolverHoverFunc describes the behavior when the Hover method of the paren
 
 ```
 searchKey: mocks.QueryResolverHoverFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1205,7 +1205,7 @@ func (f *QueryResolverHoverFunc) appendCall(r0 QueryResolverHoverFuncCall)
 
 ```
 searchKey: mocks.QueryResolverHoverFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1251,7 +1251,7 @@ QueryResolverHoverFuncCall is an object that describes an invocation of method H
 
 ```
 searchKey: mocks.QueryResolverHoverFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1264,7 +1264,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverHoverFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1295,7 +1295,7 @@ QueryResolverRangesFunc describes the behavior when the Ranges method of the par
 
 ```
 searchKey: mocks.QueryResolverRangesFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1371,7 +1371,7 @@ func (f *QueryResolverRangesFunc) appendCall(r0 QueryResolverRangesFuncCall)
 
 ```
 searchKey: mocks.QueryResolverRangesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1411,7 +1411,7 @@ QueryResolverRangesFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: mocks.QueryResolverRangesFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1424,7 +1424,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverRangesFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1455,7 +1455,7 @@ QueryResolverReferencesFunc describes the behavior when the References method of
 
 ```
 searchKey: mocks.QueryResolverReferencesFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1531,7 +1531,7 @@ func (f *QueryResolverReferencesFunc) appendCall(r0 QueryResolverReferencesFuncC
 
 ```
 searchKey: mocks.QueryResolverReferencesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1580,7 +1580,7 @@ QueryResolverReferencesFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.QueryResolverReferencesFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1593,7 +1593,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.QueryResolverReferencesFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1624,7 +1624,7 @@ ResolverCommitGraphFunc describes the behavior when the CommitGraph method of th
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1700,7 +1700,7 @@ func (f *ResolverCommitGraphFunc) appendCall(r0 ResolverCommitGraphFuncCall)
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1737,7 +1737,7 @@ ResolverCommitGraphFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: mocks.ResolverCommitGraphFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1750,7 +1750,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverCommitGraphFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1781,7 +1781,7 @@ ResolverDeleteIndexByIDFunc describes the behavior when the DeleteIndexByID meth
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1857,7 +1857,7 @@ func (f *ResolverDeleteIndexByIDFunc) appendCall(r0 ResolverDeleteIndexByIDFuncC
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1891,7 +1891,7 @@ ResolverDeleteIndexByIDFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1904,7 +1904,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1935,7 +1935,7 @@ ResolverDeleteUploadByIDFunc describes the behavior when the DeleteUploadByID me
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2011,7 +2011,7 @@ func (f *ResolverDeleteUploadByIDFunc) appendCall(r0 ResolverDeleteUploadByIDFun
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2045,7 +2045,7 @@ ResolverDeleteUploadByIDFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2058,7 +2058,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2089,7 +2089,7 @@ ResolverGetIndexByIDFunc describes the behavior when the GetIndexByID method of 
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2165,7 +2165,7 @@ func (f *ResolverGetIndexByIDFunc) appendCall(r0 ResolverGetIndexByIDFuncCall)
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2205,7 +2205,7 @@ ResolverGetIndexByIDFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2218,7 +2218,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2249,7 +2249,7 @@ ResolverGetIndexesByIDsFunc describes the behavior when the GetIndexesByIDs meth
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2325,7 +2325,7 @@ func (f *ResolverGetIndexesByIDsFunc) appendCall(r0 ResolverGetIndexesByIDsFuncC
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2362,7 +2362,7 @@ ResolverGetIndexesByIDsFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2375,7 +2375,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2406,7 +2406,7 @@ ResolverGetUploadByIDFunc describes the behavior when the GetUploadByID method o
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2482,7 +2482,7 @@ func (f *ResolverGetUploadByIDFunc) appendCall(r0 ResolverGetUploadByIDFuncCall)
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2522,7 +2522,7 @@ ResolverGetUploadByIDFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2535,7 +2535,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2566,7 +2566,7 @@ ResolverGetUploadsByIDsFunc describes the behavior when the GetUploadsByIDs meth
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2642,7 +2642,7 @@ func (f *ResolverGetUploadsByIDsFunc) appendCall(r0 ResolverGetUploadsByIDsFuncC
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2679,7 +2679,7 @@ ResolverGetUploadsByIDsFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2692,7 +2692,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2723,7 +2723,7 @@ ResolverIndexConfigurationFunc describes the behavior when the IndexConfiguratio
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2799,7 +2799,7 @@ func (f *ResolverIndexConfigurationFunc) appendCall(r0 ResolverIndexConfiguratio
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2836,7 +2836,7 @@ ResolverIndexConfigurationFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2849,7 +2849,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2880,7 +2880,7 @@ ResolverIndexConnectionResolverFunc describes the behavior when the IndexConnect
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2956,7 +2956,7 @@ func (f *ResolverIndexConnectionResolverFunc) appendCall(r0 ResolverIndexConnect
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2987,7 +2987,7 @@ ResolverIndexConnectionResolverFuncCall is an object that describes an invocatio
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3000,7 +3000,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3031,7 +3031,7 @@ ResolverQueryResolverFunc describes the behavior when the QueryResolver method o
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3107,7 +3107,7 @@ func (f *ResolverQueryResolverFunc) appendCall(r0 ResolverQueryResolverFuncCall)
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3144,7 +3144,7 @@ ResolverQueryResolverFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: mocks.ResolverQueryResolverFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3157,7 +3157,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverQueryResolverFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3188,7 +3188,7 @@ ResolverQueueAutoIndexJobForRepoFunc describes the behavior when the QueueAutoIn
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3264,7 +3264,7 @@ func (f *ResolverQueueAutoIndexJobForRepoFunc) appendCall(r0 ResolverQueueAutoIn
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3298,7 +3298,7 @@ ResolverQueueAutoIndexJobForRepoFuncCall is an object that describes an invocati
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3311,7 +3311,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3342,7 +3342,7 @@ ResolverUpdateIndexConfigurationByRepositoryIDFunc describes the behavior when t
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3418,7 +3418,7 @@ func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) appendCall(r0 Resol
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3455,7 +3455,7 @@ ResolverUpdateIndexConfigurationByRepositoryIDFuncCall is an object that describ
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3468,7 +3468,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3499,7 +3499,7 @@ ResolverUploadConnectionResolverFunc describes the behavior when the UploadConne
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3575,7 +3575,7 @@ func (f *ResolverUploadConnectionResolverFunc) appendCall(r0 ResolverUploadConne
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3606,7 +3606,7 @@ ResolverUploadConnectionResolverFuncCall is an object that describes an invocati
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3619,7 +3619,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go

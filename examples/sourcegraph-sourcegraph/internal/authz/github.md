@@ -31,7 +31,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ClientAdapter" href="#ClientAdapter">type ClientAdapter struct</a>
@@ -81,7 +81,7 @@ Provider implements authz.Provider for GitHub repository permissions.
 
 ```
 searchKey: github.NewProvider
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -139,7 +139,7 @@ API docs: [https://developer.github.com/v3/repos/#list-repositories-for-the-auth
 
 ```
 searchKey: github.Provider.ServiceID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -150,7 +150,7 @@ func (p *Provider) ServiceID() string
 
 ```
 searchKey: github.Provider.ServiceType
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -161,7 +161,7 @@ func (p *Provider) ServiceType() string
 
 ```
 searchKey: github.Provider.URN
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ func (p *Provider) URN() string
 
 ```
 searchKey: github.Provider.Validate
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -249,14 +249,14 @@ func (m *mockClient) WithToken(token string) client
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewAuthzProviders" href="#NewAuthzProviders">func NewAuthzProviders(conns []*types.GitHubConnection) (ps []authz.Provider, problems []string, warnings []string)</a>
 
 ```
 searchKey: github.NewAuthzProviders
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -271,7 +271,7 @@ NewAuthzProviders returns the set of GitHub authz providers derived from the con
 
 ```
 searchKey: github.TestProvider_FetchRepoPerms
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -282,7 +282,7 @@ func TestProvider_FetchRepoPerms(t *testing.T)
 
 ```
 searchKey: github.TestProvider_FetchUserPerms
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -293,7 +293,7 @@ func TestProvider_FetchUserPerms(t *testing.T)
 
 ```
 searchKey: github.ValidateAuthz
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ ValidateAuthz validates the authorization fields of the given GitHub external se
 
 ```
 searchKey: github.mustURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -317,7 +317,7 @@ func mustURL(t *testing.T, u string) *url.URL
 
 ```
 searchKey: github.newAuthzProvider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

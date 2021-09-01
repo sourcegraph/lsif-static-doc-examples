@@ -37,7 +37,7 @@ Package srcprometheus defines an API to interact with Sourcegraph Prometheus, in
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EndpointAlertsStatus" href="#EndpointAlertsStatus">const EndpointAlertsStatus</a>
@@ -76,7 +76,7 @@ const EndpointConfigSubscriber = "/prom-wrapper/config-subscriber"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrPrometheusUnavailable" href="#ErrPrometheusUnavailable">var ErrPrometheusUnavailable</a>
@@ -108,7 +108,7 @@ PrometheusURL is the configured Prometheus instance.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AlertsHistory" href="#AlertsHistory">type AlertsHistory struct</a>
@@ -161,7 +161,7 @@ Client provides the interface for interacting with Sourcegraph Prometheus, inclu
 
 ```
 searchKey: srcprometheus.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -222,7 +222,7 @@ type MonitoringAlerts []*MonitoringAlert
 
 ```
 searchKey: srcprometheus.MonitoringAlerts.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -353,14 +353,14 @@ func (r *roundTripper) RoundTrip(req *http.Request) (*http.Response, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Test_roundTripper_PrometheusUnavailable" href="#Test_roundTripper_PrometheusUnavailable">func Test_roundTripper_PrometheusUnavailable(t *testing.T)</a>
 
 ```
 searchKey: srcprometheus.Test_roundTripper_PrometheusUnavailable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

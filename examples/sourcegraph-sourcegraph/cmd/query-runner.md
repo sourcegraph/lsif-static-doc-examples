@@ -68,10 +68,6 @@ Command query-runner runs saved queries and notifies subscribers when the querie
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="gqlSearchQuery" href="#gqlSearchQuery">const gqlSearchQuery</a>
 
 ```
@@ -117,10 +113,6 @@ const utmSourceSlack = "saved-search-slack"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="debugPretendSavedQueryResultsExist" href="#debugPretendSavedQueryResultsExist">var debugPretendSavedQueryResultsExist</a>
 
@@ -214,10 +206,6 @@ var testNotificationMu sync.Mutex
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="executorT" href="#executorT">type executorT struct</a>
 
 ```
@@ -282,7 +270,7 @@ type gqlSearchResponse struct {
 
 ```
 searchKey: main.performSearch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -293,7 +281,7 @@ func performSearch(ctx context.Context, query string) (v *gqlSearchResponse, exe
 
 ```
 searchKey: main.search
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -387,7 +375,7 @@ recipient describes a recipient of a saved search notification and the type of n
 
 ```
 searchKey: main.recipient.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -413,7 +401,7 @@ recipientSpec identifies a recipient of a saved search notification. Exactly one
 
 ```
 searchKey: main.recipientSpec.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -435,7 +423,7 @@ type recipients []*recipient
 
 ```
 searchKey: main.diffNotificationRecipients
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -472,15 +460,11 @@ get returns the recipient with the given spec, if any, or else nil.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestDiffNotificationRecipients" href="#TestDiffNotificationRecipients">func TestDiffNotificationRecipients(t *testing.T)</a>
 
 ```
 searchKey: main.TestDiffNotificationRecipients
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -491,7 +475,7 @@ func TestDiffNotificationRecipients(t *testing.T)
 
 ```
 searchKey: main.TestGetNotificationRecipients
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -502,7 +486,7 @@ func TestGetNotificationRecipients(t *testing.T)
 
 ```
 searchKey: main.canSendEmail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -513,7 +497,7 @@ func canSendEmail(ctx context.Context) error
 
 ```
 searchKey: main.diffSavedQueryConfigs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -528,7 +512,7 @@ It returns maps whose keys represent the old value and value represent the new v
 
 ```
 searchKey: main.emailNotifySubscribeUnsubscribe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -539,7 +523,7 @@ func emailNotifySubscribeUnsubscribe(ctx context.Context, recipient *recipient, 
 
 ```
 searchKey: main.extractTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -552,7 +536,7 @@ extractTime extracts the time from the given search result.
 
 ```
 searchKey: main.getNotificationRecipients
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -565,7 +549,7 @@ getNotificationRecipients retrieves the list of recipients who should receive no
 
 ```
 searchKey: main.gqlURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -576,7 +560,7 @@ func gqlURL(queryName string) (string, error)
 
 ```
 searchKey: main.latestResultTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -587,7 +571,7 @@ func latestResultTime(prevInfo *api.SavedQueryInfo, v *gqlSearchResponse, search
 
 ```
 searchKey: main.logEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -609,7 +593,7 @@ func main()
 
 ```
 searchKey: main.notify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -622,7 +606,7 @@ notify handles sending notifications for new search results.
 
 ```
 searchKey: main.notifySavedQueryWasCreatedOrUpdated
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -633,7 +617,7 @@ func notifySavedQueryWasCreatedOrUpdated(oldValue, newValue api.SavedQuerySpecAn
 
 ```
 searchKey: main.savedSearchListPageURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -644,7 +628,7 @@ func savedSearchListPageURL(utmSource string) string
 
 ```
 searchKey: main.searchURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -655,7 +639,7 @@ func searchURL(query, utmSource string) string
 
 ```
 searchKey: main.sendEmail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -666,7 +650,7 @@ func sendEmail(ctx context.Context, userID int32, eventType string, template txt
 
 ```
 searchKey: main.sendNotificationsForCreatedOrUpdatedOrDeleted
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -677,7 +661,7 @@ func sendNotificationsForCreatedOrUpdatedOrDeleted(oldList, newList map[api.Save
 
 ```
 searchKey: main.serveTestNotification
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -688,7 +672,7 @@ func serveTestNotification(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: main.slackNotify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -699,7 +683,7 @@ func slackNotify(ctx context.Context, recipient *recipient, text string, slackWe
 
 ```
 searchKey: main.slackNotifySubscribed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -710,7 +694,7 @@ func slackNotifySubscribed(ctx context.Context, recipient *recipient, query api.
 
 ```
 searchKey: main.slackNotifyUnsubscribed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -721,7 +705,7 @@ func slackNotifyUnsubscribed(ctx context.Context, recipient *recipient, query ap
 
 ```
 searchKey: main.sourcegraphURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -732,7 +716,7 @@ func sourcegraphURL(path, query, utmSource string) string
 
 ```
 searchKey: main.writeError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

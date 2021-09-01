@@ -46,7 +46,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="combyPath" href="#combyPath">const combyPath</a>
@@ -63,7 +63,7 @@ const combyPath = "comby"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MatchHoleRegexp" href="#MatchHoleRegexp">var MatchHoleRegexp</a>
@@ -102,7 +102,7 @@ var onMatchWhitespace = lazyregexp.New(`[\s]+`)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Args" href="#Args">type Args struct</a>
@@ -144,7 +144,7 @@ type Args struct {
 
 ```
 searchKey: comby.Args.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -166,7 +166,7 @@ type DirPath string
 
 ```
 searchKey: comby.DirPath.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -220,7 +220,7 @@ type Hole string
 
 ```
 searchKey: comby.Hole.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -231,7 +231,7 @@ func (t Hole) String() string
 
 ```
 searchKey: comby.Hole.term
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -266,7 +266,7 @@ type Literal string
 
 ```
 searchKey: comby.Literal.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -277,7 +277,7 @@ func (t Literal) String() string
 
 ```
 searchKey: comby.Literal.term
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -362,7 +362,7 @@ type ZipPath string
 
 ```
 searchKey: comby.ZipPath.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -372,14 +372,14 @@ func (ZipPath) Value()
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Matches" href="#Matches">func Matches(ctx context.Context, args Args) (matches []FileMatch, err error)</a>
 
 ```
 searchKey: comby.Matches
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -392,7 +392,7 @@ Matches returns all matches in all files for which comby finds matches.
 
 ```
 searchKey: comby.PipeTo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -403,7 +403,7 @@ func PipeTo(ctx context.Context, args Args, w io.Writer) (err error)
 
 ```
 searchKey: comby.StructuralPatToRegexpQuery
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -418,7 +418,7 @@ Example: "ParseInt(:[args]) if err != nil" -> "ParseInt(.*)\s+if\s+err!=\s+nil"
 
 ```
 searchKey: comby.TestMatchesInZip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -429,7 +429,7 @@ func TestMatchesInZip(t *testing.T)
 
 ```
 searchKey: comby.TestMatchesUnmarshalling
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -440,7 +440,7 @@ func TestMatchesUnmarshalling(t *testing.T)
 
 ```
 searchKey: comby.TestStructuralPatToRegexpQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -462,7 +462,7 @@ func exists() bool
 
 ```
 searchKey: comby.kill
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -473,7 +473,7 @@ func kill(pid int)
 
 ```
 searchKey: comby.parseTemplate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -486,7 +486,7 @@ parseTemplate parses a comby pattern to a list of Terms where a Term is either a
 
 ```
 searchKey: comby.rawArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -508,7 +508,7 @@ func splitOnHolesPattern() string
 
 ```
 searchKey: comby.waitForCompletion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

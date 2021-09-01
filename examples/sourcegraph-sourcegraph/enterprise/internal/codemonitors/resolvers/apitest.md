@@ -27,7 +27,7 @@ Package apitest provided types used in testing.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Action" href="#Action">type Action struct</a>

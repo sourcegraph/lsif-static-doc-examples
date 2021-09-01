@@ -16,7 +16,7 @@ Package slack is used to send notifications of an organization's activity to a g
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Attachment" href="#Attachment">type Attachment struct</a>
@@ -65,7 +65,7 @@ Client is capable of posting a message to a Slack webhook
 
 ```
 searchKey: slack.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go

@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1074,9 +1072,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1320,9 +1316,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1362,7 +1356,7 @@
                       "newPage": false,
                       "searchKey": "sha512.digest.BlockSize",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1385,7 +1379,7 @@
                       "newPage": false,
                       "searchKey": "sha512.digest.MarshalBinary",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1408,7 +1402,7 @@
                       "newPage": false,
                       "searchKey": "sha512.digest.Reset",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1431,7 +1425,7 @@
                       "newPage": false,
                       "searchKey": "sha512.digest.Size",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1523,7 +1517,7 @@
                       "newPage": false,
                       "searchKey": "sha512.digest.checkSum",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1597,9 +1591,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1618,7 +1610,7 @@
                 "newPage": false,
                 "searchKey": "sha512.BenchmarkHash1K",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1642,7 +1634,7 @@
                 "newPage": false,
                 "searchKey": "sha512.BenchmarkHash8Bytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1666,7 +1658,7 @@
                 "newPage": false,
                 "searchKey": "sha512.BenchmarkHash8K",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1778,7 +1770,7 @@
                 "newPage": false,
                 "searchKey": "sha512.Sum384",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1800,7 +1792,7 @@
                 "newPage": false,
                 "searchKey": "sha512.Sum512",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1822,7 +1814,7 @@
                 "newPage": false,
                 "searchKey": "sha512.Sum512_224",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1844,7 +1836,7 @@
                 "newPage": false,
                 "searchKey": "sha512.Sum512_256",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1866,7 +1858,7 @@
                 "newPage": false,
                 "searchKey": "sha512.TestBlockGeneric",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1890,7 +1882,7 @@
                 "newPage": false,
                 "searchKey": "sha512.TestBlockSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1914,7 +1906,7 @@
                 "newPage": false,
                 "searchKey": "sha512.TestGolden",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1938,7 +1930,7 @@
                 "newPage": false,
                 "searchKey": "sha512.TestGoldenMarshal",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1962,7 +1954,7 @@
                 "newPage": false,
                 "searchKey": "sha512.TestLargeHashes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1986,7 +1978,7 @@
                 "newPage": false,
                 "searchKey": "sha512.TestMarshalMismatch",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2010,7 +2002,7 @@
                 "newPage": false,
                 "searchKey": "sha512.TestSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2034,7 +2026,7 @@
                 "newPage": false,
                 "searchKey": "sha512.appendUint64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2057,7 +2049,7 @@
                 "newPage": false,
                 "searchKey": "sha512.benchmarkSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2080,7 +2072,7 @@
                 "newPage": false,
                 "searchKey": "sha512.block",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2103,7 +2095,7 @@
                 "newPage": false,
                 "searchKey": "sha512.blockAMD64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2126,7 +2118,7 @@
                 "newPage": false,
                 "searchKey": "sha512.blockAVX2",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2149,7 +2141,7 @@
                 "newPage": false,
                 "searchKey": "sha512.blockGeneric",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2172,7 +2164,7 @@
                 "newPage": false,
                 "searchKey": "sha512.consumeUint64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2218,7 +2210,7 @@
                 "newPage": false,
                 "searchKey": "sha512.safeSum",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2241,7 +2233,7 @@
                 "newPage": false,
                 "searchKey": "sha512.testHash",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

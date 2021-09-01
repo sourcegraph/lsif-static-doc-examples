@@ -60,7 +60,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="stdinCloseTestString" href="#stdinCloseTestString">const stdinCloseTestString</a>
@@ -77,7 +77,7 @@ const stdinCloseTestString = "Some test string."
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="haveUnexpectedFDs" href="#haveUnexpectedFDs">var haveUnexpectedFDs</a>
@@ -109,7 +109,7 @@ unfinalizedFiles holds files that should not be finalized, because that would cl
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="badWriter" href="#badWriter">type badWriter struct{}</a>
@@ -159,7 +159,7 @@ func (delayedInfiniteReader) Read(b []byte) (int, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleCmd_CombinedOutput" href="#ExampleCmd_CombinedOutput">func ExampleCmd_CombinedOutput()</a>
@@ -287,7 +287,7 @@ func ExampleLookPath()
 
 ```
 searchKey: exec_test.TestCatGoodAndBadFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -298,7 +298,7 @@ func TestCatGoodAndBadFile(t *testing.T)
 
 ```
 searchKey: exec_test.TestCatStdin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -309,7 +309,7 @@ func TestCatStdin(t *testing.T)
 
 ```
 searchKey: exec_test.TestChildCriticalEnv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -322,7 +322,7 @@ start a child process without the user code explicitly starting with a copy of t
 
 ```
 searchKey: exec_test.TestClosePipeOnCopyError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -333,7 +333,7 @@ func TestClosePipeOnCopyError(t *testing.T)
 
 ```
 searchKey: exec_test.TestCommandRelativeName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -344,7 +344,7 @@ func TestCommandRelativeName(t *testing.T)
 
 ```
 searchKey: exec_test.TestContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -355,7 +355,7 @@ func TestContext(t *testing.T)
 
 ```
 searchKey: exec_test.TestContextCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -366,7 +366,7 @@ func TestContextCancel(t *testing.T)
 
 ```
 searchKey: exec_test.TestCredentialNoSetGroups
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -377,7 +377,7 @@ func TestCredentialNoSetGroups(t *testing.T)
 
 ```
 searchKey: exec_test.TestDedupEnvEcho
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -390,7 +390,7 @@ test that environment variables are de-duped.
 
 ```
 searchKey: exec_test.TestEcho
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -401,7 +401,7 @@ func TestEcho(t *testing.T)
 
 ```
 searchKey: exec_test.TestEchoFileRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -412,7 +412,7 @@ func TestEchoFileRace(t *testing.T)
 
 ```
 searchKey: exec_test.TestExitCode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -423,7 +423,7 @@ func TestExitCode(t *testing.T)
 
 ```
 searchKey: exec_test.TestExitStatus
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -434,7 +434,7 @@ func TestExitStatus(t *testing.T)
 
 ```
 searchKey: exec_test.TestExtraFiles
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -445,7 +445,7 @@ func TestExtraFiles(t *testing.T)
 
 ```
 searchKey: exec_test.TestExtraFilesFDShuffle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -456,7 +456,7 @@ func TestExtraFilesFDShuffle(t *testing.T)
 
 ```
 searchKey: exec_test.TestExtraFilesRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -467,7 +467,7 @@ func TestExtraFilesRace(t *testing.T)
 
 ```
 searchKey: exec_test.TestHelperProcess
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -480,7 +480,7 @@ TestHelperProcess isn't a real test. It's used as a helper process for TestParam
 
 ```
 searchKey: exec_test.TestIgnorePipeErrorOnSuccess
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -493,7 +493,7 @@ Issue 9173: ignore stdin pipe writes if the program completes successfully.
 
 ```
 searchKey: exec_test.TestNoExistExecutable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -504,7 +504,7 @@ func TestNoExistExecutable(t *testing.T)
 
 ```
 searchKey: exec_test.TestOutputStderrCapture
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -515,7 +515,7 @@ func TestOutputStderrCapture(t *testing.T)
 
 ```
 searchKey: exec_test.TestPipeLookPathLeak
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -528,7 +528,7 @@ Issue 5071
 
 ```
 searchKey: exec_test.TestPipes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -539,7 +539,7 @@ func TestPipes(t *testing.T)
 
 ```
 searchKey: exec_test.TestStdinClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -552,7 +552,7 @@ Issue 6270.
 
 ```
 searchKey: exec_test.TestStdinCloseRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -565,7 +565,7 @@ Issue 17647. It used to be the case that TestStdinClose, above, would fail when 
 
 ```
 searchKey: exec_test.TestString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -576,7 +576,7 @@ func TestString(t *testing.T)
 
 ```
 searchKey: exec_test.TestStringPathNotResolved
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -587,7 +587,7 @@ func TestStringPathNotResolved(t *testing.T)
 
 ```
 searchKey: exec_test.TestWaitid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -600,7 +600,7 @@ For issue #19314: make sure that SIGSTOP does not cause the process to appear do
 
 ```
 searchKey: exec_test.helperCommand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -611,7 +611,7 @@ func helperCommand(t *testing.T, s ...string) *exec.Cmd
 
 ```
 searchKey: exec_test.helperCommandContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -633,7 +633,7 @@ func init()
 
 ```
 searchKey: exec_test.numOpenFDsAndroid
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

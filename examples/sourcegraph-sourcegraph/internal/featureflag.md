@@ -26,7 +26,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FeatureFlag" href="#FeatureFlag">type FeatureFlag struct</a>
@@ -81,7 +81,7 @@ EvaluateForUser evaluates the feature flag for a userID.
 
 ```
 searchKey: featureflag.FeatureFlag.EvaluateGlobal
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -149,7 +149,7 @@ type FlagSet map[string]bool
 
 ```
 searchKey: featureflag.FromContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -210,14 +210,14 @@ type flagContextKey struct{}
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Middleware" href="#Middleware">func Middleware(ffs FeatureFlagStore, next http.Handler) http.Handler</a>
 
 ```
 searchKey: featureflag.Middleware
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -230,7 +230,7 @@ Middleware evaluates the feature flags for the current user and adds the feature
 
 ```
 searchKey: featureflag.contextWithFeatureFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -241,7 +241,7 @@ func contextWithFeatureFlags(ffs FeatureFlagStore, r *http.Request) context.Cont
 
 ```
 searchKey: featureflag.hashAnonymousUserAndFlag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -252,7 +252,7 @@ func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32
 
 ```
 searchKey: featureflag.hashUserAndFlag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

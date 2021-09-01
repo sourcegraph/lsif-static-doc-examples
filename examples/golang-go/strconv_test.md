@@ -213,7 +213,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="above1e23" href="#above1e23">const above1e23</a>
@@ -241,7 +241,7 @@ const below1e23 = 99999999999999974834176
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchSink" href="#BenchSink">var BenchSink</a>
@@ -769,7 +769,7 @@ var varlenUints = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="appendBoolTest" href="#appendBoolTest">type appendBoolTest struct</a>
@@ -1134,14 +1134,14 @@ type unQuoteTest struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkAppendFloat" href="#BenchmarkAppendFloat">func BenchmarkAppendFloat(b *testing.B)</a>
 
 ```
 searchKey: strconv_test.BenchmarkAppendFloat
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1152,7 +1152,7 @@ func BenchmarkAppendFloat(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAppendInt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1163,7 +1163,7 @@ func BenchmarkAppendInt(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAppendIntSmall
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1174,7 +1174,7 @@ func BenchmarkAppendIntSmall(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAppendQuote
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1185,7 +1185,7 @@ func BenchmarkAppendQuote(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAppendQuoteRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1196,7 +1196,7 @@ func BenchmarkAppendQuoteRune(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAppendUint
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1207,7 +1207,7 @@ func BenchmarkAppendUint(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAppendUintVarlen
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1218,7 +1218,7 @@ func BenchmarkAppendUintVarlen(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof32Decimal
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1229,7 +1229,7 @@ func BenchmarkAtof32Decimal(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof32Float
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1240,7 +1240,7 @@ func BenchmarkAtof32Float(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof32FloatExp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1251,7 +1251,7 @@ func BenchmarkAtof32FloatExp(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof32Random
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1262,7 +1262,7 @@ func BenchmarkAtof32Random(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof32RandomLong
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1273,7 +1273,7 @@ func BenchmarkAtof32RandomLong(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof64Big
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1284,7 +1284,7 @@ func BenchmarkAtof64Big(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof64Decimal
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1295,7 +1295,7 @@ func BenchmarkAtof64Decimal(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof64Float
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1306,7 +1306,7 @@ func BenchmarkAtof64Float(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof64FloatExp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1317,7 +1317,7 @@ func BenchmarkAtof64FloatExp(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof64RandomBits
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1328,7 +1328,7 @@ func BenchmarkAtof64RandomBits(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof64RandomFloats
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1339,7 +1339,7 @@ func BenchmarkAtof64RandomFloats(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtof64RandomLongFloats
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1350,7 +1350,7 @@ func BenchmarkAtof64RandomLongFloats(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkAtoi
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1361,7 +1361,7 @@ func BenchmarkAtoi(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkFormatFloat
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1372,7 +1372,7 @@ func BenchmarkFormatFloat(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkFormatInt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1383,7 +1383,7 @@ func BenchmarkFormatInt(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkFormatIntSmall
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1394,7 +1394,7 @@ func BenchmarkFormatIntSmall(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkFormatUint
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1405,7 +1405,7 @@ func BenchmarkFormatUint(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkParseInt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1416,7 +1416,7 @@ func BenchmarkParseInt(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkQuote
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1427,7 +1427,7 @@ func BenchmarkQuote(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkQuoteRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1438,7 +1438,7 @@ func BenchmarkQuoteRune(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkUnquoteEasy
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1449,7 +1449,7 @@ func BenchmarkUnquoteEasy(b *testing.B)
 
 ```
 searchKey: strconv_test.BenchmarkUnquoteHard
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1790,7 +1790,7 @@ func ExampleUnquoteChar()
 
 ```
 searchKey: strconv_test.TestAppendBool
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1801,7 +1801,7 @@ func TestAppendBool(t *testing.T)
 
 ```
 searchKey: strconv_test.TestAtof
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1812,7 +1812,7 @@ func TestAtof(t *testing.T)
 
 ```
 searchKey: strconv_test.TestAtofRandom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1823,7 +1823,7 @@ func TestAtofRandom(t *testing.T)
 
 ```
 searchKey: strconv_test.TestAtofSlow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1834,7 +1834,7 @@ func TestAtofSlow(t *testing.T)
 
 ```
 searchKey: strconv_test.TestAtoi
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1845,7 +1845,7 @@ func TestAtoi(t *testing.T)
 
 ```
 searchKey: strconv_test.TestCanBackquote
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1856,7 +1856,7 @@ func TestCanBackquote(t *testing.T)
 
 ```
 searchKey: strconv_test.TestCountMallocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1867,7 +1867,7 @@ func TestCountMallocs(t *testing.T)
 
 ```
 searchKey: strconv_test.TestDecimalRound
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1878,7 +1878,7 @@ func TestDecimalRound(t *testing.T)
 
 ```
 searchKey: strconv_test.TestDecimalRoundedInteger
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1889,7 +1889,7 @@ func TestDecimalRoundedInteger(t *testing.T)
 
 ```
 searchKey: strconv_test.TestDecimalShift
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1900,7 +1900,7 @@ func TestDecimalShift(t *testing.T)
 
 ```
 searchKey: strconv_test.TestErrorPrefixes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1911,7 +1911,7 @@ func TestErrorPrefixes(t *testing.T)
 
 ```
 searchKey: strconv_test.TestFormatBool
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1922,7 +1922,7 @@ func TestFormatBool(t *testing.T)
 
 ```
 searchKey: strconv_test.TestFormatComplex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1933,7 +1933,7 @@ func TestFormatComplex(t *testing.T)
 
 ```
 searchKey: strconv_test.TestFormatComplexInvalidBitSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1944,7 +1944,7 @@ func TestFormatComplexInvalidBitSize(t *testing.T)
 
 ```
 searchKey: strconv_test.TestFormatFloatInvalidBitSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1955,7 +1955,7 @@ func TestFormatFloatInvalidBitSize(t *testing.T)
 
 ```
 searchKey: strconv_test.TestFormatUintVarlen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1966,7 +1966,7 @@ func TestFormatUintVarlen(t *testing.T)
 
 ```
 searchKey: strconv_test.TestFp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1977,7 +1977,7 @@ func TestFp(t *testing.T)
 
 ```
 searchKey: strconv_test.TestFtoa
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1988,7 +1988,7 @@ func TestFtoa(t *testing.T)
 
 ```
 searchKey: strconv_test.TestFtoaPowersOfTwo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1999,7 +1999,7 @@ func TestFtoaPowersOfTwo(t *testing.T)
 
 ```
 searchKey: strconv_test.TestFtoaRandom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2010,7 +2010,7 @@ func TestFtoaRandom(t *testing.T)
 
 ```
 searchKey: strconv_test.TestIsGraphic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2023,7 +2023,7 @@ Verify that our IsGraphic agrees with unicode.IsGraphic.
 
 ```
 searchKey: strconv_test.TestIsPrint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2036,7 +2036,7 @@ Verify that our IsPrint agrees with unicode.IsPrint.
 
 ```
 searchKey: strconv_test.TestItoa
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2047,7 +2047,7 @@ func TestItoa(t *testing.T)
 
 ```
 searchKey: strconv_test.TestMulByLog10Log2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2058,7 +2058,7 @@ func TestMulByLog10Log2(t *testing.T)
 
 ```
 searchKey: strconv_test.TestMulByLog2Log10
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2069,7 +2069,7 @@ func TestMulByLog2Log10(t *testing.T)
 
 ```
 searchKey: strconv_test.TestNumError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2080,7 +2080,7 @@ func TestNumError(t *testing.T)
 
 ```
 searchKey: strconv_test.TestNumErrorUnwrap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2091,7 +2091,7 @@ func TestNumErrorUnwrap(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseBool
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2102,7 +2102,7 @@ func TestParseBool(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseComplex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2113,7 +2113,7 @@ func TestParseComplex(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseComplexIncorrectBitSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2126,7 +2126,7 @@ Issue 42297: allow ParseComplex(s, not_32_or_64) for legacy reasons
 
 ```
 searchKey: strconv_test.TestParseFloatIncorrectBitSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2139,7 +2139,7 @@ Issue 42297: a lot of code in the wild accidentally calls ParseFloat(s, 10) or P
 
 ```
 searchKey: strconv_test.TestParseFloatPrefix
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2150,7 +2150,7 @@ func TestParseFloatPrefix(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseInt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2161,7 +2161,7 @@ func TestParseInt(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseInt32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2172,7 +2172,7 @@ func TestParseInt32(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseInt64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2183,7 +2183,7 @@ func TestParseInt64(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseInt64Base
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2194,7 +2194,7 @@ func TestParseInt64Base(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseIntBase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2205,7 +2205,7 @@ func TestParseIntBase(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseIntBitSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2216,7 +2216,7 @@ func TestParseIntBitSize(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseUint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2227,7 +2227,7 @@ func TestParseUint(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseUint32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2238,7 +2238,7 @@ func TestParseUint32(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseUint64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2249,7 +2249,7 @@ func TestParseUint64(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseUint64Base
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2260,7 +2260,7 @@ func TestParseUint64Base(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseUintBase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2271,7 +2271,7 @@ func TestParseUintBase(t *testing.T)
 
 ```
 searchKey: strconv_test.TestParseUintBitSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2282,7 +2282,7 @@ func TestParseUintBitSize(t *testing.T)
 
 ```
 searchKey: strconv_test.TestQuote
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2293,7 +2293,7 @@ func TestQuote(t *testing.T)
 
 ```
 searchKey: strconv_test.TestQuoteRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2304,7 +2304,7 @@ func TestQuoteRune(t *testing.T)
 
 ```
 searchKey: strconv_test.TestQuoteRuneToASCII
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2315,7 +2315,7 @@ func TestQuoteRuneToASCII(t *testing.T)
 
 ```
 searchKey: strconv_test.TestQuoteRuneToGraphic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2326,7 +2326,7 @@ func TestQuoteRuneToGraphic(t *testing.T)
 
 ```
 searchKey: strconv_test.TestQuoteToASCII
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2337,7 +2337,7 @@ func TestQuoteToASCII(t *testing.T)
 
 ```
 searchKey: strconv_test.TestQuoteToGraphic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2348,7 +2348,7 @@ func TestQuoteToGraphic(t *testing.T)
 
 ```
 searchKey: strconv_test.TestRoundTrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2359,7 +2359,7 @@ func TestRoundTrip(t *testing.T)
 
 ```
 searchKey: strconv_test.TestRoundTrip32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2372,7 +2372,7 @@ TestRoundTrip32 tries a fraction of all finite positive float32 values.
 
 ```
 searchKey: strconv_test.TestUitoa
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2383,7 +2383,7 @@ func TestUitoa(t *testing.T)
 
 ```
 searchKey: strconv_test.TestUnquote
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2394,7 +2394,7 @@ func TestUnquote(t *testing.T)
 
 ```
 searchKey: strconv_test.TestUnquoteInvalidUTF8
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2407,7 +2407,7 @@ Issue 23685: invalid UTF-8 should not go through the fast path.
 
 ```
 searchKey: strconv_test.baseErrStub
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2418,7 +2418,7 @@ func baseErrStub(name string, base int) error
 
 ```
 searchKey: strconv_test.benchmarkAtoi
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2429,7 +2429,7 @@ func benchmarkAtoi(b *testing.B, neg int)
 
 ```
 searchKey: strconv_test.benchmarkParseInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2440,7 +2440,7 @@ func benchmarkParseInt(b *testing.B, neg int)
 
 ```
 searchKey: strconv_test.bitSizeErrStub
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2451,7 +2451,7 @@ func bitSizeErrStub(name string, bitSize int) error
 
 ```
 searchKey: strconv_test.equalError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2462,7 +2462,7 @@ func equalError(a, b error) bool
 
 ```
 searchKey: strconv_test.fdiv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2506,7 +2506,7 @@ func initAtofOnce()
 
 ```
 searchKey: strconv_test.myatof32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2519,7 +2519,7 @@ Wrapper around strconv.ParseFloat(x, 32).  Handles dddddp+ddd (binary exponent) 
 
 ```
 searchKey: strconv_test.myatof64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2532,7 +2532,7 @@ Wrapper around strconv.ParseFloat(x, 64).  Handles dddddp+ddd (binary exponent) 
 
 ```
 searchKey: strconv_test.noErrStub
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2543,7 +2543,7 @@ func noErrStub(name string, arg int) error
 
 ```
 searchKey: strconv_test.pow2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2554,7 +2554,7 @@ func pow2(i int) float64
 
 ```
 searchKey: strconv_test.testAtof
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2565,7 +2565,7 @@ func testAtof(t *testing.T, opt bool)
 
 ```
 searchKey: strconv_test.testUnquote
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

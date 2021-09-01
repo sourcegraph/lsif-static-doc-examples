@@ -1320,10 +1320,6 @@ On Windows, the resolver always uses C library functions, such as GetAddrInfo an
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="FlagBroadcast" href="#FlagBroadcast">const FlagBroadcast</a>
 
 ```
@@ -1873,10 +1869,6 @@ const writeToSyscallName = "sendto"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="DefaultResolver" href="#DefaultResolver">var DefaultResolver</a>
 
@@ -3952,10 +3944,6 @@ var zoneCache = ipv6ZoneCache{
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Addr" href="#Addr">type Addr interface</a>
 
 ```
@@ -3978,7 +3966,7 @@ The two methods Network and String conventionally return strings that can be pas
 
 ```
 searchKey: net.sockaddrToIP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3989,7 +3977,7 @@ func sockaddrToIP(sa syscall.Sockaddr) Addr
 
 ```
 searchKey: net.sockaddrToTCP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4000,7 +3988,7 @@ func sockaddrToTCP(sa syscall.Sockaddr) Addr
 
 ```
 searchKey: net.sockaddrToUDP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4011,7 +3999,7 @@ func sockaddrToUDP(sa syscall.Sockaddr) Addr
 
 ```
 searchKey: net.sockaddrToUnix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4022,7 +4010,7 @@ func sockaddrToUnix(sa syscall.Sockaddr) Addr
 
 ```
 searchKey: net.sockaddrToUnixgram
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4033,7 +4021,7 @@ func sockaddrToUnixgram(sa syscall.Sockaddr) Addr
 
 ```
 searchKey: net.sockaddrToUnixpacket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4058,7 +4046,7 @@ type AddrError struct {
 
 ```
 searchKey: net.AddrError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4069,7 +4057,7 @@ func (e *AddrError) Error() string
 
 ```
 searchKey: net.AddrError.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4080,7 +4068,7 @@ func (e *AddrError) Temporary() bool
 
 ```
 searchKey: net.AddrError.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4209,7 +4197,7 @@ Multiple goroutines may invoke methods on a Conn simultaneously.
 
 ```
 searchKey: net.Dial
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4251,7 +4239,7 @@ For Unix networks, the address must be a file system path.
 
 ```
 searchKey: net.DialTimeout
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4268,7 +4256,7 @@ See func Dial for a description of the network and address parameters.
 
 ```
 searchKey: net.FileConn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4281,7 +4269,7 @@ FileConn returns a copy of the network connection corresponding to the open file
 
 ```
 searchKey: net.fileConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4307,7 +4295,7 @@ DNSConfigError represents an error reading the machine's DNS configuration. (No 
 
 ```
 searchKey: net.DNSConfigError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4318,7 +4306,7 @@ func (e *DNSConfigError) Error() string
 
 ```
 searchKey: net.DNSConfigError.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4329,7 +4317,7 @@ func (e *DNSConfigError) Temporary() bool
 
 ```
 searchKey: net.DNSConfigError.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4340,7 +4328,7 @@ func (e *DNSConfigError) Timeout() bool
 
 ```
 searchKey: net.DNSConfigError.Unwrap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4371,7 +4359,7 @@ DNSError represents a DNS lookup error.
 
 ```
 searchKey: net.DNSError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4382,7 +4370,7 @@ func (e *DNSError) Error() string
 
 ```
 searchKey: net.DNSError.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4395,7 +4383,7 @@ Temporary reports whether the DNS error is known to be temporary. This is not al
 
 ```
 searchKey: net.DNSError.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4554,7 +4542,7 @@ Or zero, if none of Timeout, Deadline, or context's deadline is set.
 
 ```
 searchKey: net.Dialer.dualStack
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4565,7 +4553,7 @@ func (d *Dialer) dualStack() bool
 
 ```
 searchKey: net.Dialer.fallbackDelay
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4576,7 +4564,7 @@ func (d *Dialer) fallbackDelay() time.Duration
 
 ```
 searchKey: net.Dialer.resolver
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4615,7 +4603,7 @@ type Flags uint
 
 ```
 searchKey: net.linkFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4626,7 +4614,7 @@ func linkFlags(rawFlags int) Flags
 
 ```
 searchKey: net.Flags.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4650,7 +4638,7 @@ A HardwareAddr represents a physical hardware address.
 
 ```
 searchKey: net.ParseMAC
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4675,7 +4663,7 @@ ParseMAC parses s as an IEEE 802 MAC-48, EUI-48, EUI-64, or a 20-octet IP over I
 
 ```
 searchKey: net.HardwareAddr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4701,7 +4689,7 @@ Note that in this documentation, referring to an IP address as an IPv4 address o
 
 ```
 searchKey: net.IPv4
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4714,7 +4702,7 @@ IPv4 returns the IP address (in 16-byte form) of the IPv4 address a.b.c.d.
 
 ```
 searchKey: net.ParseCIDR
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4729,7 +4717,7 @@ It returns the IP address and the network implied by the IP and prefix length. F
 
 ```
 searchKey: net.ParseIP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4742,7 +4730,7 @@ ParseIP parses s as an IP address, returning the result. The string s can be in 
 
 ```
 searchKey: net.copyIP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4753,7 +4741,7 @@ func copyIP(x IP) IP
 
 ```
 searchKey: net.interfaceToIPv4Addr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4764,7 +4752,7 @@ func interfaceToIPv4Addr(ifi *Interface) (IP, error)
 
 ```
 searchKey: net.loopbackIP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4775,7 +4763,7 @@ func loopbackIP(net string) IP
 
 ```
 searchKey: net.networkNumberAndMask
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4786,7 +4774,7 @@ func networkNumberAndMask(n *IPNet) (ip IP, m IPMask)
 
 ```
 searchKey: net.parseIPZone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4799,7 +4787,7 @@ parseIPZone parses s as an IP address, return it and its associated zone identif
 
 ```
 searchKey: net.parseIPv4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4812,7 +4800,7 @@ Parse IPv4 address (d.d.d.d).
 
 ```
 searchKey: net.parseIPv6
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4825,7 +4813,7 @@ parseIPv6 parses s as a literal IPv6 address described in RFC 4291 and RFC 5952.
 
 ```
 searchKey: net.parseIPv6Zone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4838,7 +4826,7 @@ parseIPv6Zone parses s as a literal IPv6 address and its associated zone identif
 
 ```
 searchKey: net.IP.DefaultMask
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4864,7 +4852,7 @@ Equal reports whether ip and x are the same IP address. An IPv4 address and that
 
 ```
 searchKey: net.IP.IsGlobalUnicast
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4879,7 +4867,7 @@ The identification of global unicast addresses uses address type identification 
 
 ```
 searchKey: net.IP.IsInterfaceLocalMulticast
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4892,7 +4880,7 @@ IsInterfaceLocalMulticast reports whether ip is an interface-local multicast add
 
 ```
 searchKey: net.IP.IsLinkLocalMulticast
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4905,7 +4893,7 @@ IsLinkLocalMulticast reports whether ip is a link-local multicast address.
 
 ```
 searchKey: net.IP.IsLinkLocalUnicast
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4918,7 +4906,7 @@ IsLinkLocalUnicast reports whether ip is a link-local unicast address.
 
 ```
 searchKey: net.IP.IsLoopback
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4931,7 +4919,7 @@ IsLoopback reports whether ip is a loopback address.
 
 ```
 searchKey: net.IP.IsMulticast
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4944,7 +4932,7 @@ IsMulticast reports whether ip is a multicast address.
 
 ```
 searchKey: net.IP.IsPrivate
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4957,7 +4945,7 @@ IsPrivate reports whether ip is a private address, according to RFC 1918 (IPv4 a
 
 ```
 searchKey: net.IP.IsUnspecified
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4970,7 +4958,7 @@ IsUnspecified reports whether ip is an unspecified address, either the IPv4 addr
 
 ```
 searchKey: net.IP.MarshalText
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4996,7 +4984,7 @@ Mask returns the result of masking the IP address ip with mask.
 
 ```
 searchKey: net.IP.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5016,7 +5004,7 @@ String returns the string form of the IP address ip. It returns one of 4 forms:
 
 ```
 searchKey: net.IP.To16
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5029,7 +5017,7 @@ To16 converts the IP address ip to a 16-byte representation. If ip is not an IP 
 
 ```
 searchKey: net.IP.To4
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5082,7 +5070,7 @@ IPAddr represents the address of an IP end point.
 
 ```
 searchKey: net.ResolveIPAddr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5101,7 +5089,7 @@ See func Dial for a description of the network and address parameters.
 
 ```
 searchKey: net.IPAddr.Network
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5114,7 +5102,7 @@ Network returns the address's network name, "ip".
 
 ```
 searchKey: net.IPAddr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5125,7 +5113,7 @@ func (a *IPAddr) String() string
 
 ```
 searchKey: net.IPAddr.family
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5136,7 +5124,7 @@ func (a *IPAddr) family() int
 
 ```
 searchKey: net.IPAddr.isWildcard
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5147,7 +5135,7 @@ func (a *IPAddr) isWildcard() bool
 
 ```
 searchKey: net.IPAddr.opAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5195,7 +5183,7 @@ IPConn is the implementation of the Conn and PacketConn interfaces for IP networ
 
 ```
 searchKey: net.DialIP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5212,7 +5200,7 @@ If laddr is nil, a local address is automatically chosen. If the IP field of rad
 
 ```
 searchKey: net.ListenIP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5229,7 +5217,7 @@ If the IP field of laddr is nil or an unspecified IP address, ListenIP listens o
 
 ```
 searchKey: net.newIPConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5281,7 +5269,7 @@ The packages golang.org/x/net/ipv4 and golang.org/x/net/ipv6 can be used to mani
 
 ```
 searchKey: net.IPConn.SyscallConn
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5394,7 +5382,7 @@ See type IPNet and func ParseCIDR for details.
 
 ```
 searchKey: net.CIDRMask
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5407,7 +5395,7 @@ CIDRMask returns an IPMask consisting of 'ones' 1 bits followed by 0s up to a to
 
 ```
 searchKey: net.IPv4Mask
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5420,7 +5408,7 @@ IPv4Mask returns the IP mask (in 4-byte form) of the IPv4 mask a.b.c.d.
 
 ```
 searchKey: net.IPMask.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5433,7 +5421,7 @@ Size returns the number of leading ones and total bits in the mask. If the mask 
 
 ```
 searchKey: net.IPMask.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5462,7 +5450,7 @@ An IPNet represents an IP network.
 
 ```
 searchKey: net.mustCIDR
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5488,7 +5476,7 @@ Contains reports whether the network includes ip.
 
 ```
 searchKey: net.IPNet.Network
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5501,7 +5489,7 @@ Network returns the address's network name, "ip+net".
 
 ```
 searchKey: net.IPNet.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5533,7 +5521,7 @@ Interface represents a mapping between network interface name and index. It also
 
 ```
 searchKey: net.InterfaceByIndex
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5548,7 +5536,7 @@ On Solaris, it returns one of the logical network interfaces sharing the logical
 
 ```
 searchKey: net.InterfaceByName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5561,7 +5549,7 @@ InterfaceByName returns the interface specified by name.
 
 ```
 searchKey: net.interfaceByIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5572,7 +5560,7 @@ func interfaceByIndex(ift []Interface, index int) (*Interface, error)
 
 ```
 searchKey: net.ipv4AddrToInterface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5596,7 +5584,7 @@ loopbackInterface returns an available logical network interface for loopback te
 
 ```
 searchKey: net.Interface.Addrs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5609,7 +5597,7 @@ Addrs returns a list of unicast interface addresses for a specific interface.
 
 ```
 searchKey: net.Interface.MulticastAddrs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5633,7 +5621,7 @@ type InvalidAddrError string
 
 ```
 searchKey: net.InvalidAddrError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5644,7 +5632,7 @@ func (e InvalidAddrError) Error() string
 
 ```
 searchKey: net.InvalidAddrError.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5655,7 +5643,7 @@ func (e InvalidAddrError) Temporary() bool
 
 ```
 searchKey: net.InvalidAddrError.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5750,7 +5738,7 @@ Multiple goroutines may invoke methods on a Listener simultaneously.
 
 ```
 searchKey: net.FileListener
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5763,7 +5751,7 @@ FileListener returns a copy of the network listener corresponding to the open fi
 
 ```
 searchKey: net.Listen
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5784,7 +5772,7 @@ Listen uses context.Background internally; to specify the context, use ListenCon
 
 ```
 searchKey: net.fileListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5795,7 +5783,7 @@ func fileListener(f *os.File) (Listener, error)
 
 ```
 searchKey: net.newLocalListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5875,7 +5863,7 @@ OpError is the error type usually returned by functions in the net package. It d
 
 ```
 searchKey: net.OpError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5886,7 +5874,7 @@ func (e *OpError) Error() string
 
 ```
 searchKey: net.OpError.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5897,7 +5885,7 @@ func (e *OpError) Temporary() bool
 
 ```
 searchKey: net.OpError.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5908,7 +5896,7 @@ func (e *OpError) Timeout() bool
 
 ```
 searchKey: net.OpError.Unwrap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5919,7 +5907,7 @@ func (e *OpError) Unwrap() error
 
 ```
 searchKey: net.OpError.isValid
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6004,7 +5992,7 @@ Multiple goroutines may invoke methods on a PacketConn simultaneously.
 
 ```
 searchKey: net.FilePacketConn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6017,7 +6005,7 @@ FilePacketConn returns a copy of the packet network connection corresponding to 
 
 ```
 searchKey: net.ListenPacket
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6038,7 +6026,7 @@ ListenPacket uses context.Background internally; to specify the context, use Lis
 
 ```
 searchKey: net.filePacketConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6049,7 +6037,7 @@ func filePacketConn(f *os.File) (PacketConn, error)
 
 ```
 searchKey: net.newLocalPacketListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6080,7 +6068,7 @@ A ParseError is the error type of literal network address parsers.
 
 ```
 searchKey: net.ParseError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6091,7 +6079,7 @@ func (e *ParseError) Error() string
 
 ```
 searchKey: net.ParseError.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6102,7 +6090,7 @@ func (e *ParseError) Temporary() bool
 
 ```
 searchKey: net.ParseError.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6329,7 +6317,7 @@ exchange sends a query on the connection and hopes for a response.
 
 ```
 searchKey: net.Resolver.getLookupGroup
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6550,7 +6538,7 @@ func (r *Resolver) lookupTXT(ctx context.Context, name string) ([]string, error)
 
 ```
 searchKey: net.Resolver.preferGo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6574,7 +6562,7 @@ resolveAddrList resolves addr using hint and returns a list of addresses. The re
 
 ```
 searchKey: net.Resolver.strictErrors
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6633,7 +6621,7 @@ TCPAddr represents the address of a TCP end point.
 
 ```
 searchKey: net.ResolveTCPAddr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6652,7 +6640,7 @@ See func Dial for a description of the network and address parameters.
 
 ```
 searchKey: net.TCPAddr.Network
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6665,7 +6653,7 @@ Network returns the address's network name, "tcp".
 
 ```
 searchKey: net.TCPAddr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6676,7 +6664,7 @@ func (a *TCPAddr) String() string
 
 ```
 searchKey: net.TCPAddr.family
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6687,7 +6675,7 @@ func (a *TCPAddr) family() int
 
 ```
 searchKey: net.TCPAddr.isWildcard
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6698,7 +6686,7 @@ func (a *TCPAddr) isWildcard() bool
 
 ```
 searchKey: net.TCPAddr.opAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6746,7 +6734,7 @@ TCPConn is an implementation of the Conn interface for TCP network connections.
 
 ```
 searchKey: net.DialTCP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6763,7 +6751,7 @@ If laddr is nil, a local address is automatically chosen. If the IP field of rad
 
 ```
 searchKey: net.newTCPConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6774,7 +6762,7 @@ func newTCPConn(fd *netFD) *TCPConn
 
 ```
 searchKey: net.slowDialTCP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6787,7 +6775,7 @@ In some environments, the slow IPs may be explicitly unreachable, and fail more 
 
 ```
 searchKey: net.TCPConn.CloseRead
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6800,7 +6788,7 @@ CloseRead shuts down the reading side of the TCP connection. Most callers should
 
 ```
 searchKey: net.TCPConn.CloseWrite
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6884,7 +6872,7 @@ SetNoDelay controls whether the operating system should delay packet transmissio
 
 ```
 searchKey: net.TCPConn.SyscallConn
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6924,7 +6912,7 @@ TCPListener is a TCP network listener. Clients should typically use variables of
 
 ```
 searchKey: net.ListenTCP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6941,7 +6929,7 @@ If the IP field of laddr is nil or an unspecified IP address, ListenTCP listens 
 
 ```
 searchKey: net.TCPListener.Accept
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6954,7 +6942,7 @@ Accept implements the Accept method in the Listener interface; it waits for the 
 
 ```
 searchKey: net.TCPListener.AcceptTCP
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6967,7 +6955,7 @@ AcceptTCP accepts the next incoming call and returns the new connection.
 
 ```
 searchKey: net.TCPListener.Addr
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6980,7 +6968,7 @@ Addr returns the listener's network address, a *TCPAddr. The Addr returned is sh
 
 ```
 searchKey: net.TCPListener.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6993,7 +6981,7 @@ Close stops listening on the TCP address. Already Accepted connections are not c
 
 ```
 searchKey: net.TCPListener.File
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7021,7 +7009,7 @@ SetDeadline sets the deadline associated with the listener. A zero time value di
 
 ```
 searchKey: net.TCPListener.SyscallConn
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7036,7 +7024,7 @@ The returned RawConn only supports calling Control. Read and Write return an err
 
 ```
 searchKey: net.TCPListener.accept
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7047,7 +7035,7 @@ func (ln *TCPListener) accept() (*TCPConn, error)
 
 ```
 searchKey: net.TCPListener.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7058,7 +7046,7 @@ func (ln *TCPListener) close() error
 
 ```
 searchKey: net.TCPListener.file
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7069,7 +7057,7 @@ func (ln *TCPListener) file() (*os.File, error)
 
 ```
 searchKey: net.TCPListener.ok
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7080,7 +7068,7 @@ func (ln *TCPListener) ok() bool
 
 ```
 searchKey: net.TCPListener.port
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7108,7 +7096,7 @@ UDPAddr represents the address of a UDP end point.
 
 ```
 searchKey: net.ResolveUDPAddr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7127,7 +7115,7 @@ See func Dial for a description of the network and address parameters.
 
 ```
 searchKey: net.UDPAddr.Network
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7140,7 +7128,7 @@ Network returns the address's network name, "udp".
 
 ```
 searchKey: net.UDPAddr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7151,7 +7139,7 @@ func (a *UDPAddr) String() string
 
 ```
 searchKey: net.UDPAddr.family
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7162,7 +7150,7 @@ func (a *UDPAddr) family() int
 
 ```
 searchKey: net.UDPAddr.isWildcard
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7173,7 +7161,7 @@ func (a *UDPAddr) isWildcard() bool
 
 ```
 searchKey: net.UDPAddr.opAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7221,7 +7209,7 @@ UDPConn is the implementation of the Conn and PacketConn interfaces for UDP netw
 
 ```
 searchKey: net.DialUDP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7238,7 +7226,7 @@ If laddr is nil, a local address is automatically chosen. If the IP field of rad
 
 ```
 searchKey: net.ListenMulticastUDP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7259,7 +7247,7 @@ Note that ListenMulticastUDP will set the IP_MULTICAST_LOOP socket option to 0 u
 
 ```
 searchKey: net.ListenUDP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7276,7 +7264,7 @@ If the IP field of laddr is nil or an unspecified IP address, ListenUDP listens 
 
 ```
 searchKey: net.newUDPConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7328,7 +7316,7 @@ The packages golang.org/x/net/ipv4 and golang.org/x/net/ipv6 can be used to mani
 
 ```
 searchKey: net.UDPConn.SyscallConn
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7382,7 +7370,7 @@ WriteToUDP acts like WriteTo but takes a UDPAddr.
 
 ```
 searchKey: net.UDPConn.port
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7466,7 +7454,7 @@ UnixAddr represents the address of a Unix domain socket end point.
 
 ```
 searchKey: net.ResolveUnixAddr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7483,7 +7471,7 @@ See func Dial for a description of the network and address parameters.
 
 ```
 searchKey: net.UnixAddr.Network
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7496,7 +7484,7 @@ Network returns the address's network name, "unix", "unixgram" or "unixpacket".
 
 ```
 searchKey: net.UnixAddr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7507,7 +7495,7 @@ func (a *UnixAddr) String() string
 
 ```
 searchKey: net.UnixAddr.family
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7518,7 +7506,7 @@ func (a *UnixAddr) family() int
 
 ```
 searchKey: net.UnixAddr.isWildcard
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7529,7 +7517,7 @@ func (a *UnixAddr) isWildcard() bool
 
 ```
 searchKey: net.UnixAddr.opAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7577,7 +7565,7 @@ UnixConn is an implementation of the Conn interface for connections to Unix doma
 
 ```
 searchKey: net.DialUnix
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7594,7 +7582,7 @@ If laddr is non-nil, it is used as the local address for the connection.
 
 ```
 searchKey: net.ListenUnixgram
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7609,7 +7597,7 @@ The network must be "unixgram".
 
 ```
 searchKey: net.newUnixConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7620,7 +7608,7 @@ func newUnixConn(fd *netFD) *UnixConn
 
 ```
 searchKey: net.UnixConn.CloseRead
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7633,7 +7621,7 @@ CloseRead shuts down the reading side of the Unix domain connection. Most caller
 
 ```
 searchKey: net.UnixConn.CloseWrite
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7687,7 +7675,7 @@ Note that if len(b) == 0 and len(oob) > 0, this function will still read (and di
 
 ```
 searchKey: net.UnixConn.SyscallConn
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7803,7 +7791,7 @@ UnixListener is a Unix domain socket listener. Clients should typically use vari
 
 ```
 searchKey: net.ListenUnix
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7818,7 +7806,7 @@ The network must be "unix" or "unixpacket".
 
 ```
 searchKey: net.UnixListener.Accept
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7831,7 +7819,7 @@ Accept implements the Accept method in the Listener interface. Returned connecti
 
 ```
 searchKey: net.UnixListener.AcceptUnix
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7844,7 +7832,7 @@ AcceptUnix accepts the next incoming call and returns the new connection.
 
 ```
 searchKey: net.UnixListener.Addr
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7857,7 +7845,7 @@ Addr returns the listener's network address. The Addr returned is shared by all 
 
 ```
 searchKey: net.UnixListener.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7870,7 +7858,7 @@ Close stops listening on the Unix address. Already accepted connections are not 
 
 ```
 searchKey: net.UnixListener.File
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7913,7 +7901,7 @@ The default behavior is to unlink the socket file only when package net created 
 
 ```
 searchKey: net.UnixListener.SyscallConn
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7928,7 +7916,7 @@ The returned RawConn only supports calling Control. Read and Write return an err
 
 ```
 searchKey: net.UnixListener.accept
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7939,7 +7927,7 @@ func (ln *UnixListener) accept() (*UnixConn, error)
 
 ```
 searchKey: net.UnixListener.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7950,7 +7938,7 @@ func (ln *UnixListener) close() error
 
 ```
 searchKey: net.UnixListener.file
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7961,7 +7949,7 @@ func (ln *UnixListener) file() (*os.File, error)
 
 ```
 searchKey: net.UnixListener.ok
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7983,7 +7971,7 @@ type UnknownNetworkError string
 
 ```
 searchKey: net.UnknownNetworkError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7994,7 +7982,7 @@ func (e UnknownNetworkError) Error() string
 
 ```
 searchKey: net.UnknownNetworkError.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8005,7 +7993,7 @@ func (e UnknownNetworkError) Temporary() bool
 
 ```
 searchKey: net.UnknownNetworkError.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8029,7 +8017,7 @@ An addrList represents a list of network endpoint addresses.
 
 ```
 searchKey: net.filterAddrList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -8094,7 +8082,7 @@ An addrinfoErrno represents a getaddrinfo, getnameinfo-specific error number. It
 
 ```
 searchKey: net.addrinfoErrno.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8105,7 +8093,7 @@ func (eai addrinfoErrno) Error() string
 
 ```
 searchKey: net.addrinfoErrno.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8116,7 +8104,7 @@ func (eai addrinfoErrno) Temporary() bool
 
 ```
 searchKey: net.addrinfoErrno.Timeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8155,7 +8143,7 @@ byMaskLength sorts policyTableEntry by the size of their Prefix.Mask.Size, from 
 
 ```
 searchKey: net.byMaskLength.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8201,7 +8189,7 @@ byPref implements sort.Interface to sort MX records by preference
 
 ```
 searchKey: net.byPref.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8234,7 +8222,7 @@ func (s byPref) Swap(i, j int)
 
 ```
 searchKey: net.byPref.sort
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8260,7 +8248,7 @@ byPriorityWeight sorts SRV records by ascending priority and weight.
 
 ```
 searchKey: net.byPriorityWeight.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8293,7 +8281,7 @@ func (s byPriorityWeight) Swap(i, j int)
 
 ```
 searchKey: net.byPriorityWeight.shuffleByWeight
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8306,7 +8294,7 @@ shuffleByWeight shuffles SRV records by weight using the algorithm described in 
 
 ```
 searchKey: net.byPriorityWeight.sort
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8335,7 +8323,7 @@ type byRFC6724 struct {
 
 ```
 searchKey: net.byRFC6724.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8413,7 +8401,7 @@ systemConf returns the machine's network configuration.
 
 ```
 searchKey: net.conf.canUseCgo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8452,7 +8440,7 @@ type conn struct {
 
 ```
 searchKey: net.conn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8465,7 +8453,7 @@ Close closes the connection.
 
 ```
 searchKey: net.conn.File
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8480,7 +8468,7 @@ The returned os.File's file descriptor is different from the connection's. Attem
 
 ```
 searchKey: net.conn.LocalAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8506,7 +8494,7 @@ Read implements the Conn Read method.
 
 ```
 searchKey: net.conn.RemoteAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8597,7 +8585,7 @@ Write implements the Conn Write method.
 
 ```
 searchKey: net.conn.ok
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8632,7 +8620,7 @@ type contextWithNonZeroDeadline struct {
 
 ```
 searchKey: net.contextWithNonZeroDeadline.Deadline
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8668,7 +8656,7 @@ type dnsConfig struct {
 
 ```
 searchKey: net.dnsReadConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -8694,7 +8682,7 @@ nameList returns a list of names for sequential DNS queries.
 
 ```
 searchKey: net.dnsConfig.serverOffset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8761,7 +8749,7 @@ func (dss *dualStackServer) buildup(handler func(*dualStackServer, Listener)) er
 
 ```
 searchKey: net.dualStackServer.teardown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8803,7 +8791,7 @@ type fakeDNSConn struct {
 
 ```
 searchKey: net.fakeDNSConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8861,7 +8849,7 @@ type fakeDNSPacketConn struct {
 
 ```
 searchKey: net.fakeDNSPacketConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8923,7 +8911,7 @@ type file struct {
 
 ```
 searchKey: net.open
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -8934,7 +8922,7 @@ func open(name string) (*file, error)
 
 ```
 searchKey: net.file.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8945,7 +8933,7 @@ func (f *file) close()
 
 ```
 searchKey: net.file.getLineFromData
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8956,7 +8944,7 @@ func (f *file) getLineFromData() (s string, ok bool)
 
 ```
 searchKey: net.file.readLine
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8978,7 +8966,7 @@ type fileAddr string
 
 ```
 searchKey: net.fileAddr.Network
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8989,7 +8977,7 @@ func (fileAddr) Network() string
 
 ```
 searchKey: net.fileAddr.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9013,7 +9001,7 @@ hostLookupOrder specifies the order of LookupHost lookup strategies. It is basic
 
 ```
 searchKey: net.hostLookupOrder.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9038,7 +9026,7 @@ type ifStats struct {
 
 ```
 searchKey: net.interfaceStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9064,7 +9052,7 @@ type ipAttr struct {
 
 ```
 searchKey: net.ipAttrOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9106,7 +9094,7 @@ type ipStackCapabilities struct {
 
 ```
 searchKey: net.ipStackCapabilities.probe
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9205,7 +9193,7 @@ type localPacketServer struct {
 
 ```
 searchKey: net.newLocalPacketServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9227,7 +9215,7 @@ func (ls *localPacketServer) buildup(handler func(*localPacketServer, PacketConn
 
 ```
 searchKey: net.localPacketServer.teardown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9254,7 +9242,7 @@ type localServer struct {
 
 ```
 searchKey: net.newLocalServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9276,7 +9264,7 @@ func (ls *localServer) buildup(handler func(*localServer, Listener)) error
 
 ```
 searchKey: net.localServer.teardown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9313,7 +9301,7 @@ type lookupCustomResolver struct {
 
 ```
 searchKey: net.lookupCustomResolver.dial
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9347,7 +9335,7 @@ Network file descriptor.
 
 ```
 searchKey: net.internetSocket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9358,7 +9346,7 @@ func internetSocket(ctx context.Context, net string, laddr, raddr sockaddr, soty
 
 ```
 searchKey: net.newFD
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9369,7 +9357,7 @@ func newFD(sysfd, family, sotype int, net string) (*netFD, error)
 
 ```
 searchKey: net.newFileFD
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9380,7 +9368,7 @@ func newFileFD(f *os.File) (*netFD, error)
 
 ```
 searchKey: net.socket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9393,7 +9381,7 @@ socket returns a network file descriptor that is ready for asynchronous I/O usin
 
 ```
 searchKey: net.unixSocket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9404,7 +9392,7 @@ func unixSocket(ctx context.Context, net string, laddr, raddr sockaddr, mode str
 
 ```
 searchKey: net.netFD.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9470,7 +9458,7 @@ func (fd *netFD) Write(p []byte) (nn int, err error)
 
 ```
 searchKey: net.netFD.accept
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9481,7 +9469,7 @@ func (fd *netFD) accept() (netfd *netFD, err error)
 
 ```
 searchKey: net.netFD.addrFunc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9492,7 +9480,7 @@ func (fd *netFD) addrFunc() func(syscall.Sockaddr) Addr
 
 ```
 searchKey: net.netFD.closeRead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9503,7 +9491,7 @@ func (fd *netFD) closeRead() error
 
 ```
 searchKey: net.netFD.closeWrite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9525,7 +9513,7 @@ func (fd *netFD) connect(ctx context.Context, la, ra syscall.Sockaddr) (rsa sysc
 
 ```
 searchKey: net.netFD.ctrlNetwork
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9547,7 +9535,7 @@ func (fd *netFD) dial(ctx context.Context, laddr, raddr sockaddr, ctrlFn func(st
 
 ```
 searchKey: net.netFD.dup
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9558,7 +9546,7 @@ func (fd *netFD) dup() (f *os.File, err error)
 
 ```
 searchKey: net.netFD.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9591,7 +9579,7 @@ func (fd *netFD) listenStream(laddr sockaddr, backlog int, ctrlFn func(string, s
 
 ```
 searchKey: net.netFD.name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9717,7 +9705,7 @@ nssConf represents the state of the machine's /etc/nsswitch.conf file.
 
 ```
 searchKey: net.nssStr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9728,7 +9716,7 @@ func nssStr(s string) *nssConf
 
 ```
 searchKey: net.parseNSSConf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9739,7 +9727,7 @@ func parseNSSConf(r io.Reader) *nssConf
 
 ```
 searchKey: net.parseNSSConfFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9809,7 +9797,7 @@ type nssSource struct {
 
 ```
 searchKey: net.nssSource.standardCriteria
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9864,7 +9852,7 @@ type packetListener struct {
 
 ```
 searchKey: net.packetListener.newLocalServer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9905,7 +9893,7 @@ type pipe struct {
 
 ```
 searchKey: net.pipe.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9916,7 +9904,7 @@ func (p *pipe) Close() error
 
 ```
 searchKey: net.pipe.LocalAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9938,7 +9926,7 @@ func (p *pipe) Read(b []byte) (int, error)
 
 ```
 searchKey: net.pipe.RemoteAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10026,7 +10014,7 @@ type pipeAddr struct{}
 
 ```
 searchKey: net.pipeAddr.Network
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10037,7 +10025,7 @@ func (pipeAddr) Network() string
 
 ```
 searchKey: net.pipeAddr.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10091,7 +10079,7 @@ A zero value for t prevents timeout.
 
 ```
 searchKey: net.pipeDeadline.wait
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10170,7 +10158,7 @@ type rawConn struct {
 
 ```
 searchKey: net.newRawConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10214,7 +10202,7 @@ func (c *rawConn) Write(f func(uintptr) bool) error
 
 ```
 searchKey: net.rawConn.ok
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10238,7 +10226,7 @@ type rawListener struct {
 
 ```
 searchKey: net.newRawListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10308,7 +10296,7 @@ func (conf *resolvConfTest) forceUpdate(name string, lastChecked time.Time) erro
 
 ```
 searchKey: net.resolvConfTest.servers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10319,7 +10307,7 @@ func (conf *resolvConfTest) servers() []string
 
 ```
 searchKey: net.resolvConfTest.teardown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10412,7 +10400,7 @@ A resolverConfig represents a DNS stub resolver configuration.
 
 ```
 searchKey: net.resolverConfig.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10425,7 +10413,7 @@ init initializes conf and is only called via conf.initOnce.
 
 ```
 searchKey: net.resolverConfig.releaseSema
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10436,7 +10424,7 @@ func (conf *resolverConfig) releaseSema()
 
 ```
 searchKey: net.resolverConfig.tryAcquireSema
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10487,7 +10475,7 @@ type routeStats struct {
 
 ```
 searchKey: net.validateInterfaceMulticastAddrs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10498,7 +10486,7 @@ func validateInterfaceMulticastAddrs(ifat []Addr) (*routeStats, error)
 
 ```
 searchKey: net.validateInterfaceUnicastAddrs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10522,7 +10510,7 @@ RFC 6724 section 3.1.
 
 ```
 searchKey: net.classifyScope
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10594,7 +10582,7 @@ type streamListener struct {
 
 ```
 searchKey: net.streamListener.newLocalServer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10860,7 +10848,7 @@ func (ti *testInterface) setPointToPoint(suffix int) error
 
 ```
 searchKey: net.testInterface.setup
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10871,7 +10859,7 @@ func (ti *testInterface) setup() error
 
 ```
 searchKey: net.testInterface.teardown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10906,7 +10894,7 @@ type timeoutError struct{}
 
 ```
 searchKey: net.timeoutError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10917,7 +10905,7 @@ func (e *timeoutError) Error() string
 
 ```
 searchKey: net.timeoutError.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10928,7 +10916,7 @@ func (e *timeoutError) Temporary() bool
 
 ```
 searchKey: net.timeoutError.Timeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10950,15 +10938,11 @@ type writerOnly struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDNSName" href="#BenchmarkDNSName">func BenchmarkDNSName(b *testing.B)</a>
 
 ```
 searchKey: net.BenchmarkDNSName
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -10969,7 +10953,7 @@ func BenchmarkDNSName(b *testing.B)
 
 ```
 searchKey: net.BenchmarkGoLookupIP
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -10980,7 +10964,7 @@ func BenchmarkGoLookupIP(b *testing.B)
 
 ```
 searchKey: net.BenchmarkGoLookupIPNoSuchHost
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -10991,7 +10975,7 @@ func BenchmarkGoLookupIPNoSuchHost(b *testing.B)
 
 ```
 searchKey: net.BenchmarkGoLookupIPWithBrokenNameServer
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11002,7 +10986,7 @@ func BenchmarkGoLookupIPWithBrokenNameServer(b *testing.B)
 
 ```
 searchKey: net.BenchmarkIPEqual
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11013,7 +10997,7 @@ func BenchmarkIPEqual(b *testing.B)
 
 ```
 searchKey: net.BenchmarkIPMaskString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11024,7 +11008,7 @@ func BenchmarkIPMaskString(b *testing.B)
 
 ```
 searchKey: net.BenchmarkIPString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11035,7 +11019,7 @@ func BenchmarkIPString(b *testing.B)
 
 ```
 searchKey: net.BenchmarkInterfaceAddrs
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11046,7 +11030,7 @@ func BenchmarkInterfaceAddrs(b *testing.B)
 
 ```
 searchKey: net.BenchmarkInterfaceByIndex
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11057,7 +11041,7 @@ func BenchmarkInterfaceByIndex(b *testing.B)
 
 ```
 searchKey: net.BenchmarkInterfaceByName
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11068,7 +11052,7 @@ func BenchmarkInterfaceByName(b *testing.B)
 
 ```
 searchKey: net.BenchmarkInterfaces
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11079,7 +11063,7 @@ func BenchmarkInterfaces(b *testing.B)
 
 ```
 searchKey: net.BenchmarkInterfacesAndAddrs
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11090,7 +11074,7 @@ func BenchmarkInterfacesAndAddrs(b *testing.B)
 
 ```
 searchKey: net.BenchmarkInterfacesAndMulticastAddrs
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11101,7 +11085,7 @@ func BenchmarkInterfacesAndMulticastAddrs(b *testing.B)
 
 ```
 searchKey: net.BenchmarkParseIP
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11112,7 +11096,7 @@ func BenchmarkParseIP(b *testing.B)
 
 ```
 searchKey: net.BenchmarkSetReadDeadline
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11123,7 +11107,7 @@ func BenchmarkSetReadDeadline(b *testing.B)
 
 ```
 searchKey: net.BenchmarkTCP4ConcurrentReadWrite
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11134,7 +11118,7 @@ func BenchmarkTCP4ConcurrentReadWrite(b *testing.B)
 
 ```
 searchKey: net.BenchmarkTCP4OneShot
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11145,7 +11129,7 @@ func BenchmarkTCP4OneShot(b *testing.B)
 
 ```
 searchKey: net.BenchmarkTCP4OneShotTimeout
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11156,7 +11140,7 @@ func BenchmarkTCP4OneShotTimeout(b *testing.B)
 
 ```
 searchKey: net.BenchmarkTCP4Persistent
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11167,7 +11151,7 @@ func BenchmarkTCP4Persistent(b *testing.B)
 
 ```
 searchKey: net.BenchmarkTCP4PersistentTimeout
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11178,7 +11162,7 @@ func BenchmarkTCP4PersistentTimeout(b *testing.B)
 
 ```
 searchKey: net.BenchmarkTCP6ConcurrentReadWrite
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11189,7 +11173,7 @@ func BenchmarkTCP6ConcurrentReadWrite(b *testing.B)
 
 ```
 searchKey: net.BenchmarkTCP6OneShot
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11200,7 +11184,7 @@ func BenchmarkTCP6OneShot(b *testing.B)
 
 ```
 searchKey: net.BenchmarkTCP6OneShotTimeout
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11211,7 +11195,7 @@ func BenchmarkTCP6OneShotTimeout(b *testing.B)
 
 ```
 searchKey: net.BenchmarkTCP6Persistent
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11222,7 +11206,7 @@ func BenchmarkTCP6Persistent(b *testing.B)
 
 ```
 searchKey: net.BenchmarkTCP6PersistentTimeout
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11233,7 +11217,7 @@ func BenchmarkTCP6PersistentTimeout(b *testing.B)
 
 ```
 searchKey: net.BenchmarkUDP6LinkLocalUnicast
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11244,7 +11228,7 @@ func BenchmarkUDP6LinkLocalUnicast(b *testing.B)
 
 ```
 searchKey: net.BenchmarkWriteToReadFromUDP
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -11283,7 +11267,7 @@ Interfaces returns a list of the system's network interfaces.
 
 ```
 searchKey: net.JoinHostPort
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11298,7 +11282,7 @@ See func Dial for a description of the host and port parameters.
 
 ```
 searchKey: net.LookupAddr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11317,7 +11301,7 @@ LookupAddr uses context.Background internally; to specify the context, use Resol
 
 ```
 searchKey: net.LookupCNAME
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11336,7 +11320,7 @@ LookupCNAME uses context.Background internally; to specify the context, use Reso
 
 ```
 searchKey: net.LookupHost
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11351,7 +11335,7 @@ LookupHost uses context.Background internally; to specify the context, use Resol
 
 ```
 searchKey: net.LookupIP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11364,7 +11348,7 @@ LookupIP looks up host using the local resolver. It returns a slice of that host
 
 ```
 searchKey: net.LookupMX
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11381,7 +11365,7 @@ LookupMX uses context.Background internally; to specify the context, use Resolve
 
 ```
 searchKey: net.LookupNS
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11398,7 +11382,7 @@ LookupNS uses context.Background internally; to specify the context, use Resolve
 
 ```
 searchKey: net.LookupPort
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11413,7 +11397,7 @@ LookupPort uses context.Background internally; to specify the context, use Resol
 
 ```
 searchKey: net.LookupSRV
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11430,7 +11414,7 @@ The returned service names are validated to be properly formatted presentation-f
 
 ```
 searchKey: net.LookupTXT
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11458,7 +11442,7 @@ Pipe creates a synchronous, in-memory, full duplex network connection; both ends
 
 ```
 searchKey: net.SplitHostPort
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11475,7 +11459,7 @@ See func Dial for a description of the hostport parameter, and host and port res
 
 ```
 searchKey: net.TestAcceptError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11486,7 +11470,7 @@ func TestAcceptError(t *testing.T)
 
 ```
 searchKey: net.TestAcceptIgnoreAbortedConnRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11499,7 +11483,7 @@ See golang.org/issue/6163, golang.org/issue/6987.
 
 ```
 searchKey: net.TestAcceptTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11510,7 +11494,7 @@ func TestAcceptTimeout(t *testing.T)
 
 ```
 searchKey: net.TestAcceptTimeoutMustNotReturn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11521,7 +11505,7 @@ func TestAcceptTimeoutMustNotReturn(t *testing.T)
 
 ```
 searchKey: net.TestAcceptTimeoutMustReturn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11532,7 +11516,7 @@ func TestAcceptTimeoutMustReturn(t *testing.T)
 
 ```
 searchKey: net.TestAddrList
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11543,7 +11527,7 @@ func TestAddrList(t *testing.T)
 
 ```
 searchKey: net.TestAddrListPartition
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11554,7 +11538,7 @@ func TestAddrListPartition(t *testing.T)
 
 ```
 searchKey: net.TestAvoidDNSName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11567,7 +11551,7 @@ Issue 13705: don't try to resolve onion addresses, etc
 
 ```
 searchKey: net.TestBuffers_WriteTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11578,7 +11562,7 @@ func TestBuffers_WriteTo(t *testing.T)
 
 ```
 searchKey: net.TestBuffers_consume
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11589,7 +11573,7 @@ func TestBuffers_consume(t *testing.T)
 
 ```
 searchKey: net.TestBuffers_read
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11600,7 +11584,7 @@ func TestBuffers_read(t *testing.T)
 
 ```
 searchKey: net.TestCIDRMask
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11611,7 +11595,7 @@ func TestCIDRMask(t *testing.T)
 
 ```
 searchKey: net.TestCVE202133195
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11622,7 +11606,7 @@ func TestCVE202133195(t *testing.T)
 
 ```
 searchKey: net.TestCancelAfterDial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11633,7 +11617,7 @@ func TestCancelAfterDial(t *testing.T)
 
 ```
 searchKey: net.TestCgoLookupIP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11644,7 +11628,7 @@ func TestCgoLookupIP(t *testing.T)
 
 ```
 searchKey: net.TestCgoLookupIPWithCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11655,7 +11639,7 @@ func TestCgoLookupIPWithCancel(t *testing.T)
 
 ```
 searchKey: net.TestCgoLookupPTR
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11666,7 +11650,7 @@ func TestCgoLookupPTR(t *testing.T)
 
 ```
 searchKey: net.TestCgoLookupPTRWithCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11677,7 +11661,7 @@ func TestCgoLookupPTRWithCancel(t *testing.T)
 
 ```
 searchKey: net.TestCgoLookupPort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11688,7 +11672,7 @@ func TestCgoLookupPort(t *testing.T)
 
 ```
 searchKey: net.TestCgoLookupPortWithCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11699,7 +11683,7 @@ func TestCgoLookupPortWithCancel(t *testing.T)
 
 ```
 searchKey: net.TestCloseError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11710,7 +11694,7 @@ func TestCloseError(t *testing.T)
 
 ```
 searchKey: net.TestCloseRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11721,7 +11705,7 @@ func TestCloseRead(t *testing.T)
 
 ```
 searchKey: net.TestCloseUnblocksRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11734,7 +11718,7 @@ Issue 17695: verify that a blocked Read is woken up by a Close.
 
 ```
 searchKey: net.TestCloseWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11745,7 +11729,7 @@ func TestCloseWrite(t *testing.T)
 
 ```
 searchKey: net.TestClosingListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11758,7 +11742,7 @@ Issue 21856.
 
 ```
 searchKey: net.TestConcurrentPreferGoResolversDial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11771,7 +11755,7 @@ TestConcurrentPreferGoResolversDial tests that multiple resolvers with the Prefe
 
 ```
 searchKey: net.TestConcurrentSetDeadline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11784,7 +11768,7 @@ Issue 35367.
 
 ```
 searchKey: net.TestConfHostLookupOrder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11795,7 +11779,7 @@ func TestConfHostLookupOrder(t *testing.T)
 
 ```
 searchKey: net.TestConnAndListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11806,7 +11790,7 @@ func TestConnAndListener(t *testing.T)
 
 ```
 searchKey: net.TestConnAndPacketConn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11817,7 +11801,7 @@ func TestConnAndPacketConn(t *testing.T)
 
 ```
 searchKey: net.TestConnClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11828,7 +11812,7 @@ func TestConnClose(t *testing.T)
 
 ```
 searchKey: net.TestCopyPipeIntoTCP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11839,7 +11823,7 @@ func TestCopyPipeIntoTCP(t *testing.T)
 
 ```
 searchKey: net.TestDNSDefaultSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11850,7 +11834,7 @@ func TestDNSDefaultSearch(t *testing.T)
 
 ```
 searchKey: net.TestDNSDialTCP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11863,7 +11847,7 @@ Issue 26573: verify that Conns that don't implement PacketConn are treated as st
 
 ```
 searchKey: net.TestDNSFlood
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11874,7 +11858,7 @@ func TestDNSFlood(t *testing.T)
 
 ```
 searchKey: net.TestDNSGoroutineRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11887,7 +11871,7 @@ Test for a race between uninstalling the test hooks and closing a socket connect
 
 ```
 searchKey: net.TestDNSName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11898,7 +11882,7 @@ func TestDNSName(t *testing.T)
 
 ```
 searchKey: net.TestDNSNameLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11909,7 +11893,7 @@ func TestDNSNameLength(t *testing.T)
 
 ```
 searchKey: net.TestDNSReadConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11920,7 +11904,7 @@ func TestDNSReadConfig(t *testing.T)
 
 ```
 searchKey: net.TestDNSReadMissingFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11931,7 +11915,7 @@ func TestDNSReadMissingFile(t *testing.T)
 
 ```
 searchKey: net.TestDNSSRVUniformity
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11942,7 +11926,7 @@ func TestDNSSRVUniformity(t *testing.T)
 
 ```
 searchKey: net.TestDNSTransportFallback
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11953,7 +11937,7 @@ func TestDNSTransportFallback(t *testing.T)
 
 ```
 searchKey: net.TestDNSUseTCP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11966,7 +11950,7 @@ Issue 29358. Add configuration knob to force TCP-only DNS requests in the pure G
 
 ```
 searchKey: net.TestDialAddrError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11977,7 +11961,7 @@ func TestDialAddrError(t *testing.T)
 
 ```
 searchKey: net.TestDialCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11988,7 +11972,7 @@ func TestDialCancel(t *testing.T)
 
 ```
 searchKey: net.TestDialContextCancelRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12001,7 +11985,7 @@ Issue 16523
 
 ```
 searchKey: net.TestDialError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12012,7 +11996,7 @@ func TestDialError(t *testing.T)
 
 ```
 searchKey: net.TestDialGoogle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12023,7 +12007,7 @@ func TestDialGoogle(t *testing.T)
 
 ```
 searchKey: net.TestDialListenIPArgs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12034,7 +12018,7 @@ func TestDialListenIPArgs(t *testing.T)
 
 ```
 searchKey: net.TestDialListenerAddr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12047,7 +12031,7 @@ Issue 18806: it should always be possible to net.Dial a net.Listener().Addr().St
 
 ```
 searchKey: net.TestDialLocal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12058,7 +12042,7 @@ func TestDialLocal(t *testing.T)
 
 ```
 searchKey: net.TestDialParallel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12069,7 +12053,7 @@ func TestDialParallel(t *testing.T)
 
 ```
 searchKey: net.TestDialParallelSpuriousConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12080,7 +12064,7 @@ func TestDialParallelSpuriousConnection(t *testing.T)
 
 ```
 searchKey: net.TestDialTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12091,7 +12075,7 @@ func TestDialTimeout(t *testing.T)
 
 ```
 searchKey: net.TestDialTimeoutMaxDuration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12102,7 +12086,7 @@ func TestDialTimeoutMaxDuration(t *testing.T)
 
 ```
 searchKey: net.TestDialWithNonZeroDeadline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12113,7 +12097,7 @@ func TestDialWithNonZeroDeadline(t *testing.T)
 
 ```
 searchKey: net.TestDialerControl
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12124,7 +12108,7 @@ func TestDialerControl(t *testing.T)
 
 ```
 searchKey: net.TestDialerDualStack
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12135,7 +12119,7 @@ func TestDialerDualStack(t *testing.T)
 
 ```
 searchKey: net.TestDialerDualStackFDLeak
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12146,7 +12130,7 @@ func TestDialerDualStackFDLeak(t *testing.T)
 
 ```
 searchKey: net.TestDialerFallbackDelay
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12157,7 +12141,7 @@ func TestDialerFallbackDelay(t *testing.T)
 
 ```
 searchKey: net.TestDialerKeepAlive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12168,7 +12152,7 @@ func TestDialerKeepAlive(t *testing.T)
 
 ```
 searchKey: net.TestDialerLocalAddr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12179,7 +12163,7 @@ func TestDialerLocalAddr(t *testing.T)
 
 ```
 searchKey: net.TestDialerPartialDeadline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12190,7 +12174,7 @@ func TestDialerPartialDeadline(t *testing.T)
 
 ```
 searchKey: net.TestDtoi
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12201,7 +12185,7 @@ func TestDtoi(t *testing.T)
 
 ```
 searchKey: net.TestDualStackTCPListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12216,7 +12200,7 @@ On DragonFly BSD, we expect the kernel version of node under test to be greater 
 
 ```
 searchKey: net.TestDualStackUDPListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12231,7 +12215,7 @@ On DragonFly BSD, we expect the kernel version of node under test to be greater 
 
 ```
 searchKey: net.TestEndlessWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12244,7 +12228,7 @@ Test that a client can't trigger an endless loop of write system calls on the se
 
 ```
 searchKey: net.TestErrorForOriginalNameWhenSearching
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12257,7 +12241,7 @@ Issue 12712. When using search domains, return the error encountered querying th
 
 ```
 searchKey: net.TestErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12270,7 +12254,7 @@ The various errors should implement the Error interface.
 
 ```
 searchKey: net.TestFileCloseRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12283,7 +12267,7 @@ Issue 24483.
 
 ```
 searchKey: net.TestFileConn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12294,7 +12278,7 @@ func TestFileConn(t *testing.T)
 
 ```
 searchKey: net.TestFileError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12305,7 +12289,7 @@ func TestFileError(t *testing.T)
 
 ```
 searchKey: net.TestFileListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12316,7 +12300,7 @@ func TestFileListener(t *testing.T)
 
 ```
 searchKey: net.TestFilePacketConn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12327,7 +12311,7 @@ func TestFilePacketConn(t *testing.T)
 
 ```
 searchKey: net.TestGoDebugString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12338,7 +12322,7 @@ func TestGoDebugString(t *testing.T)
 
 ```
 searchKey: net.TestGoLookupIPOrderFallbackToFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12351,7 +12335,7 @@ Test that goLookupIPOrder falls back to the host file when no DNS servers are av
 
 ```
 searchKey: net.TestGoLookupIPWithResolverConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12362,7 +12346,7 @@ func TestGoLookupIPWithResolverConfig(t *testing.T)
 
 ```
 searchKey: net.TestHostCacheModification
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12373,7 +12357,7 @@ func TestHostCacheModification(t *testing.T)
 
 ```
 searchKey: net.TestIPAddrFamily
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12384,7 +12368,7 @@ func TestIPAddrFamily(t *testing.T)
 
 ```
 searchKey: net.TestIPAddrScope
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12395,7 +12379,7 @@ func TestIPAddrScope(t *testing.T)
 
 ```
 searchKey: net.TestIPConnLocalName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12406,7 +12390,7 @@ func TestIPConnLocalName(t *testing.T)
 
 ```
 searchKey: net.TestIPConnRemoteName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12417,7 +12401,7 @@ func TestIPConnRemoteName(t *testing.T)
 
 ```
 searchKey: net.TestIPConnSpecificMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12428,7 +12412,7 @@ func TestIPConnSpecificMethods(t *testing.T)
 
 ```
 searchKey: net.TestIPMask
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12439,7 +12423,7 @@ func TestIPMask(t *testing.T)
 
 ```
 searchKey: net.TestIPMaskString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12450,7 +12434,7 @@ func TestIPMaskString(t *testing.T)
 
 ```
 searchKey: net.TestIPNetContains
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12461,7 +12445,7 @@ func TestIPNetContains(t *testing.T)
 
 ```
 searchKey: net.TestIPNetString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12472,7 +12456,7 @@ func TestIPNetString(t *testing.T)
 
 ```
 searchKey: net.TestIPString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12483,7 +12467,7 @@ func TestIPString(t *testing.T)
 
 ```
 searchKey: net.TestIPVersion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12494,7 +12478,7 @@ func TestIPVersion(t *testing.T)
 
 ```
 searchKey: net.TestIPv4MulticastListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12507,7 +12491,7 @@ TestIPv4MulticastListener tests both single and double listen to a test listener
 
 ```
 searchKey: net.TestIPv6LinkLocalUnicastTCP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12518,7 +12502,7 @@ func TestIPv6LinkLocalUnicastTCP(t *testing.T)
 
 ```
 searchKey: net.TestIPv6LinkLocalUnicastUDP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12529,7 +12513,7 @@ func TestIPv6LinkLocalUnicastUDP(t *testing.T)
 
 ```
 searchKey: net.TestIPv6MulticastListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12542,7 +12526,7 @@ TestIPv6MulticastListener tests both single and double listen to a test listener
 
 ```
 searchKey: net.TestIgnoreDNSForgeries
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12555,7 +12539,7 @@ UDP round-tripper algorithm should ignore invalid DNS responses (issue 13281).
 
 ```
 searchKey: net.TestIgnoreLameReferrals
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12568,7 +12552,7 @@ Issue 15434. If a name server gives a lame referral, continue to the next.
 
 ```
 searchKey: net.TestInterfaceAddrs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12579,7 +12563,7 @@ func TestInterfaceAddrs(t *testing.T)
 
 ```
 searchKey: net.TestInterfaceArrivalAndDeparture
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12590,7 +12574,7 @@ func TestInterfaceArrivalAndDeparture(t *testing.T)
 
 ```
 searchKey: net.TestInterfaceArrivalAndDepartureZoneCache
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12601,7 +12585,7 @@ func TestInterfaceArrivalAndDepartureZoneCache(t *testing.T)
 
 ```
 searchKey: net.TestInterfaceMulticastAddrs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12612,7 +12596,7 @@ func TestInterfaceMulticastAddrs(t *testing.T)
 
 ```
 searchKey: net.TestInterfaceUnicastAddrs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12623,7 +12607,7 @@ func TestInterfaceUnicastAddrs(t *testing.T)
 
 ```
 searchKey: net.TestInterfaces
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12634,7 +12618,7 @@ func TestInterfaces(t *testing.T)
 
 ```
 searchKey: net.TestIssue8434
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12647,7 +12631,7 @@ Issue 8434: verify that Temporary returns true on an error when rcode is SERVFAI
 
 ```
 searchKey: net.TestIssueNoSuchHostExists
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12658,7 +12642,7 @@ func TestIssueNoSuchHostExists(t *testing.T)
 
 ```
 searchKey: net.TestJoinHostPort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12669,7 +12653,7 @@ func TestJoinHostPort(t *testing.T)
 
 ```
 searchKey: net.TestListenCloseListen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12680,7 +12664,7 @@ func TestListenCloseListen(t *testing.T)
 
 ```
 searchKey: net.TestListenConfigControl
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12691,7 +12675,7 @@ func TestListenConfigControl(t *testing.T)
 
 ```
 searchKey: net.TestListenError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12702,7 +12686,7 @@ func TestListenError(t *testing.T)
 
 ```
 searchKey: net.TestListenPacketError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12713,7 +12697,7 @@ func TestListenPacketError(t *testing.T)
 
 ```
 searchKey: net.TestListenerClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12724,7 +12708,7 @@ func TestListenerClose(t *testing.T)
 
 ```
 searchKey: net.TestLookupCNAME
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12735,7 +12719,7 @@ func TestLookupCNAME(t *testing.T)
 
 ```
 searchKey: net.TestLookupContextCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12746,7 +12730,7 @@ func TestLookupContextCancel(t *testing.T)
 
 ```
 searchKey: net.TestLookupDotsWithLocalSource
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12757,7 +12741,7 @@ func TestLookupDotsWithLocalSource(t *testing.T)
 
 ```
 searchKey: net.TestLookupDotsWithRemoteSource
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12768,7 +12752,7 @@ func TestLookupDotsWithRemoteSource(t *testing.T)
 
 ```
 searchKey: net.TestLookupGmailMX
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12779,7 +12763,7 @@ func TestLookupGmailMX(t *testing.T)
 
 ```
 searchKey: net.TestLookupGmailNS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12790,7 +12774,7 @@ func TestLookupGmailNS(t *testing.T)
 
 ```
 searchKey: net.TestLookupGmailTXT
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12801,7 +12785,7 @@ func TestLookupGmailTXT(t *testing.T)
 
 ```
 searchKey: net.TestLookupGoogleHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12812,7 +12796,7 @@ func TestLookupGoogleHost(t *testing.T)
 
 ```
 searchKey: net.TestLookupGoogleIP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12823,7 +12807,7 @@ func TestLookupGoogleIP(t *testing.T)
 
 ```
 searchKey: net.TestLookupGooglePublicDNSAddr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12834,7 +12818,7 @@ func TestLookupGooglePublicDNSAddr(t *testing.T)
 
 ```
 searchKey: net.TestLookupGoogleSRV
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12845,7 +12829,7 @@ func TestLookupGoogleSRV(t *testing.T)
 
 ```
 searchKey: net.TestLookupHostCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12858,7 +12842,7 @@ TestLookupHostCancel verifies that lookup works even after many canceled lookups
 
 ```
 searchKey: net.TestLookupIPAddrConcurrentCallsForNetworks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12871,7 +12855,7 @@ Issue 30521: The lookup group should call the resolver for each network.
 
 ```
 searchKey: net.TestLookupIPAddrPreservesContextValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12884,7 +12868,7 @@ Issue 28600: The context that is used to lookup ips should always preserve the v
 
 ```
 searchKey: net.TestLookupIPv6LinkLocalAddr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12895,7 +12879,7 @@ func TestLookupIPv6LinkLocalAddr(t *testing.T)
 
 ```
 searchKey: net.TestLookupIPv6LinkLocalAddrWithZone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12906,7 +12890,7 @@ func TestLookupIPv6LinkLocalAddrWithZone(t *testing.T)
 
 ```
 searchKey: net.TestLookupLongTXT
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12917,7 +12901,7 @@ func TestLookupLongTXT(t *testing.T)
 
 ```
 searchKey: net.TestLookupNonLDH
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12928,7 +12912,7 @@ func TestLookupNonLDH(t *testing.T)
 
 ```
 searchKey: net.TestLookupNullByte
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12941,7 +12925,7 @@ Issue 31597: don't panic on null byte in name
 
 ```
 searchKey: net.TestLookupPort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12952,7 +12936,7 @@ func TestLookupPort(t *testing.T)
 
 ```
 searchKey: net.TestLookupPort_Minimal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12965,7 +12949,7 @@ Like TestLookupPort but with minimal tests that should always pass because the a
 
 ```
 searchKey: net.TestLookupProtocol_Minimal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12976,7 +12960,7 @@ func TestLookupProtocol_Minimal(t *testing.T)
 
 ```
 searchKey: net.TestLookupStaticAddr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12987,7 +12971,7 @@ func TestLookupStaticAddr(t *testing.T)
 
 ```
 searchKey: net.TestLookupStaticHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12998,7 +12982,7 @@ func TestLookupStaticHost(t *testing.T)
 
 ```
 searchKey: net.TestLookupTorOnion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13011,7 +12995,7 @@ Issue 13705: don't try to resolve onion addresses, etc
 
 ```
 searchKey: net.TestLookupWithIP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13022,7 +13006,7 @@ func TestLookupWithIP(t *testing.T)
 
 ```
 searchKey: net.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13033,7 +13017,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: net.TestMarshalEmptyIP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13046,7 +13030,7 @@ Issue 6339
 
 ```
 searchKey: net.TestNetworkNumberAndMask
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13057,7 +13041,7 @@ func TestNetworkNumberAndMask(t *testing.T)
 
 ```
 searchKey: net.TestNilResolverLookup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13070,7 +13054,7 @@ Issue 24330: treat the nil *Resolver like a zero value. Verify nothing crashes i
 
 ```
 searchKey: net.TestNoSuchHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13089,7 +13073,7 @@ Issue 27525: verify that empty answers fail fast.
 
 ```
 searchKey: net.TestNotTemporaryRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13102,7 +13086,7 @@ Issue 24808: verify that ECONNRESET is not temporary for read.
 
 ```
 searchKey: net.TestPTRandNonPTR
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13115,7 +13099,7 @@ Issue 34660: PTR response with non-PTR answers should ignore non-PTR
 
 ```
 searchKey: net.TestPacketConn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13126,7 +13110,7 @@ func TestPacketConn(t *testing.T)
 
 ```
 searchKey: net.TestPacketConnClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13137,7 +13121,7 @@ func TestPacketConnClose(t *testing.T)
 
 ```
 searchKey: net.TestParseCIDR
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13148,7 +13132,7 @@ func TestParseCIDR(t *testing.T)
 
 ```
 searchKey: net.TestParseIP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13159,7 +13143,7 @@ func TestParseIP(t *testing.T)
 
 ```
 searchKey: net.TestParseMAC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13170,7 +13154,7 @@ func TestParseMAC(t *testing.T)
 
 ```
 searchKey: net.TestParseNSSConf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13181,7 +13165,7 @@ func TestParseNSSConf(t *testing.T)
 
 ```
 searchKey: net.TestParsePort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13192,7 +13176,7 @@ func TestParsePort(t *testing.T)
 
 ```
 searchKey: net.TestPointToPointInterface
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13203,7 +13187,7 @@ func TestPointToPointInterface(t *testing.T)
 
 ```
 searchKey: net.TestProhibitionaryDialArg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13214,7 +13198,7 @@ func TestProhibitionaryDialArg(t *testing.T)
 
 ```
 searchKey: net.TestProtocolDialError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13225,7 +13209,7 @@ func TestProtocolDialError(t *testing.T)
 
 ```
 searchKey: net.TestProtocolListenError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13236,7 +13220,7 @@ func TestProtocolListenError(t *testing.T)
 
 ```
 searchKey: net.TestRFC6724ClassifyScope
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13247,7 +13231,7 @@ func TestRFC6724ClassifyScope(t *testing.T)
 
 ```
 searchKey: net.TestRFC6724CommonPrefixLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13258,7 +13242,7 @@ func TestRFC6724CommonPrefixLength(t *testing.T)
 
 ```
 searchKey: net.TestRFC6724PolicyTableClassify
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13269,7 +13253,7 @@ func TestRFC6724PolicyTableClassify(t *testing.T)
 
 ```
 searchKey: net.TestRawConnControl
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13280,7 +13264,7 @@ func TestRawConnControl(t *testing.T)
 
 ```
 searchKey: net.TestRawConnReadWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13291,7 +13275,7 @@ func TestRawConnReadWrite(t *testing.T)
 
 ```
 searchKey: net.TestReadFromTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13302,7 +13286,7 @@ func TestReadFromTimeout(t *testing.T)
 
 ```
 searchKey: net.TestReadFromTimeoutFluctuation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13313,7 +13297,7 @@ func TestReadFromTimeoutFluctuation(t *testing.T)
 
 ```
 searchKey: net.TestReadLine
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13324,7 +13308,7 @@ func TestReadLine(t *testing.T)
 
 ```
 searchKey: net.TestReadTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13335,7 +13319,7 @@ func TestReadTimeout(t *testing.T)
 
 ```
 searchKey: net.TestReadTimeoutFluctuation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13346,7 +13330,7 @@ func TestReadTimeoutFluctuation(t *testing.T)
 
 ```
 searchKey: net.TestReadTimeoutMustNotReturn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13357,7 +13341,7 @@ func TestReadTimeoutMustNotReturn(t *testing.T)
 
 ```
 searchKey: net.TestReadTimeoutUnblocksRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13370,7 +13354,7 @@ Tests that a blocked Read is interrupted by a concurrent SetReadDeadline modifyi
 
 ```
 searchKey: net.TestReadUnixgramWithUnnamedSocket
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13381,7 +13365,7 @@ func TestReadUnixgramWithUnnamedSocket(t *testing.T)
 
 ```
 searchKey: net.TestReadWriteDeadlineRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13392,7 +13376,7 @@ func TestReadWriteDeadlineRace(t *testing.T)
 
 ```
 searchKey: net.TestReadWriteProlongedTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13405,7 +13389,7 @@ TestReadWriteProlongedTimeout tests concurrent deadline modification. Known to c
 
 ```
 searchKey: net.TestResolveGoogle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13416,7 +13400,7 @@ func TestResolveGoogle(t *testing.T)
 
 ```
 searchKey: net.TestResolveIPAddr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13427,7 +13411,7 @@ func TestResolveIPAddr(t *testing.T)
 
 ```
 searchKey: net.TestResolveTCPAddr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13438,7 +13422,7 @@ func TestResolveTCPAddr(t *testing.T)
 
 ```
 searchKey: net.TestResolveUDPAddr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13449,7 +13433,7 @@ func TestResolveUDPAddr(t *testing.T)
 
 ```
 searchKey: net.TestResolverLookupIP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13460,7 +13444,7 @@ func TestResolverLookupIP(t *testing.T)
 
 ```
 searchKey: net.TestRetryTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13473,7 +13457,7 @@ Issue 16865. If a name server times out, continue to the next.
 
 ```
 searchKey: net.TestReverseAddress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13484,7 +13468,7 @@ func TestReverseAddress(t *testing.T)
 
 ```
 searchKey: net.TestRotate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13495,7 +13479,7 @@ func TestRotate(t *testing.T)
 
 ```
 searchKey: net.TestSendfile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13506,7 +13490,7 @@ func TestSendfile(t *testing.T)
 
 ```
 searchKey: net.TestSendfileOnWriteTimeoutExceeded
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13519,7 +13503,7 @@ Issue 43822: tests that returns EOF when conn write timeout.
 
 ```
 searchKey: net.TestSendfileParts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13530,7 +13514,7 @@ func TestSendfileParts(t *testing.T)
 
 ```
 searchKey: net.TestSendfilePipe
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13543,7 +13527,7 @@ Test that sendfile doesn't put a pipe into blocking mode.
 
 ```
 searchKey: net.TestSendfileSeeked
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13554,7 +13538,7 @@ func TestSendfileSeeked(t *testing.T)
 
 ```
 searchKey: net.TestSingleRequestLookup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13567,7 +13551,7 @@ Issue 29644: support single-request resolv.conf option in pure Go resolver. The 
 
 ```
 searchKey: net.TestSortByRFC6724
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13578,7 +13562,7 @@ func TestSortByRFC6724(t *testing.T)
 
 ```
 searchKey: net.TestSpecialDomainName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13589,7 +13573,7 @@ func TestSpecialDomainName(t *testing.T)
 
 ```
 searchKey: net.TestSplitHostPort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13600,7 +13584,7 @@ func TestSplitHostPort(t *testing.T)
 
 ```
 searchKey: net.TestSpuriousENOTAVAIL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13611,7 +13595,7 @@ func TestSpuriousENOTAVAIL(t *testing.T)
 
 ```
 searchKey: net.TestStrictErrorsLookupIP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13624,7 +13608,7 @@ Issue 17448. With StrictErrors enabled, temporary errors should make LookupIP fa
 
 ```
 searchKey: net.TestStrictErrorsLookupTXT
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13637,7 +13621,7 @@ Issue 17448. With StrictErrors enabled, temporary errors should make LookupTXT s
 
 ```
 searchKey: net.TestSystemConf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13648,7 +13632,7 @@ func TestSystemConf(t *testing.T)
 
 ```
 searchKey: net.TestTCPBig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13661,7 +13645,7 @@ Test that >32-bit reads work on 64-bit systems. On 32-bit systems this tests tha
 
 ```
 searchKey: net.TestTCPConcurrentAccept
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13672,7 +13656,7 @@ func TestTCPConcurrentAccept(t *testing.T)
 
 ```
 searchKey: net.TestTCPConnSpecificMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13683,7 +13667,7 @@ func TestTCPConnSpecificMethods(t *testing.T)
 
 ```
 searchKey: net.TestTCPListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13696,7 +13680,7 @@ TestTCPListener tests both single and double listen to a test listener with same
 
 ```
 searchKey: net.TestTCPListenerName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13707,7 +13691,7 @@ func TestTCPListenerName(t *testing.T)
 
 ```
 searchKey: net.TestTCPListenerSpecificMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13718,7 +13702,7 @@ func TestTCPListenerSpecificMethods(t *testing.T)
 
 ```
 searchKey: net.TestTCPReadWriteAllocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13729,7 +13713,7 @@ func TestTCPReadWriteAllocs(t *testing.T)
 
 ```
 searchKey: net.TestTCPSelfConnect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13740,7 +13724,7 @@ func TestTCPSelfConnect(t *testing.T)
 
 ```
 searchKey: net.TestTCPServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13753,7 +13737,7 @@ TestTCPServer tests concurrent accept-read-write servers.
 
 ```
 searchKey: net.TestTCPSpuriousConnSetupCompletion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13766,7 +13750,7 @@ See golang.org/issue/14548.
 
 ```
 searchKey: net.TestTCPSpuriousConnSetupCompletionWithCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13779,7 +13763,7 @@ Issue 19289. Test that a canceled Dial does not cause a subsequent Dial to succe
 
 ```
 searchKey: net.TestTCPStress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13790,7 +13774,7 @@ func TestTCPStress(t *testing.T)
 
 ```
 searchKey: net.TestTXTRecordTwoStrings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13803,7 +13787,7 @@ Issue 27763: verify that two strings in one TXT record are concatenated.
 
 ```
 searchKey: net.TestUDPConnLocalAndRemoteNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13814,7 +13798,7 @@ func TestUDPConnLocalAndRemoteNames(t *testing.T)
 
 ```
 searchKey: net.TestUDPConnLocalName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13825,7 +13809,7 @@ func TestUDPConnLocalName(t *testing.T)
 
 ```
 searchKey: net.TestUDPConnSpecificMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13836,7 +13820,7 @@ func TestUDPConnSpecificMethods(t *testing.T)
 
 ```
 searchKey: net.TestUDPListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13849,7 +13833,7 @@ TestUDPListener tests both single and double listen to a test listener with same
 
 ```
 searchKey: net.TestUDPReadSizeError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13860,7 +13844,7 @@ func TestUDPReadSizeError(t *testing.T)
 
 ```
 searchKey: net.TestUDPReadTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13873,7 +13857,7 @@ TestUDPReadTimeout verifies that ReadFromUDP with timeout returns an error witho
 
 ```
 searchKey: net.TestUDPServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13884,7 +13868,7 @@ func TestUDPServer(t *testing.T)
 
 ```
 searchKey: net.TestUDPZeroByteBuffer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13895,7 +13879,7 @@ func TestUDPZeroByteBuffer(t *testing.T)
 
 ```
 searchKey: net.TestUDPZeroBytePayload
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13906,7 +13890,7 @@ func TestUDPZeroBytePayload(t *testing.T)
 
 ```
 searchKey: net.TestUnixAndUnixpacketServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13919,7 +13903,7 @@ TestUnixAndUnixpacketServer tests concurrent accept-read-write servers
 
 ```
 searchKey: net.TestUnixConnLocalAndRemoteNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13930,7 +13914,7 @@ func TestUnixConnLocalAndRemoteNames(t *testing.T)
 
 ```
 searchKey: net.TestUnixConnReadMsgUnixSCMRightsCloseOnExec
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13941,7 +13925,7 @@ func TestUnixConnReadMsgUnixSCMRightsCloseOnExec(t *testing.T)
 
 ```
 searchKey: net.TestUnixConnSpecificMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13952,7 +13936,7 @@ func TestUnixConnSpecificMethods(t *testing.T)
 
 ```
 searchKey: net.TestUnixListenerSpecificMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13963,7 +13947,7 @@ func TestUnixListenerSpecificMethods(t *testing.T)
 
 ```
 searchKey: net.TestUnixUnlink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13974,7 +13958,7 @@ func TestUnixUnlink(t *testing.T)
 
 ```
 searchKey: net.TestUnixgramConnLocalAndRemoteNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13985,7 +13969,7 @@ func TestUnixgramConnLocalAndRemoteNames(t *testing.T)
 
 ```
 searchKey: net.TestUnixgramServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13996,7 +13980,7 @@ func TestUnixgramServer(t *testing.T)
 
 ```
 searchKey: net.TestUnixgramWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14007,7 +13991,7 @@ func TestUnixgramWrite(t *testing.T)
 
 ```
 searchKey: net.TestUnixgramZeroByteBuffer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14018,7 +14002,7 @@ func TestUnixgramZeroByteBuffer(t *testing.T)
 
 ```
 searchKey: net.TestUnixgramZeroBytePayload
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14029,7 +14013,7 @@ func TestUnixgramZeroBytePayload(t *testing.T)
 
 ```
 searchKey: net.TestUpdateResolvConf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14040,7 +14024,7 @@ func TestUpdateResolvConf(t *testing.T)
 
 ```
 searchKey: net.TestVariousDeadlines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14051,7 +14035,7 @@ func TestVariousDeadlines(t *testing.T)
 
 ```
 searchKey: net.TestVariousDeadlines1Proc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14062,7 +14046,7 @@ func TestVariousDeadlines1Proc(t *testing.T)
 
 ```
 searchKey: net.TestVariousDeadlines4Proc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14073,7 +14057,7 @@ func TestVariousDeadlines4Proc(t *testing.T)
 
 ```
 searchKey: net.TestWeighting
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14084,7 +14068,7 @@ func TestWeighting(t *testing.T)
 
 ```
 searchKey: net.TestWildWildcardListener
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14095,7 +14079,7 @@ func TestWildWildcardListener(t *testing.T)
 
 ```
 searchKey: net.TestWithUnexpiredValuesPreserved
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14106,7 +14090,7 @@ func TestWithUnexpiredValuesPreserved(t *testing.T)
 
 ```
 searchKey: net.TestWriteTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14117,7 +14101,7 @@ func TestWriteTimeout(t *testing.T)
 
 ```
 searchKey: net.TestWriteTimeoutFluctuation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14128,7 +14112,7 @@ func TestWriteTimeoutFluctuation(t *testing.T)
 
 ```
 searchKey: net.TestWriteTimeoutMustNotReturn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14139,7 +14123,7 @@ func TestWriteTimeoutMustNotReturn(t *testing.T)
 
 ```
 searchKey: net.TestWriteToTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14150,7 +14134,7 @@ func TestWriteToTimeout(t *testing.T)
 
 ```
 searchKey: net.TestWriteToUDP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14161,7 +14145,7 @@ func TestWriteToUDP(t *testing.T)
 
 ```
 searchKey: net.TestWritevError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14172,7 +14156,7 @@ func TestWritevError(t *testing.T)
 
 ```
 searchKey: net.TestZeroByteRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -14183,7 +14167,7 @@ func TestZeroByteRead(t *testing.T)
 
 ```
 searchKey: net.absDomainName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14207,7 +14191,7 @@ func acquireThread()
 
 ```
 searchKey: net.allFF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14218,7 +14202,7 @@ func allFF(b []byte) bool
 
 ```
 searchKey: net.appendHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14231,7 +14215,7 @@ Convert i to a hexadecimal string. Leading zeros are not printed.
 
 ```
 searchKey: net.avoidDNS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14244,7 +14228,7 @@ avoidDNS reports whether this is a hostname for which we should not use DNS. Cur
 
 ```
 searchKey: net.benchmarkIPEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14255,7 +14239,7 @@ func benchmarkIPEqual(b *testing.B, size int)
 
 ```
 searchKey: net.benchmarkIPString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14266,7 +14250,7 @@ func benchmarkIPString(b *testing.B, size int)
 
 ```
 searchKey: net.benchmarkTCP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14277,7 +14261,7 @@ func benchmarkTCP(b *testing.B, persistent, timeout bool, laddr string)
 
 ```
 searchKey: net.benchmarkTCPConcurrentReadWrite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14288,7 +14272,7 @@ func benchmarkTCPConcurrentReadWrite(b *testing.B, laddr string)
 
 ```
 searchKey: net.boolint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14301,7 +14285,7 @@ Boolean to int.
 
 ```
 searchKey: net.cgoIPLookup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14312,7 +14296,7 @@ func cgoIPLookup(result chan<- ipLookupResult, network, name string)
 
 ```
 searchKey: net.cgoLookupAddrPTR
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14323,7 +14307,7 @@ func cgoLookupAddrPTR(addr string, sa *C.struct_sockaddr, salen C.socklen_t) (na
 
 ```
 searchKey: net.cgoLookupCNAME
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14334,7 +14318,7 @@ func cgoLookupCNAME(ctx context.Context, name string) (cname string, err error, 
 
 ```
 searchKey: net.cgoLookupHost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14345,7 +14329,7 @@ func cgoLookupHost(ctx context.Context, name string) (hosts []string, err error,
 
 ```
 searchKey: net.cgoLookupIP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14356,7 +14340,7 @@ func cgoLookupIP(ctx context.Context, network, name string) (addrs []IPAddr, err
 
 ```
 searchKey: net.cgoLookupIPCNAME
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14367,7 +14351,7 @@ func cgoLookupIPCNAME(network, name string) (addrs []IPAddr, cname string, err e
 
 ```
 searchKey: net.cgoLookupPTR
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14378,7 +14362,7 @@ func cgoLookupPTR(ctx context.Context, addr string) (names []string, err error, 
 
 ```
 searchKey: net.cgoLookupPort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14389,7 +14373,7 @@ func cgoLookupPort(ctx context.Context, network, service string) (port int, err 
 
 ```
 searchKey: net.cgoLookupServicePort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14400,7 +14384,7 @@ func cgoLookupServicePort(hints *C.struct_addrinfo, network, service string) (po
 
 ```
 searchKey: net.cgoNameinfoPTR
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14411,7 +14395,7 @@ func cgoNameinfoPTR(b []byte, sa *C.struct_sockaddr, salen C.socklen_t) (int, er
 
 ```
 searchKey: net.cgoPortLookup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14422,7 +14406,7 @@ func cgoPortLookup(result chan<- portLookupResult, hints *C.struct_addrinfo, net
 
 ```
 searchKey: net.cgoReverseLookup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14433,7 +14417,7 @@ func cgoReverseLookup(result chan<- reverseLookupResult, addr string, sa *C.stru
 
 ```
 searchKey: net.cgoSockaddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14444,7 +14428,7 @@ func cgoSockaddr(ip IP, zone string) (*C.struct_sockaddr, C.socklen_t)
 
 ```
 searchKey: net.cgoSockaddrInet4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14455,7 +14439,7 @@ func cgoSockaddrInet4(ip IP) *C.struct_sockaddr
 
 ```
 searchKey: net.cgoSockaddrInet6
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14466,7 +14450,7 @@ func cgoSockaddrInet6(ip IP, zone int) *C.struct_sockaddr
 
 ```
 searchKey: net.checkDistribution
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14477,7 +14461,7 @@ func checkDistribution(t *testing.T, data []*SRV, margin float64)
 
 ```
 searchKey: net.checkDualStackAddrFamily
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14488,7 +14472,7 @@ func checkDualStackAddrFamily(fd *netFD) error
 
 ```
 searchKey: net.checkDualStackSecondListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14499,7 +14483,7 @@ func checkDualStackSecondListener(network, address string, err, xerr error) erro
 
 ```
 searchKey: net.checkFirstListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14510,7 +14494,7 @@ func checkFirstListener(network string, ln interface{}) error
 
 ```
 searchKey: net.checkHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14523,7 +14507,7 @@ checkHeader performs basic sanity checks on the header.
 
 ```
 searchKey: net.checkMulticastListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14534,7 +14518,7 @@ func checkMulticastListener(c *UDPConn, ip IP) error
 
 ```
 searchKey: net.checkMulticastStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14545,7 +14529,7 @@ func checkMulticastStats(ifStats *ifStats, uniStats, multiStats *routeStats) err
 
 ```
 searchKey: net.checkResponse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14556,7 +14540,7 @@ func checkResponse(reqID uint16, reqQues dnsmessage.Question, respHdr dnsmessage
 
 ```
 searchKey: net.checkSecondListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14567,7 +14551,7 @@ func checkSecondListener(network, address string, err error) error
 
 ```
 searchKey: net.checkUnicastStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14578,7 +14562,7 @@ func checkUnicastStats(ifStats *ifStats, uniStats *routeStats) error
 
 ```
 searchKey: net.commonPrefixLen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14608,7 +14592,7 @@ concurrentThreadsLimit returns the number of threads we permit to run concurrent
 
 ```
 searchKey: net.condFatalf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14619,7 +14603,7 @@ func condFatalf(t *testing.T, network string, format string, args ...interface{}
 
 ```
 searchKey: net.controlOnConnSetup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14630,7 +14614,7 @@ func controlOnConnSetup(network string, address string, c syscall.RawConn) error
 
 ```
 searchKey: net.controlRawConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14641,7 +14625,7 @@ func controlRawConn(c syscall.RawConn, addr Addr) error
 
 ```
 searchKey: net.count
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14654,7 +14638,7 @@ Number of occurrences of b in s.
 
 ```
 searchKey: net.countAnyByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14667,7 +14651,7 @@ Count occurrences in s of any bytes in t.
 
 ```
 searchKey: net.dialClosedPort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14678,7 +14662,7 @@ func dialClosedPort(t *testing.T) (actual, expected time.Duration)
 
 ```
 searchKey: net.differentWildcardAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14689,7 +14673,7 @@ func differentWildcardAddr(i, j string) bool
 
 ```
 searchKey: net.disableSocketConnect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14711,7 +14695,7 @@ func dnsDefaultSearch() []string
 
 ```
 searchKey: net.dnsPacketRoundTrip
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14722,7 +14706,7 @@ func dnsPacketRoundTrip(c Conn, id uint16, query dnsmessage.Question, b []byte) 
 
 ```
 searchKey: net.dnsStreamRoundTrip
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14733,7 +14717,7 @@ func dnsStreamRoundTrip(c Conn, id uint16, query dnsmessage.Question, b []byte) 
 
 ```
 searchKey: net.dtoi
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14746,7 +14730,7 @@ Decimal to integer. Returns number, characters consumed, success.
 
 ```
 searchKey: net.dupSocket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14757,7 +14741,7 @@ func dupSocket(f *os.File) (int, error)
 
 ```
 searchKey: net.emitDNSNameTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14779,7 +14763,7 @@ func enableSocketConnect()
 
 ```
 searchKey: net.ensureRooted
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14790,7 +14774,7 @@ func ensureRooted(s string) string
 
 ```
 searchKey: net.equalASCIIName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14814,7 +14798,7 @@ provided by runtime
 
 ```
 searchKey: net.favoriteAddrFamily
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14859,7 +14843,7 @@ Note that the latest DragonFly BSD and OpenBSD kernels allow neither "net.inet6.
 
 ```
 searchKey: net.fcntl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14872,7 +14856,7 @@ Implemented in the syscall package.
 
 ```
 searchKey: net.fetchGoogle
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14922,7 +14906,7 @@ forceGoDNS forces the resolver configuration to use the pure Go resolver and ret
 
 ```
 searchKey: net.foreachField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14935,7 +14919,7 @@ foreachField runs fn on each non-empty run of non-space bytes in x. It returns t
 
 ```
 searchKey: net.foreachLine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14948,7 +14932,7 @@ foreachLine runs fn on each line of x. Each line (except for possibly the last) 
 
 ```
 searchKey: net.genericReadFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14961,7 +14945,7 @@ Fallback implementation of io.ReaderFrom's ReadFrom, when sendfile isn't applica
 
 ```
 searchKey: net.getFields
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14997,7 +14981,7 @@ etc.
 
 ```
 searchKey: net.goDebugString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15010,7 +14994,7 @@ goDebugString returns the value of the named GODEBUG key. GODEBUG is of the form
 
 ```
 searchKey: net.goLookupIPFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15023,7 +15007,7 @@ lookup entries from /etc/hosts
 
 ```
 searchKey: net.goLookupPort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15047,7 +15031,7 @@ func googleLiteralAddrs() (lits4, lits6 []string, err error)
 
 ```
 searchKey: net.hasPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15058,7 +15042,7 @@ func hasPrefix(s, prefix string) bool
 
 ```
 searchKey: net.hasSuffixFold
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15069,7 +15053,7 @@ func hasSuffixFold(s, suffix string) bool
 
 ```
 searchKey: net.hexString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15135,7 +15119,7 @@ func installTestHooks()
 
 ```
 searchKey: net.interfaceAddrTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15148,7 +15132,7 @@ If the ifi is nil, interfaceAddrTable returns addresses for all network interfac
 
 ```
 searchKey: net.interfaceMessages
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15159,7 +15143,7 @@ func interfaceMessages(ifindex int) ([]route.Message, error)
 
 ```
 searchKey: net.interfaceMulticastAddrTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15172,7 +15156,7 @@ interfaceMulticastAddrTable returns addresses for a specific interface.
 
 ```
 searchKey: net.interfaceTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15185,7 +15169,7 @@ If the ifindex is zero, interfaceTable returns mappings of all network interface
 
 ```
 searchKey: net.ipAddrsEface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15198,7 +15182,7 @@ ipAddrsEface returns an empty interface slice of addrs.
 
 ```
 searchKey: net.ipEmptyString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15211,7 +15195,7 @@ ipEmptyString is like ip.String except that it returns an empty string when ip i
 
 ```
 searchKey: net.ipToSockaddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15222,7 +15206,7 @@ func ipToSockaddr(family int, ip IP, port int, zone string) (syscall.Sockaddr, e
 
 ```
 searchKey: net.ipVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15235,7 +15219,7 @@ ipVersion returns the provided network's IP version: '4', '6' or 0 if network do
 
 ```
 searchKey: net.ipv4only
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15248,7 +15232,7 @@ ipv4only reports whether addr is an IPv4 address.
 
 ```
 searchKey: net.ipv6LinkLocalUnicastAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15261,7 +15245,7 @@ ipv6LinkLocalUnicastAddr returns an IPv6 link-local unicast address on the given
 
 ```
 searchKey: net.ipv6only
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15274,7 +15258,7 @@ ipv6only reports whether addr is an IPv6 address except IPv4-mapped IPv6 address
 
 ```
 searchKey: net.isClosedChan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15285,7 +15269,7 @@ func isClosedChan(c <-chan struct{}) bool
 
 ```
 searchKey: net.isConnError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15296,7 +15280,7 @@ func isConnError(err error) bool
 
 ```
 searchKey: net.isDeadlineExceeded
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15309,7 +15293,7 @@ isDeadlineExceeded reports whether err is or wraps os.ErrDeadlineExceeded. We al
 
 ```
 searchKey: net.isDomainName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15322,7 +15306,7 @@ isDomainName checks if a string is a presentation-format domain name (currently 
 
 ```
 searchKey: net.isGateway
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15335,7 +15319,7 @@ isGateway reports whether h should be considered a "gateway" name for the myhost
 
 ```
 searchKey: net.isIPv4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15348,7 +15332,7 @@ isIPv4 reports whether addr contains an IPv4 address.
 
 ```
 searchKey: net.isLocalhost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15361,7 +15345,7 @@ isLocalhost reports whether h should be considered a "localhost" name for the my
 
 ```
 searchKey: net.isNotIPv4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15374,7 +15358,7 @@ isNotIPv4 reports whether addr does not contain an IPv4 address.
 
 ```
 searchKey: net.isPlatformError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15385,7 +15369,7 @@ func isPlatformError(err error) bool
 
 ```
 searchKey: net.isSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15398,7 +15382,7 @@ isSpace reports whether b is an ASCII space character.
 
 ```
 searchKey: net.isZeros
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15411,7 +15395,7 @@ Is p all zeros?
 
 ```
 searchKey: net.joinIPv4Group
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15422,7 +15406,7 @@ func joinIPv4Group(fd *netFD, ifi *Interface, ip IP) error
 
 ```
 searchKey: net.joinIPv6Group
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15433,7 +15417,7 @@ func joinIPv6Group(fd *netFD, ifi *Interface, ip IP) error
 
 ```
 searchKey: net.last
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15446,7 +15430,7 @@ Index of rightmost occurrence of b in s.
 
 ```
 searchKey: net.listenIPv4MulticastUDP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15457,7 +15441,7 @@ func listenIPv4MulticastUDP(c *UDPConn, ifi *Interface, ip IP) error
 
 ```
 searchKey: net.listenIPv6MulticastUDP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15481,7 +15465,7 @@ listenerBacklog is a caching wrapper around maxListenerBacklog.
 
 ```
 searchKey: net.lookupIPReturn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15494,7 +15478,7 @@ lookupIPReturn turns the return values from singleflight.Do into the return valu
 
 ```
 searchKey: net.lookupLocalhost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15505,7 +15489,7 @@ func lookupLocalhost(ctx context.Context, fn func(context.Context, string, strin
 
 ```
 searchKey: net.lookupPortMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15516,7 +15500,7 @@ func lookupPortMap(network, service string) (port int, error error)
 
 ```
 searchKey: net.lookupProtocol
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15529,7 +15513,7 @@ lookupProtocol looks up IP protocol name in /etc/protocols and returns correspon
 
 ```
 searchKey: net.lookupProtocolMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15540,7 +15524,7 @@ func lookupProtocolMap(name string) (int, error)
 
 ```
 searchKey: net.lookupSlowFast
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15551,7 +15535,7 @@ func lookupSlowFast(ctx context.Context, fn func(context.Context, string, string
 
 ```
 searchKey: net.lookupStaticAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15564,7 +15548,7 @@ lookupStaticAddr looks up the hosts for the given address from /etc/hosts.
 
 ```
 searchKey: net.lookupStaticHost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15577,7 +15561,7 @@ lookupStaticHost looks up the addresses for the given host from /etc/hosts.
 
 ```
 searchKey: net.lookupWithFake
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15588,7 +15572,7 @@ func lookupWithFake(fake fakeDNSServer, name string, typ dnsmessage.Type) error
 
 ```
 searchKey: net.lowerASCII
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15601,7 +15585,7 @@ lowerASCII returns the ASCII lowercase version of b.
 
 ```
 searchKey: net.lowerASCIIBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15614,7 +15598,7 @@ lowerASCIIBytes makes x ASCII lowercase in-place.
 
 ```
 searchKey: net.mapErr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15640,7 +15624,7 @@ func maxListenerBacklog() int
 
 ```
 searchKey: net.minNonzeroTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15651,7 +15635,7 @@ func minNonzeroTime(a, b time.Time) time.Time
 
 ```
 searchKey: net.mockTXTResponse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15662,7 +15646,7 @@ func mockTXTResponse(q dnsmessage.Message) dnsmessage.Message
 
 ```
 searchKey: net.multicastRIBContains
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15673,7 +15657,7 @@ func multicastRIBContains(ip IP) (bool, error)
 
 ```
 searchKey: net.mustHaveExternalNetwork
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15686,7 +15670,7 @@ mustHaveExternalNetwork is like testenv.MustHaveExternalNetwork except that it w
 
 ```
 searchKey: net.mustNewName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15697,7 +15681,7 @@ func mustNewName(name string) dnsmessage.Name
 
 ```
 searchKey: net.mustQuestion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15708,7 +15692,7 @@ func mustQuestion(name string, qtype dnsmessage.Type, class dnsmessage.Class) dn
 
 ```
 searchKey: net.mxString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15719,7 +15703,7 @@ func mxString(mxs []*MX) string
 
 ```
 searchKey: net.name
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15752,7 +15736,7 @@ func newDualStackPacketListener() (cs []*UDPConn, err error)
 
 ```
 searchKey: net.newRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15763,7 +15747,7 @@ func newRequest(q dnsmessage.Question) (id uint16, udpReq, tcpReq []byte, err er
 
 ```
 searchKey: net.nsString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15774,7 +15758,7 @@ func nsString(nss []*NS) string
 
 ```
 searchKey: net.packetConnTestData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15785,7 +15769,7 @@ func packetConnTestData(t *testing.T, network string) ([]byte, func())
 
 ```
 searchKey: net.packetTransceiver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15796,7 +15780,7 @@ func packetTransceiver(c PacketConn, wb []byte, dst Addr, ch chan<- error)
 
 ```
 searchKey: net.packetTransponder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15807,7 +15791,7 @@ func packetTransponder(c PacketConn, ch chan<- error)
 
 ```
 searchKey: net.parseAcceptError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15820,7 +15804,7 @@ parseAcceptError parses nestedErr and reports whether it is a valid error value 
 
 ```
 searchKey: net.parseCloseError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15833,7 +15817,7 @@ parseCloseError parses nestedErr and reports whether it is a valid error value f
 
 ```
 searchKey: net.parseCommonError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15846,7 +15830,7 @@ parseCommonError parses nestedErr and reports whether it is a valid error value 
 
 ```
 searchKey: net.parseCriteria
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15859,7 +15843,7 @@ parses "foo=bar !foo=bar"
 
 ```
 searchKey: net.parseDialError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15872,7 +15856,7 @@ parseDialError parses nestedErr and reports whether it is a valid error value fr
 
 ```
 searchKey: net.parseLiteralIP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15883,7 +15867,7 @@ func parseLiteralIP(addr string) string
 
 ```
 searchKey: net.parseLookupPortError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15894,7 +15878,7 @@ func parseLookupPortError(nestedErr error) error
 
 ```
 searchKey: net.parseNetwork
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15905,7 +15889,7 @@ func parseNetwork(ctx context.Context, network string, needsProto bool) (afnet s
 
 ```
 searchKey: net.parsePort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15920,7 +15904,7 @@ Some system resolvers will return a valid port number when given a number over 6
 
 ```
 searchKey: net.parseReadError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15933,7 +15917,7 @@ parseReadError parses nestedErr and reports whether it is a valid error value fr
 
 ```
 searchKey: net.parseWriteError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15946,7 +15930,7 @@ parseWriteError parses nestedErr and reports whether it is a valid error value f
 
 ```
 searchKey: net.partialDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16003,7 +15987,7 @@ func randInt() int
 
 ```
 searchKey: net.randIntn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16014,7 +15998,7 @@ func randIntn(n int) int
 
 ```
 searchKey: net.readFull
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16049,7 +16033,7 @@ readProtocols loads contents of /etc/protocols into protocols map for quick acce
 
 ```
 searchKey: net.readRawConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16082,7 +16066,7 @@ func releaseThread()
 
 ```
 searchKey: net.removeComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16095,7 +16079,7 @@ removeComment returns line, removing any '#' byte and any following bytes.
 
 ```
 searchKey: net.reverseaddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16108,7 +16092,7 @@ reverseaddr returns the in-addr.arpa. or ip6.arpa. hostname of the IP address ad
 
 ```
 searchKey: net.roundDurationUp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16134,7 +16118,7 @@ runningGoroutines returns a list of remaining goroutines.
 
 ```
 searchKey: net.samePlatformError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16145,7 +16129,7 @@ func samePlatformError(err, want error) bool
 
 ```
 searchKey: net.selfConnect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16156,7 +16140,7 @@ func selfConnect(fd *netFD, err error) bool
 
 ```
 searchKey: net.sendFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16167,7 +16151,7 @@ func sendFile(c *netFD, r io.Reader) (n int64, err error, handled bool)
 
 ```
 searchKey: net.setDefaultListenerSockopts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16178,7 +16162,7 @@ func setDefaultListenerSockopts(s int) error
 
 ```
 searchKey: net.setDefaultMulticastSockopts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16189,7 +16173,7 @@ func setDefaultMulticastSockopts(s int) error
 
 ```
 searchKey: net.setDefaultSockopts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16200,7 +16184,7 @@ func setDefaultSockopts(s, family, sotype int, ipv6only bool) error
 
 ```
 searchKey: net.setIPv4MreqToInterface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16211,7 +16195,7 @@ func setIPv4MreqToInterface(mreq *syscall.IPMreq, ifi *Interface) error
 
 ```
 searchKey: net.setIPv4MulticastInterface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16222,7 +16206,7 @@ func setIPv4MulticastInterface(fd *netFD, ifi *Interface) error
 
 ```
 searchKey: net.setIPv4MulticastLoopback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16233,7 +16217,7 @@ func setIPv4MulticastLoopback(fd *netFD, v bool) error
 
 ```
 searchKey: net.setIPv6MulticastInterface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16244,7 +16228,7 @@ func setIPv6MulticastInterface(fd *netFD, ifi *Interface) error
 
 ```
 searchKey: net.setIPv6MulticastLoopback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16255,7 +16239,7 @@ func setIPv6MulticastLoopback(fd *netFD, v bool) error
 
 ```
 searchKey: net.setKeepAlive
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16266,7 +16250,7 @@ func setKeepAlive(fd *netFD, keepalive bool) error
 
 ```
 searchKey: net.setKeepAlivePeriod
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16277,7 +16261,7 @@ func setKeepAlivePeriod(fd *netFD, d time.Duration) error
 
 ```
 searchKey: net.setLinger
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16288,7 +16272,7 @@ func setLinger(fd *netFD, sec int) error
 
 ```
 searchKey: net.setNoDelay
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16299,7 +16283,7 @@ func setNoDelay(fd *netFD, noDelay bool) error
 
 ```
 searchKey: net.setReadBuffer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16310,7 +16294,7 @@ func setReadBuffer(fd *netFD, bytes int) error
 
 ```
 searchKey: net.setReadMsgCloseOnExec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16321,7 +16305,7 @@ func setReadMsgCloseOnExec(oob []byte)
 
 ```
 searchKey: net.setWriteBuffer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16343,7 +16327,7 @@ func setupTestData()
 
 ```
 searchKey: net.simpleMaskLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16356,7 +16340,7 @@ If mask is a sequence of 1 bits followed by 0 bits, return the number of 1 bits.
 
 ```
 searchKey: net.skipToAnswer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16367,7 +16351,7 @@ func skipToAnswer(p *dnsmessage.Parser, qtype dnsmessage.Type) error
 
 ```
 searchKey: net.sortByRFC6724
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16378,7 +16362,7 @@ func sortByRFC6724(addrs []IPAddr)
 
 ```
 searchKey: net.sortByRFC6724withSrcs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16389,7 +16373,7 @@ func sortByRFC6724withSrcs(addrs []IPAddr, srcs []IP)
 
 ```
 searchKey: net.sotypeToNet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16400,7 +16384,7 @@ func sotypeToNet(sotype int) string
 
 ```
 searchKey: net.splice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16411,7 +16395,7 @@ func splice(c *netFD, r io.Reader) (int64, error, bool)
 
 ```
 searchKey: net.splitAtBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16424,7 +16408,7 @@ Split s at any bytes in t.
 
 ```
 searchKey: net.splitHostZone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16435,7 +16419,7 @@ func splitHostZone(s string) (host, zone string)
 
 ```
 searchKey: net.spuriousENOTAVAIL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16446,7 +16430,7 @@ func spuriousENOTAVAIL(err error) bool
 
 ```
 searchKey: net.srcAddrs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16459,7 +16443,7 @@ srcsAddrs tries to UDP-connect to each address to see if it has a route. (This d
 
 ```
 searchKey: net.srvString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16470,7 +16454,7 @@ func srvString(srvs []*SRV) string
 
 ```
 searchKey: net.stat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16481,7 +16465,7 @@ func stat(name string) (mtime time.Time, size int64, err error)
 
 ```
 searchKey: net.stringsEqualFold
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16494,7 +16478,7 @@ stringsEqualFold is strings.EqualFold, ASCII only. It reports whether s and t ar
 
 ```
 searchKey: net.stringsHasPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16507,7 +16491,7 @@ stringsHasPrefix is strings.HasPrefix. It reports whether s begins with prefix.
 
 ```
 searchKey: net.stringsHasSuffix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16520,7 +16504,7 @@ stringsHasSuffix is strings.HasSuffix. It reports whether s ends in suffix.
 
 ```
 searchKey: net.stringsHasSuffixFold
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16533,7 +16517,7 @@ stringsHasSuffixFold reports whether s ends in suffix, ASCII-case-insensitively.
 
 ```
 searchKey: net.stripIPv4Header
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16583,7 +16567,7 @@ supportsIPv6 reports whether the platform supports IPv6 networking functionality
 
 ```
 searchKey: net.sysSocket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16596,7 +16580,7 @@ Wrapper around the socket system call that marks the returned file descriptor as
 
 ```
 searchKey: net.testBuffer_writeTo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16607,7 +16591,7 @@ func testBuffer_writeTo(t *testing.T, chunks int, useCopy bool)
 
 ```
 searchKey: net.testDots
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16618,7 +16602,7 @@ func testDots(t *testing.T, mode string)
 
 ```
 searchKey: net.testRotate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16629,7 +16613,7 @@ func testRotate(t *testing.T, rotate bool, nameservers, wantServers []string)
 
 ```
 searchKey: net.testStaticAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16640,7 +16624,7 @@ func testStaticAddr(t *testing.T, hostsPath string, ent staticHostEntry)
 
 ```
 searchKey: net.testStaticHost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16651,7 +16635,7 @@ func testStaticHost(t *testing.T, hostsPath string, ent staticHostEntry)
 
 ```
 searchKey: net.testUniformity
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16675,7 +16659,7 @@ testUnixAddr uses os.CreateTemp to get a name that is unique.
 
 ```
 searchKey: net.testUnixgramWriteConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16686,7 +16670,7 @@ func testUnixgramWriteConn(t *testing.T, raddr *UnixAddr)
 
 ```
 searchKey: net.testUnixgramWritePacketConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16697,7 +16681,7 @@ func testUnixgramWritePacketConn(t *testing.T, raddr *UnixAddr)
 
 ```
 searchKey: net.testVariousDeadlines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16708,7 +16692,7 @@ func testVariousDeadlines(t *testing.T)
 
 ```
 searchKey: net.testWeighting
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16719,7 +16703,7 @@ func testWeighting(t *testing.T, margin float64)
 
 ```
 searchKey: net.testWriteToConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16730,7 +16714,7 @@ func testWriteToConn(t *testing.T, raddr string)
 
 ```
 searchKey: net.testWriteToPacketConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16741,7 +16725,7 @@ func testWriteToPacketConn(t *testing.T, raddr string)
 
 ```
 searchKey: net.testableAddress
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16754,7 +16738,7 @@ testableAddress reports whether address of network is testable on the current pl
 
 ```
 searchKey: net.testableListenArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16767,7 +16751,7 @@ testableListenArgs reports whether arguments are testable on the current platfor
 
 ```
 searchKey: net.testableNetwork
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16780,7 +16764,7 @@ testableNetwork reports whether network is testable on the current platform conf
 
 ```
 searchKey: net.timeoutPacketReceiver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16791,7 +16775,7 @@ func timeoutPacketReceiver(c PacketConn, d, min, max time.Duration, ch chan<- er
 
 ```
 searchKey: net.timeoutReceiver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16802,7 +16786,7 @@ func timeoutReceiver(c Conn, d, min, max time.Duration, ch chan<- error)
 
 ```
 searchKey: net.timeoutTransmitter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16813,7 +16797,7 @@ func timeoutTransmitter(c Conn, d, min, max time.Duration, ch chan<- error)
 
 ```
 searchKey: net.transceiver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16824,7 +16808,7 @@ func transceiver(c Conn, wb []byte, ch chan<- error)
 
 ```
 searchKey: net.trimSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16837,7 +16821,7 @@ trimSpace returns x without any leading or trailing ASCII whitespace.
 
 ```
 searchKey: net.ubtoa
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16861,7 +16845,7 @@ func uninstallTestHooks()
 
 ```
 searchKey: net.withTCPConnPair
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16874,7 +16858,7 @@ withTCPConnPair sets up a TCP connection between two peers, then runs peer1 and 
 
 ```
 searchKey: net.withUnexpiredValuesPreserved
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16887,7 +16871,7 @@ withUnexpiredValuesPreserved returns a context.Context that only uses lookupCtx 
 
 ```
 searchKey: net.wrapSyscallError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16900,7 +16884,7 @@ wrapSyscallError takes an error and a syscall name. If the error is a syscall.Er
 
 ```
 searchKey: net.writeRawConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16911,7 +16895,7 @@ func writeRawConn(c syscall.RawConn, b []byte) error
 
 ```
 searchKey: net.xtoi
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16924,7 +16908,7 @@ Hexadecimal to integer. Returns number, characters consumed, success.
 
 ```
 searchKey: net.xtoi2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

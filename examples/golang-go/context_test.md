@@ -42,7 +42,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="shortDuration" href="#shortDuration">const shortDuration</a>
@@ -60,14 +60,14 @@ const shortDuration = 1 * time.Millisecond // a reasonable duration to block in 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkCancelTree" href="#BenchmarkCancelTree">func BenchmarkCancelTree(b *testing.B)</a>
 
 ```
 searchKey: context_test.BenchmarkCancelTree
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -78,7 +78,7 @@ func BenchmarkCancelTree(b *testing.B)
 
 ```
 searchKey: context_test.BenchmarkCheckCanceled
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -89,7 +89,7 @@ func BenchmarkCheckCanceled(b *testing.B)
 
 ```
 searchKey: context_test.BenchmarkCommonParentCancel
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -100,7 +100,7 @@ func BenchmarkCommonParentCancel(b *testing.B)
 
 ```
 searchKey: context_test.BenchmarkContextCancelDone
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -111,7 +111,7 @@ func BenchmarkContextCancelDone(b *testing.B)
 
 ```
 searchKey: context_test.BenchmarkWithTimeout
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -174,7 +174,7 @@ This example demonstrates how a value can be passed to the context and also how 
 
 ```
 searchKey: context_test.TestAllocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -185,7 +185,7 @@ func TestAllocs(t *testing.T)
 
 ```
 searchKey: context_test.TestBackground
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -196,7 +196,7 @@ func TestBackground(t *testing.T)
 
 ```
 searchKey: context_test.TestCancelRemoves
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -207,7 +207,7 @@ func TestCancelRemoves(t *testing.T)
 
 ```
 searchKey: context_test.TestCanceledTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -218,7 +218,7 @@ func TestCanceledTimeout(t *testing.T)
 
 ```
 searchKey: context_test.TestChildFinishesFirst
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -229,7 +229,7 @@ func TestChildFinishesFirst(t *testing.T)
 
 ```
 searchKey: context_test.TestCustomContextGoroutines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -240,7 +240,7 @@ func TestCustomContextGoroutines(t *testing.T)
 
 ```
 searchKey: context_test.TestDeadline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -251,7 +251,7 @@ func TestDeadline(t *testing.T)
 
 ```
 searchKey: context_test.TestDeadlineExceededIsNetError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -262,7 +262,7 @@ func TestDeadlineExceededIsNetError(t *testing.T)
 
 ```
 searchKey: context_test.TestDeadlineExceededSupportsTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -273,7 +273,7 @@ func TestDeadlineExceededSupportsTimeout(t *testing.T)
 
 ```
 searchKey: context_test.TestInterlockedCancels
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -284,7 +284,7 @@ func TestInterlockedCancels(t *testing.T)
 
 ```
 searchKey: context_test.TestInvalidDerivedFail
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -295,7 +295,7 @@ func TestInvalidDerivedFail(t *testing.T)
 
 ```
 searchKey: context_test.TestLayersCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ func TestLayersCancel(t *testing.T)
 
 ```
 searchKey: context_test.TestLayersTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -317,7 +317,7 @@ func TestLayersTimeout(t *testing.T)
 
 ```
 searchKey: context_test.TestParentFinishesChild
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -328,7 +328,7 @@ func TestParentFinishesChild(t *testing.T)
 
 ```
 searchKey: context_test.TestSimultaneousCancels
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -339,7 +339,7 @@ func TestSimultaneousCancels(t *testing.T)
 
 ```
 searchKey: context_test.TestTODO
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -350,7 +350,7 @@ func TestTODO(t *testing.T)
 
 ```
 searchKey: context_test.TestTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -361,7 +361,7 @@ func TestTimeout(t *testing.T)
 
 ```
 searchKey: context_test.TestValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -372,7 +372,7 @@ func TestValues(t *testing.T)
 
 ```
 searchKey: context_test.TestWithCancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -383,7 +383,7 @@ func TestWithCancel(t *testing.T)
 
 ```
 searchKey: context_test.TestWithCancelCanceledParent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -394,7 +394,7 @@ func TestWithCancelCanceledParent(t *testing.T)
 
 ```
 searchKey: context_test.TestWithValueChecksKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -405,7 +405,7 @@ func TestWithValueChecksKey(t *testing.T)
 
 ```
 searchKey: context_test.benchmarkWithTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -416,7 +416,7 @@ func benchmarkWithTimeout(b *testing.B, concurrentContexts int)
 
 ```
 searchKey: context_test.buildContextTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

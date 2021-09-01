@@ -15,10 +15,6 @@ Package protocol contains structures used by the searcher API.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="FileMatch" href="#FileMatch">type FileMatch struct</a>
 
 ```
@@ -151,7 +147,7 @@ PatternInfo describes a search request on a repo. Most of the fields are based o
 
 ```
 searchKey: protocol.PatternInfo.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go

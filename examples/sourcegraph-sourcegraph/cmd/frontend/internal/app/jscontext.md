@@ -21,7 +21,7 @@ Package jscontext contains functionality for information we pass down into the J
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BillingPublishableKey" href="#BillingPublishableKey">var BillingPublishableKey</a>
@@ -51,7 +51,7 @@ var isBotPat = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="JSContext" href="#JSContext">type JSContext struct</a>
@@ -119,7 +119,7 @@ JSContext is made available to JavaScript code via the "sourcegraph/app/context"
 
 ```
 searchKey: jscontext.NewJSContextFromRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -147,14 +147,14 @@ type authProviderInfo struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestIsBot" href="#TestIsBot">func TestIsBot(t *testing.T)</a>
 
 ```
 searchKey: jscontext.TestIsBot
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -165,7 +165,7 @@ func TestIsBot(t *testing.T)
 
 ```
 searchKey: jscontext.isBot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -262,9 +260,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -559,9 +555,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -600,7 +594,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Error.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -690,7 +684,7 @@
                       "newPage": false,
                       "searchKey": "scanner.ErrorList.Err",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -712,7 +706,7 @@
                       "newPage": false,
                       "searchKey": "scanner.ErrorList.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -734,7 +728,7 @@
                       "newPage": false,
                       "searchKey": "scanner.ErrorList.Len",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -778,7 +772,7 @@
                       "newPage": false,
                       "searchKey": "scanner.ErrorList.RemoveMultiples",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -800,7 +794,7 @@
                       "newPage": false,
                       "searchKey": "scanner.ErrorList.Reset",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -822,7 +816,7 @@
                       "newPage": false,
                       "searchKey": "scanner.ErrorList.Sort",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -933,7 +927,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.Scan",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1024,7 +1018,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.findLineEnd",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1047,7 +1041,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.next",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1070,7 +1064,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.peek",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1093,7 +1087,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanComment",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1139,7 +1133,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanIdentifier",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1162,7 +1156,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanNumber",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1185,7 +1179,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanRawString",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1208,7 +1202,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanRune",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1231,7 +1225,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.scanString",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1254,7 +1248,7 @@
                       "newPage": false,
                       "searchKey": "scanner.Scanner.skipWhitespace",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1443,9 +1437,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1464,7 +1456,7 @@
                 "newPage": false,
                 "searchKey": "scanner.BenchmarkScan",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1488,7 +1480,7 @@
                 "newPage": false,
                 "searchKey": "scanner.BenchmarkScanFiles",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1512,7 +1504,7 @@
                 "newPage": false,
                 "searchKey": "scanner.PrintError",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1534,7 +1526,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestInit",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1558,7 +1550,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestInvalidLineDirectives",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1582,7 +1574,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestIssue10213",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1606,7 +1598,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestIssue28112",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1630,7 +1622,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestLineDirectives",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1654,7 +1646,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestNumbers",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1678,7 +1670,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestScan",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1702,7 +1694,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestScanErrors",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1726,7 +1718,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestSemis",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1750,7 +1742,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestStdErrorHander",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1774,7 +1766,7 @@
                 "newPage": false,
                 "searchKey": "scanner.TestStripCR",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1798,7 +1790,7 @@
                 "newPage": false,
                 "searchKey": "scanner.checkError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1821,7 +1813,7 @@
                 "newPage": false,
                 "searchKey": "scanner.checkPos",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1844,7 +1836,7 @@
                 "newPage": false,
                 "searchKey": "scanner.checkSemi",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1867,7 +1859,7 @@
                 "newPage": false,
                 "searchKey": "scanner.digitVal",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1890,7 +1882,7 @@
                 "newPage": false,
                 "searchKey": "scanner.invalidSep",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1913,7 +1905,7 @@
                 "newPage": false,
                 "searchKey": "scanner.isDecimal",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1936,7 +1928,7 @@
                 "newPage": false,
                 "searchKey": "scanner.isDigit",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1959,7 +1951,7 @@
                 "newPage": false,
                 "searchKey": "scanner.isHex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1982,7 +1974,7 @@
                 "newPage": false,
                 "searchKey": "scanner.isLetter",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2005,7 +1997,7 @@
                 "newPage": false,
                 "searchKey": "scanner.litname",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2028,7 +2020,7 @@
                 "newPage": false,
                 "searchKey": "scanner.lower",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2051,7 +2043,7 @@
                 "newPage": false,
                 "searchKey": "scanner.newlineCount",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2074,7 +2066,7 @@
                 "newPage": false,
                 "searchKey": "scanner.stripCR",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2097,7 +2089,7 @@
                 "newPage": false,
                 "searchKey": "scanner.testSegments",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2120,7 +2112,7 @@
                 "newPage": false,
                 "searchKey": "scanner.tokenclass",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2143,7 +2135,7 @@
                 "newPage": false,
                 "searchKey": "scanner.trailingDigits",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

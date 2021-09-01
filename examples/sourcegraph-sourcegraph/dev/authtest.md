@@ -22,10 +22,6 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="baseURL" href="#baseURL">var baseURL</a>
 
 ```
@@ -116,15 +112,11 @@ var username = flag.String("username", "authtest-admin", "The username of the ad
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestCodeIntelEndpoints" href="#TestCodeIntelEndpoints">func TestCodeIntelEndpoints(t *testing.T)</a>
 
 ```
 searchKey: authtest.TestCodeIntelEndpoints
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -135,7 +127,7 @@ func TestCodeIntelEndpoints(t *testing.T)
 
 ```
 searchKey: authtest.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -146,7 +138,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: authtest.TestOrganization
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -157,7 +149,7 @@ func TestOrganization(t *testing.T)
 
 ```
 searchKey: authtest.TestRepository
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -168,7 +160,7 @@ func TestRepository(t *testing.T)
 
 ```
 searchKey: authtest.TestSiteAdminEndpoints
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -179,7 +171,7 @@ func TestSiteAdminEndpoints(t *testing.T)
 
 ```
 searchKey: authtest.mustMarshalJSONString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

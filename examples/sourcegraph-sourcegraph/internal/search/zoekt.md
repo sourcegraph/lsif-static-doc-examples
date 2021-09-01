@@ -59,7 +59,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SymbolRequest" href="#SymbolRequest">const SymbolRequest</a>
@@ -109,7 +109,7 @@ const maxUnindexedRepoRevSearchesPerQuery = 200
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="defaultTimeout" href="#defaultTimeout">var defaultTimeout</a>
@@ -139,7 +139,7 @@ headBranch is used as a singleton of the indexedRepoRevs.repoBranches to save co
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="IndexedRepoRevs" href="#IndexedRepoRevs">type IndexedRepoRevs struct</a>
@@ -170,7 +170,7 @@ indexedRepoRevs creates both the Sourcegraph and Zoekt representation of a list 
 
 ```
 searchKey: zoekt.zoektIndexedRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -260,7 +260,7 @@ IndexedSearchRequest is responsible for translating a Sourcegraph search query i
 
 ```
 searchKey: zoekt.NewIndexedSearchRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -271,7 +271,7 @@ func NewIndexedSearchRequest(ctx context.Context, args *search.TextParameters, t
 
 ```
 searchKey: zoekt.IndexedSearchRequest.Repos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -309,14 +309,14 @@ repoRevFunc is a function which maps repository names returned from Zoekt into t
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FileRe" href="#FileRe">func FileRe(pattern string, queryIsCaseSensitive bool) (zoektquery.Q, error)</a>
 
 ```
 searchKey: zoekt.FileRe
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -327,7 +327,7 @@ func FileRe(pattern string, queryIsCaseSensitive bool) (zoektquery.Q, error)
 
 ```
 searchKey: zoekt.ResultCountFactor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -338,7 +338,7 @@ func ResultCountFactor(numRepos int, fileMatchLimit int32, globalSearch bool) (k
 
 ```
 searchKey: zoekt.SearchOpts
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -349,7 +349,7 @@ func SearchOpts(ctx context.Context, k int, query *search.TextPatternInfo) zoekt
 
 ```
 searchKey: zoekt.TestBufferedSender
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -360,7 +360,7 @@ func TestBufferedSender(t *testing.T)
 
 ```
 searchKey: zoekt.TestContextWithoutDeadline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -371,7 +371,7 @@ func TestContextWithoutDeadline(t *testing.T)
 
 ```
 searchKey: zoekt.TestContextWithoutDeadline_cancel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -382,7 +382,7 @@ func TestContextWithoutDeadline_cancel(t *testing.T)
 
 ```
 searchKey: zoekt.TestIndexedSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -393,7 +393,7 @@ func TestIndexedSearch(t *testing.T)
 
 ```
 searchKey: zoekt.TestQueryToZoektQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -404,7 +404,7 @@ func TestQueryToZoektQuery(t *testing.T)
 
 ```
 searchKey: zoekt.TestZoektFileMatchToSymbolResults
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -415,7 +415,7 @@ func TestZoektFileMatchToSymbolResults(t *testing.T)
 
 ```
 searchKey: zoekt.TestZoektIndexedRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -426,7 +426,7 @@ func TestZoektIndexedRepos(t *testing.T)
 
 ```
 searchKey: zoekt.TestZoektIndexedRepos_single
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -437,7 +437,7 @@ func TestZoektIndexedRepos_single(t *testing.T)
 
 ```
 searchKey: zoekt.TestZoektResultCountFactor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -448,7 +448,7 @@ func TestZoektResultCountFactor(t *testing.T)
 
 ```
 searchKey: zoekt.bufferedSender
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -461,7 +461,7 @@ bufferedSender returns a buffered Sender with capacity cap, and a cleanup functi
 
 ```
 searchKey: zoekt.contextWithoutDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -474,7 +474,7 @@ contextWithoutDeadline returns a context which will cancel if the cOld is cancel
 
 ```
 searchKey: zoekt.escape
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -485,7 +485,7 @@ func escape(s string) string
 
 ```
 searchKey: zoekt.generateZoektMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -496,7 +496,7 @@ func generateZoektMatches(count int) []zoekt.FileMatch
 
 ```
 searchKey: zoekt.getRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -509,7 +509,7 @@ getRepos is a wrapper around p.Get. It returns an error if the promise contains 
 
 ```
 searchKey: zoekt.getSpanContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -520,7 +520,7 @@ func getSpanContext(ctx context.Context) (shouldTrace bool, spanContext map[stri
 
 ```
 searchKey: zoekt.limitUnindexedRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -537,7 +537,7 @@ A slice to the input list is returned, it is not copied.
 
 ```
 searchKey: zoekt.makeRepositoryRevisions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -548,7 +548,7 @@ func makeRepositoryRevisions(repos ...string) []*search.RepositoryRevisions
 
 ```
 searchKey: zoekt.matchesToFileMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -559,7 +559,7 @@ func matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)
 
 ```
 searchKey: zoekt.mkRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -570,7 +570,7 @@ func mkRepos(names ...string) []types.RepoName
 
 ```
 searchKey: zoekt.mkStatusMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -581,7 +581,7 @@ func mkStatusMap(m map[string]search.RepoStatus) search.RepoStatusMap
 
 ```
 searchKey: zoekt.noOpAnyChar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -592,7 +592,7 @@ func noOpAnyChar(re *syntax.Regexp)
 
 ```
 searchKey: zoekt.parseRe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -603,7 +603,7 @@ func parseRe(pattern string, filenameOnly bool, contentOnly bool, queryIsCaseSen
 
 ```
 searchKey: zoekt.queryEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -614,7 +614,7 @@ func queryEqual(a, b zoektquery.Q) bool
 
 ```
 searchKey: zoekt.queryToZoektQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -625,7 +625,7 @@ func queryToZoektQuery(query *search.TextPatternInfo, typ IndexedRequestType) (z
 
 ```
 searchKey: zoekt.repoRevsSliceToMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -636,7 +636,7 @@ func repoRevsSliceToMap(rs []*search.RepositoryRevisions) map[string]*search.Rep
 
 ```
 searchKey: zoekt.zoektFileMatchToLineMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -647,7 +647,7 @@ func zoektFileMatchToLineMatches(file *zoekt.FileMatch) []*result.LineMatch
 
 ```
 searchKey: zoekt.zoektFileMatchToSymbolResults
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -658,7 +658,7 @@ func zoektFileMatchToSymbolResults(repoName types.RepoName, inputRev string, fil
 
 ```
 searchKey: zoekt.zoektSearch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -673,7 +673,7 @@ Timeouts are reported through the context, and as a special case errNoResultsInT
 
 ```
 searchKey: zoekt.zoektSearchReposOnly
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

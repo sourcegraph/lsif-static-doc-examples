@@ -12,7 +12,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TelemetryRequest" href="#TelemetryRequest">type TelemetryRequest struct</a>
@@ -35,14 +35,14 @@ TelemetryRequest represents a request to log telemetry.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="LogEvent" href="#LogEvent">func LogEvent(userID int32, name string, argument json.RawMessage)</a>
 
 ```
 searchKey: eventlogger.LogEvent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -59,7 +59,7 @@ Note: This does not block since it creates a new goroutine.
 
 ```
 searchKey: eventlogger.logEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -45,10 +45,6 @@ Package quotedprintable implements quoted-printable encoding as specified by RFC
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="lineMaxLen" href="#lineMaxLen">const lineMaxLen</a>
 
 ```
@@ -72,10 +68,6 @@ const upperhex = "0123456789ABCDEF"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="badSoftRx" href="#badSoftRx">var badSoftRx</a>
 
@@ -147,10 +139,6 @@ var useQprint = flag.Bool("qprint", false, "Compare against the 'qprint' program
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Reader" href="#Reader">type Reader struct</a>
 
 ```
@@ -172,7 +160,7 @@ Reader is a quoted-printable decoder.
 
 ```
 searchKey: quotedprintable.NewReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -220,7 +208,7 @@ A Writer is a quoted-printable writer that implements io.WriteCloser.
 
 ```
 searchKey: quotedprintable.NewWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -233,7 +221,7 @@ NewWriter returns a new Writer that writes to w.
 
 ```
 searchKey: quotedprintable.Writer.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -259,7 +247,7 @@ Write encodes p using quoted-printable encoding and writes it to the underlying 
 
 ```
 searchKey: quotedprintable.Writer.checkLastByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -283,7 +271,7 @@ func (w *Writer) encode(b byte) error
 
 ```
 searchKey: quotedprintable.Writer.flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -294,7 +282,7 @@ func (w *Writer) flush() error
 
 ```
 searchKey: quotedprintable.Writer.insertCRLF
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -305,7 +293,7 @@ func (w *Writer) insertCRLF() error
 
 ```
 searchKey: quotedprintable.Writer.insertSoftLineBreak
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -327,15 +315,11 @@ write limits text encoded in quoted-printable to 76 characters per line.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkWriter" href="#BenchmarkWriter">func BenchmarkWriter(b *testing.B)</a>
 
 ```
 searchKey: quotedprintable.BenchmarkWriter
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -346,7 +330,7 @@ func BenchmarkWriter(b *testing.B)
 
 ```
 searchKey: quotedprintable.TestExhaustive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -357,7 +341,7 @@ func TestExhaustive(t *testing.T)
 
 ```
 searchKey: quotedprintable.TestReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -368,7 +352,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: quotedprintable.TestRoundTrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -379,7 +363,7 @@ func TestRoundTrip(t *testing.T)
 
 ```
 searchKey: quotedprintable.TestWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -390,7 +374,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: quotedprintable.TestWriterBinary
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -401,7 +385,7 @@ func TestWriterBinary(t *testing.T)
 
 ```
 searchKey: quotedprintable.everySequence
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -412,7 +396,7 @@ func everySequence(base, alpha string, length int, fn func(string))
 
 ```
 searchKey: quotedprintable.fromHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -423,7 +407,7 @@ func fromHex(b byte) (byte, error)
 
 ```
 searchKey: quotedprintable.isQPDiscardWhitespace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -434,7 +418,7 @@ func isQPDiscardWhitespace(r rune) bool
 
 ```
 searchKey: quotedprintable.isWhitespace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -445,7 +429,7 @@ func isWhitespace(b byte) bool
 
 ```
 searchKey: quotedprintable.readHexByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -456,7 +440,7 @@ func readHexByte(v []byte) (b byte, err error)
 
 ```
 searchKey: quotedprintable.testWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

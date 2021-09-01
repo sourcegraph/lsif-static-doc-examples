@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -95,9 +93,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -241,9 +237,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -282,7 +276,7 @@
                       "newPage": false,
                       "searchKey": "hex.InvalidByteError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -375,7 +369,7 @@
                       "newPage": false,
                       "searchKey": "hex.dumper.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -496,9 +490,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -517,7 +509,7 @@
                 "newPage": false,
                 "searchKey": "hex.BenchmarkDecode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -541,7 +533,7 @@
                 "newPage": false,
                 "searchKey": "hex.BenchmarkDump",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -565,7 +557,7 @@
                 "newPage": false,
                 "searchKey": "hex.BenchmarkEncode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -589,7 +581,7 @@
                 "newPage": false,
                 "searchKey": "hex.Decode",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -611,7 +603,7 @@
                 "newPage": false,
                 "searchKey": "hex.DecodeString",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -633,7 +625,7 @@
                 "newPage": false,
                 "searchKey": "hex.DecodedLen",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -655,7 +647,7 @@
                 "newPage": false,
                 "searchKey": "hex.Dump",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -677,7 +669,7 @@
                 "newPage": false,
                 "searchKey": "hex.Dumper",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -699,7 +691,7 @@
                 "newPage": false,
                 "searchKey": "hex.Encode",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -721,7 +713,7 @@
                 "newPage": false,
                 "searchKey": "hex.EncodeToString",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -743,7 +735,7 @@
                 "newPage": false,
                 "searchKey": "hex.EncodedLen",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -765,7 +757,7 @@
                 "newPage": false,
                 "searchKey": "hex.NewDecoder",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -787,7 +779,7 @@
                 "newPage": false,
                 "searchKey": "hex.NewEncoder",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -809,7 +801,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestDecode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -833,7 +825,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestDecodeErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -857,7 +849,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestDecodeString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -881,7 +873,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestDecodeStringErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -905,7 +897,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestDecoderErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -929,7 +921,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestDump",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -953,7 +945,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestDumper",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -977,7 +969,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestDumper_doubleclose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1001,7 +993,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestDumper_earlyclose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1025,7 +1017,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestEncode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1049,7 +1041,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestEncodeToString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1073,7 +1065,7 @@
                 "newPage": false,
                 "searchKey": "hex.TestEncoderDecoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1097,7 +1089,7 @@
                 "newPage": false,
                 "searchKey": "hex.fromHexChar",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1120,7 +1112,7 @@
                 "newPage": false,
                 "searchKey": "hex.toChar",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

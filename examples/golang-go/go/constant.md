@@ -158,10 +158,6 @@ A special Unknown value may be used when a value is unknown due to an error. Ope
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Bool" href="#Bool">const Bool</a>
 
 ```
@@ -296,10 +292,6 @@ const _m = ^big.Word(0)
 Compute the size of a Word in bytes. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="bitLenTests" href="#bitLenTests">var bitLenTests</a>
 
@@ -437,10 +429,6 @@ var xxx = strings.Repeat("x", 68)
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Kind" href="#Kind">type Kind int</a>
 
 ```
@@ -487,7 +475,7 @@ A Value represents the value of a Go constant.
 
 ```
 searchKey: constant.BinaryOp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -502,7 +490,7 @@ To force integer division of Int operands, use op == token.QUO_ASSIGN instead of
 
 ```
 searchKey: constant.Denom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -515,7 +503,7 @@ Denom returns the denominator of x; x must be Int, Float, or Unknown. If x is Un
 
 ```
 searchKey: constant.Imag
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -528,7 +516,7 @@ Imag returns the imaginary part of x, which must be a numeric or unknown value. 
 
 ```
 searchKey: constant.Make
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -553,7 +541,7 @@ anything else    Unknown
 
 ```
 searchKey: constant.MakeBool
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -566,7 +554,7 @@ MakeBool returns the Bool value for b.
 
 ```
 searchKey: constant.MakeFloat64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -579,7 +567,7 @@ MakeFloat64 returns the Float value for x. If x is -0.0, the result is 0.0. If x
 
 ```
 searchKey: constant.MakeFromBytes
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -592,7 +580,7 @@ MakeFromBytes returns the Int value given the bytes of its little-endian binary 
 
 ```
 searchKey: constant.MakeFromLiteral
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -605,7 +593,7 @@ MakeFromLiteral returns the corresponding integer, floating-point, imaginary, ch
 
 ```
 searchKey: constant.MakeImag
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -618,7 +606,7 @@ MakeImag returns the Complex value x*i; x must be Int, Float, or Unknown. If x i
 
 ```
 searchKey: constant.MakeInt64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -631,7 +619,7 @@ MakeInt64 returns the Int value for x.
 
 ```
 searchKey: constant.MakeString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -644,7 +632,7 @@ MakeString returns the String value for s.
 
 ```
 searchKey: constant.MakeUint64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -670,7 +658,7 @@ MakeUnknown returns the Unknown value.
 
 ```
 searchKey: constant.Num
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -683,7 +671,7 @@ Num returns the numerator of x; x must be Int, Float, or Unknown. If x is Unknow
 
 ```
 searchKey: constant.Real
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -696,7 +684,7 @@ Real returns the real part of x, which must be a numeric or unknown value. If x 
 
 ```
 searchKey: constant.Shift
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -709,7 +697,7 @@ Shift returns the result of the shift expression x op s with op == token.SHL or 
 
 ```
 searchKey: constant.ToComplex
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -722,7 +710,7 @@ ToComplex converts x to a Complex value if x is representable as a Complex. Othe
 
 ```
 searchKey: constant.ToFloat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -735,7 +723,7 @@ ToFloat converts x to a Float value if x is representable as a Float. Otherwise 
 
 ```
 searchKey: constant.ToInt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -748,7 +736,7 @@ ToInt converts x to an Int value if x is representable as an Int. Otherwise it r
 
 ```
 searchKey: constant.UnaryOp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -761,7 +749,7 @@ UnaryOp returns the result of the unary expression op y. The operation must be d
 
 ```
 searchKey: constant.add
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -772,7 +760,7 @@ func add(x, y Value) Value
 
 ```
 searchKey: constant.doOp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -783,7 +771,7 @@ func doOp(x Value, op token.Token, y Value) (z Value)
 
 ```
 searchKey: constant.makeComplex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -794,7 +782,7 @@ func makeComplex(re, im Value) Value
 
 ```
 searchKey: constant.makeFloat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -805,7 +793,7 @@ func makeFloat(x *big.Float) Value
 
 ```
 searchKey: constant.makeFloatFromLiteral
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -816,7 +804,7 @@ func makeFloatFromLiteral(lit string) Value
 
 ```
 searchKey: constant.makeInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -827,7 +815,7 @@ func makeInt(x *big.Int) Value
 
 ```
 searchKey: constant.makeRat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -838,7 +826,7 @@ func makeRat(x *big.Rat) Value
 
 ```
 searchKey: constant.match
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -851,7 +839,7 @@ match returns the matching representation (same type) with the smallest complexi
 
 ```
 searchKey: constant.match0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -864,7 +852,7 @@ match0 must only be called by match. Invariant: ord(x) < ord(y)
 
 ```
 searchKey: constant.mul
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -875,7 +863,7 @@ func mul(x, y Value) Value
 
 ```
 searchKey: constant.quo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -886,7 +874,7 @@ func quo(x, y Value) Value
 
 ```
 searchKey: constant.sub
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -897,7 +885,7 @@ func sub(x, y Value) Value
 
 ```
 searchKey: constant.val
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -919,7 +907,7 @@ type boolVal bool
 
 ```
 searchKey: constant.boolVal.ExactString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -930,7 +918,7 @@ func (x boolVal) ExactString() string
 
 ```
 searchKey: constant.boolVal.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -941,7 +929,7 @@ func (boolVal) Kind() Kind
 
 ```
 searchKey: constant.boolVal.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -952,7 +940,7 @@ func (x boolVal) String() string
 
 ```
 searchKey: constant.boolVal.implementsValue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -974,7 +962,7 @@ type complexVal struct{ re, im Value }
 
 ```
 searchKey: constant.vtoc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -985,7 +973,7 @@ func vtoc(x Value) complexVal
 
 ```
 searchKey: constant.complexVal.ExactString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -996,7 +984,7 @@ func (x complexVal) ExactString() string
 
 ```
 searchKey: constant.complexVal.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1007,7 +995,7 @@ func (complexVal) Kind() Kind
 
 ```
 searchKey: constant.complexVal.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1018,7 +1006,7 @@ func (x complexVal) String() string
 
 ```
 searchKey: constant.complexVal.implementsValue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1041,7 +1029,7 @@ type floatVal struct{ val *big.Float } // Float values not representable as a fr
 
 ```
 searchKey: constant.i64tof
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1052,7 +1040,7 @@ func i64tof(x int64Val) floatVal
 
 ```
 searchKey: constant.itof
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1063,7 +1051,7 @@ func itof(x intVal) floatVal
 
 ```
 searchKey: constant.rtof
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1074,7 +1062,7 @@ func rtof(x ratVal) floatVal
 
 ```
 searchKey: constant.floatVal.ExactString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1085,7 +1073,7 @@ func (x floatVal) ExactString() string
 
 ```
 searchKey: constant.floatVal.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1096,7 +1084,7 @@ func (floatVal) Kind() Kind
 
 ```
 searchKey: constant.floatVal.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1109,7 +1097,7 @@ String returns a decimal approximation of the Float value.
 
 ```
 searchKey: constant.floatVal.implementsValue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1132,7 +1120,7 @@ type int64Val int64 // Int values representable as an int64
 
 ```
 searchKey: constant.int64Val.ExactString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1143,7 +1131,7 @@ func (x int64Val) ExactString() string
 
 ```
 searchKey: constant.int64Val.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1154,7 +1142,7 @@ func (int64Val) Kind() Kind
 
 ```
 searchKey: constant.int64Val.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1165,7 +1153,7 @@ func (x int64Val) String() string
 
 ```
 searchKey: constant.int64Val.implementsValue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1188,7 +1176,7 @@ type intVal struct{ val *big.Int } // Int values not representable as an int64
 
 ```
 searchKey: constant.i64toi
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1199,7 +1187,7 @@ func i64toi(x int64Val) intVal
 
 ```
 searchKey: constant.intVal.ExactString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1210,7 +1198,7 @@ func (x intVal) ExactString() string
 
 ```
 searchKey: constant.intVal.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1221,7 +1209,7 @@ func (intVal) Kind() Kind
 
 ```
 searchKey: constant.intVal.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1232,7 +1220,7 @@ func (x intVal) String() string
 
 ```
 searchKey: constant.intVal.implementsValue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1257,7 +1245,7 @@ type makeTestCase struct {
 
 ```
 searchKey: constant.dup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1280,7 +1268,7 @@ type ratVal struct{ val *big.Rat } // Float values representable as a fraction
 
 ```
 searchKey: constant.i64tor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1291,7 +1279,7 @@ func i64tor(x int64Val) ratVal
 
 ```
 searchKey: constant.itor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1302,7 +1290,7 @@ func itor(x intVal) ratVal
 
 ```
 searchKey: constant.ratVal.ExactString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1313,7 +1301,7 @@ func (x ratVal) ExactString() string
 
 ```
 searchKey: constant.ratVal.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1324,7 +1312,7 @@ func (ratVal) Kind() Kind
 
 ```
 searchKey: constant.ratVal.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1335,7 +1323,7 @@ func (x ratVal) String() string
 
 ```
 searchKey: constant.ratVal.implementsValue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1362,7 +1350,7 @@ type stringVal struct {
 
 ```
 searchKey: constant.stringVal.ExactString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1373,7 +1361,7 @@ func (x *stringVal) ExactString() string
 
 ```
 searchKey: constant.stringVal.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1384,7 +1372,7 @@ func (*stringVal) Kind() Kind
 
 ```
 searchKey: constant.stringVal.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1410,7 +1398,7 @@ appendReverse appends to list all of x's subpieces, but in reverse, and returns 
 
 ```
 searchKey: constant.stringVal.implementsValue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1421,7 +1409,7 @@ func (*stringVal) implementsValue()
 
 ```
 searchKey: constant.stringVal.string
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1445,7 +1433,7 @@ type unknownVal struct{}
 
 ```
 searchKey: constant.unknownVal.ExactString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1456,7 +1444,7 @@ func (x unknownVal) ExactString() string
 
 ```
 searchKey: constant.unknownVal.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1467,7 +1455,7 @@ func (unknownVal) Kind() Kind
 
 ```
 searchKey: constant.unknownVal.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1478,7 +1466,7 @@ func (unknownVal) String() string
 
 ```
 searchKey: constant.unknownVal.implementsValue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1487,15 +1475,11 @@ func (unknownVal) implementsValue()
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkStringAdd" href="#BenchmarkStringAdd">func BenchmarkStringAdd(b *testing.B)</a>
 
 ```
 searchKey: constant.BenchmarkStringAdd
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1506,7 +1490,7 @@ func BenchmarkStringAdd(b *testing.B)
 
 ```
 searchKey: constant.BitLen
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1519,7 +1503,7 @@ BitLen returns the number of bits required to represent the absolute value x in 
 
 ```
 searchKey: constant.BoolVal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1532,7 +1516,7 @@ BoolVal returns the Go boolean value of x, which must be a Bool or an Unknown. I
 
 ```
 searchKey: constant.Bytes
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1545,7 +1529,7 @@ Bytes returns the bytes for the absolute value of x in little- endian binary rep
 
 ```
 searchKey: constant.Compare
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1558,7 +1542,7 @@ Compare returns the result of the comparison x op y. The comparison must be defi
 
 ```
 searchKey: constant.Float32Val
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1571,7 +1555,7 @@ Float32Val is like Float64Val but for float32 instead of float64.
 
 ```
 searchKey: constant.Float64Val
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1584,7 +1568,7 @@ Float64Val returns the nearest Go float64 value of x and whether the result is e
 
 ```
 searchKey: constant.Int64Val
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1597,7 +1581,7 @@ Int64Val returns the Go int64 value of x and whether the result is exact; x must
 
 ```
 searchKey: constant.Sign
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1610,7 +1594,7 @@ Sign returns -1, 0, or 1 depending on whether x < 0, x == 0, or x > 0; x must be
 
 ```
 searchKey: constant.StringVal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1623,7 +1607,7 @@ StringVal returns the Go string value of x, which must be a String or an Unknown
 
 ```
 searchKey: constant.TestBitLen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1634,7 +1618,7 @@ func TestBitLen(t *testing.T)
 
 ```
 searchKey: constant.TestBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1645,7 +1629,7 @@ func TestBytes(t *testing.T)
 
 ```
 searchKey: constant.TestFractions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1656,7 +1640,7 @@ func TestFractions(t *testing.T)
 
 ```
 searchKey: constant.TestMake
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1667,7 +1651,7 @@ func TestMake(t *testing.T)
 
 ```
 searchKey: constant.TestMakeFloat64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1678,7 +1662,7 @@ func TestMakeFloat64(t *testing.T)
 
 ```
 searchKey: constant.TestNumbers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1691,7 +1675,7 @@ TestNumbers verifies that differently written literals representing the same num
 
 ```
 searchKey: constant.TestOps
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1702,7 +1686,7 @@ func TestOps(t *testing.T)
 
 ```
 searchKey: constant.TestString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1713,7 +1697,7 @@ func TestString(t *testing.T)
 
 ```
 searchKey: constant.TestUnknown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1724,7 +1708,7 @@ func TestUnknown(t *testing.T)
 
 ```
 searchKey: constant.Uint64Val
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1737,7 +1721,7 @@ Uint64Val returns the Go uint64 value of x and whether the result is exact; x mu
 
 ```
 searchKey: constant.Val
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1760,7 +1744,7 @@ everything else    nil
 
 ```
 searchKey: constant.cmpZero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1771,7 +1755,7 @@ func cmpZero(x int, op token.Token) bool
 
 ```
 searchKey: constant.eql
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1782,7 +1766,7 @@ func eql(x, y Value) bool
 
 ```
 searchKey: constant.is32bit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1795,7 +1779,7 @@ is32bit reports whether x can be represented using 32 bits.
 
 ```
 searchKey: constant.is63bit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1841,7 +1825,7 @@ func newRat() *big.Rat
 
 ```
 searchKey: constant.ord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1852,7 +1836,7 @@ func ord(x Value) int
 
 ```
 searchKey: constant.panicHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1863,7 +1847,7 @@ func panicHandler(v *Value)
 
 ```
 searchKey: constant.reverse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1876,7 +1860,7 @@ reverse reverses x in place and returns it.
 
 ```
 searchKey: constant.smallFloat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1889,7 +1873,7 @@ smallFloat reports whether x would lead to "reasonably"-sized fraction if conver
 
 ```
 searchKey: constant.smallFloat64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1902,7 +1886,7 @@ smallFloat64 reports whether x would lead to "reasonably"-sized fraction if conv
 
 ```
 searchKey: constant.smallInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1915,7 +1899,7 @@ smallInt reports whether x would lead to "reasonably"-sized fraction if converte
 
 ```
 searchKey: constant.testNumbers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -70,9 +68,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -141,9 +137,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -204,7 +198,7 @@
                       "newPage": false,
                       "searchKey": "httptest.ResponseRecorder.Flush",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -226,7 +220,7 @@
                       "newPage": false,
                       "searchKey": "httptest.ResponseRecorder.Header",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -248,7 +242,7 @@
                       "newPage": false,
                       "searchKey": "httptest.ResponseRecorder.Result",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -382,7 +376,7 @@
                       "newPage": false,
                       "searchKey": "httptest.NewServer",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -404,7 +398,7 @@
                       "newPage": false,
                       "searchKey": "httptest.NewTLSServer",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -426,7 +420,7 @@
                       "newPage": false,
                       "searchKey": "httptest.NewUnstartedServer",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -448,7 +442,7 @@
                       "newPage": false,
                       "searchKey": "httptest.Server.Certificate",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -470,7 +464,7 @@
                       "newPage": false,
                       "searchKey": "httptest.Server.Client",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -492,7 +486,7 @@
                       "newPage": false,
                       "searchKey": "httptest.Server.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -514,7 +508,7 @@
                       "newPage": false,
                       "searchKey": "httptest.Server.CloseClientConnections",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -536,7 +530,7 @@
                       "newPage": false,
                       "searchKey": "httptest.Server.Start",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -558,7 +552,7 @@
                       "newPage": false,
                       "searchKey": "httptest.Server.StartTLS",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -649,7 +643,7 @@
                       "newPage": false,
                       "searchKey": "httptest.Server.goServe",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -672,7 +666,7 @@
                       "newPage": false,
                       "searchKey": "httptest.Server.logCloseHangDebugInfo",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -695,7 +689,7 @@
                       "newPage": false,
                       "searchKey": "httptest.Server.wrap",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -788,7 +782,7 @@
                       "newPage": false,
                       "searchKey": "httptest.onlyCloseListener.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -816,9 +810,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -837,7 +829,7 @@
                 "newPage": false,
                 "searchKey": "httptest.NewRequest",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -859,7 +851,7 @@
                 "newPage": false,
                 "searchKey": "httptest.TestNewRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -883,7 +875,7 @@
                 "newPage": false,
                 "searchKey": "httptest.TestParseContentLength",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -907,7 +899,7 @@
                 "newPage": false,
                 "searchKey": "httptest.TestRecorder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -931,7 +923,7 @@
                 "newPage": false,
                 "searchKey": "httptest.TestRecorderPanicsOnNonXXXStatusCode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -955,7 +947,7 @@
                 "newPage": false,
                 "searchKey": "httptest.TestServer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -979,7 +971,7 @@
                 "newPage": false,
                 "searchKey": "httptest.TestServerZeroValueClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1003,7 +995,7 @@
                 "newPage": false,
                 "searchKey": "httptest.TestTLSServerWithHTTP2",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1027,7 +1019,7 @@
                 "newPage": false,
                 "searchKey": "httptest.checkWriteHeaderCode",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1096,7 +1088,7 @@
                 "newPage": false,
                 "searchKey": "httptest.parseContentLength",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1119,7 +1111,7 @@
                 "newPage": false,
                 "searchKey": "httptest.strSliceContainsPrefix",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1142,7 +1134,7 @@
                 "newPage": false,
                 "searchKey": "httptest.testGetAfterClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1165,7 +1157,7 @@
                 "newPage": false,
                 "searchKey": "httptest.testServer",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1188,7 +1180,7 @@
                 "newPage": false,
                 "searchKey": "httptest.testServerClient",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1211,7 +1203,7 @@
                 "newPage": false,
                 "searchKey": "httptest.testServerClientTransportType",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1234,7 +1226,7 @@
                 "newPage": false,
                 "searchKey": "httptest.testServerCloseBlocking",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1257,7 +1249,7 @@
                 "newPage": false,
                 "searchKey": "httptest.testServerCloseClientConnections",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1280,7 +1272,7 @@
                 "newPage": false,
                 "searchKey": "httptest.testTLSServerClientTransportType",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -75,7 +75,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultClient" href="#DefaultClient">var DefaultClient</a>
@@ -155,7 +155,7 @@ var requestMeter = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ArchiveOptions" href="#ArchiveOptions">type ArchiveOptions struct</a>
@@ -207,7 +207,7 @@ Client is a gitserver client.
 
 ```
 searchKey: gitserver.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -598,7 +598,7 @@ Run starts the specified command and waits for it to complete.
 
 ```
 searchKey: gitserver.Cmd.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -637,7 +637,7 @@ RepoNotCloneableErr is the error that happens when a repository can not be clone
 
 ```
 searchKey: gitserver.RepoNotCloneableErr.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -648,7 +648,7 @@ func (e *RepoNotCloneableErr) Error() string
 
 ```
 searchKey: gitserver.RepoNotCloneableErr.NotFound
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -679,7 +679,7 @@ ReverseProxy is a gitserver reverse proxy.
 
 ```
 searchKey: gitserver.NewReverseProxy
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -721,7 +721,7 @@ RevisionNotFoundError is an error that reports a revision doesn't exist.
 
 ```
 searchKey: gitserver.RevisionNotFoundError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -732,7 +732,7 @@ func (e *RevisionNotFoundError) Error() string
 
 ```
 searchKey: gitserver.RevisionNotFoundError.HTTPStatusCode
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -743,7 +743,7 @@ func (e *RevisionNotFoundError) HTTPStatusCode() int
 
 ```
 searchKey: gitserver.RevisionNotFoundError.NotFound
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -771,7 +771,7 @@ archiveReader wraps the StdoutReader yielded by gitserver's Cmd.StdoutReader wit
 
 ```
 searchKey: gitserver.archiveReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -806,7 +806,7 @@ type badRequestError struct{ error }
 
 ```
 searchKey: gitserver.badRequestError.BadRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -831,7 +831,7 @@ type cmdReader struct {
 
 ```
 searchKey: gitserver.cmdReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -852,14 +852,14 @@ func (c *cmdReader) Read(p []byte) (int, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AddrForRepo" href="#AddrForRepo">func AddrForRepo(repo api.RepoName, addrs []string) string</a>
 
 ```
 searchKey: gitserver.AddrForRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -872,7 +872,7 @@ AddrForRepo returns the gitserver address to use for the given repo name. It sho
 
 ```
 searchKey: gitserver.IsRevisionNotFound
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -885,7 +885,7 @@ IsRevisionNotFound reports if err is a RevisionNotFoundError.
 
 ```
 searchKey: gitserver.StdoutReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -898,7 +898,7 @@ StdoutReader returns an io.ReadCloser of stdout of c. If the command has a non-z
 
 ```
 searchKey: gitserver.addrForKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -911,7 +911,7 @@ addrForKey returns the gitserver address to use for the given string key, which 
 
 ```
 searchKey: gitserver.userFromContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

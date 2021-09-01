@@ -51,7 +51,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="queryJobOffsetTime" href="#queryJobOffsetTime">const queryJobOffsetTime</a>
@@ -68,7 +68,7 @@ const queryJobOffsetTime = 30 * time.Second
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="testRealGlobalSettings" href="#testRealGlobalSettings">var testRealGlobalSettings</a>
@@ -85,7 +85,7 @@ var testRealGlobalSettings = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockRepoStore" href="#MockRepoStore">type MockRepoStore struct</a>
@@ -122,7 +122,7 @@ NewMockRepoStore creates a new mock of the RepoStore interface. All methods retu
 
 ```
 searchKey: background.NewMockRepoStoreFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -181,7 +181,7 @@ RepoStoreGetByNameFunc describes the behavior when the GetByName method of the p
 
 ```
 searchKey: background.RepoStoreGetByNameFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -257,7 +257,7 @@ func (f *RepoStoreGetByNameFunc) appendCall(r0 RepoStoreGetByNameFuncCall)
 
 ```
 searchKey: background.RepoStoreGetByNameFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -294,7 +294,7 @@ RepoStoreGetByNameFuncCall is an object that describes an invocation of method G
 
 ```
 searchKey: background.RepoStoreGetByNameFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -307,7 +307,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: background.RepoStoreGetByNameFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -532,7 +532,7 @@ type testResults struct {
 
 ```
 searchKey: background.testHistoricalEnqueuer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -542,14 +542,14 @@ func testHistoricalEnqueuer(t *testing.T, p *testParams) *testResults
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="StartBackgroundJobs" href="#StartBackgroundJobs">func StartBackgroundJobs(ctx context.Context, mainAppDB *sql.DB)</a>
 
 ```
 searchKey: background.StartBackgroundJobs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -562,7 +562,7 @@ StartBackgroundJobs is the main entrypoint which starts background jobs for code
 
 ```
 searchKey: background.Test_discoverAndEnqueueInsights
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -577,7 +577,7 @@ Test_discoverAndEnqueueInsights tests that insight discovery and job enqueueing 
 
 ```
 searchKey: background.Test_historicalEnqueuer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -588,7 +588,7 @@ func Test_historicalEnqueuer(t *testing.T)
 
 ```
 searchKey: background.discoverAndEnqueueInsights
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -606,7 +606,7 @@ discoverAndEnqueueInsights discovers insights defined in the given setting store
 
 ```
 searchKey: background.getRateLimit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -617,7 +617,7 @@ func getRateLimit(defaultValue rate.Limit) func() rate.Limit
 
 ```
 searchKey: background.newInsightEnqueuer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -630,7 +630,7 @@ newInsightEnqueuer returns a background goroutine which will periodically find a
 
 ```
 searchKey: background.newInsightHistoricalEnqueuer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -643,7 +643,7 @@ newInsightHistoricalEnqueuer returns a background goroutine which will periodica
 
 ```
 searchKey: background.newWorkerMetrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -664,7 +664,7 @@ Individual insights workers may then _also_ want to register their own metrics, 
 
 ```
 searchKey: background.withCountUnlimited
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

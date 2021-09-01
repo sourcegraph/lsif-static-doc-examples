@@ -710,10 +710,6 @@ Least Surprise Property: "A developer (or code reviewer) familiar with HTML, CSS
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrAmbigContext" href="#ErrAmbigContext">const ErrAmbigContext</a>
 
 ```
@@ -2241,10 +2237,6 @@ const _urlPart_name = "urlPartNoneurlPartPreQueryurlPartQueryOrFragurlPartUnknow
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="alwaysError" href="#alwaysError">var alwaysError</a>
 
 ```
@@ -2881,10 +2873,6 @@ var _urlPart_index = [...]uint8{0, 11, 26, 44, 58}
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CSS" href="#CSS">type CSS string</a>
 
 ```
@@ -2940,7 +2928,7 @@ Error describes a problem encountered during template Escaping.
 
 ```
 searchKey: template.eatAttrName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2953,7 +2941,7 @@ eatAttrName returns the largest j such that s[i:j] is an attribute name. It retu
 
 ```
 searchKey: template.errorf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2966,7 +2954,7 @@ errorf creates an error given a format string f and args. The template Name stil
 
 ```
 searchKey: template.Error.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3150,7 +3138,7 @@ type S []string
 
 ```
 searchKey: template.S.Method0
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3257,7 +3245,7 @@ T has lots of interesting pieces to use to test execution.
 
 ```
 searchKey: template.T.Copy
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3268,7 +3256,7 @@ func (t *T) Copy() *T
 
 ```
 searchKey: template.T.GetU
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3292,7 +3280,7 @@ func (t *T) MAdd(a int, b []int) []int
 
 ```
 searchKey: template.T.Method0
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3374,7 +3362,7 @@ Template is a specialized Template from "text/template" that produces a safe HTM
 
 ```
 searchKey: template.Must
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3391,7 +3379,7 @@ var t = template.Must(template.New("name").Parse("html"))
 
 ```
 searchKey: template.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3404,7 +3392,7 @@ New allocates a new HTML template with the given name.
 
 ```
 searchKey: template.ParseFS
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3417,7 +3405,7 @@ ParseFS is like ParseFiles or ParseGlob but reads from the file system fs instea
 
 ```
 searchKey: template.ParseFiles
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3432,7 +3420,7 @@ When parsing multiple files with the same name in different directories, the las
 
 ```
 searchKey: template.ParseGlob
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3447,7 +3435,7 @@ When parsing multiple files with the same name in different directories, the las
 
 ```
 searchKey: template.parseFS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3458,7 +3446,7 @@ func parseFS(t *Template, fsys fs.FS, patterns []string) (*Template, error)
 
 ```
 searchKey: template.parseFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3471,7 +3459,7 @@ parseFiles is the helper for the method and function. If the argument template i
 
 ```
 searchKey: template.parseGlob
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3499,7 +3487,7 @@ It returns an error if t or any associated template has already been executed.
 
 ```
 searchKey: template.Template.Clone
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3514,7 +3502,7 @@ It returns an error if t has already been executed.
 
 ```
 searchKey: template.Template.DefinedTemplates
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3592,7 +3580,7 @@ Lookup returns the template with the given name that is associated with t, or ni
 
 ```
 searchKey: template.Template.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3710,7 +3698,7 @@ ParseGlob returns an error if t or any associated template has already been exec
 
 ```
 searchKey: template.Template.Templates
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3723,7 +3711,7 @@ Templates returns a slice of the templates associated with t, including t itself
 
 ```
 searchKey: template.Template.checkCanParse
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3736,7 +3724,7 @@ checkCanParse checks whether it is OK to parse templates. If not, it returns an 
 
 ```
 searchKey: template.Template.escape
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3843,7 +3831,7 @@ type V struct {
 
 ```
 searchKey: template.V.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3867,7 +3855,7 @@ type W struct {
 
 ```
 searchKey: template.W.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3891,7 +3879,7 @@ attr identifies the current HTML attribute when inside the attribute, that is, s
 
 ```
 searchKey: template.attr.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3913,7 +3901,7 @@ type badMarshaler struct{}
 
 ```
 searchKey: template.badMarshaler.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3950,7 +3938,7 @@ type contentType uint8
 
 ```
 searchKey: template.attrType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3963,7 +3951,7 @@ attrType returns a conservative (upper-bound on authority) guess at the type of 
 
 ```
 searchKey: template.stringify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3999,7 +3987,7 @@ The zero value of type context is the start context for a template that produces
 
 ```
 searchKey: template.contextAfterText
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4012,7 +4000,7 @@ contextAfterText starts in context c, consumes some tokens from the front of s, 
 
 ```
 searchKey: template.join
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4025,7 +4013,7 @@ join joins the two contexts of a branch template node. The result is an error co
 
 ```
 searchKey: template.nudge
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4056,7 +4044,7 @@ consuming any character.
 
 ```
 searchKey: template.tAfterName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4069,7 +4057,7 @@ tAfterName is the context transition function for stateAfterName.
 
 ```
 searchKey: template.tAttr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4082,7 +4070,7 @@ tAttr is the context transition function for the attribute state.
 
 ```
 searchKey: template.tAttrName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4095,7 +4083,7 @@ tAttrName is the context transition function for stateAttrName.
 
 ```
 searchKey: template.tBeforeValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4108,7 +4096,7 @@ tBeforeValue is the context transition function for stateBeforeValue.
 
 ```
 searchKey: template.tBlockCmt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4121,7 +4109,7 @@ tBlockCmt is the context transition function for /*comment*/ states.
 
 ```
 searchKey: template.tCSS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4134,7 +4122,7 @@ tCSS is the context transition function for the CSS state.
 
 ```
 searchKey: template.tCSSStr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4147,7 +4135,7 @@ tCSSStr is the context transition function for the CSS string and URL states.
 
 ```
 searchKey: template.tError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4160,7 +4148,7 @@ tError is the context transition function for the error state.
 
 ```
 searchKey: template.tHTMLCmt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4173,7 +4161,7 @@ tHTMLCmt is the context transition function for stateHTMLCmt.
 
 ```
 searchKey: template.tJS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4186,7 +4174,7 @@ tJS is the context transition function for the JS state.
 
 ```
 searchKey: template.tJSDelimited
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4199,7 +4187,7 @@ tJSDelimited is the context transition function for the JS string and regexp sta
 
 ```
 searchKey: template.tLineCmt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4212,7 +4200,7 @@ tLineCmt is the context transition function for //comment states.
 
 ```
 searchKey: template.tSpecialTagEnd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4225,7 +4213,7 @@ tSpecialTagEnd is the context transition function for raw text and RCDATA elemen
 
 ```
 searchKey: template.tTag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4238,7 +4226,7 @@ tTag is the context transition function for the tag state.
 
 ```
 searchKey: template.tText
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4251,7 +4239,7 @@ tText is the context transition function for the text state.
 
 ```
 searchKey: template.tURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4264,7 +4252,7 @@ tURL is the context transition function for the URL state.
 
 ```
 searchKey: template.context.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4314,7 +4302,7 @@ delim is the delimiter that will end the current HTML attribute.
 
 ```
 searchKey: template.delim.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4338,7 +4326,7 @@ element identifies the HTML element when inside a start tag or special body. Cer
 
 ```
 searchKey: template.eatTagName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4351,7 +4339,7 @@ eatTagName returns the largest j such that s[i:j] is a tag name and the tag type
 
 ```
 searchKey: template.element.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4375,7 +4363,7 @@ type errorer struct {
 
 ```
 searchKey: template.errorer.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4416,7 +4404,7 @@ escaper collects type inferences about templates and changes needed to make temp
 
 ```
 searchKey: template.makeEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4429,7 +4417,7 @@ makeEscaper creates a blank escaper for the given set.
 
 ```
 searchKey: template.escaper.arbitraryTemplate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4442,7 +4430,7 @@ arbitraryTemplate returns an arbitrary template from the name space associated w
 
 ```
 searchKey: template.escaper.commit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4665,7 +4653,7 @@ type goodMarshaler struct{}
 
 ```
 searchKey: template.goodMarshaler.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4689,7 +4677,7 @@ jsCtx determines whether a '/' starts a regular expression literal or a division
 
 ```
 searchKey: template.nextJSCtx
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4706,7 +4694,7 @@ This fails on some valid but nonsensical JavaScript programs like "x = ++/foo/i"
 
 ```
 searchKey: template.jsCtx.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4732,7 +4720,7 @@ Test that we print using the String method. Was issue 3073.
 
 ```
 searchKey: template.myStringer.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4777,7 +4765,7 @@ recursiveInvoker is for TestRecursiveExecuteViaMethod.
 
 ```
 searchKey: template.recursiveInvoker.Recur
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4809,7 +4797,7 @@ is a single token in HTML's grammar but in a template spans several nodes.
 
 ```
 searchKey: template.state.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4833,7 +4821,7 @@ urlPart identifies a part in an RFC 3986 hierarchical URL to allow different enc
 
 ```
 searchKey: template.urlPart.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4842,15 +4830,11 @@ func (i urlPart) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkCSSEscaper" href="#BenchmarkCSSEscaper">func BenchmarkCSSEscaper(b *testing.B)</a>
 
 ```
 searchKey: template.BenchmarkCSSEscaper
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4861,7 +4845,7 @@ func BenchmarkCSSEscaper(b *testing.B)
 
 ```
 searchKey: template.BenchmarkCSSEscaperNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4872,7 +4856,7 @@ func BenchmarkCSSEscaperNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkCSSValueFilter
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4883,7 +4867,7 @@ func BenchmarkCSSValueFilter(b *testing.B)
 
 ```
 searchKey: template.BenchmarkCSSValueFilterOk
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4894,7 +4878,7 @@ func BenchmarkCSSValueFilterOk(b *testing.B)
 
 ```
 searchKey: template.BenchmarkDecodeCSS
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4905,7 +4889,7 @@ func BenchmarkDecodeCSS(b *testing.B)
 
 ```
 searchKey: template.BenchmarkDecodeCSSNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4916,7 +4900,7 @@ func BenchmarkDecodeCSSNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkEscapedExecute
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4927,7 +4911,7 @@ func BenchmarkEscapedExecute(b *testing.B)
 
 ```
 searchKey: template.BenchmarkHTMLNospaceEscaper
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4938,7 +4922,7 @@ func BenchmarkHTMLNospaceEscaper(b *testing.B)
 
 ```
 searchKey: template.BenchmarkHTMLNospaceEscaperNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4949,7 +4933,7 @@ func BenchmarkHTMLNospaceEscaperNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSRegexpEscaper
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4960,7 +4944,7 @@ func BenchmarkJSRegexpEscaper(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSRegexpEscaperNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4971,7 +4955,7 @@ func BenchmarkJSRegexpEscaperNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSStrEscaper
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4982,7 +4966,7 @@ func BenchmarkJSStrEscaper(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSStrEscaperNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4993,7 +4977,7 @@ func BenchmarkJSStrEscaperNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSValEscaperWithNum
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5004,7 +4988,7 @@ func BenchmarkJSValEscaperWithNum(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSValEscaperWithObj
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5015,7 +4999,7 @@ func BenchmarkJSValEscaperWithObj(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSValEscaperWithObjNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5026,7 +5010,7 @@ func BenchmarkJSValEscaperWithObjNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSValEscaperWithStr
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5037,7 +5021,7 @@ func BenchmarkJSValEscaperWithStr(b *testing.B)
 
 ```
 searchKey: template.BenchmarkJSValEscaperWithStrNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5048,7 +5032,7 @@ func BenchmarkJSValEscaperWithStrNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkSrcsetFilter
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5059,7 +5043,7 @@ func BenchmarkSrcsetFilter(b *testing.B)
 
 ```
 searchKey: template.BenchmarkSrcsetFilterNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5070,7 +5054,7 @@ func BenchmarkSrcsetFilterNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkStripTags
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5081,7 +5065,7 @@ func BenchmarkStripTags(b *testing.B)
 
 ```
 searchKey: template.BenchmarkStripTagsNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5092,7 +5076,7 @@ func BenchmarkStripTagsNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkTemplateSpecialTags
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5103,7 +5087,7 @@ func BenchmarkTemplateSpecialTags(b *testing.B)
 
 ```
 searchKey: template.BenchmarkURLEscaper
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5114,7 +5098,7 @@ func BenchmarkURLEscaper(b *testing.B)
 
 ```
 searchKey: template.BenchmarkURLEscaperNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5125,7 +5109,7 @@ func BenchmarkURLEscaperNoSpecials(b *testing.B)
 
 ```
 searchKey: template.BenchmarkURLNormalizer
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5136,7 +5120,7 @@ func BenchmarkURLNormalizer(b *testing.B)
 
 ```
 searchKey: template.BenchmarkURLNormalizerNoSpecials
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5147,7 +5131,7 @@ func BenchmarkURLNormalizerNoSpecials(b *testing.B)
 
 ```
 searchKey: template.HTMLEscape
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5160,7 +5144,7 @@ HTMLEscape writes to w the escaped HTML equivalent of the plain text data b.
 
 ```
 searchKey: template.HTMLEscapeString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5173,7 +5157,7 @@ HTMLEscapeString returns the escaped HTML equivalent of the plain text data s.
 
 ```
 searchKey: template.HTMLEscaper
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5186,7 +5170,7 @@ HTMLEscaper returns the escaped HTML equivalent of the textual representation of
 
 ```
 searchKey: template.IsTrue
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5199,7 +5183,7 @@ IsTrue reports whether the value is 'true', in the sense of not the zero of its 
 
 ```
 searchKey: template.JSEscape
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5212,7 +5196,7 @@ JSEscape writes to w the escaped JavaScript equivalent of the plain text data b.
 
 ```
 searchKey: template.JSEscapeString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5225,7 +5209,7 @@ JSEscapeString returns the escaped JavaScript equivalent of the plain text data 
 
 ```
 searchKey: template.JSEscaper
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5238,7 +5222,7 @@ JSEscaper returns the escaped JavaScript equivalent of the textual representatio
 
 ```
 searchKey: template.TestAddParseTreeHTML
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5249,7 +5233,7 @@ func TestAddParseTreeHTML(t *testing.T)
 
 ```
 searchKey: template.TestAddParseTreeToUnparsedTemplate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5262,7 +5246,7 @@ Issue 7032
 
 ```
 searchKey: template.TestAddrOfIndex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5273,7 +5257,7 @@ func TestAddrOfIndex(t *testing.T)
 
 ```
 searchKey: template.TestAliasedParseTreeDoesNotOverescape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5286,7 +5270,7 @@ Covers issue 21844.
 
 ```
 searchKey: template.TestBadFuncNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5297,7 +5281,7 @@ func TestBadFuncNames(t *testing.T)
 
 ```
 searchKey: template.TestBlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5308,7 +5292,7 @@ func TestBlock(t *testing.T)
 
 ```
 searchKey: template.TestCSSEscaper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5319,7 +5303,7 @@ func TestCSSEscaper(t *testing.T)
 
 ```
 searchKey: template.TestCSSValueFilter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5330,7 +5314,7 @@ func TestCSSValueFilter(t *testing.T)
 
 ```
 searchKey: template.TestClone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5341,7 +5325,7 @@ func TestClone(t *testing.T)
 
 ```
 searchKey: template.TestCloneCrash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5354,7 +5338,7 @@ This used to crash; [https://golang.org/issue/3281](https://golang.org/issue/328
 
 ```
 searchKey: template.TestCloneGrowth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5365,7 +5349,7 @@ func TestCloneGrowth(t *testing.T)
 
 ```
 searchKey: template.TestClonePipe
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5378,7 +5362,7 @@ Issue 24791.
 
 ```
 searchKey: template.TestCloneRedefinedName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5391,7 +5375,7 @@ func TestCloneRedefinedName(t *testing.T)
 
 ```
 searchKey: template.TestCloneThenParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5404,7 +5388,7 @@ Ensure that this guarantee from the docs is upheld: "Further calls to Parse in t
 
 ```
 searchKey: template.TestComparison
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5415,7 +5399,7 @@ func TestComparison(t *testing.T)
 
 ```
 searchKey: template.TestDecodeCSS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5426,7 +5410,7 @@ func TestDecodeCSS(t *testing.T)
 
 ```
 searchKey: template.TestDelims
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5437,7 +5421,7 @@ func TestDelims(t *testing.T)
 
 ```
 searchKey: template.TestEmptyTemplate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5448,7 +5432,7 @@ func TestEmptyTemplate(t *testing.T)
 
 ```
 searchKey: template.TestEmptyTemplateCloneCrash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5461,7 +5445,7 @@ Issue 10879
 
 ```
 searchKey: template.TestEmptyTemplateHTML
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5474,7 +5458,7 @@ This is a test for issue 3272.
 
 ```
 searchKey: template.TestEndsWithCSSKeyword
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5485,7 +5469,7 @@ func TestEndsWithCSSKeyword(t *testing.T)
 
 ```
 searchKey: template.TestEnsurePipelineContains
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5496,7 +5480,7 @@ func TestEnsurePipelineContains(t *testing.T)
 
 ```
 searchKey: template.TestErrorOnUndefined
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5509,7 +5493,7 @@ Unlike text/template, html/template crashed if given an incomplete template, tha
 
 ```
 searchKey: template.TestErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5520,7 +5504,7 @@ func TestErrors(t *testing.T)
 
 ```
 searchKey: template.TestEscape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5531,7 +5515,7 @@ func TestEscape(t *testing.T)
 
 ```
 searchKey: template.TestEscapeErrorsNotIgnorable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5542,7 +5526,7 @@ func TestEscapeErrorsNotIgnorable(t *testing.T)
 
 ```
 searchKey: template.TestEscapeMalformedPipelines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5553,7 +5537,7 @@ func TestEscapeMalformedPipelines(t *testing.T)
 
 ```
 searchKey: template.TestEscapeMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5564,7 +5548,7 @@ func TestEscapeMap(t *testing.T)
 
 ```
 searchKey: template.TestEscapeRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5575,7 +5559,7 @@ func TestEscapeRace(t *testing.T)
 
 ```
 searchKey: template.TestEscapeSet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5586,7 +5570,7 @@ func TestEscapeSet(t *testing.T)
 
 ```
 searchKey: template.TestEscapeSetErrorsNotIgnorable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5597,7 +5581,7 @@ func TestEscapeSetErrorsNotIgnorable(t *testing.T)
 
 ```
 searchKey: template.TestEscapeText
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5608,7 +5592,7 @@ func TestEscapeText(t *testing.T)
 
 ```
 searchKey: template.TestEscapersOnLower7AndSelectHighCodepoints
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5619,7 +5603,7 @@ func TestEscapersOnLower7AndSelectHighCodepoints(t *testing.T)
 
 ```
 searchKey: template.TestEscapingNilNonemptyInterfaces
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5632,7 +5616,7 @@ func TestEscapingNilNonemptyInterfaces(t *testing.T)
 
 ```
 searchKey: template.TestEvalFieldErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5643,7 +5627,7 @@ func TestEvalFieldErrors(t *testing.T)
 
 ```
 searchKey: template.TestExecError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5656,7 +5640,7 @@ Check that an error from a nested template contains all the relevant information
 
 ```
 searchKey: template.TestExecute
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5667,7 +5651,7 @@ func TestExecute(t *testing.T)
 
 ```
 searchKey: template.TestExecuteError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5680,7 +5664,7 @@ Check that an error from a method flows back to the top.
 
 ```
 searchKey: template.TestExecuteGivesExecError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5691,7 +5675,7 @@ func TestExecuteGivesExecError(t *testing.T)
 
 ```
 searchKey: template.TestExecuteOnNewTemplate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5702,7 +5686,7 @@ func TestExecuteOnNewTemplate(t *testing.T)
 
 ```
 searchKey: template.TestExecutePanicDuringCall
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5715,7 +5699,7 @@ Check that panics during calls are recovered and returned as errors.
 
 ```
 searchKey: template.TestFinalForPrintf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5726,7 +5710,7 @@ func TestFinalForPrintf(t *testing.T)
 
 ```
 searchKey: template.TestFindEndTag
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5737,7 +5721,7 @@ func TestFindEndTag(t *testing.T)
 
 ```
 searchKey: template.TestFuncMapWorksAfterClone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5750,7 +5734,7 @@ func TestFuncMapWorksAfterClone(t *testing.T)
 
 ```
 searchKey: template.TestGoodFuncNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5761,7 +5745,7 @@ func TestGoodFuncNames(t *testing.T)
 
 ```
 searchKey: template.TestHTMLNospaceEscaper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5772,7 +5756,7 @@ func TestHTMLNospaceEscaper(t *testing.T)
 
 ```
 searchKey: template.TestHexDecode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5783,7 +5767,7 @@ func TestHexDecode(t *testing.T)
 
 ```
 searchKey: template.TestIdempotentExecute
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5796,7 +5780,7 @@ This covers issue #20842.
 
 ```
 searchKey: template.TestIndirectPrint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5807,7 +5791,7 @@ func TestIndirectPrint(t *testing.T)
 
 ```
 searchKey: template.TestInterfaceValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5818,7 +5802,7 @@ func TestInterfaceValues(t *testing.T)
 
 ```
 searchKey: template.TestIsCSSNmchar
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5829,7 +5813,7 @@ func TestIsCSSNmchar(t *testing.T)
 
 ```
 searchKey: template.TestIsJsMimeType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5840,7 +5824,7 @@ func TestIsJsMimeType(t *testing.T)
 
 ```
 searchKey: template.TestIssue19294
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5853,7 +5837,7 @@ Issue 19249 was a regression in 1.8 caused by the handling of empty templates ad
 
 ```
 searchKey: template.TestIssue31810
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5866,7 +5850,7 @@ Issue 31810. Check that a parenthesized first argument behaves properly.
 
 ```
 searchKey: template.TestJSEscaping
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5877,7 +5861,7 @@ func TestJSEscaping(t *testing.T)
 
 ```
 searchKey: template.TestJSRegexpEscaper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5888,7 +5872,7 @@ func TestJSRegexpEscaper(t *testing.T)
 
 ```
 searchKey: template.TestJSStrEscaper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5899,7 +5883,7 @@ func TestJSStrEscaper(t *testing.T)
 
 ```
 searchKey: template.TestJSValEscaper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5910,7 +5894,7 @@ func TestJSValEscaper(t *testing.T)
 
 ```
 searchKey: template.TestMaxExecDepth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5921,7 +5905,7 @@ func TestMaxExecDepth(t *testing.T)
 
 ```
 searchKey: template.TestMessageForExecuteEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5932,7 +5916,7 @@ func TestMessageForExecuteEmpty(t *testing.T)
 
 ```
 searchKey: template.TestMissingMapKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5943,7 +5927,7 @@ func TestMissingMapKey(t *testing.T)
 
 ```
 searchKey: template.TestMultiExecute
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5954,7 +5938,7 @@ func TestMultiExecute(t *testing.T)
 
 ```
 searchKey: template.TestNextJsCtx
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5965,7 +5949,7 @@ func TestNextJsCtx(t *testing.T)
 
 ```
 searchKey: template.TestOrphanedTemplate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5978,7 +5962,7 @@ Covers issue 22780.
 
 ```
 searchKey: template.TestParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5989,7 +5973,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: template.TestParseFS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6000,7 +5984,7 @@ func TestParseFS(t *testing.T)
 
 ```
 searchKey: template.TestParseFiles
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6011,7 +5995,7 @@ func TestParseFiles(t *testing.T)
 
 ```
 searchKey: template.TestParseFilesWithData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6022,7 +6006,7 @@ func TestParseFilesWithData(t *testing.T)
 
 ```
 searchKey: template.TestParseGlob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6033,7 +6017,7 @@ func TestParseGlob(t *testing.T)
 
 ```
 searchKey: template.TestParseGlobWithData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6044,7 +6028,7 @@ func TestParseGlobWithData(t *testing.T)
 
 ```
 searchKey: template.TestParseZipFS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6055,7 +6039,7 @@ func TestParseZipFS(t *testing.T)
 
 ```
 searchKey: template.TestPipeToMethodIsEscaped
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6068,7 +6052,7 @@ This is a test for issue 7379: type assertion error caused panic, and then the c
 
 ```
 searchKey: template.TestRecursiveExecute
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6079,7 +6063,7 @@ func TestRecursiveExecute(t *testing.T)
 
 ```
 searchKey: template.TestRecursiveExecuteViaMethod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6090,7 +6074,7 @@ func TestRecursiveExecuteViaMethod(t *testing.T)
 
 ```
 searchKey: template.TestRedefinition
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6101,7 +6085,7 @@ func TestRedefinition(t *testing.T)
 
 ```
 searchKey: template.TestRedundantFuncs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6112,7 +6096,7 @@ func TestRedundantFuncs(t *testing.T)
 
 ```
 searchKey: template.TestSkipCSSSpace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6123,7 +6107,7 @@ func TestSkipCSSSpace(t *testing.T)
 
 ```
 searchKey: template.TestSrcsetFilter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6134,7 +6118,7 @@ func TestSrcsetFilter(t *testing.T)
 
 ```
 searchKey: template.TestStringer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6145,7 +6129,7 @@ func TestStringer(t *testing.T)
 
 ```
 searchKey: template.TestStripTags
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6156,7 +6140,7 @@ func TestStripTags(t *testing.T)
 
 ```
 searchKey: template.TestTemplateCloneExecuteRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6169,7 +6153,7 @@ func TestTemplateCloneExecuteRace(t *testing.T)
 
 ```
 searchKey: template.TestTemplateCloneLookup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6180,7 +6164,7 @@ func TestTemplateCloneLookup(t *testing.T)
 
 ```
 searchKey: template.TestTemplateFuncsAfterClone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6193,7 +6177,7 @@ Issue 43295.
 
 ```
 searchKey: template.TestTemplateLookUp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6206,7 +6190,7 @@ Issue 10910, 10926
 
 ```
 searchKey: template.TestTemplates
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6217,7 +6201,7 @@ func TestTemplates(t *testing.T)
 
 ```
 searchKey: template.TestTree
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6228,7 +6212,7 @@ func TestTree(t *testing.T)
 
 ```
 searchKey: template.TestTypedContent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6239,7 +6223,7 @@ func TestTypedContent(t *testing.T)
 
 ```
 searchKey: template.TestURLFilters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6250,7 +6234,7 @@ func TestURLFilters(t *testing.T)
 
 ```
 searchKey: template.TestURLNormalizer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6261,7 +6245,7 @@ func TestURLNormalizer(t *testing.T)
 
 ```
 searchKey: template.TestUnterminatedStringError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6274,7 +6258,7 @@ Test that the error message for multiline unterminated string refers to the line
 
 ```
 searchKey: template.URLQueryEscaper
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6287,7 +6271,7 @@ URLQueryEscaper returns the escaped value of the textual representation of its a
 
 ```
 searchKey: template.add
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6298,7 +6282,7 @@ func add(args ...int) int
 
 ```
 searchKey: template.appendCmd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6311,7 +6295,7 @@ appendCmd appends the given command to the end of the command pipeline unless it
 
 ```
 searchKey: template.asciiAlpha
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6324,7 +6308,7 @@ asciiAlpha reports whether c is an ASCII letter.
 
 ```
 searchKey: template.asciiAlphaNum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6337,7 +6321,7 @@ asciiAlphaNum reports whether c is an ASCII letter or digit.
 
 ```
 searchKey: template.attrEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6350,7 +6334,7 @@ attrEscaper escapes for inclusion in quoted attribute values.
 
 ```
 searchKey: template.commentEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6363,7 +6347,7 @@ commentEscaper returns the empty string regardless of input. Comment content doe
 
 ```
 searchKey: template.count
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6376,7 +6360,7 @@ count returns a channel that will deliver n sequential 1-letter strings starting
 
 ```
 searchKey: template.cssEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6389,7 +6373,7 @@ cssEscaper escapes HTML and CSS special characters using \<hex>+ escapes.
 
 ```
 searchKey: template.cssValueFilter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6402,7 +6386,7 @@ cssValueFilter allows innocuous CSS values in the output including CSS quantitie
 
 ```
 searchKey: template.dddArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6413,7 +6397,7 @@ func dddArg(a int, b ...string) string
 
 ```
 searchKey: template.decodeCSS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6426,7 +6410,7 @@ decodeCSS decodes CSS3 escapes given a sequence of stringchars. If there is no c
 
 ```
 searchKey: template.eatWhiteSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6439,7 +6423,7 @@ eatWhiteSpace returns the largest j such that s[i:j] is white space.
 
 ```
 searchKey: template.echo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6450,7 +6434,7 @@ func echo(arg interface{}) interface{}
 
 ```
 searchKey: template.endsWithCSSKeyword
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6463,7 +6447,7 @@ endsWithCSSKeyword reports whether b ends with an ident that case-insensitively 
 
 ```
 searchKey: template.ensurePipelineContains
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6476,7 +6460,7 @@ ensurePipelineContains ensures that the pipeline ends with the commands with the
 
 ```
 searchKey: template.escFnsEq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6489,7 +6473,7 @@ escFnsEq reports whether the two escaping functions are equivalent.
 
 ```
 searchKey: template.escapeTemplate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6502,7 +6486,7 @@ escapeTemplate rewrites the named template, which must be associated with t, to 
 
 ```
 searchKey: template.evalArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6515,7 +6499,7 @@ evalArgs formats the list of arguments into a string. It is equivalent to fmt.Sp
 
 ```
 searchKey: template.filterSrcsetElement
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6537,7 +6521,7 @@ func funcNameTestFunc() int
 
 ```
 searchKey: template.hexDecode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6550,7 +6534,7 @@ hexDecode decodes a short hex digit sequence: "10" -> 16.
 
 ```
 searchKey: template.htmlEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6563,7 +6547,7 @@ htmlEscaper escapes for inclusion in HTML text.
 
 ```
 searchKey: template.htmlNameFilter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6576,7 +6560,7 @@ htmlNameFilter accepts valid parts of an HTML attribute or tag name or a known-s
 
 ```
 searchKey: template.htmlNospaceEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6589,7 +6573,7 @@ htmlNospaceEscaper escapes for inclusion in unquoted attribute values.
 
 ```
 searchKey: template.htmlReplacer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6602,7 +6586,7 @@ htmlReplacer returns s with runes replaced according to replacementTable and whe
 
 ```
 searchKey: template.indexTagEnd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6615,7 +6599,7 @@ indexTagEnd finds the index of a special tag end in a case insensitive way, or r
 
 ```
 searchKey: template.indirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6628,7 +6612,7 @@ indirect returns the value, after dereferencing as many times as necessary to re
 
 ```
 searchKey: template.indirectToJSONMarshaler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6641,7 +6625,7 @@ indirectToJSONMarshaler returns the value, after dereferencing as many times as 
 
 ```
 searchKey: template.indirectToStringerOrError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6654,7 +6638,7 @@ indirectToStringerOrError returns the value, after dereferencing as many times a
 
 ```
 searchKey: template.isCSSNmchar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6667,7 +6651,7 @@ isCSSNmchar reports whether rune is allowed anywhere in a CSS identifier.
 
 ```
 searchKey: template.isCSSSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6680,7 +6664,7 @@ isCSSSpace reports whether b is a CSS space char as defined in wc.
 
 ```
 searchKey: template.isComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6693,7 +6677,7 @@ isComment is true for any state that contains content meant for template authors
 
 ```
 searchKey: template.isHTMLSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6706,7 +6690,7 @@ isHTMLSpace is true iff c is a whitespace character per [https://infra.spec.what
 
 ```
 searchKey: template.isHTMLSpaceOrASCIIAlnum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6717,7 +6701,7 @@ func isHTMLSpaceOrASCIIAlnum(c byte) bool
 
 ```
 searchKey: template.isHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6730,7 +6714,7 @@ isHex reports whether the given character is a hex digit.
 
 ```
 searchKey: template.isInTag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6743,7 +6727,7 @@ isInTag return whether s occurs solely inside an HTML tag.
 
 ```
 searchKey: template.isJSIdentPart
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6756,7 +6740,7 @@ isJSIdentPart reports whether the given rune is a JS identifier part. It does no
 
 ```
 searchKey: template.isJSType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6771,7 +6755,7 @@ It is used to determine whether a script tag with a type attribute is a javascri
 
 ```
 searchKey: template.isSafeURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6784,7 +6768,7 @@ isSafeURL is true if s is a relative URL or if URL has a protocol in (http, http
 
 ```
 searchKey: template.jsRegexpEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6797,7 +6781,7 @@ jsRegexpEscaper behaves like jsStrEscaper but escapes regular expression special
 
 ```
 searchKey: template.jsStrEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6810,7 +6794,7 @@ jsStrEscaper produces a string that can be included between quotes in JavaScript
 
 ```
 searchKey: template.jsValEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6823,7 +6807,7 @@ jsValEscaper escapes its inputs to a JS Expression (section 11.14) that has neit
 
 ```
 searchKey: template.makemap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6845,7 +6829,7 @@ func mapOfThree() interface{}
 
 ```
 searchKey: template.newIdentCmd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6858,7 +6842,7 @@ newIdentCmd produces a command containing a single identifier node.
 
 ```
 searchKey: template.newInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6871,7 +6855,7 @@ Helpers for creation.
 
 ```
 searchKey: template.newIntSlice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6882,7 +6866,7 @@ func newIntSlice(n ...int) *[]int
 
 ```
 searchKey: template.newString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6893,7 +6877,7 @@ func newString(s string) *string
 
 ```
 searchKey: template.normalizeEscFn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6906,7 +6890,7 @@ normalizeEscFn(a) is equal to normalizeEscFn(b) for any pair of names of escaper
 
 ```
 searchKey: template.oneArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6917,7 +6901,7 @@ func oneArg(a string) string
 
 ```
 searchKey: template.processURLOnto
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6930,7 +6914,7 @@ processURLOnto appends a normalized URL corresponding to its input to b and repo
 
 ```
 searchKey: template.rcdataEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6943,7 +6927,7 @@ rcdataEscaper escapes for inclusion in an RCDATA element body.
 
 ```
 searchKey: template.readFileFS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6954,7 +6938,7 @@ func readFileFS(fsys fs.FS) func(string) (string, []byte, error)
 
 ```
 searchKey: template.readFileOS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6965,7 +6949,7 @@ func readFileOS(file string) (name string, b []byte, err error)
 
 ```
 searchKey: template.replace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6991,7 +6975,7 @@ returnInt returns an int
 
 ```
 searchKey: template.skipCSSSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7004,7 +6988,7 @@ skipCSSSpace returns a suffix of c, skipping over a single space.
 
 ```
 searchKey: template.srcsetFilterAndEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7017,7 +7001,7 @@ Filters and normalizes srcset values which are comma separated URLs followed by 
 
 ```
 searchKey: template.stringer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7028,7 +7012,7 @@ func stringer(s fmt.Stringer) string
 
 ```
 searchKey: template.stripTags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7041,7 +7025,7 @@ stripTags takes a snippet of HTML and returns only the text content. For example
 
 ```
 searchKey: template.testBadFuncName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7052,7 +7036,7 @@ func testBadFuncName(name string, t *testing.T)
 
 ```
 searchKey: template.testExecute
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7063,7 +7047,7 @@ func testExecute(execTests []execTest, template *Template, t *testing.T)
 
 ```
 searchKey: template.twoArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7074,7 +7058,7 @@ func twoArgs(a, b string) string
 
 ```
 searchKey: template.typeOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7085,7 +7069,7 @@ func typeOf(arg interface{}) string
 
 ```
 searchKey: template.urlEscaper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7098,7 +7082,7 @@ urlEscaper produces an output that can be embedded in a URL query. The output ca
 
 ```
 searchKey: template.urlFilter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7129,7 +7113,7 @@ To allow URLs containing other schemes to bypass this filter, developers must ex
 
 ```
 searchKey: template.urlNormalizer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7142,7 +7126,7 @@ urlNormalizer normalizes URL content so it can be embedded in a quote-delimited 
 
 ```
 searchKey: template.urlProcessor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7155,7 +7139,7 @@ urlProcessor normalizes (when norm is true) or escapes its input to produce a va
 
 ```
 searchKey: template.valueString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7168,7 +7152,7 @@ valueString takes a string, not a pointer.
 
 ```
 searchKey: template.vfunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -1510,10 +1510,6 @@ Package elf implements access to ELF object files.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ARM_MAGIC_TRAMP_NUMBER" href="#ARM_MAGIC_TRAMP_NUMBER">const ARM_MAGIC_TRAMP_NUMBER</a>
 
 ```
@@ -16297,10 +16293,6 @@ seekStart, seekCurrent, seekEnd are copies of io.SeekStart, io.SeekCurrent, and 
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrNoSymbols" href="#ErrNoSymbols">var ErrNoSymbols</a>
 
 ```
@@ -16709,10 +16701,6 @@ var versionStrings = []intName{
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Chdr32" href="#Chdr32">type Chdr32 struct</a>
 
 ```
@@ -16765,7 +16753,7 @@ Class is found in Header.Ident[EI_CLASS] and Header.Class.
 
 ```
 searchKey: elf.Class.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -16776,7 +16764,7 @@ func (i Class) GoString() string
 
 ```
 searchKey: elf.Class.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -16800,7 +16788,7 @@ Section compression type.
 
 ```
 searchKey: elf.CompressionType.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -16811,7 +16799,7 @@ func (i CompressionType) GoString() string
 
 ```
 searchKey: elf.CompressionType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -16835,7 +16823,7 @@ Data is found in Header.Ident[EI_DATA] and Header.Data.
 
 ```
 searchKey: elf.Data.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -16846,7 +16834,7 @@ func (i Data) GoString() string
 
 ```
 searchKey: elf.Data.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -16902,7 +16890,7 @@ DT_FLAGS values.
 
 ```
 searchKey: elf.DynFlag.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -16913,7 +16901,7 @@ func (i DynFlag) GoString() string
 
 ```
 searchKey: elf.DynFlag.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -16937,7 +16925,7 @@ Dyn.Tag
 
 ```
 searchKey: elf.DynTag.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -16948,7 +16936,7 @@ func (i DynTag) GoString() string
 
 ```
 searchKey: elf.DynTag.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -16979,7 +16967,7 @@ A File represents an open ELF file.
 
 ```
 searchKey: elf.NewFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -16992,7 +16980,7 @@ NewFile creates a new File for accessing an ELF binary in an underlying reader. 
 
 ```
 searchKey: elf.Open
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -17005,7 +16993,7 @@ Open opens the named file using os.Open and prepares it for use as an ELF binary
 
 ```
 searchKey: elf.File.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17018,7 +17006,7 @@ Close closes the File. If the File was created using NewFile directly instead of
 
 ```
 searchKey: elf.File.DWARF
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17044,7 +17032,7 @@ The tag must be one that takes string values: DT_NEEDED, DT_SONAME, DT_RPATH, or
 
 ```
 searchKey: elf.File.DynamicSymbols
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17061,7 +17049,7 @@ For compatibility with Symbols, DynamicSymbols omits the null symbol at index 0.
 
 ```
 searchKey: elf.File.ImportedLibraries
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17074,7 +17062,7 @@ ImportedLibraries returns the names of all libraries referred to by the binary f
 
 ```
 searchKey: elf.File.ImportedSymbols
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17113,7 +17101,7 @@ SectionByType returns the first section in f with the given type, or nil if ther
 
 ```
 searchKey: elf.File.Symbols
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17374,7 +17362,7 @@ type FormatError struct {
 
 ```
 searchKey: elf.FormatError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17469,7 +17457,7 @@ Machine is found in Header.Machine.
 
 ```
 searchKey: elf.Machine.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17480,7 +17468,7 @@ func (i Machine) GoString() string
 
 ```
 searchKey: elf.Machine.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17504,7 +17492,7 @@ NType values; used in core files.
 
 ```
 searchKey: elf.NType.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17515,7 +17503,7 @@ func (i NType) GoString() string
 
 ```
 searchKey: elf.NType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17539,7 +17527,7 @@ OSABI is found in Header.Ident[EI_OSABI] and Header.OSABI.
 
 ```
 searchKey: elf.OSABI.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17550,7 +17538,7 @@ func (i OSABI) GoString() string
 
 ```
 searchKey: elf.OSABI.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17585,7 +17573,7 @@ A Prog represents a single ELF program header in an ELF binary.
 
 ```
 searchKey: elf.Prog.Open
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17655,7 +17643,7 @@ Prog.Flag
 
 ```
 searchKey: elf.ProgFlag.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17666,7 +17654,7 @@ func (i ProgFlag) GoString() string
 
 ```
 searchKey: elf.ProgFlag.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17712,7 +17700,7 @@ Prog.Type
 
 ```
 searchKey: elf.ProgType.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17723,7 +17711,7 @@ func (i ProgType) GoString() string
 
 ```
 searchKey: elf.ProgType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17747,7 +17735,7 @@ Relocation types for 386.
 
 ```
 searchKey: elf.R_386.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17758,7 +17746,7 @@ func (i R_386) GoString() string
 
 ```
 searchKey: elf.R_386.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17782,7 +17770,7 @@ Relocation types for s390x processors.
 
 ```
 searchKey: elf.R_390.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17793,7 +17781,7 @@ func (i R_390) GoString() string
 
 ```
 searchKey: elf.R_390.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17817,7 +17805,7 @@ Relocation types for AArch64 (aka arm64)
 
 ```
 searchKey: elf.R_AARCH64.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17828,7 +17816,7 @@ func (i R_AARCH64) GoString() string
 
 ```
 searchKey: elf.R_AARCH64.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17852,7 +17840,7 @@ Relocation types for Alpha.
 
 ```
 searchKey: elf.R_ALPHA.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17863,7 +17851,7 @@ func (i R_ALPHA) GoString() string
 
 ```
 searchKey: elf.R_ALPHA.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17887,7 +17875,7 @@ Relocation types for ARM.
 
 ```
 searchKey: elf.R_ARM.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17898,7 +17886,7 @@ func (i R_ARM) GoString() string
 
 ```
 searchKey: elf.R_ARM.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17922,7 +17910,7 @@ Relocation types for MIPS.
 
 ```
 searchKey: elf.R_MIPS.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17933,7 +17921,7 @@ func (i R_MIPS) GoString() string
 
 ```
 searchKey: elf.R_MIPS.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17959,7 +17947,7 @@ Values that are shared by both R_PPC and R_PPC64 are prefixed with R_POWERPC_ in
 
 ```
 searchKey: elf.R_PPC.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17970,7 +17958,7 @@ func (i R_PPC) GoString() string
 
 ```
 searchKey: elf.R_PPC.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17996,7 +17984,7 @@ Values that are shared by both R_PPC and R_PPC64 are prefixed with R_POWERPC_ in
 
 ```
 searchKey: elf.R_PPC64.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18007,7 +17995,7 @@ func (i R_PPC64) GoString() string
 
 ```
 searchKey: elf.R_PPC64.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18031,7 +18019,7 @@ Relocation types for RISC-V processors.
 
 ```
 searchKey: elf.R_RISCV.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18042,7 +18030,7 @@ func (i R_RISCV) GoString() string
 
 ```
 searchKey: elf.R_RISCV.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18066,7 +18054,7 @@ Relocation types for SPARC.
 
 ```
 searchKey: elf.R_SPARC.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18077,7 +18065,7 @@ func (i R_SPARC) GoString() string
 
 ```
 searchKey: elf.R_SPARC.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18101,7 +18089,7 @@ Relocation types for x86-64.
 
 ```
 searchKey: elf.R_X86_64.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18112,7 +18100,7 @@ func (i R_X86_64) GoString() string
 
 ```
 searchKey: elf.R_X86_64.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18220,7 +18208,7 @@ A Section represents a single section in an ELF file.
 
 ```
 searchKey: elf.Section.Data
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18233,7 +18221,7 @@ Data reads and returns the contents of the ELF section. Even if the section is s
 
 ```
 searchKey: elf.Section.Open
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18307,7 +18295,7 @@ Section flags.
 
 ```
 searchKey: elf.SectionFlag.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18318,7 +18306,7 @@ func (i SectionFlag) GoString() string
 
 ```
 searchKey: elf.SectionFlag.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18372,7 +18360,7 @@ Special section indices.
 
 ```
 searchKey: elf.SectionIndex.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18383,7 +18371,7 @@ func (i SectionIndex) GoString() string
 
 ```
 searchKey: elf.SectionIndex.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18407,7 +18395,7 @@ Section type.
 
 ```
 searchKey: elf.SectionType.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18418,7 +18406,7 @@ func (i SectionType) GoString() string
 
 ```
 searchKey: elf.SectionType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18482,7 +18470,7 @@ Symbol Binding - ELFNN_ST_BIND - st_info
 
 ```
 searchKey: elf.ST_BIND
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -18493,7 +18481,7 @@ func ST_BIND(info uint8) SymBind
 
 ```
 searchKey: elf.SymBind.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18504,7 +18492,7 @@ func (i SymBind) GoString() string
 
 ```
 searchKey: elf.SymBind.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18528,7 +18516,7 @@ Symbol type - ELFNN_ST_TYPE - st_info
 
 ```
 searchKey: elf.ST_TYPE
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -18539,7 +18527,7 @@ func ST_TYPE(info uint8) SymType
 
 ```
 searchKey: elf.SymType.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18550,7 +18538,7 @@ func (i SymType) GoString() string
 
 ```
 searchKey: elf.SymType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18574,7 +18562,7 @@ Symbol visibility - ELFNN_ST_VISIBILITY - st_other
 
 ```
 searchKey: elf.ST_VISIBILITY
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -18585,7 +18573,7 @@ func ST_VISIBILITY(other uint8) SymVis
 
 ```
 searchKey: elf.SymVis.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18596,7 +18584,7 @@ func (i SymVis) GoString() string
 
 ```
 searchKey: elf.SymVis.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18643,7 +18631,7 @@ Type is found in Header.Type.
 
 ```
 searchKey: elf.Type.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18654,7 +18642,7 @@ func (i Type) GoString() string
 
 ```
 searchKey: elf.Type.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18678,7 +18666,7 @@ Version is found in Header.Ident[EI_VERSION] and Header.Version.
 
 ```
 searchKey: elf.Version.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18689,7 +18677,7 @@ func (i Version) GoString() string
 
 ```
 searchKey: elf.Version.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18715,7 +18703,7 @@ errorReader returns error from all operations.
 
 ```
 searchKey: elf.errorReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18844,7 +18832,7 @@ func (r *readSeekerFromReader) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: elf.readSeekerFromReader.start
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18896,15 +18884,11 @@ type verneed struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="R_INFO" href="#R_INFO">func R_INFO(sym, typ uint32) uint64</a>
 
 ```
 searchKey: elf.R_INFO
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -18915,7 +18899,7 @@ func R_INFO(sym, typ uint32) uint64
 
 ```
 searchKey: elf.R_INFO32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -18926,7 +18910,7 @@ func R_INFO32(sym, typ uint32) uint32
 
 ```
 searchKey: elf.R_SYM32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -18937,7 +18921,7 @@ func R_SYM32(info uint32) uint32
 
 ```
 searchKey: elf.R_SYM64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -18948,7 +18932,7 @@ func R_SYM64(info uint64) uint32
 
 ```
 searchKey: elf.R_TYPE32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -18959,7 +18943,7 @@ func R_TYPE32(info uint32) uint32
 
 ```
 searchKey: elf.R_TYPE64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -18970,7 +18954,7 @@ func R_TYPE64(info uint64) uint32
 
 ```
 searchKey: elf.ST_INFO
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -18981,7 +18965,7 @@ func ST_INFO(bind SymBind, typ SymType) uint8
 
 ```
 searchKey: elf.TestCompressedDWARF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -18992,7 +18976,7 @@ func TestCompressedDWARF(t *testing.T)
 
 ```
 searchKey: elf.TestCompressedSection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -19003,7 +18987,7 @@ func TestCompressedSection(t *testing.T)
 
 ```
 searchKey: elf.TestDWARFRelocations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -19014,7 +18998,7 @@ func TestDWARFRelocations(t *testing.T)
 
 ```
 searchKey: elf.TestIssue10996
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -19025,7 +19009,7 @@ func TestIssue10996(t *testing.T)
 
 ```
 searchKey: elf.TestNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -19036,7 +19020,7 @@ func TestNames(t *testing.T)
 
 ```
 searchKey: elf.TestNoSectionOverlaps
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -19047,7 +19031,7 @@ func TestNoSectionOverlaps(t *testing.T)
 
 ```
 searchKey: elf.TestOpen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -19058,7 +19042,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: elf.TestSymbols
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -19071,7 +19055,7 @@ TODO: remove duplicate code
 
 ```
 searchKey: elf.canApplyRelocation
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19084,7 +19068,7 @@ canApplyRelocation reports whether we should try to apply a relocation to a DWAR
 
 ```
 searchKey: elf.decompress
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19097,7 +19081,7 @@ elf.NewFile requires io.ReaderAt, which compress/gzip cannot provide. Decompress
 
 ```
 searchKey: elf.flagName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19108,7 +19092,7 @@ func flagName(i uint32, names []intName, goSyntax bool) string
 
 ```
 searchKey: elf.getString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19121,7 +19105,7 @@ getString extracts a string from an ELF string table.
 
 ```
 searchKey: elf.stringName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

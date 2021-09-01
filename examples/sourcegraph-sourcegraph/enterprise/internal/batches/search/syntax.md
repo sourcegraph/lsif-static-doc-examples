@@ -74,7 +74,7 @@ This package is derived from [http://github.com/bcampbell/qs](http://github.com/
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TokenColon" href="#TokenColon">const TokenColon</a>
@@ -196,7 +196,7 @@ const _TokenType_name = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="singleCharTokens" href="#singleCharTokens">var singleCharTokens</a>
@@ -227,7 +227,7 @@ var _TokenType_index = [...]uint8{0, 8, 18, 30, 41, 53, 63, 73, 81}
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Expr" href="#Expr">type Expr struct</a>
@@ -253,7 +253,7 @@ An Expr describes an expression in the parse tree.
 
 ```
 searchKey: syntax.Expr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -264,7 +264,7 @@ func (e Expr) String() string
 
 ```
 searchKey: syntax.Expr.WithErrorsQuoted
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -293,7 +293,7 @@ ParseError describes an error in query parsing.
 
 ```
 searchKey: syntax.ParseError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -317,7 +317,7 @@ The parse tree for search input. It is a list of expressions.
 
 ```
 searchKey: syntax.Map
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -330,7 +330,7 @@ Map builds a new parse tree by running a function f on each expression in an exi
 
 ```
 searchKey: syntax.Parse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -353,7 +353,7 @@ value     := lit | quoted
 
 ```
 searchKey: syntax.ParseAllowingErrors
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -366,7 +366,7 @@ ParseAllowingErrors works like Parse except that any errors are returned as Toke
 
 ```
 searchKey: syntax.ParseTree.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -392,7 +392,7 @@ Values returns the raw string values associated with a field.
 
 ```
 searchKey: syntax.ParseTree.WithErrorsQuoted
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -435,7 +435,7 @@ TokenType is the set of lexical tokens in the query syntax.
 
 ```
 searchKey: syntax.TokenType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -476,7 +476,7 @@ type parser struct {
 
 ```
 searchKey: syntax.parser.backup
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -502,7 +502,7 @@ errorExpr makes an Expr with type TokenError, whose value is built from the give
 
 ```
 searchKey: syntax.parser.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -554,7 +554,7 @@ exprSign := {"-"} expr
 
 ```
 searchKey: syntax.parser.peek
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -584,7 +584,7 @@ type scanner struct {
 
 ```
 searchKey: syntax.scanner.backup
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -617,7 +617,7 @@ func (s *scanner) emitError(msg string)
 
 ```
 searchKey: syntax.scanner.eof
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -628,7 +628,7 @@ func (s *scanner) eof() bool
 
 ```
 searchKey: syntax.scanner.ignore
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -639,7 +639,7 @@ func (s *scanner) ignore()
 
 ```
 searchKey: syntax.scanner.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -650,7 +650,7 @@ func (s *scanner) next() rune
 
 ```
 searchKey: syntax.scanner.peek
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -672,7 +672,7 @@ type stateFn func(*scanner) stateFn
 
 ```
 searchKey: syntax.scanDefault
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -683,7 +683,7 @@ func scanDefault(s *scanner) stateFn
 
 ```
 searchKey: syntax.scanLiteral
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -694,7 +694,7 @@ func scanLiteral(s *scanner) stateFn
 
 ```
 searchKey: syntax.scanPattern
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -705,7 +705,7 @@ func scanPattern(s *scanner) stateFn
 
 ```
 searchKey: syntax.scanQuoted
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -716,7 +716,7 @@ func scanQuoted(s *scanner) stateFn
 
 ```
 searchKey: syntax.scanSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -727,7 +727,7 @@ func scanSpace(s *scanner) stateFn
 
 ```
 searchKey: syntax.scanText
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -738,7 +738,7 @@ func scanText(s *scanner) stateFn
 
 ```
 searchKey: syntax.scanValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -748,14 +748,14 @@ func scanValue(s *scanner) stateFn
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Scan" href="#Scan">func Scan(input string) []Token</a>
 
 ```
 searchKey: syntax.Scan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -768,7 +768,7 @@ Scan scans the query and returns a list of tokens.
 
 ```
 searchKey: syntax.TestExpr_String
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -779,7 +779,7 @@ func TestExpr_String(t *testing.T)
 
 ```
 searchKey: syntax.TestParseAllowingErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -790,7 +790,7 @@ func TestParseAllowingErrors(t *testing.T)
 
 ```
 searchKey: syntax.TestParser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -801,7 +801,7 @@ func TestParser(t *testing.T)
 
 ```
 searchKey: syntax.TestQuery_WithErrorsQuoted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -812,7 +812,7 @@ func TestQuery_WithErrorsQuoted(t *testing.T)
 
 ```
 searchKey: syntax.TestScanner
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -823,7 +823,7 @@ func TestScanner(t *testing.T)
 
 ```
 searchKey: syntax.tokenTypes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -834,7 +834,7 @@ func tokenTypes(tokens []Token) []TokenType
 
 ```
 searchKey: syntax.tokenValues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

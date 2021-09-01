@@ -14,7 +14,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="clock" href="#clock">var clock</a>
@@ -31,14 +31,14 @@ var clock = timeutil.Now
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Init" href="#Init">func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error</a>
 
 ```
 searchKey: authz.Init
-tags: [method]
+tags: [function]
 ```
 
 ```Go

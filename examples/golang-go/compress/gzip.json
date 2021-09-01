@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -354,9 +352,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -472,9 +468,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -535,7 +529,7 @@
                       "newPage": false,
                       "searchKey": "gzip.NewReader",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -557,7 +551,7 @@
                       "newPage": false,
                       "searchKey": "gzip.Reader.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -645,7 +639,7 @@
                       "newPage": false,
                       "searchKey": "gzip.Reader.readHeader",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -668,7 +662,7 @@
                       "newPage": false,
                       "searchKey": "gzip.Reader.readString",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -714,7 +708,7 @@
                       "newPage": false,
                       "searchKey": "gzip.NewWriter",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -736,7 +730,7 @@
                       "newPage": false,
                       "searchKey": "gzip.NewWriterLevel",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -758,7 +752,7 @@
                       "newPage": false,
                       "searchKey": "gzip.Writer.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -780,7 +774,7 @@
                       "newPage": false,
                       "searchKey": "gzip.Writer.Flush",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -990,9 +984,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1011,7 +1003,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestConcat",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1035,7 +1027,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestDecompressor",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1059,7 +1051,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestEmpty",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1083,7 +1075,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestGZIPFilesHaveZeroMTimes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1107,7 +1099,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestIssue6550",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1131,7 +1123,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestLatin1",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1155,7 +1147,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestLatin1RoundTrip",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1179,7 +1171,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestLimitedWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1203,7 +1195,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestMultistreamFalse",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1227,7 +1219,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestNilStream",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1251,7 +1243,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestRoundTrip",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1275,7 +1267,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestTruncatedStreams",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1299,7 +1291,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestWriterFlush",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1323,7 +1315,7 @@
                 "newPage": false,
                 "searchKey": "gzip.TestWriterReset",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1347,7 +1339,7 @@
                 "newPage": false,
                 "searchKey": "gzip.checkZeroMTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1370,7 +1362,7 @@
                 "newPage": false,
                 "searchKey": "gzip.noEOF",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -56,10 +56,6 @@ Package builtin provides documentation for Go's predeclared identifiers. The ite
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="false" href="#false">const false</a>
 
 ```
@@ -104,10 +100,6 @@ true and false are the two untyped boolean values.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="nil" href="#nil">var nil</a>
 
 ```
@@ -123,10 +115,6 @@ var nil Type // Type must be a pointer, channel, func, interface, map, or slice 
 nil is a predeclared identifier representing the zero value for a pointer, channel, func, interface, map, or slice type. 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ComplexType" href="#ComplexType">type ComplexType builtin.complex64</a>
 
@@ -144,7 +132,7 @@ ComplexType is here for the purposes of documentation only. It is a stand-in for
 
 ```
 searchKey: builtin.complex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -169,7 +157,7 @@ FloatType is here for the purposes of documentation only. It is a stand-in for e
 
 ```
 searchKey: builtin.imag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -182,7 +170,7 @@ The imag built-in function returns the imaginary part of the complex number c. T
 
 ```
 searchKey: builtin.real
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -219,7 +207,7 @@ Type is here for the purposes of documentation only. It is a stand-in for any Go
 
 ```
 searchKey: builtin.make
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -247,7 +235,7 @@ unbuffered.
 
 ```
 searchKey: builtin.new
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -378,7 +366,7 @@ int is a signed integer type that is at least 32 bits in size. It is a distinct 
 
 ```
 searchKey: builtin.cap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -402,7 +390,7 @@ For some arguments, such as a simple array expression, the result can be a const
 
 ```
 searchKey: builtin.copy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -415,7 +403,7 @@ The copy built-in function copies elements from a source slice into a destinatio
 
 ```
 searchKey: builtin.len
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -593,15 +581,11 @@ uintptr is an integer type that is large enough to hold the bit pattern of any p
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="append" href="#append">func append(slice []Type, elems ...Type) []Type</a>
 
 ```
 searchKey: builtin.append
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -625,7 +609,7 @@ slice = append([]byte("hello "), "world"...)
 
 ```
 searchKey: builtin.close
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -644,7 +628,7 @@ will also set ok to false for a closed channel.
 
 ```
 searchKey: builtin.delete
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -657,7 +641,7 @@ The delete built-in function deletes the element with the specified key (m[key])
 
 ```
 searchKey: builtin.panic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -670,7 +654,7 @@ The panic built-in function stops normal execution of the current goroutine. Whe
 
 ```
 searchKey: builtin.print
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -683,7 +667,7 @@ The print built-in function formats its arguments in an implementation-specific 
 
 ```
 searchKey: builtin.println
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

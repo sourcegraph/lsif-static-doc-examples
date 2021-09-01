@@ -69,7 +69,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="boolSink" href="#boolSink">var boolSink</a>
@@ -179,7 +179,7 @@ var validrunetests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="RuneCountTest" href="#RuneCountTest">type RuneCountTest struct</a>
@@ -255,14 +255,14 @@ type ValidTest struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkDecodeASCIIRune" href="#BenchmarkDecodeASCIIRune">func BenchmarkDecodeASCIIRune(b *testing.B)</a>
 
 ```
 searchKey: utf8_test.BenchmarkDecodeASCIIRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -273,7 +273,7 @@ func BenchmarkDecodeASCIIRune(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkDecodeJapaneseRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -284,7 +284,7 @@ func BenchmarkDecodeJapaneseRune(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkEncodeASCIIRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -295,7 +295,7 @@ func BenchmarkEncodeASCIIRune(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkEncodeJapaneseRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ func BenchmarkEncodeJapaneseRune(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkFullRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -317,7 +317,7 @@ func BenchmarkFullRune(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkRuneCountInStringTenASCIIChars
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -328,7 +328,7 @@ func BenchmarkRuneCountInStringTenASCIIChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkRuneCountInStringTenJapaneseChars
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -339,7 +339,7 @@ func BenchmarkRuneCountInStringTenJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkRuneCountTenASCIIChars
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -350,7 +350,7 @@ func BenchmarkRuneCountTenASCIIChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkRuneCountTenJapaneseChars
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -361,7 +361,7 @@ func BenchmarkRuneCountTenJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkValidStringTenASCIIChars
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -372,7 +372,7 @@ func BenchmarkValidStringTenASCIIChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkValidStringTenJapaneseChars
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -383,7 +383,7 @@ func BenchmarkValidStringTenJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkValidTenASCIIChars
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -394,7 +394,7 @@ func BenchmarkValidTenASCIIChars(b *testing.B)
 
 ```
 searchKey: utf8_test.BenchmarkValidTenJapaneseChars
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -570,7 +570,7 @@ func ExampleValidString()
 
 ```
 searchKey: utf8_test.TestConstants
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -583,7 +583,7 @@ Validate the constants redefined from unicode.
 
 ```
 searchKey: utf8_test.TestDecodeInvalidSequence
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -594,7 +594,7 @@ func TestDecodeInvalidSequence(t *testing.T)
 
 ```
 searchKey: utf8_test.TestDecodeRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -605,7 +605,7 @@ func TestDecodeRune(t *testing.T)
 
 ```
 searchKey: utf8_test.TestDecodeSurrogateRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -616,7 +616,7 @@ func TestDecodeSurrogateRune(t *testing.T)
 
 ```
 searchKey: utf8_test.TestEncodeRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -627,7 +627,7 @@ func TestEncodeRune(t *testing.T)
 
 ```
 searchKey: utf8_test.TestFullRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -638,7 +638,7 @@ func TestFullRune(t *testing.T)
 
 ```
 searchKey: utf8_test.TestNegativeRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -651,7 +651,7 @@ Check that negative runes encode as U+FFFD.
 
 ```
 searchKey: utf8_test.TestRuneCount
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -662,7 +662,7 @@ func TestRuneCount(t *testing.T)
 
 ```
 searchKey: utf8_test.TestRuneLen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -673,7 +673,7 @@ func TestRuneLen(t *testing.T)
 
 ```
 searchKey: utf8_test.TestRuntimeConversion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -686,7 +686,7 @@ Check that a range loop, len([]rune(string)) optimization and []rune conversions
 
 ```
 searchKey: utf8_test.TestSequencing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -699,7 +699,7 @@ Check that DecodeRune and DecodeLastRune correspond to the equivalent range loop
 
 ```
 searchKey: utf8_test.TestValid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -710,7 +710,7 @@ func TestValid(t *testing.T)
 
 ```
 searchKey: utf8_test.TestValidRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -734,7 +734,7 @@ Validate the constants redefined from unicode.
 
 ```
 searchKey: utf8_test.runtimeDecodeRune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -745,7 +745,7 @@ func runtimeDecodeRune(s string) rune
 
 ```
 searchKey: utf8_test.runtimeRuneCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -756,7 +756,7 @@ func runtimeRuneCount(s string) int
 
 ```
 searchKey: utf8_test.testSequence
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

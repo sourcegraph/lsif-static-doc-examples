@@ -38,10 +38,6 @@ Package pkix contains shared, low level structures used for ASN.1 parsing and se
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="attributeTypeNames" href="#attributeTypeNames">var attributeTypeNames</a>
 
 ```
@@ -153,10 +149,6 @@ var oidStreetAddress = []int{2, 5, 4, 9}
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="AlgorithmIdentifier" href="#AlgorithmIdentifier">type AlgorithmIdentifier struct</a>
 
@@ -299,7 +291,7 @@ FillFromRDNSequence populates n from the provided RDNSequence. Multi-entry RDNs 
 
 ```
 searchKey: pkix.Name.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -312,7 +304,7 @@ String returns the string form of n, roughly following the RFC 2253 Distinguishe
 
 ```
 searchKey: pkix.Name.ToRDNSequence
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -361,7 +353,7 @@ type RDNSequence []RelativeDistinguishedNameSET
 
 ```
 searchKey: pkix.RDNSequence.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -422,15 +414,11 @@ TBSCertificateList represents the ASN.1 structure of the same name. See RFC 5280
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="oidInAttributeTypeAndValue" href="#oidInAttributeTypeAndValue">func oidInAttributeTypeAndValue(oid asn1.ObjectIdentifier, atv []AttributeTypeAndValue) bool</a>
 
 ```
 searchKey: pkix.oidInAttributeTypeAndValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

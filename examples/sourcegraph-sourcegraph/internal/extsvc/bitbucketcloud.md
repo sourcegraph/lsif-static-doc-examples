@@ -39,7 +39,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="RateLimitMaxBurstRequests" href="#RateLimitMaxBurstRequests">const RateLimitMaxBurstRequests</a>
@@ -80,7 +80,7 @@ The limits chosen here are based on the following logic: Bitbucket Cloud restric
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="normalizer" href="#normalizer">var normalizer</a>
@@ -119,7 +119,7 @@ var update = flag.Bool("update", false, "update testdata")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
@@ -152,7 +152,7 @@ Client access a Bitbucket Cloud via the REST API 2.0.
 
 ```
 searchKey: bitbucketcloud.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -165,7 +165,7 @@ NewClient creates a new Bitbucket Cloud API client with given apiURL. If a nil h
 
 ```
 searchKey: bitbucketcloud.NewTestClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -251,7 +251,7 @@ type CloneLinks []struct {
 
 ```
 searchKey: bitbucketcloud.CloneLinks.HTTPS
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -307,7 +307,7 @@ type PageToken struct {
 
 ```
 searchKey: bitbucketcloud.PageToken.HasMore
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -318,7 +318,7 @@ func (t *PageToken) HasMore() bool
 
 ```
 searchKey: bitbucketcloud.PageToken.Values
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -365,7 +365,7 @@ type httpError struct {
 
 ```
 searchKey: bitbucketcloud.httpError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -376,7 +376,7 @@ func (e *httpError) Error() string
 
 ```
 searchKey: bitbucketcloud.httpError.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -387,7 +387,7 @@ func (e *httpError) NotFound() bool
 
 ```
 searchKey: bitbucketcloud.httpError.Unauthorized
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -397,7 +397,7 @@ func (e *httpError) Unauthorized() bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GetenvTestBitbucketCloudUsername" href="#GetenvTestBitbucketCloudUsername">func GetenvTestBitbucketCloudUsername() string</a>
@@ -415,7 +415,7 @@ func GetenvTestBitbucketCloudUsername() string
 
 ```
 searchKey: bitbucketcloud.TestClient_Repos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -426,7 +426,7 @@ func TestClient_Repos(t *testing.T)
 
 ```
 searchKey: bitbucketcloud.normalize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

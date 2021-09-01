@@ -21,7 +21,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleCIDRMask" href="#ExampleCIDRMask">func ExampleCIDRMask()</a>
@@ -149,7 +149,7 @@ func ExampleUDPConn_WriteTo()
 
 ```
 searchKey: net_test.TestPipe
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -160,7 +160,7 @@ func TestPipe(t *testing.T)
 
 ```
 searchKey: net_test.TestPipeCloseError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

@@ -573,10 +573,6 @@ Package dwarf provides access to DWARF debugging information loaded from executa
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AttrAbstractOrigin" href="#AttrAbstractOrigin">const AttrAbstractOrigin</a>
 
 ```
@@ -5309,10 +5305,6 @@ const _Tag_name_5 = ...
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrUnknownPC" href="#ErrUnknownPC">var ErrUnknownPC</a>
 
 ```
@@ -5455,10 +5447,6 @@ var _Tag_index_5 = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AddrType" href="#AddrType">type AddrType struct</a>
 
 ```
@@ -5496,7 +5484,7 @@ An ArrayType represents a fixed size array type.
 
 ```
 searchKey: dwarf.ArrayType.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5507,7 +5495,7 @@ func (t *ArrayType) Size() int64
 
 ```
 searchKey: dwarf.ArrayType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5531,7 +5519,7 @@ An Attr identifies the attribute type in a DWARF Entry's Field.
 
 ```
 searchKey: dwarf.Attr.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5542,7 +5530,7 @@ func (a Attr) GoString() string
 
 ```
 searchKey: dwarf.Attr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5570,7 +5558,7 @@ A BasicType holds fields common to all basic types.
 
 ```
 searchKey: dwarf.BasicType.Basic
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5581,7 +5569,7 @@ func (b *BasicType) Basic() *BasicType
 
 ```
 searchKey: dwarf.BasicType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5639,7 +5627,7 @@ DWARF version 4 distinguishes attribute value classes more finely than previous 
 
 ```
 searchKey: dwarf.formToClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5652,7 +5640,7 @@ formToClass returns the DWARF 4 Class for the given form. If the DWARF version i
 
 ```
 searchKey: dwarf.Class.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5663,7 +5651,7 @@ func (i Class) GoString() string
 
 ```
 searchKey: dwarf.Class.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5690,7 +5678,7 @@ A CommonType holds fields common to multiple types. If a field is not known or n
 
 ```
 searchKey: dwarf.CommonType.Common
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5701,7 +5689,7 @@ func (c *CommonType) Common() *CommonType
 
 ```
 searchKey: dwarf.CommonType.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5764,7 +5752,7 @@ Data represents the DWARF debugging information loaded from an executable file (
 
 ```
 searchKey: dwarf.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5833,7 +5821,7 @@ Ranges returns the PC ranges covered by e, a slice of [low,high) pairs. Only som
 
 ```
 searchKey: dwarf.Data.Reader
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5948,7 +5936,7 @@ Parse a .debug_types section.
 
 ```
 searchKey: dwarf.Data.parseUnits
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6000,7 +5988,7 @@ type DecodeError struct {
 
 ```
 searchKey: dwarf.DecodeError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6026,7 +6014,7 @@ A DotDotDotType represents the variadic ... function parameter.
 
 ```
 searchKey: dwarf.DotDotDotType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6104,7 +6092,7 @@ An EnumType represents an enumerated type. The only indication of its native int
 
 ```
 searchKey: dwarf.EnumType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6202,7 +6190,7 @@ A FuncType represents a function type.
 
 ```
 searchKey: dwarf.FuncType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6378,7 +6366,7 @@ A LineReader reads a sequence of LineEntry structures from a DWARF "line" sectio
 
 ```
 searchKey: dwarf.LineReader.Files
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6410,7 +6398,7 @@ Rows are always in order of increasing entry.Address, but entry.Line may go forw
 
 ```
 searchKey: dwarf.LineReader.Reset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6455,7 +6443,7 @@ Note that DWARF line tables only permit sequential, forward scans. Hence, in the
 
 ```
 searchKey: dwarf.LineReader.Tell
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6481,7 +6469,7 @@ advancePC advances "operation pointer" (the combination of Address and OpIndex) 
 
 ```
 searchKey: dwarf.LineReader.readFileEntry
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6520,7 +6508,7 @@ readLNCT reads a sequence of LNCT entries and returns path information.
 
 ```
 searchKey: dwarf.LineReader.readLNCTFormat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6533,7 +6521,7 @@ readLNCTFormat reads an LNCT format description.
 
 ```
 searchKey: dwarf.LineReader.resetState
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6559,7 +6547,7 @@ step processes the next opcode and updates r.state. If the opcode emits a row in
 
 ```
 searchKey: dwarf.LineReader.updateFile
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6623,7 +6611,7 @@ A PtrType represents a pointer type.
 
 ```
 searchKey: dwarf.PtrType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6651,7 +6639,7 @@ A QualType represents a type that has the C/C++ "const", "restrict", or "volatil
 
 ```
 searchKey: dwarf.QualType.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6662,7 +6650,7 @@ func (t *QualType) Size() int64
 
 ```
 searchKey: dwarf.QualType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6695,7 +6683,7 @@ A Reader allows reading Entry structures from a DWARF `info' section. The Entry 
 
 ```
 searchKey: dwarf.Reader.AddressSize
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6708,7 +6696,7 @@ AddressSize returns the size in bytes of addresses in the current compilation un
 
 ```
 searchKey: dwarf.Reader.ByteOrder
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6721,7 +6709,7 @@ ByteOrder returns the byte order in the current compilation unit.
 
 ```
 searchKey: dwarf.Reader.Next
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6762,7 +6750,7 @@ Because compilation units can describe multiple regions of the executable, in th
 
 ```
 searchKey: dwarf.Reader.SkipChildren
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6775,7 +6763,7 @@ SkipChildren skips over the child entries associated with the last Entry returne
 
 ```
 searchKey: dwarf.Reader.clone
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6788,7 +6776,7 @@ clone returns a copy of the reader. This is used by the typeReader interface.
 
 ```
 searchKey: dwarf.Reader.maybeNextUnit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6801,7 +6789,7 @@ maybeNextUnit advances to the next unit if this one is finished.
 
 ```
 searchKey: dwarf.Reader.nextUnit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6814,7 +6802,7 @@ nextUnit advances to the next unit.
 
 ```
 searchKey: dwarf.Reader.offset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6866,7 +6854,7 @@ A StructType represents a struct, union, or C++ class type.
 
 ```
 searchKey: dwarf.StructType.Defn
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6877,7 +6865,7 @@ func (t *StructType) Defn() string
 
 ```
 searchKey: dwarf.StructType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6901,7 +6889,7 @@ A Tag is the classification (the type) of an Entry.
 
 ```
 searchKey: dwarf.Tag.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6912,7 +6900,7 @@ func (t Tag) GoString() string
 
 ```
 searchKey: dwarf.Tag.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6956,7 +6944,7 @@ A TypedefType represents a named type.
 
 ```
 searchKey: dwarf.TypedefType.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6967,7 +6955,7 @@ func (t *TypedefType) Size() int64
 
 ```
 searchKey: dwarf.TypedefType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7039,7 +7027,7 @@ An UnsupportedType is a placeholder returned in situations where we encounter a 
 
 ```
 searchKey: dwarf.UnsupportedType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7065,7 +7053,7 @@ A VoidType represents the C void type.
 
 ```
 searchKey: dwarf.VoidType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7143,7 +7131,7 @@ Data buffer being decoded.
 
 ```
 searchKey: dwarf.makeBuf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7154,7 +7142,7 @@ func makeBuf(d *Data, format dataFormat, name string, off Offset, data []byte) b
 
 ```
 searchKey: dwarf.buf.addr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7202,7 +7190,7 @@ func (b *buf) error(s string)
 
 ```
 searchKey: dwarf.buf.int
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7226,7 +7214,7 @@ func (b *buf) skip(n int)
 
 ```
 searchKey: dwarf.buf.string
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7237,7 +7225,7 @@ func (b *buf) string() string
 
 ```
 searchKey: dwarf.buf.uint
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7250,7 +7238,7 @@ Unsigned int is just a varint.
 
 ```
 searchKey: dwarf.buf.uint16
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7261,7 +7249,7 @@ func (b *buf) uint16() uint16
 
 ```
 searchKey: dwarf.buf.uint24
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7272,7 +7260,7 @@ func (b *buf) uint24() uint32
 
 ```
 searchKey: dwarf.buf.uint32
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7283,7 +7271,7 @@ func (b *buf) uint32() uint32
 
 ```
 searchKey: dwarf.buf.uint64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7294,7 +7282,7 @@ func (b *buf) uint64() uint64
 
 ```
 searchKey: dwarf.buf.uint8
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7305,7 +7293,7 @@ func (b *buf) uint8() uint8
 
 ```
 searchKey: dwarf.buf.unitLength
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7316,7 +7304,7 @@ func (b *buf) unitLength() (length Offset, dwarf64 bool)
 
 ```
 searchKey: dwarf.buf.varint
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7394,7 +7382,7 @@ type typeFixer struct {
 
 ```
 searchKey: dwarf.typeFixer.apply
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7473,7 +7461,7 @@ typeUnitReader is a typeReader for a tagTypeUnit.
 
 ```
 searchKey: dwarf.typeUnitReader.AddressSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7486,7 +7474,7 @@ AddressSize returns the size in bytes of addresses in the current type unit.
 
 ```
 searchKey: dwarf.typeUnitReader.Next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7512,7 +7500,7 @@ Seek to a new position in the type unit.
 
 ```
 searchKey: dwarf.typeUnitReader.clone
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7525,7 +7513,7 @@ clone returns a new reader for the type unit.
 
 ```
 searchKey: dwarf.typeUnitReader.offset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7558,7 +7546,7 @@ type unit struct {
 
 ```
 searchKey: dwarf.unit.addrsize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7569,7 +7557,7 @@ func (u *unit) addrsize() int
 
 ```
 searchKey: dwarf.unit.dwarf64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7580,7 +7568,7 @@ func (u *unit) dwarf64() (bool, bool)
 
 ```
 searchKey: dwarf.unit.version
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7604,7 +7592,7 @@ Some parts of DWARF have no data format, e.g., abbrevs.
 
 ```
 searchKey: dwarf.unknownFormat.addrsize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7615,7 +7603,7 @@ func (u unknownFormat) addrsize() int
 
 ```
 searchKey: dwarf.unknownFormat.dwarf64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7626,7 +7614,7 @@ func (u unknownFormat) dwarf64() (bool, bool)
 
 ```
 searchKey: dwarf.unknownFormat.version
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7635,15 +7623,11 @@ func (u unknownFormat) version() int
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestDwarf5Ranges" href="#TestDwarf5Ranges">func TestDwarf5Ranges(t *testing.T)</a>
 
 ```
 searchKey: dwarf.TestDwarf5Ranges
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7654,7 +7638,7 @@ func TestDwarf5Ranges(t *testing.T)
 
 ```
 searchKey: dwarf.pathIsAbs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7667,7 +7651,7 @@ pathIsAbs reports whether path is an absolute path (or "full path name" in DWARF
 
 ```
 searchKey: dwarf.pathJoin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7680,7 +7664,7 @@ pathJoin joins dirname and filename. filename must be relative. DWARF paths can 
 
 ```
 searchKey: dwarf.splitDrive
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7693,7 +7677,7 @@ splitDrive splits the DOS drive letter or UNC share point from path, if any. pat
 
 ```
 searchKey: dwarf.zeroArray
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

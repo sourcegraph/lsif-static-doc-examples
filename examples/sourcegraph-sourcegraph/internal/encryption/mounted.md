@@ -19,7 +19,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="theScriptOfBeeMovie" href="#theScriptOfBeeMovie">var theScriptOfBeeMovie</a>
@@ -36,7 +36,7 @@ var theScriptOfBeeMovie = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Key" href="#Key">type Key struct</a>
@@ -60,7 +60,7 @@ Key is an encryption.Key implementation that uses AES GCM encryption, using a se
 
 ```
 searchKey: mounted.NewKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -118,14 +118,14 @@ type encryptedValue struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestRoundTrip" href="#TestRoundTrip">func TestRoundTrip(t *testing.T)</a>
 
 ```
 searchKey: mounted.TestRoundTrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -136,7 +136,7 @@ func TestRoundTrip(t *testing.T)
 
 ```
 searchKey: mounted.crc32Sum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

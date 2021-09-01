@@ -103,7 +103,7 @@ package sys contains system- and configuration- and architecture-specific consta
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AMD64" href="#AMD64">const AMD64</a>
@@ -922,7 +922,7 @@ const _StackAlign = PtrSize
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="deBruijn64tab" href="#deBruijn64tab">var deBruijn64tab</a>
@@ -983,7 +983,7 @@ var ntz8tab = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ArchFamilyType" href="#ArchFamilyType">type ArchFamilyType int</a>
@@ -1000,14 +1000,14 @@ type ArchFamilyType int
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Bswap32" href="#Bswap32">func Bswap32(x uint32) uint32</a>
 
 ```
 searchKey: sys.Bswap32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1020,7 +1020,7 @@ Bswap32 returns its input with byte order reversed 0x01020304 -> 0x04030201
 
 ```
 searchKey: sys.Bswap64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1033,7 +1033,7 @@ Bswap64 returns its input with byte order reversed 0x0102030405060708 -> 0x08070
 
 ```
 searchKey: sys.Ctz32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1046,7 +1046,7 @@ Ctz32 counts trailing (low-order) zeroes, and if all are zero, then 32.
 
 ```
 searchKey: sys.Ctz64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1059,7 +1059,7 @@ Ctz64 counts trailing (low-order) zeroes, and if all are zero, then 64.
 
 ```
 searchKey: sys.Ctz8
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1072,7 +1072,7 @@ Ctz8 returns the number of trailing zero bits in x; the result is 8 for x == 0.
 
 ```
 searchKey: sys.LeadingZeros64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1085,7 +1085,7 @@ LeadingZeros64 returns the number of leading zero bits in x; the result is 64 fo
 
 ```
 searchKey: sys.LeadingZeros8
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1098,7 +1098,7 @@ LeadingZeros8 returns the number of leading zero bits in x; the result is 8 for 
 
 ```
 searchKey: sys.Len64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1111,7 +1111,7 @@ len64 returns the minimum number of bits required to represent x; the result is 
 
 ```
 searchKey: sys.Len8
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1124,7 +1124,7 @@ Len8 returns the minimum number of bits required to represent x; the result is 0
 
 ```
 searchKey: sys.OnesCount64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1137,7 +1137,7 @@ OnesCount64 returns the number of one bits ("population count") in x.
 
 ```
 searchKey: sys.TrailingZeros64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1150,7 +1150,7 @@ TrailingZeros64 returns the number of trailing zero bits in x; the result is 64 
 
 ```
 searchKey: sys.TrailingZeros8
-tags: [method]
+tags: [function]
 ```
 
 ```Go

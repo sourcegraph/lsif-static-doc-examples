@@ -9,7 +9,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SearchArgs" href="#SearchArgs">type SearchArgs struct</a>

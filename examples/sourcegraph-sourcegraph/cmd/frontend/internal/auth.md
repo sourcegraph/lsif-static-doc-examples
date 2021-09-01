@@ -23,7 +23,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="defaultUsername" href="#defaultUsername">const defaultUsername</a>
@@ -62,7 +62,7 @@ const overrideUsernameHeader = "X-Override-Auth-Username"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="envOverrideAuthSecret" href="#envOverrideAuthSecret">var envOverrideAuthSecret</a>
@@ -81,14 +81,14 @@ envOverrideAuthSecret (the env var OVERRIDE_AUTH_SECRET) is the preferred source
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ForbidAllRequestsMiddleware" href="#ForbidAllRequestsMiddleware">func ForbidAllRequestsMiddleware(next http.Handler) http.Handler</a>
 
 ```
 searchKey: auth.ForbidAllRequestsMiddleware
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -101,7 +101,7 @@ ForbidAllRequestsMiddleware forbids all requests. It is used when no auth provid
 
 ```
 searchKey: auth.OverrideAuthMiddleware
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -116,7 +116,7 @@ It is used to enable our e2e tests to authenticate to [https://sourcegraph.sgdev
 
 ```
 searchKey: auth.TestForbidAllMiddleware
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -127,7 +127,7 @@ func TestForbidAllMiddleware(t *testing.T)
 
 ```
 searchKey: auth.TestOverrideAuthMiddleware
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -138,7 +138,7 @@ func TestOverrideAuthMiddleware(t *testing.T)
 
 ```
 searchKey: auth.TestValidateCustom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -160,7 +160,7 @@ func init()
 
 ```
 searchKey: auth.validateConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -87,10 +87,6 @@ The syslog package is frozen and is not accepting new features. Some external pa
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="LOG_ALERT" href="#LOG_ALERT">const LOG_ALERT</a>
 
 ```
@@ -427,10 +423,6 @@ const severityMask = 0x07
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="crashy" href="#crashy">var crashy</a>
 
 ```
@@ -443,10 +435,6 @@ var crashy = false
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Priority" href="#Priority">type Priority int</a>
 
@@ -487,7 +475,7 @@ A Writer is a connection to a syslog server.
 
 ```
 searchKey: syslog.Dial
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -500,7 +488,7 @@ Dial establishes a connection to a log daemon by connecting to address raddr on 
 
 ```
 searchKey: syslog.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -526,7 +514,7 @@ Alert logs a message with severity LOG_ALERT, ignoring the severity passed to Ne
 
 ```
 searchKey: syslog.Writer.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -643,7 +631,7 @@ Write sends a log message to the syslog daemon.
 
 ```
 searchKey: syslog.Writer.connect
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -694,7 +682,7 @@ type netConn struct {
 
 ```
 searchKey: syslog.netConn.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -741,15 +729,11 @@ func unixSyslog() (conn serverConn, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="NewLogger" href="#NewLogger">func NewLogger(p Priority, logFlag int) (*log.Logger, error)</a>
 
 ```
 searchKey: syslog.NewLogger
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -762,7 +746,7 @@ NewLogger creates a log.Logger whose output is written to the system log service
 
 ```
 searchKey: syslog.TestConcurrentReconnect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -773,7 +757,7 @@ func TestConcurrentReconnect(t *testing.T)
 
 ```
 searchKey: syslog.TestConcurrentWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -784,7 +768,7 @@ func TestConcurrentWrite(t *testing.T)
 
 ```
 searchKey: syslog.TestDial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -795,7 +779,7 @@ func TestDial(t *testing.T)
 
 ```
 searchKey: syslog.TestFlap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -806,7 +790,7 @@ func TestFlap(t *testing.T)
 
 ```
 searchKey: syslog.TestNew
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -817,7 +801,7 @@ func TestNew(t *testing.T)
 
 ```
 searchKey: syslog.TestNewLogger
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -828,7 +812,7 @@ func TestNewLogger(t *testing.T)
 
 ```
 searchKey: syslog.TestWithSimulated
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -839,7 +823,7 @@ func TestWithSimulated(t *testing.T)
 
 ```
 searchKey: syslog.TestWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -850,7 +834,7 @@ func TestWrite(t *testing.T)
 
 ```
 searchKey: syslog.check
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -861,7 +845,7 @@ func check(t *testing.T, in, out, transport string)
 
 ```
 searchKey: syslog.runPktSyslog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -872,7 +856,7 @@ func runPktSyslog(c net.PacketConn, done chan<- string)
 
 ```
 searchKey: syslog.runStreamSyslog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -883,7 +867,7 @@ func runStreamSyslog(l net.Listener, done chan<- string, wg *sync.WaitGroup)
 
 ```
 searchKey: syslog.startServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -894,7 +878,7 @@ func startServer(n, la string, done chan<- string) (addr string, sock io.Closer,
 
 ```
 searchKey: syslog.testableNetwork
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

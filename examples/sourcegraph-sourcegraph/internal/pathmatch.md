@@ -30,7 +30,7 @@ Package pathmatch provides helpers for matching paths against globs and regular 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CompileOptions" href="#CompileOptions">type CompileOptions struct</a>
@@ -71,7 +71,7 @@ PathMatcher reports whether the path was matched.
 
 ```
 searchKey: pathmatch.CompilePathPatterns
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -88,7 +88,7 @@ This is the most common behavior for include/exclude paths in a search interface
 
 ```
 searchKey: pathmatch.CompilePattern
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -101,7 +101,7 @@ CompilePattern compiles pattern into a PathMatcher func.
 
 ```
 searchKey: pathmatch.CompilePatterns
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -138,7 +138,7 @@ func (pm pathMatcherAnd) MatchPath(path string) bool
 
 ```
 searchKey: pathmatch.pathMatcherAnd.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -174,7 +174,7 @@ func (f *pathMatcherFunc) MatchPath(path string) bool
 
 ```
 searchKey: pathmatch.pathMatcherFunc.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -212,7 +212,7 @@ func (pm pathMatcherIncludeExclude) MatchPath(path string) bool
 
 ```
 searchKey: pathmatch.pathMatcherIncludeExclude.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -247,7 +247,7 @@ func (m *regexpMatcher) MatchPath(path string) bool
 
 ```
 searchKey: pathmatch.regexpMatcher.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -257,14 +257,14 @@ func (m *regexpMatcher) String() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestCompilePathPatterns" href="#TestCompilePathPatterns">func TestCompilePathPatterns(t *testing.T)</a>
 
 ```
 searchKey: pathmatch.TestCompilePathPatterns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -275,7 +275,7 @@ func TestCompilePathPatterns(t *testing.T)
 
 ```
 searchKey: pathmatch.TestCompilePattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

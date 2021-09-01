@@ -10,7 +10,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleEscapeString" href="#ExampleEscapeString">func ExampleEscapeString()</a>

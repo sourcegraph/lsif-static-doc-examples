@@ -78,7 +78,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="countDataFmtstr" href="#countDataFmtstr">const countDataFmtstr</a>
@@ -130,7 +130,7 @@ const upsertRepoNameFmtStr = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="seriesPointsQueryFmtstr" href="#seriesPointsQueryFmtstr">var seriesPointsQueryFmtstr</a>
@@ -184,7 +184,7 @@ Another goal of this query is to get e.g. "total # of services (value) deployed 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CountDataOpts" href="#CountDataOpts">type CountDataOpts struct</a>
@@ -246,7 +246,7 @@ InterfaceCountDataFunc describes the behavior when the CountData method of the p
 
 ```
 searchKey: store.InterfaceCountDataFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -322,7 +322,7 @@ func (f *InterfaceCountDataFunc) appendCall(r0 InterfaceCountDataFuncCall)
 
 ```
 searchKey: store.InterfaceCountDataFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -359,7 +359,7 @@ InterfaceCountDataFuncCall is an object that describes an invocation of method C
 
 ```
 searchKey: store.InterfaceCountDataFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -372,7 +372,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: store.InterfaceCountDataFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -403,7 +403,7 @@ InterfaceRecordSeriesPointFunc describes the behavior when the RecordSeriesPoint
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -479,7 +479,7 @@ func (f *InterfaceRecordSeriesPointFunc) appendCall(r0 InterfaceRecordSeriesPoin
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -513,7 +513,7 @@ InterfaceRecordSeriesPointFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -526,7 +526,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: store.InterfaceRecordSeriesPointFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -557,7 +557,7 @@ InterfaceSeriesPointsFunc describes the behavior when the SeriesPoints method of
 
 ```
 searchKey: store.InterfaceSeriesPointsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -633,7 +633,7 @@ func (f *InterfaceSeriesPointsFunc) appendCall(r0 InterfaceSeriesPointsFuncCall)
 
 ```
 searchKey: store.InterfaceSeriesPointsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -670,7 +670,7 @@ InterfaceSeriesPointsFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: store.InterfaceSeriesPointsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -683,7 +683,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: store.InterfaceSeriesPointsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -732,7 +732,7 @@ NewMockInterface creates a new mock of the Interface interface. All methods retu
 
 ```
 searchKey: store.NewMockInterfaceFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -836,7 +836,7 @@ Some fields that could be queried (series ID, repo ID/names) are omitted as they
 
 ```
 searchKey: store.SeriesPoint.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -888,7 +888,7 @@ Store exposes methods to read and write code insights domain models from persist
 
 ```
 searchKey: store.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -901,7 +901,7 @@ New returns a new Store backed by the given Timescale db.
 
 ```
 searchKey: store.NewWithClock
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -927,7 +927,7 @@ CountData counts the amount of data points in a given time range.
 
 ```
 searchKey: store.Store.Handle
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1017,14 +1017,14 @@ scanner captures the Scan method of sql.Rows and sql.Row
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestCountData" href="#TestCountData">func TestCountData(t *testing.T)</a>
 
 ```
 searchKey: store.TestCountData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1035,7 +1035,7 @@ func TestCountData(t *testing.T)
 
 ```
 searchKey: store.TestRecordSeriesPoints
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1046,7 +1046,7 @@ func TestRecordSeriesPoints(t *testing.T)
 
 ```
 searchKey: store.TestSeriesPoints
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1057,7 +1057,7 @@ func TestSeriesPoints(t *testing.T)
 
 ```
 searchKey: store.countDataQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1068,7 +1068,7 @@ func countDataQuery(opts CountDataOpts) *sqlf.Query
 
 ```
 searchKey: store.scanAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1079,7 +1079,7 @@ func scanAll(rows *sql.Rows, scan scanFunc) (err error)
 
 ```
 searchKey: store.seriesPointsQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

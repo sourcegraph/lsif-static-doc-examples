@@ -587,10 +587,6 @@ See "JSON and Go" for an introduction to this package: [https://golang.org/doc/a
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="caseMask" href="#caseMask">const caseMask</a>
 
 ```
@@ -976,10 +972,6 @@ const tokenTopValue = iota
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="allValue" href="#allValue">var allValue</a>
 
@@ -1749,10 +1741,6 @@ var wrongStringTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="All" href="#All">type All struct</a>
 
 ```
@@ -1979,7 +1967,7 @@ C implements Marshaler and returns unescaped JSON.
 
 ```
 searchKey: json.C.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2003,7 +1991,7 @@ CText implements Marshaler and returns unescaped text.
 
 ```
 searchKey: json.CText.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2038,7 +2026,7 @@ A Decoder reads and decodes JSON values from an input stream.
 
 ```
 searchKey: json.NewDecoder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2053,7 +2041,7 @@ The decoder introduces its own buffering and may read data from r beyond the JSO
 
 ```
 searchKey: json.Decoder.Buffered
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2081,7 +2069,7 @@ See the documentation for Unmarshal for details about the conversion of JSON int
 
 ```
 searchKey: json.Decoder.DisallowUnknownFields
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2094,7 +2082,7 @@ DisallowUnknownFields causes the Decoder to return an error when the destination
 
 ```
 searchKey: json.Decoder.InputOffset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2107,7 +2095,7 @@ InputOffset returns the input stream byte offset of the current decoder position
 
 ```
 searchKey: json.Decoder.More
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2120,7 +2108,7 @@ More reports whether there is another element in the current array or object bei
 
 ```
 searchKey: json.Decoder.Token
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2137,7 +2125,7 @@ The input stream consists of basic JSON valuesâ€”bool, string, number, and nullâ
 
 ```
 searchKey: json.Decoder.UseNumber
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2150,7 +2138,7 @@ UseNumber causes the Decoder to unmarshal a number into an interface{} as a Numb
 
 ```
 searchKey: json.Decoder.peek
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2161,7 +2149,7 @@ func (dec *Decoder) peek() (byte, error)
 
 ```
 searchKey: json.Decoder.readValue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2174,7 +2162,7 @@ readValue reads a JSON value into dec.buf. It returns the length of the encoding
 
 ```
 searchKey: json.Decoder.refill
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2196,7 +2184,7 @@ func (dec *Decoder) tokenError(c byte) (Token, error)
 
 ```
 searchKey: json.Decoder.tokenPrepareForDecode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2209,7 +2197,7 @@ advance tokenstate from a separator state to a value state
 
 ```
 searchKey: json.Decoder.tokenValueAllowed
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2220,7 +2208,7 @@ func (dec *Decoder) tokenValueAllowed() bool
 
 ```
 searchKey: json.Decoder.tokenValueEnd
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2244,7 +2232,7 @@ A Delim is a JSON array or object delimiter, one of [ ] { or }.
 
 ```
 searchKey: json.Delim.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2372,7 +2360,7 @@ An Encoder writes JSON values to an output stream.
 
 ```
 searchKey: json.NewEncoder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2445,7 +2433,7 @@ Deprecated: No longer used; kept for compatibility.
 
 ```
 searchKey: json.InvalidUTF8Error.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2471,7 +2459,7 @@ An InvalidUnmarshalError describes an invalid argument passed to Unmarshal. (The
 
 ```
 searchKey: json.InvalidUnmarshalError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2529,7 +2517,7 @@ A MarshalerError represents an error from calling a MarshalJSON or MarshalText m
 
 ```
 searchKey: json.MarshalerError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2540,7 +2528,7 @@ func (e *MarshalerError) Error() string
 
 ```
 searchKey: json.MarshalerError.Unwrap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2654,7 +2642,7 @@ A Number represents a JSON number literal.
 
 ```
 searchKey: json.Number.Float64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2667,7 +2655,7 @@ Float64 returns the number as a float64.
 
 ```
 searchKey: json.Number.Int64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2680,7 +2668,7 @@ Int64 returns the number as an int64.
 
 ```
 searchKey: json.Number.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2808,7 +2796,7 @@ RawMessage is a raw encoded JSON value. It implements Marshaler and Unmarshaler 
 
 ```
 searchKey: json.RawMessage.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2858,7 +2846,7 @@ Ref has Marshaler and Unmarshaler methods with pointer receiver.
 
 ```
 searchKey: json.Ref.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2893,7 +2881,7 @@ RefText has Marshaler and Unmarshaler methods with pointer receiver.
 
 ```
 searchKey: json.RefText.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3120,7 +3108,7 @@ A SyntaxError is a description of a JSON syntax error.
 
 ```
 searchKey: json.SyntaxError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3245,7 +3233,7 @@ Deprecated: No longer used; kept for compatibility.
 
 ```
 searchKey: json.UnmarshalFieldError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3275,7 +3263,7 @@ An UnmarshalTypeError describes a JSON value that was not appropriate for a valu
 
 ```
 searchKey: json.UnmarshalTypeError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3303,7 +3291,7 @@ By convention, to approximate the behavior of Unmarshal itself, Unmarshalers imp
 
 ```
 searchKey: json.indirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3331,7 +3319,7 @@ An UnsupportedTypeError is returned by Marshal when attempting to encode an unsu
 
 ```
 searchKey: json.UnsupportedTypeError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3358,7 +3346,7 @@ An UnsupportedValueError is returned by Marshal when attempting to encode an uns
 
 ```
 searchKey: json.UnsupportedValueError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3411,7 +3399,7 @@ Val has Marshaler methods with value receiver.
 
 ```
 searchKey: json.Val.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3435,7 +3423,7 @@ ValText has Marshaler methods with value receiver.
 
 ```
 searchKey: json.ValText.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3643,7 +3631,7 @@ byIndex sorts field by index sequence.
 
 ```
 searchKey: json.byIndex.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3687,7 +3675,7 @@ type byteWithMarshalJSON byte
 
 ```
 searchKey: json.byteWithMarshalJSON.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3720,7 +3708,7 @@ type byteWithMarshalText byte
 
 ```
 searchKey: json.byteWithMarshalText.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3753,7 +3741,7 @@ type byteWithPtrMarshalJSON byte
 
 ```
 searchKey: json.byteWithPtrMarshalJSON.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3786,7 +3774,7 @@ type byteWithPtrMarshalText byte
 
 ```
 searchKey: json.byteWithPtrMarshalText.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3926,7 +3914,7 @@ array consumes an array from d.data[d.off-1:], decoding into v. The first byte o
 
 ```
 searchKey: json.decodeState.arrayInterface
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3963,7 +3951,7 @@ func (d *decodeState) init(data []byte) *decodeState
 
 ```
 searchKey: json.decodeState.literalInterface
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4004,7 +3992,7 @@ object consumes an object from d.data[d.off-1:], decoding into v. The first byte
 
 ```
 searchKey: json.decodeState.objectInterface
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4017,7 +4005,7 @@ objectInterface is like object but returns map[string]interface{}.
 
 ```
 searchKey: json.decodeState.readIndex
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4030,7 +4018,7 @@ readIndex returns the position of the last byte read.
 
 ```
 searchKey: json.decodeState.rescanLiteral
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4058,7 +4046,7 @@ saveError saves the first err it is called with, for reporting at the end of the
 
 ```
 searchKey: json.decodeState.scanNext
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4084,7 +4072,7 @@ scanWhile processes bytes in d.data[d.off:] until it receives a scan code not eq
 
 ```
 searchKey: json.decodeState.skip
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4121,7 +4109,7 @@ value consumes a JSON value from d.data[d.off-1:], decoding into v, and reads th
 
 ```
 searchKey: json.decodeState.valueInterface
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4134,7 +4122,7 @@ valueInterface is like value but returns interface{}
 
 ```
 searchKey: json.decodeState.valueQuoted
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4309,7 +4297,7 @@ type encoderFunc func(e *encodeState, v reflect.Value, opts encOpts)
 
 ```
 searchKey: json.newArrayEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4320,7 +4308,7 @@ func newArrayEncoder(t reflect.Type) encoderFunc
 
 ```
 searchKey: json.newCondAddrEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4333,7 +4321,7 @@ newCondAddrEncoder returns an encoder that checks whether its value CanAddr and 
 
 ```
 searchKey: json.newMapEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4344,7 +4332,7 @@ func newMapEncoder(t reflect.Type) encoderFunc
 
 ```
 searchKey: json.newPtrEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4355,7 +4343,7 @@ func newPtrEncoder(t reflect.Type) encoderFunc
 
 ```
 searchKey: json.newSliceEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4366,7 +4354,7 @@ func newSliceEncoder(t reflect.Type) encoderFunc
 
 ```
 searchKey: json.newStructEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4377,7 +4365,7 @@ func newStructEncoder(t reflect.Type) encoderFunc
 
 ```
 searchKey: json.newTypeEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4390,7 +4378,7 @@ newTypeEncoder constructs an encoderFunc for a type. The returned encoder only c
 
 ```
 searchKey: json.typeEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4401,7 +4389,7 @@ func typeEncoder(t reflect.Type) encoderFunc
 
 ```
 searchKey: json.valueEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4470,7 +4458,7 @@ A field represents a single field found in a struct.
 
 ```
 searchKey: json.dominantField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4531,7 +4519,7 @@ type intWithMarshalJSON int
 
 ```
 searchKey: json.intWithMarshalJSON.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4564,7 +4552,7 @@ type intWithMarshalText int
 
 ```
 searchKey: json.intWithMarshalText.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4597,7 +4585,7 @@ type intWithPtrMarshalJSON int
 
 ```
 searchKey: json.intWithPtrMarshalJSON.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4630,7 +4618,7 @@ type intWithPtrMarshalText int
 
 ```
 searchKey: json.intWithPtrMarshalText.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4676,7 +4664,7 @@ type jsonbyte byte
 
 ```
 searchKey: json.jsonbyte.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4698,7 +4686,7 @@ type jsonint int
 
 ```
 searchKey: json.jsonint.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4757,7 +4745,7 @@ type marshalPanic struct{}
 
 ```
 searchKey: json.marshalPanic.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4807,7 +4795,7 @@ golang.org/issue/16042. Even if a nil interface value is passed in, as long as i
 
 ```
 searchKey: json.nilJSONMarshaler.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4831,7 +4819,7 @@ golang.org/issue/34235. Even if a nil interface value is passed in, as long as i
 
 ```
 searchKey: json.nilTextMarshaler.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4907,7 +4895,7 @@ type reflectWithString struct {
 
 ```
 searchKey: json.reflectWithString.resolve
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4996,7 +4984,7 @@ func newScanner() *scanner
 
 ```
 searchKey: json.scanner.eof
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5022,7 +5010,7 @@ error records an error and switches to the error state.
 
 ```
 searchKey: json.scanner.popParseState
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5048,7 +5036,7 @@ pushParseState pushes a new parse state p onto the parse stack. an error state i
 
 ```
 searchKey: json.scanner.reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5111,7 +5099,7 @@ type strMarshaler string
 
 ```
 searchKey: json.strMarshaler.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5133,7 +5121,7 @@ type strPtrMarshaler string
 
 ```
 searchKey: json.strPtrMarshaler.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5182,7 +5170,7 @@ type structFields struct {
 
 ```
 searchKey: json.cachedTypeFields
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5195,7 +5183,7 @@ cachedTypeFields is like typeFields but uses a cache to avoid repeated work.
 
 ```
 searchKey: json.typeFields
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5221,7 +5209,7 @@ tagOptions is the string following a comma in a struct field's "json" tag, or th
 
 ```
 searchKey: json.parseTag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5280,7 +5268,7 @@ type textbyte byte
 
 ```
 searchKey: json.textbyte.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5302,7 +5290,7 @@ type textfloat float64
 
 ```
 searchKey: json.textfloat.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5324,7 +5312,7 @@ type textint int
 
 ```
 searchKey: json.textint.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5386,7 +5374,7 @@ u8marshal is an integer type that can marshal/unmarshal itself.
 
 ```
 searchKey: json.u8marshal.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5438,7 +5426,7 @@ type unexportedWithMethods struct{}
 
 ```
 searchKey: json.unexportedWithMethods.F
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5540,7 +5528,7 @@ type unmarshalerText struct {
 
 ```
 searchKey: json.unmarshalerText.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5612,15 +5600,11 @@ type wrongStringTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkCodeDecoder" href="#BenchmarkCodeDecoder">func BenchmarkCodeDecoder(b *testing.B)</a>
 
 ```
 searchKey: json.BenchmarkCodeDecoder
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5631,7 +5615,7 @@ func BenchmarkCodeDecoder(b *testing.B)
 
 ```
 searchKey: json.BenchmarkCodeEncoder
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5642,7 +5626,7 @@ func BenchmarkCodeEncoder(b *testing.B)
 
 ```
 searchKey: json.BenchmarkCodeMarshal
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5653,7 +5637,7 @@ func BenchmarkCodeMarshal(b *testing.B)
 
 ```
 searchKey: json.BenchmarkCodeUnmarshal
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5664,7 +5648,7 @@ func BenchmarkCodeUnmarshal(b *testing.B)
 
 ```
 searchKey: json.BenchmarkCodeUnmarshalReuse
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5675,7 +5659,7 @@ func BenchmarkCodeUnmarshalReuse(b *testing.B)
 
 ```
 searchKey: json.BenchmarkDecoderStream
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5686,7 +5670,7 @@ func BenchmarkDecoderStream(b *testing.B)
 
 ```
 searchKey: json.BenchmarkEncodeMarshaler
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5697,7 +5681,7 @@ func BenchmarkEncodeMarshaler(b *testing.B)
 
 ```
 searchKey: json.BenchmarkEncoderEncode
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5708,7 +5692,7 @@ func BenchmarkEncoderEncode(b *testing.B)
 
 ```
 searchKey: json.BenchmarkIssue10335
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5719,7 +5703,7 @@ func BenchmarkIssue10335(b *testing.B)
 
 ```
 searchKey: json.BenchmarkIssue34127
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5730,7 +5714,7 @@ func BenchmarkIssue34127(b *testing.B)
 
 ```
 searchKey: json.BenchmarkMarshalBytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5741,7 +5725,7 @@ func BenchmarkMarshalBytes(b *testing.B)
 
 ```
 searchKey: json.BenchmarkNumberIsValid
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5752,7 +5736,7 @@ func BenchmarkNumberIsValid(b *testing.B)
 
 ```
 searchKey: json.BenchmarkNumberIsValidRegexp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5763,7 +5747,7 @@ func BenchmarkNumberIsValidRegexp(b *testing.B)
 
 ```
 searchKey: json.BenchmarkTypeFieldsCache
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5774,7 +5758,7 @@ func BenchmarkTypeFieldsCache(b *testing.B)
 
 ```
 searchKey: json.BenchmarkUnicodeDecoder
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5785,7 +5769,7 @@ func BenchmarkUnicodeDecoder(b *testing.B)
 
 ```
 searchKey: json.BenchmarkUnmapped
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5796,7 +5780,7 @@ func BenchmarkUnmapped(b *testing.B)
 
 ```
 searchKey: json.BenchmarkUnmarshalFloat64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5807,7 +5791,7 @@ func BenchmarkUnmarshalFloat64(b *testing.B)
 
 ```
 searchKey: json.BenchmarkUnmarshalInt64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5818,7 +5802,7 @@ func BenchmarkUnmarshalInt64(b *testing.B)
 
 ```
 searchKey: json.BenchmarkUnmarshalString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5829,7 +5813,7 @@ func BenchmarkUnmarshalString(b *testing.B)
 
 ```
 searchKey: json.Compact
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5842,7 +5826,7 @@ Compact appends to dst the JSON-encoded src with insignificant space characters 
 
 ```
 searchKey: json.HTMLEscape
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5855,7 +5839,7 @@ HTMLEscape appends to dst the JSON-encoded src with <, >, &, U+2028 and U+2029 c
 
 ```
 searchKey: json.Indent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5868,7 +5852,7 @@ Indent appends to dst an indented form of the JSON-encoded src. Each element in 
 
 ```
 searchKey: json.Marshal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5960,7 +5944,7 @@ JSON cannot represent cyclic data structures and Marshal does not handle them. P
 
 ```
 searchKey: json.MarshalIndent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5973,7 +5957,7 @@ MarshalIndent is like Marshal but applies Indent to format the output. Each JSON
 
 ```
 searchKey: json.TestAnonymousFields
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5984,7 +5968,7 @@ func TestAnonymousFields(t *testing.T)
 
 ```
 searchKey: json.TestBlocking
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5995,7 +5979,7 @@ func TestBlocking(t *testing.T)
 
 ```
 searchKey: json.TestByteKind
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6008,7 +5992,7 @@ Custom types with []byte as underlying type could not be marshaled and then unma
 
 ```
 searchKey: json.TestCompact
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6019,7 +6003,7 @@ func TestCompact(t *testing.T)
 
 ```
 searchKey: json.TestCompactBig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6030,7 +6014,7 @@ func TestCompactBig(t *testing.T)
 
 ```
 searchKey: json.TestCompactSeparators
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6041,7 +6025,7 @@ func TestCompactSeparators(t *testing.T)
 
 ```
 searchKey: json.TestDecodeInStream
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6052,7 +6036,7 @@ func TestDecodeInStream(t *testing.T)
 
 ```
 searchKey: json.TestDecoder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6063,7 +6047,7 @@ func TestDecoder(t *testing.T)
 
 ```
 searchKey: json.TestDecoderBuffered
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6074,7 +6058,7 @@ func TestDecoderBuffered(t *testing.T)
 
 ```
 searchKey: json.TestDuplicatedFieldDisappears
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6085,7 +6069,7 @@ func TestDuplicatedFieldDisappears(t *testing.T)
 
 ```
 searchKey: json.TestEmbeddedBug
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6098,7 +6082,7 @@ Issue 5245.
 
 ```
 searchKey: json.TestEmptyString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6111,7 +6095,7 @@ Test that the empty string doesn't panic decoding when ,string is specified Issu
 
 ```
 searchKey: json.TestEncodeBytekind
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6124,7 +6108,7 @@ Issue 13783
 
 ```
 searchKey: json.TestEncodePointerString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6137,7 +6121,7 @@ golang.org/issue/8582
 
 ```
 searchKey: json.TestEncodeRenamedByteSlice
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6148,7 +6132,7 @@ func TestEncodeRenamedByteSlice(t *testing.T)
 
 ```
 searchKey: json.TestEncodeString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6159,7 +6143,7 @@ func TestEncodeString(t *testing.T)
 
 ```
 searchKey: json.TestEncoder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6170,7 +6154,7 @@ func TestEncoder(t *testing.T)
 
 ```
 searchKey: json.TestEncoderIndent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6181,7 +6165,7 @@ func TestEncoderIndent(t *testing.T)
 
 ```
 searchKey: json.TestEncoderSetEscapeHTML
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6192,7 +6176,7 @@ func TestEncoderSetEscapeHTML(t *testing.T)
 
 ```
 searchKey: json.TestErrorMessageFromMisusedString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6205,7 +6189,7 @@ If people misuse the ,string modifier, the error message should be helpful, tell
 
 ```
 searchKey: json.TestEscape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6216,7 +6200,7 @@ func TestEscape(t *testing.T)
 
 ```
 searchKey: json.TestFold
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6227,7 +6211,7 @@ func TestFold(t *testing.T)
 
 ```
 searchKey: json.TestFoldAgainstUnicode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6238,7 +6222,7 @@ func TestFoldAgainstUnicode(t *testing.T)
 
 ```
 searchKey: json.TestHTMLEscape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6249,7 +6233,7 @@ func TestHTMLEscape(t *testing.T)
 
 ```
 searchKey: json.TestHTTPDecoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6262,7 +6246,7 @@ Test from golang.org/issue/11893
 
 ```
 searchKey: json.TestIndent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6273,7 +6257,7 @@ func TestIndent(t *testing.T)
 
 ```
 searchKey: json.TestIndentBig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6284,7 +6268,7 @@ func TestIndentBig(t *testing.T)
 
 ```
 searchKey: json.TestIndentErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6295,7 +6279,7 @@ func TestIndentErrors(t *testing.T)
 
 ```
 searchKey: json.TestInterfaceSet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6306,7 +6290,7 @@ func TestInterfaceSet(t *testing.T)
 
 ```
 searchKey: json.TestInvalidStringOption
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6319,7 +6303,7 @@ Test that string option is ignored for invalid types. Issue 9812.
 
 ```
 searchKey: json.TestInvalidUnmarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6330,7 +6314,7 @@ func TestInvalidUnmarshal(t *testing.T)
 
 ```
 searchKey: json.TestInvalidUnmarshalText
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6341,7 +6325,7 @@ func TestInvalidUnmarshalText(t *testing.T)
 
 ```
 searchKey: json.TestIssue10281
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6352,7 +6336,7 @@ func TestIssue10281(t *testing.T)
 
 ```
 searchKey: json.TestLargeByteSlice
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6363,7 +6347,7 @@ func TestLargeByteSlice(t *testing.T)
 
 ```
 searchKey: json.TestMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6374,7 +6358,7 @@ func TestMarshal(t *testing.T)
 
 ```
 searchKey: json.TestMarshalBadUTF8
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6385,7 +6369,7 @@ func TestMarshalBadUTF8(t *testing.T)
 
 ```
 searchKey: json.TestMarshalEmbeds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6396,7 +6380,7 @@ func TestMarshalEmbeds(t *testing.T)
 
 ```
 searchKey: json.TestMarshalFloat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6407,7 +6391,7 @@ func TestMarshalFloat(t *testing.T)
 
 ```
 searchKey: json.TestMarshalNumberZeroVal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6418,7 +6402,7 @@ func TestMarshalNumberZeroVal(t *testing.T)
 
 ```
 searchKey: json.TestMarshalPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6429,7 +6413,7 @@ func TestMarshalPanic(t *testing.T)
 
 ```
 searchKey: json.TestMarshalRawMessageValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6440,7 +6424,7 @@ func TestMarshalRawMessageValue(t *testing.T)
 
 ```
 searchKey: json.TestMarshalTextFloatMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6453,7 +6437,7 @@ Issue 43207
 
 ```
 searchKey: json.TestMarshalUncommonFieldNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6464,7 +6448,7 @@ func TestMarshalUncommonFieldNames(t *testing.T)
 
 ```
 searchKey: json.TestMarshalerError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6475,7 +6459,7 @@ func TestMarshalerError(t *testing.T)
 
 ```
 searchKey: json.TestMarshalerEscaping
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6486,7 +6470,7 @@ func TestMarshalerEscaping(t *testing.T)
 
 ```
 searchKey: json.TestNilMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6499,7 +6483,7 @@ See golang.org/issue/16042 and golang.org/issue/34235.
 
 ```
 searchKey: json.TestNilMarshalerTextMapKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6512,7 +6496,7 @@ func TestNilMarshalerTextMapKey(t *testing.T)
 
 ```
 searchKey: json.TestNullRawMessage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6523,7 +6507,7 @@ func TestNullRawMessage(t *testing.T)
 
 ```
 searchKey: json.TestNullString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6536,7 +6520,7 @@ Test that a null for ,string is not replaced with the previous quoted string (is
 
 ```
 searchKey: json.TestNumberAccessors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6549,7 +6533,7 @@ Independent of Decode, basic coverage of the accessors in Number
 
 ```
 searchKey: json.TestNumberIsValid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6560,7 +6544,7 @@ func TestNumberIsValid(t *testing.T)
 
 ```
 searchKey: json.TestOmitEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6571,7 +6555,7 @@ func TestOmitEmpty(t *testing.T)
 
 ```
 searchKey: json.TestPrefilled
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6584,7 +6568,7 @@ Test semantics of pre-filled data, such as struct fields, map elements, slices, 
 
 ```
 searchKey: json.TestRawMessage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6595,7 +6579,7 @@ func TestRawMessage(t *testing.T)
 
 ```
 searchKey: json.TestRefUnmarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6606,7 +6590,7 @@ func TestRefUnmarshal(t *testing.T)
 
 ```
 searchKey: json.TestRefValMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6617,7 +6601,7 @@ func TestRefValMarshal(t *testing.T)
 
 ```
 searchKey: json.TestRoundtripStringTag
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6628,7 +6612,7 @@ func TestRoundtripStringTag(t *testing.T)
 
 ```
 searchKey: json.TestSamePointerNoCycle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6639,7 +6623,7 @@ func TestSamePointerNoCycle(t *testing.T)
 
 ```
 searchKey: json.TestSkipArrayObjects
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6652,7 +6636,7 @@ Test that extra object elements in an array do not result in a "data changing un
 
 ```
 searchKey: json.TestSliceNoCycle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6663,7 +6647,7 @@ func TestSliceNoCycle(t *testing.T)
 
 ```
 searchKey: json.TestSliceOfCustomByte
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6676,7 +6660,7 @@ The fix for issue 8962 introduced a regression. Issue 12921.
 
 ```
 searchKey: json.TestStringBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6687,7 +6671,7 @@ func TestStringBytes(t *testing.T)
 
 ```
 searchKey: json.TestStringKind
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6698,7 +6682,7 @@ func TestStringKind(t *testing.T)
 
 ```
 searchKey: json.TestStructTagObjectKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6709,7 +6693,7 @@ func TestStructTagObjectKey(t *testing.T)
 
 ```
 searchKey: json.TestTagParsing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6720,7 +6704,7 @@ func TestTagParsing(t *testing.T)
 
 ```
 searchKey: json.TestTaggedFieldDominates
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6733,7 +6717,7 @@ Test that a field with a tag dominates untagged fields.
 
 ```
 searchKey: json.TestTextMarshalerMapKeysAreSorted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6744,7 +6728,7 @@ func TestTextMarshalerMapKeysAreSorted(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6755,7 +6739,7 @@ func TestUnmarshal(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalEmbeddedUnexported
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6774,7 +6758,7 @@ Test unmarshal behavior with regards to embedded unexported structs.
 
 ```
 searchKey: json.TestUnmarshalErrorAfterMultipleJSON
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6785,7 +6769,7 @@ func TestUnmarshalErrorAfterMultipleJSON(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalInterface
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6796,7 +6780,7 @@ func TestUnmarshalInterface(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalJSONLiteralError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6807,7 +6791,7 @@ func TestUnmarshalJSONLiteralError(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalMapWithTextUnmarshalerStringKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6820,7 +6804,7 @@ Test unmarshal to a map, where the map key is a user defined type. See golang.or
 
 ```
 searchKey: json.TestUnmarshalMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6831,7 +6815,7 @@ func TestUnmarshalMarshal(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalMaxDepth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6842,7 +6826,7 @@ func TestUnmarshalMaxDepth(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalNulls
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6855,7 +6839,7 @@ JSON null values should be ignored for primitives and string values instead of r
 
 ```
 searchKey: json.TestUnmarshalPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6866,7 +6850,7 @@ func TestUnmarshalPanic(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalPtrPtr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6877,7 +6861,7 @@ func TestUnmarshalPtrPtr(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalRecursivePointer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6890,7 +6874,7 @@ The decoder used to hang if decoding into an interface pointing to its own addre
 
 ```
 searchKey: json.TestUnmarshalRescanLiteralMangledUnquote
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6901,7 +6885,7 @@ func TestUnmarshalRescanLiteralMangledUnquote(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalSyntax
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6912,7 +6896,7 @@ func TestUnmarshalSyntax(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalTypeError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6923,7 +6907,7 @@ func TestUnmarshalTypeError(t *testing.T)
 
 ```
 searchKey: json.TestUnmarshalUnexported
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6934,7 +6918,7 @@ func TestUnmarshalUnexported(t *testing.T)
 
 ```
 searchKey: json.TestUnsupportedValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6945,7 +6929,7 @@ func TestUnsupportedValues(t *testing.T)
 
 ```
 searchKey: json.TestValid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6956,7 +6940,7 @@ func TestValid(t *testing.T)
 
 ```
 searchKey: json.Unmarshal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7000,7 +6984,7 @@ When unmarshaling quoted strings, invalid UTF-8 or invalid UTF-16 surrogate pair
 
 ```
 searchKey: json.Valid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7013,7 +6997,7 @@ Valid reports whether data is a valid JSON encoding.
 
 ```
 searchKey: json.addrMarshalerEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7024,7 +7008,7 @@ func addrMarshalerEncoder(e *encodeState, v reflect.Value, opts encOpts)
 
 ```
 searchKey: json.addrTextMarshalerEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7035,7 +7019,7 @@ func addrTextMarshalerEncoder(e *encodeState, v reflect.Value, opts encOpts)
 
 ```
 searchKey: json.asciiEqualFold
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7048,7 +7032,7 @@ asciiEqualFold is a specialization of bytes.EqualFold for use when s is all ASCI
 
 ```
 searchKey: json.benchMarshalBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7059,7 +7043,7 @@ func benchMarshalBytes(n int) func(*testing.B)
 
 ```
 searchKey: json.boolEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7070,7 +7054,7 @@ func boolEncoder(e *encodeState, v reflect.Value, opts encOpts)
 
 ```
 searchKey: json.checkValid
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7094,7 +7078,7 @@ func codeInit()
 
 ```
 searchKey: json.compact
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7105,7 +7089,7 @@ func compact(dst *bytes.Buffer, src []byte, escape bool) error
 
 ```
 searchKey: json.diff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7116,7 +7100,7 @@ func diff(t *testing.T, a, b []byte)
 
 ```
 searchKey: json.encodeByteSlice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7127,7 +7111,7 @@ func encodeByteSlice(e *encodeState, v reflect.Value, _ encOpts)
 
 ```
 searchKey: json.equalError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7138,7 +7122,7 @@ func equalError(a, b error) bool
 
 ```
 searchKey: json.equalFoldRight
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7151,7 +7135,7 @@ equalFoldRight is a specialization of bytes.EqualFold when s is known to be all 
 
 ```
 searchKey: json.foldFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7177,7 +7161,7 @@ The returned function is specialized for matching against s and should only be g
 
 ```
 searchKey: json.freeScanner
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7188,7 +7172,7 @@ func freeScanner(scan *scanner)
 
 ```
 searchKey: json.genArray
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7199,7 +7183,7 @@ func genArray(n int) []interface{}
 
 ```
 searchKey: json.genMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7210,7 +7194,7 @@ func genMap(n int) map[string]interface{}
 
 ```
 searchKey: json.genString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7221,7 +7205,7 @@ func genString(stddev float64) string
 
 ```
 searchKey: json.genValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7232,7 +7216,7 @@ func genValue(n int) interface{}
 
 ```
 searchKey: json.getu4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7267,7 +7251,7 @@ func initBig()
 
 ```
 searchKey: json.intEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7278,7 +7262,7 @@ func intEncoder(e *encodeState, v reflect.Value, opts encOpts)
 
 ```
 searchKey: json.interfaceEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7289,7 +7273,7 @@ func interfaceEncoder(e *encodeState, v reflect.Value, opts encOpts)
 
 ```
 searchKey: json.intp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7300,7 +7284,7 @@ func intp(x int) *int
 
 ```
 searchKey: json.intpp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7311,7 +7295,7 @@ func intpp(x *int) **int
 
 ```
 searchKey: json.invalidValueEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7322,7 +7306,7 @@ func invalidValueEncoder(e *encodeState, v reflect.Value, _ encOpts)
 
 ```
 searchKey: json.isASCIILetter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7333,7 +7317,7 @@ func isASCIILetter(b byte) bool
 
 ```
 searchKey: json.isEmptyValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7344,7 +7328,7 @@ func isEmptyValue(v reflect.Value) bool
 
 ```
 searchKey: json.isSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7355,7 +7339,7 @@ func isSpace(c byte) bool
 
 ```
 searchKey: json.isValidNumber
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7368,7 +7352,7 @@ isValidNumber reports whether s is a valid JSON number literal.
 
 ```
 searchKey: json.isValidTag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7379,7 +7363,7 @@ func isValidTag(s string) bool
 
 ```
 searchKey: json.marshalerEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7390,7 +7374,7 @@ func marshalerEncoder(e *encodeState, v reflect.Value, opts encOpts)
 
 ```
 searchKey: json.newline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7401,7 +7385,7 @@ func newline(dst *bytes.Buffer, prefix, indent string, depth int)
 
 ```
 searchKey: json.nlines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7412,7 +7396,7 @@ func nlines(s string, n int) string
 
 ```
 searchKey: json.noSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7423,7 +7407,7 @@ func noSpace(c rune) rune
 
 ```
 searchKey: json.nonSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7434,7 +7418,7 @@ func nonSpace(b []byte) bool
 
 ```
 searchKey: json.quoteChar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7447,7 +7431,7 @@ quoteChar formats c as a quoted character literal
 
 ```
 searchKey: json.simpleLetterEqualFold
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7460,7 +7444,7 @@ simpleLetterEqualFold is a specialization of bytes.EqualFold for use when s is a
 
 ```
 searchKey: json.state0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7473,7 +7457,7 @@ state0 is the state after reading `0` during a number.
 
 ```
 searchKey: json.state1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7486,7 +7470,7 @@ state1 is the state after reading a non-zero integer during a number, such as af
 
 ```
 searchKey: json.stateBeginString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7499,7 +7483,7 @@ stateBeginString is the state after reading `{"key": value,`.
 
 ```
 searchKey: json.stateBeginStringOrEmpty
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7512,7 +7496,7 @@ stateBeginStringOrEmpty is the state after reading `{`.
 
 ```
 searchKey: json.stateBeginValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7525,7 +7509,7 @@ stateBeginValue is the state at the beginning of the input.
 
 ```
 searchKey: json.stateBeginValueOrEmpty
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7538,7 +7522,7 @@ stateBeginValueOrEmpty is the state after reading `[`.
 
 ```
 searchKey: json.stateDot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7551,7 +7535,7 @@ stateDot is the state after reading the integer and decimal point in a number, s
 
 ```
 searchKey: json.stateDot0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7564,7 +7548,7 @@ stateDot0 is the state after reading the integer, decimal point, and subsequent 
 
 ```
 searchKey: json.stateE
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7577,7 +7561,7 @@ stateE is the state after reading the mantissa and e in a number, such as after 
 
 ```
 searchKey: json.stateE0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7590,7 +7574,7 @@ stateE0 is the state after reading the mantissa, e, optional sign, and at least 
 
 ```
 searchKey: json.stateESign
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7603,7 +7587,7 @@ stateESign is the state after reading the mantissa, e, and sign in a number, suc
 
 ```
 searchKey: json.stateEndTop
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7616,7 +7600,7 @@ stateEndTop is the state after finishing the top-level value, such as after read
 
 ```
 searchKey: json.stateEndValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7629,7 +7613,7 @@ stateEndValue is the state after completing a value, such as after reading `{}` 
 
 ```
 searchKey: json.stateError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7642,7 +7626,7 @@ stateError is the state after reaching a syntax error, such as after reading `[1
 
 ```
 searchKey: json.stateF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7655,7 +7639,7 @@ stateF is the state after reading `f`.
 
 ```
 searchKey: json.stateFa
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7668,7 +7652,7 @@ stateFa is the state after reading `fa`.
 
 ```
 searchKey: json.stateFal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7681,7 +7665,7 @@ stateFal is the state after reading `fal`.
 
 ```
 searchKey: json.stateFals
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7694,7 +7678,7 @@ stateFals is the state after reading `fals`.
 
 ```
 searchKey: json.stateInString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7707,7 +7691,7 @@ stateInString is the state after reading `"`.
 
 ```
 searchKey: json.stateInStringEsc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7720,7 +7704,7 @@ stateInStringEsc is the state after reading `"\` during a quoted string.
 
 ```
 searchKey: json.stateInStringEscU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7733,7 +7717,7 @@ stateInStringEscU is the state after reading `"\u` during a quoted string.
 
 ```
 searchKey: json.stateInStringEscU1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7746,7 +7730,7 @@ stateInStringEscU1 is the state after reading `"\u1` during a quoted string.
 
 ```
 searchKey: json.stateInStringEscU12
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7759,7 +7743,7 @@ stateInStringEscU12 is the state after reading `"\u12` during a quoted string.
 
 ```
 searchKey: json.stateInStringEscU123
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7772,7 +7756,7 @@ stateInStringEscU123 is the state after reading `"\u123` during a quoted string.
 
 ```
 searchKey: json.stateN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7785,7 +7769,7 @@ stateN is the state after reading `n`.
 
 ```
 searchKey: json.stateNeg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7798,7 +7782,7 @@ stateNeg is the state after reading `-` during a number.
 
 ```
 searchKey: json.stateNu
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7811,7 +7795,7 @@ stateNu is the state after reading `nu`.
 
 ```
 searchKey: json.stateNul
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7824,7 +7808,7 @@ stateNul is the state after reading `nul`.
 
 ```
 searchKey: json.stateT
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7837,7 +7821,7 @@ stateT is the state after reading `t`.
 
 ```
 searchKey: json.stateTr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7850,7 +7834,7 @@ stateTr is the state after reading `tr`.
 
 ```
 searchKey: json.stateTru
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7863,7 +7847,7 @@ stateTru is the state after reading `tru`.
 
 ```
 searchKey: json.stringEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7874,7 +7858,7 @@ func stringEncoder(e *encodeState, v reflect.Value, opts encOpts)
 
 ```
 searchKey: json.tenc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7885,7 +7869,7 @@ func tenc(format string, a ...interface{}) ([]byte, error)
 
 ```
 searchKey: json.textMarshalerEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7896,7 +7880,7 @@ func textMarshalerEncoder(e *encodeState, v reflect.Value, opts encOpts)
 
 ```
 searchKey: json.trim
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7907,7 +7891,7 @@ func trim(b []byte) []byte
 
 ```
 searchKey: json.typeByIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7918,7 +7902,7 @@ func typeByIndex(t reflect.Type, index []int) reflect.Type
 
 ```
 searchKey: json.uintEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7929,7 +7913,7 @@ func uintEncoder(e *encodeState, v reflect.Value, opts encOpts)
 
 ```
 searchKey: json.unquote
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7942,7 +7926,7 @@ unquote converts a quoted JSON string literal s into an actual string t. The rul
 
 ```
 searchKey: json.unquoteBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7953,7 +7937,7 @@ func unquoteBytes(s []byte) (t []byte, ok bool)
 
 ```
 searchKey: json.unsupportedTypeEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

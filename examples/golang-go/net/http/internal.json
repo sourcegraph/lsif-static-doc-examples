@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -71,9 +69,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -117,9 +113,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -204,7 +198,7 @@
                       "newPage": false,
                       "searchKey": "internal.chunkedReader.beginChunk",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -227,7 +221,7 @@
                       "newPage": false,
                       "searchKey": "internal.chunkedReader.chunkHeaderAvailable",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -274,7 +268,7 @@
                       "newPage": false,
                       "searchKey": "internal.chunkedWriter.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -325,9 +319,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -346,7 +338,7 @@
                 "newPage": false,
                 "searchKey": "internal.NewChunkedReader",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -368,7 +360,7 @@
                 "newPage": false,
                 "searchKey": "internal.NewChunkedWriter",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -390,7 +382,7 @@
                 "newPage": false,
                 "searchKey": "internal.TestChunk",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -414,7 +406,7 @@
                 "newPage": false,
                 "searchKey": "internal.TestChunkReadMultiple",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -438,7 +430,7 @@
                 "newPage": false,
                 "searchKey": "internal.TestChunkReadPartial",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -462,7 +454,7 @@
                 "newPage": false,
                 "searchKey": "internal.TestChunkReaderAllocs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -486,7 +478,7 @@
                 "newPage": false,
                 "searchKey": "internal.TestChunkReadingIgnoresExtensions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -510,7 +502,7 @@
                 "newPage": false,
                 "searchKey": "internal.TestParseHexUint",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -534,7 +526,7 @@
                 "newPage": false,
                 "searchKey": "internal.isASCIISpace",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -557,7 +549,7 @@
                 "newPage": false,
                 "searchKey": "internal.parseHexUint",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -580,7 +572,7 @@
                 "newPage": false,
                 "searchKey": "internal.readChunkLine",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -603,7 +595,7 @@
                 "newPage": false,
                 "searchKey": "internal.removeChunkExtension",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -626,7 +618,7 @@
                 "newPage": false,
                 "searchKey": "internal.trimTrailingWhitespace",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -20,7 +20,7 @@ package honey is a lightweight wrapper around libhoney which initializes honeyco
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="apiKey" href="#apiKey">var apiKey</a>
@@ -37,7 +37,7 @@ var apiKey = env.Get("HONEYCOMB_TEAM", "", "The key used for Honeycomb event tra
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SearchEventArgs" href="#SearchEventArgs">type SearchEventArgs struct</a>
@@ -62,14 +62,14 @@ type SearchEventArgs struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Builder" href="#Builder">func Builder(dataset string) *libhoney.Builder</a>
 
 ```
 searchKey: honey.Builder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -95,7 +95,7 @@ Enabled returns true if honeycomb has been configured to run.
 
 ```
 searchKey: honey.Event
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -108,7 +108,7 @@ Event creates an event for logging to dataset. Event.Send will only work if Enab
 
 ```
 searchKey: honey.EventWithFields
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -121,7 +121,7 @@ EventWithFields creates an event for logging to the given dataset. The given fie
 
 ```
 searchKey: honey.SearchEvent
-tags: [method]
+tags: [function]
 ```
 
 ```Go

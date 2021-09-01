@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -551,9 +549,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -843,9 +839,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -932,7 +926,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.newWriter",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -955,7 +949,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.bufWriter.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1002,7 +996,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.newChild",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1025,7 +1019,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.child.cleanUp",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1071,7 +1065,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.child.serve",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1141,7 +1135,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.newConn",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1164,7 +1158,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.conn.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1350,7 +1344,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.nilCloser.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1397,7 +1391,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.nopWriteCloser.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1490,7 +1484,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.record.content",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1560,7 +1554,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.newRequest",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1583,7 +1577,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.request.parseParams",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1630,7 +1624,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.newResponse",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1653,7 +1647,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.response.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1676,7 +1670,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.response.Flush",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1699,7 +1693,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.response.Header",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1815,7 +1809,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.rwNopCloser.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1862,7 +1856,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.signallingNopCloser.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1932,7 +1926,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.streamWriter.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2002,7 +1996,7 @@
                       "newPage": false,
                       "searchKey": "fcgi.writeOnlyConn.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2076,9 +2070,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2097,7 +2089,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.ProcessEnv",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2119,7 +2111,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.Serve",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2141,7 +2133,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.TestChildServeCleansUp",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2165,7 +2157,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.TestChildServeReadsEnvVars",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2189,7 +2181,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.TestGetValues",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2213,7 +2205,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.TestMalformedParams",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2237,7 +2229,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.TestResponseWriterSniffsContentType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2261,7 +2253,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.TestSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2285,7 +2277,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.TestSlowRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2309,7 +2301,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.TestStreams",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2333,7 +2325,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.addFastCGIEnvToContext",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2356,7 +2348,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.encodeSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2379,7 +2371,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.filterOutUsedEnvVars",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2402,7 +2394,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.makeRecord",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2425,7 +2417,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.nameValuePair11",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2448,7 +2440,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.readSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2471,7 +2463,7 @@
                 "newPage": false,
                 "searchKey": "fcgi.readString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -284,10 +284,6 @@ To be backwards compatible the FileHeader has both 32 and 64 bit Size fields. Th
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Deflate" href="#Deflate">const Deflate</a>
 
 ```
@@ -787,10 +783,6 @@ const zipVersion45 = 45 // 4.5 (reads and writes zip64 archives)
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrAlgorithm" href="#ErrAlgorithm">var ErrAlgorithm</a>
 
 ```
@@ -938,10 +930,6 @@ var writeTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Compressor" href="#Compressor">type Compressor func(w io.Writer) (io.WriteCloser, error)</a>
 
 ```
@@ -959,7 +947,7 @@ A Compressor returns a new compressing writer, writing to w. The WriteCloser's C
 
 ```
 searchKey: zip.compressor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -983,7 +971,7 @@ A Decompressor returns a new decompressing reader, reading from r. The ReadClose
 
 ```
 searchKey: zip.decompressor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1014,7 +1002,7 @@ A File is a single file in a ZIP archive. The file information is in the embedde
 
 ```
 searchKey: zip.File.DataOffset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1029,7 +1017,7 @@ Most callers should instead use Open, which transparently decompresses data and 
 
 ```
 searchKey: zip.File.Open
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1042,7 +1030,7 @@ Open returns a ReadCloser that provides access to the File's contents. Multiple 
 
 ```
 searchKey: zip.File.OpenRaw
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1055,7 +1043,7 @@ OpenRaw returns a Reader that provides access to the File's contents without dec
 
 ```
 searchKey: zip.File.findBodyOffset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1068,7 +1056,7 @@ findBodyOffset does the minimum work to verify the file has a header and returns
 
 ```
 searchKey: zip.File.readDataDescriptor
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1148,7 +1136,7 @@ FileHeader describes a file within a zip file. See the zip spec for details.
 
 ```
 searchKey: zip.FileInfoHeader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1161,7 +1149,7 @@ FileInfoHeader creates a partially-populated FileHeader from an fs.FileInfo. Bec
 
 ```
 searchKey: zip.FileHeader.FileInfo
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1174,7 +1162,7 @@ FileInfo returns an fs.FileInfo for the FileHeader.
 
 ```
 searchKey: zip.FileHeader.ModTime
-tags: [function deprecated]
+tags: [method deprecated]
 ```
 
 ```Go
@@ -1189,7 +1177,7 @@ Deprecated: Use Modified instead.
 
 ```
 searchKey: zip.FileHeader.Mode
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1230,7 +1218,7 @@ SetMode changes the permission and mode bits for the FileHeader.
 
 ```
 searchKey: zip.FileHeader.hasDataDescriptor
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1241,7 +1229,7 @@ func (f *FileHeader) hasDataDescriptor() bool
 
 ```
 searchKey: zip.FileHeader.isZip64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1270,7 +1258,7 @@ A ReadCloser is a Reader that must be closed when no longer needed.
 
 ```
 searchKey: zip.OpenReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1283,7 +1271,7 @@ OpenReader will open the Zip file specified by name and return a ReadCloser.
 
 ```
 searchKey: zip.ReadCloser.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1319,7 +1307,7 @@ A Reader serves content from a ZIP archive.
 
 ```
 searchKey: zip.NewReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1380,7 +1368,7 @@ func (z *Reader) init(r io.ReaderAt, size int64) error
 
 ```
 searchKey: zip.Reader.initFileList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1453,7 +1441,7 @@ Writer implements a zip file writer.
 
 ```
 searchKey: zip.NewWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1466,7 +1454,7 @@ NewWriter returns a new Writer writing a zip file to w.
 
 ```
 searchKey: zip.Writer.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1535,7 +1523,7 @@ In contrast to CreateHeader, the bytes passed to Writer are not compressed.
 
 ```
 searchKey: zip.Writer.Flush
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1678,7 +1666,7 @@ type checksumReader struct {
 
 ```
 searchKey: zip.checksumReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1700,7 +1688,7 @@ func (r *checksumReader) Read(b []byte) (n int, err error)
 
 ```
 searchKey: zip.checksumReader.Stat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1753,7 +1741,7 @@ dataDescriptor holds the data descriptor that optionally follows the file conten
 
 ```
 searchKey: zip.readDataDescriptor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1806,7 +1794,7 @@ type directoryEnd struct {
 
 ```
 searchKey: zip.readDirectoryEnd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1832,7 +1820,7 @@ fakeHash32 is a dummy Hash32 that always returns 0.
 
 ```
 searchKey: zip.fakeHash32.Sum32
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1885,7 +1873,7 @@ A fileListEntry is a File and its ename. If file == nil, the fileListEntry descr
 
 ```
 searchKey: zip.fileListEntry.Info
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1896,7 +1884,7 @@ func (f *fileListEntry) Info() (fs.FileInfo, error)
 
 ```
 searchKey: zip.fileListEntry.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1907,7 +1895,7 @@ func (f *fileListEntry) IsDir() bool
 
 ```
 searchKey: zip.fileListEntry.ModTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1918,7 +1906,7 @@ func (f *fileListEntry) ModTime() time.Time
 
 ```
 searchKey: zip.fileListEntry.Mode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1929,7 +1917,7 @@ func (f *fileListEntry) Mode() fs.FileMode
 
 ```
 searchKey: zip.fileListEntry.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1942,7 +1930,7 @@ Only used for directories.
 
 ```
 searchKey: zip.fileListEntry.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1953,7 +1941,7 @@ func (f *fileListEntry) Size() int64
 
 ```
 searchKey: zip.fileListEntry.Sys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1964,7 +1952,7 @@ func (f *fileListEntry) Sys() interface{}
 
 ```
 searchKey: zip.fileListEntry.Type
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1975,7 +1963,7 @@ func (f *fileListEntry) Type() fs.FileMode
 
 ```
 searchKey: zip.fileListEntry.stat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2016,7 +2004,7 @@ func (w *fileWriter) Write(p []byte) (int, error)
 
 ```
 searchKey: zip.fileWriter.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2027,7 +2015,7 @@ func (w *fileWriter) close() error
 
 ```
 searchKey: zip.fileWriter.writeDataDescriptor
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2068,7 +2056,7 @@ headerFileInfo implements fs.FileInfo.
 
 ```
 searchKey: zip.headerFileInfo.Info
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2079,7 +2067,7 @@ func (fi headerFileInfo) Info() (fs.FileInfo, error)
 
 ```
 searchKey: zip.headerFileInfo.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2090,7 +2078,7 @@ func (fi headerFileInfo) IsDir() bool
 
 ```
 searchKey: zip.headerFileInfo.ModTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2101,7 +2089,7 @@ func (fi headerFileInfo) ModTime() time.Time
 
 ```
 searchKey: zip.headerFileInfo.Mode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2112,7 +2100,7 @@ func (fi headerFileInfo) Mode() fs.FileMode
 
 ```
 searchKey: zip.headerFileInfo.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2123,7 +2111,7 @@ func (fi headerFileInfo) Name() string
 
 ```
 searchKey: zip.headerFileInfo.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2134,7 +2122,7 @@ func (fi headerFileInfo) Size() int64
 
 ```
 searchKey: zip.headerFileInfo.Sys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2145,7 +2133,7 @@ func (fi headerFileInfo) Sys() interface{}
 
 ```
 searchKey: zip.headerFileInfo.Type
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2169,7 +2157,7 @@ type nopCloser struct {
 
 ```
 searchKey: zip.nopCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2195,7 +2183,7 @@ type openDir struct {
 
 ```
 searchKey: zip.openDir.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2228,7 +2216,7 @@ func (d *openDir) ReadDir(count int) ([]fs.DirEntry, error)
 
 ```
 searchKey: zip.openDir.Stat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2253,7 +2241,7 @@ type pooledFlateReader struct {
 
 ```
 searchKey: zip.pooledFlateReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2289,7 +2277,7 @@ type pooledFlateWriter struct {
 
 ```
 searchKey: zip.pooledFlateWriter.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2333,7 +2321,7 @@ func (b *readBuf) sub(n int) readBuf
 
 ```
 searchKey: zip.readBuf.uint16
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2344,7 +2332,7 @@ func (b *readBuf) uint16() uint16
 
 ```
 searchKey: zip.readBuf.uint32
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2355,7 +2343,7 @@ func (b *readBuf) uint32() uint32
 
 ```
 searchKey: zip.readBuf.uint64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2366,7 +2354,7 @@ func (b *readBuf) uint64() uint64
 
 ```
 searchKey: zip.readBuf.uint8
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2407,7 +2395,7 @@ rleBuffer is a run-length-encoded byte buffer. It's an io.Writer (like a bytes.B
 
 ```
 searchKey: zip.testZip64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2429,7 +2417,7 @@ func (r *rleBuffer) ReadAt(p []byte, off int64) (n int, err error)
 
 ```
 searchKey: zip.rleBuffer.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2494,7 +2482,7 @@ func (ss *suffixSaver) ReadAt(p []byte, off int64) (n int, err error)
 
 ```
 searchKey: zip.suffixSaver.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2505,7 +2493,7 @@ func (ss *suffixSaver) Size() int64
 
 ```
 searchKey: zip.suffixSaver.Suffix
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2602,15 +2590,11 @@ func (zeros) Read(p []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkCompressedZipGarbage" href="#BenchmarkCompressedZipGarbage">func BenchmarkCompressedZipGarbage(b *testing.B)</a>
 
 ```
 searchKey: zip.BenchmarkCompressedZipGarbage
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2621,7 +2605,7 @@ func BenchmarkCompressedZipGarbage(b *testing.B)
 
 ```
 searchKey: zip.BenchmarkZip64Test
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2634,7 +2618,7 @@ Just benchmarking how fast the Zip64 test above is. Not related to our zip perfo
 
 ```
 searchKey: zip.BenchmarkZip64TestSizes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2645,7 +2629,7 @@ func BenchmarkZip64TestSizes(b *testing.B)
 
 ```
 searchKey: zip.RegisterCompressor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2658,7 +2642,7 @@ RegisterCompressor registers custom compressors for a specified method ID. The c
 
 ```
 searchKey: zip.RegisterDecompressor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2671,7 +2655,7 @@ RegisterDecompressor allows custom decompressors for a specified method ID. The 
 
 ```
 searchKey: zip.TestCVE202127919
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2682,7 +2666,7 @@ func TestCVE202127919(t *testing.T)
 
 ```
 searchKey: zip.TestCVE202133196
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2693,7 +2677,7 @@ func TestCVE202133196(t *testing.T)
 
 ```
 searchKey: zip.TestFS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2704,7 +2688,7 @@ func TestFS(t *testing.T)
 
 ```
 searchKey: zip.TestFSModTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2715,7 +2699,7 @@ func TestFSModTime(t *testing.T)
 
 ```
 searchKey: zip.TestFileHeaderRoundTrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2726,7 +2710,7 @@ func TestFileHeaderRoundTrip(t *testing.T)
 
 ```
 searchKey: zip.TestFileHeaderRoundTrip64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2737,7 +2721,7 @@ func TestFileHeaderRoundTrip64(t *testing.T)
 
 ```
 searchKey: zip.TestFileHeaderRoundTripModified
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2748,7 +2732,7 @@ func TestFileHeaderRoundTripModified(t *testing.T)
 
 ```
 searchKey: zip.TestFileHeaderRoundTripWithoutModified
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2759,7 +2743,7 @@ func TestFileHeaderRoundTripWithoutModified(t *testing.T)
 
 ```
 searchKey: zip.TestHeaderIgnoredSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2770,7 +2754,7 @@ func TestHeaderIgnoredSize(t *testing.T)
 
 ```
 searchKey: zip.TestHeaderInvalidTagAndSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2783,7 +2767,7 @@ Issue 4302.
 
 ```
 searchKey: zip.TestHeaderTooLongErr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2794,7 +2778,7 @@ func TestHeaderTooLongErr(t *testing.T)
 
 ```
 searchKey: zip.TestHeaderTooShort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2805,7 +2789,7 @@ func TestHeaderTooShort(t *testing.T)
 
 ```
 searchKey: zip.TestInvalidFiles
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2816,7 +2800,7 @@ func TestInvalidFiles(t *testing.T)
 
 ```
 searchKey: zip.TestIssue10956
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2829,7 +2813,7 @@ Verify that this particular malformed zip file is rejected.
 
 ```
 searchKey: zip.TestIssue10957
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2842,7 +2826,7 @@ Verify we return ErrUnexpectedEOF when length is short.
 
 ```
 searchKey: zip.TestIssue11146
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2855,7 +2839,7 @@ Verify we return ErrUnexpectedEOF when reading truncated data descriptor.
 
 ```
 searchKey: zip.TestIssue12449
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2868,7 +2852,7 @@ Verify we do not treat non-zip64 archives as zip64
 
 ```
 searchKey: zip.TestIssue8186
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2879,7 +2863,7 @@ func TestIssue8186(t *testing.T)
 
 ```
 searchKey: zip.TestModTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2890,7 +2874,7 @@ func TestModTime(t *testing.T)
 
 ```
 searchKey: zip.TestOver65kFiles
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2901,7 +2885,7 @@ func TestOver65kFiles(t *testing.T)
 
 ```
 searchKey: zip.TestRLEBuffer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2914,7 +2898,7 @@ Just testing the rleBuffer used in the Zip64 test above. Not used by the zip cod
 
 ```
 searchKey: zip.TestReadDataDescriptor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2925,7 +2909,7 @@ func TestReadDataDescriptor(t *testing.T)
 
 ```
 searchKey: zip.TestReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2936,7 +2920,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: zip.TestSuffixSaver
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2947,7 +2931,7 @@ func TestSuffixSaver(t *testing.T)
 
 ```
 searchKey: zip.TestWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2958,7 +2942,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: zip.TestWriterComment
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2971,7 +2955,7 @@ TestWriterComment is test for EOCD comment read/write.
 
 ```
 searchKey: zip.TestWriterCopy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2982,7 +2966,7 @@ func TestWriterCopy(t *testing.T)
 
 ```
 searchKey: zip.TestWriterCreateRaw
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2993,7 +2977,7 @@ func TestWriterCreateRaw(t *testing.T)
 
 ```
 searchKey: zip.TestWriterDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3004,7 +2988,7 @@ func TestWriterDir(t *testing.T)
 
 ```
 searchKey: zip.TestWriterDirAttributes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3015,7 +2999,7 @@ func TestWriterDirAttributes(t *testing.T)
 
 ```
 searchKey: zip.TestWriterFlush
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3026,7 +3010,7 @@ func TestWriterFlush(t *testing.T)
 
 ```
 searchKey: zip.TestWriterOffset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3037,7 +3021,7 @@ func TestWriterOffset(t *testing.T)
 
 ```
 searchKey: zip.TestWriterTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3048,7 +3032,7 @@ func TestWriterTime(t *testing.T)
 
 ```
 searchKey: zip.TestWriterUTF8
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3059,7 +3043,7 @@ func TestWriterUTF8(t *testing.T)
 
 ```
 searchKey: zip.TestZeroLengthHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3072,7 +3056,7 @@ Issue 4393. It is valid to have an extra data header which contains no body.
 
 ```
 searchKey: zip.TestZip64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3083,7 +3067,7 @@ func TestZip64(t *testing.T)
 
 ```
 searchKey: zip.TestZip64DirectoryOffset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3096,7 +3080,7 @@ Tests that we generate a zip64 file if the directory at offset 0xFFFFFFFF, but n
 
 ```
 searchKey: zip.TestZip64EdgeCase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3107,7 +3091,7 @@ func TestZip64EdgeCase(t *testing.T)
 
 ```
 searchKey: zip.TestZip64LargeDirectory
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3120,7 +3104,7 @@ Zip64 is required if the total size of the records is uint32max.
 
 ```
 searchKey: zip.TestZip64ManyRecords
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3206,7 +3190,7 @@ It's here in hex for the same reason as rZipBytes above: to avoid problems with 
 
 ```
 searchKey: zip.detectUTF8
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3219,7 +3203,7 @@ detectUTF8 reports whether s is a valid UTF-8 string, and whether the string mus
 
 ```
 searchKey: zip.equalTimeAndZone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3230,7 +3214,7 @@ func equalTimeAndZone(t1, t2 time.Time) bool
 
 ```
 searchKey: zip.fileEntryLess
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3241,7 +3225,7 @@ func fileEntryLess(x, y string) bool
 
 ```
 searchKey: zip.fileModeToUnixMode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3252,7 +3236,7 @@ func fileModeToUnixMode(mode fs.FileMode) uint32
 
 ```
 searchKey: zip.findDirectory64End
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3265,7 +3249,7 @@ findDirectory64End tries to read the zip64 locator just before the directory end
 
 ```
 searchKey: zip.findSignatureInBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3276,7 +3260,7 @@ func findSignatureInBlock(b []byte) int
 
 ```
 searchKey: zip.generatesZip64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3300,7 +3284,7 @@ func init()
 
 ```
 searchKey: zip.memset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3311,7 +3295,7 @@ func memset(a []byte, b byte)
 
 ```
 searchKey: zip.messWith
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3322,7 +3306,7 @@ func messWith(fileName string, corrupter func(b []byte)) (r io.ReaderAt, size in
 
 ```
 searchKey: zip.min
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3333,7 +3317,7 @@ func min(x, y int64) int64
 
 ```
 searchKey: zip.min64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3344,7 +3328,7 @@ func min64(x, y uint64) uint64
 
 ```
 searchKey: zip.msDosTimeToTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3357,7 +3341,7 @@ msDosTimeToTime converts an MS-DOS date and time into a time.Time. The resolutio
 
 ```
 searchKey: zip.msdosModeToFileMode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3368,7 +3352,7 @@ func msdosModeToFileMode(m uint32) (mode fs.FileMode)
 
 ```
 searchKey: zip.newFlateReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3379,7 +3363,7 @@ func newFlateReader(r io.Reader) io.ReadCloser
 
 ```
 searchKey: zip.newFlateWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3403,7 +3387,7 @@ rZipBytes returns the bytes of a recursive zip file, without putting it on disk 
 
 ```
 searchKey: zip.readDirectory64End
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3416,7 +3400,7 @@ readDirectory64End reads the zip64 directory end and updates the directory end w
 
 ```
 searchKey: zip.readDirectoryHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3429,7 +3413,7 @@ readDirectoryHeader attempts to read a directory header from r. It returns io.Er
 
 ```
 searchKey: zip.readTestFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3440,7 +3424,7 @@ func readTestFile(t *testing.T, zt ZipTest, ft ZipTestFile, f *File, raw []byte)
 
 ```
 searchKey: zip.readTestZip
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3495,7 +3479,7 @@ func returnRecursiveZip() (r io.ReaderAt, size int64)
 
 ```
 searchKey: zip.split
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3506,7 +3490,7 @@ func split(name string) (dir, elem string, isDir bool)
 
 ```
 searchKey: zip.suffixIsZip64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3517,7 +3501,7 @@ func suffixIsZip64(t *testing.T, zip sizedReaderAt) bool
 
 ```
 searchKey: zip.testCreate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3528,7 +3512,7 @@ func testCreate(t *testing.T, w *Writer, wt *WriteTest)
 
 ```
 searchKey: zip.testFileMode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3539,7 +3523,7 @@ func testFileMode(t *testing.T, f *File, want fs.FileMode)
 
 ```
 searchKey: zip.testHeaderRoundTrip
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3550,7 +3534,7 @@ func testHeaderRoundTrip(fh *FileHeader, wantUncompressedSize uint32, wantUncomp
 
 ```
 searchKey: zip.testReadFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3561,7 +3545,7 @@ func testReadFile(t *testing.T, f *File, wt *WriteTest)
 
 ```
 searchKey: zip.testValidHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3572,7 +3556,7 @@ func testValidHeader(h *FileHeader, t *testing.T)
 
 ```
 searchKey: zip.testZip64DirectoryRecordLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3585,7 +3569,7 @@ Issue 9857
 
 ```
 searchKey: zip.timeToMsDosTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3598,7 +3582,7 @@ timeToMsDosTime converts a time.Time to an MS-DOS date and time. The resolution 
 
 ```
 searchKey: zip.timeZone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3611,7 +3595,7 @@ timeZone returns a *time.Location based on the provided offset. If the offset is
 
 ```
 searchKey: zip.toValidName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3624,7 +3608,7 @@ toValidName coerces name to be a valid name for fs.FS.Open.
 
 ```
 searchKey: zip.unixModeToFileMode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3635,7 +3619,7 @@ func unixModeToFileMode(m uint32) fs.FileMode
 
 ```
 searchKey: zip.writeHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -239,9 +237,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1912,9 +1908,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1977,7 +1971,7 @@
                       "newPage": false,
                       "searchKey": "gob.ArrayStruct.GobEncode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2093,7 +2087,7 @@
                       "newPage": false,
                       "searchKey": "gob.BinaryGobber.MarshalBinary",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2163,7 +2157,7 @@
                       "newPage": false,
                       "searchKey": "gob.BinaryValueGobber.MarshalBinary",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2440,7 +2434,7 @@
                       "newPage": false,
                       "searchKey": "gob.ByteStruct.GobEncode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2486,7 +2480,7 @@
                       "newPage": false,
                       "searchKey": "gob.CommonType.id",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2509,7 +2503,7 @@
                       "newPage": false,
                       "searchKey": "gob.CommonType.name",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2578,7 +2572,7 @@
                       "newPage": false,
                       "searchKey": "gob.CommonType.string",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2671,7 +2665,7 @@
                       "newPage": false,
                       "searchKey": "gob.NewDecoder",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -3427,7 +3421,7 @@
                       "newPage": false,
                       "searchKey": "gob.Decoder.nextInt",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3450,7 +3444,7 @@
                       "newPage": false,
                       "searchKey": "gob.Decoder.nextUint",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3496,7 +3490,7 @@
                       "newPage": false,
                       "searchKey": "gob.Decoder.recvMessage",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3749,7 +3743,7 @@
                       "newPage": false,
                       "searchKey": "gob.NewEncoder",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -4022,7 +4016,7 @@
                       "newPage": false,
                       "searchKey": "gob.Encoder.popWriter",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4206,7 +4200,7 @@
                       "newPage": false,
                       "searchKey": "gob.Encoder.writer",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4253,7 +4247,7 @@
                       "newPage": false,
                       "searchKey": "gob.Float.Square",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4689,7 +4683,7 @@
                       "newPage": false,
                       "searchKey": "gob.Gobber.GobEncode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4782,7 +4776,7 @@
                       "newPage": false,
                       "searchKey": "gob.Int.Square",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4967,7 +4961,7 @@
                       "newPage": false,
                       "searchKey": "gob.Point.Square",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5175,7 +5169,7 @@
                       "newPage": false,
                       "searchKey": "gob.StringStruct.GobEncode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5314,7 +5308,7 @@
                       "newPage": false,
                       "searchKey": "gob.TextGobber.MarshalText",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5384,7 +5378,7 @@
                       "newPage": false,
                       "searchKey": "gob.TextValueGobber.MarshalText",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5500,7 +5494,7 @@
                       "newPage": false,
                       "searchKey": "gob.ValueGobber.GobEncode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5548,7 +5542,7 @@
                       "newPage": false,
                       "searchKey": "gob.Vector.Square",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5618,7 +5612,7 @@
                       "newPage": false,
                       "searchKey": "gob.newArrayType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -5635,9 +5629,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/encoding/gob#arrayType.init.type.go.0xc02decfcb0",
+                    "pathID": "/encoding/gob#arrayType.init.type.go.0xc03ca25da8",
                     "documentation": {
-                      "identifier": "arrayType.init.type.go.0xc02decfcb0",
+                      "identifier": "arrayType.init.type.go.0xc03ca25da8",
                       "newPage": false,
                       "searchKey": "gob.arrayType.init",
                       "tags": [
@@ -5687,7 +5681,7 @@
                       "newPage": false,
                       "searchKey": "gob.arrayType.string",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5780,7 +5774,7 @@
                       "newPage": false,
                       "searchKey": "gob.benchmarkBuf.ReadByte",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5803,7 +5797,7 @@
                       "newPage": false,
                       "searchKey": "gob.benchmarkBuf.reset",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5850,7 +5844,7 @@
                       "newPage": false,
                       "searchKey": "gob.newDecBuffer",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -5873,7 +5867,7 @@
                       "newPage": false,
                       "searchKey": "gob.decBuffer.Bytes",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5919,7 +5913,7 @@
                       "newPage": false,
                       "searchKey": "gob.decBuffer.Len",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5965,7 +5959,7 @@
                       "newPage": false,
                       "searchKey": "gob.decBuffer.ReadByte",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5988,7 +5982,7 @@
                       "newPage": false,
                       "searchKey": "gob.decBuffer.Reset",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6150,7 +6144,7 @@
                       "newPage": false,
                       "searchKey": "gob.newDecodeState",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6173,7 +6167,7 @@
                       "newPage": false,
                       "searchKey": "gob.newDecodeStateFromData",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6196,7 +6190,7 @@
                       "newPage": false,
                       "searchKey": "gob.decoderState.decodeInt",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6219,7 +6213,7 @@
                       "newPage": false,
                       "searchKey": "gob.decoderState.decodeUint",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6242,7 +6236,7 @@
                       "newPage": false,
                       "searchKey": "gob.decoderState.getLength",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6312,7 +6306,7 @@
                       "newPage": false,
                       "searchKey": "gob.encBuffer.Bytes",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6335,7 +6329,7 @@
                       "newPage": false,
                       "searchKey": "gob.encBuffer.Len",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6358,7 +6352,7 @@
                       "newPage": false,
                       "searchKey": "gob.encBuffer.Reset",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6474,7 +6468,7 @@
                       "newPage": false,
                       "searchKey": "gob.buildEncEngine",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6497,7 +6491,7 @@
                       "newPage": false,
                       "searchKey": "gob.compileEnc",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6520,7 +6514,7 @@
                       "newPage": false,
                       "searchKey": "gob.getEncEngine",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6613,7 +6607,7 @@
                       "newPage": false,
                       "searchKey": "gob.encOpFor",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6636,7 +6630,7 @@
                       "newPage": false,
                       "searchKey": "gob.gobEncodeOpFor",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6683,7 +6677,7 @@
                       "newPage": false,
                       "searchKey": "gob.newEncoderState",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6845,7 +6839,7 @@
                       "newPage": false,
                       "searchKey": "gob.gobDecoderBug0.GobEncode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6868,7 +6862,7 @@
                       "newPage": false,
                       "searchKey": "gob.gobDecoderBug0.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6915,7 +6909,7 @@
                       "newPage": false,
                       "searchKey": "gob.newGobEncoderType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -6961,7 +6955,7 @@
                       "newPage": false,
                       "searchKey": "gob.gobEncoderType.string",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7031,7 +7025,7 @@
                       "newPage": false,
                       "searchKey": "gob.getBaseType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7054,7 +7048,7 @@
                       "newPage": false,
                       "searchKey": "gob.getType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7077,7 +7071,7 @@
                       "newPage": false,
                       "searchKey": "gob.getTypeUnlocked",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7100,7 +7094,7 @@
                       "newPage": false,
                       "searchKey": "gob.newTypeObject",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7193,7 +7187,7 @@
                       "newPage": false,
                       "searchKey": "gob.interfaceIndirectTestT.F",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7287,7 +7281,7 @@
                       "newPage": false,
                       "searchKey": "gob.isZeroBugArray.GobEncode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7357,7 +7351,7 @@
                       "newPage": false,
                       "searchKey": "gob.isZeroBugInterface.GobEncode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7404,7 +7398,7 @@
                       "newPage": false,
                       "searchKey": "gob.newMapType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7421,9 +7415,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/encoding/gob#mapType.init.type.go.0xc02decfcb0",
+                    "pathID": "/encoding/gob#mapType.init.type.go.0xc03ca25da8",
                     "documentation": {
-                      "identifier": "mapType.init.type.go.0xc02decfcb0",
+                      "identifier": "mapType.init.type.go.0xc03ca25da8",
                       "newPage": false,
                       "searchKey": "gob.mapType.init",
                       "tags": [
@@ -7473,7 +7467,7 @@
                       "newPage": false,
                       "searchKey": "gob.mapType.string",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7520,7 +7514,7 @@
                       "newPage": false,
                       "searchKey": "gob.newSliceType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7537,9 +7531,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/encoding/gob#sliceType.init.type.go.0xc02decfcb0",
+                    "pathID": "/encoding/gob#sliceType.init.type.go.0xc03ca25da8",
                     "documentation": {
-                      "identifier": "sliceType.init.type.go.0xc02decfcb0",
+                      "identifier": "sliceType.init.type.go.0xc03ca25da8",
                       "newPage": false,
                       "searchKey": "gob.sliceType.init",
                       "tags": [
@@ -7589,7 +7583,7 @@
                       "newPage": false,
                       "searchKey": "gob.sliceType.string",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7636,7 +7630,7 @@
                       "newPage": false,
                       "searchKey": "gob.newStructType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7682,7 +7676,7 @@
                       "newPage": false,
                       "searchKey": "gob.structType.string",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7729,7 +7723,7 @@
                       "newPage": false,
                       "searchKey": "gob.bootstrapType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7752,7 +7746,7 @@
                       "newPage": false,
                       "searchKey": "gob.typeId.gobType",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7775,7 +7769,7 @@
                       "newPage": false,
                       "searchKey": "gob.typeId.name",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7798,7 +7792,7 @@
                       "newPage": false,
                       "searchKey": "gob.typeId.string",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7845,7 +7839,7 @@
                       "newPage": false,
                       "searchKey": "gob.buildTypeInfo",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7868,7 +7862,7 @@
                       "newPage": false,
                       "searchKey": "gob.getTypeInfo",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7891,7 +7885,7 @@
                       "newPage": false,
                       "searchKey": "gob.lookupTypeInfo",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7914,7 +7908,7 @@
                       "newPage": false,
                       "searchKey": "gob.mustGetTypeInfo",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -7984,7 +7978,7 @@
                       "newPage": false,
                       "searchKey": "gob.userType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -8007,7 +8001,7 @@
                       "newPage": false,
                       "searchKey": "gob.validUserType",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -8054,7 +8048,7 @@
                       "newPage": false,
                       "searchKey": "gob.wireType.string",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -8082,9 +8076,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -8103,7 +8095,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkDecodeComplex128Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8127,7 +8119,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkDecodeFloat64Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8151,7 +8143,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkDecodeInt32Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8175,7 +8167,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkDecodeInterfaceSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8199,7 +8191,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkDecodeMap",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8223,7 +8215,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkDecodeStringSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8247,7 +8239,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkEncodeComplex128Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8271,7 +8263,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkEncodeFloat64Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8295,7 +8287,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkEncodeInt32Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8319,7 +8311,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkEncodeInterfaceSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8343,7 +8335,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkEncodeStringSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8367,7 +8359,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkEndToEndByteBuffer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8391,7 +8383,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkEndToEndPipe",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8415,7 +8407,7 @@
                 "newPage": false,
                 "searchKey": "gob.BenchmarkEndToEndSliceByteBuffer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -8439,7 +8431,7 @@
                 "newPage": false,
                 "searchKey": "gob.Register",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8461,7 +8453,7 @@
                 "newPage": false,
                 "searchKey": "gob.RegisterName",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -8483,7 +8475,7 @@
                 "newPage": false,
                 "searchKey": "gob.Test29ElementSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8507,7 +8499,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8531,7 +8523,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestArrayType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8555,7 +8547,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestAutoIndirection",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8579,7 +8571,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestBadCount",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8603,7 +8595,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestBadData",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8627,7 +8619,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestBadRecursiveType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8651,7 +8643,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestBasic",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8675,7 +8667,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestBasicEncoderDecoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8699,7 +8691,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestCatchInvalidNilValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8723,7 +8715,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestChanFuncIgnored",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8747,7 +8739,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestCountDecodeMallocs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8771,7 +8763,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestCountEncodeMallocs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8795,7 +8787,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestDebugSingleton",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8819,7 +8811,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestDebugStruct",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8843,7 +8835,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestDecodeErrorMultipleTypes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8867,7 +8859,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestDecodeIntoNothing",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8891,7 +8883,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestDefaultsInArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8915,7 +8907,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestEncodeIntSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8939,7 +8931,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestEncoderDecoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8963,7 +8955,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestEndToEnd",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -8987,7 +8979,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestErrorForHugeSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9011,7 +9003,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestErrorInvalidTypeId",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9035,7 +9027,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestFuzz",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9059,7 +9051,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestFuzzOneByte",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9083,7 +9075,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestFuzzRegressions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9107,7 +9099,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncodeIsZero",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9131,7 +9123,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncodePtrError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9155,7 +9147,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderArrayField",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9179,7 +9171,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderExtraIndirect",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9203,7 +9195,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderField",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9227,7 +9219,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderFieldTypeError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9251,7 +9243,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderFieldsOfDifferentType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9275,7 +9267,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderIgnoreNilEncoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9299,7 +9291,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderIgnoreNonStructField",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9323,7 +9315,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderIgnoreStructField",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9347,7 +9339,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderIndirectArrayField",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9371,7 +9363,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderIndirectField",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9395,7 +9387,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderNonStructSingleton",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9419,7 +9411,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderPointerThenValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9443,7 +9435,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderStructSingleton",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9467,7 +9459,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderValueEncoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9491,7 +9483,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderValueField",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9515,7 +9507,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobEncoderValueThenPointer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9539,7 +9531,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobMapInterfaceEncode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9563,7 +9555,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestGobPtrSlices",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9587,7 +9579,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestIgnoreInterface",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9611,7 +9603,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestIgnoreRecursiveType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9635,7 +9627,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestIgnoredFields",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9659,7 +9651,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestIndirectSliceMapArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9683,7 +9675,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestIntCodec",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9707,7 +9699,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestInterface",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9731,7 +9723,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestInterfaceBasic",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9755,7 +9747,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestInterfaceIndirect",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9779,7 +9771,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestInterfacePointer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9803,7 +9795,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestMapBug1",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9827,7 +9819,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestMapType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9851,7 +9843,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestMutipleEncodingsOfBadType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9875,7 +9867,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestNestedInterfaces",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9899,7 +9891,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestNesting",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9923,7 +9915,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestNetIP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9947,7 +9939,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestNilPointerInsideInterface",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9971,7 +9963,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestNilPointerPanics",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9995,7 +9987,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestOverflow",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10019,7 +10011,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestPtrToMapOfMap",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10043,7 +10035,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestPtrTypeToType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10067,7 +10059,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestRecursiveMapType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10091,7 +10083,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestRecursiveSliceType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10115,7 +10107,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestRegistration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10139,7 +10131,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestRegistrationNaming",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10163,7 +10155,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestReorderedFields",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10187,7 +10179,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestReregistration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10211,7 +10203,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestScalarDecInstructions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10235,7 +10227,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestScalarEncInstructions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10259,7 +10251,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestSequentialDecoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10283,7 +10275,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestSingletons",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10307,7 +10299,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10331,7 +10323,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestSliceIncompatibility",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10355,7 +10347,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestSliceReusesMemory",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10379,7 +10371,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestSliceType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10403,7 +10395,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestStressParallel",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10427,7 +10419,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestStructNonStruct",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10451,7 +10443,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestStructType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10475,7 +10467,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestTopLevelNilPointer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10499,7 +10491,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestTypeRace",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10523,7 +10515,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestTypeToPtrPtrPtrPtrType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10547,7 +10539,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestTypeToPtrType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10571,7 +10563,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestUintCodec",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10595,7 +10587,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestUnexportedFields",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10619,7 +10611,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestUnsupported",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10643,7 +10635,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestValueError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10667,7 +10659,7 @@
                 "newPage": false,
                 "searchKey": "gob.TestWrongTypeDecoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10691,7 +10683,7 @@
                 "newPage": false,
                 "searchKey": "gob.allocValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10714,7 +10706,7 @@
                 "newPage": false,
                 "searchKey": "gob.badTypeCheck",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10737,7 +10729,7 @@
                 "newPage": false,
                 "searchKey": "gob.benchmarkDecodeSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10760,7 +10752,7 @@
                 "newPage": false,
                 "searchKey": "gob.benchmarkEncodeSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10783,7 +10775,7 @@
                 "newPage": false,
                 "searchKey": "gob.benchmarkEndToEnd",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10806,7 +10798,7 @@
                 "newPage": false,
                 "searchKey": "gob.catchError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10829,7 +10821,7 @@
                 "newPage": false,
                 "searchKey": "gob.checkId",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10852,7 +10844,7 @@
                 "newPage": false,
                 "searchKey": "gob.decAlloc",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10875,7 +10867,7 @@
                 "newPage": false,
                 "searchKey": "gob.decBool",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10898,7 +10890,7 @@
                 "newPage": false,
                 "searchKey": "gob.decBoolArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10921,7 +10913,7 @@
                 "newPage": false,
                 "searchKey": "gob.decBoolSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10944,7 +10936,7 @@
                 "newPage": false,
                 "searchKey": "gob.decComplex128",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10967,7 +10959,7 @@
                 "newPage": false,
                 "searchKey": "gob.decComplex128Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -10990,7 +10982,7 @@
                 "newPage": false,
                 "searchKey": "gob.decComplex128Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11013,7 +11005,7 @@
                 "newPage": false,
                 "searchKey": "gob.decComplex64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11036,7 +11028,7 @@
                 "newPage": false,
                 "searchKey": "gob.decComplex64Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11059,7 +11051,7 @@
                 "newPage": false,
                 "searchKey": "gob.decComplex64Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11082,7 +11074,7 @@
                 "newPage": false,
                 "searchKey": "gob.decFloat32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11105,7 +11097,7 @@
                 "newPage": false,
                 "searchKey": "gob.decFloat32Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11128,7 +11120,7 @@
                 "newPage": false,
                 "searchKey": "gob.decFloat32Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11151,7 +11143,7 @@
                 "newPage": false,
                 "searchKey": "gob.decFloat64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11174,7 +11166,7 @@
                 "newPage": false,
                 "searchKey": "gob.decFloat64Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11197,7 +11189,7 @@
                 "newPage": false,
                 "searchKey": "gob.decFloat64Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11220,7 +11212,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt16",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11243,7 +11235,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt16Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11266,7 +11258,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt16Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11289,7 +11281,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11312,7 +11304,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt32Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11335,7 +11327,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt32Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11358,7 +11350,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11381,7 +11373,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt64Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11404,7 +11396,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt64Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11427,7 +11419,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt8",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11450,7 +11442,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt8Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11473,7 +11465,7 @@
                 "newPage": false,
                 "searchKey": "gob.decInt8Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11496,7 +11488,7 @@
                 "newPage": false,
                 "searchKey": "gob.decIntArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11519,7 +11511,7 @@
                 "newPage": false,
                 "searchKey": "gob.decIntSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11542,7 +11534,7 @@
                 "newPage": false,
                 "searchKey": "gob.decString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11565,7 +11557,7 @@
                 "newPage": false,
                 "searchKey": "gob.decStringArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11588,7 +11580,7 @@
                 "newPage": false,
                 "searchKey": "gob.decStringSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11611,7 +11603,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint16",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11634,7 +11626,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint16Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11657,7 +11649,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint16Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11680,7 +11672,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11703,7 +11695,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint32Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11726,7 +11718,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint32Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11749,7 +11741,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11772,7 +11764,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint64Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11795,7 +11787,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint64Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11818,7 +11810,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint8",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11841,7 +11833,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUint8Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11864,7 +11856,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUintArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11887,7 +11879,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUintSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11910,7 +11902,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUintptrArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11933,7 +11925,7 @@
                 "newPage": false,
                 "searchKey": "gob.decUintptrSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11956,7 +11948,7 @@
                 "newPage": false,
                 "searchKey": "gob.decodeIntoValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -11979,7 +11971,7 @@
                 "newPage": false,
                 "searchKey": "gob.decodeUintReader",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12002,7 +11994,7 @@
                 "newPage": false,
                 "searchKey": "gob.encAndDec",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12025,7 +12017,7 @@
                 "newPage": false,
                 "searchKey": "gob.encBool",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12048,7 +12040,7 @@
                 "newPage": false,
                 "searchKey": "gob.encBoolArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12071,7 +12063,7 @@
                 "newPage": false,
                 "searchKey": "gob.encBoolSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12094,7 +12086,7 @@
                 "newPage": false,
                 "searchKey": "gob.encComplex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12117,7 +12109,7 @@
                 "newPage": false,
                 "searchKey": "gob.encComplex128Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12140,7 +12132,7 @@
                 "newPage": false,
                 "searchKey": "gob.encComplex128Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12163,7 +12155,7 @@
                 "newPage": false,
                 "searchKey": "gob.encComplex64Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12186,7 +12178,7 @@
                 "newPage": false,
                 "searchKey": "gob.encComplex64Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12209,7 +12201,7 @@
                 "newPage": false,
                 "searchKey": "gob.encFloat",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12232,7 +12224,7 @@
                 "newPage": false,
                 "searchKey": "gob.encFloat32Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12255,7 +12247,7 @@
                 "newPage": false,
                 "searchKey": "gob.encFloat32Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12278,7 +12270,7 @@
                 "newPage": false,
                 "searchKey": "gob.encFloat64Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12301,7 +12293,7 @@
                 "newPage": false,
                 "searchKey": "gob.encFloat64Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12324,7 +12316,7 @@
                 "newPage": false,
                 "searchKey": "gob.encFuzzDec",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12347,7 +12339,7 @@
                 "newPage": false,
                 "searchKey": "gob.encIndirect",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12370,7 +12362,7 @@
                 "newPage": false,
                 "searchKey": "gob.encInt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12393,7 +12385,7 @@
                 "newPage": false,
                 "searchKey": "gob.encInt16Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12416,7 +12408,7 @@
                 "newPage": false,
                 "searchKey": "gob.encInt16Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12439,7 +12431,7 @@
                 "newPage": false,
                 "searchKey": "gob.encInt32Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12462,7 +12454,7 @@
                 "newPage": false,
                 "searchKey": "gob.encInt32Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12485,7 +12477,7 @@
                 "newPage": false,
                 "searchKey": "gob.encInt64Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12508,7 +12500,7 @@
                 "newPage": false,
                 "searchKey": "gob.encInt64Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12531,7 +12523,7 @@
                 "newPage": false,
                 "searchKey": "gob.encInt8Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12554,7 +12546,7 @@
                 "newPage": false,
                 "searchKey": "gob.encInt8Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12577,7 +12569,7 @@
                 "newPage": false,
                 "searchKey": "gob.encIntArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12600,7 +12592,7 @@
                 "newPage": false,
                 "searchKey": "gob.encIntSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12623,7 +12615,7 @@
                 "newPage": false,
                 "searchKey": "gob.encString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12646,7 +12638,7 @@
                 "newPage": false,
                 "searchKey": "gob.encStringArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12669,7 +12661,7 @@
                 "newPage": false,
                 "searchKey": "gob.encStringSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12692,7 +12684,7 @@
                 "newPage": false,
                 "searchKey": "gob.encStructTerminator",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12715,7 +12707,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUint",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12738,7 +12730,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUint16Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12761,7 +12753,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUint16Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12784,7 +12776,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUint32Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12807,7 +12799,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUint32Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12830,7 +12822,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUint64Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12853,7 +12845,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUint64Slice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12876,7 +12868,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUint8Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12899,7 +12891,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUintArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12922,7 +12914,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUintSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12945,7 +12937,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUintptrArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12968,7 +12960,7 @@
                 "newPage": false,
                 "searchKey": "gob.encUintptrSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12991,7 +12983,7 @@
                 "newPage": false,
                 "searchKey": "gob.encodeAndRecover",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13014,7 +13006,7 @@
                 "newPage": false,
                 "searchKey": "gob.encodeReflectValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13037,7 +13029,7 @@
                 "newPage": false,
                 "searchKey": "gob.error_",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13060,7 +13052,7 @@
                 "newPage": false,
                 "searchKey": "gob.errorf",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13083,7 +13075,7 @@
                 "newPage": false,
                 "searchKey": "gob.execDec",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13106,7 +13098,7 @@
                 "newPage": false,
                 "searchKey": "gob.float32FromBits",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13129,7 +13121,7 @@
                 "newPage": false,
                 "searchKey": "gob.float64FromBits",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13152,7 +13144,7 @@
                 "newPage": false,
                 "searchKey": "gob.floatBits",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13175,7 +13167,7 @@
                 "newPage": false,
                 "searchKey": "gob.ignoreTwoUints",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13198,7 +13190,7 @@
                 "newPage": false,
                 "searchKey": "gob.ignoreUint",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13221,7 +13213,7 @@
                 "newPage": false,
                 "searchKey": "gob.ignoreUint8Array",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13244,7 +13236,7 @@
                 "newPage": false,
                 "searchKey": "gob.implementsInterface",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13313,7 +13305,7 @@
                 "newPage": false,
                 "searchKey": "gob.isExported",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13336,7 +13328,7 @@
                 "newPage": false,
                 "searchKey": "gob.isSent",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13359,7 +13351,7 @@
                 "newPage": false,
                 "searchKey": "gob.isZero",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13382,7 +13374,7 @@
                 "newPage": false,
                 "searchKey": "gob.overflow",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13428,7 +13420,7 @@
                 "newPage": false,
                 "searchKey": "gob.setTypeId",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13451,7 +13443,7 @@
                 "newPage": false,
                 "searchKey": "gob.testError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13474,7 +13466,7 @@
                 "newPage": false,
                 "searchKey": "gob.testFuzz",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13497,7 +13489,7 @@
                 "newPage": false,
                 "searchKey": "gob.toInt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13520,7 +13512,7 @@
                 "newPage": false,
                 "searchKey": "gob.valid",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13543,7 +13535,7 @@
                 "newPage": false,
                 "searchKey": "gob.verifyInt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -149,7 +149,7 @@ Package poll supports non-blocking I/O on file descriptors with polling. This su
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="maxRW" href="#maxRW">const maxRW</a>
@@ -348,7 +348,7 @@ Error values returned by runtime_pollReset and runtime_pollWait. These must matc
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AcceptFunc" href="#AcceptFunc">var AcceptFunc</a>
@@ -532,7 +532,7 @@ tryDupCloexec indicates whether F_DUPFD_CLOEXEC should be used. If the kernel do
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DeadlineExceededError" href="#DeadlineExceededError">type DeadlineExceededError struct{}</a>
@@ -552,7 +552,7 @@ DeadlineExceededError is returned for an expired deadline.
 
 ```
 searchKey: poll.DeadlineExceededError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -565,7 +565,7 @@ Implement the net.Error interface. The string is "i/o timeout" because that is w
 
 ```
 searchKey: poll.DeadlineExceededError.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -576,7 +576,7 @@ func (e *DeadlineExceededError) Temporary() bool
 
 ```
 searchKey: poll.DeadlineExceededError.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -629,7 +629,7 @@ FD is a file descriptor. The net and os packages use this type as a field of a l
 
 ```
 searchKey: poll.FD.Accept
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -642,7 +642,7 @@ Accept wraps the accept network call.
 
 ```
 searchKey: poll.FD.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -655,7 +655,7 @@ Close closes the FD. The underlying file descriptor is closed by the destroy met
 
 ```
 searchKey: poll.FD.Dup
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -679,7 +679,7 @@ func (fd *FD) EOFError(n int, err error) error
 
 ```
 searchKey: poll.FD.Fchdir
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -731,7 +731,7 @@ Fstat wraps syscall.Fstat
 
 ```
 searchKey: poll.FD.Fsync
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -770,7 +770,7 @@ Init initializes the FD. The Sysfd field should already be set. This can be call
 
 ```
 searchKey: poll.FD.OpenDir
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -913,7 +913,7 @@ Seek wraps syscall.Seek.
 
 ```
 searchKey: poll.FD.SetBlocking
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1056,7 +1056,7 @@ Shutdown wraps syscall.Shutdown.
 
 ```
 searchKey: poll.FD.WaitWrite
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1134,7 +1134,7 @@ Writev wraps the writev system call.
 
 ```
 searchKey: poll.FD.decref
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1147,7 +1147,7 @@ decref removes a reference from fd. It also closes fd when the state of fd is se
 
 ```
 searchKey: poll.FD.destroy
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1173,7 +1173,7 @@ eofError returns io.EOF when fd is available for reading end of file.
 
 ```
 searchKey: poll.FD.incref
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1186,7 +1186,7 @@ incref adds a reference to fd. It returns an error when fd cannot be used.
 
 ```
 searchKey: poll.FD.readLock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1199,7 +1199,7 @@ readLock adds a reference to fd and locks fd for reading. It returns an error wh
 
 ```
 searchKey: poll.FD.readUnlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1212,7 +1212,7 @@ readUnlock removes a reference from fd and unlocks fd for reading. It also close
 
 ```
 searchKey: poll.FD.writeLock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1225,7 +1225,7 @@ writeLock adds a reference to fd and locks fd for writing. It returns an error w
 
 ```
 searchKey: poll.FD.writeUnlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1251,7 +1251,7 @@ type FDMutex struct {
 
 ```
 searchKey: poll.FDMutex.Decref
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1262,7 +1262,7 @@ func (mu *FDMutex) Decref() bool
 
 ```
 searchKey: poll.FDMutex.Incref
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1273,7 +1273,7 @@ func (mu *FDMutex) Incref() bool
 
 ```
 searchKey: poll.FDMutex.IncrefAndClose
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1319,7 +1319,7 @@ errNetClosing is the type of the variable ErrNetClosing. This is used to impleme
 
 ```
 searchKey: poll.errNetClosing.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1332,7 +1332,7 @@ Error returns the error message for ErrNetClosing. Keep this string consistent b
 
 ```
 searchKey: poll.errNetClosing.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1343,7 +1343,7 @@ func (e errNetClosing) Temporary() bool
 
 ```
 searchKey: poll.errNetClosing.Timeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1371,7 +1371,7 @@ fdMutex is a specialized synchronization primitive that manages lifetime of an f
 
 ```
 searchKey: poll.fdMutex.decref
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1384,7 +1384,7 @@ decref removes a reference from mu. It reports whether there is no remaining ref
 
 ```
 searchKey: poll.fdMutex.incref
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1397,7 +1397,7 @@ incref adds a reference to mu. It reports whether mu is available for reading or
 
 ```
 searchKey: poll.fdMutex.increfAndClose
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1449,7 +1449,7 @@ type pollDesc struct {
 
 ```
 searchKey: poll.pollDesc.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1460,7 +1460,7 @@ func (pd *pollDesc) close()
 
 ```
 searchKey: poll.pollDesc.evict
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1484,7 +1484,7 @@ func (pd *pollDesc) init(fd *FD) error
 
 ```
 searchKey: poll.pollDesc.pollable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1571,14 +1571,14 @@ func (pd *pollDesc) waitWrite(isFile bool) error
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DupCloseOnExec" href="#DupCloseOnExec">func DupCloseOnExec(fd int) (int, string, error)</a>
 
 ```
 searchKey: poll.DupCloseOnExec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1591,7 +1591,7 @@ DupCloseOnExec dups fd and marks it close-on-exec.
 
 ```
 searchKey: poll.IsPollDescriptor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1604,7 +1604,7 @@ IsPollDescriptor reports whether fd is the descriptor being used by the poller. 
 
 ```
 searchKey: poll.accept
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1617,7 +1617,7 @@ Wrapper around the accept system call that marks the returned file descriptor as
 
 ```
 searchKey: poll.consume
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1630,7 +1630,7 @@ consume removes data from a slice of byte slices, for writev.
 
 ```
 searchKey: poll.convertErr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1641,7 +1641,7 @@ func convertErr(res int, isFile bool) error
 
 ```
 searchKey: poll.dupCloseOnExecOld
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1654,7 +1654,7 @@ dupCloseOnExecOld is the traditional way to dup an fd and set its O_CLOEXEC bit,
 
 ```
 searchKey: poll.errClosing
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1667,7 +1667,7 @@ Return the appropriate closing error based on isFile.
 
 ```
 searchKey: poll.errnoErr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1680,7 +1680,7 @@ errnoErr returns common boxed Errno values, to prevent allocations at runtime.
 
 ```
 searchKey: poll.fcntl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1693,7 +1693,7 @@ Implemented in the syscall package.
 
 ```
 searchKey: poll.fdopendir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1706,7 +1706,7 @@ Implemented in syscall/syscall_darwin.go.
 
 ```
 searchKey: poll.ignoringEINTR
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1719,7 +1719,7 @@ ignoringEINTR makes a function call and repeats it if it returns an EINTR error.
 
 ```
 searchKey: poll.ignoringEINTRIO
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1732,7 +1732,7 @@ ignoringEINTRIO is like ignoringEINTR, but just for IO calls.
 
 ```
 searchKey: poll.newIovecWithBase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1756,7 +1756,7 @@ runtimeNano returns the current value of the runtime clock in nanoseconds.
 
 ```
 searchKey: poll.runtime_Semacquire
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1769,7 +1769,7 @@ Implemented in runtime package.
 
 ```
 searchKey: poll.runtime_Semrelease
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1780,7 +1780,7 @@ func runtime_Semrelease(sema *uint32)
 
 ```
 searchKey: poll.runtime_isPollServerDescriptor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1791,7 +1791,7 @@ func runtime_isPollServerDescriptor(fd uintptr) bool
 
 ```
 searchKey: poll.runtime_pollClose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1802,7 +1802,7 @@ func runtime_pollClose(ctx uintptr)
 
 ```
 searchKey: poll.runtime_pollOpen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1813,7 +1813,7 @@ func runtime_pollOpen(fd uintptr) (uintptr, int)
 
 ```
 searchKey: poll.runtime_pollReset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1835,7 +1835,7 @@ func runtime_pollServerInit()
 
 ```
 searchKey: poll.runtime_pollSetDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1846,7 +1846,7 @@ func runtime_pollSetDeadline(ctx uintptr, d int64, mode int)
 
 ```
 searchKey: poll.runtime_pollUnblock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1857,7 +1857,7 @@ func runtime_pollUnblock(ctx uintptr)
 
 ```
 searchKey: poll.runtime_pollWait
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1868,7 +1868,7 @@ func runtime_pollWait(ctx uintptr, mode int) int
 
 ```
 searchKey: poll.runtime_pollWaitCanceled
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1879,7 +1879,7 @@ func runtime_pollWaitCanceled(ctx uintptr, mode int) int
 
 ```
 searchKey: poll.setDeadlineImpl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1890,7 +1890,7 @@ func setDeadlineImpl(fd *FD, t time.Time, mode int) error
 
 ```
 searchKey: poll.writev
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

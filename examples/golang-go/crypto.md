@@ -85,10 +85,6 @@ Package crypto collects common cryptographic constants.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BLAKE2b_256" href="#BLAKE2b_256">const BLAKE2b_256</a>
 
 ```
@@ -330,10 +326,6 @@ const maxHash
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="digestSizes" href="#digestSizes">var digestSizes</a>
 
 ```
@@ -357,10 +349,6 @@ var hashes = make([]func() hash.Hash, maxHash)
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Decrypter" href="#Decrypter">type Decrypter interface</a>
 
@@ -412,7 +400,7 @@ Hash identifies a cryptographic hash function that is implemented in another pac
 
 ```
 searchKey: crypto.Hash.Available
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -425,7 +413,7 @@ Available reports whether the given hash function is linked into the binary.
 
 ```
 searchKey: crypto.Hash.HashFunc
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -438,7 +426,7 @@ HashFunc simply returns the value of h so that Hash implements SignerOpts.
 
 ```
 searchKey: crypto.Hash.New
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -451,7 +439,7 @@ New returns a new hash.Hash calculating the given hash function. New panics if t
 
 ```
 searchKey: crypto.Hash.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -464,7 +452,7 @@ Size returns the length, in bytes, of a digest resulting from the given hash fun
 
 ```
 searchKey: crypto.Hash.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -549,15 +537,11 @@ SignerOpts contains options for signing with a Signer.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="RegisterHash" href="#RegisterHash">func RegisterHash(h Hash, f func() hash.Hash)</a>
 
 ```
 searchKey: crypto.RegisterHash
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -570,7 +554,7 @@ RegisterHash registers a function that returns a new instance of the given hash 
 
 ```
 searchKey: crypto.TestCFBDecryptOutOfBoundsWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -581,7 +565,7 @@ func TestCFBDecryptOutOfBoundsWrite(t *testing.T)
 
 ```
 searchKey: crypto.TestCFBEncryptOutOfBoundsWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -592,7 +576,7 @@ func TestCFBEncryptOutOfBoundsWrite(t *testing.T)
 
 ```
 searchKey: crypto.TestCTROutOfBoundsWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -603,7 +587,7 @@ func TestCTROutOfBoundsWrite(t *testing.T)
 
 ```
 searchKey: crypto.TestOFBOutOfBoundsWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -614,7 +598,7 @@ func TestOFBOutOfBoundsWrite(t *testing.T)
 
 ```
 searchKey: crypto.TestRC4OutOfBoundsWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -625,7 +609,7 @@ func TestRC4OutOfBoundsWrite(t *testing.T)
 
 ```
 searchKey: crypto.test
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -636,7 +620,7 @@ func test(t *testing.T, name string, cipherText []byte, xor func([]byte, []byte)
 
 ```
 searchKey: crypto.testBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

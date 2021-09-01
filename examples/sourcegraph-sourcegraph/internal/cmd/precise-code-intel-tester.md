@@ -63,7 +63,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="repositoryQueryFragment" href="#repositoryQueryFragment">const repositoryQueryFragment</a>
@@ -95,7 +95,7 @@ const uploadQueryFragment = `
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrProcessingFailed" href="#ErrProcessingFailed">var ErrProcessingFailed</a>
@@ -259,7 +259,7 @@ uploadIDPattern extracts a GraphQL identifier from the output of the `src lsif u
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Commit" href="#Commit">type Commit struct</a>
@@ -476,7 +476,7 @@ type refreshState struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="commandNameList" href="#commandNameList">func commandNameList() string</a>
@@ -496,7 +496,7 @@ commandNameList returns a comma-separated list of valid command names.
 
 ```
 searchKey: main.compareLocations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -509,7 +509,7 @@ Compare returns an integer comparing two locations. The result will be 0 if a ==
 
 ```
 searchKey: main.countRevs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -546,7 +546,7 @@ func main()
 
 ```
 searchKey: main.makeProcessedSignals
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -559,7 +559,7 @@ makeProcessedSignals returns a map of error channels for each revision.
 
 ```
 searchKey: main.makeRefreshedSignals
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -572,7 +572,7 @@ refreshedSignals returns a map of error channels for each repository.
 
 ```
 searchKey: main.makeTestQueryFunction
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -585,7 +585,7 @@ makeTestQueryFunction constructs a function for RunParallel that invokes the giv
 
 ```
 searchKey: main.makeTestUploadForRepositoryFunction
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -618,7 +618,7 @@ queryCommand runs the "query" command.
 
 ```
 searchKey: main.queryDefinitions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -631,7 +631,7 @@ queryDefinitions returns all of the LSIF definitions for the given location.
 
 ```
 searchKey: main.queryReferences
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -683,7 +683,7 @@ referencesFromReferencesQueries returns a list of test functions that queries th
 
 ```
 searchKey: main.sortLocations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -696,7 +696,7 @@ sortLocations sorts a slice of Locations by repo, rev, path, line, then characte
 
 ```
 searchKey: main.upload
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -722,7 +722,7 @@ uploadCommand runs the "upload" command.
 
 ```
 searchKey: main.uploadIndexes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -735,7 +735,7 @@ uploadIndexes uploads each file in the index directory and blocks until each upl
 
 ```
 searchKey: main.uploadStates
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -748,7 +748,7 @@ uploadStates returns a map from upload identifier to its current state.
 
 ```
 searchKey: main.watchStateChanges
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

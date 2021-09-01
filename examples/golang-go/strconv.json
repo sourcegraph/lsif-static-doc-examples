@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -430,9 +428,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -895,9 +891,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -936,7 +930,7 @@
                       "newPage": false,
                       "searchKey": "strconv.baseError",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -959,7 +953,7 @@
                       "newPage": false,
                       "searchKey": "strconv.bitSizeError",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -982,7 +976,7 @@
                       "newPage": false,
                       "searchKey": "strconv.rangeError",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1005,7 +999,7 @@
                       "newPage": false,
                       "searchKey": "strconv.syntaxError",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1028,7 +1022,7 @@
                       "newPage": false,
                       "searchKey": "strconv.NumError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1050,7 +1044,7 @@
                       "newPage": false,
                       "searchKey": "strconv.NumError.Unwrap",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1096,7 +1090,7 @@
                       "newPage": false,
                       "searchKey": "strconv.NewDecimal",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1211,7 +1205,7 @@
                       "newPage": false,
                       "searchKey": "strconv.decimal.RoundedInteger",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1257,7 +1251,7 @@
                       "newPage": false,
                       "searchKey": "strconv.decimal.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1400,9 +1394,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1421,7 +1413,7 @@
                 "newPage": false,
                 "searchKey": "strconv.AppendBool",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1443,7 +1435,7 @@
                 "newPage": false,
                 "searchKey": "strconv.AppendFloat",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1465,7 +1457,7 @@
                 "newPage": false,
                 "searchKey": "strconv.AppendInt",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1487,7 +1479,7 @@
                 "newPage": false,
                 "searchKey": "strconv.AppendQuote",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1509,7 +1501,7 @@
                 "newPage": false,
                 "searchKey": "strconv.AppendQuoteRune",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1531,7 +1523,7 @@
                 "newPage": false,
                 "searchKey": "strconv.AppendQuoteRuneToASCII",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1553,7 +1545,7 @@
                 "newPage": false,
                 "searchKey": "strconv.AppendQuoteRuneToGraphic",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1575,7 +1567,7 @@
                 "newPage": false,
                 "searchKey": "strconv.AppendQuoteToASCII",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1597,7 +1589,7 @@
                 "newPage": false,
                 "searchKey": "strconv.AppendQuoteToGraphic",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1619,7 +1611,7 @@
                 "newPage": false,
                 "searchKey": "strconv.AppendUint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1641,7 +1633,7 @@
                 "newPage": false,
                 "searchKey": "strconv.Atoi",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1663,7 +1655,7 @@
                 "newPage": false,
                 "searchKey": "strconv.CanBackquote",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1685,7 +1677,7 @@
                 "newPage": false,
                 "searchKey": "strconv.FormatBool",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1707,7 +1699,7 @@
                 "newPage": false,
                 "searchKey": "strconv.FormatComplex",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1729,7 +1721,7 @@
                 "newPage": false,
                 "searchKey": "strconv.FormatFloat",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1751,7 +1743,7 @@
                 "newPage": false,
                 "searchKey": "strconv.FormatInt",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1773,7 +1765,7 @@
                 "newPage": false,
                 "searchKey": "strconv.FormatUint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1795,7 +1787,7 @@
                 "newPage": false,
                 "searchKey": "strconv.IsGraphic",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1817,7 +1809,7 @@
                 "newPage": false,
                 "searchKey": "strconv.IsPrint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1839,7 +1831,7 @@
                 "newPage": false,
                 "searchKey": "strconv.Itoa",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1861,7 +1853,7 @@
                 "newPage": false,
                 "searchKey": "strconv.MulByLog10Log2",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1884,7 +1876,7 @@
                 "newPage": false,
                 "searchKey": "strconv.MulByLog2Log10",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1907,7 +1899,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ParseBool",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1929,7 +1921,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ParseComplex",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1951,7 +1943,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ParseFloat",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1973,7 +1965,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ParseFloatPrefix",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1996,7 +1988,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ParseInt",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2018,7 +2010,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ParseUint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2040,7 +2032,7 @@
                 "newPage": false,
                 "searchKey": "strconv.Quote",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2062,7 +2054,7 @@
                 "newPage": false,
                 "searchKey": "strconv.QuoteRune",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2084,7 +2076,7 @@
                 "newPage": false,
                 "searchKey": "strconv.QuoteRuneToASCII",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2106,7 +2098,7 @@
                 "newPage": false,
                 "searchKey": "strconv.QuoteRuneToGraphic",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2128,7 +2120,7 @@
                 "newPage": false,
                 "searchKey": "strconv.QuoteToASCII",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2150,7 +2142,7 @@
                 "newPage": false,
                 "searchKey": "strconv.QuoteToGraphic",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2172,7 +2164,7 @@
                 "newPage": false,
                 "searchKey": "strconv.QuotedPrefix",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2194,7 +2186,7 @@
                 "newPage": false,
                 "searchKey": "strconv.SetOptimize",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2217,7 +2209,7 @@
                 "newPage": false,
                 "searchKey": "strconv.Unquote",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2239,7 +2231,7 @@
                 "newPage": false,
                 "searchKey": "strconv.UnquoteChar",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2261,7 +2253,7 @@
                 "newPage": false,
                 "searchKey": "strconv.appendEscapedRune",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2284,7 +2276,7 @@
                 "newPage": false,
                 "searchKey": "strconv.appendQuotedRuneWith",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2307,7 +2299,7 @@
                 "newPage": false,
                 "searchKey": "strconv.appendQuotedWith",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2330,7 +2322,7 @@
                 "newPage": false,
                 "searchKey": "strconv.atof32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2353,7 +2345,7 @@
                 "newPage": false,
                 "searchKey": "strconv.atof32exact",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2376,7 +2368,7 @@
                 "newPage": false,
                 "searchKey": "strconv.atof64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2399,7 +2391,7 @@
                 "newPage": false,
                 "searchKey": "strconv.atof64exact",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2422,7 +2414,7 @@
                 "newPage": false,
                 "searchKey": "strconv.atofHex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2445,7 +2437,7 @@
                 "newPage": false,
                 "searchKey": "strconv.bigFtoa",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2468,7 +2460,7 @@
                 "newPage": false,
                 "searchKey": "strconv.bsearch16",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2491,7 +2483,7 @@
                 "newPage": false,
                 "searchKey": "strconv.bsearch32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2514,7 +2506,7 @@
                 "newPage": false,
                 "searchKey": "strconv.commonPrefixLenIgnoreCase",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2537,7 +2529,7 @@
                 "newPage": false,
                 "searchKey": "strconv.computeBounds",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2560,7 +2552,7 @@
                 "newPage": false,
                 "searchKey": "strconv.contains",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2583,7 +2575,7 @@
                 "newPage": false,
                 "searchKey": "strconv.convErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2606,7 +2598,7 @@
                 "newPage": false,
                 "searchKey": "strconv.digitZero",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2629,7 +2621,7 @@
                 "newPage": false,
                 "searchKey": "strconv.divisibleByPower5",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2652,7 +2644,7 @@
                 "newPage": false,
                 "searchKey": "strconv.divmod1e9",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2675,7 +2667,7 @@
                 "newPage": false,
                 "searchKey": "strconv.eiselLemire32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2698,7 +2690,7 @@
                 "newPage": false,
                 "searchKey": "strconv.eiselLemire64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2721,7 +2713,7 @@
                 "newPage": false,
                 "searchKey": "strconv.fmtB",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2744,7 +2736,7 @@
                 "newPage": false,
                 "searchKey": "strconv.fmtE",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2767,7 +2759,7 @@
                 "newPage": false,
                 "searchKey": "strconv.fmtF",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2790,7 +2782,7 @@
                 "newPage": false,
                 "searchKey": "strconv.fmtX",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2813,7 +2805,7 @@
                 "newPage": false,
                 "searchKey": "strconv.formatBits",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2836,7 +2828,7 @@
                 "newPage": false,
                 "searchKey": "strconv.formatDecimal",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2859,7 +2851,7 @@
                 "newPage": false,
                 "searchKey": "strconv.formatDigits",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2882,7 +2874,7 @@
                 "newPage": false,
                 "searchKey": "strconv.genericFtoa",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2905,7 +2897,7 @@
                 "newPage": false,
                 "searchKey": "strconv.index",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2928,7 +2920,7 @@
                 "newPage": false,
                 "searchKey": "strconv.isInGraphicList",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2951,7 +2943,7 @@
                 "newPage": false,
                 "searchKey": "strconv.isPowerOfTwo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2974,7 +2966,7 @@
                 "newPage": false,
                 "searchKey": "strconv.leftShift",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2997,7 +2989,7 @@
                 "newPage": false,
                 "searchKey": "strconv.lower",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3020,7 +3012,7 @@
                 "newPage": false,
                 "searchKey": "strconv.max",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3043,7 +3035,7 @@
                 "newPage": false,
                 "searchKey": "strconv.min",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3066,7 +3058,7 @@
                 "newPage": false,
                 "searchKey": "strconv.mulByLog10Log2",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3089,7 +3081,7 @@
                 "newPage": false,
                 "searchKey": "strconv.mulByLog2Log10",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3112,7 +3104,7 @@
                 "newPage": false,
                 "searchKey": "strconv.mult128bitPow10",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3135,7 +3127,7 @@
                 "newPage": false,
                 "searchKey": "strconv.mult64bitPow10",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3158,7 +3150,7 @@
                 "newPage": false,
                 "searchKey": "strconv.parseFloatPrefix",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3181,7 +3173,7 @@
                 "newPage": false,
                 "searchKey": "strconv.prefixIsLessThan",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3204,7 +3196,7 @@
                 "newPage": false,
                 "searchKey": "strconv.quoteRuneWith",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3227,7 +3219,7 @@
                 "newPage": false,
                 "searchKey": "strconv.quoteWith",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3250,7 +3242,7 @@
                 "newPage": false,
                 "searchKey": "strconv.readFloat",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3273,7 +3265,7 @@
                 "newPage": false,
                 "searchKey": "strconv.rightShift",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3296,7 +3288,7 @@
                 "newPage": false,
                 "searchKey": "strconv.roundShortest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3319,7 +3311,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ryuDigits",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3342,7 +3334,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ryuDigits32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3365,7 +3357,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ryuFtoaFixed32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3388,7 +3380,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ryuFtoaFixed64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3411,7 +3403,7 @@
                 "newPage": false,
                 "searchKey": "strconv.ryuFtoaShortest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3434,7 +3426,7 @@
                 "newPage": false,
                 "searchKey": "strconv.shouldRoundUp",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3457,7 +3449,7 @@
                 "newPage": false,
                 "searchKey": "strconv.small",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3480,7 +3472,7 @@
                 "newPage": false,
                 "searchKey": "strconv.special",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3503,7 +3495,7 @@
                 "newPage": false,
                 "searchKey": "strconv.trim",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3526,7 +3518,7 @@
                 "newPage": false,
                 "searchKey": "strconv.underscoreOK",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3549,7 +3541,7 @@
                 "newPage": false,
                 "searchKey": "strconv.unhex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3572,7 +3564,7 @@
                 "newPage": false,
                 "searchKey": "strconv.unquote",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

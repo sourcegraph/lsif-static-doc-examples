@@ -111,7 +111,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="pipeTests" href="#pipeTests">var pipeTests</a>
@@ -128,7 +128,7 @@ var pipeTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Buffer" href="#Buffer">type Buffer struct</a>
@@ -320,7 +320,7 @@ type pipeTest struct {
 
 ```
 searchKey: io_test.pipeTest.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -484,14 +484,14 @@ func (r zeroErrReader) Read(p []byte) (int, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkCopyNLarge" href="#BenchmarkCopyNLarge">func BenchmarkCopyNLarge(b *testing.B)</a>
 
 ```
 searchKey: io_test.BenchmarkCopyNLarge
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -502,7 +502,7 @@ func BenchmarkCopyNLarge(b *testing.B)
 
 ```
 searchKey: io_test.BenchmarkCopyNSmall
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -689,7 +689,7 @@ func ExampleWriteString()
 
 ```
 searchKey: io_test.TestCopy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -700,7 +700,7 @@ func TestCopy(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyBuffer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -711,7 +711,7 @@ func TestCopyBuffer(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyBufferNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -722,7 +722,7 @@ func TestCopyBufferNil(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyLargeWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -733,7 +733,7 @@ func TestCopyLargeWriter(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -744,7 +744,7 @@ func TestCopyN(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyNEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -755,7 +755,7 @@ func TestCopyNEOF(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyNReadFrom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -766,7 +766,7 @@ func TestCopyNReadFrom(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyNWriteTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -777,7 +777,7 @@ func TestCopyNWriteTo(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyNegative
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -788,7 +788,7 @@ func TestCopyNegative(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyPriority
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -801,7 +801,7 @@ It's preferable to choose WriterTo over ReaderFrom, since a WriterTo can issue o
 
 ```
 searchKey: io_test.TestCopyReadErrWriteErr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -814,7 +814,7 @@ In case a Read results in an error with non-zero bytes read, and the subsequent 
 
 ```
 searchKey: io_test.TestCopyReadFrom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -825,7 +825,7 @@ func TestCopyReadFrom(t *testing.T)
 
 ```
 searchKey: io_test.TestCopyWriteTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -836,7 +836,7 @@ func TestCopyWriteTo(t *testing.T)
 
 ```
 searchKey: io_test.TestInterleavedMultiReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -847,7 +847,7 @@ func TestInterleavedMultiReader(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -858,7 +858,7 @@ func TestMultiReader(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiReaderCopy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -871,7 +871,7 @@ Test that MultiReader copies the input slice and is insulated from future modifi
 
 ```
 searchKey: io_test.TestMultiReaderFinalEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -884,7 +884,7 @@ Test that a reader returning (n, EOF) at the end of a MultiReader chain continue
 
 ```
 searchKey: io_test.TestMultiReaderFlatten
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -897,7 +897,7 @@ Test that MultiReader properly flattens chained multiReaders when Read is called
 
 ```
 searchKey: io_test.TestMultiReaderFreesExhaustedReaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -908,7 +908,7 @@ func TestMultiReaderFreesExhaustedReaders(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiReaderSingleByteWithEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -921,7 +921,7 @@ This used to yield bytes forever; issue 16795.
 
 ```
 searchKey: io_test.TestMultiWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -932,7 +932,7 @@ func TestMultiWriter(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiWriterCopy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -945,7 +945,7 @@ Test that MultiWriter copies the input slice and is insulated from future modifi
 
 ```
 searchKey: io_test.TestMultiWriterError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -956,7 +956,7 @@ func TestMultiWriterError(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiWriterSingleChainFlatten
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -969,7 +969,7 @@ Test that MultiWriter properly flattens chained multiWriters.
 
 ```
 searchKey: io_test.TestMultiWriter_String
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -980,7 +980,7 @@ func TestMultiWriter_String(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiWriter_StringCheckCall
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -991,7 +991,7 @@ func TestMultiWriter_StringCheckCall(t *testing.T)
 
 ```
 searchKey: io_test.TestMultiWriter_WriteStringSingleAlloc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1004,7 +1004,7 @@ Test that a multiWriter.WriteString calls results in at most 1 allocation, even 
 
 ```
 searchKey: io_test.TestPipe1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1017,7 +1017,7 @@ Test a single read/write pair.
 
 ```
 searchKey: io_test.TestPipe2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1030,7 +1030,7 @@ Test a sequence of read/write pairs.
 
 ```
 searchKey: io_test.TestPipe3
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1041,7 +1041,7 @@ func TestPipe3(t *testing.T)
 
 ```
 searchKey: io_test.TestPipeCloseError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1052,7 +1052,7 @@ func TestPipeCloseError(t *testing.T)
 
 ```
 searchKey: io_test.TestPipeConcurrent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1063,7 +1063,7 @@ func TestPipeConcurrent(t *testing.T)
 
 ```
 searchKey: io_test.TestPipeReadClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1074,7 +1074,7 @@ func TestPipeReadClose(t *testing.T)
 
 ```
 searchKey: io_test.TestPipeReadClose2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1087,7 +1087,7 @@ Test close on Read side during Read.
 
 ```
 searchKey: io_test.TestPipeWriteClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1098,7 +1098,7 @@ func TestPipeWriteClose(t *testing.T)
 
 ```
 searchKey: io_test.TestPipeWriteClose2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1111,7 +1111,7 @@ Test close on Write side during Write.
 
 ```
 searchKey: io_test.TestReadAtLeast
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1122,7 +1122,7 @@ func TestReadAtLeast(t *testing.T)
 
 ```
 searchKey: io_test.TestReadAtLeastWithDataAndEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1133,7 +1133,7 @@ func TestReadAtLeastWithDataAndEOF(t *testing.T)
 
 ```
 searchKey: io_test.TestReadAtLeastWithDataAndError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1144,7 +1144,7 @@ func TestReadAtLeastWithDataAndError(t *testing.T)
 
 ```
 searchKey: io_test.TestSectionReader_ReadAt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1155,7 +1155,7 @@ func TestSectionReader_ReadAt(t *testing.T)
 
 ```
 searchKey: io_test.TestSectionReader_Seek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1166,7 +1166,7 @@ func TestSectionReader_Seek(t *testing.T)
 
 ```
 searchKey: io_test.TestSectionReader_Size
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1177,7 +1177,7 @@ func TestSectionReader_Size(t *testing.T)
 
 ```
 searchKey: io_test.TestTeeReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1188,7 +1188,7 @@ func TestTeeReader(t *testing.T)
 
 ```
 searchKey: io_test.TestWriteAfterWriterClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1199,7 +1199,7 @@ func TestWriteAfterWriterClose(t *testing.T)
 
 ```
 searchKey: io_test.TestWriteEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1210,7 +1210,7 @@ func TestWriteEmpty(t *testing.T)
 
 ```
 searchKey: io_test.TestWriteNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1221,7 +1221,7 @@ func TestWriteNil(t *testing.T)
 
 ```
 searchKey: io_test.callDepth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1234,7 +1234,7 @@ callDepth returns the logical call depth for the given PCs.
 
 ```
 searchKey: io_test.checkWrite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1245,7 +1245,7 @@ func checkWrite(t *testing.T, w Writer, data []byte, c chan int)
 
 ```
 searchKey: io_test.delayClose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1256,7 +1256,7 @@ func delayClose(t *testing.T, cl closer, ch chan int, tt pipeTest)
 
 ```
 searchKey: io_test.reader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1267,7 +1267,7 @@ func reader(t *testing.T, r Reader, c chan int)
 
 ```
 searchKey: io_test.sortBytesInGroups
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1278,7 +1278,7 @@ func sortBytesInGroups(b []byte, n int) []byte
 
 ```
 searchKey: io_test.testMultiWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1292,7 +1292,7 @@ func testMultiWriter(t *testing.T, sink interface {
 
 ```
 searchKey: io_test.testReadAtLeast
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1303,7 +1303,7 @@ func testReadAtLeast(t *testing.T, rb ReadWriter)
 
 ```
 searchKey: io_test.writer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

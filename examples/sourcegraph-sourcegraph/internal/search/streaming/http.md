@@ -46,7 +46,7 @@ package http contains Sourcegraph's streaming HTTP protocol, which is based on S
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CommitMatchType" href="#CommitMatchType">const CommitMatchType</a>
@@ -96,7 +96,7 @@ const SymbolMatchType
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Decoder" href="#Decoder">type Decoder struct</a>
@@ -176,7 +176,7 @@ EventCommitMatch is the generic results interface from GQL. There is a lot of po
 
 ```
 searchKey: http.EventCommitMatch.eventMatch
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -226,7 +226,7 @@ EventFileMatch is a subset of zoekt.FileMatch for our Event API.
 
 ```
 searchKey: http.EventFileMatch.eventMatch
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -312,7 +312,7 @@ EventRepoMatch is a subset of zoekt.FileMatch for our Event API.
 
 ```
 searchKey: http.EventRepoMatch.eventMatch
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -347,7 +347,7 @@ EventSymbolMatch is EventFileMatch but with Symbols instead of LineMatches
 
 ```
 searchKey: http.EventSymbolMatch.eventMatch
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -369,7 +369,7 @@ type MatchType int
 
 ```
 searchKey: http.MatchType.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -439,7 +439,7 @@ type Writer struct {
 
 ```
 searchKey: http.NewWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -515,14 +515,14 @@ func (r *eventMatchUnmarshaller) UnmarshalJSON(b []byte) error
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewRequest" href="#NewRequest">func NewRequest(baseURL string, query string) (*http.Request, error)</a>
 
 ```
 searchKey: http.NewRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -535,7 +535,7 @@ NewRequest returns an http.Request against the streaming API for query.
 
 ```
 searchKey: http.TestDecoder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -546,7 +546,7 @@ func TestDecoder(t *testing.T)
 
 ```
 searchKey: http.splitColon
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

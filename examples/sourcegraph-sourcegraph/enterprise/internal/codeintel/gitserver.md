@@ -44,7 +44,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="RefTypeBranch" href="#RefTypeBranch">const RefTypeBranch</a>
@@ -83,7 +83,7 @@ const RefTypeUnknown RefType = iota
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="refPrefixes" href="#refPrefixes">var refPrefixes</a>
@@ -103,7 +103,7 @@ var refPrefixes = map[string]RefType{
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
@@ -124,7 +124,7 @@ type Client struct {
 
 ```
 searchKey: gitserver.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -318,7 +318,7 @@ type CommitGraph struct {
 
 ```
 searchKey: gitserver.ParseCommitGraph
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -331,7 +331,7 @@ ParseCommitGraph converts the output of git log into a map from commits to paren
 
 ```
 searchKey: gitserver.CommitGraph.Graph
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -342,7 +342,7 @@ func (c *CommitGraph) Graph() map[string][]string
 
 ```
 searchKey: gitserver.CommitGraph.Order
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -433,7 +433,7 @@ type operations struct {
 
 ```
 searchKey: gitserver.newOperations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -443,14 +443,14 @@ func newOperations(observationContext *observation.Context) *operations
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestParseCommitGraph" href="#TestParseCommitGraph">func TestParseCommitGraph(t *testing.T)</a>
 
 ```
 searchKey: gitserver.TestParseCommitGraph
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -461,7 +461,7 @@ func TestParseCommitGraph(t *testing.T)
 
 ```
 searchKey: gitserver.TestParseCommitGraphPartial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -472,7 +472,7 @@ func TestParseCommitGraphPartial(t *testing.T)
 
 ```
 searchKey: gitserver.TestParseRefDescriptions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -483,7 +483,7 @@ func TestParseRefDescriptions(t *testing.T)
 
 ```
 searchKey: gitserver.parseRefDescriptions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

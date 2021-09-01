@@ -23,10 +23,6 @@ Package utf16 implements encoding and decoding of UTF-16 sequences.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="MaxRune" href="#MaxRune">const MaxRune</a>
 
 ```
@@ -125,15 +121,11 @@ const surrSelf = 0x10000
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Decode" href="#Decode">func Decode(s []uint16) []rune</a>
 
 ```
 searchKey: utf16.Decode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -146,7 +138,7 @@ Decode returns the Unicode code point sequence represented by the UTF-16 encodin
 
 ```
 searchKey: utf16.DecodeRune
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -159,7 +151,7 @@ DecodeRune returns the UTF-16 decoding of a surrogate pair. If the pair is not a
 
 ```
 searchKey: utf16.Encode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -172,7 +164,7 @@ Encode returns the UTF-16 encoding of the Unicode code point sequence s.
 
 ```
 searchKey: utf16.EncodeRune
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -185,7 +177,7 @@ EncodeRune returns the UTF-16 surrogate pair r1, r2 for the given rune. If the r
 
 ```
 searchKey: utf16.IsSurrogate
-tags: [method]
+tags: [function]
 ```
 
 ```Go

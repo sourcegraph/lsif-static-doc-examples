@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -70,9 +68,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -620,9 +616,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -684,7 +678,7 @@
                       "newPage": false,
                       "searchKey": "des.KeySizeError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -730,7 +724,7 @@
                       "newPage": false,
                       "searchKey": "des.newCipher",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -753,7 +747,7 @@
                       "newPage": false,
                       "searchKey": "des.desCipher.BlockSize",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -869,7 +863,7 @@
                       "newPage": false,
                       "searchKey": "des.tripleDESCipher.BlockSize",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -943,9 +937,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -964,7 +956,7 @@
                 "newPage": false,
                 "searchKey": "des.BenchmarkDecrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -988,7 +980,7 @@
                 "newPage": false,
                 "searchKey": "des.BenchmarkEncrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1012,7 +1004,7 @@
                 "newPage": false,
                 "searchKey": "des.BenchmarkTDESDecrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1036,7 +1028,7 @@
                 "newPage": false,
                 "searchKey": "des.BenchmarkTDESEncrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1060,7 +1052,7 @@
                 "newPage": false,
                 "searchKey": "des.NewCipher",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1082,7 +1074,7 @@
                 "newPage": false,
                 "searchKey": "des.NewTripleDESCipher",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1104,7 +1096,7 @@
                 "newPage": false,
                 "searchKey": "des.TestDESDecryptBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1128,7 +1120,7 @@
                 "newPage": false,
                 "searchKey": "des.TestDESEncryptBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1152,7 +1144,7 @@
                 "newPage": false,
                 "searchKey": "des.TestDecryptTripleDES",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1176,7 +1168,7 @@
                 "newPage": false,
                 "searchKey": "des.TestEncryptTripleDES",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1200,7 +1192,7 @@
                 "newPage": false,
                 "searchKey": "des.TestFinalPermute",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1224,7 +1216,7 @@
                 "newPage": false,
                 "searchKey": "des.TestInitialPermutationKnownAnswer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1248,7 +1240,7 @@
                 "newPage": false,
                 "searchKey": "des.TestInitialPermute",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1272,7 +1264,7 @@
                 "newPage": false,
                 "searchKey": "des.TestInversePermutationKnownAnswer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1296,7 +1288,7 @@
                 "newPage": false,
                 "searchKey": "des.TestPermutationOperationKnownAnswerDecrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1320,7 +1312,7 @@
                 "newPage": false,
                 "searchKey": "des.TestPermutationOperationKnownAnswerEncrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1344,7 +1336,7 @@
                 "newPage": false,
                 "searchKey": "des.TestSemiWeakKeyPairs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1368,7 +1360,7 @@
                 "newPage": false,
                 "searchKey": "des.TestSubstitutionTableKnownAnswerDecrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1392,7 +1384,7 @@
                 "newPage": false,
                 "searchKey": "des.TestSubstitutionTableKnownAnswerEncrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1416,7 +1408,7 @@
                 "newPage": false,
                 "searchKey": "des.TestVariableCiphertextKnownAnswer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1440,7 +1432,7 @@
                 "newPage": false,
                 "searchKey": "des.TestVariableKeyKnownAnswerDecrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1464,7 +1456,7 @@
                 "newPage": false,
                 "searchKey": "des.TestVariableKeyKnownAnswerEncrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1488,7 +1480,7 @@
                 "newPage": false,
                 "searchKey": "des.TestVariablePlaintextKnownAnswer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1512,7 +1504,7 @@
                 "newPage": false,
                 "searchKey": "des.TestWeakKeys",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1536,7 +1528,7 @@
                 "newPage": false,
                 "searchKey": "des.cryptBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1559,7 +1551,7 @@
                 "newPage": false,
                 "searchKey": "des.decryptBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1582,7 +1574,7 @@
                 "newPage": false,
                 "searchKey": "des.encryptBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1605,7 +1597,7 @@
                 "newPage": false,
                 "searchKey": "des.feistel",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1651,7 +1643,7 @@
                 "newPage": false,
                 "searchKey": "des.ksRotate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1674,7 +1666,7 @@
                 "newPage": false,
                 "searchKey": "des.permuteBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1697,7 +1689,7 @@
                 "newPage": false,
                 "searchKey": "des.permuteFinalBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1720,7 +1712,7 @@
                 "newPage": false,
                 "searchKey": "des.permuteInitialBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1743,7 +1735,7 @@
                 "newPage": false,
                 "searchKey": "des.unpack",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

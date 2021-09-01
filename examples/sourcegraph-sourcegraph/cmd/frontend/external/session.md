@@ -14,10 +14,6 @@ Package session exports symbols from frontend/internal/session. See the parent p
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="GetData" href="#GetData">var GetData</a>
 
 ```

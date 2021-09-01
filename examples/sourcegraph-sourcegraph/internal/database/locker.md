@@ -25,7 +25,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="lockQuery" href="#lockQuery">const lockQuery</a>
@@ -64,7 +64,7 @@ const unlockQuery = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Locker" href="#Locker">type Locker struct</a>
@@ -89,7 +89,7 @@ For example, an advisory lock can be taken around an expensive calculation relat
 
 ```
 searchKey: locker.NewWithDB
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -188,14 +188,14 @@ UnlockFunc unlocks the advisory lock taken by a successful call to Lock. If an e
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestLock" href="#TestLock">func TestLock(t *testing.T)</a>
 
 ```
 searchKey: locker.TestLock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -206,7 +206,7 @@ func TestLock(t *testing.T)
 
 ```
 searchKey: locker.TestLockBlockingAcquire
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

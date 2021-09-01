@@ -25,7 +25,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="config" href="#config">var config</a>
@@ -72,7 +72,7 @@ var services struct {
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Config" href="#Config">type Config struct</a>
@@ -104,14 +104,14 @@ type Config struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Init" href="#Init">func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error</a>
 
 ```
 searchKey: codeintel.Init
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -122,7 +122,7 @@ func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigrat
 
 ```
 searchKey: codeintel.NewCodeIntelUploadHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -146,7 +146,7 @@ func init()
 
 ```
 searchKey: codeintel.initServices
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -168,7 +168,7 @@ func mustInitializeCodeIntelDB() *sql.DB
 
 ```
 searchKey: codeintel.newResolver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -179,7 +179,7 @@ func newResolver(ctx context.Context, db dbutil.DB, observationContext *observat
 
 ```
 searchKey: codeintel.newUploadHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -190,7 +190,7 @@ func newUploadHandler(ctx context.Context, db dbutil.DB) (func(internal bool) ht
 
 ```
 searchKey: codeintel.registerMigrations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

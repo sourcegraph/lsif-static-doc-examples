@@ -71,10 +71,6 @@ because the former will succeed if err wraps an *fs.PathError.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="errorType" href="#errorType">var errorType</a>
 
 ```
@@ -87,10 +83,6 @@ var errorType = reflectlite.TypeOf((*error)(nil)).Elem()
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="errorString" href="#errorString">type errorString struct</a>
 
@@ -111,7 +103,7 @@ errorString is a trivial implementation of error.
 
 ```
 searchKey: errors.errorString.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -120,15 +112,11 @@ func (e *errorString) Error() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="As" href="#As">func As(err error, target interface{}) bool</a>
 
 ```
 searchKey: errors.As
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -149,7 +137,7 @@ As panics if target is not a non-nil pointer to either a type that implements er
 
 ```
 searchKey: errors.Is
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -174,7 +162,7 @@ then Is(MyError{}, fs.ErrExist) returns true. See syscall.Errno.Is for an exampl
 
 ```
 searchKey: errors.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -187,7 +175,7 @@ New returns an error that formats as the given text. Each call to New returns a 
 
 ```
 searchKey: errors.Unwrap
-tags: [method]
+tags: [function]
 ```
 
 ```Go

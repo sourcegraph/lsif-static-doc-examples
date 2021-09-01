@@ -61,10 +61,6 @@ Package bzip2 implements bzip2 decompression.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="bzip2BlockMagic" href="#bzip2BlockMagic">const bzip2BlockMagic</a>
 
 ```
@@ -114,10 +110,6 @@ invalidNodeValue is an invalid index which marks a leaf node in the tree.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="crctab" href="#crctab">var crctab</a>
 
 ```
@@ -164,10 +156,6 @@ var random = mustLoadFile("testdata/random.data.bz2")
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="StructuralError" href="#StructuralError">type StructuralError string</a>
 
 ```
@@ -185,7 +173,7 @@ A StructuralError is returned when the bzip2 data is found to be syntactically i
 
 ```
 searchKey: bzip2.StructuralError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -214,7 +202,7 @@ bitReader wraps an io.Reader and provides the ability to read values, bit-by-bit
 
 ```
 searchKey: bzip2.newBitReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -227,7 +215,7 @@ newBitReader returns a new bitReader reading from r. If r is not already an io.B
 
 ```
 searchKey: bzip2.bitReader.Err
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -238,7 +226,7 @@ func (br *bitReader) Err() error
 
 ```
 searchKey: bzip2.bitReader.ReadBit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -343,7 +331,7 @@ A huffmanTree is a binary tree which is navigated, bit-by-bit to reach a symbol.
 
 ```
 searchKey: bzip2.newHuffmanTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -382,7 +370,7 @@ moveToFrontDecoder implements a move-to-front list. Such a list is an efficient 
 
 ```
 searchKey: bzip2.newMTFDecoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -395,7 +383,7 @@ newMTFDecoder creates a move-to-front decoder with an explicit initial list of s
 
 ```
 searchKey: bzip2.newMTFDecoderWithRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -419,7 +407,7 @@ func (m moveToFrontDecoder) Decode(n int) (b byte)
 
 ```
 searchKey: bzip2.moveToFrontDecoder.First
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -484,7 +472,7 @@ func (bz2 *reader) read(buf []byte) (int, error)
 
 ```
 searchKey: bzip2.reader.readBlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -519,15 +507,11 @@ setup parses the bzip2 header.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDecodeDigits" href="#BenchmarkDecodeDigits">func BenchmarkDecodeDigits(b *testing.B)</a>
 
 ```
 searchKey: bzip2.BenchmarkDecodeDigits
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -538,7 +522,7 @@ func BenchmarkDecodeDigits(b *testing.B)
 
 ```
 searchKey: bzip2.BenchmarkDecodeNewton
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -549,7 +533,7 @@ func BenchmarkDecodeNewton(b *testing.B)
 
 ```
 searchKey: bzip2.BenchmarkDecodeRand
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -560,7 +544,7 @@ func BenchmarkDecodeRand(b *testing.B)
 
 ```
 searchKey: bzip2.NewReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -573,7 +557,7 @@ NewReader returns an io.Reader which decompresses bzip2 data from r. If r does n
 
 ```
 searchKey: bzip2.TestBitReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -584,7 +568,7 @@ func TestBitReader(t *testing.T)
 
 ```
 searchKey: bzip2.TestMTF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -595,7 +579,7 @@ func TestMTF(t *testing.T)
 
 ```
 searchKey: bzip2.TestReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -606,7 +590,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: bzip2.TestZeroRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -617,7 +601,7 @@ func TestZeroRead(t *testing.T)
 
 ```
 searchKey: bzip2.benchmarkDecode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -628,7 +612,7 @@ func benchmarkDecode(b *testing.B, compressed []byte)
 
 ```
 searchKey: bzip2.buildHuffmanNode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -652,7 +636,7 @@ func init()
 
 ```
 searchKey: bzip2.inverseBWT
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -667,7 +651,7 @@ This also implements the `single array' method from the bzip2 source code which 
 
 ```
 searchKey: bzip2.mustDecodeHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -678,7 +662,7 @@ func mustDecodeHex(s string) []byte
 
 ```
 searchKey: bzip2.mustLoadFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -689,7 +673,7 @@ func mustLoadFile(f string) []byte
 
 ```
 searchKey: bzip2.trim
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -700,7 +684,7 @@ func trim(b []byte) string
 
 ```
 searchKey: bzip2.updateCRC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

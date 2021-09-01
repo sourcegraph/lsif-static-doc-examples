@@ -932,10 +932,6 @@ Package tls partially implements TLS 1.2, as specified in RFC 5246, and TLS 1.3,
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CurveP256" href="#CurveP256">const CurveP256</a>
 
 ```
@@ -3463,10 +3459,6 @@ const _SignatureScheme_name_8 = "PSSWithSHA256PSSWithSHA384PSSWithSHA512Ed25519"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="aesgcmCiphers" href="#aesgcmCiphers">var aesgcmCiphers</a>
 
 ```
@@ -4512,10 +4504,6 @@ var _SignatureScheme_index_8 = [...]uint8{0, 13, 26, 39, 46}
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Certificate" href="#Certificate">type Certificate struct</a>
 
 ```
@@ -4553,7 +4541,7 @@ A Certificate is a chain of one or more certificates, leaf first.
 
 ```
 searchKey: tls.LoadX509KeyPair
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4566,7 +4554,7 @@ LoadX509KeyPair reads and parses a public/private key pair from a pair of files.
 
 ```
 searchKey: tls.X509KeyPair
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4579,7 +4567,7 @@ X509KeyPair parses a public/private key pair from a pair of PEM encoded data. On
 
 ```
 searchKey: tls.Certificate.leaf
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4621,7 +4609,7 @@ CertificateRequestInfo contains information from a server's CertificateRequest m
 
 ```
 searchKey: tls.certificateRequestInfoFromMsg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4634,7 +4622,7 @@ certificateRequestInfoFromMsg generates a CertificateRequestInfo from a TLS <= 1
 
 ```
 searchKey: tls.CertificateRequestInfo.Context
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4697,7 +4685,7 @@ ClientAuthType declares the policy the server will follow for TLS Client Authent
 
 ```
 searchKey: tls.ClientAuthType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4771,7 +4759,7 @@ ClientHelloInfo contains information from a ClientHello message in order to guid
 
 ```
 searchKey: tls.clientHelloInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4782,7 +4770,7 @@ func clientHelloInfo(ctx context.Context, c *Conn, clientHello *clientHelloMsg) 
 
 ```
 searchKey: tls.ClientHelloInfo.Context
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4835,7 +4823,7 @@ ClientSessionCache is a cache of ClientSessionState objects that can be used by 
 
 ```
 searchKey: tls.NewLRUClientSessionCache
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5111,7 +5099,7 @@ func defaultConfig() *Config
 
 ```
 searchKey: tls.Config.BuildNameToCertificate
-tags: [function deprecated]
+tags: [method deprecated]
 ```
 
 ```Go
@@ -5126,7 +5114,7 @@ Deprecated: NameToCertificate only allows associating a single certificate with 
 
 ```
 searchKey: tls.Config.Clone
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5158,7 +5146,7 @@ If multiple servers are terminating connections for the same host they should al
 
 ```
 searchKey: tls.Config.cipherSuites
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5169,7 +5157,7 @@ func (c *Config) cipherSuites() []uint16
 
 ```
 searchKey: tls.Config.curvePreferences
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5193,7 +5181,7 @@ getCertificate returns the best certificate for the given ClientHelloInfo, defau
 
 ```
 searchKey: tls.Config.initLegacySessionTicketKeyRLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5206,7 +5194,7 @@ initLegacySessionTicketKeyRLocked ensures the legacy SessionTicketKey field is r
 
 ```
 searchKey: tls.Config.maxSupportedVersion
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5230,7 +5218,7 @@ mutualVersion returns the protocol version to use given the advertised versions 
 
 ```
 searchKey: tls.Config.rand
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5241,7 +5229,7 @@ func (c *Config) rand() io.Reader
 
 ```
 searchKey: tls.Config.supportedVersions
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5289,7 +5277,7 @@ ticketKeys returns the ticketKeys for this connection. If configForClient has ex
 
 ```
 searchKey: tls.Config.time
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5415,7 +5403,7 @@ A Conn represents a secured connection. It implements the net.Conn interface.
 
 ```
 searchKey: tls.Client
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5428,7 +5416,7 @@ Client returns a new TLS client side connection using conn as the underlying tra
 
 ```
 searchKey: tls.Dial
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5441,7 +5429,7 @@ Dial connects to the given network address using net.Dial and then initiates a T
 
 ```
 searchKey: tls.DialWithDialer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5458,7 +5446,7 @@ DialWithDialer uses context.Background internally; to specify the context, use D
 
 ```
 searchKey: tls.Server
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5471,7 +5459,7 @@ Server returns a new TLS server side connection using conn as the underlying tra
 
 ```
 searchKey: tls.dial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5482,7 +5470,7 @@ func dial(ctx context.Context, netDialer *net.Dialer, network, addr string, conf
 
 ```
 searchKey: tls.Conn.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5495,7 +5483,7 @@ Close closes the connection.
 
 ```
 searchKey: tls.Conn.CloseWrite
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5508,7 +5496,7 @@ CloseWrite shuts down the writing side of the connection. It should only be call
 
 ```
 searchKey: tls.Conn.ConnectionState
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5521,7 +5509,7 @@ ConnectionState returns basic TLS details about the connection.
 
 ```
 searchKey: tls.Conn.Handshake
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5555,7 +5543,7 @@ Most uses of this package need not call HandshakeContext explicitly: the first R
 
 ```
 searchKey: tls.Conn.LocalAddr
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5568,7 +5556,7 @@ LocalAddr returns the local network address.
 
 ```
 searchKey: tls.Conn.OCSPResponse
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5596,7 +5584,7 @@ As Read calls Handshake, in order to prevent indefinite blocking a deadline must
 
 ```
 searchKey: tls.Conn.RemoteAddr
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5687,7 +5675,7 @@ func (c *Conn) clientHandshake(ctx context.Context) (err error)
 
 ```
 searchKey: tls.Conn.closeNotify
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5698,7 +5686,7 @@ func (c *Conn) closeNotify() error
 
 ```
 searchKey: tls.Conn.connectionStateLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5731,7 +5719,7 @@ func (c *Conn) encryptTicket(state []byte) ([]byte, error)
 
 ```
 searchKey: tls.Conn.flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5775,7 +5763,7 @@ func (c *Conn) handleNewSessionTicket(msg *newSessionTicketMsgTLS13) error
 
 ```
 searchKey: tls.Conn.handlePostHandshakeMessage
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5788,7 +5776,7 @@ handlePostHandshakeMessage processes a handshake message arrived after the hands
 
 ```
 searchKey: tls.Conn.handleRenegotiation
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5801,7 +5789,7 @@ handleRenegotiation processes a HelloRequest handshake message.
 
 ```
 searchKey: tls.Conn.handshakeComplete
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5835,7 +5823,7 @@ func (c *Conn) loadSession(hello *clientHelloMsg) (cacheKey string,
 
 ```
 searchKey: tls.Conn.makeClientHello
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5905,7 +5893,7 @@ processCertsFromClient takes a chain of client certificates either from a Certif
 
 ```
 searchKey: tls.Conn.readChangeCipherSpec
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5942,7 +5930,7 @@ readFromUntil reads from r into c.rawInput until c.rawInput contains at least n 
 
 ```
 searchKey: tls.Conn.readHandshake
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5955,7 +5943,7 @@ readHandshake reads the next handshake message from the record layer.
 
 ```
 searchKey: tls.Conn.readRecord
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6179,7 +6167,7 @@ ConnectionState records basic TLS details about the connection.
 
 ```
 searchKey: tls.testHandshake
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6218,7 +6206,7 @@ In TLS 1.3, this type is called NamedGroup, but at this time this library only s
 
 ```
 searchKey: tls.CurveID.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6287,7 +6275,7 @@ The returned Conn, if any, will always be of type *Conn.
 
 ```
 searchKey: tls.Dialer.netDialer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6322,7 +6310,7 @@ RecordHeaderError is returned when a TLS record header is invalid.
 
 ```
 searchKey: tls.RecordHeaderError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6363,7 +6351,7 @@ SignatureScheme identifies a signature algorithm supported by TLS. See RFC 8446,
 
 ```
 searchKey: tls.selectSignatureScheme
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6376,7 +6364,7 @@ selectSignatureScheme picks a SignatureScheme from the peer's preference list th
 
 ```
 searchKey: tls.SignatureScheme.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6405,7 +6393,7 @@ type aead interface {
 
 ```
 searchKey: tls.aeadAESGCM
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6416,7 +6404,7 @@ func aeadAESGCM(key, noncePrefix []byte) aead
 
 ```
 searchKey: tls.aeadAESGCMTLS13
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6427,7 +6415,7 @@ func aeadAESGCMTLS13(key, nonceMask []byte) aead
 
 ```
 searchKey: tls.aeadChaCha20Poly1305
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6449,7 +6437,7 @@ type alert uint8
 
 ```
 searchKey: tls.alert.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6460,7 +6448,7 @@ func (e alert) Error() string
 
 ```
 searchKey: tls.alert.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6594,7 +6582,7 @@ func (*certificateMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.certificateMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6643,7 +6631,7 @@ func (*certificateMsgTLS13) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.certificateMsgTLS13.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6696,7 +6684,7 @@ func (*certificateRequestMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.certificateRequestMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6747,7 +6735,7 @@ func (*certificateRequestMsgTLS13) Generate(rand *rand.Rand, size int) reflect.V
 
 ```
 searchKey: tls.certificateRequestMsgTLS13.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6794,7 +6782,7 @@ func (*certificateStatusMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.certificateStatusMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6843,7 +6831,7 @@ func (*certificateVerifyMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.certificateVerifyMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6882,7 +6870,7 @@ changeImplConn is a net.Conn which can change its Write and Close methods.
 
 ```
 searchKey: tls.changeImplConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6929,7 +6917,7 @@ A cipherSuite is a TLS 1.0–1.2 cipher suite, and defines the key exchange mech
 
 ```
 searchKey: tls.cipherSuiteByID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6940,7 +6928,7 @@ func cipherSuiteByID(id uint16) *cipherSuite
 
 ```
 searchKey: tls.mutualCipherSuite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6953,7 +6941,7 @@ mutualCipherSuite returns a cipherSuite given a list of supported ciphersuites a
 
 ```
 searchKey: tls.selectCipherSuite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6984,7 +6972,7 @@ A cipherSuiteTLS13 defines only the pair of the AEAD algorithm and hash algorith
 
 ```
 searchKey: tls.cipherSuiteTLS13ByID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6995,7 +6983,7 @@ func cipherSuiteTLS13ByID(id uint16) *cipherSuiteTLS13
 
 ```
 searchKey: tls.mutualCipherSuiteTLS13
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7117,7 +7105,7 @@ type clientHandshakeState struct {
 
 ```
 searchKey: tls.clientHandshakeState.doFullHandshake
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7128,7 +7116,7 @@ func (hs *clientHandshakeState) doFullHandshake() error
 
 ```
 searchKey: tls.clientHandshakeState.establishKeys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7139,7 +7127,7 @@ func (hs *clientHandshakeState) establishKeys() error
 
 ```
 searchKey: tls.clientHandshakeState.handshake
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7152,7 +7140,7 @@ Does the handshake, either a full one or resumes old session. Requires hs.c, hs.
 
 ```
 searchKey: tls.clientHandshakeState.pickCipherSuite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7163,7 +7151,7 @@ func (hs *clientHandshakeState) pickCipherSuite() error
 
 ```
 searchKey: tls.clientHandshakeState.processServerHello
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7185,7 +7173,7 @@ func (hs *clientHandshakeState) readFinished(out []byte) error
 
 ```
 searchKey: tls.clientHandshakeState.readSessionTicket
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7207,7 +7195,7 @@ func (hs *clientHandshakeState) sendFinished(out []byte) error
 
 ```
 searchKey: tls.clientHandshakeState.serverResumedSession
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7247,7 +7235,7 @@ type clientHandshakeStateTLS13 struct {
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.checkServerHelloOrHRR
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7260,7 +7248,7 @@ checkServerHelloOrHRR does validity checks that apply to both ServerHello and He
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.establishHandshakeKeys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7271,7 +7259,7 @@ func (hs *clientHandshakeStateTLS13) establishHandshakeKeys() error
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.handshake
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7284,7 +7272,7 @@ handshake requires hs.c, hs.hello, hs.serverHello, hs.ecdheParams, and, optional
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.processHelloRetryRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7297,7 +7285,7 @@ processHelloRetryRequest handles the HRR in hs.serverHello, modifies and resends
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.processServerHello
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7308,7 +7296,7 @@ func (hs *clientHandshakeStateTLS13) processServerHello() error
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.readServerCertificate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7319,7 +7307,7 @@ func (hs *clientHandshakeStateTLS13) readServerCertificate() error
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.readServerFinished
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7330,7 +7318,7 @@ func (hs *clientHandshakeStateTLS13) readServerFinished() error
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.readServerParameters
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7341,7 +7329,7 @@ func (hs *clientHandshakeStateTLS13) readServerParameters() error
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.sendClientCertificate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7352,7 +7340,7 @@ func (hs *clientHandshakeStateTLS13) sendClientCertificate() error
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.sendClientFinished
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7363,7 +7351,7 @@ func (hs *clientHandshakeStateTLS13) sendClientFinished() error
 
 ```
 searchKey: tls.clientHandshakeStateTLS13.sendDummyChangeCipherSpec
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7424,7 +7412,7 @@ func (*clientHelloMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.clientHelloMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7435,7 +7423,7 @@ func (m *clientHelloMsg) marshal() []byte
 
 ```
 searchKey: tls.clientHelloMsg.marshalWithoutBinders
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7497,7 +7485,7 @@ func (*clientKeyExchangeMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.clientKeyExchangeMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7567,7 +7555,7 @@ clientTest represents a test of the TLS client handshake against a reference imp
 
 ```
 searchKey: tls.clientTest.connFromCommand
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7580,7 +7568,7 @@ connFromCommand starts the reference server process, connects to it and returns 
 
 ```
 searchKey: tls.clientTest.dataPath
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7591,7 +7579,7 @@ func (test *clientTest) dataPath() string
 
 ```
 searchKey: tls.clientTest.loadData
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7642,7 +7630,7 @@ cthWrapper wraps any hash.Hash that implements ConstantTimeSum, and replaces wit
 
 ```
 searchKey: tls.cthWrapper.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7653,7 +7641,7 @@ func (c *cthWrapper) BlockSize() int
 
 ```
 searchKey: tls.cthWrapper.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7664,7 +7652,7 @@ func (c *cthWrapper) Reset()
 
 ```
 searchKey: tls.cthWrapper.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7780,7 +7768,7 @@ ecdheParameters implements Diffie-Hellman with either NIST curves or X25519, acc
 
 ```
 searchKey: tls.generateECDHEParameters
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7816,7 +7804,7 @@ func (*encryptedExtensionsMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.encryptedExtensionsMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7860,7 +7848,7 @@ func (*endOfEarlyDataMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.endOfEarlyDataMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7908,7 +7896,7 @@ A finishedHash calculates the hash of a set of handshake messages suitable for i
 
 ```
 searchKey: tls.newFinishedHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7919,7 +7907,7 @@ func newFinishedHash(version uint16, cipherSuite *cipherSuite) finishedHash
 
 ```
 searchKey: tls.finishedHash.Sum
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7954,7 +7942,7 @@ clientSum returns the contents of the verify_data member of a client's Finished 
 
 ```
 searchKey: tls.finishedHash.discardHandshakeBuffer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8018,7 +8006,7 @@ func (*finishedMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.finishedMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8056,7 +8044,7 @@ hairpinConn is a net.Conn that makes a “hairpin” call when closed, back into
 
 ```
 searchKey: tls.hairpinConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8095,7 +8083,7 @@ A halfConn represents one direction of the record layer connection, either sendi
 
 ```
 searchKey: tls.halfConn.changeCipherSpec
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8134,7 +8122,7 @@ encrypt encrypts payload, adding the appropriate nonce and/or MAC, and appends i
 
 ```
 searchKey: tls.halfConn.explicitNonceLen
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8147,7 +8135,7 @@ explicitNonceLen returns the number of bytes of explicit nonce or IV included in
 
 ```
 searchKey: tls.halfConn.incSeq
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8221,7 +8209,7 @@ type helloRequestMsg struct {
 
 ```
 searchKey: tls.helloRequestMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8268,7 +8256,7 @@ a keyAgreement implements the client and server side of a TLS key agreement prot
 
 ```
 searchKey: tls.ecdheECDSAKA
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -8279,7 +8267,7 @@ func ecdheECDSAKA(version uint16) keyAgreement
 
 ```
 searchKey: tls.ecdheRSAKA
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -8290,7 +8278,7 @@ func ecdheRSAKA(version uint16) keyAgreement
 
 ```
 searchKey: tls.rsaKA
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -8342,7 +8330,7 @@ func (*keyUpdateMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.keyUpdateMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8380,7 +8368,7 @@ A listener implements a network listener (net.Listener) for TLS connections.
 
 ```
 searchKey: tls.listener.Accept
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8501,7 +8489,7 @@ func (*newSessionTicketMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.newSessionTicketMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8552,7 +8540,7 @@ func (*newSessionTicketMsgTLS13) Generate(rand *rand.Rand, size int) reflect.Val
 
 ```
 searchKey: tls.newSessionTicketMsgTLS13.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8589,7 +8577,7 @@ type nistParameters struct {
 
 ```
 searchKey: tls.nistParameters.CurveID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8600,7 +8588,7 @@ func (p *nistParameters) CurveID() CurveID
 
 ```
 searchKey: tls.nistParameters.PublicKey
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8686,7 +8674,7 @@ func newOpensslOutputSink() *opensslOutputSink
 
 ```
 searchKey: tls.opensslOutputSink.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8721,7 +8709,7 @@ type permanentError struct {
 
 ```
 searchKey: tls.permanentError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8732,7 +8720,7 @@ func (e *permanentError) Error() string
 
 ```
 searchKey: tls.permanentError.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8743,7 +8731,7 @@ func (e *permanentError) Temporary() bool
 
 ```
 searchKey: tls.permanentError.Timeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8754,7 +8742,7 @@ func (e *permanentError) Timeout() bool
 
 ```
 searchKey: tls.permanentError.Unwrap
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8782,7 +8770,7 @@ prefixNonceAEAD wraps an AEAD and prefixes a fixed portion of the nonce to each 
 
 ```
 searchKey: tls.prefixNonceAEAD.NonceSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8804,7 +8792,7 @@ func (f *prefixNonceAEAD) Open(out, nonce, ciphertext, additionalData []byte) ([
 
 ```
 searchKey: tls.prefixNonceAEAD.Overhead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8826,7 +8814,7 @@ func (f *prefixNonceAEAD) Seal(out, nonce, plaintext, additionalData []byte) []b
 
 ```
 searchKey: tls.prefixNonceAEAD.explicitNonceLen
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9025,7 +9013,7 @@ serverHandshakeState contains details of a server handshake in progress. It's di
 
 ```
 searchKey: tls.serverHandshakeState.checkForResumption
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9049,7 +9037,7 @@ func (hs *serverHandshakeState) cipherSuiteOk(c *cipherSuite) bool
 
 ```
 searchKey: tls.serverHandshakeState.doFullHandshake
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9060,7 +9048,7 @@ func (hs *serverHandshakeState) doFullHandshake() error
 
 ```
 searchKey: tls.serverHandshakeState.doResumeHandshake
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9071,7 +9059,7 @@ func (hs *serverHandshakeState) doResumeHandshake() error
 
 ```
 searchKey: tls.serverHandshakeState.establishKeys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9082,7 +9070,7 @@ func (hs *serverHandshakeState) establishKeys() error
 
 ```
 searchKey: tls.serverHandshakeState.handshake
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9093,7 +9081,7 @@ func (hs *serverHandshakeState) handshake() error
 
 ```
 searchKey: tls.serverHandshakeState.pickCipherSuite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9104,7 +9092,7 @@ func (hs *serverHandshakeState) pickCipherSuite() error
 
 ```
 searchKey: tls.serverHandshakeState.processClientHello
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9137,7 +9125,7 @@ func (hs *serverHandshakeState) sendFinished(out []byte) error
 
 ```
 searchKey: tls.serverHandshakeState.sendSessionTicket
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9176,7 +9164,7 @@ type serverHandshakeStateTLS13 struct {
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.checkForResumption
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9198,7 +9186,7 @@ func (hs *serverHandshakeStateTLS13) doHelloRetryRequest(selectedGroup CurveID) 
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.handshake
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9209,7 +9197,7 @@ func (hs *serverHandshakeStateTLS13) handshake() error
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.pickCertificate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9220,7 +9208,7 @@ func (hs *serverHandshakeStateTLS13) pickCertificate() error
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.processClientHello
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9231,7 +9219,7 @@ func (hs *serverHandshakeStateTLS13) processClientHello() error
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.readClientCertificate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9242,7 +9230,7 @@ func (hs *serverHandshakeStateTLS13) readClientCertificate() error
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.readClientFinished
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9253,7 +9241,7 @@ func (hs *serverHandshakeStateTLS13) readClientFinished() error
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.requestClientCert
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9264,7 +9252,7 @@ func (hs *serverHandshakeStateTLS13) requestClientCert() bool
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.sendDummyChangeCipherSpec
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9277,7 +9265,7 @@ sendDummyChangeCipherSpec sends a ChangeCipherSpec record for compatibility with
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.sendServerCertificate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9288,7 +9276,7 @@ func (hs *serverHandshakeStateTLS13) sendServerCertificate() error
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.sendServerFinished
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9299,7 +9287,7 @@ func (hs *serverHandshakeStateTLS13) sendServerFinished() error
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.sendServerParameters
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9310,7 +9298,7 @@ func (hs *serverHandshakeStateTLS13) sendServerParameters() error
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.sendSessionTickets
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9321,7 +9309,7 @@ func (hs *serverHandshakeStateTLS13) sendSessionTickets() error
 
 ```
 searchKey: tls.serverHandshakeStateTLS13.shouldSendSessionTickets
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9343,7 +9331,7 @@ type serverHelloDoneMsg struct{}
 
 ```
 searchKey: tls.serverHelloDoneMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9409,7 +9397,7 @@ func (*serverHelloMsg) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.serverHelloMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9445,7 +9433,7 @@ type serverKeyExchangeMsg struct {
 
 ```
 searchKey: tls.serverKeyExchangeMsg.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9502,7 +9490,7 @@ serverTest represents a test of the TLS server handshake against a reference imp
 
 ```
 searchKey: tls.serverTest.connFromCommand
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9515,7 +9503,7 @@ connFromCommand starts opens a listening socket and starts the reference client 
 
 ```
 searchKey: tls.serverTest.dataPath
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9526,7 +9514,7 @@ func (test *serverTest) dataPath() string
 
 ```
 searchKey: tls.serverTest.loadData
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9583,7 +9571,7 @@ func (*sessionState) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.sessionState.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9636,7 +9624,7 @@ func (*sessionStateTLS13) Generate(rand *rand.Rand, size int) reflect.Value
 
 ```
 searchKey: tls.sessionStateTLS13.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9749,7 +9737,7 @@ type timeoutError struct{}
 
 ```
 searchKey: tls.timeoutError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9760,7 +9748,7 @@ func (timeoutError) Error() string
 
 ```
 searchKey: tls.timeoutError.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9771,7 +9759,7 @@ func (timeoutError) Temporary() bool
 
 ```
 searchKey: tls.timeoutError.Timeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9825,7 +9813,7 @@ type x25519Parameters struct {
 
 ```
 searchKey: tls.x25519Parameters.CurveID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9836,7 +9824,7 @@ func (p *x25519Parameters) CurveID() CurveID
 
 ```
 searchKey: tls.x25519Parameters.PublicKey
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9874,7 +9862,7 @@ xoredNonceAEAD wraps an AEAD by XORing in a fixed pattern to the nonce before ea
 
 ```
 searchKey: tls.xorNonceAEAD.NonceSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9896,7 +9884,7 @@ func (f *xorNonceAEAD) Open(out, nonce, ciphertext, additionalData []byte) ([]by
 
 ```
 searchKey: tls.xorNonceAEAD.Overhead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9918,7 +9906,7 @@ func (f *xorNonceAEAD) Seal(out, nonce, plaintext, additionalData []byte) []byte
 
 ```
 searchKey: tls.xorNonceAEAD.explicitNonceLen
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9951,15 +9939,11 @@ func (zeroSource) Read(b []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkHandshakeServer" href="#BenchmarkHandshakeServer">func BenchmarkHandshakeServer(b *testing.B)</a>
 
 ```
 searchKey: tls.BenchmarkHandshakeServer
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -9970,7 +9954,7 @@ func BenchmarkHandshakeServer(b *testing.B)
 
 ```
 searchKey: tls.BenchmarkLatency
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -9981,7 +9965,7 @@ func BenchmarkLatency(b *testing.B)
 
 ```
 searchKey: tls.BenchmarkThroughput
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -9992,7 +9976,7 @@ func BenchmarkThroughput(b *testing.B)
 
 ```
 searchKey: tls.CipherSuiteName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10035,7 +10019,7 @@ Most applications should not use the cipher suites in this list, and should only
 
 ```
 searchKey: tls.Listen
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10048,7 +10032,7 @@ Listen creates a TLS listener accepting connections on the given network address
 
 ```
 searchKey: tls.NewListener
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10061,7 +10045,7 @@ NewListener creates a Listener which accepts connections from an inner Listener 
 
 ```
 searchKey: tls.TestAESCipherReordering
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10072,7 +10056,7 @@ func TestAESCipherReordering(t *testing.T)
 
 ```
 searchKey: tls.TestAESCipherReorderingTLS13
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10083,7 +10067,7 @@ func TestAESCipherReorderingTLS13(t *testing.T)
 
 ```
 searchKey: tls.TestAlertFlushing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10094,7 +10078,7 @@ func TestAlertFlushing(t *testing.T)
 
 ```
 searchKey: tls.TestAlertForwarding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10105,7 +10089,7 @@ func TestAlertForwarding(t *testing.T)
 
 ```
 searchKey: tls.TestBuffering
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10116,7 +10100,7 @@ func TestBuffering(t *testing.T)
 
 ```
 searchKey: tls.TestBuildNameToCertificate_doesntModifyCertificates
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10129,7 +10113,7 @@ Issue 28744: Ensure that we don't modify memory that Config doesn't own such as 
 
 ```
 searchKey: tls.TestCertificateSelection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10140,7 +10124,7 @@ func TestCertificateSelection(t *testing.T)
 
 ```
 searchKey: tls.TestCipherSuitePreference
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10151,7 +10135,7 @@ func TestCipherSuitePreference(t *testing.T)
 
 ```
 searchKey: tls.TestCipherSuites
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10162,7 +10146,7 @@ func TestCipherSuites(t *testing.T)
 
 ```
 searchKey: tls.TestClientAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10173,7 +10157,7 @@ func TestClientAuth(t *testing.T)
 
 ```
 searchKey: tls.TestClientHandshakeContextCancellation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10186,7 +10170,7 @@ TestClientHandshakeContextCancellation tests that cancelling the context given t
 
 ```
 searchKey: tls.TestClientHelloInfo_SupportsCertificate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10197,7 +10181,7 @@ func TestClientHelloInfo_SupportsCertificate(t *testing.T)
 
 ```
 searchKey: tls.TestClientKeyUpdate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10208,7 +10192,7 @@ func TestClientKeyUpdate(t *testing.T)
 
 ```
 searchKey: tls.TestCloneFuncFields
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10219,7 +10203,7 @@ func TestCloneFuncFields(t *testing.T)
 
 ```
 searchKey: tls.TestCloneHash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10230,7 +10214,7 @@ func TestCloneHash(t *testing.T)
 
 ```
 searchKey: tls.TestCloneNilConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10241,7 +10225,7 @@ func TestCloneNilConfig(t *testing.T)
 
 ```
 searchKey: tls.TestCloneNonFuncFields
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10252,7 +10236,7 @@ func TestCloneNonFuncFields(t *testing.T)
 
 ```
 searchKey: tls.TestClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10263,7 +10247,7 @@ func TestClose(t *testing.T)
 
 ```
 searchKey: tls.TestCloseClientConnectionOnIdleServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10274,7 +10258,7 @@ func TestCloseClientConnectionOnIdleServer(t *testing.T)
 
 ```
 searchKey: tls.TestCloseServerConnectionOnIdleClient
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10285,7 +10269,7 @@ func TestCloseServerConnectionOnIdleClient(t *testing.T)
 
 ```
 searchKey: tls.TestConnCloseBreakingWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10296,7 +10280,7 @@ func TestConnCloseBreakingWrite(t *testing.T)
 
 ```
 searchKey: tls.TestConnCloseWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10307,7 +10291,7 @@ func TestConnCloseWrite(t *testing.T)
 
 ```
 searchKey: tls.TestConnReadNonzeroAndEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10320,7 +10304,7 @@ tests that Conn.Read returns (non-zero, io.EOF) instead of (non-zero, nil) when 
 
 ```
 searchKey: tls.TestConnectionState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10331,7 +10315,7 @@ func TestConnectionState(t *testing.T)
 
 ```
 searchKey: tls.TestConnectionStateMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10342,7 +10326,7 @@ func TestConnectionStateMarshal(t *testing.T)
 
 ```
 searchKey: tls.TestCrossVersionResume
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10353,7 +10337,7 @@ func TestCrossVersionResume(t *testing.T)
 
 ```
 searchKey: tls.TestDeadlineOnWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10364,7 +10348,7 @@ func TestDeadlineOnWrite(t *testing.T)
 
 ```
 searchKey: tls.TestDeriveSecret
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10375,7 +10359,7 @@ func TestDeriveSecret(t *testing.T)
 
 ```
 searchKey: tls.TestDialTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10386,7 +10370,7 @@ func TestDialTimeout(t *testing.T)
 
 ```
 searchKey: tls.TestDialer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10399,7 +10383,7 @@ TestDialer tests that tls.Dialer.DialContext can abort in the middle of a handsh
 
 ```
 searchKey: tls.TestDontSelectECDSAWithRSAKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10410,7 +10394,7 @@ func TestDontSelectECDSAWithRSAKey(t *testing.T)
 
 ```
 searchKey: tls.TestDontSelectRSAWithECDSAKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10421,7 +10405,7 @@ func TestDontSelectRSAWithECDSAKey(t *testing.T)
 
 ```
 searchKey: tls.TestDowngradeCanary
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10432,7 +10416,7 @@ func TestDowngradeCanary(t *testing.T)
 
 ```
 searchKey: tls.TestDynamicRecordSizingWithAEAD
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10443,7 +10427,7 @@ func TestDynamicRecordSizingWithAEAD(t *testing.T)
 
 ```
 searchKey: tls.TestDynamicRecordSizingWithCBC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10454,7 +10438,7 @@ func TestDynamicRecordSizingWithCBC(t *testing.T)
 
 ```
 searchKey: tls.TestDynamicRecordSizingWithStreamCipher
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10465,7 +10449,7 @@ func TestDynamicRecordSizingWithStreamCipher(t *testing.T)
 
 ```
 searchKey: tls.TestDynamicRecordSizingWithTLSv13
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10476,7 +10460,7 @@ func TestDynamicRecordSizingWithTLSv13(t *testing.T)
 
 ```
 searchKey: tls.TestExtract
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10487,7 +10471,7 @@ func TestExtract(t *testing.T)
 
 ```
 searchKey: tls.TestFailedWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10498,7 +10482,7 @@ func TestFailedWrite(t *testing.T)
 
 ```
 searchKey: tls.TestFallbackSCSV
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10509,7 +10493,7 @@ func TestFallbackSCSV(t *testing.T)
 
 ```
 searchKey: tls.TestFuzz
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10520,7 +10504,7 @@ func TestFuzz(t *testing.T)
 
 ```
 searchKey: tls.TestGetClientCertificate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10531,7 +10515,7 @@ func TestGetClientCertificate(t *testing.T)
 
 ```
 searchKey: tls.TestGetConfigForClient
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10542,7 +10526,7 @@ func TestGetConfigForClient(t *testing.T)
 
 ```
 searchKey: tls.TestHairpinInClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10553,7 +10537,7 @@ func TestHairpinInClose(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakClientSCTs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10564,7 +10548,7 @@ func TestHandshakClientSCTs(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientAES128CBCSHA256
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10575,7 +10559,7 @@ func TestHandshakeClientAES128CBCSHA256(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientAES128SHA256
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10586,7 +10570,7 @@ func TestHandshakeClientAES128SHA256(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientAES256GCMSHA384
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10597,7 +10581,7 @@ func TestHandshakeClientAES256GCMSHA384(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientAES256SHA384
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10608,7 +10592,7 @@ func TestHandshakeClientAES256SHA384(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientALPNMatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10619,7 +10603,7 @@ func TestHandshakeClientALPNMatch(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientCHACHA20SHA256
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10630,7 +10614,7 @@ func TestHandshakeClientCHACHA20SHA256(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientCertECDSA
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10641,7 +10625,7 @@ func TestHandshakeClientCertECDSA(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientCertRSA
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10652,7 +10636,7 @@ func TestHandshakeClientCertRSA(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientCertRSAPKCS1v15
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10663,7 +10647,7 @@ func TestHandshakeClientCertRSAPKCS1v15(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientCertRSAPSS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10676,7 +10660,7 @@ TestHandshakeClientCertRSAPSS tests rsa_pss_rsae_sha256 signatures from both cli
 
 ```
 searchKey: tls.TestHandshakeClientECDHEECDSAAES
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10687,7 +10671,7 @@ func TestHandshakeClientECDHEECDSAAES(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientECDHEECDSAAES128CBCSHA256
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10698,7 +10682,7 @@ func TestHandshakeClientECDHEECDSAAES128CBCSHA256(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientECDHEECDSAAESGCM
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10709,7 +10693,7 @@ func TestHandshakeClientECDHEECDSAAESGCM(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientECDHEECDSAChaCha20
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10720,7 +10704,7 @@ func TestHandshakeClientECDHEECDSAChaCha20(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientECDHERSAAES
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10731,7 +10715,7 @@ func TestHandshakeClientECDHERSAAES(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientECDHERSAAES128CBCSHA256
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10742,7 +10726,7 @@ func TestHandshakeClientECDHERSAAES128CBCSHA256(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientECDHERSAChaCha20
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10753,7 +10737,7 @@ func TestHandshakeClientECDHERSAChaCha20(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientECDSATLS13
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10764,7 +10748,7 @@ func TestHandshakeClientECDSATLS13(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientEd25519
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10775,7 +10759,7 @@ func TestHandshakeClientEd25519(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientExportKeyingMaterial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10786,7 +10770,7 @@ func TestHandshakeClientExportKeyingMaterial(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientHelloRetryRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10797,7 +10781,7 @@ func TestHandshakeClientHelloRetryRequest(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientP256
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10808,7 +10792,7 @@ func TestHandshakeClientP256(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientRSAAES128GCM
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10819,7 +10803,7 @@ func TestHandshakeClientRSAAES128GCM(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientRSAAES256GCM
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10830,7 +10814,7 @@ func TestHandshakeClientRSAAES256GCM(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientRSARC4
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10841,7 +10825,7 @@ func TestHandshakeClientRSARC4(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeClientX25519
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10852,7 +10836,7 @@ func TestHandshakeClientX25519(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeContextHierarchy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10865,7 +10849,7 @@ TestHandshakeContextHierarchy tests whether the contexts available to GetClientC
 
 ```
 searchKey: tls.TestHandshakeRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10876,7 +10860,7 @@ func TestHandshakeRace(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerAES128SHA256
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10887,7 +10871,7 @@ func TestHandshakeServerAES128SHA256(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerAES256GCMSHA384
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10898,7 +10882,7 @@ func TestHandshakeServerAES256GCMSHA384(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerAES256SHA384
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10909,7 +10893,7 @@ func TestHandshakeServerAES256SHA384(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerAESGCM
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10920,7 +10904,7 @@ func TestHandshakeServerAESGCM(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerALPN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10931,7 +10915,7 @@ func TestHandshakeServerALPN(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerALPNFallback
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10942,7 +10926,7 @@ func TestHandshakeServerALPNFallback(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerALPNNoMatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10953,7 +10937,7 @@ func TestHandshakeServerALPNNoMatch(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerALPNNotConfigured
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10964,7 +10948,7 @@ func TestHandshakeServerALPNNotConfigured(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerCHACHA20SHA256
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10975,7 +10959,7 @@ func TestHandshakeServerCHACHA20SHA256(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerECDHEECDSAAES
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10986,7 +10970,7 @@ func TestHandshakeServerECDHEECDSAAES(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerEd25519
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10997,7 +10981,7 @@ func TestHandshakeServerEd25519(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerEmptyCertificates
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11010,7 +10994,7 @@ TestHandshakeServerEmptyCertificates tests that GetCertificates is called in the
 
 ```
 searchKey: tls.TestHandshakeServerExportKeyingMaterial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11021,7 +11005,7 @@ func TestHandshakeServerExportKeyingMaterial(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerHelloRetryRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11032,7 +11016,7 @@ func TestHandshakeServerHelloRetryRequest(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerP256
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11043,7 +11027,7 @@ func TestHandshakeServerP256(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerRSA3DES
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11054,7 +11038,7 @@ func TestHandshakeServerRSA3DES(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerRSAAES
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11065,7 +11049,7 @@ func TestHandshakeServerRSAAES(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerRSAPKCS1v15
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11076,7 +11060,7 @@ func TestHandshakeServerRSAPKCS1v15(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerRSAPSS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11087,7 +11071,7 @@ func TestHandshakeServerRSAPSS(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerRSARC4
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11098,7 +11082,7 @@ func TestHandshakeServerRSARC4(t *testing.T)
 
 ```
 searchKey: tls.TestHandshakeServerSNI
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11111,7 +11095,7 @@ TestHandshakeServerSNI involves a client sending an SNI extension of "snitest.co
 
 ```
 searchKey: tls.TestHandshakeServerSNIGetCertificate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11124,7 +11108,7 @@ TestHandshakeServerSNICertForName is similar to TestHandshakeServerSNI, but test
 
 ```
 searchKey: tls.TestHandshakeServerSNIGetCertificateError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11137,7 +11121,7 @@ TestHandshakeServerSNICertForNameError tests to make sure that errors in GetCert
 
 ```
 searchKey: tls.TestHandshakeServerSNIGetCertificateNotFound
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11150,7 +11134,7 @@ TestHandshakeServerSNICertForNameNotFound is similar to TestHandshakeServerSNICe
 
 ```
 searchKey: tls.TestHandshakeServerX25519
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11161,7 +11145,7 @@ func TestHandshakeServerX25519(t *testing.T)
 
 ```
 searchKey: tls.TestHostnameInSNI
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11172,7 +11156,7 @@ func TestHostnameInSNI(t *testing.T)
 
 ```
 searchKey: tls.TestKeyLogTLS12
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11183,7 +11167,7 @@ func TestKeyLogTLS12(t *testing.T)
 
 ```
 searchKey: tls.TestKeyLogTLS13
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11194,7 +11178,7 @@ func TestKeyLogTLS13(t *testing.T)
 
 ```
 searchKey: tls.TestKeyTooSmallForRSAPSS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11205,7 +11189,7 @@ func TestKeyTooSmallForRSAPSS(t *testing.T)
 
 ```
 searchKey: tls.TestKeysFromPreMasterSecret
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11216,7 +11200,7 @@ func TestKeysFromPreMasterSecret(t *testing.T)
 
 ```
 searchKey: tls.TestLRUClientSessionCache
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11227,7 +11211,7 @@ func TestLRUClientSessionCache(t *testing.T)
 
 ```
 searchKey: tls.TestLegacyTypeAndHash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11238,7 +11222,7 @@ func TestLegacyTypeAndHash(t *testing.T)
 
 ```
 searchKey: tls.TestLinkerGC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11251,7 +11235,7 @@ Tests that the linker is able to remove references to the Client or Server if un
 
 ```
 searchKey: tls.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11262,7 +11246,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: tls.TestMarshalUnmarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11273,7 +11257,7 @@ func TestMarshalUnmarshal(t *testing.T)
 
 ```
 searchKey: tls.TestMultipleCertificates
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11284,7 +11268,7 @@ func TestMultipleCertificates(t *testing.T)
 
 ```
 searchKey: tls.TestNoCompressionOverlap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11295,7 +11279,7 @@ func TestNoCompressionOverlap(t *testing.T)
 
 ```
 searchKey: tls.TestNoRC4ByDefault
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11306,7 +11290,7 @@ func TestNoRC4ByDefault(t *testing.T)
 
 ```
 searchKey: tls.TestNoSuiteOverlap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11317,7 +11301,7 @@ func TestNoSuiteOverlap(t *testing.T)
 
 ```
 searchKey: tls.TestPKCS1OnlyCert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11330,7 +11314,7 @@ TestPKCS1OnlyCert uses a client certificate with a broken crypto.Signer that alw
 
 ```
 searchKey: tls.TestRSAPSSKeyError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11341,7 +11325,7 @@ func TestRSAPSSKeyError(t *testing.T)
 
 ```
 searchKey: tls.TestRejectBadProtocolVersion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11352,7 +11336,7 @@ func TestRejectBadProtocolVersion(t *testing.T)
 
 ```
 searchKey: tls.TestRejectEmptySCT
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11363,7 +11347,7 @@ func TestRejectEmptySCT(t *testing.T)
 
 ```
 searchKey: tls.TestRejectEmptySCTList
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11374,7 +11358,7 @@ func TestRejectEmptySCTList(t *testing.T)
 
 ```
 searchKey: tls.TestRejectSNIWithTrailingDot
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11385,7 +11369,7 @@ func TestRejectSNIWithTrailingDot(t *testing.T)
 
 ```
 searchKey: tls.TestRemovePadding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11396,7 +11380,7 @@ func TestRemovePadding(t *testing.T)
 
 ```
 searchKey: tls.TestRenegotiateOnce
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11407,7 +11391,7 @@ func TestRenegotiateOnce(t *testing.T)
 
 ```
 searchKey: tls.TestRenegotiateTwice
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11418,7 +11402,7 @@ func TestRenegotiateTwice(t *testing.T)
 
 ```
 searchKey: tls.TestRenegotiateTwiceRejected
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11429,7 +11413,7 @@ func TestRenegotiateTwiceRejected(t *testing.T)
 
 ```
 searchKey: tls.TestRenegotiationExtension
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11440,7 +11424,7 @@ func TestRenegotiationExtension(t *testing.T)
 
 ```
 searchKey: tls.TestRenegotiationRejected
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11451,7 +11435,7 @@ func TestRenegotiationRejected(t *testing.T)
 
 ```
 searchKey: tls.TestResumption
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11462,7 +11446,7 @@ func TestResumption(t *testing.T)
 
 ```
 searchKey: tls.TestResumptionKeepsOCSPAndSCT
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11473,7 +11457,7 @@ func TestResumptionKeepsOCSPAndSCT(t *testing.T)
 
 ```
 searchKey: tls.TestRoundUp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11484,7 +11468,7 @@ func TestRoundUp(t *testing.T)
 
 ```
 searchKey: tls.TestSCTHandshake
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11495,7 +11479,7 @@ func TestSCTHandshake(t *testing.T)
 
 ```
 searchKey: tls.TestSNIGivenOnFailure
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11506,7 +11490,7 @@ func TestSNIGivenOnFailure(t *testing.T)
 
 ```
 searchKey: tls.TestServerHandshakeContextCancellation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11519,7 +11503,7 @@ TestServerHandshakeContextCancellation tests that cancelling the context given t
 
 ```
 searchKey: tls.TestServerResumption
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11530,7 +11514,7 @@ func TestServerResumption(t *testing.T)
 
 ```
 searchKey: tls.TestServerResumptionDisabled
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11541,7 +11525,7 @@ func TestServerResumptionDisabled(t *testing.T)
 
 ```
 searchKey: tls.TestServerSelectingUnconfiguredApplicationProtocol
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11552,7 +11536,7 @@ func TestServerSelectingUnconfiguredApplicationProtocol(t *testing.T)
 
 ```
 searchKey: tls.TestServerSelectingUnconfiguredCipherSuite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11563,7 +11547,7 @@ func TestServerSelectingUnconfiguredCipherSuite(t *testing.T)
 
 ```
 searchKey: tls.TestSignatureSelection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11574,7 +11558,7 @@ func TestSignatureSelection(t *testing.T)
 
 ```
 searchKey: tls.TestSimpleError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11585,7 +11569,7 @@ func TestSimpleError(t *testing.T)
 
 ```
 searchKey: tls.TestSplitPreMasterSecret
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11596,7 +11580,7 @@ func TestSplitPreMasterSecret(t *testing.T)
 
 ```
 searchKey: tls.TestSupportedSignatureAlgorithms
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11609,7 +11593,7 @@ TestSupportedSignatureAlgorithms checks that all supportedSignatureAlgorithms ha
 
 ```
 searchKey: tls.TestTLS12OnlyCipherSuites
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11620,7 +11604,7 @@ func TestTLS12OnlyCipherSuites(t *testing.T)
 
 ```
 searchKey: tls.TestTLSPointFormats
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11631,7 +11615,7 @@ func TestTLSPointFormats(t *testing.T)
 
 ```
 searchKey: tls.TestTLSUniqueMatches
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11642,7 +11626,7 @@ func TestTLSUniqueMatches(t *testing.T)
 
 ```
 searchKey: tls.TestTrafficKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11653,7 +11637,7 @@ func TestTrafficKey(t *testing.T)
 
 ```
 searchKey: tls.TestVerifyConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11664,7 +11648,7 @@ func TestVerifyConnection(t *testing.T)
 
 ```
 searchKey: tls.TestVerifyHostname
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11675,7 +11659,7 @@ func TestVerifyHostname(t *testing.T)
 
 ```
 searchKey: tls.TestVerifyPeerCertificate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11686,7 +11670,7 @@ func TestVerifyPeerCertificate(t *testing.T)
 
 ```
 searchKey: tls.TestVersion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11697,7 +11681,7 @@ func TestVersion(t *testing.T)
 
 ```
 searchKey: tls.TestWarningAlertFlood
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11708,7 +11692,7 @@ func TestWarningAlertFlood(t *testing.T)
 
 ```
 searchKey: tls.TestX509KeyPair
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11719,7 +11703,7 @@ func TestX509KeyPair(t *testing.T)
 
 ```
 searchKey: tls.TestX509KeyPairErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11730,7 +11714,7 @@ func TestX509KeyPairErrors(t *testing.T)
 
 ```
 searchKey: tls.TestX509MixedKeyPair
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11741,7 +11725,7 @@ func TestX509MixedKeyPair(t *testing.T)
 
 ```
 searchKey: tls.addBytesWithLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11754,7 +11738,7 @@ addBytesWithLength appends a sequence of bytes to the cryptobyte.Builder. If the
 
 ```
 searchKey: tls.addUint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11767,7 +11751,7 @@ addUint64 appends a big-endian, 64-bit value to the cryptobyte.Builder.
 
 ```
 searchKey: tls.aesgcmPreferred
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11791,7 +11775,7 @@ func allCipherSuites() []uint16
 
 ```
 searchKey: tls.benchmarkHandshakeServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11802,7 +11786,7 @@ func benchmarkHandshakeServer(b *testing.B, version uint16, cipherSuite uint16, 
 
 ```
 searchKey: tls.checkALPN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11828,7 +11812,7 @@ checkOpenSSLVersion ensures that the version of OpenSSL looks reasonable before 
 
 ```
 searchKey: tls.cipher3DES
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11839,7 +11823,7 @@ func cipher3DES(key, iv []byte, isRead bool) interface{}
 
 ```
 searchKey: tls.cipherAES
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11850,7 +11834,7 @@ func cipherAES(key, iv []byte, isRead bool) interface{}
 
 ```
 searchKey: tls.cipherRC4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11861,7 +11845,7 @@ func cipherRC4(key, iv []byte, isRead bool) interface{}
 
 ```
 searchKey: tls.clientSessionCacheKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11874,7 +11858,7 @@ clientSessionCacheKey returns a key used to cache sessionTickets that could be u
 
 ```
 searchKey: tls.cloneHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11887,7 +11871,7 @@ cloneHash uses the encoding.BinaryMarshaler and encoding.BinaryUnmarshaler inter
 
 ```
 searchKey: tls.curveForCurveID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11898,7 +11882,7 @@ func curveForCurveID(id CurveID) (elliptic.Curve, bool)
 
 ```
 searchKey: tls.ekmFromMasterSecret
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11911,7 +11895,7 @@ ekmFromMasterSecret generates exported keying material as defined in RFC 5705.
 
 ```
 searchKey: tls.expectError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11922,7 +11906,7 @@ func expectError(t *testing.T, err error, sub string)
 
 ```
 searchKey: tls.extractPadding
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11935,7 +11919,7 @@ extractPadding returns, in constant time, the length of the padding to remove fr
 
 ```
 searchKey: tls.fromHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11946,7 +11930,7 @@ func fromHex(s string) []byte
 
 ```
 searchKey: tls.hashForServerKeyExchange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11959,7 +11943,7 @@ hashForServerKeyExchange hashes the given slices and returns their digest using 
 
 ```
 searchKey: tls.hostnameInSNI
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11972,7 +11956,7 @@ hostnameInSNI converts name into an appropriate hostname for SNI. Literal IP add
 
 ```
 searchKey: tls.http2isBadCipher
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11985,7 +11969,7 @@ http2isBadCipher is copied from net/http. TODO: if it ends up exposed somewhere,
 
 ```
 searchKey: tls.illegalClientHelloChange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12009,7 +11993,7 @@ func init()
 
 ```
 searchKey: tls.isSupportedSignatureAlgorithm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12020,7 +12004,7 @@ func isSupportedSignatureAlgorithm(sigAlg SignatureScheme, supportedSignatureAlg
 
 ```
 searchKey: tls.isTimeoutError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12031,7 +12015,7 @@ func isTimeoutError(err error) bool
 
 ```
 searchKey: tls.keysFromMasterSecret
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12044,7 +12028,7 @@ keysFromMasterSecret generates the connection keys from the master secret, given
 
 ```
 searchKey: tls.latency
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12055,7 +12039,7 @@ func latency(b *testing.B, version uint16, bps int, dynamicRecordSizingDisabled 
 
 ```
 searchKey: tls.legacyTypeAndHashFromPublicKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12068,7 +12052,7 @@ legacyTypeAndHashFromPublicKey returns the fixed signature type and crypto.Hash 
 
 ```
 searchKey: tls.localPipe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12079,7 +12063,7 @@ func localPipe(t testing.TB) (net.Conn, net.Conn)
 
 ```
 searchKey: tls.localServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12090,7 +12074,7 @@ func localServer(l net.Listener)
 
 ```
 searchKey: tls.macSHA1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12103,7 +12087,7 @@ macSHA1 returns a SHA-1 based constant time MAC.
 
 ```
 searchKey: tls.macSHA256
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12116,7 +12100,7 @@ macSHA256 returns a SHA-256 based MAC. This is only supported in TLS 1.2 and is 
 
 ```
 searchKey: tls.marshalCertificate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12127,7 +12111,7 @@ func marshalCertificate(b *cryptobyte.Builder, certificate Certificate)
 
 ```
 searchKey: tls.masterFromPreMasterSecret
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12140,7 +12124,7 @@ masterFromPreMasterSecret generates the master secret from the pre-master secret
 
 ```
 searchKey: tls.md5SHA1Hash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12153,7 +12137,7 @@ md5SHA1Hash implements TLS 1.0's hybrid hash function which consists of the conc
 
 ```
 searchKey: tls.negotiateALPN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12166,7 +12150,7 @@ negotiateALPN picks a shared ALPN protocol that both sides support in server pre
 
 ```
 searchKey: tls.newConstantTimeHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12177,7 +12161,7 @@ func newConstantTimeHash(h func() hash.Hash) func() hash.Hash
 
 ```
 searchKey: tls.newLocalListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12188,7 +12172,7 @@ func newLocalListener(t testing.TB) net.Listener
 
 ```
 searchKey: tls.noExportedKeyingMaterial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12201,7 +12185,7 @@ noExportedKeyingMaterial is used as a value of ConnectionState.ekm when renegoti
 
 ```
 searchKey: tls.pHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12214,7 +12198,7 @@ pHash implements the P_hash function, as defined in RFC 4346, Section 5.
 
 ```
 searchKey: tls.parsePrivateKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12227,7 +12211,7 @@ Attempt to parse the given private key DER block. OpenSSL 0.9.8 generates PKCS #
 
 ```
 searchKey: tls.parseTestData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12238,7 +12222,7 @@ func parseTestData(r io.Reader) (flows [][]byte, err error)
 
 ```
 searchKey: tls.parseVector
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12249,7 +12233,7 @@ func parseVector(v string) []byte
 
 ```
 searchKey: tls.peekError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12262,7 +12246,7 @@ peekError does a read with a short timeout to check if the next read would cause
 
 ```
 searchKey: tls.prf10
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12275,7 +12259,7 @@ prf10 implements the TLS 1.0 pseudo-random function, as defined in RFC 2246, Sec
 
 ```
 searchKey: tls.prf12
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12288,7 +12272,7 @@ prf12 implements the TLS 1.2 pseudo-random function, as defined in RFC 5246, Sec
 
 ```
 searchKey: tls.prfAndHashForVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12299,7 +12283,7 @@ func prfAndHashForVersion(version uint16, suite *cipherSuite) (func(result, secr
 
 ```
 searchKey: tls.prfForVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12310,7 +12294,7 @@ func prfForVersion(version uint16, suite *cipherSuite) func(result, secret, labe
 
 ```
 searchKey: tls.randomBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12321,7 +12305,7 @@ func randomBytes(n int, rand *rand.Rand) []byte
 
 ```
 searchKey: tls.randomString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12332,7 +12316,7 @@ func randomString(n int, rand *rand.Rand) string
 
 ```
 searchKey: tls.readUint16LengthPrefixed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12345,7 +12329,7 @@ readUint16LengthPrefixed acts like s.ReadUint16LengthPrefixed, but targets a []b
 
 ```
 searchKey: tls.readUint24LengthPrefixed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12358,7 +12342,7 @@ readUint24LengthPrefixed acts like s.ReadUint24LengthPrefixed, but targets a []b
 
 ```
 searchKey: tls.readUint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12371,7 +12355,7 @@ readUint64 decodes a big-endian, 64-bit value into out and advances over it. It 
 
 ```
 searchKey: tls.readUint8LengthPrefixed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12384,7 +12368,7 @@ readUint8LengthPrefixed acts like s.ReadUint8LengthPrefixed, but targets a []byt
 
 ```
 searchKey: tls.requiresClientCert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12397,7 +12381,7 @@ requiresClientCert reports whether the ClientAuthType requires a client certific
 
 ```
 searchKey: tls.roundUp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12408,7 +12392,7 @@ func roundUp(a, b int) int
 
 ```
 searchKey: tls.runClientTestForVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12419,7 +12403,7 @@ func runClientTestForVersion(t *testing.T, template *clientTest, version, option
 
 ```
 searchKey: tls.runClientTestTLS10
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12430,7 +12414,7 @@ func runClientTestTLS10(t *testing.T, template *clientTest)
 
 ```
 searchKey: tls.runClientTestTLS11
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12441,7 +12425,7 @@ func runClientTestTLS11(t *testing.T, template *clientTest)
 
 ```
 searchKey: tls.runClientTestTLS12
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12452,7 +12436,7 @@ func runClientTestTLS12(t *testing.T, template *clientTest)
 
 ```
 searchKey: tls.runClientTestTLS13
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12463,7 +12447,7 @@ func runClientTestTLS13(t *testing.T, template *clientTest)
 
 ```
 searchKey: tls.runDynamicRecordSizingTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12476,7 +12460,7 @@ Run with multiple crypto configs to test the logic for computing TLS record over
 
 ```
 searchKey: tls.runMain
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12487,7 +12471,7 @@ func runMain(m *testing.M) int
 
 ```
 searchKey: tls.runServerTestForVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12498,7 +12482,7 @@ func runServerTestForVersion(t *testing.T, template *serverTest, version, option
 
 ```
 searchKey: tls.runServerTestTLS10
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12509,7 +12493,7 @@ func runServerTestTLS10(t *testing.T, template *serverTest)
 
 ```
 searchKey: tls.runServerTestTLS11
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12520,7 +12504,7 @@ func runServerTestTLS11(t *testing.T, template *serverTest)
 
 ```
 searchKey: tls.runServerTestTLS12
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12531,7 +12515,7 @@ func runServerTestTLS12(t *testing.T, template *serverTest)
 
 ```
 searchKey: tls.runServerTestTLS13
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12542,7 +12526,7 @@ func runServerTestTLS13(t *testing.T, template *serverTest)
 
 ```
 searchKey: tls.runTestAndUpdateIfNeeded
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12553,7 +12537,7 @@ func runTestAndUpdateIfNeeded(t *testing.T, name string, run func(t *testing.T, 
 
 ```
 searchKey: tls.sha1Hash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12566,7 +12550,7 @@ sha1Hash calculates a SHA1 hash over the given byte slices.
 
 ```
 searchKey: tls.signatureSchemesForCertificate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12581,7 +12565,7 @@ This function must be kept in sync with supportedSignatureAlgorithms.
 
 ```
 searchKey: tls.signedMessage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12594,7 +12578,7 @@ signedMessage returns the pre-hashed (if necessary) message to be signed by cert
 
 ```
 searchKey: tls.sliceForAppend
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12607,7 +12591,7 @@ sliceForAppend extends the input slice by n bytes. head is the full extended sli
 
 ```
 searchKey: tls.splitPreMasterSecret
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12620,7 +12604,7 @@ Split a premaster secret in two as specified in RFC 4346, Section 5.
 
 ```
 searchKey: tls.supportedVersionsFromMax
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12633,7 +12617,7 @@ supportedVersionsFromMax returns a list of supported versions derived from a leg
 
 ```
 searchKey: tls.supportsECDHE
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12646,7 +12630,7 @@ supportsECDHE returns whether ECDHE key exchanges can be used with this pre-TLS 
 
 ```
 searchKey: tls.tempFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12659,7 +12643,7 @@ tempFile creates a temp file containing contents and returns its path.
 
 ```
 searchKey: tls.testBuffering
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12670,7 +12654,7 @@ func testBuffering(t *testing.T, version uint16)
 
 ```
 searchKey: tls.testClientHello
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12681,7 +12665,7 @@ func testClientHello(t *testing.T, serverConfig *Config, m handshakeMessage)
 
 ```
 searchKey: tls.testClientHelloFailure
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12692,7 +12676,7 @@ func testClientHelloFailure(t *testing.T, serverConfig *Config, m handshakeMessa
 
 ```
 searchKey: tls.testConnReadNonzeroAndEOF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12703,7 +12687,7 @@ func testConnReadNonzeroAndEOF(t *testing.T, delay time.Duration) error
 
 ```
 searchKey: tls.testCrossVersionResume
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12714,7 +12698,7 @@ func testCrossVersionResume(t *testing.T, version uint16)
 
 ```
 searchKey: tls.testDowngradeCanary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12725,7 +12709,7 @@ func testDowngradeCanary(t *testing.T, clientVersion, serverVersion uint16) erro
 
 ```
 searchKey: tls.testGetClientCertificate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12736,7 +12720,7 @@ func testGetClientCertificate(t *testing.T, version uint16)
 
 ```
 searchKey: tls.testResumption
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12747,7 +12731,7 @@ func testResumption(t *testing.T, version uint16)
 
 ```
 searchKey: tls.testResumptionKeepsOCSPAndSCT
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12758,7 +12742,7 @@ func testResumptionKeepsOCSPAndSCT(t *testing.T, ver uint16)
 
 ```
 searchKey: tls.testSCTHandshake
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12769,7 +12753,7 @@ func testSCTHandshake(t *testing.T, version uint16)
 
 ```
 searchKey: tls.testVerifyConnection
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12780,7 +12764,7 @@ func testVerifyConnection(t *testing.T, version uint16)
 
 ```
 searchKey: tls.testVerifyPeerCertificate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12791,7 +12775,7 @@ func testVerifyPeerCertificate(t *testing.T, version uint16)
 
 ```
 searchKey: tls.testingKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12802,7 +12786,7 @@ func testingKey(s string) string
 
 ```
 searchKey: tls.throughput
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12813,7 +12797,7 @@ func throughput(b *testing.B, version uint16, totalBytes int64, dynamicRecordSiz
 
 ```
 searchKey: tls.tls10MAC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12826,7 +12810,7 @@ tls10MAC implements the TLS 1.0 MAC function. RFC 2246, Section 6.2.3.
 
 ```
 searchKey: tls.typeAndHashFromSignatureScheme
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12839,7 +12823,7 @@ typeAndHashFromSignatureScheme returns the corresponding signature type and cryp
 
 ```
 searchKey: tls.unexpectedMessageError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12850,7 +12834,7 @@ func unexpectedMessageError(wanted, got interface{}) error
 
 ```
 searchKey: tls.unmarshalCertificate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12861,7 +12845,7 @@ func unmarshalCertificate(s *cryptobyte.String, certificate *Certificate) bool
 
 ```
 searchKey: tls.unsupportedCertificateError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12874,7 +12858,7 @@ unsupportedCertificateError returns a helpful error for certificates with an uns
 
 ```
 searchKey: tls.verifyHandshakeSignature
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

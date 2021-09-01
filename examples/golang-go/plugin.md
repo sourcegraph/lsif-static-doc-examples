@@ -31,10 +31,6 @@ Currently plugins are only supported on Linux, FreeBSD, and macOS. Please report
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="plugins" href="#plugins">var plugins</a>
 
 ```
@@ -59,10 +55,6 @@ var pluginsMu sync.Mutex
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Plugin" href="#Plugin">type Plugin struct</a>
 
 ```
@@ -85,7 +77,7 @@ Plugin is a loaded Go plugin.
 
 ```
 searchKey: plugin.Open
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -98,7 +90,7 @@ Open opens a Go plugin. If a path has already been opened, then the existing *Pl
 
 ```
 searchKey: plugin.open
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -166,7 +158,7 @@ f.(func())() // prints "Hello, number 7"
 
 ```
 searchKey: plugin.lookup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -175,15 +167,11 @@ func lookup(p *Plugin, symName string) (Symbol, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="doInit" href="#doInit">func doInit(t unsafe.Pointer)</a>
 
 ```
 searchKey: plugin.doInit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

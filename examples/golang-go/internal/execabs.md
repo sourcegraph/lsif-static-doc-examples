@@ -24,7 +24,7 @@ Package execabs is a drop-in replacement for os/exec that requires PATH lookups 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrNotFound" href="#ErrNotFound">var ErrNotFound</a>
@@ -41,7 +41,7 @@ var ErrNotFound = exec.ErrNotFound
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Cmd" href="#Cmd">type Cmd exec.Cmd</a>
@@ -59,7 +59,7 @@ type Cmd = exec.Cmd
 
 ```
 searchKey: execabs.Command
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -70,7 +70,7 @@ func Command(name string, arg ...string) *exec.Cmd
 
 ```
 searchKey: execabs.CommandContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -102,14 +102,14 @@ type ExitError = exec.ExitError
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="LookPath" href="#LookPath">func LookPath(file string) (string, error)</a>
 
 ```
 searchKey: execabs.LookPath
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -120,7 +120,7 @@ func LookPath(file string) (string, error)
 
 ```
 searchKey: execabs.TestCommand
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -131,7 +131,7 @@ func TestCommand(t *testing.T)
 
 ```
 searchKey: execabs.TestFixCmd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -142,7 +142,7 @@ func TestFixCmd(t *testing.T)
 
 ```
 searchKey: execabs.TestLookPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -153,7 +153,7 @@ func TestLookPath(t *testing.T)
 
 ```
 searchKey: execabs.fixCmd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -164,7 +164,7 @@ func fixCmd(name string, cmd *exec.Cmd)
 
 ```
 searchKey: execabs.relError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

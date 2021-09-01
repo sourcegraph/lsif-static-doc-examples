@@ -24,9 +24,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -527,9 +525,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -568,7 +564,7 @@
                       "newPage": false,
                       "searchKey": "cgo.NewHandle",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -590,7 +586,7 @@
                       "newPage": false,
                       "searchKey": "cgo.Handle.Delete",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -612,7 +608,7 @@
                       "newPage": false,
                       "searchKey": "cgo.Handle.Value",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -639,9 +635,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -660,7 +654,7 @@
                 "newPage": false,
                 "searchKey": "cgo.BenchmarkHandle",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -684,7 +678,7 @@
                 "newPage": false,
                 "searchKey": "cgo.TestHandle",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -708,7 +702,7 @@
                 "newPage": false,
                 "searchKey": "cgo.TestInvalidHandle",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -732,7 +726,7 @@
                 "newPage": false,
                 "searchKey": "cgo._cgo_panic",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -755,7 +749,7 @@
                 "newPage": false,
                 "searchKey": "cgo._runtime_cgo_panic_internal",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

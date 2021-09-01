@@ -66,7 +66,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="priorityHigh" href="#priorityHigh">const priorityHigh</a>
@@ -94,7 +94,7 @@ const priorityNormal priority = iota
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="maxSyncDelay" href="#maxSyncDelay">var maxSyncDelay</a>
@@ -133,7 +133,7 @@ var syncerMetrics = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockSyncStore" href="#MockSyncStore">type MockSyncStore struct</a>
@@ -160,7 +160,7 @@ type MockSyncStore struct {
 
 ```
 searchKey: syncer.MockSyncStore.Clock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -171,7 +171,7 @@ func (m MockSyncStore) Clock() func() time.Time
 
 ```
 searchKey: syncer.MockSyncStore.DB
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -182,7 +182,7 @@ func (m MockSyncStore) DB() dbutil.DB
 
 ```
 searchKey: syncer.MockSyncStore.ExternalServices
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -248,7 +248,7 @@ func (m MockSyncStore) ListCodeHosts(ctx context.Context, opts store.ListCodeHos
 
 ```
 searchKey: syncer.MockSyncStore.Repos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -292,7 +292,7 @@ func (m MockSyncStore) UpsertChangesetEvents(ctx context.Context, cs ...*btypes.
 
 ```
 searchKey: syncer.MockSyncStore.UserCredentials
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -327,7 +327,7 @@ SyncRegistry manages a changesetSyncer per code host
 
 ```
 searchKey: syncer.NewSyncRegistry
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -379,7 +379,7 @@ HandleExternalServiceSync handles changes to external services.
 
 ```
 searchKey: syncer.SyncRegistry.handlePriorityItems
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -472,7 +472,7 @@ Get fetches the item with the supplied id without removing it.
 
 ```
 searchKey: syncer.changesetPriorityQueue.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -494,7 +494,7 @@ func (pq *changesetPriorityQueue) Less(i, j int) bool
 
 ```
 searchKey: syncer.changesetPriorityQueue.Peek
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -507,7 +507,7 @@ Peek fetches the highest priority item without removing it.
 
 ```
 searchKey: syncer.changesetPriorityQueue.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -661,14 +661,14 @@ type scheduledSync struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NextSync" href="#NextSync">func NextSync(clock func() time.Time, h *btypes.ChangesetSyncData) time.Time</a>
 
 ```
 searchKey: syncer.NextSync
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -681,7 +681,7 @@ NextSync computes the time we want the next sync to happen.
 
 ```
 searchKey: syncer.SyncChangeset
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -694,7 +694,7 @@ SyncChangeset refreshes the metadata of the given changeset and updates them in 
 
 ```
 searchKey: syncer.TestChangesetPriorityQueue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -705,7 +705,7 @@ func TestChangesetPriorityQueue(t *testing.T)
 
 ```
 searchKey: syncer.TestLoadChangesetSource
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -716,7 +716,7 @@ func TestLoadChangesetSource(t *testing.T)
 
 ```
 searchKey: syncer.TestNextSync
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -727,7 +727,7 @@ func TestNextSync(t *testing.T)
 
 ```
 searchKey: syncer.TestSyncRegistry
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -738,7 +738,7 @@ func TestSyncRegistry(t *testing.T)
 
 ```
 searchKey: syncer.TestSyncerRun
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -749,7 +749,7 @@ func TestSyncerRun(t *testing.T)
 
 ```
 searchKey: syncer.absDuration
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -771,7 +771,7 @@ func init()
 
 ```
 searchKey: syncer.loadChangesetSource
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -782,7 +782,7 @@ func loadChangesetSource(ctx context.Context, cf *httpcli.Factory, syncStore Syn
 
 ```
 searchKey: syncer.maxTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

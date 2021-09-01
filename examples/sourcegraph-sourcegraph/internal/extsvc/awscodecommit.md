@@ -40,7 +40,7 @@ Package awscodecommit implements an AWS CodeCommit API client.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MaxMetadataBatch" href="#MaxMetadataBatch">const MaxMetadataBatch</a>
@@ -59,7 +59,7 @@ We can only fetch the metadata in batches of 25 as documented here: [https://doc
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrNotFound" href="#ErrNotFound">var ErrNotFound</a>
@@ -102,7 +102,7 @@ var reposCacheCounter = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
@@ -125,7 +125,7 @@ Client is a AWS CodeCommit API client.
 
 ```
 searchKey: awscodecommit.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -272,7 +272,7 @@ Repository is an AWS CodeCommit repository.
 
 ```
 searchKey: awscodecommit.fromRepoMetadata
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -313,7 +313,7 @@ type wrappedError struct {
 
 ```
 searchKey: awscodecommit.wrappedError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -324,7 +324,7 @@ func (w *wrappedError) Error() string
 
 ```
 searchKey: awscodecommit.wrappedError.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -335,7 +335,7 @@ func (w *wrappedError) NotFound() bool
 
 ```
 searchKey: awscodecommit.wrappedError.Unauthorized
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -345,14 +345,14 @@ func (w *wrappedError) Unauthorized() bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExternalRepoSpec" href="#ExternalRepoSpec">func ExternalRepoSpec(repo *Repository, serviceID string) api.ExternalRepoSpec</a>
 
 ```
 searchKey: awscodecommit.ExternalRepoSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -365,7 +365,7 @@ ExternalRepoSpec returns an api.ExternalRepoSpec that refers to the specified AW
 
 ```
 searchKey: awscodecommit.IsNotFound
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -378,7 +378,7 @@ IsNotFound reports whether err is a AWS CodeCommit API not-found error or the eq
 
 ```
 searchKey: awscodecommit.IsUnauthorized
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -391,7 +391,7 @@ IsUnauthorized reports whether err is a AWS CodeCommit API unauthorized error.
 
 ```
 searchKey: awscodecommit.MockGetRepository_Return
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -404,7 +404,7 @@ MockGetRepository_Return is called by tests to mock (*Client).GetRepository.
 
 ```
 searchKey: awscodecommit.ServiceID
-tags: [method]
+tags: [function]
 ```
 
 ```Go

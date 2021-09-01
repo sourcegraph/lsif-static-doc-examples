@@ -53,7 +53,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrApplyClosedBatchChange" href="#ErrApplyClosedBatchChange">var ErrApplyClosedBatchChange</a>
@@ -135,7 +135,7 @@ var Mocks = ServiceMocks{}
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ApplyBatchChangeOpts" href="#ApplyBatchChangeOpts">type ApplyBatchChangeOpts struct</a>
@@ -160,7 +160,7 @@ type ApplyBatchChangeOpts struct {
 
 ```
 searchKey: service.ApplyBatchChangeOpts.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -207,7 +207,7 @@ type MoveBatchChangeOpts struct {
 
 ```
 searchKey: service.MoveBatchChangeOpts.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -235,7 +235,7 @@ type Service struct {
 
 ```
 searchKey: service.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -248,7 +248,7 @@ New returns a Service.
 
 ```
 searchKey: service.NewWithClock
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -473,7 +473,7 @@ type ServiceMocks struct {
 
 ```
 searchKey: service.ServiceMocks.Reset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -499,7 +499,7 @@ changesetSpecNotFoundErr is returned by CreateBatchSpec if a ChangesetSpec with 
 
 ```
 searchKey: service.changesetSpecNotFoundErr.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -510,7 +510,7 @@ func (e *changesetSpecNotFoundErr) Error() string
 
 ```
 searchKey: service.changesetSpecNotFoundErr.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -538,14 +538,14 @@ A usernameSource can fetch the username associated with the credentials used by 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestService" href="#TestService">func TestService(t *testing.T)</a>
 
 ```
 searchKey: service.TestService
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -556,7 +556,7 @@ func TestService(t *testing.T)
 
 ```
 searchKey: service.TestServiceApplyBatchChange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -567,7 +567,7 @@ func TestServiceApplyBatchChange(t *testing.T)
 
 ```
 searchKey: service.TestServicePermissionLevels
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -578,7 +578,7 @@ func TestServicePermissionLevels(t *testing.T)
 
 ```
 searchKey: service.applyAndListChangesets
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -589,7 +589,7 @@ func applyAndListChangesets(ctx context.Context, t *testing.T, svc *Service, bat
 
 ```
 searchKey: service.checkNamespaceAccess
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -602,7 +602,7 @@ checkNamespaceAccess checks whether the current user in the ctx has access to ei
 
 ```
 searchKey: service.testBatchChange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -613,7 +613,7 @@ func testBatchChange(user int32, spec *btypes.BatchSpec) *btypes.BatchChange
 
 ```
 searchKey: service.testBatchSpec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -624,7 +624,7 @@ func testBatchSpec(user int32) *btypes.BatchSpec
 
 ```
 searchKey: service.testChangeset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

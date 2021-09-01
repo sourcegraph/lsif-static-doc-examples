@@ -13,7 +13,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="gopher" href="#gopher">const gopher</a>
@@ -30,7 +30,7 @@ const gopher = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleDecode" href="#ExampleDecode">func ExampleDecode()</a>

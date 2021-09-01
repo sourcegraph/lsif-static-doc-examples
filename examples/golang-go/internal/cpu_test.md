@@ -19,14 +19,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MustHaveDebugOptionsSupport" href="#MustHaveDebugOptionsSupport">func MustHaveDebugOptionsSupport(t *testing.T)</a>
 
 ```
 searchKey: cpu_test.MustHaveDebugOptionsSupport
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37,7 +37,7 @@ func MustHaveDebugOptionsSupport(t *testing.T)
 
 ```
 searchKey: cpu_test.MustSupportFeatureDectection
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48,7 +48,7 @@ func MustSupportFeatureDectection(t *testing.T)
 
 ```
 searchKey: cpu_test.TestAllCapabilitiesDisabled
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -59,7 +59,7 @@ func TestAllCapabilitiesDisabled(t *testing.T)
 
 ```
 searchKey: cpu_test.TestDisableAllCapabilities
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -70,7 +70,7 @@ func TestDisableAllCapabilities(t *testing.T)
 
 ```
 searchKey: cpu_test.TestDisableSSE2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -81,7 +81,7 @@ func TestDisableSSE2(t *testing.T)
 
 ```
 searchKey: cpu_test.TestDisableSSE3
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -92,7 +92,7 @@ func TestDisableSSE3(t *testing.T)
 
 ```
 searchKey: cpu_test.TestMinimalFeatures
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -103,7 +103,7 @@ func TestMinimalFeatures(t *testing.T)
 
 ```
 searchKey: cpu_test.TestSSE2DebugOption
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -114,7 +114,7 @@ func TestSSE2DebugOption(t *testing.T)
 
 ```
 searchKey: cpu_test.TestSSE3DebugOption
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -125,7 +125,7 @@ func TestSSE3DebugOption(t *testing.T)
 
 ```
 searchKey: cpu_test.TestX86ifAVX2hasAVX
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -136,7 +136,7 @@ func TestX86ifAVX2hasAVX(t *testing.T)
 
 ```
 searchKey: cpu_test.runDebugOptionsTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

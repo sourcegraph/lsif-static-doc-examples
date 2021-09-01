@@ -22,7 +22,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="P" href="#P">type P struct</a>
@@ -56,7 +56,7 @@ type Point struct {
 
 ```
 searchKey: gob_test.Point.Hypotenuse
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -80,7 +80,7 @@ type Pythagoras interface {
 
 ```
 searchKey: gob_test.interfaceDecode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -122,7 +122,7 @@ The Vector type has unexported fields, which the package cannot access. We there
 
 ```
 searchKey: gob_test.Vector.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -145,7 +145,7 @@ UnmarshalBinary modifies the receiver so it must take a pointer receiver.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Example_basic" href="#Example_basic">func Example_basic()</a>
@@ -191,7 +191,7 @@ This example shows how to encode an interface value. The key distinction from re
 
 ```
 searchKey: gob_test.interfaceEncode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -363,10 +363,6 @@ Package parse builds parse trees for templates as defined by text/template and h
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="NodeAction" href="#NodeAction">const NodeAction</a>
 
 ```
@@ -1161,10 +1157,6 @@ Trimming spaces. If the action begins "{{- " rather than "{{", then all space/ta
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="builtins" href="#builtins">var builtins</a>
 
 ```
@@ -1530,10 +1522,6 @@ var textFormat = "%s" // Changed to "%q" in tests for better error messages.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ActionNode" href="#ActionNode">type ActionNode struct</a>
 
 ```
@@ -1557,7 +1545,7 @@ ActionNode holds an action (something bounded by delimiters). Control actions ha
 
 ```
 searchKey: parse.ActionNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1568,7 +1556,7 @@ func (a *ActionNode) Copy() Node
 
 ```
 searchKey: parse.ActionNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1579,7 +1567,7 @@ func (a *ActionNode) String() string
 
 ```
 searchKey: parse.ActionNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1619,7 +1607,7 @@ BoolNode holds a boolean constant.
 
 ```
 searchKey: parse.BoolNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1630,7 +1618,7 @@ func (b *BoolNode) Copy() Node
 
 ```
 searchKey: parse.BoolNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1641,7 +1629,7 @@ func (b *BoolNode) String() string
 
 ```
 searchKey: parse.BoolNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1684,7 +1672,7 @@ BranchNode is the common representation of if, range, and with.
 
 ```
 searchKey: parse.BranchNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1695,7 +1683,7 @@ func (b *BranchNode) Copy() Node
 
 ```
 searchKey: parse.BranchNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1706,7 +1694,7 @@ func (b *BranchNode) String() string
 
 ```
 searchKey: parse.BranchNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1760,7 +1748,7 @@ Add adds the named field (which should start with a period) to the end of the ch
 
 ```
 searchKey: parse.ChainNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1771,7 +1759,7 @@ func (c *ChainNode) Copy() Node
 
 ```
 searchKey: parse.ChainNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1782,7 +1770,7 @@ func (c *ChainNode) String() string
 
 ```
 searchKey: parse.ChainNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1822,7 +1810,7 @@ CommandNode holds a command (a pipeline inside an evaluating action).
 
 ```
 searchKey: parse.CommandNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1833,7 +1821,7 @@ func (c *CommandNode) Copy() Node
 
 ```
 searchKey: parse.CommandNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1855,7 +1843,7 @@ func (c *CommandNode) append(arg Node)
 
 ```
 searchKey: parse.CommandNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1895,7 +1883,7 @@ CommentNode holds a comment.
 
 ```
 searchKey: parse.CommentNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1906,7 +1894,7 @@ func (c *CommentNode) Copy() Node
 
 ```
 searchKey: parse.CommentNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1917,7 +1905,7 @@ func (c *CommentNode) String() string
 
 ```
 searchKey: parse.CommentNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1956,7 +1944,7 @@ DotNode holds the special identifier '.'.
 
 ```
 searchKey: parse.DotNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1967,7 +1955,7 @@ func (d *DotNode) Copy() Node
 
 ```
 searchKey: parse.DotNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1978,7 +1966,7 @@ func (d *DotNode) String() string
 
 ```
 searchKey: parse.DotNode.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1989,7 +1977,7 @@ func (d *DotNode) Type() NodeType
 
 ```
 searchKey: parse.DotNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2029,7 +2017,7 @@ FieldNode holds a field (identifier starting with '.'). The names may be chained
 
 ```
 searchKey: parse.FieldNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2040,7 +2028,7 @@ func (f *FieldNode) Copy() Node
 
 ```
 searchKey: parse.FieldNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2051,7 +2039,7 @@ func (f *FieldNode) String() string
 
 ```
 searchKey: parse.FieldNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2091,7 +2079,7 @@ IdentifierNode holds an identifier.
 
 ```
 searchKey: parse.NewIdentifier
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2104,7 +2092,7 @@ NewIdentifier returns a new IdentifierNode with the given identifier name.
 
 ```
 searchKey: parse.IdentifierNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2141,7 +2129,7 @@ SetTree sets the parent tree for the node. NewIdentifier is a public method so w
 
 ```
 searchKey: parse.IdentifierNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2152,7 +2140,7 @@ func (i *IdentifierNode) String() string
 
 ```
 searchKey: parse.IdentifierNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2189,7 +2177,7 @@ IfNode represents an {{if}} action and its commands.
 
 ```
 searchKey: parse.IfNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2218,7 +2206,7 @@ ListNode holds a sequence of nodes.
 
 ```
 searchKey: parse.ListNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2229,7 +2217,7 @@ func (l *ListNode) Copy() Node
 
 ```
 searchKey: parse.ListNode.CopyList
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2240,7 +2228,7 @@ func (l *ListNode) CopyList() *ListNode
 
 ```
 searchKey: parse.ListNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2262,7 +2250,7 @@ func (l *ListNode) append(n Node)
 
 ```
 searchKey: parse.ListNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2314,7 +2302,7 @@ NilNode holds the special identifier 'nil' representing an untyped nil constant.
 
 ```
 searchKey: parse.NilNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2325,7 +2313,7 @@ func (n *NilNode) Copy() Node
 
 ```
 searchKey: parse.NilNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2336,7 +2324,7 @@ func (n *NilNode) String() string
 
 ```
 searchKey: parse.NilNode.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2347,7 +2335,7 @@ func (n *NilNode) Type() NodeType
 
 ```
 searchKey: parse.NilNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2408,7 +2396,7 @@ NodeType identifies the type of a parse tree node.
 
 ```
 searchKey: parse.NodeType.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2447,7 +2435,7 @@ NumberNode holds a number: signed or unsigned integer, float, or complex. The va
 
 ```
 searchKey: parse.NumberNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2458,7 +2446,7 @@ func (n *NumberNode) Copy() Node
 
 ```
 searchKey: parse.NumberNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2469,7 +2457,7 @@ func (n *NumberNode) String() string
 
 ```
 searchKey: parse.NumberNode.simplifyComplex
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2482,7 +2470,7 @@ simplifyComplex pulls out any other types that are represented by the complex nu
 
 ```
 searchKey: parse.NumberNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2525,7 +2513,7 @@ PipeNode holds a pipeline with optional declaration
 
 ```
 searchKey: parse.PipeNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2536,7 +2524,7 @@ func (p *PipeNode) Copy() Node
 
 ```
 searchKey: parse.PipeNode.CopyPipe
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2547,7 +2535,7 @@ func (p *PipeNode) CopyPipe() *PipeNode
 
 ```
 searchKey: parse.PipeNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2569,7 +2557,7 @@ func (p *PipeNode) append(command *CommandNode)
 
 ```
 searchKey: parse.PipeNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2604,7 +2592,7 @@ Pos represents a byte position in the original input text from which this templa
 
 ```
 searchKey: parse.leftTrimLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2617,7 +2605,7 @@ leftTrimLength returns the length of the spaces at the beginning of the string.
 
 ```
 searchKey: parse.rightTrimLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2630,7 +2618,7 @@ rightTrimLength returns the length of the spaces at the end of the string.
 
 ```
 searchKey: parse.Pos.Position
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2656,7 +2644,7 @@ RangeNode represents a {{range}} action and its commands.
 
 ```
 searchKey: parse.RangeNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2686,7 +2674,7 @@ StringNode holds a string constant. The value has been "unquoted".
 
 ```
 searchKey: parse.StringNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2697,7 +2685,7 @@ func (s *StringNode) Copy() Node
 
 ```
 searchKey: parse.StringNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2708,7 +2696,7 @@ func (s *StringNode) String() string
 
 ```
 searchKey: parse.StringNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2750,7 +2738,7 @@ TemplateNode represents a {{template}} action.
 
 ```
 searchKey: parse.TemplateNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2761,7 +2749,7 @@ func (t *TemplateNode) Copy() Node
 
 ```
 searchKey: parse.TemplateNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2772,7 +2760,7 @@ func (t *TemplateNode) String() string
 
 ```
 searchKey: parse.TemplateNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2812,7 +2800,7 @@ TextNode holds plain text.
 
 ```
 searchKey: parse.TextNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2823,7 +2811,7 @@ func (t *TextNode) Copy() Node
 
 ```
 searchKey: parse.TextNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2834,7 +2822,7 @@ func (t *TextNode) String() string
 
 ```
 searchKey: parse.TextNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2884,7 +2872,7 @@ Tree is the representation of a single parsed template.
 
 ```
 searchKey: parse.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2897,7 +2885,7 @@ New allocates a new parse tree with the given name.
 
 ```
 searchKey: parse.Tree.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2936,7 +2924,7 @@ Parse parses the template definition string to construct a representation of the
 
 ```
 searchKey: parse.Tree.action
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2956,7 +2944,7 @@ Left delim is past. Now get actions. First word could be a keyword such as range
 
 ```
 searchKey: parse.Tree.add
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2969,7 +2957,7 @@ add adds tree to t.treeSet.
 
 ```
 searchKey: parse.Tree.backup
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3008,7 +2996,7 @@ backup3 backs the input stream up three tokens The zeroth token is already there
 
 ```
 searchKey: parse.Tree.blockControl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3038,7 +3026,7 @@ func (t *Tree) checkPipeline(pipe *PipeNode, context string)
 
 ```
 searchKey: parse.Tree.clearActionLine
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3049,7 +3037,7 @@ func (t *Tree) clearActionLine()
 
 ```
 searchKey: parse.Tree.command
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3068,7 +3056,7 @@ space-separated arguments up to a pipeline character or right delimiter. we cons
 
 ```
 searchKey: parse.Tree.elseControl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3087,7 +3075,7 @@ Else keyword is past.
 
 ```
 searchKey: parse.Tree.endControl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3171,7 +3159,7 @@ hasFunction reports if a function name exists in the Tree's maps.
 
 ```
 searchKey: parse.Tree.ifControl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3191,7 +3179,7 @@ If keyword is past.
 
 ```
 searchKey: parse.Tree.itemList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3430,7 +3418,7 @@ func (t *Tree) newWith(pos Pos, line int, pipe *PipeNode, list, elseList *ListNo
 
 ```
 searchKey: parse.Tree.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3443,7 +3431,7 @@ next returns the next token.
 
 ```
 searchKey: parse.Tree.nextNonSpace
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3456,7 +3444,7 @@ nextNonSpace returns the next non-space token.
 
 ```
 searchKey: parse.Tree.operand
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3475,7 +3463,7 @@ An operand is a space-separated component of a command, a term possibly followed
 
 ```
 searchKey: parse.Tree.parse
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3499,7 +3487,7 @@ func (t *Tree) parseControl(allowElseIf bool, context string) (pos Pos, line int
 
 ```
 searchKey: parse.Tree.parseDefinition
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3536,7 +3524,7 @@ func (t *Tree) parseTemplateName(token item, context string) (name string)
 
 ```
 searchKey: parse.Tree.peek
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3549,7 +3537,7 @@ peek returns but does not consume the next token.
 
 ```
 searchKey: parse.Tree.peekNonSpace
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3592,7 +3580,7 @@ popVars trims the variable list to the specified length
 
 ```
 searchKey: parse.Tree.rangeControl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3638,7 +3626,7 @@ startParse initializes the parser, using the lexer.
 
 ```
 searchKey: parse.Tree.stopParse
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3651,7 +3639,7 @@ stopParse terminates parsing.
 
 ```
 searchKey: parse.Tree.templateControl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3670,7 +3658,7 @@ Template keyword is past. The name must be something that can evaluate to a stri
 
 ```
 searchKey: parse.Tree.term
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3694,7 +3682,7 @@ A term is a simple "expression". A nil return means the next item is not a term.
 
 ```
 searchKey: parse.Tree.textOrAction
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3737,7 +3725,7 @@ useVar returns a node for a variable reference. It errors if the variable is not
 
 ```
 searchKey: parse.Tree.withControl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3775,7 +3763,7 @@ VariableNode holds a list of variable names, possibly with chained field accesse
 
 ```
 searchKey: parse.VariableNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3786,7 +3774,7 @@ func (v *VariableNode) Copy() Node
 
 ```
 searchKey: parse.VariableNode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3797,7 +3785,7 @@ func (v *VariableNode) String() string
 
 ```
 searchKey: parse.VariableNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3834,7 +3822,7 @@ WithNode represents a {{with}} action and its commands.
 
 ```
 searchKey: parse.WithNode.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3863,7 +3851,7 @@ elseNode represents an {{else}} action. Does not appear in the final tree.
 
 ```
 searchKey: parse.elseNode.Copy
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3874,7 +3862,7 @@ func (e *elseNode) Copy() Node
 
 ```
 searchKey: parse.elseNode.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3885,7 +3873,7 @@ func (e *elseNode) String() string
 
 ```
 searchKey: parse.elseNode.Type
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3896,7 +3884,7 @@ func (e *elseNode) Type() NodeType
 
 ```
 searchKey: parse.elseNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3935,7 +3923,7 @@ endNode represents an {{end}} action. It does not appear in the final parse tree
 
 ```
 searchKey: parse.endNode.Copy
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3946,7 +3934,7 @@ func (e *endNode) Copy() Node
 
 ```
 searchKey: parse.endNode.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3957,7 +3945,7 @@ func (e *endNode) String() string
 
 ```
 searchKey: parse.endNode.tree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4012,7 +4000,7 @@ item represents a token or text string returned from the scanner.
 
 ```
 searchKey: parse.mkItem
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4023,7 +4011,7 @@ func mkItem(typ itemType, text string) item
 
 ```
 searchKey: parse.item.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4047,7 +4035,7 @@ itemType identifies the type of lex items.
 
 ```
 searchKey: parse.itemType.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4099,7 +4087,7 @@ lexer holds the state of the scanner.
 
 ```
 searchKey: parse.lex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4138,7 +4126,7 @@ acceptRun consumes a run of runes from the valid set.
 
 ```
 searchKey: parse.lexer.atRightDelim
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4151,7 +4139,7 @@ atRightDelim reports whether the lexer is at a right delimiter, possibly precede
 
 ```
 searchKey: parse.lexer.atTerminator
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4164,7 +4152,7 @@ atTerminator reports whether the input is at valid termination character to appe
 
 ```
 searchKey: parse.lexer.backup
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4177,7 +4165,7 @@ backup steps back one rune. Can only be called once per call of next.
 
 ```
 searchKey: parse.lexer.drain
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4216,7 +4204,7 @@ errorf returns an error token and terminates the scan by passing back a nil poin
 
 ```
 searchKey: parse.lexer.ignore
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4229,7 +4217,7 @@ ignore skips over the pending input before this point.
 
 ```
 searchKey: parse.lexer.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4242,7 +4230,7 @@ next returns the next rune in the input.
 
 ```
 searchKey: parse.lexer.nextItem
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4255,7 +4243,7 @@ nextItem returns the next item from the input. Called by the parser, not in the 
 
 ```
 searchKey: parse.lexer.peek
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4268,7 +4256,7 @@ peek returns but does not consume the next rune in the input.
 
 ```
 searchKey: parse.lexer.run
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4281,7 +4269,7 @@ run runs the state machine for the lexer.
 
 ```
 searchKey: parse.lexer.scanNumber
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4342,7 +4330,7 @@ stateFn represents the state of the scanner as a function that returns the next 
 
 ```
 searchKey: parse.lexChar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4355,7 +4343,7 @@ lexChar scans a character constant. The initial quote is already scanned. Syntax
 
 ```
 searchKey: parse.lexComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4368,7 +4356,7 @@ lexComment scans a comment. The left comment marker is known to be present.
 
 ```
 searchKey: parse.lexField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4381,7 +4369,7 @@ lexField scans a field: .Alphanumeric. The . has been scanned.
 
 ```
 searchKey: parse.lexFieldOrVariable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4394,7 +4382,7 @@ lexVariable scans a field or variable: [.$]Alphanumeric. The . or $ has been sca
 
 ```
 searchKey: parse.lexIdentifier
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4407,7 +4395,7 @@ lexIdentifier scans an alphanumeric.
 
 ```
 searchKey: parse.lexInsideAction
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4420,7 +4408,7 @@ lexInsideAction scans the elements inside action delimiters.
 
 ```
 searchKey: parse.lexLeftDelim
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4433,7 +4421,7 @@ lexLeftDelim scans the left delimiter, which is known to be present, possibly wi
 
 ```
 searchKey: parse.lexNumber
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4446,7 +4434,7 @@ lexNumber scans a number: decimal, octal, hex, float, or imaginary. This isn't a
 
 ```
 searchKey: parse.lexQuote
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4459,7 +4447,7 @@ lexQuote scans a quoted string.
 
 ```
 searchKey: parse.lexRawQuote
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4472,7 +4460,7 @@ lexRawQuote scans a raw quoted string.
 
 ```
 searchKey: parse.lexRightDelim
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4485,7 +4473,7 @@ lexRightDelim scans the right delimiter, which is known to be present, possibly 
 
 ```
 searchKey: parse.lexSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4498,7 +4486,7 @@ lexSpace scans a run of space characters. We have not consumed the first space, 
 
 ```
 searchKey: parse.lexText
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4511,7 +4499,7 @@ lexText scans until an opening action delimiter, "{{".
 
 ```
 searchKey: parse.lexVariable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4522,15 +4510,11 @@ lexVariable scans a Variable: $Alphanumeric. The $ has been scanned.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkListString" href="#BenchmarkListString">func BenchmarkListString(b *testing.B)</a>
 
 ```
 searchKey: parse.BenchmarkListString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4541,7 +4525,7 @@ func BenchmarkListString(b *testing.B)
 
 ```
 searchKey: parse.BenchmarkParseLarge
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4552,7 +4536,7 @@ func BenchmarkParseLarge(b *testing.B)
 
 ```
 searchKey: parse.BenchmarkVariableString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4563,7 +4547,7 @@ func BenchmarkVariableString(b *testing.B)
 
 ```
 searchKey: parse.IsEmptyTree
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4576,7 +4560,7 @@ IsEmptyTree reports whether this tree (node) is empty of everything but space or
 
 ```
 searchKey: parse.Parse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4589,7 +4573,7 @@ Parse returns a map from template name to parse.Tree, created by parsing the tem
 
 ```
 searchKey: parse.TestBlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4600,7 +4584,7 @@ func TestBlock(t *testing.T)
 
 ```
 searchKey: parse.TestDelims
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4611,7 +4595,7 @@ func TestDelims(t *testing.T)
 
 ```
 searchKey: parse.TestErrorContextWithTreeCopy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4622,7 +4606,7 @@ func TestErrorContextWithTreeCopy(t *testing.T)
 
 ```
 searchKey: parse.TestErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4633,7 +4617,7 @@ func TestErrors(t *testing.T)
 
 ```
 searchKey: parse.TestIsEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4644,7 +4628,7 @@ func TestIsEmpty(t *testing.T)
 
 ```
 searchKey: parse.TestLex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4655,7 +4639,7 @@ func TestLex(t *testing.T)
 
 ```
 searchKey: parse.TestLineNum
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4666,7 +4650,7 @@ func TestLineNum(t *testing.T)
 
 ```
 searchKey: parse.TestNumberParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4677,7 +4661,7 @@ func TestNumberParse(t *testing.T)
 
 ```
 searchKey: parse.TestParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4688,7 +4672,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: parse.TestParseCopy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4701,7 +4685,7 @@ Same as TestParse, but we copy the node first
 
 ```
 searchKey: parse.TestParseWithComments
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4712,7 +4696,7 @@ func TestParseWithComments(t *testing.T)
 
 ```
 searchKey: parse.TestPos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4725,7 +4709,7 @@ The other tests don't check position, to make the test cases easier to construct
 
 ```
 searchKey: parse.TestShutdown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4738,7 +4722,7 @@ Test that an error shuts down the lexing goroutine.
 
 ```
 searchKey: parse.TestSkipFuncCheck
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4749,7 +4733,7 @@ func TestSkipFuncCheck(t *testing.T)
 
 ```
 searchKey: parse.collect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4762,7 +4746,7 @@ collect gathers the emitted items into a slice.
 
 ```
 searchKey: parse.equal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4773,7 +4757,7 @@ func equal(i1, i2 []item, checkPos bool) bool
 
 ```
 searchKey: parse.hasLeftTrimMarker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4784,7 +4768,7 @@ func hasLeftTrimMarker(s string) bool
 
 ```
 searchKey: parse.hasRightTrimMarker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4795,7 +4779,7 @@ func hasRightTrimMarker(s string) bool
 
 ```
 searchKey: parse.isAlphaNumeric
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4808,7 +4792,7 @@ isAlphaNumeric reports whether r is an alphabetic, digit, or underscore.
 
 ```
 searchKey: parse.isSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4821,7 +4805,7 @@ isSpace reports whether r is a space character.
 
 ```
 searchKey: parse.testParse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

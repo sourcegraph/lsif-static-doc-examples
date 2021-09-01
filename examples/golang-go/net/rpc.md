@@ -295,10 +295,6 @@ The net/rpc package is frozen and is not accepting new features.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DefaultDebugPath" href="#DefaultDebugPath">const DefaultDebugPath</a>
 
 ```
@@ -346,10 +342,6 @@ const newHttpPath = "/foo"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="DefaultServer" href="#DefaultServer">var DefaultServer</a>
 
@@ -516,10 +508,6 @@ var typeOfError = reflect.TypeOf((*error)(nil)).Elem()
 Precompute the reflect type for error. Can't use error directly because Typeof takes an empty interface value. This is annoying. 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ArgNotPublic" href="#ArgNotPublic">type ArgNotPublic int</a>
 
@@ -711,7 +699,7 @@ Call represents an active RPC.
 
 ```
 searchKey: rpc.Call.done
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -746,7 +734,7 @@ Client represents an RPC Client. There may be multiple outstanding Calls associa
 
 ```
 searchKey: rpc.Dial
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -759,7 +747,7 @@ Dial connects to an RPC server at the specified network address.
 
 ```
 searchKey: rpc.DialHTTP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -772,7 +760,7 @@ DialHTTP connects to an HTTP RPC server at the specified network address listeni
 
 ```
 searchKey: rpc.DialHTTPPath
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -785,7 +773,7 @@ DialHTTPPath connects to an HTTP RPC server at the specified network address and
 
 ```
 searchKey: rpc.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -800,7 +788,7 @@ The read and write halves of the connection are serialized independently, so no 
 
 ```
 searchKey: rpc.NewClientWithCodec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -848,7 +836,7 @@ Call invokes the named function, waits for it to complete, and returns its error
 
 ```
 searchKey: rpc.Client.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -874,7 +862,7 @@ Go invokes the function asynchronously. It returns the Call structure representi
 
 ```
 searchKey: rpc.Client.input
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -945,7 +933,7 @@ func (codec *CodecEmulator) Call(serviceMethod string, args *Args, reply *Reply)
 
 ```
 searchKey: rpc.CodecEmulator.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1318,7 +1306,7 @@ func (server *Server) freeResponse(resp *Response)
 
 ```
 searchKey: rpc.Server.getRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1329,7 +1317,7 @@ func (server *Server) getRequest() *Request
 
 ```
 searchKey: rpc.Server.getResponse
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1417,7 +1405,7 @@ ServerError represents an error that has been returned from the remote side of t
 
 ```
 searchKey: rpc.ServerError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1439,7 +1427,7 @@ type WriteFailCodec int
 
 ```
 searchKey: rpc.WriteFailCodec.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1554,7 +1542,7 @@ type gobClientCodec struct {
 
 ```
 searchKey: rpc.gobClientCodec.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1615,7 +1603,7 @@ type gobServerCodec struct {
 
 ```
 searchKey: rpc.gobServerCodec.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1703,7 +1691,7 @@ type methodArray []debugMethod
 
 ```
 searchKey: rpc.methodArray.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1753,7 +1741,7 @@ type methodType struct {
 
 ```
 searchKey: rpc.methodType.NumCalls
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1802,7 +1790,7 @@ type serviceArray []debugService
 
 ```
 searchKey: rpc.serviceArray.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1849,7 +1837,7 @@ type shutdownCodec struct {
 
 ```
 searchKey: rpc.shutdownCodec.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1906,7 +1894,7 @@ type writeCrasher struct {
 
 ```
 searchKey: rpc.writeCrasher.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1937,15 +1925,11 @@ func (writeCrasher) Write(p []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Accept" href="#Accept">func Accept(lis net.Listener)</a>
 
 ```
 searchKey: rpc.Accept
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1958,7 +1942,7 @@ Accept accepts connections on the listener and serves requests to DefaultServer 
 
 ```
 searchKey: rpc.BenchmarkEndToEnd
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1969,7 +1953,7 @@ func BenchmarkEndToEnd(b *testing.B)
 
 ```
 searchKey: rpc.BenchmarkEndToEndAsync
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1980,7 +1964,7 @@ func BenchmarkEndToEndAsync(b *testing.B)
 
 ```
 searchKey: rpc.BenchmarkEndToEndAsyncHTTP
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1991,7 +1975,7 @@ func BenchmarkEndToEndAsyncHTTP(b *testing.B)
 
 ```
 searchKey: rpc.BenchmarkEndToEndHTTP
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2015,7 +1999,7 @@ HandleHTTP registers an HTTP handler for RPC messages to DefaultServer on Defaul
 
 ```
 searchKey: rpc.Register
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2028,7 +2012,7 @@ Register publishes the receiver's methods in the DefaultServer.
 
 ```
 searchKey: rpc.RegisterName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2041,7 +2025,7 @@ RegisterName is like Register but uses the provided name for the type instead of
 
 ```
 searchKey: rpc.ServeCodec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2054,7 +2038,7 @@ ServeCodec is like ServeConn but uses the specified codec to decode requests and
 
 ```
 searchKey: rpc.ServeConn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2067,7 +2051,7 @@ ServeConn runs the DefaultServer on a single connection. ServeConn blocks, servi
 
 ```
 searchKey: rpc.ServeRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2080,7 +2064,7 @@ ServeRequest is like ServeCodec but synchronously serves a single request. It do
 
 ```
 searchKey: rpc.TestAcceptExitAfterListenerClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2093,7 +2077,7 @@ Tests the fix to issue 11221. Without the fix, this loops forever or crashes.
 
 ```
 searchKey: rpc.TestBuiltinTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2104,7 +2088,7 @@ func TestBuiltinTypes(t *testing.T)
 
 ```
 searchKey: rpc.TestClientWriteError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2115,7 +2099,7 @@ func TestClientWriteError(t *testing.T)
 
 ```
 searchKey: rpc.TestCloseCodec
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2126,7 +2110,7 @@ func TestCloseCodec(t *testing.T)
 
 ```
 searchKey: rpc.TestCountMallocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2137,7 +2121,7 @@ func TestCountMallocs(t *testing.T)
 
 ```
 searchKey: rpc.TestCountMallocsOverHTTP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2148,7 +2132,7 @@ func TestCountMallocsOverHTTP(t *testing.T)
 
 ```
 searchKey: rpc.TestErrorAfterClientClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2159,7 +2143,7 @@ func TestErrorAfterClientClose(t *testing.T)
 
 ```
 searchKey: rpc.TestGobError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2170,7 +2154,7 @@ func TestGobError(t *testing.T)
 
 ```
 searchKey: rpc.TestHTTP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2181,7 +2165,7 @@ func TestHTTP(t *testing.T)
 
 ```
 searchKey: rpc.TestRPC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2192,7 +2176,7 @@ func TestRPC(t *testing.T)
 
 ```
 searchKey: rpc.TestRegistrationError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2205,7 +2189,7 @@ Check that registration handles lots of bad methods and a type with no suitable 
 
 ```
 searchKey: rpc.TestSendDeadlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2216,7 +2200,7 @@ func TestSendDeadlock(t *testing.T)
 
 ```
 searchKey: rpc.TestServeRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2227,7 +2211,7 @@ func TestServeRequest(t *testing.T)
 
 ```
 searchKey: rpc.TestShutdown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2238,7 +2222,7 @@ func TestShutdown(t *testing.T)
 
 ```
 searchKey: rpc.TestTCPClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2249,7 +2233,7 @@ func TestTCPClose(t *testing.T)
 
 ```
 searchKey: rpc.benchmarkEndToEnd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2260,7 +2244,7 @@ func benchmarkEndToEnd(dial func() (*Client, error), b *testing.B)
 
 ```
 searchKey: rpc.benchmarkEndToEndAsync
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2271,7 +2255,7 @@ func benchmarkEndToEndAsync(dial func() (*Client, error), b *testing.B)
 
 ```
 searchKey: rpc.countMallocs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2282,7 +2266,7 @@ func countMallocs(dial func() (*Client, error), t *testing.T) float64
 
 ```
 searchKey: rpc.isExportedOrBuiltinType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2339,7 +2323,7 @@ func startServer()
 
 ```
 searchKey: rpc.suitableMethods
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2352,7 +2336,7 @@ suitableMethods returns suitable Rpc methods of typ, it will report error using 
 
 ```
 searchKey: rpc.testHTTPRPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2363,7 +2347,7 @@ func testHTTPRPC(t *testing.T, path string)
 
 ```
 searchKey: rpc.testNewServerRPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2374,7 +2358,7 @@ func testNewServerRPC(t *testing.T, addr string)
 
 ```
 searchKey: rpc.testRPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2385,7 +2369,7 @@ func testRPC(t *testing.T, addr string)
 
 ```
 searchKey: rpc.testSendDeadlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2396,7 +2380,7 @@ func testSendDeadlock(client *Client)
 
 ```
 searchKey: rpc.testServeRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

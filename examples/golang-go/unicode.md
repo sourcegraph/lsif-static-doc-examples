@@ -562,10 +562,6 @@ Package unicode provides data and functions to test some properties of Unicode c
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="LowerCase" href="#LowerCase">const LowerCase</a>
 
 ```
@@ -860,10 +856,6 @@ const pp // a printable character according to Go's definition.
 Bit masks for each code point under U+0100, for fast lookup. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ASCII_Hex_Digit" href="#ASCII_Hex_Digit">var ASCII_Hex_Digit</a>
 
@@ -7220,10 +7212,6 @@ var _Zs = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CaseRange" href="#CaseRange">type CaseRange struct</a>
 
 ```
@@ -7380,15 +7368,11 @@ caseOrbit is defined in tables.go as []foldPair. Right now all the entries fit i
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="In" href="#In">func In(r rune, ranges ...*RangeTable) bool</a>
 
 ```
 searchKey: unicode.In
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7401,7 +7385,7 @@ In reports whether the rune is a member of one of the ranges.
 
 ```
 searchKey: unicode.Is
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7414,7 +7398,7 @@ Is reports whether the rune is in the specified table of ranges.
 
 ```
 searchKey: unicode.IsControl
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7427,7 +7411,7 @@ IsControl reports whether the rune is a control character. The C (Other) Unicode
 
 ```
 searchKey: unicode.IsDigit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7440,7 +7424,7 @@ IsDigit reports whether the rune is a decimal digit.
 
 ```
 searchKey: unicode.IsGraphic
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7453,7 +7437,7 @@ IsGraphic reports whether the rune is defined as a Graphic by Unicode. Such char
 
 ```
 searchKey: unicode.IsLetter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7466,7 +7450,7 @@ IsLetter reports whether the rune is a letter (category L).
 
 ```
 searchKey: unicode.IsLower
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7479,7 +7463,7 @@ IsLower reports whether the rune is a lower case letter.
 
 ```
 searchKey: unicode.IsMark
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7492,7 +7476,7 @@ IsMark reports whether the rune is a mark character (category M).
 
 ```
 searchKey: unicode.IsNumber
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7505,7 +7489,7 @@ IsNumber reports whether the rune is a number (category N).
 
 ```
 searchKey: unicode.IsOneOf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7518,7 +7502,7 @@ IsOneOf reports whether the rune is a member of one of the ranges. The function 
 
 ```
 searchKey: unicode.IsPrint
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7531,7 +7515,7 @@ IsPrint reports whether the rune is defined as printable by Go. Such characters 
 
 ```
 searchKey: unicode.IsPunct
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7544,7 +7528,7 @@ IsPunct reports whether the rune is a Unicode punctuation character (category P)
 
 ```
 searchKey: unicode.IsSpace
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7563,7 +7547,7 @@ Other definitions of spacing characters are set by category Z and property Patte
 
 ```
 searchKey: unicode.IsSymbol
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7576,7 +7560,7 @@ IsSymbol reports whether the rune is a symbolic character.
 
 ```
 searchKey: unicode.IsTitle
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7589,7 +7573,7 @@ IsTitle reports whether the rune is a title case letter.
 
 ```
 searchKey: unicode.IsUpper
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7602,7 +7586,7 @@ IsUpper reports whether the rune is an upper case letter.
 
 ```
 searchKey: unicode.SimpleFold
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7630,7 +7614,7 @@ SimpleFold(-2) = -2
 
 ```
 searchKey: unicode.To
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7643,7 +7627,7 @@ To maps the rune to the specified case: UpperCase, LowerCase, or TitleCase.
 
 ```
 searchKey: unicode.ToLower
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7656,7 +7640,7 @@ ToLower maps the rune to lower case.
 
 ```
 searchKey: unicode.ToTitle
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7669,7 +7653,7 @@ ToTitle maps the rune to title case.
 
 ```
 searchKey: unicode.ToUpper
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7682,7 +7666,7 @@ ToUpper maps the rune to upper case.
 
 ```
 searchKey: unicode.is16
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7695,7 +7679,7 @@ is16 reports whether r is in the sorted slice of 16-bit ranges.
 
 ```
 searchKey: unicode.is32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7708,7 +7692,7 @@ is32 reports whether r is in the sorted slice of 32-bit ranges.
 
 ```
 searchKey: unicode.isExcludingLatin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7719,7 +7703,7 @@ func isExcludingLatin(rangeTab *RangeTable, r rune) bool
 
 ```
 searchKey: unicode.to
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

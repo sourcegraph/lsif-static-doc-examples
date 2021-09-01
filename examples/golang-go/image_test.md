@@ -23,7 +23,7 @@ This example demonstrates decoding a JPEG image and examining its pixels.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="data" href="#data">const data</a>
@@ -40,7 +40,7 @@ const data = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="imageTests" href="#imageTests">var imageTests</a>
@@ -57,7 +57,7 @@ var imageTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="imageTest" href="#imageTest">type imageTest struct</a>
@@ -78,7 +78,7 @@ type imageTest struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Example" href="#Example">func Example()</a>
@@ -107,7 +107,7 @@ func Example_decodeConfig()
 
 ```
 searchKey: image_test.TestDecode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -118,7 +118,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: image_test.decode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -129,7 +129,7 @@ func decode(filename string) (image.Image, string, error)
 
 ```
 searchKey: image_test.decodeConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -140,7 +140,7 @@ func decodeConfig(filename string) (image.Config, string, error)
 
 ```
 searchKey: image_test.delta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -151,7 +151,7 @@ func delta(u0, u1 uint32) int
 
 ```
 searchKey: image_test.withinTolerance
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

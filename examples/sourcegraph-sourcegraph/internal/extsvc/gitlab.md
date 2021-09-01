@@ -198,7 +198,7 @@ Package gitlab implements a GitLab API client.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Internal" href="#Internal">const Internal</a>
@@ -527,7 +527,7 @@ GitLab's update MR API is also used to perform state transitions on MRs: they ca
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrMergeRequestAlreadyExists" href="#ErrMergeRequestAlreadyExists">var ErrMergeRequestAlreadyExists</a>
@@ -833,7 +833,7 @@ var updateRegex = flag.String("update", "", "Update testdata of tests matching t
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
@@ -862,7 +862,7 @@ The Client's cache is keyed by Auth.Hash(). It is NOT keyed by the actual user I
 
 ```
 searchKey: gitlab.newTestClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1052,7 +1052,7 @@ func (c *Client) MergeMergeRequest(ctx context.Context, project *Project, mr *Me
 
 ```
 searchKey: gitlab.Client.RateLimitMonitor
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1209,7 +1209,7 @@ ClientProvider creates GitLab API clients. Each client has separate authenticati
 
 ```
 searchKey: gitlab.NewClientProvider
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1220,7 +1220,7 @@ func NewClientProvider(baseURL *url.URL, cli httpcli.Doer) *ClientProvider
 
 ```
 searchKey: gitlab.createTestProvider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1244,7 +1244,7 @@ GetAuthenticatorClient returns a client authenticated by the given authenticator
 
 ```
 searchKey: gitlab.ClientProvider.GetClient
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1385,7 +1385,7 @@ type HTTPError struct {
 
 ```
 searchKey: gitlab.NewHTTPError
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1396,7 +1396,7 @@ func NewHTTPError(code int, body []byte) HTTPError
 
 ```
 searchKey: gitlab.HTTPError.Code
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1407,7 +1407,7 @@ func (err HTTPError) Code() int
 
 ```
 searchKey: gitlab.HTTPError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1418,7 +1418,7 @@ func (err HTTPError) Error() string
 
 ```
 searchKey: gitlab.HTTPError.Forbidden
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1429,7 +1429,7 @@ func (err HTTPError) Forbidden() bool
 
 ```
 searchKey: gitlab.HTTPError.Message
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1440,7 +1440,7 @@ func (err HTTPError) Message() string
 
 ```
 searchKey: gitlab.HTTPError.Unauthorized
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1522,7 +1522,7 @@ type MarkWorkInProgressEvent struct{ *Note }
 
 ```
 searchKey: gitlab.MarkWorkInProgressEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1610,7 +1610,7 @@ type MergeRequestClosedEvent struct{ *ResourceStateEvent }
 
 ```
 searchKey: gitlab.MergeRequestClosedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1632,7 +1632,7 @@ type MergeRequestMergedEvent struct{ *ResourceStateEvent }
 
 ```
 searchKey: gitlab.MergeRequestMergedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1654,7 +1654,7 @@ type MergeRequestReopenedEvent struct{ *ResourceStateEvent }
 
 ```
 searchKey: gitlab.MergeRequestReopenedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1693,7 +1693,7 @@ type Note struct {
 
 ```
 searchKey: gitlab.Note.ToEvent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1725,7 +1725,7 @@ type Pipeline struct {
 
 ```
 searchKey: gitlab.Pipeline.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1767,7 +1767,7 @@ Project is a GitLab project (equivalent to a GitHub repository).
 
 ```
 searchKey: gitlab.Project.RequiresAuthentication
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1816,7 +1816,7 @@ type ResourceStateEvent struct {
 
 ```
 searchKey: gitlab.ResourceStateEvent.ToEvent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1853,7 +1853,7 @@ type ReviewApprovedEvent struct{ *Note }
 
 ```
 searchKey: gitlab.ReviewApprovedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1875,7 +1875,7 @@ type ReviewUnapprovedEvent struct{ *Note }
 
 ```
 searchKey: gitlab.ReviewUnapprovedEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1913,7 +1913,7 @@ func (pat *SudoableToken) Authenticate(req *http.Request) error
 
 ```
 searchKey: gitlab.SudoableToken.Hash
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2004,7 +2004,7 @@ type UnmarkWorkInProgressEvent struct{ *Note }
 
 ```
 searchKey: gitlab.UnmarkWorkInProgressEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2062,7 +2062,7 @@ type User struct {
 
 ```
 searchKey: gitlab.GetExternalAccountData
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2164,14 +2164,14 @@ func (s *mockHTTPResponseBody) Do(req *http.Request) (*http.Response, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExternalRepoSpec" href="#ExternalRepoSpec">func ExternalRepoSpec(proj *Project, baseURL url.URL) api.ExternalRepoSpec</a>
 
 ```
 searchKey: gitlab.ExternalRepoSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2184,7 +2184,7 @@ ExternalRepoSpec returns an api.ExternalRepoSpec that refers to the specified Gi
 
 ```
 searchKey: gitlab.HTTPErrorCode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2197,7 +2197,7 @@ HTTPErrorCode returns err's HTTP status code, if it is an HTTP error from this p
 
 ```
 searchKey: gitlab.IsNotFound
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2210,7 +2210,7 @@ IsNotFound reports whether err is a GitLab API error of type NOT_FOUND, the equi
 
 ```
 searchKey: gitlab.IsWIP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2223,7 +2223,7 @@ IsWIP returns true if the given title would result in GitLab rendering the MR as
 
 ```
 searchKey: gitlab.MockGetProject_Return
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2236,7 +2236,7 @@ MockGetProject_Return is called by tests to mock (*Client).GetProject.
 
 ```
 searchKey: gitlab.SetExternalAccountData
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2249,7 +2249,7 @@ SetExternalAccountData sets the user and token into the external account data bl
 
 ```
 searchKey: gitlab.SetWIP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2262,7 +2262,7 @@ SetWIP ensures a "WIP:" prefix on the given title. If a "Draft:" prefix is found
 
 ```
 searchKey: gitlab.TestClient_GetProject
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2275,7 +2275,7 @@ TestClient_GetProject tests the behavior of GetProject.
 
 ```
 searchKey: gitlab.TestClient_GetProject_nonexistent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2288,7 +2288,7 @@ TestClient_GetProject_nonexistent tests the behavior of GetProject when called o
 
 ```
 searchKey: gitlab.TestCreateMergeRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2299,7 +2299,7 @@ func TestCreateMergeRequest(t *testing.T)
 
 ```
 searchKey: gitlab.TestCreateMergeRequestNote
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2310,7 +2310,7 @@ func TestCreateMergeRequestNote(t *testing.T)
 
 ```
 searchKey: gitlab.TestGetAuthenticatedUserOAuthScopes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2321,7 +2321,7 @@ func TestGetAuthenticatedUserOAuthScopes(t *testing.T)
 
 ```
 searchKey: gitlab.TestGetMergeRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2332,7 +2332,7 @@ func TestGetMergeRequest(t *testing.T)
 
 ```
 searchKey: gitlab.TestGetMergeRequestNotes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2343,7 +2343,7 @@ func TestGetMergeRequestNotes(t *testing.T)
 
 ```
 searchKey: gitlab.TestGetMergeRequestPipelines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2354,7 +2354,7 @@ func TestGetMergeRequestPipelines(t *testing.T)
 
 ```
 searchKey: gitlab.TestGetOpenMergeRequestByRefs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2365,7 +2365,7 @@ func TestGetOpenMergeRequestByRefs(t *testing.T)
 
 ```
 searchKey: gitlab.TestListTree
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2376,7 +2376,7 @@ func TestListTree(t *testing.T)
 
 ```
 searchKey: gitlab.TestMergeMergeRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2387,7 +2387,7 @@ func TestMergeMergeRequest(t *testing.T)
 
 ```
 searchKey: gitlab.TestNoteToEvent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2398,7 +2398,7 @@ func TestNoteToEvent(t *testing.T)
 
 ```
 searchKey: gitlab.TestPipelineKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2409,7 +2409,7 @@ func TestPipelineKey(t *testing.T)
 
 ```
 searchKey: gitlab.TestSudoableToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2420,7 +2420,7 @@ func TestSudoableToken(t *testing.T)
 
 ```
 searchKey: gitlab.TestTimeUnmarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2431,7 +2431,7 @@ func TestTimeUnmarshal(t *testing.T)
 
 ```
 searchKey: gitlab.TestUpdateMergeRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2442,7 +2442,7 @@ func TestUpdateMergeRequest(t *testing.T)
 
 ```
 searchKey: gitlab.TestWIP
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2453,7 +2453,7 @@ func TestWIP(t *testing.T)
 
 ```
 searchKey: gitlab.UnsetWIP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2466,7 +2466,7 @@ UnsetWIP removes "WIP:" and "Draft:" prefixes from the given title. Depending on
 
 ```
 searchKey: gitlab.idCacheKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2488,7 +2488,7 @@ func init()
 
 ```
 searchKey: gitlab.isGitLabDotComURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2499,7 +2499,7 @@ func isGitLabDotComURL(baseURL *url.URL) bool
 
 ```
 searchKey: gitlab.pathWithNamespaceCacheKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2510,7 +2510,7 @@ func pathWithNamespaceCacheKey(pathWithNamespace string) string
 
 ```
 searchKey: gitlab.trace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2521,7 +2521,7 @@ func trace(msg string, ctx ...interface{})
 
 ```
 searchKey: gitlab.update
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -286,10 +286,6 @@ Package server implements the gitserver service.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="gitConfigMaybeCorrupt" href="#gitConfigMaybeCorrupt">const gitConfigMaybeCorrupt</a>
 
 ```
@@ -387,10 +383,6 @@ const testRepoC = "testrepo-C"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="badRefs" href="#badRefs">var badRefs</a>
 
@@ -868,10 +860,6 @@ traceLogs is controlled via the env SRC_GITSERVER_TRACE. If true we trace logs t
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DiskSizer" href="#DiskSizer">type DiskSizer interface</a>
 
 ```
@@ -1002,7 +990,7 @@ RemoteShowCommand returns the command to be executed for showing remote of a Git
 
 ```
 searchKey: server.GitRepoSyncer.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1092,7 +1080,7 @@ RemoteShowCommand returns the command to be executed for showing Git remote of a
 
 ```
 searchKey: server.PerforceDepotSyncer.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1122,7 +1110,7 @@ RepositoryLock is returned by RepositoryLocker.TryAcquire. It allows updating th
 
 ```
 searchKey: server.RepositoryLock.Release
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1271,7 +1259,7 @@ Server is a gitserver server.
 
 ```
 searchKey: server.makeTestServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1282,7 +1270,7 @@ func makeTestServer(ctx context.Context, repoDir, remote string, db dbutil.DB) *
 
 ```
 searchKey: server.Server.Handler
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1308,7 +1296,7 @@ Janitor does clean up tasks over s.ReposDir and is expected to run in a backgrou
 
 ```
 searchKey: server.Server.RegisterMetrics
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1319,7 +1307,7 @@ func (s *Server) RegisterMetrics()
 
 ```
 searchKey: server.Server.SetupAndClearTmp
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1332,7 +1320,7 @@ SetupAndClearTmp sets up the the tempdir for ReposDir as well as clearing it out
 
 ```
 searchKey: server.Server.Stop
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1395,7 +1383,7 @@ cleanTmpFiles tries to remove tmp_pack_* files from .git/objects/pack. These fil
 
 ```
 searchKey: server.Server.cleanupRepos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1500,7 +1488,7 @@ func (s *Server) exec(w http.ResponseWriter, r *http.Request, req *protocol.Exec
 
 ```
 searchKey: server.Server.findGitDirs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1535,7 +1523,7 @@ func (s *Server) getRemoteURL(ctx context.Context, name api.RepoName) (*vcs.URL,
 
 ```
 searchKey: server.Server.gitServiceHandler
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1717,7 +1705,7 @@ hostnameMatch checks whether the hostname matches the given address. If we don't
 
 ```
 searchKey: server.Server.howManyBytesToFree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1763,7 +1751,7 @@ func (s *Server) p4exec(w http.ResponseWriter, r *http.Request, req *protocol.P4
 
 ```
 searchKey: server.Server.queryCloneLimiter
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1815,7 +1803,7 @@ func (s *Server) repoInfo(ctx context.Context, repo api.RepoName) (*protocol.Rep
 
 ```
 searchKey: server.Server.serverContext
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2046,7 +2034,7 @@ type flushFunc func()
 
 ```
 searchKey: server.flushFunc.Flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2080,7 +2068,7 @@ This lets, e.g., clients with a context deadline see as much partial response bo
 
 ```
 searchKey: server.newFlushingResponseWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2095,7 +2083,7 @@ If w does not support flushing, it returns nil.
 
 ```
 searchKey: server.flushingResponseWriter.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2108,7 +2096,7 @@ Close signals to the flush goroutine to stop.
 
 ```
 searchKey: server.flushingResponseWriter.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2147,7 +2135,7 @@ WriteHeader implements http.ResponseWriter.
 
 ```
 searchKey: server.flushingResponseWriter.periodicFlush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2282,7 +2270,7 @@ progressWriter is an io.Writer that writes to a buffer. '\r' resets the write of
 
 ```
 searchKey: server.progressWriter.Bytes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2295,7 +2283,7 @@ Bytes returns the contents of the buffer.
 
 ```
 searchKey: server.progressWriter.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2337,7 +2325,7 @@ sshAgent speaks the ssh-agent protocol and can be used by gitserver to provide a
 
 ```
 searchKey: server.newSSHAgent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2350,7 +2338,7 @@ newSSHAgent takes a private key and it's passphrase and returns an `sshAgent`.
 
 ```
 searchKey: server.sshAgent.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2363,7 +2351,7 @@ Close closes the server.
 
 ```
 searchKey: server.sshAgent.Listen
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2376,7 +2364,7 @@ Listen starts accepting connections of the ssh agent.
 
 ```
 searchKey: server.sshAgent.Socket
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2453,7 +2441,7 @@ urlRedactor redacts all sensitive strings from a message.
 
 ```
 searchKey: server.newURLRedactor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2505,15 +2493,11 @@ func (c *writeCounter) Write(p []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkQuickRevParseHeadQuickSymbolicRefHead_packed_refs" href="#BenchmarkQuickRevParseHeadQuickSymbolicRefHead_packed_refs">func BenchmarkQuickRevParseHeadQuickSymbolicRefHead_packed_refs(b *testing.B)</a>
 
 ```
 searchKey: server.BenchmarkQuickRevParseHeadQuickSymbolicRefHead_packed_refs
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2524,7 +2508,7 @@ func BenchmarkQuickRevParseHeadQuickSymbolicRefHead_packed_refs(b *testing.B)
 
 ```
 searchKey: server.BenchmarkQuickRevParseHeadQuickSymbolicRefHead_unpacked_refs
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2535,7 +2519,7 @@ func BenchmarkQuickRevParseHeadQuickSymbolicRefHead_unpacked_refs(b *testing.B)
 
 ```
 searchKey: server.TestCleanupExpired
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2546,7 +2530,7 @@ func TestCleanupExpired(t *testing.T)
 
 ```
 searchKey: server.TestCleanupInactive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2557,7 +2541,7 @@ func TestCleanupInactive(t *testing.T)
 
 ```
 searchKey: server.TestCleanupOldLocks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2568,7 +2552,7 @@ func TestCleanupOldLocks(t *testing.T)
 
 ```
 searchKey: server.TestCleanup_computeStats
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2579,7 +2563,7 @@ func TestCleanup_computeStats(t *testing.T)
 
 ```
 searchKey: server.TestCloneRepo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2590,7 +2574,7 @@ func TestCloneRepo(t *testing.T)
 
 ```
 searchKey: server.TestCloneRepo_EnsureValidity
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2601,7 +2585,7 @@ func TestCloneRepo_EnsureValidity(t *testing.T)
 
 ```
 searchKey: server.TestConfigureRemoteGitCommand
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2612,7 +2596,7 @@ func TestConfigureRemoteGitCommand(t *testing.T)
 
 ```
 searchKey: server.TestConfigureRemoteGitCommand_tls
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2623,7 +2607,7 @@ func TestConfigureRemoteGitCommand_tls(t *testing.T)
 
 ```
 searchKey: server.TestCustomGitFetch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2634,7 +2618,7 @@ func TestCustomGitFetch(t *testing.T)
 
 ```
 searchKey: server.TestDecomposePerforceRemoteURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2645,7 +2629,7 @@ func TestDecomposePerforceRemoteURL(t *testing.T)
 
 ```
 searchKey: server.TestEmptyCustomGitFetch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2656,7 +2640,7 @@ func TestEmptyCustomGitFetch(t *testing.T)
 
 ```
 searchKey: server.TestFlushingResponseWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2667,7 +2651,7 @@ func TestFlushingResponseWriter(t *testing.T)
 
 ```
 searchKey: server.TestFreeUpSpace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2678,7 +2662,7 @@ func TestFreeUpSpace(t *testing.T)
 
 ```
 searchKey: server.TestGitGCAuto
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2693,7 +2677,7 @@ They are stable today, but may become flaky in the future if/when the relevant i
 
 ```
 searchKey: server.TestHandleRepoUpdate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2704,7 +2688,7 @@ func TestHandleRepoUpdate(t *testing.T)
 
 ```
 searchKey: server.TestHostnameMatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2715,7 +2699,7 @@ func TestHostnameMatch(t *testing.T)
 
 ```
 searchKey: server.TestHowManyBytesToFree
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2726,7 +2710,7 @@ func TestHowManyBytesToFree(t *testing.T)
 
 ```
 searchKey: server.TestJitterDuration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2737,7 +2721,7 @@ func TestJitterDuration(t *testing.T)
 
 ```
 searchKey: server.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2748,7 +2732,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: server.TestMaybeCorruptStderrRe
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2759,7 +2743,7 @@ func TestMaybeCorruptStderrRe(t *testing.T)
 
 ```
 searchKey: server.TestProgressWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2770,7 +2754,7 @@ func TestProgressWriter(t *testing.T)
 
 ```
 searchKey: server.TestRemoveBadRefs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2781,7 +2765,7 @@ func TestRemoveBadRefs(t *testing.T)
 
 ```
 searchKey: server.TestRemoveRepoDirectory
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2792,7 +2776,7 @@ func TestRemoveRepoDirectory(t *testing.T)
 
 ```
 searchKey: server.TestRemoveRepoDirectory_Empty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2803,7 +2787,7 @@ func TestRemoveRepoDirectory_Empty(t *testing.T)
 
 ```
 searchKey: server.TestRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2814,7 +2798,7 @@ func TestRequest(t *testing.T)
 
 ```
 searchKey: server.TestSSHAgent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2825,7 +2809,7 @@ func TestSSHAgent(t *testing.T)
 
 ```
 searchKey: server.TestServer_handleGet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2836,7 +2820,7 @@ func TestServer_handleGet(t *testing.T)
 
 ```
 searchKey: server.TestServer_handleGet_invalid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2847,7 +2831,7 @@ func TestServer_handleGet_invalid(t *testing.T)
 
 ```
 searchKey: server.TestServer_handleList
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2858,7 +2842,7 @@ func TestServer_handleList(t *testing.T)
 
 ```
 searchKey: server.TestServer_handleP4Exec
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2869,7 +2853,7 @@ func TestServer_handleP4Exec(t *testing.T)
 
 ```
 searchKey: server.TestServer_handleRepoInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2880,7 +2864,7 @@ func TestServer_handleRepoInfo(t *testing.T)
 
 ```
 searchKey: server.TestSetupAndClearTmp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2891,7 +2875,7 @@ func TestSetupAndClearTmp(t *testing.T)
 
 ```
 searchKey: server.TestSetupAndClearTmp_Empty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2902,7 +2886,7 @@ func TestSetupAndClearTmp_Empty(t *testing.T)
 
 ```
 searchKey: server.TestSyncRepoState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2913,7 +2897,7 @@ func TestSyncRepoState(t *testing.T)
 
 ```
 searchKey: server.TestUpdateFileIfDifferent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2924,7 +2908,7 @@ func TestUpdateFileIfDifferent(t *testing.T)
 
 ```
 searchKey: server.TestUrlRedactor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2935,7 +2919,7 @@ func TestUrlRedactor(t *testing.T)
 
 ```
 searchKey: server.Test_Gitolite_listRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2946,7 +2930,7 @@ func Test_Gitolite_listRepos(t *testing.T)
 
 ```
 searchKey: server.assertPaths
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2959,7 +2943,7 @@ assertPaths checks that all paths under want exist. It excludes non-empty direct
 
 ```
 searchKey: server.bestEffortWalk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2976,7 +2960,7 @@ filepath.Walk can return errors if we run into permission errors or a file disap
 
 ```
 searchKey: server.buildCustomFetchMappings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2987,7 +2971,7 @@ func buildCustomFetchMappings(c []*schema.CustomGitFetchMapping) map[string][]st
 
 ```
 searchKey: server.checkMaybeCorruptRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2998,7 +2982,7 @@ func checkMaybeCorruptRepo(repo api.RepoName, dir GitDir, stderr string)
 
 ```
 searchKey: server.checkSpecArgSafety
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3011,7 +2995,7 @@ checkSpecArgSafety returns a non-nil err if spec begins with a "-", which could 
 
 ```
 searchKey: server.cleanUpTmpRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3022,7 +3006,7 @@ func cleanUpTmpRepo(path string)
 
 ```
 searchKey: server.cloneStatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3033,7 +3017,7 @@ func cloneStatus(cloned, cloning bool) types.CloneStatus
 
 ```
 searchKey: server.computeLatestCommitTimestamp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3046,7 +3030,7 @@ computeLatestCommitTimestamp returns the timestamp of the most recent commit if 
 
 ```
 searchKey: server.computeRefHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3059,7 +3043,7 @@ computeRefHash returns a hash of the refs for dir. The hash should only change i
 
 ```
 searchKey: server.configureRemoteGitCommand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3070,7 +3054,7 @@ func configureRemoteGitCommand(cmd *exec.Cmd, tlsConf *tlsConfig)
 
 ```
 searchKey: server.customFetchCmd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3081,7 +3065,7 @@ func customFetchCmd(ctx context.Context, remoteURL *vcs.URL) *exec.Cmd
 
 ```
 searchKey: server.debounce
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3094,7 +3078,7 @@ debounce() provides some filtering to prevent spammy requests for the same repos
 
 ```
 searchKey: server.decomposePerforceRemoteURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3107,7 +3091,7 @@ decomposePerforceRemoteURL decomposes information back from a clone URL for a Pe
 
 ```
 searchKey: server.dirSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3120,7 +3104,7 @@ dirSize returns the total size in bytes of all the files under d.
 
 ```
 searchKey: server.ensureHEAD
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3133,7 +3117,7 @@ ensureHEAD verifies that there is a HEAD file within the repo, and that it is of
 
 ```
 searchKey: server.ensureRefPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3148,7 +3132,7 @@ Copied from git package to avoid cycle import when testing git package.
 
 ```
 searchKey: server.errorString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3161,7 +3145,7 @@ errorString returns the error string. If err is nil it returns the empty string.
 
 ```
 searchKey: server.flowrateWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3178,7 +3162,7 @@ Google Compute Engine has a network bandwidth of about 1.64 Gbps between nodes, 
 
 ```
 searchKey: server.fsync
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3200,7 +3184,7 @@ func generateSocketFilename() string
 
 ```
 searchKey: server.getGitolitePhabCallsign
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3211,7 +3195,7 @@ func getGitolitePhabCallsign(ctx context.Context, gconf *schema.GitoliteConnecti
 
 ```
 searchKey: server.getRecloneTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3224,7 +3208,7 @@ getRecloneTime returns an approximate time a repository is cloned. If the value 
 
 ```
 searchKey: server.getRepositoryType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3237,7 +3221,7 @@ getRepositoryType returns the type of the repository.
 
 ```
 searchKey: server.gitConfigGet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3248,7 +3232,7 @@ func gitConfigGet(dir GitDir, key string) (string, error)
 
 ```
 searchKey: server.gitConfigSet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3259,7 +3243,7 @@ func gitConfigSet(dir GitDir, key, value string) error
 
 ```
 searchKey: server.gitConfigUnset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3270,7 +3254,7 @@ func gitConfigUnset(dir GitDir, key string) error
 
 ```
 searchKey: server.gitDirModTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3281,7 +3265,7 @@ func gitDirModTime(d GitDir) (time.Time, error)
 
 ```
 searchKey: server.gitGC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3294,7 +3278,7 @@ gitGC will invoke `git-gc` to clean up any garbage in the repo. It will operate 
 
 ```
 searchKey: server.hackilyGetHTTPFlusher
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3309,7 +3293,7 @@ I (@sqs) wrote this hack instead of fixing it upstream immediately because seems
 
 ```
 searchKey: server.honeySampleRate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3339,7 +3323,7 @@ func init()
 
 ```
 searchKey: server.isAbsoluteRevision
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3356,7 +3340,7 @@ copied from internal/vcs/git to avoid cyclic import
 
 ```
 searchKey: server.isAlwaysCloningTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3367,7 +3351,7 @@ func isAlwaysCloningTest(name api.RepoName) bool
 
 ```
 searchKey: server.isEmptyDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3378,7 +3362,7 @@ func isEmptyDir(path string) (bool, error)
 
 ```
 searchKey: server.jitterDuration
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3391,7 +3375,7 @@ jitterDuration returns a duration between [0, d) based on key. This is like a ra
 
 ```
 searchKey: server.makeFakeRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3402,7 +3386,7 @@ func makeFakeRepo(d string, sizeBytes int) error
 
 ```
 searchKey: server.makeSingleCommitRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3415,7 +3399,7 @@ makeSingleCommitRepo make create a new repo with a single commit and returns the
 
 ```
 searchKey: server.mapToLog15Ctx
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3428,7 +3412,7 @@ mapToLog15Ctx translates a map to log15 context fields.
 
 ```
 searchKey: server.mkFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3439,7 +3423,7 @@ func mkFiles(t *testing.T, root string, paths ...string)
 
 ```
 searchKey: server.p4ping
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3452,7 +3436,7 @@ p4ping sends one message to the Perforce server to check connectivity.
 
 ```
 searchKey: server.p4pingWithTrust
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3465,7 +3449,7 @@ p4pingWithTrust attempts to ping the Perforce server and performs a trust operat
 
 ```
 searchKey: server.p4trust
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3478,7 +3462,7 @@ p4trust blindly accepts fingerprint of the Perforce server.
 
 ```
 searchKey: server.quickRevParseHead
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3491,7 +3475,7 @@ quickRevParseHead best-effort mimics the execution of `git rev-parse HEAD`, but 
 
 ```
 searchKey: server.quickSymbolicRefHead
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3504,7 +3488,7 @@ quickSymbolicRefHead best-effort mimics the execution of `git symbolic-ref HEAD`
 
 ```
 searchKey: server.readCloneProgress
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3517,7 +3501,7 @@ readCloneProgress scans the reader and saves the most recent line of output as t
 
 ```
 searchKey: server.refspecOverridesFetchCmd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3530,7 +3514,7 @@ HACK(keegancsmith) workaround to experiment with cloning less in a large monorep
 
 ```
 searchKey: server.removeBadRefs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3549,7 +3533,7 @@ Instead we just remove this ref.
 
 ```
 searchKey: server.removeFileOlderThan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3562,7 +3546,7 @@ removeFileOlderThan removes path if its mtime is older than maxAge. If the file 
 
 ```
 searchKey: server.renameAndSync
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3575,7 +3559,7 @@ renameAndSync will do an os.Rename followed by fsync to ensure the rename is rec
 
 ```
 searchKey: server.runCmd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3586,7 +3570,7 @@ func runCmd(t *testing.T, dir string, cmd string, arg ...string) string
 
 ```
 searchKey: server.runCommand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3599,7 +3583,7 @@ runCommand runs the command and returns the exit status. All clients of this fun
 
 ```
 searchKey: server.runWith
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3612,7 +3596,7 @@ runWithRemoteOpts runs the command after applying the remote options. If progres
 
 ```
 searchKey: server.runWithRemoteOpts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3623,7 +3607,7 @@ func runWithRemoteOpts(ctx context.Context, cmd *exec.Cmd, progress io.Writer) (
 
 ```
 searchKey: server.scanCRLF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3636,7 +3620,7 @@ scanCRLF is similar to bufio.ScanLines except it splits on both '\r' and '\n' an
 
 ```
 searchKey: server.setGitAttributes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3649,7 +3633,7 @@ setGitAttributes writes our global gitattributes to gitDir/info/attributes. This
 
 ```
 searchKey: server.setHEAD
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3662,7 +3646,7 @@ setHEAD configures git repo defaults (such as what HEAD is) which are needed for
 
 ```
 searchKey: server.setLastChanged
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3681,7 +3665,7 @@ If show-ref fails, we use rev-list to determine whether that's just an empty rep
 
 ```
 searchKey: server.setRecloneTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3694,7 +3678,7 @@ setRecloneTime sets the time a repository is cloned.
 
 ```
 searchKey: server.setRepositoryType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3707,7 +3691,7 @@ setRepositoryType sets the type of the repository.
 
 ```
 searchKey: server.shortGitCommandSlow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3720,7 +3704,7 @@ shortGitCommandSlow returns the threshold for regarding an git command as slow. 
 
 ```
 searchKey: server.shortGitCommandTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3733,7 +3717,7 @@ shortGitCommandTimeout returns the timeout for git commands that should not take
 
 ```
 searchKey: server.staticGetRemoteURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3744,7 +3728,7 @@ func staticGetRemoteURL(remote string) func(context.Context, api.RepoName) (stri
 
 ```
 searchKey: server.updateFileIfDifferent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3770,7 +3754,7 @@ HACK(keegancsmith) workaround to experiment with cloning less in a large monorep
 
 ```
 searchKey: server.wrapCmdError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3783,7 +3767,7 @@ wrapCmdError will wrap errors for cmd to include the arguments. If the error is 
 
 ```
 searchKey: server.writeFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3794,7 +3778,7 @@ func writeFile(t *testing.T, path string, content []byte)
 
 ```
 searchKey: server.writeTempFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

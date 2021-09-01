@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/session",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -98,7 +97,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -170,7 +168,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -310,7 +307,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -331,7 +327,7 @@
                 "newPage": false,
                 "searchKey": "session.CookieMiddleware",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -353,7 +349,7 @@
                 "newPage": false,
                 "searchKey": "session.CookieMiddlewareWithCSRFSafety",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -375,7 +371,7 @@
                 "newPage": false,
                 "searchKey": "session.GetData",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -397,7 +393,7 @@
                 "newPage": false,
                 "searchKey": "session.InvalidateSessionCurrentUser",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -419,7 +415,7 @@
                 "newPage": false,
                 "searchKey": "session.InvalidateSessionsByID",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -441,7 +437,7 @@
                 "newPage": false,
                 "searchKey": "session.NewRedisStore",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -485,7 +481,7 @@
                 "newPage": false,
                 "searchKey": "session.ResetMockSessionStore",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -507,7 +503,7 @@
                 "newPage": false,
                 "searchKey": "session.SetActor",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -529,7 +525,7 @@
                 "newPage": false,
                 "searchKey": "session.SetData",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -551,7 +547,7 @@
                 "newPage": false,
                 "searchKey": "session.SetSessionStore",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -573,7 +569,7 @@
                 "newPage": false,
                 "searchKey": "session.TestCookieMiddleware",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -597,7 +593,7 @@
                 "newPage": false,
                 "searchKey": "session.TestManualSessionExpiry",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -621,7 +617,7 @@
                 "newPage": false,
                 "searchKey": "session.TestMismatchedUserCreationFails",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -645,7 +641,7 @@
                 "newPage": false,
                 "searchKey": "session.TestOldUserSessionSucceeds",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -669,7 +665,7 @@
                 "newPage": false,
                 "searchKey": "session.TestRecoverFromInvalidCookieValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -693,7 +689,7 @@
                 "newPage": false,
                 "searchKey": "session.TestSessionExpiry",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -717,7 +713,7 @@
                 "newPage": false,
                 "searchKey": "session.TestSetActorDeleteSession",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -741,7 +737,7 @@
                 "newPage": false,
                 "searchKey": "session.authenticateByCookie",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -764,7 +760,7 @@
                 "newPage": false,
                 "searchKey": "session.checkCookieDeleted",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -787,7 +783,7 @@
                 "newPage": false,
                 "searchKey": "session.deleteSession",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -810,7 +806,7 @@
                 "newPage": false,
                 "searchKey": "session.hasSessionCookie",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -856,7 +852,7 @@
                 "newPage": false,
                 "searchKey": "session.ping",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -879,7 +875,7 @@
                 "newPage": false,
                 "searchKey": "session.sessionCookie",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -902,7 +898,7 @@
                 "newPage": false,
                 "searchKey": "session.setSessionSecureOptions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -925,7 +921,7 @@
                 "newPage": false,
                 "searchKey": "session.waitForRedis",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

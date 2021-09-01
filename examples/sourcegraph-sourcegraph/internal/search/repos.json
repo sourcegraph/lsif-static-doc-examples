@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "internal/search/repos",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -74,7 +73,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -145,7 +143,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -186,7 +183,7 @@
                       "newPage": false,
                       "searchKey": "repos.computeExcludedRepositories",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -232,7 +229,7 @@
                       "newPage": false,
                       "searchKey": "repos.Options.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -299,7 +296,7 @@
                       "newPage": false,
                       "searchKey": "repos.RepoPath.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -321,7 +318,7 @@
                       "newPage": false,
                       "searchKey": "repos.RepoPath.value",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -367,7 +364,7 @@
                       "newPage": false,
                       "searchKey": "repos.RepoRegexpPattern.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -389,7 +386,7 @@
                       "newPage": false,
                       "searchKey": "repos.RepoRegexpPattern.value",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -435,7 +432,7 @@
                       "newPage": false,
                       "searchKey": "repos.Resolved.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -526,7 +523,7 @@
                       "newPage": false,
                       "searchKey": "repos.badRequestError.BadRequest",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -549,7 +546,7 @@
                       "newPage": false,
                       "searchKey": "repos.badRequestError.Cause",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -572,7 +569,7 @@
                       "newPage": false,
                       "searchKey": "repos.badRequestError.Error",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -647,7 +644,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -668,7 +664,7 @@
                 "newPage": false,
                 "searchKey": "repos.BenchmarkGetRevsForMatchedRepo",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -692,7 +688,7 @@
                 "newPage": false,
                 "searchKey": "repos.ExactlyOneRepo",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -714,7 +710,7 @@
                 "newPage": false,
                 "searchKey": "repos.RepoGroupsToIncludePatterns",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -736,7 +732,7 @@
                 "newPage": false,
                 "searchKey": "repos.ResolveRepoGroups",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -758,7 +754,7 @@
                 "newPage": false,
                 "searchKey": "repos.ResolveRepoGroupsFromSettings",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -802,7 +798,7 @@
                 "newPage": false,
                 "searchKey": "repos.TestDefaultRepositories",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -826,7 +822,7 @@
                 "newPage": false,
                 "searchKey": "repos.TestMain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -850,7 +846,7 @@
                 "newPage": false,
                 "searchKey": "repos.TestRepoGroupValuesToRegexp",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -874,7 +870,7 @@
                 "newPage": false,
                 "searchKey": "repos.TestResolveRepositoriesWithSearchContext",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -898,7 +894,7 @@
                 "newPage": false,
                 "searchKey": "repos.TestResolveRepositoriesWithUserSearchContext",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -922,7 +918,7 @@
                 "newPage": false,
                 "searchKey": "repos.TestRevisionValidation",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -946,7 +942,7 @@
                 "newPage": false,
                 "searchKey": "repos.TestSearchRevspecs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -970,7 +966,7 @@
                 "newPage": false,
                 "searchKey": "repos.TestUseDefaultReposIfMissingOrGlobalSearchContext",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -994,7 +990,7 @@
                 "newPage": false,
                 "searchKey": "repos.UnionRegExps",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1016,7 +1012,7 @@
                 "newPage": false,
                 "searchKey": "repos.defaultRepositories",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1039,7 +1035,7 @@
                 "newPage": false,
                 "searchKey": "repos.filterRepoHasCommitAfter",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1062,7 +1058,7 @@
                 "newPage": false,
                 "searchKey": "repos.findPatternRevs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1085,7 +1081,7 @@
                 "newPage": false,
                 "searchKey": "repos.getRevsForMatchedRepo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1108,7 +1104,7 @@
                 "newPage": false,
                 "searchKey": "repos.optimizeRepoPatternWithHeuristics",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1131,7 +1127,7 @@
                 "newPage": false,
                 "searchKey": "repos.repoGroupValuesToRegexp",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1154,7 +1150,7 @@
                 "newPage": false,
                 "searchKey": "repos.resolveVersionContext",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1177,7 +1173,7 @@
                 "newPage": false,
                 "searchKey": "repos.stringSliceToRevisionSpecifiers",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

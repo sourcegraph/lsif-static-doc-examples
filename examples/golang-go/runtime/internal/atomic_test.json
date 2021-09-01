@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "runtime/internal/atomic_test",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -74,7 +73,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -95,7 +93,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAnd",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -119,7 +117,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAnd8",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -143,7 +141,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAnd8Parallel",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -167,7 +165,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAndParallel",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -191,7 +189,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAtomicLoad",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -215,7 +213,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAtomicLoad64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -239,7 +237,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAtomicStore",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -263,7 +261,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkAtomicStore64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -287,7 +285,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkCas",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -311,7 +309,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkCas64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -335,7 +333,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkOr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -359,7 +357,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkOr8",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -383,7 +381,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkOr8Parallel",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -407,7 +405,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkOrParallel",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -431,7 +429,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkXadd",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -455,7 +453,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkXadd64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -479,7 +477,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkXchg",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -503,7 +501,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.BenchmarkXchg64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -527,7 +525,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.TestAnd",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -551,7 +549,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.TestAnd8",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -575,7 +573,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.TestBitwiseContended",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -599,7 +597,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.TestBitwiseContended8",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -623,7 +621,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.TestOr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -647,7 +645,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.TestOr8",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -671,7 +669,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.TestStorepNoWB",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -695,7 +693,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.TestUnaligned64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -719,7 +717,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.TestXadduintptr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -743,7 +741,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.TestXadduintptrOnUint64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -767,7 +765,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.runParallel",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -790,7 +788,7 @@
                 "newPage": false,
                 "searchKey": "atomic_test.shouldPanic",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

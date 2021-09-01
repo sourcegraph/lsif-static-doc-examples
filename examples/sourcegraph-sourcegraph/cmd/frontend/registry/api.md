@@ -107,10 +107,6 @@ Package api contains a partial implementation of the extension registry.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="WorkInProgressExtensionTitlePostgreSQLPattern" href="#WorkInProgressExtensionTitlePostgreSQLPattern">const WorkInProgressExtensionTitlePostgreSQLPattern</a>
 
 ```
@@ -127,10 +123,6 @@ WorkInProgressExtensionTitlePostgreSQLPattern is the PostgreSQL "SIMILAR TO" pat
 NOTE: Keep this pattern in sync with IsWorkInProgressExtension. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="CountLocalRegistryExtensions" href="#CountLocalRegistryExtensions">var CountLocalRegistryExtensions</a>
 
@@ -356,10 +348,6 @@ var strnilptr *string
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ExtensionRegistryMutationResult" href="#ExtensionRegistryMutationResult">type ExtensionRegistryMutationResult struct</a>
 
 ```
@@ -405,7 +393,7 @@ RegistryExtensionID identifies a registry extension, either locally or on a remo
 
 ```
 searchKey: api.UnmarshalRegistryExtensionID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -436,7 +424,7 @@ extensionManifest implements the GraphQL type ExtensionManifest.
 
 ```
 searchKey: api.extensionManifest.BundleURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -447,7 +435,7 @@ func (r *extensionManifest) BundleURL() (*string, error)
 
 ```
 searchKey: api.extensionManifest.Description
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -458,7 +446,7 @@ func (r *extensionManifest) Description() (*string, error)
 
 ```
 searchKey: api.extensionManifest.Raw
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -469,7 +457,7 @@ func (r *extensionManifest) Raw() string
 
 ```
 searchKey: api.extensionManifest.parse
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -569,7 +557,7 @@ func (r *extensionRegistryResolver) FilterRemoteExtensions(ids []string) []strin
 
 ```
 searchKey: api.extensionRegistryResolver.ImplementsLocalExtensionRegistry
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -582,7 +570,7 @@ ImplementsLocalExtensionRegistry reports whether there is an implementation of a
 
 ```
 searchKey: api.extensionRegistryResolver.LocalExtensionIDPrefix
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -821,7 +809,7 @@ registryExtensionRemoteResolver implements the GraphQL type RegistryExtension wi
 
 ```
 searchKey: api.registryExtensionRemoteResolver.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -832,7 +820,7 @@ func (r *registryExtensionRemoteResolver) CreatedAt() *graphqlbackend.DateTime
 
 ```
 searchKey: api.registryExtensionRemoteResolver.ExtensionID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -843,7 +831,7 @@ func (r *registryExtensionRemoteResolver) ExtensionID() string
 
 ```
 searchKey: api.registryExtensionRemoteResolver.ExtensionIDWithoutRegistry
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -854,7 +842,7 @@ func (r *registryExtensionRemoteResolver) ExtensionIDWithoutRegistry() string
 
 ```
 searchKey: api.registryExtensionRemoteResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -865,7 +853,7 @@ func (r *registryExtensionRemoteResolver) ID() graphql.ID
 
 ```
 searchKey: api.registryExtensionRemoteResolver.IsLocal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -876,7 +864,7 @@ func (r *registryExtensionRemoteResolver) IsLocal() bool
 
 ```
 searchKey: api.registryExtensionRemoteResolver.IsWorkInProgress
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -898,7 +886,7 @@ func (r *registryExtensionRemoteResolver) Manifest(context.Context) (graphqlback
 
 ```
 searchKey: api.registryExtensionRemoteResolver.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -931,7 +919,7 @@ func (r *registryExtensionRemoteResolver) Publisher(ctx context.Context) (graphq
 
 ```
 searchKey: api.registryExtensionRemoteResolver.RegistryName
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -942,7 +930,7 @@ func (r *registryExtensionRemoteResolver) RegistryName() (string, error)
 
 ```
 searchKey: api.registryExtensionRemoteResolver.RemoteURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -953,7 +941,7 @@ func (r *registryExtensionRemoteResolver) RemoteURL() *string
 
 ```
 searchKey: api.registryExtensionRemoteResolver.URL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -964,7 +952,7 @@ func (r *registryExtensionRemoteResolver) URL() string
 
 ```
 searchKey: api.registryExtensionRemoteResolver.UUID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -975,7 +963,7 @@ func (r *registryExtensionRemoteResolver) UUID() string
 
 ```
 searchKey: api.registryExtensionRemoteResolver.UpdatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -995,15 +983,11 @@ func (r *registryExtensionRemoteResolver) ViewerCanAdminister(ctx context.Contex
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="FilterRegistryExtensions" href="#FilterRegistryExtensions">func FilterRegistryExtensions(extensions []*registry.Extension, query string) []*registry.Extension</a>
 
 ```
 searchKey: api.FilterRegistryExtensions
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1016,7 +1000,7 @@ FilterRegistryExtensions returns the subset of extensions that match the query. 
 
 ```
 searchKey: api.FindRegistryExtension
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1029,7 +1013,7 @@ FindRegistryExtension returns the first (and, hopefully, only, although that's n
 
 ```
 searchKey: api.GetExtensionByExtensionID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1046,7 +1030,7 @@ The format of an extension ID is [host/]publisher/name. If the host is omitted, 
 
 ```
 searchKey: api.GetFeaturedExtensions
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1074,7 +1058,7 @@ GetLocalRegistryExtensionIDPrefix returns the extension ID prefix (if any) of ex
 
 ```
 searchKey: api.IsWorkInProgressExtension
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1091,7 +1075,7 @@ NOTE: Keep this pattern in sync with WorkInProgressExtensionTitlePostgreSQLPatte
 
 ```
 searchKey: api.MarshalRegistryExtensionID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1102,7 +1086,7 @@ func MarshalRegistryExtensionID(id RegistryExtensionID) graphql.ID
 
 ```
 searchKey: api.NewExtensionManifest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1115,7 +1099,7 @@ NewExtensionManifest creates a new resolver for the GraphQL type ExtensionManife
 
 ```
 searchKey: api.ParseExtensionID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1128,7 +1112,7 @@ ParseExtensionID parses an extension ID of the form [host/]publisher/name (where
 
 ```
 searchKey: api.SplitExtensionID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1141,7 +1125,7 @@ SplitExtensionID splits an extension ID of the form [host/]publisher/name (where
 
 ```
 searchKey: api.TestGetExtensionByExtensionID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1152,7 +1136,7 @@ func TestGetExtensionByExtensionID(t *testing.T)
 
 ```
 searchKey: api.TestIsWorkInProgressExtension
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1163,7 +1147,7 @@ func TestIsWorkInProgressExtension(t *testing.T)
 
 ```
 searchKey: api.TestParseExtensionID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1174,7 +1158,7 @@ func TestParseExtensionID(t *testing.T)
 
 ```
 searchKey: api.TestSplitExtensionID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1185,7 +1169,7 @@ func TestSplitExtensionID(t *testing.T)
 
 ```
 searchKey: api.getExtensionByExtensionID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1209,7 +1193,7 @@ getLocalRegistryName returns the name of the local registry.
 
 ```
 searchKey: api.getRemoteRegistryExtension
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1257,7 +1241,7 @@ func init()
 
 ```
 searchKey: api.listRemoteRegistryExtensions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1270,7 +1254,7 @@ listRemoteRegistryExtensions lists the remote registry extensions and rewrites t
 
 ```
 searchKey: api.makePrioritizeExtensionIDsSet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1283,7 +1267,7 @@ makePrioritizeExtensionIDsSet returns a set whose values are the elements of arg
 
 ```
 searchKey: api.registryExtensionByID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1294,7 +1278,7 @@ func registryExtensionByID(ctx context.Context, db dbutil.DB, id graphql.ID) (gr
 
 ```
 searchKey: api.strptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1305,7 +1289,7 @@ func strptr(s string) *string
 
 ```
 searchKey: api.strptrptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

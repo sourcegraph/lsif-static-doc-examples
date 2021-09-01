@@ -382,7 +382,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="LargestSubnormalFloat64" href="#LargestSubnormalFloat64">const LargestSubnormalFloat64</a>
@@ -415,7 +415,7 @@ arguments and expected results for boundary cases
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GlobalB" href="#GlobalB">var GlobalB</a>
@@ -2806,7 +2806,7 @@ var yM3SC = []float64{
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="fi" href="#fi">type fi struct</a>
@@ -2841,14 +2841,14 @@ type floatTest struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkAbs" href="#BenchmarkAbs">func BenchmarkAbs(b *testing.B)</a>
 
 ```
 searchKey: math_test.BenchmarkAbs
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2859,7 +2859,7 @@ func BenchmarkAbs(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAcos
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2870,7 +2870,7 @@ func BenchmarkAcos(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAcosh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2881,7 +2881,7 @@ func BenchmarkAcosh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAsin
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2892,7 +2892,7 @@ func BenchmarkAsin(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAsinh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2903,7 +2903,7 @@ func BenchmarkAsinh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAtan
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2914,7 +2914,7 @@ func BenchmarkAtan(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAtan2
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2925,7 +2925,7 @@ func BenchmarkAtan2(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkAtanh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2936,7 +2936,7 @@ func BenchmarkAtanh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkCbrt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2947,7 +2947,7 @@ func BenchmarkCbrt(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkCeil
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2958,7 +2958,7 @@ func BenchmarkCeil(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkCopysign
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2969,7 +2969,7 @@ func BenchmarkCopysign(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkCos
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2980,7 +2980,7 @@ func BenchmarkCos(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkCosh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2991,7 +2991,7 @@ func BenchmarkCosh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkDim
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3002,7 +3002,7 @@ func BenchmarkDim(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkErf
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3013,7 +3013,7 @@ func BenchmarkErf(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkErfc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3024,7 +3024,7 @@ func BenchmarkErfc(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkErfcinv
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3035,7 +3035,7 @@ func BenchmarkErfcinv(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkErfinv
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3046,7 +3046,7 @@ func BenchmarkErfinv(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkExp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3057,7 +3057,7 @@ func BenchmarkExp(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkExp2
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3068,7 +3068,7 @@ func BenchmarkExp2(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkExp2Go
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3079,7 +3079,7 @@ func BenchmarkExp2Go(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkExpGo
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3090,7 +3090,7 @@ func BenchmarkExpGo(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkExpm1
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3101,7 +3101,7 @@ func BenchmarkExpm1(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFMA
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3112,7 +3112,7 @@ func BenchmarkFMA(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFloat32bits
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3123,7 +3123,7 @@ func BenchmarkFloat32bits(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFloat32frombits
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3134,7 +3134,7 @@ func BenchmarkFloat32frombits(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFloat64bits
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3145,7 +3145,7 @@ func BenchmarkFloat64bits(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFloat64frombits
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3156,7 +3156,7 @@ func BenchmarkFloat64frombits(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFloor
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3167,7 +3167,7 @@ func BenchmarkFloor(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkFrexp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3178,7 +3178,7 @@ func BenchmarkFrexp(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkGamma
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3189,7 +3189,7 @@ func BenchmarkGamma(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkHypot
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3200,7 +3200,7 @@ func BenchmarkHypot(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkHypotGo
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3211,7 +3211,7 @@ func BenchmarkHypotGo(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkIlogb
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3222,7 +3222,7 @@ func BenchmarkIlogb(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkJ0
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3233,7 +3233,7 @@ func BenchmarkJ0(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkJ1
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3244,7 +3244,7 @@ func BenchmarkJ1(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkJn
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3255,7 +3255,7 @@ func BenchmarkJn(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLdexp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3266,7 +3266,7 @@ func BenchmarkLdexp(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLgamma
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3277,7 +3277,7 @@ func BenchmarkLgamma(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLog
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3288,7 +3288,7 @@ func BenchmarkLog(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLog10
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3299,7 +3299,7 @@ func BenchmarkLog10(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLog1p
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3310,7 +3310,7 @@ func BenchmarkLog1p(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLog2
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3321,7 +3321,7 @@ func BenchmarkLog2(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkLogb
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3332,7 +3332,7 @@ func BenchmarkLogb(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkMax
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3343,7 +3343,7 @@ func BenchmarkMax(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkMin
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3354,7 +3354,7 @@ func BenchmarkMin(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkMod
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3365,7 +3365,7 @@ func BenchmarkMod(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkModf
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3376,7 +3376,7 @@ func BenchmarkModf(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkNextafter32
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3387,7 +3387,7 @@ func BenchmarkNextafter32(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkNextafter64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3398,7 +3398,7 @@ func BenchmarkNextafter64(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkPow10Neg
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3409,7 +3409,7 @@ func BenchmarkPow10Neg(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkPow10Pos
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3420,7 +3420,7 @@ func BenchmarkPow10Pos(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkPowFrac
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3431,7 +3431,7 @@ func BenchmarkPowFrac(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkPowInt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3442,7 +3442,7 @@ func BenchmarkPowInt(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkRemainder
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3453,7 +3453,7 @@ func BenchmarkRemainder(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkRound
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3464,7 +3464,7 @@ func BenchmarkRound(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkRoundToEven
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3475,7 +3475,7 @@ func BenchmarkRoundToEven(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSignbit
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3486,7 +3486,7 @@ func BenchmarkSignbit(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSin
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3497,7 +3497,7 @@ func BenchmarkSin(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSincos
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3508,7 +3508,7 @@ func BenchmarkSincos(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSinh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3519,7 +3519,7 @@ func BenchmarkSinh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSqrtGoLatency
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3530,7 +3530,7 @@ func BenchmarkSqrtGoLatency(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSqrtIndirect
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3541,7 +3541,7 @@ func BenchmarkSqrtIndirect(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSqrtIndirectLatency
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3552,7 +3552,7 @@ func BenchmarkSqrtIndirectLatency(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSqrtLatency
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3563,7 +3563,7 @@ func BenchmarkSqrtLatency(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkSqrtPrime
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3574,7 +3574,7 @@ func BenchmarkSqrtPrime(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkTan
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3585,7 +3585,7 @@ func BenchmarkTan(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkTanh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3596,7 +3596,7 @@ func BenchmarkTanh(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkTrunc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3607,7 +3607,7 @@ func BenchmarkTrunc(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkY0
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3618,7 +3618,7 @@ func BenchmarkY0(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkY1
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3629,7 +3629,7 @@ func BenchmarkY1(b *testing.B)
 
 ```
 searchKey: math_test.BenchmarkYn
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -4014,7 +4014,7 @@ func ExampleTrunc()
 
 ```
 searchKey: math_test.TestAbs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4025,7 +4025,7 @@ func TestAbs(t *testing.T)
 
 ```
 searchKey: math_test.TestAcos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4036,7 +4036,7 @@ func TestAcos(t *testing.T)
 
 ```
 searchKey: math_test.TestAcosh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4047,7 +4047,7 @@ func TestAcosh(t *testing.T)
 
 ```
 searchKey: math_test.TestAsin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4058,7 +4058,7 @@ func TestAsin(t *testing.T)
 
 ```
 searchKey: math_test.TestAsinh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4069,7 +4069,7 @@ func TestAsinh(t *testing.T)
 
 ```
 searchKey: math_test.TestAtan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4080,7 +4080,7 @@ func TestAtan(t *testing.T)
 
 ```
 searchKey: math_test.TestAtan2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4091,7 +4091,7 @@ func TestAtan2(t *testing.T)
 
 ```
 searchKey: math_test.TestAtanh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4102,7 +4102,7 @@ func TestAtanh(t *testing.T)
 
 ```
 searchKey: math_test.TestCbrt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4113,7 +4113,7 @@ func TestCbrt(t *testing.T)
 
 ```
 searchKey: math_test.TestCeil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4124,7 +4124,7 @@ func TestCeil(t *testing.T)
 
 ```
 searchKey: math_test.TestCopysign
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4135,7 +4135,7 @@ func TestCopysign(t *testing.T)
 
 ```
 searchKey: math_test.TestCos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4146,7 +4146,7 @@ func TestCos(t *testing.T)
 
 ```
 searchKey: math_test.TestCosh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4157,7 +4157,7 @@ func TestCosh(t *testing.T)
 
 ```
 searchKey: math_test.TestDim
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4168,7 +4168,7 @@ func TestDim(t *testing.T)
 
 ```
 searchKey: math_test.TestErf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4179,7 +4179,7 @@ func TestErf(t *testing.T)
 
 ```
 searchKey: math_test.TestErfc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4190,7 +4190,7 @@ func TestErfc(t *testing.T)
 
 ```
 searchKey: math_test.TestErfcinv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4201,7 +4201,7 @@ func TestErfcinv(t *testing.T)
 
 ```
 searchKey: math_test.TestErfinv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4212,7 +4212,7 @@ func TestErfinv(t *testing.T)
 
 ```
 searchKey: math_test.TestExp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4223,7 +4223,7 @@ func TestExp(t *testing.T)
 
 ```
 searchKey: math_test.TestExp2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4234,7 +4234,7 @@ func TestExp2(t *testing.T)
 
 ```
 searchKey: math_test.TestExpm1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4245,7 +4245,7 @@ func TestExpm1(t *testing.T)
 
 ```
 searchKey: math_test.TestFMA
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4256,7 +4256,7 @@ func TestFMA(t *testing.T)
 
 ```
 searchKey: math_test.TestFloat32Sqrt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4269,7 +4269,7 @@ TestFloat32Sqrt checks the correctness of the float32 square root optimization r
 
 ```
 searchKey: math_test.TestFloatMinMax
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4280,7 +4280,7 @@ func TestFloatMinMax(t *testing.T)
 
 ```
 searchKey: math_test.TestFloatMinima
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4291,7 +4291,7 @@ func TestFloatMinima(t *testing.T)
 
 ```
 searchKey: math_test.TestFloor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4302,7 +4302,7 @@ func TestFloor(t *testing.T)
 
 ```
 searchKey: math_test.TestFrexp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4313,7 +4313,7 @@ func TestFrexp(t *testing.T)
 
 ```
 searchKey: math_test.TestGamma
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4324,7 +4324,7 @@ func TestGamma(t *testing.T)
 
 ```
 searchKey: math_test.TestHugeCos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4337,7 +4337,7 @@ Check that trig values of huge angles return accurate results. This confirms tha
 
 ```
 searchKey: math_test.TestHugeSin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4348,7 +4348,7 @@ func TestHugeSin(t *testing.T)
 
 ```
 searchKey: math_test.TestHugeSinCos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4359,7 +4359,7 @@ func TestHugeSinCos(t *testing.T)
 
 ```
 searchKey: math_test.TestHugeTan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4370,7 +4370,7 @@ func TestHugeTan(t *testing.T)
 
 ```
 searchKey: math_test.TestHypot
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4381,7 +4381,7 @@ func TestHypot(t *testing.T)
 
 ```
 searchKey: math_test.TestHypotGo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4392,7 +4392,7 @@ func TestHypotGo(t *testing.T)
 
 ```
 searchKey: math_test.TestIlogb
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4403,7 +4403,7 @@ func TestIlogb(t *testing.T)
 
 ```
 searchKey: math_test.TestJ0
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4414,7 +4414,7 @@ func TestJ0(t *testing.T)
 
 ```
 searchKey: math_test.TestJ1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4425,7 +4425,7 @@ func TestJ1(t *testing.T)
 
 ```
 searchKey: math_test.TestJn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4436,7 +4436,7 @@ func TestJn(t *testing.T)
 
 ```
 searchKey: math_test.TestLargeCos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4449,7 +4449,7 @@ Check that math functions of high angle values return accurate results. [Since (
 
 ```
 searchKey: math_test.TestLargeSin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4460,7 +4460,7 @@ func TestLargeSin(t *testing.T)
 
 ```
 searchKey: math_test.TestLargeSincos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4471,7 +4471,7 @@ func TestLargeSincos(t *testing.T)
 
 ```
 searchKey: math_test.TestLargeTan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4482,7 +4482,7 @@ func TestLargeTan(t *testing.T)
 
 ```
 searchKey: math_test.TestLdexp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4493,7 +4493,7 @@ func TestLdexp(t *testing.T)
 
 ```
 searchKey: math_test.TestLgamma
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4504,7 +4504,7 @@ func TestLgamma(t *testing.T)
 
 ```
 searchKey: math_test.TestLog
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4515,7 +4515,7 @@ func TestLog(t *testing.T)
 
 ```
 searchKey: math_test.TestLog10
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4526,7 +4526,7 @@ func TestLog10(t *testing.T)
 
 ```
 searchKey: math_test.TestLog1p
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4537,7 +4537,7 @@ func TestLog1p(t *testing.T)
 
 ```
 searchKey: math_test.TestLog2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4548,7 +4548,7 @@ func TestLog2(t *testing.T)
 
 ```
 searchKey: math_test.TestLogb
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4559,7 +4559,7 @@ func TestLogb(t *testing.T)
 
 ```
 searchKey: math_test.TestMax
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4570,7 +4570,7 @@ func TestMax(t *testing.T)
 
 ```
 searchKey: math_test.TestMaxInt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4581,7 +4581,7 @@ func TestMaxInt(t *testing.T)
 
 ```
 searchKey: math_test.TestMaxUint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4592,7 +4592,7 @@ func TestMaxUint(t *testing.T)
 
 ```
 searchKey: math_test.TestMin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4603,7 +4603,7 @@ func TestMin(t *testing.T)
 
 ```
 searchKey: math_test.TestMod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4614,7 +4614,7 @@ func TestMod(t *testing.T)
 
 ```
 searchKey: math_test.TestModf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4625,7 +4625,7 @@ func TestModf(t *testing.T)
 
 ```
 searchKey: math_test.TestNaN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4636,7 +4636,7 @@ func TestNaN(t *testing.T)
 
 ```
 searchKey: math_test.TestNextafter32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4647,7 +4647,7 @@ func TestNextafter32(t *testing.T)
 
 ```
 searchKey: math_test.TestNextafter64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4658,7 +4658,7 @@ func TestNextafter64(t *testing.T)
 
 ```
 searchKey: math_test.TestPow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4669,7 +4669,7 @@ func TestPow(t *testing.T)
 
 ```
 searchKey: math_test.TestPow10
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4680,7 +4680,7 @@ func TestPow10(t *testing.T)
 
 ```
 searchKey: math_test.TestRemainder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4691,7 +4691,7 @@ func TestRemainder(t *testing.T)
 
 ```
 searchKey: math_test.TestRound
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4702,7 +4702,7 @@ func TestRound(t *testing.T)
 
 ```
 searchKey: math_test.TestRoundToEven
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4713,7 +4713,7 @@ func TestRoundToEven(t *testing.T)
 
 ```
 searchKey: math_test.TestSignbit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4724,7 +4724,7 @@ func TestSignbit(t *testing.T)
 
 ```
 searchKey: math_test.TestSin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4735,7 +4735,7 @@ func TestSin(t *testing.T)
 
 ```
 searchKey: math_test.TestSincos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4746,7 +4746,7 @@ func TestSincos(t *testing.T)
 
 ```
 searchKey: math_test.TestSinh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4757,7 +4757,7 @@ func TestSinh(t *testing.T)
 
 ```
 searchKey: math_test.TestSqrt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4768,7 +4768,7 @@ func TestSqrt(t *testing.T)
 
 ```
 searchKey: math_test.TestTan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4779,7 +4779,7 @@ func TestTan(t *testing.T)
 
 ```
 searchKey: math_test.TestTanh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4790,7 +4790,7 @@ func TestTanh(t *testing.T)
 
 ```
 searchKey: math_test.TestTrigReduce
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4803,7 +4803,7 @@ Check that trigReduce matches the standard reduction results for input values be
 
 ```
 searchKey: math_test.TestTrunc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4814,7 +4814,7 @@ func TestTrunc(t *testing.T)
 
 ```
 searchKey: math_test.TestY0
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4825,7 +4825,7 @@ func TestY0(t *testing.T)
 
 ```
 searchKey: math_test.TestY1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4836,7 +4836,7 @@ func TestY1(t *testing.T)
 
 ```
 searchKey: math_test.TestYn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4847,7 +4847,7 @@ func TestYn(t *testing.T)
 
 ```
 searchKey: math_test.alike
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4858,7 +4858,7 @@ func alike(a, b float64) bool
 
 ```
 searchKey: math_test.close
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4869,7 +4869,7 @@ func close(a, b float64) bool
 
 ```
 searchKey: math_test.isPrime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4880,7 +4880,7 @@ func isPrime(i int) bool
 
 ```
 searchKey: math_test.soclose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4891,7 +4891,7 @@ func soclose(a, b, e float64) bool
 
 ```
 searchKey: math_test.testExp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4902,7 +4902,7 @@ func testExp(t *testing.T, Exp func(float64) float64, name string)
 
 ```
 searchKey: math_test.testExp2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4913,7 +4913,7 @@ func testExp2(t *testing.T, Exp2 func(float64) float64, name string)
 
 ```
 searchKey: math_test.tolerance
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4924,7 +4924,7 @@ func tolerance(a, b, e float64) bool
 
 ```
 searchKey: math_test.veryclose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

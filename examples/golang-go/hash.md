@@ -20,10 +20,6 @@ Package hash provides interfaces for hash functions.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Hash" href="#Hash">type Hash interface</a>
 
 ```

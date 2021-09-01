@@ -21,7 +21,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BadKey" href="#BadKey">type BadKey struct</a>
@@ -133,7 +133,7 @@ TransparentKey is a key that performs no encryption or decryption, but errors if
 
 ```
 searchKey: testing.NewTransparentKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go

@@ -118,10 +118,6 @@ Package backend contains structs and functions which interact with our backends,
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="authzBypass" href="#authzBypass">const authzBypass</a>
 
 ```
@@ -167,10 +163,6 @@ const upsertVersionQuery = ...
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ErrMustBeSiteAdmin" href="#ErrMustBeSiteAdmin">var ErrMustBeSiteAdmin</a>
 
@@ -405,10 +397,6 @@ var verifyEmailTemplates = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrRepoSeeOther" href="#ErrRepoSeeOther">type ErrRepoSeeOther struct</a>
 
 ```
@@ -429,7 +417,7 @@ ErrRepoSeeOther indicates that the repo does not exist on this server but might 
 
 ```
 searchKey: backend.ErrRepoSeeOther.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -455,7 +443,7 @@ InsufficientAuthorizationError is an error that occurs when the authentication i
 
 ```
 searchKey: backend.InsufficientAuthorizationError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -466,7 +454,7 @@ func (e *InsufficientAuthorizationError) Error() string
 
 ```
 searchKey: backend.InsufficientAuthorizationError.Unauthorized
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -602,7 +590,7 @@ UpgradeError is returned by UpdateServiceVersion when it faces an upgrade policy
 
 ```
 searchKey: backend.UpgradeError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -637,7 +625,7 @@ type gitObjectInfo string
 
 ```
 searchKey: backend.gitObjectInfo.OID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -854,15 +842,11 @@ SendUserEmailOnFieldUpdate sends the user an email that important account inform
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CheckCurrentUserIsSiteAdmin" href="#CheckCurrentUserIsSiteAdmin">func CheckCurrentUserIsSiteAdmin(ctx context.Context, db dbutil.DB) error</a>
 
 ```
 searchKey: backend.CheckCurrentUserIsSiteAdmin
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -875,7 +859,7 @@ CheckCurrentUserIsSiteAdmin returns an error if the current user is NOT a site a
 
 ```
 searchKey: backend.CheckOrgAccess
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -890,7 +874,7 @@ It is used when an action on a user can be performed by the organization's membe
 
 ```
 searchKey: backend.CheckOrgAccessOrSiteAdmin
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -905,7 +889,7 @@ It is used when an action on a user can be performed by site admins and the orga
 
 ```
 searchKey: backend.CheckSameUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -918,7 +902,7 @@ CheckSameUser returns an error if the user is not the user specified by subjectU
 
 ```
 searchKey: backend.CheckSiteAdminOrSameUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -935,7 +919,7 @@ Returns an error containing the name of the given user.
 
 ```
 searchKey: backend.CheckUserIsSiteAdmin
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -948,7 +932,7 @@ CheckUserIsSiteAdmin returns an error if the user is NOT a site admin.
 
 ```
 searchKey: backend.CountGoImporters
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -963,7 +947,7 @@ TODO: The import path is not always the same as the repository name.
 
 ```
 searchKey: backend.CurrentUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -976,7 +960,7 @@ CurrentUser gets the current authenticated user It returns nil, nil if no user i
 
 ```
 searchKey: backend.GetFirstServiceVersion
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -989,7 +973,7 @@ GetFirstServiceVersion returns the first version registered for the given Source
 
 ```
 searchKey: backend.InventoryContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1002,7 +986,7 @@ InventoryContext returns the inventory context for computing the inventory for t
 
 ```
 searchKey: backend.IsValidUpgrade
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1030,7 +1014,7 @@ MakeEmailVerificationCode returns a random string that can be used as an email v
 
 ```
 searchKey: backend.MakePasswordResetURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1052,7 +1036,7 @@ func MakeRandomHardToGuessPassword() string
 
 ```
 searchKey: backend.SendUserEmailVerificationEmail
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1065,7 +1049,7 @@ SendUserEmailVerificationEmail sends an email to the user to verify the email ad
 
 ```
 searchKey: backend.TestCheckEmailAbuse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1076,7 +1060,7 @@ func TestCheckEmailAbuse(t *testing.T)
 
 ```
 searchKey: backend.TestCountGoImporters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1087,7 +1071,7 @@ func TestCountGoImporters(t *testing.T)
 
 ```
 searchKey: backend.TestGetFirstServiceVersion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1098,7 +1082,7 @@ func TestGetFirstServiceVersion(t *testing.T)
 
 ```
 searchKey: backend.TestIsPossibleExternallyImportableGoPackageDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1109,7 +1093,7 @@ func TestIsPossibleExternallyImportableGoPackageDir(t *testing.T)
 
 ```
 searchKey: backend.TestIsValidUpgrade
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1120,7 +1104,7 @@ func TestIsValidUpgrade(t *testing.T)
 
 ```
 searchKey: backend.TestListGoPackagesInRepoImprecise
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1131,7 +1115,7 @@ func TestListGoPackagesInRepoImprecise(t *testing.T)
 
 ```
 searchKey: backend.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1142,7 +1126,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: backend.TestReposGetInventory
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1153,7 +1137,7 @@ func TestReposGetInventory(t *testing.T)
 
 ```
 searchKey: backend.TestReposService_Get
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1164,7 +1148,7 @@ func TestReposService_Get(t *testing.T)
 
 ```
 searchKey: backend.TestReposService_List
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1175,7 +1159,7 @@ func TestReposService_List(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_Add
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1186,7 +1170,7 @@ func TestRepos_Add(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_GetCommit_repoupdaterError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1197,7 +1181,7 @@ func TestRepos_GetCommit_repoupdaterError(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_ResolveRev_commitIDSpecified_failsToResolve
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1208,7 +1192,7 @@ func TestRepos_ResolveRev_commitIDSpecified_failsToResolve(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1219,7 +1203,7 @@ func TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1230,7 +1214,7 @@ func TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev(t *testing.T)
 
 ```
 searchKey: backend.TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1241,7 +1225,7 @@ func TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch(t *testing.T)
 
 ```
 searchKey: backend.TestSendUserEmailOnFieldUpdate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1252,7 +1236,7 @@ func TestSendUserEmailOnFieldUpdate(t *testing.T)
 
 ```
 searchKey: backend.TestSendUserEmailVerificationEmail
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1263,7 +1247,7 @@ func TestSendUserEmailVerificationEmail(t *testing.T)
 
 ```
 searchKey: backend.TestUpdateServiceVersion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1274,7 +1258,7 @@ func TestUpdateServiceVersion(t *testing.T)
 
 ```
 searchKey: backend.UpdateServiceVersion
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1287,7 +1271,7 @@ UpdateServiceVersion updates the latest version for the given Sourcegraph servic
 
 ```
 searchKey: backend.WithAuthzBypass
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1302,7 +1286,7 @@ WithAuthzBypass returns a context that backend.CheckXyz funcs report as being a 
 
 ```
 searchKey: backend.checkEmailAbuse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1315,7 +1299,7 @@ checkEmailAbuse performs abuse prevention checks to prevent email abuse, i.e. us
 
 ```
 searchKey: backend.checkOrgAccess
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1328,7 +1312,7 @@ checkOrgAccess is a helper method used above which allows optionally allowing si
 
 ```
 searchKey: backend.checkUserIsOrgMember
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1339,7 +1323,7 @@ func checkUserIsOrgMember(ctx context.Context, db dbutil.DB, userID, orgID int32
 
 ```
 searchKey: backend.hasAuthzBypass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1361,7 +1345,7 @@ func init()
 
 ```
 searchKey: backend.isPossibleExternallyImportableGoPackageDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1372,7 +1356,7 @@ func isPossibleExternallyImportableGoPackageDir(dirPath string) bool
 
 ```
 searchKey: backend.listGoPackagesInRepoImprecise
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1385,7 +1369,7 @@ listGoPackagesInRepoImprecise returns a list of import paths for all (probable) 
 
 ```
 searchKey: backend.shouldRedirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1409,7 +1393,7 @@ testContext creates a new context.Context for use by tests
 
 ```
 searchKey: backend.trace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

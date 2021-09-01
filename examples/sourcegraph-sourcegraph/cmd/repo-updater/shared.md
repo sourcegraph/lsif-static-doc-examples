@@ -17,10 +17,6 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="port" href="#port">const port</a>
 
 ```
@@ -34,10 +30,6 @@ const port = "3182"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="stateHTMLTemplate" href="#stateHTMLTemplate">var stateHTMLTemplate</a>
 
 ```
@@ -50,10 +42,6 @@ var stateHTMLTemplate string
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="EnterpriseInit" href="#EnterpriseInit">type EnterpriseInit func(db *database/sql.DB, store *github.com/sourcegraph/sourcegraph/internal/repos.Store, keyring github.com/sourcegraph/sourcegraph/internal/encryption/keyring.Ring, cf *github.com/sourcegraph/sourcegraph/internal/httpcli.Factory, server *github.com/sourcegraph/sourcegraph/cmd/repo-updater/repoupdater.Server) []github.com/sourcegraph/sourcegraph/internal/debugserver.Dumper</a>
 
@@ -90,15 +78,11 @@ type scheduler interface {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Main" href="#Main">func Main(enterpriseInit EnterpriseInit)</a>
 
 ```
 searchKey: shared.Main
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -109,7 +93,7 @@ func Main(enterpriseInit EnterpriseInit)
 
 ```
 searchKey: shared.syncScheduler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -122,7 +106,7 @@ syncScheduler will periodically list the cloned repositories on gitserver and up
 
 ```
 searchKey: shared.watchSyncer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

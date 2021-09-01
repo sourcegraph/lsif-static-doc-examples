@@ -11,10 +11,6 @@ Package palette provides standard color palettes.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Plan9" href="#Plan9">var Plan9</a>
 
 ```

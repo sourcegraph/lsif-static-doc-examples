@@ -446,7 +446,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CloneInProgressDelay" href="#CloneInProgressDelay">const CloneInProgressDelay</a>
@@ -465,7 +465,7 @@ CloneInProgressDelay is the delay between processing attempts when a repo is cur
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DBStore" href="#DBStore">type DBStore interface</a>
@@ -515,7 +515,7 @@ DBStoreDeleteOverlappingDumpsFunc describes the behavior when the DeleteOverlapp
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -591,7 +591,7 @@ func (f *DBStoreDeleteOverlappingDumpsFunc) appendCall(r0 DBStoreDeleteOverlappi
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -634,7 +634,7 @@ DBStoreDeleteOverlappingDumpsFuncCall is an object that describes an invocation 
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -647,7 +647,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreDeleteOverlappingDumpsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -678,7 +678,7 @@ DBStoreDoneFunc describes the behavior when the Done method of the parent MockDB
 
 ```
 searchKey: worker.DBStoreDoneFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -754,7 +754,7 @@ func (f *DBStoreDoneFunc) appendCall(r0 DBStoreDoneFuncCall)
 
 ```
 searchKey: worker.DBStoreDoneFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -785,7 +785,7 @@ DBStoreDoneFuncCall is an object that describes an invocation of method Done on 
 
 ```
 searchKey: worker.DBStoreDoneFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -798,7 +798,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreDoneFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -829,7 +829,7 @@ DBStoreHandleFunc describes the behavior when the Handle method of the parent Mo
 
 ```
 searchKey: worker.DBStoreHandleFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -905,7 +905,7 @@ func (f *DBStoreHandleFunc) appendCall(r0 DBStoreHandleFuncCall)
 
 ```
 searchKey: worker.DBStoreHandleFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -933,7 +933,7 @@ DBStoreHandleFuncCall is an object that describes an invocation of method Handle
 
 ```
 searchKey: worker.DBStoreHandleFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -946,7 +946,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreHandleFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -977,7 +977,7 @@ DBStoreInsertDependencyIndexingJobFunc describes the behavior when the InsertDep
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1053,7 +1053,7 @@ func (f *DBStoreInsertDependencyIndexingJobFunc) appendCall(r0 DBStoreInsertDepe
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1090,7 +1090,7 @@ DBStoreInsertDependencyIndexingJobFuncCall is an object that describes an invoca
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1103,7 +1103,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreInsertDependencyIndexingJobFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1134,7 +1134,7 @@ DBStoreMarkRepositoryAsDirtyFunc describes the behavior when the MarkRepositoryA
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1210,7 +1210,7 @@ func (f *DBStoreMarkRepositoryAsDirtyFunc) appendCall(r0 DBStoreMarkRepositoryAs
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1244,7 +1244,7 @@ DBStoreMarkRepositoryAsDirtyFuncCall is an object that describes an invocation o
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1257,7 +1257,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreMarkRepositoryAsDirtyFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1288,7 +1288,7 @@ DBStoreRepoNameFunc describes the behavior when the RepoName method of the paren
 
 ```
 searchKey: worker.DBStoreRepoNameFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1364,7 +1364,7 @@ func (f *DBStoreRepoNameFunc) appendCall(r0 DBStoreRepoNameFuncCall)
 
 ```
 searchKey: worker.DBStoreRepoNameFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1401,7 +1401,7 @@ DBStoreRepoNameFuncCall is an object that describes an invocation of method Repo
 
 ```
 searchKey: worker.DBStoreRepoNameFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1414,7 +1414,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreRepoNameFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1480,7 +1480,7 @@ DBStoreTransactFunc describes the behavior when the Transact method of the paren
 
 ```
 searchKey: worker.DBStoreTransactFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1556,7 +1556,7 @@ func (f *DBStoreTransactFunc) appendCall(r0 DBStoreTransactFuncCall)
 
 ```
 searchKey: worker.DBStoreTransactFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1590,7 +1590,7 @@ DBStoreTransactFuncCall is an object that describes an invocation of method Tran
 
 ```
 searchKey: worker.DBStoreTransactFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1603,7 +1603,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreTransactFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1634,7 +1634,7 @@ DBStoreUpdateCommitedAtFunc describes the behavior when the UpdateCommitedAt met
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1710,7 +1710,7 @@ func (f *DBStoreUpdateCommitedAtFunc) appendCall(r0 DBStoreUpdateCommitedAtFuncC
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1747,7 +1747,7 @@ DBStoreUpdateCommitedAtFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1760,7 +1760,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreUpdateCommitedAtFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1791,7 +1791,7 @@ DBStoreUpdatePackageReferencesFunc describes the behavior when the UpdatePackage
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1867,7 +1867,7 @@ func (f *DBStoreUpdatePackageReferencesFunc) appendCall(r0 DBStoreUpdatePackageR
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1904,7 +1904,7 @@ DBStoreUpdatePackageReferencesFuncCall is an object that describes an invocation
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1917,7 +1917,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreUpdatePackageReferencesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1948,7 +1948,7 @@ DBStoreUpdatePackagesFunc describes the behavior when the UpdatePackages method 
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2024,7 +2024,7 @@ func (f *DBStoreUpdatePackagesFunc) appendCall(r0 DBStoreUpdatePackagesFuncCall)
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2061,7 +2061,7 @@ DBStoreUpdatePackagesFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2074,7 +2074,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreUpdatePackagesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2105,7 +2105,7 @@ DBStoreWithFunc describes the behavior when the With method of the parent MockDB
 
 ```
 searchKey: worker.DBStoreWithFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2181,7 +2181,7 @@ func (f *DBStoreWithFunc) appendCall(r0 DBStoreWithFuncCall)
 
 ```
 searchKey: worker.DBStoreWithFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2212,7 +2212,7 @@ DBStoreWithFuncCall is an object that describes an invocation of method With on 
 
 ```
 searchKey: worker.DBStoreWithFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2225,7 +2225,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.DBStoreWithFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2271,7 +2271,7 @@ GitserverClientCommitDateFunc describes the behavior when the CommitDate method 
 
 ```
 searchKey: worker.GitserverClientCommitDateFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2347,7 +2347,7 @@ func (f *GitserverClientCommitDateFunc) appendCall(r0 GitserverClientCommitDateF
 
 ```
 searchKey: worker.GitserverClientCommitDateFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2387,7 +2387,7 @@ GitserverClientCommitDateFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: worker.GitserverClientCommitDateFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2400,7 +2400,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.GitserverClientCommitDateFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2431,7 +2431,7 @@ GitserverClientDirectoryChildrenFunc describes the behavior when the DirectoryCh
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2507,7 +2507,7 @@ func (f *GitserverClientDirectoryChildrenFunc) appendCall(r0 GitserverClientDire
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2550,7 +2550,7 @@ GitserverClientDirectoryChildrenFuncCall is an object that describes an invocati
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2563,7 +2563,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.GitserverClientDirectoryChildrenFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2594,7 +2594,7 @@ GitserverClientResolveRevisionFunc describes the behavior when the ResolveRevisi
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2670,7 +2670,7 @@ func (f *GitserverClientResolveRevisionFunc) appendCall(r0 GitserverClientResolv
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2710,7 +2710,7 @@ GitserverClientResolveRevisionFuncCall is an object that describes an invocation
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2723,7 +2723,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.GitserverClientResolveRevisionFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2775,7 +2775,7 @@ LSIFStoreDoneFunc describes the behavior when the Done method of the parent Mock
 
 ```
 searchKey: worker.LSIFStoreDoneFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2851,7 +2851,7 @@ func (f *LSIFStoreDoneFunc) appendCall(r0 LSIFStoreDoneFuncCall)
 
 ```
 searchKey: worker.LSIFStoreDoneFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2882,7 +2882,7 @@ LSIFStoreDoneFuncCall is an object that describes an invocation of method Done o
 
 ```
 searchKey: worker.LSIFStoreDoneFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2895,7 +2895,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreDoneFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2950,7 +2950,7 @@ LSIFStoreTransactFunc describes the behavior when the Transact method of the par
 
 ```
 searchKey: worker.LSIFStoreTransactFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3026,7 +3026,7 @@ func (f *LSIFStoreTransactFunc) appendCall(r0 LSIFStoreTransactFuncCall)
 
 ```
 searchKey: worker.LSIFStoreTransactFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3060,7 +3060,7 @@ LSIFStoreTransactFuncCall is an object that describes an invocation of method Tr
 
 ```
 searchKey: worker.LSIFStoreTransactFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3073,7 +3073,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreTransactFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3104,7 +3104,7 @@ LSIFStoreWriteDefinitionsFunc describes the behavior when the WriteDefinitions m
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3180,7 +3180,7 @@ func (f *LSIFStoreWriteDefinitionsFunc) appendCall(r0 LSIFStoreWriteDefinitionsF
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3217,7 +3217,7 @@ LSIFStoreWriteDefinitionsFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3230,7 +3230,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteDefinitionsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3261,7 +3261,7 @@ LSIFStoreWriteDocumentationPagesFunc describes the behavior when the WriteDocume
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3337,7 +3337,7 @@ func (f *LSIFStoreWriteDocumentationPagesFunc) appendCall(r0 LSIFStoreWriteDocum
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3374,7 +3374,7 @@ LSIFStoreWriteDocumentationPagesFuncCall is an object that describes an invocati
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3387,7 +3387,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentationPagesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3418,7 +3418,7 @@ LSIFStoreWriteDocumentsFunc describes the behavior when the WriteDocuments metho
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3494,7 +3494,7 @@ func (f *LSIFStoreWriteDocumentsFunc) appendCall(r0 LSIFStoreWriteDocumentsFuncC
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3531,7 +3531,7 @@ LSIFStoreWriteDocumentsFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3544,7 +3544,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteDocumentsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3575,7 +3575,7 @@ LSIFStoreWriteMetaFunc describes the behavior when the WriteMeta method of the p
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3651,7 +3651,7 @@ func (f *LSIFStoreWriteMetaFunc) appendCall(r0 LSIFStoreWriteMetaFuncCall)
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3688,7 +3688,7 @@ LSIFStoreWriteMetaFuncCall is an object that describes an invocation of method W
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3701,7 +3701,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteMetaFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3732,7 +3732,7 @@ LSIFStoreWriteReferencesFunc describes the behavior when the WriteReferences met
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3808,7 +3808,7 @@ func (f *LSIFStoreWriteReferencesFunc) appendCall(r0 LSIFStoreWriteReferencesFun
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3845,7 +3845,7 @@ LSIFStoreWriteReferencesFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3858,7 +3858,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteReferencesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3889,7 +3889,7 @@ LSIFStoreWriteResultChunksFunc describes the behavior when the WriteResultChunks
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3965,7 +3965,7 @@ func (f *LSIFStoreWriteResultChunksFunc) appendCall(r0 LSIFStoreWriteResultChunk
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4002,7 +4002,7 @@ LSIFStoreWriteResultChunksFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4015,7 +4015,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.LSIFStoreWriteResultChunksFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4089,7 +4089,7 @@ NewMockDBStore creates a new mock of the DBStore interface. All methods return z
 
 ```
 searchKey: worker.NewMockDBStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4128,7 +4128,7 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: worker.MockDBStore.Handle
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4281,7 +4281,7 @@ NewMockGitserverClient creates a new mock of the GitserverClient interface. All 
 
 ```
 searchKey: worker.NewMockGitserverClientFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4384,7 +4384,7 @@ NewMockLSIFStore creates a new mock of the LSIFStore interface. All methods retu
 
 ```
 searchKey: worker.NewMockLSIFStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4562,7 +4562,7 @@ NewMockWorkerStore creates a new mock of the Store interface. All methods return
 
 ```
 searchKey: worker.NewMockWorkerStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4627,7 +4627,7 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: worker.MockWorkerStore.Handle
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4736,7 +4736,7 @@ WorkerStoreAddExecutionLogEntryFunc describes the behavior when the AddExecution
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4812,7 +4812,7 @@ func (f *WorkerStoreAddExecutionLogEntryFunc) appendCall(r0 WorkerStoreAddExecut
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4849,7 +4849,7 @@ WorkerStoreAddExecutionLogEntryFuncCall is an object that describes an invocatio
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4862,7 +4862,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreAddExecutionLogEntryFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4893,7 +4893,7 @@ WorkerStoreDequeueFunc describes the behavior when the Dequeue method of the par
 
 ```
 searchKey: worker.WorkerStoreDequeueFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4969,7 +4969,7 @@ func (f *WorkerStoreDequeueFunc) appendCall(r0 WorkerStoreDequeueFuncCall)
 
 ```
 searchKey: worker.WorkerStoreDequeueFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5012,7 +5012,7 @@ WorkerStoreDequeueFuncCall is an object that describes an invocation of method D
 
 ```
 searchKey: worker.WorkerStoreDequeueFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5025,7 +5025,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreDequeueFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5056,7 +5056,7 @@ WorkerStoreDequeueWithIndependentTransactionContextFunc describes the behavior w
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5132,7 +5132,7 @@ func (f *WorkerStoreDequeueWithIndependentTransactionContextFunc) appendCall(r0 
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5175,7 +5175,7 @@ WorkerStoreDequeueWithIndependentTransactionContextFuncCall is an object that de
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5188,7 +5188,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreDequeueWithIndependentTransactionContextFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5219,7 +5219,7 @@ WorkerStoreDoneFunc describes the behavior when the Done method of the parent Mo
 
 ```
 searchKey: worker.WorkerStoreDoneFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5295,7 +5295,7 @@ func (f *WorkerStoreDoneFunc) appendCall(r0 WorkerStoreDoneFuncCall)
 
 ```
 searchKey: worker.WorkerStoreDoneFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5326,7 +5326,7 @@ WorkerStoreDoneFuncCall is an object that describes an invocation of method Done
 
 ```
 searchKey: worker.WorkerStoreDoneFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5339,7 +5339,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreDoneFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5370,7 +5370,7 @@ WorkerStoreHandleFunc describes the behavior when the Handle method of the paren
 
 ```
 searchKey: worker.WorkerStoreHandleFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5446,7 +5446,7 @@ func (f *WorkerStoreHandleFunc) appendCall(r0 WorkerStoreHandleFuncCall)
 
 ```
 searchKey: worker.WorkerStoreHandleFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5474,7 +5474,7 @@ WorkerStoreHandleFuncCall is an object that describes an invocation of method Ha
 
 ```
 searchKey: worker.WorkerStoreHandleFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5487,7 +5487,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreHandleFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5518,7 +5518,7 @@ WorkerStoreMarkCompleteFunc describes the behavior when the MarkComplete method 
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5594,7 +5594,7 @@ func (f *WorkerStoreMarkCompleteFunc) appendCall(r0 WorkerStoreMarkCompleteFuncC
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5631,7 +5631,7 @@ WorkerStoreMarkCompleteFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5644,7 +5644,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreMarkCompleteFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5675,7 +5675,7 @@ WorkerStoreMarkErroredFunc describes the behavior when the MarkErrored method of
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5751,7 +5751,7 @@ func (f *WorkerStoreMarkErroredFunc) appendCall(r0 WorkerStoreMarkErroredFuncCal
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5791,7 +5791,7 @@ WorkerStoreMarkErroredFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5804,7 +5804,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreMarkErroredFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5835,7 +5835,7 @@ WorkerStoreMarkFailedFunc describes the behavior when the MarkFailed method of t
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5911,7 +5911,7 @@ func (f *WorkerStoreMarkFailedFunc) appendCall(r0 WorkerStoreMarkFailedFuncCall)
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5951,7 +5951,7 @@ WorkerStoreMarkFailedFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5964,7 +5964,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreMarkFailedFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5995,7 +5995,7 @@ WorkerStoreQueuedCountFunc describes the behavior when the QueuedCount method of
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6071,7 +6071,7 @@ func (f *WorkerStoreQueuedCountFunc) appendCall(r0 WorkerStoreQueuedCountFuncCal
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6108,7 +6108,7 @@ WorkerStoreQueuedCountFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6121,7 +6121,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreQueuedCountFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6152,7 +6152,7 @@ WorkerStoreRequeueFunc describes the behavior when the Requeue method of the par
 
 ```
 searchKey: worker.WorkerStoreRequeueFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6228,7 +6228,7 @@ func (f *WorkerStoreRequeueFunc) appendCall(r0 WorkerStoreRequeueFuncCall)
 
 ```
 searchKey: worker.WorkerStoreRequeueFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6265,7 +6265,7 @@ WorkerStoreRequeueFuncCall is an object that describes an invocation of method R
 
 ```
 searchKey: worker.WorkerStoreRequeueFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6278,7 +6278,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreRequeueFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6309,7 +6309,7 @@ WorkerStoreResetStalledFunc describes the behavior when the ResetStalled method 
 
 ```
 searchKey: worker.WorkerStoreResetStalledFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6385,7 +6385,7 @@ func (f *WorkerStoreResetStalledFunc) appendCall(r0 WorkerStoreResetStalledFuncC
 
 ```
 searchKey: worker.WorkerStoreResetStalledFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6422,7 +6422,7 @@ WorkerStoreResetStalledFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: worker.WorkerStoreResetStalledFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6435,7 +6435,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.WorkerStoreResetStalledFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6533,14 +6533,14 @@ handle converts a raw upload into a dump within the given transaction context. R
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewWorker" href="#NewWorker">func NewWorker(dbStore DBStore,...</a>
 
 ```
 searchKey: worker.NewWorker
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6561,7 +6561,7 @@ func NewWorker(
 
 ```
 searchKey: worker.TestHandle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6572,7 +6572,7 @@ func TestHandle(t *testing.T)
 
 ```
 searchKey: worker.TestHandleCloneInProgress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6583,7 +6583,7 @@ func TestHandleCloneInProgress(t *testing.T)
 
 ```
 searchKey: worker.TestHandleError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -6594,7 +6594,7 @@ func TestHandleError(t *testing.T)
 
 ```
 searchKey: worker.copyTestDump
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6605,7 +6605,7 @@ func copyTestDump(ctx context.Context, key string) (io.ReadCloser, error)
 
 ```
 searchKey: worker.createHoneyEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6616,7 +6616,7 @@ func createHoneyEvent(ctx context.Context, upload store.Upload, err error, durat
 
 ```
 searchKey: worker.inTransaction
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6627,7 +6627,7 @@ func inTransaction(ctx context.Context, dbStore DBStore, fn func(tx DBStore) err
 
 ```
 searchKey: worker.isUniqueConstraintViolation
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6638,7 +6638,7 @@ func isUniqueConstraintViolation(err error) bool
 
 ```
 searchKey: worker.requeueIfCloning
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6651,7 +6651,7 @@ requeueIfCloning ensures that the repo and revision are resolvable. If the repo 
 
 ```
 searchKey: worker.setupRepoMocks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6662,7 +6662,7 @@ func setupRepoMocks(t *testing.T)
 
 ```
 searchKey: worker.withUploadData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6675,7 +6675,7 @@ withUploadData will invoke the given function with a reader of the upload's raw 
 
 ```
 searchKey: worker.writeData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

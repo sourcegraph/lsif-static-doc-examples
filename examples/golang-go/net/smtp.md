@@ -111,10 +111,6 @@ The smtp package is frozen and is not accepting new features. Some external pack
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="authFailedClient" href="#authFailedClient">var authFailedClient</a>
 
 ```
@@ -339,10 +335,6 @@ var testHookStartTLS func(*tls.Config) // nil, except for tests
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Auth" href="#Auth">type Auth interface</a>
 
 ```
@@ -377,7 +369,7 @@ Auth is implemented by an SMTP authentication mechanism.
 
 ```
 searchKey: smtp.CRAMMD5Auth
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -390,7 +382,7 @@ CRAMMD5Auth returns an Auth that implements the CRAM-MD5 authentication mechanis
 
 ```
 searchKey: smtp.PlainAuth
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -435,7 +427,7 @@ A Client represents a client connection to an SMTP server.
 
 ```
 searchKey: smtp.Dial
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -448,7 +440,7 @@ Dial returns a new Client connected to an SMTP server at addr. The addr must inc
 
 ```
 searchKey: smtp.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -474,7 +466,7 @@ Auth authenticates a client using the provided authentication mechanism. A faile
 
 ```
 searchKey: smtp.Client.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -487,7 +479,7 @@ Close closes the connection.
 
 ```
 searchKey: smtp.Client.Data
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -539,7 +531,7 @@ Mail issues a MAIL command to the server using the provided email address. If th
 
 ```
 searchKey: smtp.Client.Noop
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -552,7 +544,7 @@ Noop sends the NOOP command to the server. It does nothing but check that the co
 
 ```
 searchKey: smtp.Client.Quit
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -578,7 +570,7 @@ Rcpt issues a RCPT command to the server using the provided email address. A cal
 
 ```
 searchKey: smtp.Client.Reset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -604,7 +596,7 @@ StartTLS sends the STARTTLS command and encrypts all further communication. Only
 
 ```
 searchKey: smtp.Client.TLSConnectionState
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -643,7 +635,7 @@ cmd is a convenience function that sends a command and returns the response
 
 ```
 searchKey: smtp.Client.ehlo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -656,7 +648,7 @@ ehlo sends the EHLO (extended hello) greeting to the server. It should be the pr
 
 ```
 searchKey: smtp.Client.hello
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -669,7 +661,7 @@ hello runs a hello exchange if needed.
 
 ```
 searchKey: smtp.Client.helo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -764,7 +756,7 @@ type dataCloser struct {
 
 ```
 searchKey: smtp.dataCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -788,7 +780,7 @@ type faker struct {
 
 ```
 searchKey: smtp.faker.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -799,7 +791,7 @@ func (f faker) Close() error
 
 ```
 searchKey: smtp.faker.LocalAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -810,7 +802,7 @@ func (f faker) LocalAddr() net.Addr
 
 ```
 searchKey: smtp.faker.RemoteAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -947,15 +939,11 @@ func (toServerEmptyAuth) Start(server *ServerInfo) (proto string, toServer []byt
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="SendMail" href="#SendMail">func SendMail(addr string, a Auth, from string, to []string, msg []byte) error</a>
 
 ```
 searchKey: smtp.SendMail
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -974,7 +962,7 @@ The SendMail function and the net/smtp package are low-level mechanisms and prov
 
 ```
 searchKey: smtp.TestAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -985,7 +973,7 @@ func TestAuth(t *testing.T)
 
 ```
 searchKey: smtp.TestAuthFailed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -996,7 +984,7 @@ func TestAuthFailed(t *testing.T)
 
 ```
 searchKey: smtp.TestAuthPlain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1007,7 +995,7 @@ func TestAuthPlain(t *testing.T)
 
 ```
 searchKey: smtp.TestBasic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1018,7 +1006,7 @@ func TestBasic(t *testing.T)
 
 ```
 searchKey: smtp.TestClientAuthTrimSpace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1031,7 +1019,7 @@ Issue 17794: don't send a trailing space on AUTH command when there's no passwor
 
 ```
 searchKey: smtp.TestExtensions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1042,7 +1030,7 @@ func TestExtensions(t *testing.T)
 
 ```
 searchKey: smtp.TestHello
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1053,7 +1041,7 @@ func TestHello(t *testing.T)
 
 ```
 searchKey: smtp.TestNewClient
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1064,7 +1052,7 @@ func TestNewClient(t *testing.T)
 
 ```
 searchKey: smtp.TestNewClient2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1075,7 +1063,7 @@ func TestNewClient2(t *testing.T)
 
 ```
 searchKey: smtp.TestNewClientWithTLS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1086,7 +1074,7 @@ func TestNewClientWithTLS(t *testing.T)
 
 ```
 searchKey: smtp.TestSendMail
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1097,7 +1085,7 @@ func TestSendMail(t *testing.T)
 
 ```
 searchKey: smtp.TestSendMailWithAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1108,7 +1096,7 @@ func TestSendMailWithAuth(t *testing.T)
 
 ```
 searchKey: smtp.TestTLSClient
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1119,7 +1107,7 @@ func TestTLSClient(t *testing.T)
 
 ```
 searchKey: smtp.TestTLSConnState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1141,7 +1129,7 @@ func init()
 
 ```
 searchKey: smtp.isLocalhost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1152,7 +1140,7 @@ func isLocalhost(name string) bool
 
 ```
 searchKey: smtp.newLocalListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1163,7 +1151,7 @@ func newLocalListener(t *testing.T) net.Listener
 
 ```
 searchKey: smtp.sendMail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1174,7 +1162,7 @@ func sendMail(hostPort string) error
 
 ```
 searchKey: smtp.serverHandle
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1187,7 +1175,7 @@ smtp server, finely tailored to deal with our own client only!
 
 ```
 searchKey: smtp.serverHandleTLS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1198,7 +1186,7 @@ func serverHandleTLS(c net.Conn, t *testing.T) error
 
 ```
 searchKey: smtp.testingKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1209,7 +1197,7 @@ func testingKey(s string) string
 
 ```
 searchKey: smtp.validateLine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

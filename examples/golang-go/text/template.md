@@ -684,10 +684,6 @@ if err != nil {
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="alwaysErrorText" href="#alwaysErrorText">const alwaysErrorText</a>
 
 ```
@@ -944,10 +940,6 @@ const uintKind
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="alwaysError" href="#alwaysError">var alwaysError</a>
 
@@ -1408,10 +1400,6 @@ var zero reflect.Value
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CustomError" href="#CustomError">type CustomError struct{}</a>
 
 ```
@@ -1427,7 +1415,7 @@ type CustomError struct{}
 
 ```
 searchKey: template.CustomError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1476,7 +1464,7 @@ ExecError is the custom error type returned when Execute has an error evaluating
 
 ```
 searchKey: template.ExecError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1487,7 +1475,7 @@ func (e ExecError) Error() string
 
 ```
 searchKey: template.ExecError.Unwrap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1554,7 +1542,7 @@ type S []string
 
 ```
 searchKey: template.S.Method0
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1644,7 +1632,7 @@ T has lots of interesting pieces to use to test execution.
 
 ```
 searchKey: template.T.Copy
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1655,7 +1643,7 @@ func (t *T) Copy() *T
 
 ```
 searchKey: template.T.GetU
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1679,7 +1667,7 @@ func (t *T) MAdd(a int, b []int) []int
 
 ```
 searchKey: template.T.Method0
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1757,7 +1745,7 @@ Template is the representation of a parsed template. The *parse.Tree field is ex
 
 ```
 searchKey: template.Must
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1774,7 +1762,7 @@ var t = template.Must(template.New("name").Parse("text"))
 
 ```
 searchKey: template.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1787,7 +1775,7 @@ New allocates a new, undefined template with the given name.
 
 ```
 searchKey: template.ParseFS
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1800,7 +1788,7 @@ ParseFS is like ParseFiles or ParseGlob but reads from the file system fsys inst
 
 ```
 searchKey: template.ParseFiles
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1815,7 +1803,7 @@ When parsing multiple files with the same name in different directories, the las
 
 ```
 searchKey: template.ParseGlob
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1830,7 +1818,7 @@ When parsing multiple files with the same name in different directories, the las
 
 ```
 searchKey: template.parseFS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1841,7 +1829,7 @@ func parseFS(t *Template, fsys fs.FS, patterns []string) (*Template, error)
 
 ```
 searchKey: template.parseFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1854,7 +1842,7 @@ parseFiles is the helper for the method and function. If the argument template i
 
 ```
 searchKey: template.parseGlob
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1880,7 +1868,7 @@ AddParseTree associates the argument parse tree with the template t, giving it t
 
 ```
 searchKey: template.Template.Clone
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1893,7 +1881,7 @@ Clone returns a duplicate of the template, including all associated templates. T
 
 ```
 searchKey: template.Template.DefinedTemplates
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1973,7 +1961,7 @@ Lookup returns the template with the given name that is associated with t. It re
 
 ```
 searchKey: template.Template.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2087,7 +2075,7 @@ When parsing multiple files with the same name in different directories, the las
 
 ```
 searchKey: template.Template.Templates
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2137,7 +2125,7 @@ func (t *Template) execute(wr io.Writer, data interface{}) (err error)
 
 ```
 searchKey: template.Template.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2212,7 +2200,7 @@ type V struct {
 
 ```
 searchKey: template.V.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2236,7 +2224,7 @@ type W struct {
 
 ```
 searchKey: template.W.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2313,7 +2301,7 @@ type kind int
 
 ```
 searchKey: template.basicKind
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2631,7 +2619,7 @@ idealConstant is called to return the value of a number in a context where we do
 
 ```
 searchKey: template.state.mark
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2834,15 +2822,11 @@ writeError is the wrapper type used internally when Execute has an error writing
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="HTMLEscape" href="#HTMLEscape">func HTMLEscape(w io.Writer, b []byte)</a>
 
 ```
 searchKey: template.HTMLEscape
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2855,7 +2839,7 @@ HTMLEscape writes to w the escaped HTML equivalent of the plain text data b.
 
 ```
 searchKey: template.HTMLEscapeString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2868,7 +2852,7 @@ HTMLEscapeString returns the escaped HTML equivalent of the plain text data s.
 
 ```
 searchKey: template.HTMLEscaper
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2881,7 +2865,7 @@ HTMLEscaper returns the escaped HTML equivalent of the textual representation of
 
 ```
 searchKey: template.IsTrue
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2894,7 +2878,7 @@ IsTrue reports whether the value is 'true', in the sense of not the zero of its 
 
 ```
 searchKey: template.JSEscape
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2907,7 +2891,7 @@ JSEscape writes to w the escaped JavaScript equivalent of the plain text data b.
 
 ```
 searchKey: template.JSEscapeString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2920,7 +2904,7 @@ JSEscapeString returns the escaped JavaScript equivalent of the plain text data 
 
 ```
 searchKey: template.JSEscaper
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2933,7 +2917,7 @@ JSEscaper returns the escaped JavaScript equivalent of the textual representatio
 
 ```
 searchKey: template.TestAddParseTree
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2944,7 +2928,7 @@ func TestAddParseTree(t *testing.T)
 
 ```
 searchKey: template.TestAddParseTreeToUnparsedTemplate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2957,7 +2941,7 @@ Issue 7032
 
 ```
 searchKey: template.TestAddrOfIndex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2968,7 +2952,7 @@ func TestAddrOfIndex(t *testing.T)
 
 ```
 searchKey: template.TestBadFuncNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2979,7 +2963,7 @@ func TestBadFuncNames(t *testing.T)
 
 ```
 searchKey: template.TestBlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2990,7 +2974,7 @@ func TestBlock(t *testing.T)
 
 ```
 searchKey: template.TestClone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3001,7 +2985,7 @@ func TestClone(t *testing.T)
 
 ```
 searchKey: template.TestComparison
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3012,7 +2996,7 @@ func TestComparison(t *testing.T)
 
 ```
 searchKey: template.TestDelims
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3023,7 +3007,7 @@ func TestDelims(t *testing.T)
 
 ```
 searchKey: template.TestEmptyTemplate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3034,7 +3018,7 @@ func TestEmptyTemplate(t *testing.T)
 
 ```
 searchKey: template.TestEmptyTemplateCloneCrash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3047,7 +3031,7 @@ Issue 10879
 
 ```
 searchKey: template.TestEvalFieldErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3058,7 +3042,7 @@ func TestEvalFieldErrors(t *testing.T)
 
 ```
 searchKey: template.TestExecError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3071,7 +3055,7 @@ Check that an error from a nested template contains all the relevant information
 
 ```
 searchKey: template.TestExecError_CustomError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3084,7 +3068,7 @@ Check that a custom error can be returned.
 
 ```
 searchKey: template.TestExecute
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3095,7 +3079,7 @@ func TestExecute(t *testing.T)
 
 ```
 searchKey: template.TestExecuteError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3108,7 +3092,7 @@ Check that an error from a method flows back to the top.
 
 ```
 searchKey: template.TestExecuteGivesExecError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3119,7 +3103,7 @@ func TestExecuteGivesExecError(t *testing.T)
 
 ```
 searchKey: template.TestExecuteOnNewTemplate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3130,7 +3114,7 @@ func TestExecuteOnNewTemplate(t *testing.T)
 
 ```
 searchKey: template.TestExecutePanicDuringCall
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3143,7 +3127,7 @@ Check that panics during calls are recovered and returned as errors.
 
 ```
 searchKey: template.TestFinalForPrintf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3154,7 +3138,7 @@ func TestFinalForPrintf(t *testing.T)
 
 ```
 searchKey: template.TestGoodFuncNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3165,7 +3149,7 @@ func TestGoodFuncNames(t *testing.T)
 
 ```
 searchKey: template.TestInterfaceValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3176,7 +3160,7 @@ func TestInterfaceValues(t *testing.T)
 
 ```
 searchKey: template.TestIssue19294
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3189,7 +3173,7 @@ Issue 19249 was a regression in 1.8 caused by the handling of empty templates ad
 
 ```
 searchKey: template.TestIssue31810
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3202,7 +3186,7 @@ Issue 31810. Check that a parenthesized first argument behaves properly.
 
 ```
 searchKey: template.TestIssue39807
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3215,7 +3199,7 @@ Issue 39807: data race in html/template & text/template
 
 ```
 searchKey: template.TestIssue43065
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3228,7 +3212,7 @@ Issue 43065, range over send only channel
 
 ```
 searchKey: template.TestJSEscaping
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3239,7 +3223,7 @@ func TestJSEscaping(t *testing.T)
 
 ```
 searchKey: template.TestMaxExecDepth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3250,7 +3234,7 @@ func TestMaxExecDepth(t *testing.T)
 
 ```
 searchKey: template.TestMessageForExecuteEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3261,7 +3245,7 @@ func TestMessageForExecuteEmpty(t *testing.T)
 
 ```
 searchKey: template.TestMissingMapKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3272,7 +3256,7 @@ func TestMissingMapKey(t *testing.T)
 
 ```
 searchKey: template.TestMultiExecute
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3283,7 +3267,7 @@ func TestMultiExecute(t *testing.T)
 
 ```
 searchKey: template.TestMultiParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3294,7 +3278,7 @@ func TestMultiParse(t *testing.T)
 
 ```
 searchKey: template.TestNew
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3305,7 +3289,7 @@ func TestNew(t *testing.T)
 
 ```
 searchKey: template.TestParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3316,7 +3300,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: template.TestParseFS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3327,7 +3311,7 @@ func TestParseFS(t *testing.T)
 
 ```
 searchKey: template.TestParseFiles
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3338,7 +3322,7 @@ func TestParseFiles(t *testing.T)
 
 ```
 searchKey: template.TestParseFilesWithData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3349,7 +3333,7 @@ func TestParseFilesWithData(t *testing.T)
 
 ```
 searchKey: template.TestParseGlob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3360,7 +3344,7 @@ func TestParseGlob(t *testing.T)
 
 ```
 searchKey: template.TestParseGlobWithData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3371,7 +3355,7 @@ func TestParseGlobWithData(t *testing.T)
 
 ```
 searchKey: template.TestRedefinition
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3382,7 +3366,7 @@ func TestRedefinition(t *testing.T)
 
 ```
 searchKey: template.TestTemplateLookUp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3395,7 +3379,7 @@ Issue 10910, 10926
 
 ```
 searchKey: template.TestTree
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3406,7 +3390,7 @@ func TestTree(t *testing.T)
 
 ```
 searchKey: template.TestUnterminatedStringError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3419,7 +3403,7 @@ Test that the error message for multiline unterminated string refers to the line
 
 ```
 searchKey: template.URLQueryEscaper
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3432,7 +3416,7 @@ URLQueryEscaper returns the escaped value of the textual representation of its a
 
 ```
 searchKey: template.add
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3443,7 +3427,7 @@ func add(args ...int) int
 
 ```
 searchKey: template.addFuncs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3456,7 +3440,7 @@ addFuncs adds to values the functions in funcs. It does no checking of the input
 
 ```
 searchKey: template.addValueFuncs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3469,7 +3453,7 @@ addValueFuncs adds to values the functions in funcs, converting them to reflect.
 
 ```
 searchKey: template.and
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3495,7 +3479,7 @@ builtinFuncsOnce lazily computes & caches the builtinFuncs map. TODO: revert thi
 
 ```
 searchKey: template.call
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3508,7 +3492,7 @@ call returns the result of evaluating the first argument as a function. The func
 
 ```
 searchKey: template.canBeNil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3521,7 +3505,7 @@ canBeNil reports whether an untyped nil can be assigned to the type. See reflect
 
 ```
 searchKey: template.count
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3534,7 +3518,7 @@ count returns a channel that will deliver n sequential 1-letter strings starting
 
 ```
 searchKey: template.createValueFuncs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3547,7 +3531,7 @@ createValueFuncs turns a FuncMap into a map[string]reflect.Value
 
 ```
 searchKey: template.dddArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3558,7 +3542,7 @@ func dddArg(a int, b ...string) string
 
 ```
 searchKey: template.doublePercent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3571,7 +3555,7 @@ doublePercent returns the string with %'s replaced by %%, if necessary, so it ca
 
 ```
 searchKey: template.echo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3582,7 +3566,7 @@ func echo(arg interface{}) interface{}
 
 ```
 searchKey: template.eq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3595,7 +3579,7 @@ eq evaluates the comparison a == b || a == c || ...
 
 ```
 searchKey: template.errRecover
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3608,7 +3592,7 @@ errRecover is the handler that turns panics into returns from the top level of P
 
 ```
 searchKey: template.evalArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3627,7 +3611,7 @@ except that each argument is indirected (if a pointer), as required, using the s
 
 ```
 searchKey: template.findFunction
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3651,7 +3635,7 @@ func funcNameTestFunc() int
 
 ```
 searchKey: template.ge
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3664,7 +3648,7 @@ ge evaluates the comparison a >= b.
 
 ```
 searchKey: template.goodFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3677,7 +3661,7 @@ goodFunc reports whether the function or method has the right result signature.
 
 ```
 searchKey: template.goodName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3690,7 +3674,7 @@ goodName reports whether the function name is a valid identifier.
 
 ```
 searchKey: template.gt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3703,7 +3687,7 @@ gt evaluates the comparison a > b.
 
 ```
 searchKey: template.index
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3716,7 +3700,7 @@ index returns the result of indexing its first argument by the following argumen
 
 ```
 searchKey: template.indexArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3729,7 +3713,7 @@ indexArg checks if a reflect.Value can be used as an index, and converts it to i
 
 ```
 searchKey: template.indirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3742,7 +3726,7 @@ indirect returns the item at the end of indirection, and a bool to indicate if i
 
 ```
 searchKey: template.indirectInterface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3766,7 +3750,7 @@ func initMaxExecDepth() int
 
 ```
 searchKey: template.intLike
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3777,7 +3761,7 @@ func intLike(typ reflect.Kind) bool
 
 ```
 searchKey: template.isHexInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3788,7 +3772,7 @@ func isHexInt(s string) bool
 
 ```
 searchKey: template.isRuneInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3799,7 +3783,7 @@ func isRuneInt(s string) bool
 
 ```
 searchKey: template.isTrue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3810,7 +3794,7 @@ func isTrue(val reflect.Value) (truth, ok bool)
 
 ```
 searchKey: template.jsIsSpecial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3821,7 +3805,7 @@ func jsIsSpecial(r rune) bool
 
 ```
 searchKey: template.le
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3834,7 +3818,7 @@ le evaluates the comparison <= b.
 
 ```
 searchKey: template.length
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3847,7 +3831,7 @@ length returns the length of the item, with an error if it has no defined length
 
 ```
 searchKey: template.lt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3860,7 +3844,7 @@ lt evaluates the comparison a < b.
 
 ```
 searchKey: template.makemap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3882,7 +3866,7 @@ func mapOfThree() interface{}
 
 ```
 searchKey: template.ne
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3895,7 +3879,7 @@ ne evaluates the comparison a != b.
 
 ```
 searchKey: template.newInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3908,7 +3892,7 @@ Helpers for creation.
 
 ```
 searchKey: template.newIntSlice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3919,7 +3903,7 @@ func newIntSlice(n ...int) *[]int
 
 ```
 searchKey: template.newString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3930,7 +3914,7 @@ func newString(s string) *string
 
 ```
 searchKey: template.not
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3943,7 +3927,7 @@ not returns the Boolean negation of its argument.
 
 ```
 searchKey: template.oneArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3954,7 +3938,7 @@ func oneArg(a string) string
 
 ```
 searchKey: template.or
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3967,7 +3951,7 @@ or computes the Boolean OR of its arguments, returning the first true argument i
 
 ```
 searchKey: template.prepareArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3980,7 +3964,7 @@ prepareArg checks if value can be used as an argument of type argType, and conve
 
 ```
 searchKey: template.printableValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3993,7 +3977,7 @@ printableValue returns the, possibly indirected, interface value inside v that i
 
 ```
 searchKey: template.readFileFS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4004,7 +3988,7 @@ func readFileFS(fsys fs.FS) func(string) (string, []byte, error)
 
 ```
 searchKey: template.readFileOS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4028,7 +4012,7 @@ returnInt returns an int
 
 ```
 searchKey: template.safeCall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4041,7 +4025,7 @@ safeCall runs fun.Call(args), and returns the resulting value and error, if any.
 
 ```
 searchKey: template.slice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4054,7 +4038,7 @@ slice returns the result of slicing its first argument by the remaining argument
 
 ```
 searchKey: template.stringer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4065,7 +4049,7 @@ func stringer(s fmt.Stringer) string
 
 ```
 searchKey: template.testBadFuncName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4076,7 +4060,7 @@ func testBadFuncName(name string, t *testing.T)
 
 ```
 searchKey: template.testExecute
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4087,7 +4071,7 @@ func testExecute(execTests []execTest, template *Template, t *testing.T)
 
 ```
 searchKey: template.truth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4098,7 +4082,7 @@ func truth(arg reflect.Value) bool
 
 ```
 searchKey: template.twoArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4109,7 +4093,7 @@ func twoArgs(a, b string) string
 
 ```
 searchKey: template.typeOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4120,7 +4104,7 @@ func typeOf(arg interface{}) string
 
 ```
 searchKey: template.valueString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4133,7 +4117,7 @@ valueString takes a string, not a pointer.
 
 ```
 searchKey: template.vfunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

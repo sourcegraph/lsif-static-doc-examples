@@ -76,10 +76,6 @@ The load and store operations, implemented by the LoadT and StoreT functions, ar
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Value" href="#Value">type Value struct</a>
 
 ```
@@ -116,7 +112,7 @@ All calls to CompareAndSwap for a given Value must use values of the same concre
 
 ```
 searchKey: atomic.Value.Load
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -171,15 +167,11 @@ ifaceWords is interface{} internal representation.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AddInt32" href="#AddInt32">func AddInt32(addr *int32, delta int32) (new int32)</a>
 
 ```
 searchKey: atomic.AddInt32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -192,7 +184,7 @@ AddInt32 atomically adds delta to *addr and returns the new value.
 
 ```
 searchKey: atomic.AddInt64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -205,7 +197,7 @@ AddInt64 atomically adds delta to *addr and returns the new value.
 
 ```
 searchKey: atomic.AddUint32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -218,7 +210,7 @@ AddUint32 atomically adds delta to *addr and returns the new value. To subtract 
 
 ```
 searchKey: atomic.AddUint64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -231,7 +223,7 @@ AddUint64 atomically adds delta to *addr and returns the new value. To subtract 
 
 ```
 searchKey: atomic.AddUintptr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -244,7 +236,7 @@ AddUintptr atomically adds delta to *addr and returns the new value.
 
 ```
 searchKey: atomic.CompareAndSwapInt32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -257,7 +249,7 @@ CompareAndSwapInt32 executes the compare-and-swap operation for an int32 value.
 
 ```
 searchKey: atomic.CompareAndSwapInt64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -270,7 +262,7 @@ CompareAndSwapInt64 executes the compare-and-swap operation for an int64 value.
 
 ```
 searchKey: atomic.CompareAndSwapPointer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -283,7 +275,7 @@ CompareAndSwapPointer executes the compare-and-swap operation for a unsafe.Point
 
 ```
 searchKey: atomic.CompareAndSwapUint32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -296,7 +288,7 @@ CompareAndSwapUint32 executes the compare-and-swap operation for a uint32 value.
 
 ```
 searchKey: atomic.CompareAndSwapUint64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -309,7 +301,7 @@ CompareAndSwapUint64 executes the compare-and-swap operation for a uint64 value.
 
 ```
 searchKey: atomic.CompareAndSwapUintptr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -322,7 +314,7 @@ CompareAndSwapUintptr executes the compare-and-swap operation for a uintptr valu
 
 ```
 searchKey: atomic.LoadInt32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -335,7 +327,7 @@ LoadInt32 atomically loads *addr.
 
 ```
 searchKey: atomic.LoadInt64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -348,7 +340,7 @@ LoadInt64 atomically loads *addr.
 
 ```
 searchKey: atomic.LoadPointer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -361,7 +353,7 @@ LoadPointer atomically loads *addr.
 
 ```
 searchKey: atomic.LoadUint32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -374,7 +366,7 @@ LoadUint32 atomically loads *addr.
 
 ```
 searchKey: atomic.LoadUint64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -387,7 +379,7 @@ LoadUint64 atomically loads *addr.
 
 ```
 searchKey: atomic.LoadUintptr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -400,7 +392,7 @@ LoadUintptr atomically loads *addr.
 
 ```
 searchKey: atomic.StoreInt32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -413,7 +405,7 @@ StoreInt32 atomically stores val into *addr.
 
 ```
 searchKey: atomic.StoreInt64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -426,7 +418,7 @@ StoreInt64 atomically stores val into *addr.
 
 ```
 searchKey: atomic.StorePointer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -439,7 +431,7 @@ StorePointer atomically stores val into *addr.
 
 ```
 searchKey: atomic.StoreUint32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -452,7 +444,7 @@ StoreUint32 atomically stores val into *addr.
 
 ```
 searchKey: atomic.StoreUint64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -465,7 +457,7 @@ StoreUint64 atomically stores val into *addr.
 
 ```
 searchKey: atomic.StoreUintptr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -478,7 +470,7 @@ StoreUintptr atomically stores val into *addr.
 
 ```
 searchKey: atomic.SwapInt32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -491,7 +483,7 @@ SwapInt32 atomically stores new into *addr and returns the previous *addr value.
 
 ```
 searchKey: atomic.SwapInt64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -504,7 +496,7 @@ SwapInt64 atomically stores new into *addr and returns the previous *addr value.
 
 ```
 searchKey: atomic.SwapPointer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -517,7 +509,7 @@ SwapPointer atomically stores new into *addr and returns the previous *addr valu
 
 ```
 searchKey: atomic.SwapUint32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -530,7 +522,7 @@ SwapUint32 atomically stores new into *addr and returns the previous *addr value
 
 ```
 searchKey: atomic.SwapUint64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -543,7 +535,7 @@ SwapUint64 atomically stores new into *addr and returns the previous *addr value
 
 ```
 searchKey: atomic.SwapUintptr
-tags: [method]
+tags: [function]
 ```
 
 ```Go

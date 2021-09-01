@@ -64,10 +64,6 @@ Package httptest provides utilities for HTTP testing.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DefaultRemoteAddr" href="#DefaultRemoteAddr">const DefaultRemoteAddr</a>
 
 ```
@@ -82,10 +78,6 @@ const DefaultRemoteAddr = "1.2.3.4"
 DefaultRemoteAddr is the default remote address to return in RemoteAddr if an explicit DefaultRemoteAddr isn't set on ResponseRecorder. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="newServers" href="#newServers">var newServers</a>
 
@@ -118,10 +110,6 @@ go test -run=BrokenTest -httptest.serve=127.0.0.1:8000
 to start the broken server so you can interact with it manually. We only register this flag if it looks like the caller knows about it and is trying to use it as we don't want to pollute flags and this isn't really part of our API. Don't depend on this. 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ResponseRecorder" href="#ResponseRecorder">type ResponseRecorder struct</a>
 
@@ -180,7 +168,7 @@ NewRecorder returns an initialized ResponseRecorder.
 
 ```
 searchKey: httptest.ResponseRecorder.Flush
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -193,7 +181,7 @@ Flush implements http.Flusher. To test whether Flush was called, see rw.Flushed.
 
 ```
 searchKey: httptest.ResponseRecorder.Header
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -206,7 +194,7 @@ Header implements http.ResponseWriter. It returns the response headers to mutate
 
 ```
 searchKey: httptest.ResponseRecorder.Result
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -326,7 +314,7 @@ A Server is an HTTP server listening on a system-chosen port on the local loopba
 
 ```
 searchKey: httptest.NewServer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -339,7 +327,7 @@ NewServer starts and returns a new Server. The caller should call Close when fin
 
 ```
 searchKey: httptest.NewTLSServer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -352,7 +340,7 @@ NewTLSServer starts and returns a new Server using TLS. The caller should call C
 
 ```
 searchKey: httptest.NewUnstartedServer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -369,7 +357,7 @@ The caller should call Close when finished, to shut it down.
 
 ```
 searchKey: httptest.Server.Certificate
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -382,7 +370,7 @@ Certificate returns the certificate used by the server, or nil if the server doe
 
 ```
 searchKey: httptest.Server.Client
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -395,7 +383,7 @@ Client returns an HTTP client configured for making requests to the server. It i
 
 ```
 searchKey: httptest.Server.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -408,7 +396,7 @@ Close shuts down the server and blocks until all outstanding requests on this se
 
 ```
 searchKey: httptest.Server.CloseClientConnections
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -421,7 +409,7 @@ CloseClientConnections closes any open HTTP connections to the test Server.
 
 ```
 searchKey: httptest.Server.Start
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -434,7 +422,7 @@ Start starts a server from NewUnstartedServer.
 
 ```
 searchKey: httptest.Server.StartTLS
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -486,7 +474,7 @@ forgetConn removes c from the set of tracked conns and decrements it from the wa
 
 ```
 searchKey: httptest.Server.goServe
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -497,7 +485,7 @@ func (s *Server) goServe()
 
 ```
 searchKey: httptest.Server.logCloseHangDebugInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -508,7 +496,7 @@ func (s *Server) logCloseHangDebugInfo()
 
 ```
 searchKey: httptest.Server.wrap
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -558,7 +546,7 @@ type onlyCloseListener struct {
 
 ```
 searchKey: httptest.onlyCloseListener.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -567,15 +555,11 @@ func (onlyCloseListener) Close() error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="NewRequest" href="#NewRequest">func NewRequest(method, target string, body io.Reader) *http.Request</a>
 
 ```
 searchKey: httptest.NewRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -602,7 +586,7 @@ To generate a client HTTP request instead of a server request, see the NewReques
 
 ```
 searchKey: httptest.TestNewRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -613,7 +597,7 @@ func TestNewRequest(t *testing.T)
 
 ```
 searchKey: httptest.TestParseContentLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -626,7 +610,7 @@ issue 39017 - disallow Content-Length values such as "+3"
 
 ```
 searchKey: httptest.TestRecorder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -637,7 +621,7 @@ func TestRecorder(t *testing.T)
 
 ```
 searchKey: httptest.TestRecorderPanicsOnNonXXXStatusCode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -650,7 +634,7 @@ Ensure that httptest.Recorder panics when given a non-3 digit (XXX) status HTTP 
 
 ```
 searchKey: httptest.TestServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -661,7 +645,7 @@ func TestServer(t *testing.T)
 
 ```
 searchKey: httptest.TestServerZeroValueClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -674,7 +658,7 @@ Issue 19729: panic in Server.Close for values created directly without a constru
 
 ```
 searchKey: httptest.TestTLSServerWithHTTP2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -685,7 +669,7 @@ func TestTLSServerWithHTTP2(t *testing.T)
 
 ```
 searchKey: httptest.checkWriteHeaderCode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -718,7 +702,7 @@ func newLocalListener() net.Listener
 
 ```
 searchKey: httptest.parseContentLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -733,7 +717,7 @@ This a modified version of same function found in net/http/transfer.go. This one
 
 ```
 searchKey: httptest.strSliceContainsPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -744,7 +728,7 @@ func strSliceContainsPrefix(v []string, pre string) bool
 
 ```
 searchKey: httptest.testGetAfterClose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -757,7 +741,7 @@ Issue 12781
 
 ```
 searchKey: httptest.testServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -768,7 +752,7 @@ func testServer(t *testing.T, newServer newServerFunc)
 
 ```
 searchKey: httptest.testServerClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -781,7 +765,7 @@ Tests that the Server.Client method works and returns an http.Client that can hi
 
 ```
 searchKey: httptest.testServerClientTransportType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -794,7 +778,7 @@ Tests that the Server.Client.Transport interface is implemented by a *http.Trans
 
 ```
 searchKey: httptest.testServerCloseBlocking
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -805,7 +789,7 @@ func testServerCloseBlocking(t *testing.T, newServer newServerFunc)
 
 ```
 searchKey: httptest.testServerCloseClientConnections
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -818,7 +802,7 @@ Issue 14290
 
 ```
 searchKey: httptest.testTLSServerClientTransportType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

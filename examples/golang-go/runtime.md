@@ -1522,7 +1522,7 @@ The GOARCH, GOOS, GOPATH, and GOROOT environment variables complete the set of G
         * [func (c *gcControllerState) endCycle(userForced bool) float64](#gcControllerState.endCycle)
         * [func (c *gcControllerState) enlistWorker()](#gcControllerState.enlistWorker)
         * [func (c *gcControllerState) findRunnableGCWorker(_p_ *p) *g](#gcControllerState.findRunnableGCWorker)
-        * [func (c *gcControllerState) init(gcPercent int32)](#gcControllerState.init.mgcpacer.go.0xc052b2af98)
+        * [func (c *gcControllerState) init(gcPercent int32)](#gcControllerState.init.mgcpacer.go.0xc0632fe4c0)
         * [func (c *gcControllerState) revise()](#gcControllerState.revise)
         * [func (c *gcControllerState) setGCPercent(in int32) int32](#gcControllerState.setGCPercent)
         * [func (c *gcControllerState) startCycle()](#gcControllerState.startCycle)
@@ -1536,7 +1536,7 @@ The GOARCH, GOOS, GOPATH, and GOROOT environment variables complete the set of G
         * [func (w *gcWork) balance()](#gcWork.balance)
         * [func (w *gcWork) dispose()](#gcWork.dispose)
         * [func (w *gcWork) empty() bool](#gcWork.empty)
-        * [func (w *gcWork) init()](#gcWork.init.mgcwork.go.0xc0530ddb50)
+        * [func (w *gcWork) init()](#gcWork.init.mgcwork.go.0xc064286d60)
         * [func (w *gcWork) put(obj uintptr)](#gcWork.put)
         * [func (w *gcWork) putBatch(obj []uintptr)](#gcWork.putBatch)
         * [func (w *gcWork) putFast(obj uintptr) bool](#gcWork.putFast)
@@ -1639,7 +1639,7 @@ The GOARCH, GOOS, GOPATH, and GOROOT environment variables complete the set of G
     * [type m struct](#m)
     * [type mOS struct](#mOS)
     * [type mSpanList struct](#mSpanList)
-        * [func (list *mSpanList) init()](#mSpanList.init.mheap.go.0xc053387380)
+        * [func (list *mSpanList) init()](#mSpanList.init.mheap.go.0xc06404ca50)
         * [func (list *mSpanList) insert(span *mspan)](#mSpanList.insert)
         * [func (list *mSpanList) insertBack(span *mspan)](#mSpanList.insertBack)
         * [func (list *mSpanList) isEmpty() bool](#mSpanList.isEmpty)
@@ -1729,7 +1729,7 @@ The GOARCH, GOOS, GOPATH, and GOROOT environment variables complete the set of G
         * [func (s *mspan) divideByElemSize(n uintptr) uintptr](#mspan.divideByElemSize)
         * [func (s *mspan) ensureSwept()](#mspan.ensureSwept)
         * [func (span *mspan) inList() bool](#mspan.inList)
-        * [func (span *mspan) init(base uintptr, npages uintptr)](#mspan.init.mheap.go.0xc053387380)
+        * [func (span *mspan) init(base uintptr, npages uintptr)](#mspan.init.mheap.go.0xc06404ca50)
         * [func (s *mspan) isFree(index uintptr) bool](#mspan.isFree)
         * [func (s *mspan) layout() (size, n, total uintptr)](#mspan.layout)
         * [func (s *mspan) markBitsForBase() markBits](#mspan.markBitsForBase)
@@ -1776,7 +1776,7 @@ The GOARCH, GOOS, GOPATH, and GOROOT environment variables complete the set of G
         * [func releasep() *p](#releasep)
         * [func timeSleepUntil() (int64, *p)](#timeSleepUntil)
         * [func (pp *p) destroy()](#p.destroy)
-        * [func (pp *p) init(id int32)](#p.init.proc.go.0xc0585819a8)
+        * [func (pp *p) init(id int32)](#p.init.proc.go.0xc065703d20)
     * [type pMask []uint32](#pMask)
         * [func (p pMask) clear(id int32)](#pMask.clear)
         * [func (p pMask) read(id uint32) bool](#pMask.read)
@@ -3555,10 +3555,6 @@ The GOARCH, GOOS, GOPATH, and GOROOT environment variables complete the set of G
 
 
 ## <a id="const" href="#const">Constants</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Compiler" href="#Compiler">const Compiler</a>
 
@@ -12698,10 +12694,6 @@ const _WorkbufSize = 2048 // in bytes; larger values result in less contention
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Atoi" href="#Atoi">var Atoi</a>
 
 ```
@@ -16834,10 +16826,6 @@ var _cgo_yield unsafe.Pointer
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AddrRange" href="#AddrRange">type AddrRange struct</a>
 
 ```
@@ -16857,7 +16845,7 @@ AddrRange is a wrapper around addrRange for testing.
 
 ```
 searchKey: runtime.MakeAddrRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16870,7 +16858,7 @@ MakeAddrRange creates a new address range.
 
 ```
 searchKey: runtime.AddrRange.Base
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16896,7 +16884,7 @@ Equals returns true if the two address ranges are exactly equal.
 
 ```
 searchKey: runtime.AddrRange.Limit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16909,7 +16897,7 @@ Base returns the virtual address of the limit of the address range.
 
 ```
 searchKey: runtime.AddrRange.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16938,7 +16926,7 @@ AddrRanges is a wrapper around addrRanges for testing.
 
 ```
 searchKey: runtime.MakeAddrRanges
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16998,7 +16986,7 @@ FindSucc returns the successor to base. See addrRanges.findSucc for more details
 
 ```
 searchKey: runtime.AddrRanges.Ranges
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17011,7 +16999,7 @@ Ranges returns a copy of the ranges described by the addrRanges.
 
 ```
 searchKey: runtime.AddrRanges.TotalBytes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17172,7 +17160,7 @@ Frames may be used to get function/file/line information for a slice of PC value
 
 ```
 searchKey: runtime.CallersFrames
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -17185,7 +17173,7 @@ CallersFrames takes a slice of PC values returned by Callers and prepares to ret
 
 ```
 searchKey: runtime.Frames.Next
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17217,7 +17205,7 @@ A Func represents a Go function in the running binary.
 
 ```
 searchKey: runtime.FuncForPC
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -17232,7 +17220,7 @@ If pc represents multiple functions because of inlining, it returns the *Func de
 
 ```
 searchKey: runtime.Func.Entry
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17258,7 +17246,7 @@ FileLine returns the file name and line number of the source code corresponding 
 
 ```
 searchKey: runtime.Func.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17271,7 +17259,7 @@ Name returns the name of the function.
 
 ```
 searchKey: runtime.Func.funcInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17282,7 +17270,7 @@ func (f *Func) funcInfo() funcInfo
 
 ```
 searchKey: runtime.Func.raw
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17328,7 +17316,7 @@ atomicAllG returns &allgs[0] and len(allgs) for use with atomicAllGIndex.
 
 ```
 searchKey: runtime.atomicAllGIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17341,7 +17329,7 @@ atomicAllGIndex returns ptr[i] with the allgptr returned from atomicAllG.
 
 ```
 searchKey: runtime.beforeIdle
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17393,7 +17381,7 @@ getg returns the pointer to the current g. The compiler rewrites calls to this f
 
 ```
 searchKey: runtime.gfget
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17406,7 +17394,7 @@ Get from gfree list. If local list is empty, grab a batch from global list.
 
 ```
 searchKey: runtime.globrunqget
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17419,7 +17407,7 @@ Try get a batch of G's from the global runnable queue. sched.lock must be held.
 
 ```
 searchKey: runtime.malg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17432,7 +17420,7 @@ Allocate a new g, with a stack big enough for stacksize bytes.
 
 ```
 searchKey: runtime.netpollunblock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17443,7 +17431,7 @@ func netpollunblock(pd *pollDesc, mode int32, ioready bool) *g
 
 ```
 searchKey: runtime.newproc1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17458,7 +17446,7 @@ This must run on the system stack because it's the continuation of newproc, whic
 
 ```
 searchKey: runtime.runqget
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17471,7 +17459,7 @@ Get g from local runnable queue. If inheritTime is true, gp should inherit the r
 
 ```
 searchKey: runtime.runqsteal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17484,7 +17472,7 @@ Steal half of elements from local runnable queue of p2 and put onto local runnab
 
 ```
 searchKey: runtime.sigFetchG
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17497,7 +17485,7 @@ sigFetchG fetches the value of G safely when running in a signal handler. On som
 
 ```
 searchKey: runtime.stealWork
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17552,7 +17540,7 @@ type LFNode struct {
 
 ```
 searchKey: runtime.LFStackPop
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17574,7 +17562,7 @@ type LockRank lockRank
 
 ```
 searchKey: runtime.LockRank.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17607,7 +17595,7 @@ func acquirem() *m
 
 ```
 searchKey: runtime.allocm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17622,7 +17610,7 @@ This function is allowed to have write barriers even if the caller isn't because
 
 ```
 searchKey: runtime.lockextra
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17704,7 +17692,7 @@ A MemProfileRecord describes the live objects allocated by a particular call seq
 
 ```
 searchKey: runtime.MemProfileRecord.InUseBytes
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17717,7 +17705,7 @@ InUseBytes returns the number of bytes in use (AllocBytes - FreeBytes).
 
 ```
 searchKey: runtime.MemProfileRecord.InUseObjects
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -17730,7 +17718,7 @@ InUseObjects returns the number of objects in use (AllocObjects - FreeObjects).
 
 ```
 searchKey: runtime.MemProfileRecord.Stack
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18011,7 +17999,7 @@ Expose pageAlloc for testing. Note that because pageAlloc is not in the heap, so
 
 ```
 searchKey: runtime.NewPageAlloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18039,7 +18027,7 @@ func (p *PageAlloc) Alloc(npages uintptr) (uintptr, uintptr)
 
 ```
 searchKey: runtime.PageAlloc.AllocToCache
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18050,7 +18038,7 @@ func (p *PageAlloc) AllocToCache() PageCache
 
 ```
 searchKey: runtime.PageAlloc.Bounds
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18072,7 +18060,7 @@ func (p *PageAlloc) Free(base, npages uintptr)
 
 ```
 searchKey: runtime.PageAlloc.InUse
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18120,7 +18108,7 @@ Expose pageCache for testing.
 
 ```
 searchKey: runtime.NewPageCache
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18142,7 +18130,7 @@ func (c *PageCache) Alloc(npages uintptr) (uintptr, uintptr)
 
 ```
 searchKey: runtime.PageCache.Base
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18153,7 +18141,7 @@ func (c *PageCache) Base() uintptr
 
 ```
 searchKey: runtime.PageCache.Cache
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18164,7 +18152,7 @@ func (c *PageCache) Cache() uint64
 
 ```
 searchKey: runtime.PageCache.Empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18186,7 +18174,7 @@ func (c *PageCache) Flush(s *PageAlloc)
 
 ```
 searchKey: runtime.PageCache.Scav
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18254,7 +18242,7 @@ func (b *PallocBits) PopcntRange(i, n uint) uint
 
 ```
 searchKey: runtime.PallocBits.Summarize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18300,7 +18288,7 @@ func (d *PallocData) FindScavengeCandidate(searchIdx uint, min, max uintptr) (ui
 
 ```
 searchKey: runtime.PallocData.PallocBits
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18311,7 +18299,7 @@ func (d *PallocData) PallocBits() *PallocBits
 
 ```
 searchKey: runtime.PallocData.Scavenged
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18346,7 +18334,7 @@ Expose pallocSum for testing.
 
 ```
 searchKey: runtime.PackPallocSum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18357,7 +18345,7 @@ func PackPallocSum(start, max, end uint) PallocSum
 
 ```
 searchKey: runtime.SummarizeSlow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18370,7 +18358,7 @@ SummarizeSlow is a slow but more obviously correct implementation of (*pallocBit
 
 ```
 searchKey: runtime.PallocSum.End
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18381,7 +18369,7 @@ func (m PallocSum) End() uint
 
 ```
 searchKey: runtime.PallocSum.Max
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18392,7 +18380,7 @@ func (m PallocSum) Max() uint
 
 ```
 searchKey: runtime.PallocSum.Start
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18414,7 +18402,7 @@ type ProfBuf profBuf
 
 ```
 searchKey: runtime.NewProfBuf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18425,7 +18413,7 @@ func NewProfBuf(hdrsize, bufwords, tags int) *ProfBuf
 
 ```
 searchKey: runtime.ProfBuf.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18471,7 +18459,7 @@ type RWMutex struct {
 
 ```
 searchKey: runtime.RWMutex.Lock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18482,7 +18470,7 @@ func (rw *RWMutex) Lock()
 
 ```
 searchKey: runtime.RWMutex.RLock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18493,7 +18481,7 @@ func (rw *RWMutex) RLock()
 
 ```
 searchKey: runtime.RWMutex.RUnlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18504,7 +18492,7 @@ func (rw *RWMutex) RUnlock()
 
 ```
 searchKey: runtime.RWMutex.Unlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18530,7 +18518,7 @@ A StackRecord describes a single execution stack.
 
 ```
 searchKey: runtime.StackRecord.Stack
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18618,7 +18606,7 @@ A TypeAssertionError explains a failed type assertion.
 
 ```
 searchKey: runtime.TypeAssertionError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18629,7 +18617,7 @@ func (e *TypeAssertionError) Error() string
 
 ```
 searchKey: runtime.TypeAssertionError.RuntimeError
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -18662,7 +18650,7 @@ An addrRange must never span a gap in the address space.
 
 ```
 searchKey: runtime.makeAddrRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18703,7 +18691,7 @@ removeGreaterEqual removes all addresses in a greater than or equal to addr and 
 
 ```
 searchKey: runtime.addrRange.size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18925,7 +18913,7 @@ type arenaIdx uint
 
 ```
 searchKey: runtime.arenaIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18942,7 +18930,7 @@ It is nosplit because it's called by spanOf and several other nosplit functions.
 
 ```
 searchKey: runtime.arenaIdx.l1
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18953,7 +18941,7 @@ func (i arenaIdx) l1() uint
 
 ```
 searchKey: runtime.arenaIdx.l2
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19012,7 +19000,7 @@ Information from the compiler about the layout of stack frames. Note: this type 
 
 ```
 searchKey: runtime.getArgInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19027,7 +19015,7 @@ This is used for both actual calls with active stack frames and for deferred cal
 
 ```
 searchKey: runtime.getArgInfoFast
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19040,7 +19028,7 @@ getArgInfoFast returns the argument frame information for a call to f. It is sho
 
 ```
 searchKey: runtime.getStackMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19053,7 +19041,7 @@ getStackMap returns the locals and arguments live pointer maps, and stack object
 
 ```
 searchKey: runtime.makeheapobjbv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19064,7 +19052,7 @@ func makeheapobjbv(p uintptr, size uintptr) bitvector
 
 ```
 searchKey: runtime.progToPointerMask
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19077,7 +19065,7 @@ progToPointerMask returns the 1-bit pointer mask output by the GC program prog. 
 
 ```
 searchKey: runtime.stackmapdata
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19135,7 +19123,7 @@ A bucket for a Go map.
 
 ```
 searchKey: runtime.makeBucketArray
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19148,7 +19136,7 @@ makeBucketArray initializes a backing array for map buckets. 1<<b is the minimum
 
 ```
 searchKey: runtime.bmap.keys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19203,7 +19191,7 @@ A boundsError represents an indexing or slicing operation gone wrong.
 
 ```
 searchKey: runtime.boundsError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19214,7 +19202,7 @@ func (e boundsError) Error() string
 
 ```
 searchKey: runtime.boundsError.RuntimeError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19260,7 +19248,7 @@ No heap pointers.
 
 ```
 searchKey: runtime.newBucket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19273,7 +19261,7 @@ newBucket allocates a bucket with the given type and number of stack entries.
 
 ```
 searchKey: runtime.stkbucket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19286,7 +19274,7 @@ Return the bucket for stk[0:nstk], allocating new bucket if needed.
 
 ```
 searchKey: runtime.bucket.bp
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19299,7 +19287,7 @@ bp returns the blockRecord associated with the blockProfile bucket b.
 
 ```
 searchKey: runtime.bucket.mp
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19312,7 +19300,7 @@ mp returns the memRecord associated with the memProfile bucket b.
 
 ```
 searchKey: runtime.bucket.stk
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19480,7 +19468,7 @@ Represents an index into the leaf level of the radix tree. Similar to arenaIndex
 
 ```
 searchKey: runtime.chunkIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19493,7 +19481,7 @@ chunkIndex returns the global index of the palloc chunk containing the pointer p
 
 ```
 searchKey: runtime.chunkIdx.l1
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19506,7 +19494,7 @@ l1 returns the index into the first level of (*pageAlloc).chunks.
 
 ```
 searchKey: runtime.chunkIdx.l2
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19569,7 +19557,7 @@ To write updates to memory stats use the acquire and release methods. To obtain 
 
 ```
 searchKey: runtime.consistentHeapStats.acquire
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19601,7 +19589,7 @@ Not safe to call concurrently. The world must be stopped or metricsSema must be 
 
 ```
 searchKey: runtime.consistentHeapStats.release
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19616,7 +19604,7 @@ The caller's P must not change between acquire and release. This also means that
 
 ```
 searchKey: runtime.consistentHeapStats.unsafeClear
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19690,7 +19678,7 @@ add adds the stack trace to the profile. It is called from signal handlers and o
 
 ```
 searchKey: runtime.cpuProfile.addExtra
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19775,7 +19763,7 @@ type debugLogReader struct {
 
 ```
 searchKey: runtime.debugLogReader.header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19786,7 +19774,7 @@ func (r *debugLogReader) header() (end, tick, nano uint64, p int)
 
 ```
 searchKey: runtime.debugLogReader.peek
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19797,7 +19785,7 @@ func (r *debugLogReader) peek() (tick uint64)
 
 ```
 searchKey: runtime.debugLogReader.printVal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19830,7 +19818,7 @@ func (r *debugLogReader) readUint64LEAt(pos uint64) uint64
 
 ```
 searchKey: runtime.debugLogReader.skip
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19841,7 +19829,7 @@ func (r *debugLogReader) skip() uint64
 
 ```
 searchKey: runtime.debugLogReader.uvarint
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19852,7 +19840,7 @@ func (r *debugLogReader) uvarint() uint64
 
 ```
 searchKey: runtime.debugLogReader.varint
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20058,7 +20046,7 @@ func (l *dlogger) B(x bool) *dlogger
 
 ```
 searchKey: runtime.dlogger.End
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20157,7 +20145,7 @@ func (l *dlogger) b(x bool) *dlogger
 
 ```
 searchKey: runtime.dlogger.end
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20358,7 +20346,7 @@ type eface struct {
 
 ```
 searchKey: runtime.convT2E
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -20369,7 +20357,7 @@ func convT2E(t *_type, elem unsafe.Pointer) (e eface)
 
 ```
 searchKey: runtime.convT2Enoptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -20380,7 +20368,7 @@ func convT2Enoptr(t *_type, elem unsafe.Pointer) (e eface)
 
 ```
 searchKey: runtime.efaceOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -20405,7 +20393,7 @@ type errorAddressString struct {
 
 ```
 searchKey: runtime.errorAddressString.Addr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20418,7 +20406,7 @@ Addr returns the memory address where a fault occurred. The address provided is 
 
 ```
 searchKey: runtime.errorAddressString.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20429,7 +20417,7 @@ func (e errorAddressString) Error() string
 
 ```
 searchKey: runtime.errorAddressString.RuntimeError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20453,7 +20441,7 @@ An errorString represents a runtime error described by a single string.
 
 ```
 searchKey: runtime.errorString.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20464,7 +20452,7 @@ func (e errorString) Error() string
 
 ```
 searchKey: runtime.errorString.RuntimeError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20610,7 +20598,7 @@ Consider marking fixalloc'd types go:notinheap.
 
 ```
 searchKey: runtime.fixalloc.alloc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20822,7 +20810,7 @@ type funcInfo struct {
 
 ```
 searchKey: runtime.findfunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -20837,7 +20825,7 @@ It is nosplit because it's part of the isgoexception implementation.
 
 ```
 searchKey: runtime.funcInfo.valid
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20848,7 +20836,7 @@ func (f funcInfo) valid() bool
 
 ```
 searchKey: runtime.funcInfo._Func
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20907,7 +20895,7 @@ type functype struct {
 
 ```
 searchKey: runtime.functype.dotdotdot
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20918,7 +20906,7 @@ func (t *functype) dotdotdot() bool
 
 ```
 searchKey: runtime.functype.in
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20929,7 +20917,7 @@ func (t *functype) in() []*_type
 
 ```
 searchKey: runtime.functype.out
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21072,7 +21060,7 @@ A gList is a list of Gs linked through g.schedlink. A G can only be on one gQueu
 
 ```
 searchKey: runtime.netpoll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21085,7 +21073,7 @@ netpoll checks for ready network connections. Returns list of goroutines that be
 
 ```
 searchKey: runtime.gList.empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21098,7 +21086,7 @@ empty reports whether l is empty.
 
 ```
 searchKey: runtime.gList.pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21153,7 +21141,7 @@ A gQueue is a dequeue of Gs linked through g.schedlink. A G can only be on one g
 
 ```
 searchKey: runtime.runqdrain
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21166,7 +21154,7 @@ runqdrain drains the local runnable queue of _p_ and returns all goroutines in i
 
 ```
 searchKey: runtime.gQueue.empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21179,7 +21167,7 @@ empty reports whether q is empty.
 
 ```
 searchKey: runtime.gQueue.pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21192,7 +21180,7 @@ pop removes and returns the head of queue q. It returns nil if q is empty.
 
 ```
 searchKey: runtime.gQueue.popList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21281,7 +21269,7 @@ gcBits is an alloc/mark bitmap. This is always used as *gcBits.
 
 ```
 searchKey: runtime.newAllocBits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21294,7 +21282,7 @@ newAllocBits returns a pointer to 8 byte aligned bytes to be used for this span'
 
 ```
 searchKey: runtime.newMarkBits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21602,7 +21590,7 @@ mheap_.lock must be held or the world must be stopped.
 
 ```
 searchKey: runtime.gcControllerState.effectiveGrowthRatio
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21632,7 +21620,7 @@ endCycle computes the trigger ratio for the next cycle. userForced indicates whe
 
 ```
 searchKey: runtime.gcControllerState.enlistWorker
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21654,7 +21642,7 @@ func (c *gcControllerState) findRunnableGCWorker(_p_ *p) *g
 
 findRunnableGCWorker returns a background mark worker for _p_ if it should be run. This must only be called when gcBlackenEnabled != 0. 
 
-#### <a id="gcControllerState.init.mgcpacer.go.0xc052b2af98" href="#gcControllerState.init.mgcpacer.go.0xc052b2af98">func (c *gcControllerState) init(gcPercent int32)</a>
+#### <a id="gcControllerState.init.mgcpacer.go.0xc0632fe4c0" href="#gcControllerState.init.mgcpacer.go.0xc0632fe4c0">func (c *gcControllerState) init(gcPercent int32)</a>
 
 ```
 searchKey: runtime.gcControllerState.init
@@ -21669,7 +21657,7 @@ func (c *gcControllerState) init(gcPercent int32)
 
 ```
 searchKey: runtime.gcControllerState.revise
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21703,7 +21691,7 @@ The world must be stopped, or mheap_.lock must be held.
 
 ```
 searchKey: runtime.gcControllerState.startCycle
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21772,7 +21760,7 @@ A gcTrigger is a predicate for starting a GC cycle. Specifically, it is an exit 
 
 ```
 searchKey: runtime.gcTrigger.test
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21853,7 +21841,7 @@ It's important that any use of gcWork during the mark phase prevent the garbage 
 
 ```
 searchKey: runtime.gcWork.balance
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21866,7 +21854,7 @@ balance moves some work that's cached in this gcWork back on the global queue.
 
 ```
 searchKey: runtime.gcWork.dispose
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21879,7 +21867,7 @@ dispose returns any cached pointers to the global queue. The buffers are being p
 
 ```
 searchKey: runtime.gcWork.empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21888,11 +21876,11 @@ func (w *gcWork) empty() bool
 
 empty reports whether w has no mark work available. 
 
-#### <a id="gcWork.init.mgcwork.go.0xc0530ddb50" href="#gcWork.init.mgcwork.go.0xc0530ddb50">func (w *gcWork) init()</a>
+#### <a id="gcWork.init.mgcwork.go.0xc064286d60" href="#gcWork.init.mgcwork.go.0xc064286d60">func (w *gcWork) init()</a>
 
 ```
 searchKey: runtime.gcWork.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21942,7 +21930,7 @@ putFast does a put and reports whether it can be done quickly otherwise it retur
 
 ```
 searchKey: runtime.gcWork.tryGet
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21957,7 +21945,7 @@ If there are no pointers remaining in this gcWork or in the global queue, tryGet
 
 ```
 searchKey: runtime.gcWork.tryGetFast
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21998,7 +21986,7 @@ A gclinkptr is a pointer to a gclink, but it is opaque to the garbage collector.
 
 ```
 searchKey: runtime.nextFreeFast
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22011,7 +21999,7 @@ nextFreeFast returns the next free object if one is quickly available. Otherwise
 
 ```
 searchKey: runtime.stackpoolalloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22024,7 +22012,7 @@ Allocates a stack from the free pool. Must be called with stackpool[order].item.
 
 ```
 searchKey: runtime.gclinkptr.ptr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22114,7 +22102,7 @@ func (gp *guintptr) cas(old, new guintptr) bool
 
 ```
 searchKey: runtime.guintptr.ptr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22166,7 +22154,7 @@ type hchan struct {
 
 ```
 searchKey: runtime.makechan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22177,7 +22165,7 @@ func makechan(t *chantype, size int) *hchan
 
 ```
 searchKey: runtime.makechan64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22188,7 +22176,7 @@ func makechan64(t *chantype, size int64) *hchan
 
 ```
 searchKey: runtime.reflect_makechan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22199,7 +22187,7 @@ func reflect_makechan(t *chantype, size int) *hchan
 
 ```
 searchKey: runtime.hchan.raceaddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22210,7 +22198,7 @@ func (c *hchan) raceaddr() unsafe.Pointer
 
 ```
 searchKey: runtime.hchan.sortkey
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22234,7 +22222,7 @@ haidTailIndex represents a combined 32-bit head and 32-bit tail of a queue into 
 
 ```
 searchKey: runtime.makeHeadTailIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22260,7 +22248,7 @@ cas atomically compares-and-swaps a headTailIndex value.
 
 ```
 searchKey: runtime.headTailIndex.decHead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22273,7 +22261,7 @@ decHead atomically decrements the head of a headTailIndex.
 
 ```
 searchKey: runtime.headTailIndex.head
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22286,7 +22274,7 @@ head returns the head of a headTailIndex value.
 
 ```
 searchKey: runtime.headTailIndex.incHead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22299,7 +22287,7 @@ incHead atomically increments the head of a headTailIndex.
 
 ```
 searchKey: runtime.headTailIndex.incTail
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22312,7 +22300,7 @@ incTail atomically increments the tail of a headTailIndex.
 
 ```
 searchKey: runtime.headTailIndex.load
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22325,7 +22313,7 @@ load atomically reads a headTailIndex value.
 
 ```
 searchKey: runtime.headTailIndex.reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22338,7 +22326,7 @@ reset clears the headTailIndex to (0, 0).
 
 ```
 searchKey: runtime.headTailIndex.split
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22351,7 +22339,7 @@ split splits the headTailIndex value into its parts.
 
 ```
 searchKey: runtime.headTailIndex.tail
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22444,7 +22432,7 @@ A heapArena stores metadata for a heap arena. heapArenas are stored outside of t
 
 ```
 searchKey: runtime.pageIndexOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22475,7 +22463,7 @@ heapBits provides access to the bitmap bits for a single heap word. The methods 
 
 ```
 searchKey: runtime.heapBitsForAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22490,7 +22478,7 @@ nosplit because it is used during write barriers and must not be preempted.
 
 ```
 searchKey: runtime.heapBits.bits
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22544,7 +22532,7 @@ initSpan initializes the heap bitmap for a span. If this is a span of pointer-si
 
 ```
 searchKey: runtime.heapBits.isPointer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22559,7 +22547,7 @@ nosplit because it is used during write barriers and must not be preempted.
 
 ```
 searchKey: runtime.heapBits.morePointers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22572,7 +22560,7 @@ morePointers reports whether this word and all remaining words in this object ar
 
 ```
 searchKey: runtime.heapBits.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22587,7 +22575,7 @@ nosplit because it is used during write barriers and must not be preempted.
 
 ```
 searchKey: runtime.heapBits.nextArena
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22639,7 +22627,7 @@ heapStatsAggregate represents memory stats obtained from the runtime. This set o
 
 ```
 searchKey: runtime.heapStatsAggregate.compute
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22757,7 +22745,7 @@ A hash iteration structure. If you modify hiter, also change cmd/compile/interna
 
 ```
 searchKey: runtime.reflect_mapiterinit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22795,7 +22783,7 @@ A header for a Go map.
 
 ```
 searchKey: runtime.makemap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22808,7 +22796,7 @@ makemap implements Go map creation for make(map[k]v, hint). If the compiler has 
 
 ```
 searchKey: runtime.makemap64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22832,7 +22820,7 @@ makemap_small implements Go map creation for make(map[k]v) and make(map[k]v, hin
 
 ```
 searchKey: runtime.reflect_makemap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22843,7 +22831,7 @@ func reflect_makemap(t *maptype, cap int) *hmap
 
 ```
 searchKey: runtime.hmap.createOverflow
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22854,7 +22842,7 @@ func (h *hmap) createOverflow()
 
 ```
 searchKey: runtime.hmap.growing
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22867,7 +22855,7 @@ growing reports whether h is growing. The growth may be to the same size or bigg
 
 ```
 searchKey: runtime.hmap.incrnoverflow
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22891,7 +22879,7 @@ func (h *hmap) newoverflow(t *maptype, b *bmap) *bmap
 
 ```
 searchKey: runtime.hmap.noldbuckets
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22904,7 +22892,7 @@ noldbuckets calculates the number of buckets prior to the current map growth.
 
 ```
 searchKey: runtime.hmap.oldbucketmask
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22917,7 +22905,7 @@ oldbucketmask provides a mask that can be applied to calculate n % noldbuckets()
 
 ```
 searchKey: runtime.hmap.sameSizeGrow
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22944,7 +22932,7 @@ type iface struct {
 
 ```
 searchKey: runtime.assertE2I2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22955,7 +22943,7 @@ func assertE2I2(inter *interfacetype, e eface) (r iface)
 
 ```
 searchKey: runtime.assertI2I2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22966,7 +22954,7 @@ func assertI2I2(inter *interfacetype, i iface) (r iface)
 
 ```
 searchKey: runtime.convI2I
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22977,7 +22965,7 @@ func convI2I(inter *interfacetype, i iface) (r iface)
 
 ```
 searchKey: runtime.convT2I
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22988,7 +22976,7 @@ func convT2I(tab *itab, elem unsafe.Pointer) (i iface)
 
 ```
 searchKey: runtime.convT2Inoptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -23086,7 +23074,7 @@ layout of Itab known to compilers allocated in non-garbage-collected memory Need
 
 ```
 searchKey: runtime.assertE2I
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -23097,7 +23085,7 @@ func assertE2I(inter *interfacetype, t *_type) *itab
 
 ```
 searchKey: runtime.assertI2I
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -23108,7 +23096,7 @@ func assertI2I(inter *interfacetype, tab *itab) *itab
 
 ```
 searchKey: runtime.getitab
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -23119,7 +23107,7 @@ func getitab(inter *interfacetype, typ *_type, canfail bool) *itab
 
 ```
 searchKey: runtime.itab.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23223,7 +23211,7 @@ Lock-free stack node. Also known to export_test.go.
 
 ```
 searchKey: runtime.lfstackUnpack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -23253,7 +23241,7 @@ The stack does not keep GC-visible pointers to nodes, so the caller is responsib
 
 ```
 searchKey: runtime.lfstack.empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23264,7 +23252,7 @@ func (head *lfstack) empty() bool
 
 ```
 searchKey: runtime.lfstack.pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23358,7 +23346,7 @@ type lockRank int
 
 ```
 searchKey: runtime.getLockRank
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -23369,7 +23357,7 @@ func getLockRank(l *mutex) lockRank
 
 ```
 searchKey: runtime.lockRank.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23524,11 +23512,11 @@ type mSpanList struct {
 
 mSpanList heads a linked list of spans. 
 
-#### <a id="mSpanList.init.mheap.go.0xc053387380" href="#mSpanList.init.mheap.go.0xc053387380">func (list *mSpanList) init()</a>
+#### <a id="mSpanList.init.mheap.go.0xc06404ca50" href="#mSpanList.init.mheap.go.0xc06404ca50">func (list *mSpanList) init()</a>
 
 ```
 searchKey: runtime.mSpanList.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23563,7 +23551,7 @@ func (list *mSpanList) insertBack(span *mspan)
 
 ```
 searchKey: runtime.mSpanList.isEmpty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23648,7 +23636,7 @@ mSpanStateBox holds an mSpanState and provides atomic operations on it. This is 
 
 ```
 searchKey: runtime.mSpanStateBox.get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23733,7 +23721,7 @@ type maptype struct {
 
 ```
 searchKey: runtime.maptype.hashMightPanic
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23744,7 +23732,7 @@ func (mt *maptype) hashMightPanic() bool
 
 ```
 searchKey: runtime.maptype.indirectelem
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23755,7 +23743,7 @@ func (mt *maptype) indirectelem() bool
 
 ```
 searchKey: runtime.maptype.indirectkey
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23768,7 +23756,7 @@ Note: flag values must match those used in the TMAP case in ../cmd/compile/inter
 
 ```
 searchKey: runtime.maptype.needkeyupdate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23779,7 +23767,7 @@ func (mt *maptype) needkeyupdate() bool
 
 ```
 searchKey: runtime.maptype.reflexivekey
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23807,7 +23795,7 @@ markBits provides access to the mark bit for an object in the heap. bytep points
 
 ```
 searchKey: runtime.markBitsForAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -23818,7 +23806,7 @@ func markBitsForAddr(p uintptr) markBits
 
 ```
 searchKey: runtime.markBitsForSpan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -23831,7 +23819,7 @@ markBitsForSpan returns the markBits for the span base address base.
 
 ```
 searchKey: runtime.markBits.advance
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23844,7 +23832,7 @@ advance advances the markBits to the next object in the span.
 
 ```
 searchKey: runtime.markBits.clearMarked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23857,7 +23845,7 @@ clearMarked clears the marked bit in the markbits, atomically.
 
 ```
 searchKey: runtime.markBits.isMarked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23870,7 +23858,7 @@ isMarked reports whether mark bit m is set.
 
 ```
 searchKey: runtime.markBits.setMarked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23883,7 +23871,7 @@ setMarked sets the marked bit in the markbits, atomically.
 
 ```
 searchKey: runtime.markBits.setMarkedNonAtomic
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23993,7 +23981,7 @@ Must run in a non-preemptible context since otherwise the owner of c could chang
 
 ```
 searchKey: runtime.mcache.prepareForSweep
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24021,7 +24009,7 @@ Must run in a non-preemptible context since otherwise the owner of c could chang
 
 ```
 searchKey: runtime.mcache.releaseAll
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24068,7 +24056,7 @@ Central list of free objects of a given size.
 
 ```
 searchKey: runtime.mcentral.cacheSpan
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24107,7 +24095,7 @@ fullUnswept returns the spanSet which holds unswept spans without any free slots
 
 ```
 searchKey: runtime.mcentral.grow
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24562,7 +24550,7 @@ If needzero is true, the memory for the returned span will be zeroed. The boolea
 
 ```
 searchKey: runtime.mheap.allocMSpanLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24711,7 +24699,7 @@ h.lock must be held.
 
 ```
 searchKey: runtime.mheap.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24724,7 +24712,7 @@ Initialize the heap.
 
 ```
 searchKey: runtime.mheap.nextSpanForSweep
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24769,7 +24757,7 @@ h.lock must be held and the caller must be non-preemptible. Note: h.lock may be 
 
 ```
 searchKey: runtime.mheap.scavengeAll
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24812,7 +24800,7 @@ h must be locked.
 
 ```
 searchKey: runtime.mheap.tryAllocMSpan
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24897,7 +24885,7 @@ moduledata records information about the layout of the executable image. It is w
 
 ```
 searchKey: runtime.findmoduledatap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25017,7 +25005,7 @@ type mspan struct {
 
 ```
 searchKey: runtime.findObject
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25036,7 +25024,7 @@ It is nosplit so it is safe for p to be a pointer to the current goroutine's sta
 
 ```
 searchKey: runtime.materializeGCProg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25049,7 +25037,7 @@ materializeGCProg allocates space for the (1-bit) pointer bitmask for an object 
 
 ```
 searchKey: runtime.spanOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25066,7 +25054,7 @@ Must be nosplit because it has callers that are nosplit.
 
 ```
 searchKey: runtime.spanOfHeap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25081,7 +25069,7 @@ Must be nosplit because it has callers that are nosplit.
 
 ```
 searchKey: runtime.spanOfUnchecked
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25107,7 +25095,7 @@ func (s *mspan) allocBitsForIndex(allocBitIndex uintptr) markBits
 
 ```
 searchKey: runtime.mspan.base
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25118,7 +25106,7 @@ func (s *mspan) base() uintptr
 
 ```
 searchKey: runtime.mspan.countAlloc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25144,7 +25132,7 @@ divideByElemSize returns n/s.elemsize. n must be within [0, s.npages*_PageSize),
 
 ```
 searchKey: runtime.mspan.ensureSwept
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25157,14 +25145,14 @@ Returns only when span s has been swept.
 
 ```
 searchKey: runtime.mspan.inList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
 func (span *mspan) inList() bool
 ```
 
-#### <a id="mspan.init.mheap.go.0xc053387380" href="#mspan.init.mheap.go.0xc053387380">func (span *mspan) init(base uintptr, npages uintptr)</a>
+#### <a id="mspan.init.mheap.go.0xc06404ca50" href="#mspan.init.mheap.go.0xc06404ca50">func (span *mspan) init(base uintptr, npages uintptr)</a>
 
 ```
 searchKey: runtime.mspan.init
@@ -25196,7 +25184,7 @@ The caller must ensure s.state is mSpanInUse, and there must have been no preemp
 
 ```
 searchKey: runtime.mspan.layout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25207,7 +25195,7 @@ func (s *mspan) layout() (size, n, total uintptr)
 
 ```
 searchKey: runtime.mspan.markBitsForBase
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25229,7 +25217,7 @@ func (s *mspan) markBitsForIndex(objIndex uintptr) markBits
 
 ```
 searchKey: runtime.mspan.nextFreeIndex
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25266,7 +25254,7 @@ refillAllocCache takes 8 bytes s.allocBits starting at whichByte and negates the
 
 ```
 searchKey: runtime.mspan.reportZombies
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25401,7 +25389,7 @@ ensure it is not in use when the last true *m is released.
 
 ```
 searchKey: runtime.muintptr.ptr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25458,7 +25446,7 @@ name is an encoded type name with optional extra data. See reflect/type.go for d
 
 ```
 searchKey: runtime.resolveNameOff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25480,7 +25468,7 @@ func (n name) data(off int) *byte
 
 ```
 searchKey: runtime.name.isBlank
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25491,7 +25479,7 @@ func (n name) isBlank() bool
 
 ```
 searchKey: runtime.name.isExported
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25502,7 +25490,7 @@ func (n name) isExported() bool
 
 ```
 searchKey: runtime.name.name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25513,7 +25501,7 @@ func (n name) name() (s string)
 
 ```
 searchKey: runtime.name.pkgPath
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25535,7 +25523,7 @@ func (n name) readvarint(off int) (int, int)
 
 ```
 searchKey: runtime.name.tag
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25585,7 +25573,7 @@ TODO: Use this as the return type of sysAlloc, persistentAlloc, etc?
 
 ```
 searchKey: runtime.persistentalloc1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25698,7 +25686,7 @@ offAddr represents an address in a contiguous view of the address space on syste
 
 ```
 searchKey: runtime.levelIndexToOffAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25724,7 +25712,7 @@ add adds a uintptr offset to the offAddr.
 
 ```
 searchKey: runtime.offAddr.addr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25955,7 +25943,7 @@ type p struct {
 
 ```
 searchKey: runtime.checkRunqsNoP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25987,7 +25975,7 @@ May run during STW, so write barriers are not allowed.
 
 ```
 searchKey: runtime.procresize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26032,7 +26020,7 @@ timeSleepUntil returns the time when the next timer should fire, and the P that 
 
 ```
 searchKey: runtime.p.destroy
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26043,7 +26031,7 @@ destroy releases all of the resources associated with pp and transitions it to s
 
 sched.lock must be held and the world must be stopped. 
 
-#### <a id="p.init.proc.go.0xc0585819a8" href="#p.init.proc.go.0xc0585819a8">func (pp *p) init(id int32)</a>
+#### <a id="p.init.proc.go.0xc065703d20" href="#p.init.proc.go.0xc065703d20">func (pp *p) init(id int32)</a>
 
 ```
 searchKey: runtime.p.init
@@ -26284,7 +26272,7 @@ p.mheapLock must be held.
 
 ```
 searchKey: runtime.pageAlloc.allocToCache
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26454,7 +26442,7 @@ p.mheapLock must be held.
 
 ```
 searchKey: runtime.pageAlloc.scavengeReserve
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26473,7 +26461,7 @@ Must run on the system stack because p.mheapLock must be held.
 
 ```
 searchKey: runtime.pageAlloc.scavengeStartGen
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26524,7 +26512,7 @@ The caller must update p.start and p.end after calling sysGrow.
 
 ```
 searchKey: runtime.pageAlloc.sysInit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26608,7 +26596,7 @@ clear clears bit i of pageBits.
 
 ```
 searchKey: runtime.pageBits.clearAll
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26673,7 +26661,7 @@ set sets bit i of pageBits.
 
 ```
 searchKey: runtime.pageBits.setAll
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26748,7 +26736,7 @@ Returns a base address and the amount of scavenged memory in the allocated regio
 
 ```
 searchKey: runtime.pageCache.empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26793,7 +26781,7 @@ The precise representation is an implementation detail, but for the sake of docu
 
 ```
 searchKey: runtime.pallocBits.allocAll
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26915,7 +26903,7 @@ free1 frees a single page in the pallocBits at i.
 
 ```
 searchKey: runtime.pallocBits.freeAll
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26941,7 +26929,7 @@ pages64 returns a 64-bit bitmap representing a block of 64 pages aligned to 64 p
 
 ```
 searchKey: runtime.pallocBits.summarize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -26972,7 +26960,7 @@ Update the comment on (*pageAlloc).chunks should this structure change.
 
 ```
 searchKey: runtime.pallocData.allocAll
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27045,7 +27033,7 @@ pallocSum is a packed summary type which packs three numbers: start, max, and en
 
 ```
 searchKey: runtime.mergeSummaries
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27058,7 +27046,7 @@ mergeSummaries merges consecutive summaries which may each represent at most 1 <
 
 ```
 searchKey: runtime.packPallocSum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27071,7 +27059,7 @@ packPallocSum takes a start, max, and end value and produces a pallocSum.
 
 ```
 searchKey: runtime.pallocSum.end
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27084,7 +27072,7 @@ end extracts the end value from a packed sum.
 
 ```
 searchKey: runtime.pallocSum.max
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27097,7 +27085,7 @@ max extracts the max value from a packed sum.
 
 ```
 searchKey: runtime.pallocSum.start
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27110,7 +27098,7 @@ start extracts the start value from a packed sum.
 
 ```
 searchKey: runtime.pallocSum.unpack
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27205,7 +27193,7 @@ plainError represents a runtime error described a string without the prefix "run
 
 ```
 searchKey: runtime.plainError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27216,7 +27204,7 @@ func (e plainError) Error() string
 
 ```
 searchKey: runtime.plainError.RuntimeError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27241,7 +27229,7 @@ type pollCache struct {
 
 ```
 searchKey: runtime.pollCache.alloc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27302,7 +27290,7 @@ No heap pointers.
 
 ```
 searchKey: runtime.poll_runtime_pollOpen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27313,7 +27301,7 @@ func poll_runtime_pollOpen(fd uintptr) (*pollDesc, int)
 
 ```
 searchKey: runtime.pollDesc.makeArg
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27350,7 +27338,7 @@ func (x *profAtomic) cas(old, new profIndex) bool
 
 ```
 searchKey: runtime.profAtomic.load
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27431,7 +27419,7 @@ if uint32(overflow) > 0 {
 
 ```
 searchKey: runtime.newProfBuf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27470,7 +27458,7 @@ canWriteTwoRecords reports whether the buffer has room for two records with stac
 
 ```
 searchKey: runtime.profBuf.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27483,7 +27471,7 @@ close signals that there will be no more writes on the buffer. Once all the data
 
 ```
 searchKey: runtime.profBuf.hasOverflow
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27520,7 +27508,7 @@ func (b *profBuf) read(mode profBufReadMode) (data []uint64, tags []unsafe.Point
 
 ```
 searchKey: runtime.profBuf.takeOverflow
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27533,7 +27521,7 @@ takeOverflow consumes the pending overflow records, returning the overflow count
 
 ```
 searchKey: runtime.profBuf.wakeupExtra
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27598,7 +27586,7 @@ addCountsAndClearFlags returns the packed form of "x + (data, tag) - all flags".
 
 ```
 searchKey: runtime.profIndex.dataCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27609,7 +27597,7 @@ func (x profIndex) dataCount() uint32
 
 ```
 searchKey: runtime.profIndex.tagCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27753,7 +27741,7 @@ type puintptr uintptr
 
 ```
 searchKey: runtime.puintptr.ptr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27791,7 +27779,7 @@ type randomEnum struct {
 
 ```
 searchKey: runtime.randomEnum.done
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27802,7 +27790,7 @@ func (enum *randomEnum) done() bool
 
 ```
 searchKey: runtime.randomEnum.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -27813,7 +27801,7 @@ func (enum *randomEnum) next()
 
 ```
 searchKey: runtime.randomEnum.position
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28008,7 +27996,7 @@ A rwmutex is a reader/writer mutual exclusion lock. The lock can be held by an a
 
 ```
 searchKey: runtime.rwmutex.lock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28021,7 +28009,7 @@ lock locks rw for writing.
 
 ```
 searchKey: runtime.rwmutex.rlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28034,7 +28022,7 @@ rlock locks rw for reading.
 
 ```
 searchKey: runtime.rwmutex.runlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28047,7 +28035,7 @@ runlock undoes a single rlock call on rw.
 
 ```
 searchKey: runtime.rwmutex.unlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28221,7 +28209,7 @@ A semaRoot holds a balanced tree of sudog with distinct addresses (s.elem). Each
 
 ```
 searchKey: runtime.semroot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28330,7 +28318,7 @@ type sigctxt struct {
 
 ```
 searchKey: runtime.sigctxt.cs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28341,7 +28329,7 @@ func (c *sigctxt) cs() uint64
 
 ```
 searchKey: runtime.sigctxt.fault
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28363,7 +28351,7 @@ func (c *sigctxt) fixsigcode(sig uint32)
 
 ```
 searchKey: runtime.sigctxt.fs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28374,7 +28362,7 @@ func (c *sigctxt) fs() uint64
 
 ```
 searchKey: runtime.sigctxt.gs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28409,7 +28397,7 @@ func (c *sigctxt) pushCall(targetPC, resumePC uintptr)
 
 ```
 searchKey: runtime.sigctxt.r10
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28420,7 +28408,7 @@ func (c *sigctxt) r10() uint64
 
 ```
 searchKey: runtime.sigctxt.r11
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28431,7 +28419,7 @@ func (c *sigctxt) r11() uint64
 
 ```
 searchKey: runtime.sigctxt.r12
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28442,7 +28430,7 @@ func (c *sigctxt) r12() uint64
 
 ```
 searchKey: runtime.sigctxt.r13
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28453,7 +28441,7 @@ func (c *sigctxt) r13() uint64
 
 ```
 searchKey: runtime.sigctxt.r14
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28464,7 +28452,7 @@ func (c *sigctxt) r14() uint64
 
 ```
 searchKey: runtime.sigctxt.r15
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28475,7 +28463,7 @@ func (c *sigctxt) r15() uint64
 
 ```
 searchKey: runtime.sigctxt.r8
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28486,7 +28474,7 @@ func (c *sigctxt) r8() uint64
 
 ```
 searchKey: runtime.sigctxt.r9
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28497,7 +28485,7 @@ func (c *sigctxt) r9() uint64
 
 ```
 searchKey: runtime.sigctxt.rax
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28508,7 +28496,7 @@ func (c *sigctxt) rax() uint64
 
 ```
 searchKey: runtime.sigctxt.rbp
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28519,7 +28507,7 @@ func (c *sigctxt) rbp() uint64
 
 ```
 searchKey: runtime.sigctxt.rbx
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28530,7 +28518,7 @@ func (c *sigctxt) rbx() uint64
 
 ```
 searchKey: runtime.sigctxt.rcx
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28541,7 +28529,7 @@ func (c *sigctxt) rcx() uint64
 
 ```
 searchKey: runtime.sigctxt.rdi
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28552,7 +28540,7 @@ func (c *sigctxt) rdi() uint64
 
 ```
 searchKey: runtime.sigctxt.rdx
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28563,7 +28551,7 @@ func (c *sigctxt) rdx() uint64
 
 ```
 searchKey: runtime.sigctxt.regs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28574,7 +28562,7 @@ func (c *sigctxt) regs() *regs64
 
 ```
 searchKey: runtime.sigctxt.rflags
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28585,7 +28573,7 @@ func (c *sigctxt) rflags() uint64
 
 ```
 searchKey: runtime.sigctxt.rip
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28596,7 +28584,7 @@ func (c *sigctxt) rip() uint64
 
 ```
 searchKey: runtime.sigctxt.rsi
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28607,7 +28595,7 @@ func (c *sigctxt) rsi() uint64
 
 ```
 searchKey: runtime.sigctxt.rsp
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28662,7 +28650,7 @@ func (c *sigctxt) set_sigcode(x uint64)
 
 ```
 searchKey: runtime.sigctxt.sigaddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28673,7 +28661,7 @@ func (c *sigctxt) sigaddr() uint64
 
 ```
 searchKey: runtime.sigctxt.sigcode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28684,7 +28672,7 @@ func (c *sigctxt) sigcode() uint64
 
 ```
 searchKey: runtime.sigctxt.siglr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28695,7 +28683,7 @@ func (c *sigctxt) siglr() uintptr
 
 ```
 searchKey: runtime.sigctxt.sigpc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28706,7 +28694,7 @@ func (c *sigctxt) sigpc() uintptr
 
 ```
 searchKey: runtime.sigctxt.sigsp
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28765,7 +28753,7 @@ type slice struct {
 
 ```
 searchKey: runtime.growslice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28818,7 +28806,7 @@ spanAllocType represents the type of allocation to make, or the type of allocati
 
 ```
 searchKey: runtime.spanAllocType.manual
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28846,7 +28834,7 @@ Each size class has a noscan spanClass and a scan spanClass. The noscan spanClas
 
 ```
 searchKey: runtime.makeSpanClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28857,7 +28845,7 @@ func makeSpanClass(sizeclass uint8, noscan bool) spanClass
 
 ```
 searchKey: runtime.spanClass.noscan
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28868,7 +28856,7 @@ func (sc spanClass) noscan() bool
 
 ```
 searchKey: runtime.spanClass.sizeclass
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28912,7 +28900,7 @@ spanSet is safe for concurrent push and pop operations.
 
 ```
 searchKey: runtime.spanSet.pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28938,7 +28926,7 @@ push adds span s to buffer b. push is safe to call concurrently with other push 
 
 ```
 searchKey: runtime.spanSet.reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -28992,7 +28980,7 @@ spanSetBlockAlloc represents a concurrent pool of spanSetBlocks.
 
 ```
 searchKey: runtime.spanSetBlockAlloc.alloc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29033,7 +29021,7 @@ type special struct {
 
 ```
 searchKey: runtime.removespecial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29116,7 +29104,7 @@ specialsIter helps iterate over specials lists.
 
 ```
 searchKey: runtime.newSpecialsIter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29127,7 +29115,7 @@ func newSpecialsIter(span *mspan) specialsIter
 
 ```
 searchKey: runtime.specialsIter.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29138,7 +29126,7 @@ func (i *specialsIter) next()
 
 ```
 searchKey: runtime.specialsIter.unlinkAndNext
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29151,7 +29139,7 @@ unlinkAndNext removes the current special from the list and moves the iterator t
 
 ```
 searchKey: runtime.specialsIter.valid
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29178,7 +29166,7 @@ Stack describes a Go execution stack. The bounds of the stack are exactly [lo, h
 
 ```
 searchKey: runtime.stackalloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29212,7 +29200,7 @@ A stackObject represents a variable on the stack that has had its address taken.
 
 ```
 searchKey: runtime.binarySearchTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29289,7 +29277,7 @@ A stackObjectRecord is generated by the compiler for each stack object in a stac
 
 ```
 searchKey: runtime.stackObjectRecord.ptrdata
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29300,7 +29288,7 @@ func (r *stackObjectRecord) ptrdata() uintptr
 
 ```
 searchKey: runtime.stackObjectRecord.useGCProg
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29369,7 +29357,7 @@ addObject adds a stack object at addr of type typ to the set of stack objects.
 
 ```
 searchKey: runtime.stackScanState.buildIndex
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29395,7 +29383,7 @@ findObject returns the stack object containing address a, if any. Must have call
 
 ```
 searchKey: runtime.stackScanState.getPtr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29575,7 +29563,7 @@ Under the hood, it's a bitmap.
 
 ```
 searchKey: runtime.makeStatDepSet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29601,7 +29589,7 @@ differennce returns set difference of s from b as a new set.
 
 ```
 searchKey: runtime.statDepSet.empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29691,7 +29679,7 @@ type stringStruct struct {
 
 ```
 searchKey: runtime.stringStructOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29746,7 +29734,7 @@ type structfield struct {
 
 ```
 searchKey: runtime.structfield.offset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29838,7 +29826,7 @@ type suspendGState struct {
 
 ```
 searchKey: runtime.suspendG
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29870,7 +29858,7 @@ sweepClass is a spanClass and one bit to represent whether we're currently sweep
 
 ```
 searchKey: runtime.sweepClass.clear
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29881,7 +29869,7 @@ func (s *sweepClass) clear()
 
 ```
 searchKey: runtime.sweepClass.load
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29892,7 +29880,7 @@ func (s *sweepClass) load() sweepClass
 
 ```
 searchKey: runtime.sweepClass.split
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29975,7 +29963,7 @@ func newSweepLocker() sweepLocker
 
 ```
 searchKey: runtime.sweepLocker.blockCompletion
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29988,7 +29976,7 @@ blockCompletion blocks sweep completion without acquiring any specific spans.
 
 ```
 searchKey: runtime.sweepLocker.dispose
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -29999,7 +29987,7 @@ func (l *sweepLocker) dispose()
 
 ```
 searchKey: runtime.sweepLocker.sweepIsDone
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30083,7 +30071,7 @@ Must be nosplit as it is called in runtime initialization, e.g. newosproc0.
 
 ```
 searchKey: runtime.sysMemStat.load
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30123,7 +30111,7 @@ sysStatsAggregate represents system memory stats obtained from the runtime. This
 
 ```
 searchKey: runtime.sysStatsAggregate.compute
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30369,7 +30357,7 @@ alloc allocates n-byte block.
 
 ```
 searchKey: runtime.traceAlloc.drop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30413,7 +30401,7 @@ TODO: Since traceAllocBlock is now go:notinheap, this isn't necessary.
 
 ```
 searchKey: runtime.traceAllocBlockPtr.ptr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30510,7 +30498,7 @@ TODO: Since traceBuf is now go:notinheap, this isn't necessary.
 
 ```
 searchKey: runtime.traceBufPtrOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -30521,7 +30509,7 @@ func traceBufPtrOf(b *traceBuf) traceBufPtr
 
 ```
 searchKey: runtime.traceFlush
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -30534,7 +30522,7 @@ traceFlush puts buf onto stack of full buffers and returns an empty buffer.
 
 ```
 searchKey: runtime.traceFrameForPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -30560,7 +30548,7 @@ traceFullDequeue dequeues from queue of full buffers.
 
 ```
 searchKey: runtime.traceString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -30573,7 +30561,7 @@ traceString adds a string to the trace.strings and returns the id.
 
 ```
 searchKey: runtime.traceBufPtr.ptr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30629,7 +30617,7 @@ traceStack is a single stack in traceStackTable.
 
 ```
 searchKey: runtime.traceStack.stack
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30653,7 +30641,7 @@ type traceStackPtr uintptr
 
 ```
 searchKey: runtime.traceStackPtr.ptr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30682,7 +30670,7 @@ traceStackTable maps stack traces (arrays of PC's) to unique uint32 ids. It is l
 
 ```
 searchKey: runtime.traceStackTable.dump
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30876,7 +30864,7 @@ A waitReason explains why a goroutine has been stopped. See gopark. Do not re-us
 
 ```
 searchKey: runtime.waitReason.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30901,7 +30889,7 @@ type waitq struct {
 
 ```
 searchKey: runtime.waitq.dequeue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30967,7 +30955,7 @@ This is closely related to a "sequential store buffer" (SSB), except that SSBs a
 
 ```
 searchKey: runtime.wbBuf.discard
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -30982,7 +30970,7 @@ This must be nosplit because it's called by wbBufFlush.
 
 ```
 searchKey: runtime.wbBuf.empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -31022,7 +31010,7 @@ putFast must be nowritebarrierrec to because write barriers here would corrupt t
 
 ```
 searchKey: runtime.wbBuf.reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -31063,7 +31051,7 @@ getempty pops an empty work buffer off the work.empty list, allocating new buffe
 
 ```
 searchKey: runtime.handoff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31087,7 +31075,7 @@ trygetfull tries to get a full or partially empty workbuffer. If one is not imme
 
 ```
 searchKey: runtime.workbuf.checkempty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -31098,7 +31086,7 @@ func (b *workbuf) checkempty()
 
 ```
 searchKey: runtime.workbuf.checknonempty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -31161,7 +31149,7 @@ A _defer holds an entry on the list of deferred calls. If you add a field here, 
 
 ```
 searchKey: runtime.newdefer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31261,7 +31249,7 @@ Needs to be in sync with ../cmd/link/internal/ld/decodesym.go:/^func.commonsize,
 
 ```
 searchKey: runtime.resolveTypeOff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31272,7 +31260,7 @@ func resolveTypeOff(ptrInModule unsafe.Pointer, off typeOff) *_type
 
 ```
 searchKey: runtime._type.name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -31294,7 +31282,7 @@ func (t *_type) nameOff(off nameOff) name
 
 ```
 searchKey: runtime._type.pkgpath
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -31307,7 +31295,7 @@ pkgpath returns the path of the package where t was defined, if available. This 
 
 ```
 searchKey: runtime._type.string
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -31340,7 +31328,7 @@ func (t *_type) typeOff(off typeOff) *_type
 
 ```
 searchKey: runtime._type.uncommon
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -31363,15 +31351,11 @@ type _typePair struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchSetType" href="#BenchSetType">func BenchSetType(n int, x interface{})</a>
 
 ```
 searchKey: runtime.BenchSetType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31395,7 +31379,7 @@ BlockOnSystemStack switches to the system stack, prints "x\n" to stderr, and blo
 
 ```
 searchKey: runtime.BlockProfile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -31438,7 +31422,7 @@ Deprecated: Use the runtime/pprof package, or the handlers in the net/http/pprof
 
 ```
 searchKey: runtime.Caller
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -31451,7 +31435,7 @@ Caller reports file and line number information about function invocations on th
 
 ```
 searchKey: runtime.Callers
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -31466,7 +31450,7 @@ To translate these PCs into symbolic information such as function names and line
 
 ```
 searchKey: runtime.CheckScavengedBitsCleared
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31488,7 +31472,7 @@ func CountPagesInUse() (pagesInUse, counted uintptr)
 
 ```
 searchKey: runtime.DiffPallocBits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31534,7 +31518,7 @@ func Fastrand() uint32
 
 ```
 searchKey: runtime.Fastrandn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31545,7 +31529,7 @@ func Fastrandn(n uint32) uint32
 
 ```
 searchKey: runtime.Fcntl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31556,7 +31540,7 @@ func Fcntl(fd, cmd, arg uintptr) (uintptr, uintptr)
 
 ```
 searchKey: runtime.FillAligned
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31580,7 +31564,7 @@ func FinalizerGAsleep() bool
 
 ```
 searchKey: runtime.FindBitRange64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31593,7 +31577,7 @@ Expose non-trivial helpers for testing.
 
 ```
 searchKey: runtime.FreeMSpan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31606,7 +31590,7 @@ Free an allocated mspan.
 
 ```
 searchKey: runtime.FreePageAlloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31643,7 +31627,7 @@ GC runs a garbage collection and blocks the caller until the garbage collection 
 
 ```
 searchKey: runtime.GCMask
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31654,7 +31638,7 @@ func GCMask(x interface{}) (ret []byte)
 
 ```
 searchKey: runtime.GCTestIsReachable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31667,7 +31651,7 @@ For GCTestIsReachable, it's important that we do this as a call so escape analys
 
 ```
 searchKey: runtime.GCTestPointerClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31682,7 +31666,7 @@ This is nosplit because gcTestPointerClass is.
 
 ```
 searchKey: runtime.GOMAXPROCS
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -31745,7 +31729,7 @@ Calling Goexit from the main goroutine terminates that goroutine without func ma
 
 ```
 searchKey: runtime.GoroutineProfile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -31773,7 +31757,7 @@ Gosched yields the processor, allowing other goroutines to run. It does not susp
 
 ```
 searchKey: runtime.GostringW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31786,7 +31770,7 @@ entry point for testing
 
 ```
 searchKey: runtime.KeepAlive
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -31816,7 +31800,7 @@ Without the KeepAlive call, the finalizer could run at the start of syscall.Read
 
 ```
 searchKey: runtime.KeepNArenaHints
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31827,7 +31811,7 @@ func KeepNArenaHints(n int)
 
 ```
 searchKey: runtime.LFStackPush
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31866,7 +31850,7 @@ A goroutine should call LockOSThread before calling OS services or non-Go librar
 
 ```
 searchKey: runtime.MSpanCountAlloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31877,7 +31861,7 @@ func MSpanCountAlloc(ms *MSpan, bits []byte) int
 
 ```
 searchKey: runtime.MapBucketsCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31888,7 +31872,7 @@ func MapBucketsCount(m map[int]int) int
 
 ```
 searchKey: runtime.MapBucketsPointerIsNil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31912,7 +31896,7 @@ MapNextArenaHint reserves a page at the next arena growth hint, preventing the a
 
 ```
 searchKey: runtime.MapTombstoneCheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31923,7 +31907,7 @@ func MapTombstoneCheck(m map[int]int)
 
 ```
 searchKey: runtime.MemProfile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -31944,7 +31928,7 @@ Most clients should use the runtime/pprof package or the testing package's -test
 
 ```
 searchKey: runtime.MemclrBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -31955,7 +31939,7 @@ func MemclrBytes(b []byte)
 
 ```
 searchKey: runtime.MutexProfile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -31970,7 +31954,7 @@ Most clients should use the runtime/pprof package instead of calling MutexProfil
 
 ```
 searchKey: runtime.Netpoll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32022,7 +32006,7 @@ NumGoroutine returns the number of goroutines that currently exist.
 
 ```
 searchKey: runtime.PageBase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32046,7 +32030,7 @@ func PageCachePagesLeaked() (leaked uintptr)
 
 ```
 searchKey: runtime.PanicForTesting
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32057,7 +32041,7 @@ func PanicForTesting(b []byte, i int) byte
 
 ```
 searchKey: runtime.ReadMemStats
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -32072,7 +32056,7 @@ The returned memory allocator statistics are up to date as of the call to ReadMe
 
 ```
 searchKey: runtime.ReadMetricsSlow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32118,7 +32102,7 @@ func RunGetgThreadSwitchTest()
 
 ```
 searchKey: runtime.RunSchedLocalQueueEmptyTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32162,7 +32146,7 @@ func RunStealOrderTest()
 
 ```
 searchKey: runtime.SemNwait
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32173,7 +32157,7 @@ func SemNwait(addr *uint32) uint32
 
 ```
 searchKey: runtime.SendSigusr1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32186,7 +32170,7 @@ SendSigusr1 sends SIGUSR1 to mp.
 
 ```
 searchKey: runtime.SetBlockProfileRate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -32201,7 +32185,7 @@ To include every blocking event in the profile, pass rate = 1. To turn off profi
 
 ```
 searchKey: runtime.SetCPUProfileRate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -32216,7 +32200,7 @@ Most clients should use the runtime/pprof package or the testing package's -test
 
 ```
 searchKey: runtime.SetCgoTraceback
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -32325,7 +32309,7 @@ SetCgoTraceback should be called only once, ideally from an init function.
 
 ```
 searchKey: runtime.SetEnvs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32336,7 +32320,7 @@ func SetEnvs(e []string)
 
 ```
 searchKey: runtime.SetFinalizer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -32367,7 +32351,7 @@ A single goroutine runs all finalizers for a program, sequentially. If a finaliz
 
 ```
 searchKey: runtime.SetIntArgRegs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32378,7 +32362,7 @@ func SetIntArgRegs(a int) int
 
 ```
 searchKey: runtime.SetMutexProfileFraction
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -32393,7 +32377,7 @@ To turn off profiling entirely, pass rate 0. To just read the current rate, pass
 
 ```
 searchKey: runtime.SetTracebackEnv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32406,7 +32390,7 @@ SetTracebackEnv is like runtime/debug.SetTraceback, but it raises the "environme
 
 ```
 searchKey: runtime.Sigisblocked
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32417,7 +32401,7 @@ func Sigisblocked(i int) bool
 
 ```
 searchKey: runtime.Stack
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -32456,7 +32440,7 @@ StopTrace stops tracing, if it was previously enabled. StopTrace only returns af
 
 ```
 searchKey: runtime.StringifyPallocBits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32469,7 +32453,7 @@ StringifyPallocBits gets the bits in the bit range r from b, and returns a strin
 
 ```
 searchKey: runtime.ThreadCreateProfile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -32484,7 +32468,7 @@ Most clients should use the runtime/pprof package instead of calling ThreadCreat
 
 ```
 searchKey: runtime.TracebackSystemstack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32523,7 +32507,7 @@ Version returns the Go tree's version string. It is either the commit hash and d
 
 ```
 searchKey: runtime.WaitForSigusr1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32551,7 +32535,7 @@ abort crashes the runtime in situations where even throw might not work. In gene
 
 ```
 searchKey: runtime.abs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32571,7 +32555,7 @@ Abs(NaN) = NaN
 
 ```
 searchKey: runtime.acquireLockRank
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32584,7 +32568,7 @@ This function may be called in nosplit context and thus must be nosplit.
 
 ```
 searchKey: runtime.acquirep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32616,7 +32600,7 @@ This is nosplit/nowritebarrier because it is called by the cgo pointer checking 
 
 ```
 searchKey: runtime.add
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32629,7 +32613,7 @@ Should be a built-in for unsafe.Pointer?
 
 ```
 searchKey: runtime.add1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32642,7 +32626,7 @@ add1 returns the byte pointer p+1.
 
 ```
 searchKey: runtime.addAdjustedTimers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32655,7 +32639,7 @@ addAdjustedTimers adds any timers we adjusted in adjusttimers back to the timer 
 
 ```
 searchKey: runtime.addOneOpenDeferFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32670,7 +32654,7 @@ Note: All entries of the defer chain (including this new open-coded entry) have 
 
 ```
 searchKey: runtime.addb
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32683,7 +32667,7 @@ addb returns the byte pointer p+n.
 
 ```
 searchKey: runtime.addfinalizer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32709,7 +32693,7 @@ Called from linker-generated .initarray; declared for go vet; do NOT call from G
 
 ```
 searchKey: runtime.addrsToSummaryRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32724,7 +32708,7 @@ The returned range is inclusive on the lower bound and exclusive on the upper bo
 
 ```
 searchKey: runtime.addspecial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32741,7 +32725,7 @@ already exists.)
 
 ```
 searchKey: runtime.addtimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32754,7 +32738,7 @@ addtimer adds a timer to the current P. This should only be called with a newly 
 
 ```
 searchKey: runtime.adjustSignalStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32767,7 +32751,7 @@ adjustSignalStack adjusts the current stack guard based on the stack pointer tha
 
 ```
 searchKey: runtime.adjustctxt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32778,7 +32762,7 @@ func adjustctxt(gp *g, adjinfo *adjustinfo)
 
 ```
 searchKey: runtime.adjustdefers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32789,7 +32773,7 @@ func adjustdefers(gp *g, adjinfo *adjustinfo)
 
 ```
 searchKey: runtime.adjustframe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32802,7 +32786,7 @@ Note: the argument/return area is adjusted by the callee.
 
 ```
 searchKey: runtime.adjustpanics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32813,7 +32797,7 @@ func adjustpanics(gp *g, adjinfo *adjustinfo)
 
 ```
 searchKey: runtime.adjustpointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32826,7 +32810,7 @@ Adjustpointer checks whether *vpp is in the old stack described by adjinfo. If s
 
 ```
 searchKey: runtime.adjustpointers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32839,7 +32823,7 @@ bv describes the memory starting at address scanp. Adjust any pointers contained
 
 ```
 searchKey: runtime.adjustsudogs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32850,7 +32834,7 @@ func adjustsudogs(gp *g, adjinfo *adjustinfo)
 
 ```
 searchKey: runtime.adjusttimers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32863,7 +32847,7 @@ adjusttimers looks through the timers in the current P's heap for any timers tha
 
 ```
 searchKey: runtime.advanceEvacuationMark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32896,7 +32880,7 @@ func alginit()
 
 ```
 searchKey: runtime.alignDown
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32909,7 +32893,7 @@ alignDown rounds n down to a multiple of a. a must be a power of 2.
 
 ```
 searchKey: runtime.alignUp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32922,7 +32906,7 @@ alignUp rounds n up to a multiple of a. a must be a power of 2.
 
 ```
 searchKey: runtime.allFrames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32935,7 +32919,7 @@ allFrames returns all of the Frames corresponding to pcs.
 
 ```
 searchKey: runtime.allgadd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32946,7 +32930,7 @@ func allgadd(gp *g)
 
 ```
 searchKey: runtime.appendIntStr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32957,7 +32941,7 @@ func appendIntStr(b []byte, v int64, signed bool) []byte
 
 ```
 searchKey: runtime.arenaBase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32970,7 +32954,7 @@ arenaBase returns the low address of the region covered by heap arena i.
 
 ```
 searchKey: runtime.args
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32981,7 +32965,7 @@ func args(c int32, v **byte)
 
 ```
 searchKey: runtime.argv_index
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -32994,7 +32978,7 @@ nosplit for use in linux startup sysargs
 
 ```
 searchKey: runtime.asmcgocall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33005,7 +32989,7 @@ func asmcgocall(fn, arg unsafe.Pointer) int32
 
 ```
 searchKey: runtime.asmcgocall_no_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33027,7 +33011,7 @@ func asminit()
 
 ```
 searchKey: runtime.assertLockHeld
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33038,7 +33022,7 @@ func assertLockHeld(l *mutex)
 
 ```
 searchKey: runtime.assertRankHeld
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33060,7 +33044,7 @@ func assertWorldStopped()
 
 ```
 searchKey: runtime.assertWorldStoppedOrLockHeld
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33099,7 +33083,7 @@ func asyncPreempt2()
 
 ```
 searchKey: runtime.atoi
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33112,7 +33096,7 @@ atoi parses an int from a string s. The bool result reports whether s is a numbe
 
 ```
 searchKey: runtime.atoi32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33125,7 +33109,7 @@ atoi32 is like atoi but for integers that fit into an int32.
 
 ```
 searchKey: runtime.atomicstorep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33138,7 +33122,7 @@ atomicstorep performs *ptr = new atomically and invokes a write barrier.
 
 ```
 searchKey: runtime.atomicwb
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33151,7 +33135,7 @@ atomicwb performs a write barrier before an atomic pointer write. The caller sho
 
 ```
 searchKey: runtime.badPointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33201,7 +33185,7 @@ func badctxt()
 
 ```
 searchKey: runtime.badmcall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33214,7 +33198,7 @@ called from assembly
 
 ```
 searchKey: runtime.badmcall2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33258,7 +33242,7 @@ func badreflectcall()
 
 ```
 searchKey: runtime.badsignal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33341,7 +33325,7 @@ func block()
 
 ```
 searchKey: runtime.blockAlignSummaryRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33365,7 +33349,7 @@ func blockOnSystemStackInternal()
 
 ```
 searchKey: runtime.blockableSig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33378,7 +33362,7 @@ blockableSig reports whether sig may be blocked by the signal mask. We never wan
 
 ```
 searchKey: runtime.blockevent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33389,7 +33373,7 @@ func blockevent(cycles int64, skip int)
 
 ```
 searchKey: runtime.blocksampled
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33402,7 +33386,7 @@ blocksampled returns true for all events where cycles >= rate. Shorter events ha
 
 ```
 searchKey: runtime.bool2int
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33426,7 +33410,7 @@ func breakpoint()
 
 ```
 searchKey: runtime.bucketEvacuated
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33437,7 +33421,7 @@ func bucketEvacuated(t *maptype, h *hmap, bucket uintptr) bool
 
 ```
 searchKey: runtime.bucketMask
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33450,7 +33434,7 @@ bucketMask returns 1<<b - 1, optimized for code generation.
 
 ```
 searchKey: runtime.bucketShift
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33463,7 +33447,7 @@ bucketShift returns 1<<b, optimized for code generation.
 
 ```
 searchKey: runtime.bulkBarrierBitmap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33478,7 +33462,7 @@ This is used by bulkBarrierPreWrite for writes to data and BSS.
 
 ```
 searchKey: runtime.bulkBarrierPreWrite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33499,7 +33483,7 @@ Callers must perform cgo checks if writeBarrier.cgo.
 
 ```
 searchKey: runtime.bulkBarrierPreWriteSrcOnly
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33516,7 +33500,7 @@ This is used for special cases where e.g. dst was just created and zeroed with m
 
 ```
 searchKey: runtime.bytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33527,7 +33511,7 @@ func bytes(s string) (ret []byte)
 
 ```
 searchKey: runtime.bytesHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33538,7 +33522,7 @@ func bytesHash(b []byte, seed uintptr) uintptr
 
 ```
 searchKey: runtime.c128equal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33549,7 +33533,7 @@ func c128equal(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.c128hash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33560,7 +33544,7 @@ func c128hash(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.c64equal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33571,7 +33555,7 @@ func c64equal(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.c64hash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33582,7 +33566,7 @@ func c64hash(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.call1024
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33593,7 +33577,7 @@ func call1024(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset, 
 
 ```
 searchKey: runtime.call1048576
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33604,7 +33588,7 @@ func call1048576(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffse
 
 ```
 searchKey: runtime.call1073741824
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33615,7 +33599,7 @@ func call1073741824(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOf
 
 ```
 searchKey: runtime.call128
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33626,7 +33610,7 @@ func call128(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset, f
 
 ```
 searchKey: runtime.call131072
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33637,7 +33621,7 @@ func call131072(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset
 
 ```
 searchKey: runtime.call134217728
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33648,7 +33632,7 @@ func call134217728(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOff
 
 ```
 searchKey: runtime.call16
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33661,7 +33645,7 @@ in asm_*.s not called directly; definitions here supply type information for tra
 
 ```
 searchKey: runtime.call16384
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33672,7 +33656,7 @@ func call16384(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset,
 
 ```
 searchKey: runtime.call16777216
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33683,7 +33667,7 @@ func call16777216(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffs
 
 ```
 searchKey: runtime.call2048
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33694,7 +33678,7 @@ func call2048(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset, 
 
 ```
 searchKey: runtime.call2097152
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33705,7 +33689,7 @@ func call2097152(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffse
 
 ```
 searchKey: runtime.call256
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33716,7 +33700,7 @@ func call256(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset, f
 
 ```
 searchKey: runtime.call262144
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33727,7 +33711,7 @@ func call262144(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset
 
 ```
 searchKey: runtime.call268435456
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33738,7 +33722,7 @@ func call268435456(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOff
 
 ```
 searchKey: runtime.call32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33749,7 +33733,7 @@ func call32(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset, fr
 
 ```
 searchKey: runtime.call32768
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33760,7 +33744,7 @@ func call32768(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset,
 
 ```
 searchKey: runtime.call33554432
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33771,7 +33755,7 @@ func call33554432(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffs
 
 ```
 searchKey: runtime.call4096
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33782,7 +33766,7 @@ func call4096(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset, 
 
 ```
 searchKey: runtime.call4194304
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33793,7 +33777,7 @@ func call4194304(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffse
 
 ```
 searchKey: runtime.call512
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33804,7 +33788,7 @@ func call512(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset, f
 
 ```
 searchKey: runtime.call524288
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33815,7 +33799,7 @@ func call524288(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset
 
 ```
 searchKey: runtime.call536870912
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33826,7 +33810,7 @@ func call536870912(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOff
 
 ```
 searchKey: runtime.call64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33837,7 +33821,7 @@ func call64(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset, fr
 
 ```
 searchKey: runtime.call65536
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33848,7 +33832,7 @@ func call65536(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset,
 
 ```
 searchKey: runtime.call67108864
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33859,7 +33843,7 @@ func call67108864(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffs
 
 ```
 searchKey: runtime.call8192
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33870,7 +33854,7 @@ func call8192(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset, 
 
 ```
 searchKey: runtime.call8388608
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33881,7 +33865,7 @@ func call8388608(typ, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffse
 
 ```
 searchKey: runtime.callCgoSymbolizer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33894,7 +33878,7 @@ callCgoSymbolizer calls the cgoSymbolizer function.
 
 ```
 searchKey: runtime.callers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33905,7 +33889,7 @@ func callers(skip int, pcbuf []uintptr) int
 
 ```
 searchKey: runtime.canPreemptM
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33920,7 +33904,7 @@ It is nosplit because it has nosplit callers.
 
 ```
 searchKey: runtime.canpanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33933,7 +33917,7 @@ canpanic returns false if a signal should throw instead of panicking.
 
 ```
 searchKey: runtime.cansemacquire
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33944,7 +33928,7 @@ func cansemacquire(addr *uint32) bool
 
 ```
 searchKey: runtime.casGFromPreempted
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33957,7 +33941,7 @@ casGFromPreempted attempts to transition gp from _Gpreempted to _Gwaiting. If su
 
 ```
 searchKey: runtime.casGToPreemptScan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33972,7 +33956,7 @@ TODO(austin): This is the only status operation that both changes the status and
 
 ```
 searchKey: runtime.casfrom_Gscanstatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33985,7 +33969,7 @@ The Gscanstatuses are acting like locks and this releases them. If it proves to 
 
 ```
 searchKey: runtime.casgcopystack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33998,7 +33982,7 @@ casgstatus(gp, oldstatus, Gcopystack), assuming oldstatus is Gwaiting or Grunnab
 
 ```
 searchKey: runtime.casgstatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34011,7 +33995,7 @@ If asked to move to or from a Gscanstatus this will throw. Use the castogscansta
 
 ```
 searchKey: runtime.castogscanstatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34024,7 +34008,7 @@ This will return false if the gp is not in the expected status and the cas fails
 
 ```
 searchKey: runtime.cfuncname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34035,7 +34019,7 @@ func cfuncname(f funcInfo) *byte
 
 ```
 searchKey: runtime.cfuncnameFromNameoff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34046,7 +34030,7 @@ func cfuncnameFromNameoff(f funcInfo, nameoff int32) *byte
 
 ```
 searchKey: runtime.cgoCheckArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34059,7 +34043,7 @@ cgoCheckArg is the real work of cgoCheckPointer. The argument p is either a poin
 
 ```
 searchKey: runtime.cgoCheckBits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34072,7 +34056,7 @@ cgoCheckBits checks the block of memory at src, for up to size bytes, and throws
 
 ```
 searchKey: runtime.cgoCheckMemmove
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34085,7 +34069,7 @@ cgoCheckMemmove is called when moving a block of memory. dst and src point off b
 
 ```
 searchKey: runtime.cgoCheckPointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34098,7 +34082,7 @@ cgoCheckPointer checks if the argument contains a Go pointer that points to a Go
 
 ```
 searchKey: runtime.cgoCheckResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34111,7 +34095,7 @@ cgoCheckResult is called to check the result parameter of an exported Go functio
 
 ```
 searchKey: runtime.cgoCheckSliceCopy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34124,7 +34108,7 @@ cgoCheckSliceCopy is called when copying n elements of a slice. src and dst are 
 
 ```
 searchKey: runtime.cgoCheckTypedBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34137,7 +34121,7 @@ cgoCheckTypedBlock checks the block of memory at src, for up to size bytes, and 
 
 ```
 searchKey: runtime.cgoCheckUnknownPointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34150,7 +34134,7 @@ cgoCheckUnknownPointer is called for an arbitrary pointer into Go memory. It che
 
 ```
 searchKey: runtime.cgoCheckUsingType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34163,7 +34147,7 @@ cgoCheckUsingType is like cgoCheckTypedBlock, but is a last ditch fall back to l
 
 ```
 searchKey: runtime.cgoCheckWriteBarrier
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34178,7 +34162,7 @@ This is called from the write barrier, so its entire call tree must be nosplit.
 
 ```
 searchKey: runtime.cgoContextPCs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34191,7 +34175,7 @@ cgoContextPCs gets the PC values from a cgo traceback.
 
 ```
 searchKey: runtime.cgoInRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34204,7 +34188,7 @@ cgoInRange reports whether p is between start and end.
 
 ```
 searchKey: runtime.cgoIsGoPointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34228,7 +34212,7 @@ func cgoSigtramp()
 
 ```
 searchKey: runtime.cgoUse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34241,7 +34225,7 @@ cgoUse is called by cgo-generated code (using go:linkname to get at an unexporte
 
 ```
 searchKey: runtime.cgocall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34256,7 +34240,7 @@ This must be nosplit because it's used for syscalls on some platforms. Syscalls 
 
 ```
 searchKey: runtime.cgocallback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34269,7 +34253,7 @@ Not all cgocallback frames are actually cgocallback, so not all have these argum
 
 ```
 searchKey: runtime.cgocallbackg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34282,7 +34266,7 @@ Call from C back to Go. fn must point to an ABIInternal Go entry-point.
 
 ```
 searchKey: runtime.cgocallbackg1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34306,7 +34290,7 @@ called from (incomplete) assembly
 
 ```
 searchKey: runtime.chanbuf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34319,7 +34303,7 @@ chanbuf(c, i) is pointer to the i'th slot in the buffer.
 
 ```
 searchKey: runtime.chanparkcommit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34330,7 +34314,7 @@ func chanparkcommit(gp *g, chanLock unsafe.Pointer) bool
 
 ```
 searchKey: runtime.chanrecv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34343,7 +34327,7 @@ chanrecv receives on channel c and writes the received data to ep. ep may be nil
 
 ```
 searchKey: runtime.chanrecv1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34356,7 +34340,7 @@ entry points for <- c from compiled code
 
 ```
 searchKey: runtime.chanrecv2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34367,7 +34351,7 @@ func chanrecv2(c *hchan, elem unsafe.Pointer) (received bool)
 
 ```
 searchKey: runtime.chansend
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34380,7 +34364,7 @@ func chansend(c *hchan, ep unsafe.Pointer, block bool, callerpc uintptr) bool
 
 ```
 searchKey: runtime.chansend1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34428,7 +34412,7 @@ func checkTimeouts()
 
 ```
 searchKey: runtime.checkTimers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34441,7 +34425,7 @@ checkTimers runs any timers for the P that are ready. If now is not 0 it is the 
 
 ```
 searchKey: runtime.checkTimersNoP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34482,7 +34466,7 @@ sched.lock must be held.
 
 ```
 searchKey: runtime.checkptrAlignment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34493,7 +34477,7 @@ func checkptrAlignment(p unsafe.Pointer, elem *_type, n uintptr)
 
 ```
 searchKey: runtime.checkptrArithmetic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34504,7 +34488,7 @@ func checkptrArithmetic(p unsafe.Pointer, originals []unsafe.Pointer)
 
 ```
 searchKey: runtime.checkptrBase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34519,7 +34503,7 @@ Importantly, if p1 and p2 point into the same variable, then checkptrBase(p1) ==
 
 ```
 searchKey: runtime.chunkBase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34532,7 +34516,7 @@ chunkIndex returns the base address of the palloc chunk at index ci.
 
 ```
 searchKey: runtime.chunkPageIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34545,7 +34529,7 @@ chunkPageIndex computes the index of the page that contains p, relative to the c
 
 ```
 searchKey: runtime.cleantimers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34558,7 +34542,7 @@ cleantimers cleans up the head of the timer queue. This speeds up programs that 
 
 ```
 searchKey: runtime.clearDeletedTimers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34599,7 +34583,7 @@ func clearpools()
 
 ```
 searchKey: runtime.clobberfree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34623,7 +34607,7 @@ func close_trampoline()
 
 ```
 searchKey: runtime.closechan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34634,7 +34618,7 @@ func closechan(c *hchan)
 
 ```
 searchKey: runtime.closefd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34645,7 +34629,7 @@ func closefd(fd int32) int32
 
 ```
 searchKey: runtime.closeonexec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34656,7 +34640,7 @@ func closeonexec(fd int32)
 
 ```
 searchKey: runtime.complex128div
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34667,7 +34651,7 @@ func complex128div(n complex128, m complex128) complex128
 
 ```
 searchKey: runtime.concatstring2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34678,7 +34662,7 @@ func concatstring2(buf *tmpBuf, a0, a1 string) string
 
 ```
 searchKey: runtime.concatstring3
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34689,7 +34673,7 @@ func concatstring3(buf *tmpBuf, a0, a1, a2 string) string
 
 ```
 searchKey: runtime.concatstring4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34700,7 +34684,7 @@ func concatstring4(buf *tmpBuf, a0, a1, a2, a3 string) string
 
 ```
 searchKey: runtime.concatstring5
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34711,7 +34695,7 @@ func concatstring5(buf *tmpBuf, a0, a1, a2, a3, a4 string) string
 
 ```
 searchKey: runtime.concatstrings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34724,7 +34708,7 @@ concatstrings implements a Go string concatenation x+y+z+... The operands are pa
 
 ```
 searchKey: runtime.convT16
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34735,7 +34719,7 @@ func convT16(val uint16) (x unsafe.Pointer)
 
 ```
 searchKey: runtime.convT32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34746,7 +34730,7 @@ func convT32(val uint32) (x unsafe.Pointer)
 
 ```
 searchKey: runtime.convT64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34757,7 +34741,7 @@ func convT64(val uint64) (x unsafe.Pointer)
 
 ```
 searchKey: runtime.convTslice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34768,7 +34752,7 @@ func convTslice(val []byte) (x unsafe.Pointer)
 
 ```
 searchKey: runtime.convTstring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34779,7 +34763,7 @@ func convTstring(val string) (x unsafe.Pointer)
 
 ```
 searchKey: runtime.copysign
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34792,7 +34776,7 @@ copysign returns a value with the magnitude of x and the sign of y.
 
 ```
 searchKey: runtime.copystack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34805,7 +34789,7 @@ Copies gp's stack to a new stack of a different size. Caller must have changed g
 
 ```
 searchKey: runtime.countSub
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34818,7 +34802,7 @@ countSub subtracts two counts obtained from profIndex.dataCount or profIndex.tag
 
 ```
 searchKey: runtime.countrunes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34879,7 +34863,7 @@ func createfing()
 
 ```
 searchKey: runtime.crypto_x509_syscall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34890,7 +34874,7 @@ func crypto_x509_syscall(fn, a1, a2, a3, a4, a5, a6 uintptr) (r1 uintptr)
 
 ```
 searchKey: runtime.cstring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34901,7 +34885,7 @@ func cstring(s string) unsafe.Pointer
 
 ```
 searchKey: runtime.debugCallCheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34914,7 +34898,7 @@ debugCallCheck checks whether it is safe to inject a debugger function call with
 
 ```
 searchKey: runtime.debugCallPanicked
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34936,7 +34920,7 @@ func debugCallV2()
 
 ```
 searchKey: runtime.debugCallWrap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34964,7 +34948,7 @@ debugCallWrap1 is the continuation of debugCallWrap on the callee goroutine.
 
 ```
 searchKey: runtime.debugCallWrap2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -34986,7 +34970,7 @@ func debug_modinfo() string
 
 ```
 searchKey: runtime.decoderune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35003,7 +34987,7 @@ If the string appears to be incomplete or decoding problems are encountered (run
 
 ```
 searchKey: runtime.deductSweepCredit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35022,7 +35006,7 @@ mheap_ must NOT be locked.
 
 ```
 searchKey: runtime.defaultMemProfileRate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35035,7 +35019,7 @@ defaultMemProfileRate returns 0 if disableMemoryProfiling is set. It exists prim
 
 ```
 searchKey: runtime.deferArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35048,7 +35032,7 @@ The arguments associated with a deferred call are stored immediately after the _
 
 ```
 searchKey: runtime.deferCallSave
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35063,7 +35047,7 @@ This is marked as a wrapper by the compiler so it doesn't appear in tracebacks.
 
 ```
 searchKey: runtime.deferFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35076,7 +35060,7 @@ deferFunc returns d's deferred function. This is temporary while we support both
 
 ```
 searchKey: runtime.deferclass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35089,7 +35073,7 @@ defer size class for arg size sz
 
 ```
 searchKey: runtime.deferproc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35102,7 +35086,7 @@ Create a new deferred function fn with siz bytes of arguments. The compiler turn
 
 ```
 searchKey: runtime.deferprocStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35130,7 +35114,7 @@ Declared as nosplit, because the function should not be preempted once we start 
 
 ```
 searchKey: runtime.deltimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35143,7 +35127,7 @@ deltimer deletes the timer t. It may be on some other P, so we can't actually re
 
 ```
 searchKey: runtime.dematerializeGCProg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35154,7 +35138,7 @@ func dematerializeGCProg(s *mspan)
 
 ```
 searchKey: runtime.dieFromSignal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35167,7 +35151,7 @@ dieFromSignal kills the program with a signal. This provides the expected exit s
 
 ```
 searchKey: runtime.divRoundUp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35180,7 +35164,7 @@ divRoundUp returns ceil(n / a).
 
 ```
 searchKey: runtime.divlu
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35193,7 +35177,7 @@ func divlu(u1, u0, v uint64) (q, r uint64)
 
 ```
 searchKey: runtime.doInit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35204,7 +35188,7 @@ func doInit(t *initTask)
 
 ```
 searchKey: runtime.doSigPreempt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35217,7 +35201,7 @@ doSigPreempt handles a preemption signal on gp.
 
 ```
 searchKey: runtime.doaddtimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35230,7 +35214,7 @@ doaddtimer adds t to the current P's heap. The caller must have locked the timer
 
 ```
 searchKey: runtime.dodeltimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35243,7 +35227,7 @@ dodeltimer removes timer i from the current P's heap. We are locked on the P whe
 
 ```
 searchKey: runtime.dodeltimer0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35269,7 +35253,7 @@ dolockOSThread is called by LockOSThread and lockOSThread below after they modif
 
 ```
 searchKey: runtime.dopanic_m
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35345,7 +35329,7 @@ func duffzero()
 
 ```
 searchKey: runtime.dumpGCProg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35356,7 +35340,7 @@ func dumpGCProg(p *byte)
 
 ```
 searchKey: runtime.dumpbool
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35367,7 +35351,7 @@ func dumpbool(b bool)
 
 ```
 searchKey: runtime.dumpbv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35380,7 +35364,7 @@ dump kinds & offsets of interesting fields in bv
 
 ```
 searchKey: runtime.dumpfields
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35393,7 +35377,7 @@ dumpint() the kind & offset of each field in an object.
 
 ```
 searchKey: runtime.dumpfinalizer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35404,7 +35388,7 @@ func dumpfinalizer(obj unsafe.Pointer, fn *funcval, fint *_type, ot *ptrtype)
 
 ```
 searchKey: runtime.dumpframe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35415,7 +35399,7 @@ func dumpframe(s *stkframe, arg unsafe.Pointer) bool
 
 ```
 searchKey: runtime.dumpgoroutine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35437,7 +35421,7 @@ func dumpgs()
 
 ```
 searchKey: runtime.dumpgstatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35448,7 +35432,7 @@ func dumpgstatus(gp *g)
 
 ```
 searchKey: runtime.dumpint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35483,7 +35467,7 @@ func dumpmemprof()
 
 ```
 searchKey: runtime.dumpmemprof_callback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35494,7 +35478,7 @@ func dumpmemprof_callback(b *bucket, nstk uintptr, pstk *uintptr, size, allocs, 
 
 ```
 searchKey: runtime.dumpmemrange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35507,7 +35491,7 @@ dump varint uint64 length followed by memory contents
 
 ```
 searchKey: runtime.dumpmemstats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35529,7 +35513,7 @@ func dumpms()
 
 ```
 searchKey: runtime.dumpobj
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35553,7 +35537,7 @@ func dumpobjs()
 
 ```
 searchKey: runtime.dumpotherroot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35575,7 +35559,7 @@ func dumpparams()
 
 ```
 searchKey: runtime.dumpregs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35597,7 +35581,7 @@ func dumproots()
 
 ```
 searchKey: runtime.dumpslice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35608,7 +35592,7 @@ func dumpslice(b []byte)
 
 ```
 searchKey: runtime.dumpstr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35619,7 +35603,7 @@ func dumpstr(s string)
 
 ```
 searchKey: runtime.dumptype
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35632,7 +35616,7 @@ dump information for a type
 
 ```
 searchKey: runtime.dwrite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35643,7 +35627,7 @@ func dwrite(data unsafe.Pointer, len uintptr)
 
 ```
 searchKey: runtime.dwritebyte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35654,7 +35638,7 @@ func dwritebyte(b byte)
 
 ```
 searchKey: runtime.efaceHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35665,7 +35649,7 @@ func efaceHash(i interface{}, seed uintptr) uintptr
 
 ```
 searchKey: runtime.efaceeq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35676,7 +35660,7 @@ func efaceeq(t *_type, x, y unsafe.Pointer) bool
 
 ```
 searchKey: runtime.elideWrapperCalling
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35689,7 +35673,7 @@ elideWrapperCalling reports whether a wrapper function that called function id s
 
 ```
 searchKey: runtime.empty
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35702,7 +35686,7 @@ empty reports whether a read from c would block (that is, the channel is empty).
 
 ```
 searchKey: runtime.encoderune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35802,7 +35786,7 @@ func entersyscallblock_handoff()
 
 ```
 searchKey: runtime.envKeyEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35826,7 +35810,7 @@ func environ() []string
 
 ```
 searchKey: runtime.eqslice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35837,7 +35821,7 @@ func eqslice(x, y []uintptr) bool
 
 ```
 searchKey: runtime.evacuate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35848,7 +35832,7 @@ func evacuate(t *maptype, h *hmap, oldbucket uintptr)
 
 ```
 searchKey: runtime.evacuate_fast32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35859,7 +35843,7 @@ func evacuate_fast32(t *maptype, h *hmap, oldbucket uintptr)
 
 ```
 searchKey: runtime.evacuate_fast64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35870,7 +35854,7 @@ func evacuate_fast64(t *maptype, h *hmap, oldbucket uintptr)
 
 ```
 searchKey: runtime.evacuate_faststr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35881,7 +35865,7 @@ func evacuate_faststr(t *maptype, h *hmap, oldbucket uintptr)
 
 ```
 searchKey: runtime.evacuated
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35892,7 +35876,7 @@ func evacuated(b *bmap) bool
 
 ```
 searchKey: runtime.execute
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35907,7 +35891,7 @@ Write barriers are allowed because this is called immediately after acquiring a 
 
 ```
 searchKey: runtime.exit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35920,7 +35904,7 @@ This is exported via linkname to assembly in runtime/cgo.
 
 ```
 searchKey: runtime.exitThread
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35961,7 +35945,7 @@ This is exported via linkname to assembly in the syscall package.
 
 ```
 searchKey: runtime.exitsyscall0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -35976,7 +35960,7 @@ Called via mcall, so gp is the calling g from this M.
 
 ```
 searchKey: runtime.exitsyscallfast
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36011,7 +35995,7 @@ exitsyscallfast_reacquired is the exitsyscall path on which this G has successfu
 
 ```
 searchKey: runtime.expandCgoFrames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36024,7 +36008,7 @@ expandCgoFrames expands frame information for pc, known to be a non-Go function,
 
 ```
 searchKey: runtime.extendRandom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36037,7 +36021,7 @@ extendRandom extends the random numbers in r[:n] to the whole slice r. Treats n<
 
 ```
 searchKey: runtime.f32equal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36048,7 +36032,7 @@ func f32equal(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.f32hash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36059,7 +36043,7 @@ func f32hash(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.f32to64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36070,7 +36054,7 @@ func f32to64(f uint32) uint64
 
 ```
 searchKey: runtime.f32toint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36081,7 +36065,7 @@ func f32toint32(x uint32) int32
 
 ```
 searchKey: runtime.f32toint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36092,7 +36076,7 @@ func f32toint64(x uint32) int64
 
 ```
 searchKey: runtime.f32touint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36103,7 +36087,7 @@ func f32touint64(x float32) uint64
 
 ```
 searchKey: runtime.f64equal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36114,7 +36098,7 @@ func f64equal(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.f64hash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36125,7 +36109,7 @@ func f64hash(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.f64to32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36136,7 +36120,7 @@ func f64to32(f uint64) uint32
 
 ```
 searchKey: runtime.f64toint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36147,7 +36131,7 @@ func f64toint(f uint64) (val int64, ok bool)
 
 ```
 searchKey: runtime.f64toint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36158,7 +36142,7 @@ func f64toint32(x uint64) int32
 
 ```
 searchKey: runtime.f64toint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36169,7 +36153,7 @@ func f64toint64(x uint64) int64
 
 ```
 searchKey: runtime.f64touint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36180,7 +36164,7 @@ func f64touint64(x float64) uint64
 
 ```
 searchKey: runtime.fadd32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36191,7 +36175,7 @@ func fadd32(x, y uint32) uint32
 
 ```
 searchKey: runtime.fadd64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36202,7 +36186,7 @@ func fadd64(f, g uint64) uint64
 
 ```
 searchKey: runtime.fastexprand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36215,7 +36199,7 @@ fastexprand returns a random number from an exponential distribution with the sp
 
 ```
 searchKey: runtime.fastlog2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36250,7 +36234,7 @@ func fastrandinit()
 
 ```
 searchKey: runtime.fastrandn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36261,7 +36245,7 @@ func fastrandn(n uint32) uint32
 
 ```
 searchKey: runtime.fatalpanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36287,7 +36271,7 @@ fatalthrow implements an unrecoverable runtime throw. It freezes the system, pri
 
 ```
 searchKey: runtime.fcmp64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36298,7 +36282,7 @@ func fcmp64(f, g uint64) (cmp int32, isnan bool)
 
 ```
 searchKey: runtime.fcntl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36320,7 +36304,7 @@ func fcntl_trampoline()
 
 ```
 searchKey: runtime.fdiv32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36331,7 +36315,7 @@ func fdiv32(x, y uint32) uint32
 
 ```
 searchKey: runtime.fdiv64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36342,7 +36326,7 @@ func fdiv64(f, g uint64) uint64
 
 ```
 searchKey: runtime.feq32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36353,7 +36337,7 @@ func feq32(x, y uint32) bool
 
 ```
 searchKey: runtime.feq64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36364,7 +36348,7 @@ func feq64(x, y uint64) bool
 
 ```
 searchKey: runtime.fge32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36375,7 +36359,7 @@ func fge32(x, y uint32) bool
 
 ```
 searchKey: runtime.fge64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36386,7 +36370,7 @@ func fge64(x, y uint64) bool
 
 ```
 searchKey: runtime.fgt32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36397,7 +36381,7 @@ func fgt32(x, y uint32) bool
 
 ```
 searchKey: runtime.fgt64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36408,7 +36392,7 @@ func fgt64(x, y uint64) bool
 
 ```
 searchKey: runtime.fillAligned
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36427,7 +36411,7 @@ m must be a power of 2 <= maxPagesPerPhysPage.
 
 ```
 searchKey: runtime.fillstack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36438,7 +36422,7 @@ func fillstack(stk stack, b byte)
 
 ```
 searchKey: runtime.findBitRange64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36451,7 +36435,7 @@ findBitRange64 returns the bit index of the first set of n consecutive 1 bits. I
 
 ```
 searchKey: runtime.findnull
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36462,7 +36446,7 @@ func findnull(s *byte) int
 
 ```
 searchKey: runtime.findnullw
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36473,7 +36457,7 @@ func findnullw(s *uint16) int
 
 ```
 searchKey: runtime.findsghi
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36499,7 +36483,7 @@ The world must be stopped. This ensures there are no sweeps in progress.
 
 ```
 searchKey: runtime.finq_callback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36510,7 +36494,7 @@ func finq_callback(fn *funcval, obj unsafe.Pointer, nret uintptr, fint *_type, o
 
 ```
 searchKey: runtime.fint32to32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36521,7 +36505,7 @@ func fint32to32(x int32) uint32
 
 ```
 searchKey: runtime.fint32to64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36532,7 +36516,7 @@ func fint32to64(x int32) uint64
 
 ```
 searchKey: runtime.fint64to32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36543,7 +36527,7 @@ func fint64to32(x int64) uint32
 
 ```
 searchKey: runtime.fint64to64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36554,7 +36538,7 @@ func fint64to64(x int64) uint64
 
 ```
 searchKey: runtime.fintto64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36587,7 +36571,7 @@ func float64NegInf() float64
 
 ```
 searchKey: runtime.float64bits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36600,7 +36584,7 @@ Float64bits returns the IEEE 754 binary representation of f.
 
 ```
 searchKey: runtime.float64frombits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36639,7 +36623,7 @@ The world must be stopped.
 
 ```
 searchKey: runtime.flushmcache
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36654,7 +36638,7 @@ The world must be stopped.
 
 ```
 searchKey: runtime.fmtNSAsMS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36667,7 +36651,7 @@ fmtNSAsMS nicely formats ns nanoseconds as milliseconds.
 
 ```
 searchKey: runtime.fmul32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36678,7 +36662,7 @@ func fmul32(x, y uint32) uint32
 
 ```
 searchKey: runtime.fmul64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36689,7 +36673,7 @@ func fmul64(f, g uint64) uint64
 
 ```
 searchKey: runtime.fneg64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36700,7 +36684,7 @@ func fneg64(f uint64) uint64
 
 ```
 searchKey: runtime.forEachG
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36715,7 +36699,7 @@ forEachG takes a lock to exclude concurrent addition of new Gs.
 
 ```
 searchKey: runtime.forEachGRace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36730,7 +36714,7 @@ forEachGRace avoids locking, but does not exclude addition of new Gs during exec
 
 ```
 searchKey: runtime.forEachP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36756,7 +36740,7 @@ func forcegchelper()
 
 ```
 searchKey: runtime.fpack32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36767,7 +36751,7 @@ func fpack32(sign, mant uint32, exp int, trunc uint32) uint32
 
 ```
 searchKey: runtime.fpack64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36778,7 +36762,7 @@ func fpack64(sign, mant uint64, exp int, trunc uint64) uint64
 
 ```
 searchKey: runtime.freeSomeWbufs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36791,7 +36775,7 @@ freeSomeWbufs frees some workbufs back to the heap and returns true if it should
 
 ```
 searchKey: runtime.freeSpecial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36817,7 +36801,7 @@ freeStackSpans frees unused stack spans at the end of GC.
 
 ```
 searchKey: runtime.freedefer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36856,7 +36840,7 @@ Separate function so that it can split stack. Windows otherwise runs out of stac
 
 ```
 searchKey: runtime.freemcache
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36884,7 +36868,7 @@ Similar to stopTheWorld but best-effort and can be called several times. There i
 
 ```
 searchKey: runtime.fsub64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36895,7 +36879,7 @@ func fsub64(f, g uint64) uint64
 
 ```
 searchKey: runtime.fuint64to32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36906,7 +36890,7 @@ func fuint64to32(x uint64) float32
 
 ```
 searchKey: runtime.fuint64to64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36917,7 +36901,7 @@ func fuint64to64(x uint64) float64
 
 ```
 searchKey: runtime.full
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36930,7 +36914,7 @@ full reports whether a send on c would block (that is, the channel is full). It 
 
 ```
 searchKey: runtime.funcMaxSPDelta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36943,7 +36927,7 @@ funcMaxSPDelta returns the maximum spdelta at any point in f.
 
 ```
 searchKey: runtime.funcPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36956,7 +36940,7 @@ funcPC returns the entry PC of the function f. It assumes that f is a func value
 
 ```
 searchKey: runtime.funcdata
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36967,7 +36951,7 @@ func funcdata(f funcInfo, i uint8) unsafe.Pointer
 
 ```
 searchKey: runtime.funcfile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36978,7 +36962,7 @@ func funcfile(f funcInfo, fileno int32) string
 
 ```
 searchKey: runtime.funcline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -36989,7 +36973,7 @@ func funcline(f funcInfo, targetpc uintptr) (file string, line int32)
 
 ```
 searchKey: runtime.funcline1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37000,7 +36984,7 @@ func funcline1(f funcInfo, targetpc uintptr, strict bool) (file string, line int
 
 ```
 searchKey: runtime.funcname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37011,7 +36995,7 @@ func funcname(f funcInfo) string
 
 ```
 searchKey: runtime.funcnameFromNameoff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37022,7 +37006,7 @@ func funcnameFromNameoff(f funcInfo, nameoff int32) string
 
 ```
 searchKey: runtime.funcpkgpath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37033,7 +37017,7 @@ func funcpkgpath(f funcInfo) string
 
 ```
 searchKey: runtime.funcspdelta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37044,7 +37028,7 @@ func funcspdelta(f funcInfo, targetpc uintptr, cache *pcvalueCache) int32
 
 ```
 searchKey: runtime.funpack32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37055,7 +37039,7 @@ func funpack32(f uint32) (sign, mant uint32, exp int, inf, nan bool)
 
 ```
 searchKey: runtime.funpack64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37066,7 +37050,7 @@ func funpack64(f uint64) (sign, mant uint64, exp int, inf, nan bool)
 
 ```
 searchKey: runtime.gcAssistAlloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37081,7 +37065,7 @@ This must be called with preemption enabled.
 
 ```
 searchKey: runtime.gcAssistAlloc1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37133,7 +37117,7 @@ func gcBgMarkWorker()
 
 ```
 searchKey: runtime.gcDrain
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37156,7 +37140,7 @@ gcDrain will always return if there is a pending STW.
 
 ```
 searchKey: runtime.gcDrainN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37171,7 +37155,7 @@ The caller goroutine must be in a preemptible state (e.g., _Gwaiting) to prevent
 
 ```
 searchKey: runtime.gcDumpObject
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37184,7 +37168,7 @@ gcDumpObject dumps the contents of obj for debugging and marks the field at byte
 
 ```
 searchKey: runtime.gcFlushBgCredit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37199,7 +37183,7 @@ Write barriers are disallowed because this is used by gcDrain after it has ensur
 
 ```
 searchKey: runtime.gcMark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37265,7 +37249,7 @@ The world must be stopped.
 
 ```
 searchKey: runtime.gcMarkTermination
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37293,7 +37277,7 @@ The world must be stopped.
 
 ```
 searchKey: runtime.gcMarkWorkAvailable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37357,7 +37341,7 @@ gcResetMarkState must be called on the system stack because it acquires the heap
 
 ```
 searchKey: runtime.gcStart
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37372,7 +37356,7 @@ This may return without performing this transition in some cases, such as when c
 
 ```
 searchKey: runtime.gcSweep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37387,7 +37371,7 @@ The world must be stopped.
 
 ```
 searchKey: runtime.gcTestIsReachable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37415,7 +37399,7 @@ In rare cases this may not cause the stack to move, specifically if there's a pr
 
 ```
 searchKey: runtime.gcTestPointerClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37430,7 +37414,7 @@ This is nosplit simply to avoid extra pointer shuffling that may complicate a te
 
 ```
 searchKey: runtime.gcWaitOnMark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37548,7 +37532,7 @@ func gcWriteBarrierSI()
 
 ```
 searchKey: runtime.gcallers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37559,7 +37543,7 @@ func gcallers(gp *g, skip int, pcbuf []uintptr) int
 
 ```
 searchKey: runtime.gcd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37594,7 +37578,7 @@ func gcinit()
 
 ```
 searchKey: runtime.gcmarknewobject
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37633,7 +37617,7 @@ Stops the current m for stopTheWorld. Returns when the world is restarted.
 
 ```
 searchKey: runtime.gentraceback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37659,7 +37643,7 @@ func getPageSize() uintptr
 
 ```
 searchKey: runtime.getRandomData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37727,7 +37711,7 @@ The compiler rewrites calls to this function into instructions that fetch the po
 
 ```
 searchKey: runtime.getgcmask
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37740,7 +37724,7 @@ Returns GC type info for the pointer stored in ep for testing. If ep points to t
 
 ```
 searchKey: runtime.getgcmaskcb
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37775,7 +37759,7 @@ func getncpu() int32
 
 ```
 searchKey: runtime.getsig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37786,7 +37770,7 @@ func getsig(i uint32) uintptr
 
 ```
 searchKey: runtime.gfpurge
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37799,7 +37783,7 @@ Purge all cached G's from gfree list to the global list.
 
 ```
 searchKey: runtime.gfput
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37812,7 +37796,7 @@ Put on gfree list. If local list is too long, transfer a batch to the global lis
 
 ```
 searchKey: runtime.globrunqput
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37825,7 +37809,7 @@ Put gp on the global runnable queue. sched.lock must be held. May run during STW
 
 ```
 searchKey: runtime.globrunqputbatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37838,7 +37822,7 @@ Put a batch of runnable goroutines on the global runnable queue. This clears *ba
 
 ```
 searchKey: runtime.globrunqputhead
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37851,7 +37835,7 @@ Put gp at the head of the global runnable queue. sched.lock must be held. May ru
 
 ```
 searchKey: runtime.goPanicIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37864,7 +37848,7 @@ failures in the comparisons for s[x], 0 <= x < y (y == len(s))
 
 ```
 searchKey: runtime.goPanicIndexU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37875,7 +37859,7 @@ func goPanicIndexU(x uint, y int)
 
 ```
 searchKey: runtime.goPanicSlice3Acap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37886,7 +37870,7 @@ func goPanicSlice3Acap(x int, y int)
 
 ```
 searchKey: runtime.goPanicSlice3AcapU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37897,7 +37881,7 @@ func goPanicSlice3AcapU(x uint, y int)
 
 ```
 searchKey: runtime.goPanicSlice3Alen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37910,7 +37894,7 @@ failures in the comparisons for s[::x], 0 <= x <= y (y == len(s) or cap(s))
 
 ```
 searchKey: runtime.goPanicSlice3AlenU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37921,7 +37905,7 @@ func goPanicSlice3AlenU(x uint, y int)
 
 ```
 searchKey: runtime.goPanicSlice3B
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37934,7 +37918,7 @@ failures in the comparisons for s[:x:y], 0 <= x <= y
 
 ```
 searchKey: runtime.goPanicSlice3BU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37945,7 +37929,7 @@ func goPanicSlice3BU(x uint, y int)
 
 ```
 searchKey: runtime.goPanicSlice3C
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37958,7 +37942,7 @@ failures in the comparisons for s[x:y:], 0 <= x <= y
 
 ```
 searchKey: runtime.goPanicSlice3CU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37969,7 +37953,7 @@ func goPanicSlice3CU(x uint, y int)
 
 ```
 searchKey: runtime.goPanicSliceAcap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37980,7 +37964,7 @@ func goPanicSliceAcap(x int, y int)
 
 ```
 searchKey: runtime.goPanicSliceAcapU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -37991,7 +37975,7 @@ func goPanicSliceAcapU(x uint, y int)
 
 ```
 searchKey: runtime.goPanicSliceAlen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38004,7 +37988,7 @@ failures in the comparisons for s[:x], 0 <= x <= y (y == len(s) or cap(s))
 
 ```
 searchKey: runtime.goPanicSliceAlenU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38015,7 +37999,7 @@ func goPanicSliceAlenU(x uint, y int)
 
 ```
 searchKey: runtime.goPanicSliceB
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38028,7 +38012,7 @@ failures in the comparisons for s[x:y], 0 <= x <= y
 
 ```
 searchKey: runtime.goPanicSliceBU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38039,7 +38023,7 @@ func goPanicSliceBU(x uint, y int)
 
 ```
 searchKey: runtime.goPanicSliceConvert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38063,7 +38047,7 @@ func goargs()
 
 ```
 searchKey: runtime.gobytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38098,7 +38082,7 @@ func goenvs_unix()
 
 ```
 searchKey: runtime.goexit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38113,7 +38097,7 @@ This function must never be called directly. Call goexit1 instead. gentraceback 
 
 ```
 searchKey: runtime.goexit0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38139,7 +38123,7 @@ Finishes execution of the current goroutine.
 
 ```
 searchKey: runtime.gogetenv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38150,7 +38134,7 @@ func gogetenv(key string) string
 
 ```
 searchKey: runtime.gogo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38161,7 +38145,7 @@ func gogo(buf *gobuf)
 
 ```
 searchKey: runtime.gopanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38174,7 +38158,7 @@ The implementation of the predeclared function panic.
 
 ```
 searchKey: runtime.gopark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38195,7 +38179,7 @@ Reason explains why the goroutine has been parked. It is displayed in stack trac
 
 ```
 searchKey: runtime.goparkunlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38208,7 +38192,7 @@ Puts the current goroutine into a waiting state and unlocks the lock. The gorout
 
 ```
 searchKey: runtime.gopreempt_m
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38219,7 +38203,7 @@ func gopreempt_m(gp *g)
 
 ```
 searchKey: runtime.goready
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38230,7 +38214,7 @@ func goready(gp *g, traceskip int)
 
 ```
 searchKey: runtime.gorecover
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38245,7 +38229,7 @@ TODO(rsc): Once we commit to CopyStackAlways, this doesn't need to be nosplit.
 
 ```
 searchKey: runtime.goroutineProfileWithLabels
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38258,7 +38242,7 @@ labels may be nil. If labels is non-nil, it must have the same length as p.
 
 ```
 searchKey: runtime.goroutineReady
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38271,7 +38255,7 @@ Ready the goroutine arg.
 
 ```
 searchKey: runtime.goroutineheader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38282,7 +38266,7 @@ func goroutineheader(gp *g)
 
 ```
 searchKey: runtime.goschedImpl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38293,7 +38277,7 @@ func goschedImpl(gp *g)
 
 ```
 searchKey: runtime.gosched_m
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38319,7 +38303,7 @@ goschedguarded yields the processor like gosched, but also checks for forbidden 
 
 ```
 searchKey: runtime.goschedguarded_m
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38332,7 +38316,7 @@ goschedguarded is a forbidden-states-avoided version of gosched_m
 
 ```
 searchKey: runtime.gostartcall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38345,7 +38329,7 @@ adjust Gobuf as if it executed a call to fn with context ctxt and then stopped b
 
 ```
 searchKey: runtime.gostartcallfn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38358,7 +38342,7 @@ adjust Gobuf as if it executed a call to fn and then stopped before the first in
 
 ```
 searchKey: runtime.gostring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38371,7 +38355,7 @@ This is exported via linkname to assembly in syscall (for Plan9).
 
 ```
 searchKey: runtime.gostringn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38382,7 +38366,7 @@ func gostringn(p *byte, l int) string
 
 ```
 searchKey: runtime.gostringnocopy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38393,7 +38377,7 @@ func gostringnocopy(str *byte) string
 
 ```
 searchKey: runtime.gostringw
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38432,7 +38416,7 @@ goyield is like Gosched, but it: - emits a GoPreempt trace event instead of a Go
 
 ```
 searchKey: runtime.goyield_m
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38443,7 +38427,7 @@ func goyield_m(gp *g)
 
 ```
 searchKey: runtime.greyobject
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38458,7 +38442,7 @@ See also wbBufFlush1, which partially duplicates this logic.
 
 ```
 searchKey: runtime.growWork
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38469,7 +38453,7 @@ func growWork(t *maptype, h *hmap, bucket uintptr)
 
 ```
 searchKey: runtime.growWork_fast32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38480,7 +38464,7 @@ func growWork_fast32(t *maptype, h *hmap, bucket uintptr)
 
 ```
 searchKey: runtime.growWork_fast64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38491,7 +38475,7 @@ func growWork_fast64(t *maptype, h *hmap, bucket uintptr)
 
 ```
 searchKey: runtime.growWork_faststr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38502,7 +38486,7 @@ func growWork_faststr(t *maptype, h *hmap, bucket uintptr)
 
 ```
 searchKey: runtime.gwrite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38515,7 +38499,7 @@ write to goroutine-local buffer if diverting output, or else standard error.
 
 ```
 searchKey: runtime.handoffp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38528,7 +38512,7 @@ Hands off P from syscall or locked M. Always runs without a P, so write barriers
 
 ```
 searchKey: runtime.hasPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38539,7 +38523,7 @@ func hasPrefix(s, prefix string) bool
 
 ```
 searchKey: runtime.hashGrow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38550,7 +38534,7 @@ func hashGrow(t *maptype, h *hmap)
 
 ```
 searchKey: runtime.heapBitsSetType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38567,7 +38551,7 @@ There can be read-write races between heapBitsSetType and things that read the h
 
 ```
 searchKey: runtime.heapBitsSetTypeGCProg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38595,7 +38579,7 @@ heapRetained returns an estimate of the current heap RSS.
 
 ```
 searchKey: runtime.hexdumpWords
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38610,7 +38594,7 @@ If mark != nil, it will be called with each printed word's address and should re
 
 ```
 searchKey: runtime.ifaceHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38623,7 +38607,7 @@ func ifaceHash(i interface {
 
 ```
 searchKey: runtime.ifaceeq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38634,7 +38618,7 @@ func ifaceeq(tab *itab, x, y unsafe.Pointer) bool
 
 ```
 searchKey: runtime.inHeapOrStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38647,7 +38631,7 @@ inHeapOrStack is a variant of inheap that returns true for pointers into any all
 
 ```
 searchKey: runtime.inPersistentAlloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38660,7 +38644,7 @@ inPersistentAlloc reports whether p points to memory allocated by persistentallo
 
 ```
 searchKey: runtime.inRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38673,7 +38657,7 @@ inRange reports whether v0 or v1 are in the range [r0, r1].
 
 ```
 searchKey: runtime.inVDSOPage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38684,7 +38668,7 @@ func inVDSOPage(pc uintptr) bool
 
 ```
 searchKey: runtime.incidlelocked
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38695,7 +38679,7 @@ func incidlelocked(v int32)
 
 ```
 searchKey: runtime.inf2one
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38708,7 +38692,7 @@ inf2one returns a signed 1 if f is an infinity and a signed 0 otherwise. The sig
 
 ```
 searchKey: runtime.inheap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38859,7 +38843,7 @@ metricsSema must be held.
 
 ```
 searchKey: runtime.initsig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38872,7 +38856,7 @@ Initialize signals. Called by libpreinit so runtime may not be initialized.
 
 ```
 searchKey: runtime.injectglist
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38885,7 +38869,7 @@ injectglist adds each runnable G on the list to some run queue, and clears glist
 
 ```
 searchKey: runtime.int32Hash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38896,7 +38880,7 @@ func int32Hash(i uint32, seed uintptr) uintptr
 
 ```
 searchKey: runtime.int64Hash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38907,7 +38891,7 @@ func int64Hash(i uint64, seed uintptr) uintptr
 
 ```
 searchKey: runtime.interequal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38918,7 +38902,7 @@ func interequal(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.interhash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38929,7 +38913,7 @@ func interhash(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.internal_cpu_getsysctlbyname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38940,7 +38924,7 @@ func internal_cpu_getsysctlbyname(name []byte) (int32, int32)
 
 ```
 searchKey: runtime.intstring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38951,7 +38935,7 @@ func intstring(buf *[4]byte, v int64) (s string)
 
 ```
 searchKey: runtime.isAbortPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38966,7 +38950,7 @@ It is nosplit because it's part of the isgoexception implementation.
 
 ```
 searchKey: runtime.isAsyncSafePoint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -38987,7 +38971,7 @@ In some cases the PC is safe for asynchronous preemption but it also needs to ad
 
 ```
 searchKey: runtime.isDirectIface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39000,7 +38984,7 @@ isDirectIface reports whether t is stored directly in an interface value.
 
 ```
 searchKey: runtime.isEmpty
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39013,7 +38997,7 @@ isEmpty reports whether the given tophash array entry represents an empty bucket
 
 ```
 searchKey: runtime.isExportedRuntime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39026,7 +39010,7 @@ isExportedRuntime reports whether name is an exported runtime function. It is on
 
 ```
 searchKey: runtime.isFinite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39039,7 +39023,7 @@ isFinite reports whether f is neither NaN nor an infinity.
 
 ```
 searchKey: runtime.isInf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39052,7 +39036,7 @@ isInf reports whether f is an infinity.
 
 ```
 searchKey: runtime.isNaN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39065,7 +39049,7 @@ isNaN reports whether f is an IEEE 754 `not-a-number' value.
 
 ```
 searchKey: runtime.isPowerOfTwo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39076,7 +39060,7 @@ func isPowerOfTwo(x uintptr) bool
 
 ```
 searchKey: runtime.isShrinkStackSafe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39104,7 +39088,7 @@ Note that this condition may transition from false to true at any time as the sw
 
 ```
 searchKey: runtime.isSystemGoroutine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39119,7 +39103,7 @@ If fixed is true, any goroutine that can vary between user and system (that is, 
 
 ```
 searchKey: runtime.itabAdd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39132,7 +39116,7 @@ itabAdd adds the given itab to the itab hash table. itabLock must be held.
 
 ```
 searchKey: runtime.itabHashFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39143,7 +39127,7 @@ func itabHashFunc(inter *interfacetype, typ *_type) uintptr
 
 ```
 searchKey: runtime.itab_callback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39165,7 +39149,7 @@ func itabsinit()
 
 ```
 searchKey: runtime.iterate_finq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39176,7 +39160,7 @@ func iterate_finq(callback func(*funcval, unsafe.Pointer, uintptr, *_type, *ptrt
 
 ```
 searchKey: runtime.iterate_itabs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39187,7 +39171,7 @@ func iterate_itabs(fn func(*itab))
 
 ```
 searchKey: runtime.iterate_memprof
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39198,7 +39182,7 @@ func iterate_memprof(fn func(*bucket, uintptr, *uintptr, uintptr, uintptr, uintp
 
 ```
 searchKey: runtime.itoa
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39211,7 +39195,7 @@ itoa converts val to a decimal representation. The result is written somewhere w
 
 ```
 searchKey: runtime.itoaDiv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39224,7 +39208,7 @@ itoaDiv formats val/(10**dec) into buf.
 
 ```
 searchKey: runtime.jmpdefer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39235,7 +39219,7 @@ func jmpdefer(fv *funcval, argp uintptr)
 
 ```
 searchKey: runtime.kevent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39279,7 +39263,7 @@ func kqueue_trampoline()
 
 ```
 searchKey: runtime.less
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39292,7 +39276,7 @@ less checks if a < b, considering a & b running counts that may overflow the 32-
 
 ```
 searchKey: runtime.lfnodeValidate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39305,7 +39289,7 @@ lfnodeValidate panics if node is not a valid address for use with lfstack.push. 
 
 ```
 searchKey: runtime.lfstackPack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39316,7 +39300,7 @@ func lfstackPack(node *lfnode, cnt uintptr) uint64
 
 ```
 searchKey: runtime.libcCall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39342,7 +39326,7 @@ Called to do synchronous initialization of Go code built with -buildmode=c-archi
 
 ```
 searchKey: runtime.lock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39353,7 +39337,7 @@ func lock(l *mutex)
 
 ```
 searchKey: runtime.lock2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39364,7 +39348,7 @@ func lock2(l *mutex)
 
 ```
 searchKey: runtime.lockInit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39386,7 +39370,7 @@ func lockOSThread()
 
 ```
 searchKey: runtime.lockWithRank
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39397,7 +39381,7 @@ func lockWithRank(l *mutex, rank lockRank)
 
 ```
 searchKey: runtime.lockWithRankMayAcquire
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39419,7 +39403,7 @@ func lockedOSThread() bool
 
 ```
 searchKey: runtime.lowerASCII
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39497,7 +39481,7 @@ func mProf_FlushLocked()
 
 ```
 searchKey: runtime.mProf_Free
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39510,7 +39494,7 @@ Called when freeing a profiled block.
 
 ```
 searchKey: runtime.mProf_Malloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39579,7 +39563,7 @@ mStackIsSystemAllocated indicates whether this runtime starts on a system-alloca
 
 ```
 searchKey: runtime.madvise
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39625,7 +39609,7 @@ func main_main()
 
 ```
 searchKey: runtime.makeslice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39636,7 +39620,7 @@ func makeslice(et *_type, len, cap int) unsafe.Pointer
 
 ```
 searchKey: runtime.makeslice64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39647,7 +39631,7 @@ func makeslice64(et *_type, len64, cap64 int64) unsafe.Pointer
 
 ```
 searchKey: runtime.makeslicecopy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39660,7 +39644,7 @@ makeslicecopy allocates a slice of "tolen" elements of type "et", then copies "f
 
 ```
 searchKey: runtime.mallocgc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39684,7 +39668,7 @@ func mallocinit()
 
 ```
 searchKey: runtime.mapaccess1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39697,7 +39681,7 @@ mapaccess1 returns a pointer to h[key].  Never returns nil, instead it will retu
 
 ```
 searchKey: runtime.mapaccess1_fast32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39708,7 +39692,7 @@ func mapaccess1_fast32(t *maptype, h *hmap, key uint32) unsafe.Pointer
 
 ```
 searchKey: runtime.mapaccess1_fast64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39719,7 +39703,7 @@ func mapaccess1_fast64(t *maptype, h *hmap, key uint64) unsafe.Pointer
 
 ```
 searchKey: runtime.mapaccess1_faststr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39730,7 +39714,7 @@ func mapaccess1_faststr(t *maptype, h *hmap, ky string) unsafe.Pointer
 
 ```
 searchKey: runtime.mapaccess1_fat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39741,7 +39725,7 @@ func mapaccess1_fat(t *maptype, h *hmap, key, zero unsafe.Pointer) unsafe.Pointe
 
 ```
 searchKey: runtime.mapaccess2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39752,7 +39736,7 @@ func mapaccess2(t *maptype, h *hmap, key unsafe.Pointer) (unsafe.Pointer, bool)
 
 ```
 searchKey: runtime.mapaccess2_fast32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39763,7 +39747,7 @@ func mapaccess2_fast32(t *maptype, h *hmap, key uint32) (unsafe.Pointer, bool)
 
 ```
 searchKey: runtime.mapaccess2_fast64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39774,7 +39758,7 @@ func mapaccess2_fast64(t *maptype, h *hmap, key uint64) (unsafe.Pointer, bool)
 
 ```
 searchKey: runtime.mapaccess2_faststr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39785,7 +39769,7 @@ func mapaccess2_faststr(t *maptype, h *hmap, ky string) (unsafe.Pointer, bool)
 
 ```
 searchKey: runtime.mapaccess2_fat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39796,7 +39780,7 @@ func mapaccess2_fat(t *maptype, h *hmap, key, zero unsafe.Pointer) (unsafe.Point
 
 ```
 searchKey: runtime.mapaccessK
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39809,7 +39793,7 @@ returns both key and elem. Used by map iterator
 
 ```
 searchKey: runtime.mapassign
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39822,7 +39806,7 @@ Like mapaccess, but allocates a slot for the key if it is not present in the map
 
 ```
 searchKey: runtime.mapassign_fast32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39833,7 +39817,7 @@ func mapassign_fast32(t *maptype, h *hmap, key uint32) unsafe.Pointer
 
 ```
 searchKey: runtime.mapassign_fast32ptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39844,7 +39828,7 @@ func mapassign_fast32ptr(t *maptype, h *hmap, key unsafe.Pointer) unsafe.Pointer
 
 ```
 searchKey: runtime.mapassign_fast64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39855,7 +39839,7 @@ func mapassign_fast64(t *maptype, h *hmap, key uint64) unsafe.Pointer
 
 ```
 searchKey: runtime.mapassign_fast64ptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39866,7 +39850,7 @@ func mapassign_fast64ptr(t *maptype, h *hmap, key unsafe.Pointer) unsafe.Pointer
 
 ```
 searchKey: runtime.mapassign_faststr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39877,7 +39861,7 @@ func mapassign_faststr(t *maptype, h *hmap, s string) unsafe.Pointer
 
 ```
 searchKey: runtime.mapclear
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39890,7 +39874,7 @@ mapclear deletes all keys from a map.
 
 ```
 searchKey: runtime.mapdelete
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39901,7 +39885,7 @@ func mapdelete(t *maptype, h *hmap, key unsafe.Pointer)
 
 ```
 searchKey: runtime.mapdelete_fast32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39912,7 +39896,7 @@ func mapdelete_fast32(t *maptype, h *hmap, key uint32)
 
 ```
 searchKey: runtime.mapdelete_fast64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39923,7 +39907,7 @@ func mapdelete_fast64(t *maptype, h *hmap, key uint64)
 
 ```
 searchKey: runtime.mapdelete_faststr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39934,7 +39918,7 @@ func mapdelete_faststr(t *maptype, h *hmap, ky string)
 
 ```
 searchKey: runtime.mapiterinit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39947,7 +39931,7 @@ mapiterinit initializes the hiter struct used for ranging over maps. The hiter s
 
 ```
 searchKey: runtime.mapiternext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39958,7 +39942,7 @@ func mapiternext(it *hiter)
 
 ```
 searchKey: runtime.markroot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -39975,7 +39959,7 @@ nowritebarrier is only advisory here.
 
 ```
 searchKey: runtime.markrootBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40003,7 +39987,7 @@ This does not free stacks of dead Gs cached on Ps, but having a few cached stack
 
 ```
 searchKey: runtime.markrootSpans
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40016,7 +40000,7 @@ markrootSpans marks roots for one shard of markArenas.
 
 ```
 searchKey: runtime.mcall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40033,7 +40017,7 @@ This must NOT be go:noescape: if fn is a stack-allocated closure, fn puts g on a
 
 ```
 searchKey: runtime.mcommoninit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40057,7 +40041,7 @@ func mcount() int32
 
 ```
 searchKey: runtime.mdestroy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40070,7 +40054,7 @@ Called from exitm, but not from drop, to undo the effect of thread-owned resourc
 
 ```
 searchKey: runtime.mdump
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40081,7 +40065,7 @@ func mdump(m *MemStats)
 
 ```
 searchKey: runtime.memclrHasPointers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40094,7 +40078,7 @@ memclrHasPointers clears n bytes of typed memory starting at ptr. The caller mus
 
 ```
 searchKey: runtime.memclrNoHeapPointers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40117,7 +40101,7 @@ The (CPU-specific) implementations of this function are in memclr_*.s.
 
 ```
 searchKey: runtime.memclrNoHeapPointersChunked
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40132,7 +40116,7 @@ Use this with care; if the data being cleared is tagged to contain pointers, thi
 
 ```
 searchKey: runtime.memequal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40145,7 +40129,7 @@ in internal/bytealg/equal_*.s
 
 ```
 searchKey: runtime.memequal0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40156,7 +40140,7 @@ func memequal0(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.memequal128
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40167,7 +40151,7 @@ func memequal128(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.memequal16
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40178,7 +40162,7 @@ func memequal16(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.memequal32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40189,7 +40173,7 @@ func memequal32(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.memequal64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40200,7 +40184,7 @@ func memequal64(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.memequal8
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40211,7 +40195,7 @@ func memequal8(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.memequal_varlen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40222,7 +40206,7 @@ func memequal_varlen(a, b unsafe.Pointer) bool
 
 ```
 searchKey: runtime.memhash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40235,7 +40219,7 @@ in asm_*.s
 
 ```
 searchKey: runtime.memhash0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40246,7 +40230,7 @@ func memhash0(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.memhash128
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40257,7 +40241,7 @@ func memhash128(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.memhash16
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40268,7 +40252,7 @@ func memhash16(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.memhash32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40279,7 +40263,7 @@ func memhash32(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.memhash32Fallback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40290,7 +40274,7 @@ func memhash32Fallback(p unsafe.Pointer, seed uintptr) uintptr
 
 ```
 searchKey: runtime.memhash64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40301,7 +40285,7 @@ func memhash64(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.memhash64Fallback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40312,7 +40296,7 @@ func memhash64Fallback(p unsafe.Pointer, seed uintptr) uintptr
 
 ```
 searchKey: runtime.memhash8
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40323,7 +40307,7 @@ func memhash8(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.memhashFallback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40334,7 +40318,7 @@ func memhashFallback(p unsafe.Pointer, seed, s uintptr) uintptr
 
 ```
 searchKey: runtime.memhash_varlen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40345,7 +40329,7 @@ func memhash_varlen(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.memmove
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40362,7 +40346,7 @@ Implementations are in memmove_*.s.
 
 ```
 searchKey: runtime.mexit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40431,7 +40415,7 @@ minitSignals is called when initializing a new m to set the thread's alternate s
 
 ```
 searchKey: runtime.mix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40442,7 +40426,7 @@ func mix(a, b uintptr) uintptr
 
 ```
 searchKey: runtime.mlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40464,7 +40448,7 @@ func mlock_trampoline()
 
 ```
 searchKey: runtime.mmap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40488,7 +40472,7 @@ func mmap_trampoline()
 
 ```
 searchKey: runtime.modTimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40501,7 +40485,7 @@ modTimer modifies an existing timer.
 
 ```
 searchKey: runtime.modtimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40525,7 +40509,7 @@ func moduledataverify()
 
 ```
 searchKey: runtime.moduledataverify1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40592,7 +40576,7 @@ This is exported as ABI0 via linkname so obj can call it.
 
 ```
 searchKey: runtime.moveTimers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40605,7 +40589,7 @@ moveTimers moves a slice of timers to pp. The slice has been taken from a differ
 
 ```
 searchKey: runtime.mpreinit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40618,7 +40602,7 @@ Called to initialize a new m (including the bootstrap m). Called on the parent t
 
 ```
 searchKey: runtime.mput
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40631,7 +40615,7 @@ Put mp on midle list. sched.lock must be held. May run during STW, so write barr
 
 ```
 searchKey: runtime.msanfree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40642,7 +40626,7 @@ func msanfree(addr unsafe.Pointer, sz uintptr)
 
 ```
 searchKey: runtime.msanmalloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40653,7 +40637,7 @@ func msanmalloc(addr unsafe.Pointer, sz uintptr)
 
 ```
 searchKey: runtime.msanmove
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40664,7 +40648,7 @@ func msanmove(dst, src unsafe.Pointer, sz uintptr)
 
 ```
 searchKey: runtime.msanread
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40675,7 +40659,7 @@ func msanread(addr unsafe.Pointer, sz uintptr)
 
 ```
 searchKey: runtime.msanwrite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40686,7 +40670,7 @@ func msanwrite(addr unsafe.Pointer, sz uintptr)
 
 ```
 searchKey: runtime.msigrestore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40779,7 +40763,7 @@ Write barriers are allowed here because we know the GC can't be running yet, so 
 
 ```
 searchKey: runtime.mullu
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40792,7 +40776,7 @@ func mullu(u, v uint64) (lo, hi uint64)
 
 ```
 searchKey: runtime.munmap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40814,7 +40798,7 @@ func munmap_trampoline()
 
 ```
 searchKey: runtime.mutexevent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40903,7 +40887,7 @@ netpollBreak interrupts a kevent.
 
 ```
 searchKey: runtime.netpollDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40925,7 +40909,7 @@ func netpollGenericInit()
 
 ```
 searchKey: runtime.netpollIsPollDescriptor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40936,7 +40920,7 @@ func netpollIsPollDescriptor(fd uintptr) bool
 
 ```
 searchKey: runtime.netpollReadDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40947,7 +40931,7 @@ func netpollReadDeadline(arg interface{}, seq uintptr)
 
 ```
 searchKey: runtime.netpollWriteDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40958,7 +40942,7 @@ func netpollWriteDeadline(arg interface{}, seq uintptr)
 
 ```
 searchKey: runtime.netpollarm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40969,7 +40953,7 @@ func netpollarm(pd *pollDesc, mode int)
 
 ```
 searchKey: runtime.netpollblock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40982,7 +40966,7 @@ returns true if IO is ready, or false if timedout or closed waitio - wait only f
 
 ```
 searchKey: runtime.netpollblockcommit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -40993,7 +40977,7 @@ func netpollblockcommit(gp *g, gpp unsafe.Pointer) bool
 
 ```
 searchKey: runtime.netpollcheckerr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41004,7 +40988,7 @@ func netpollcheckerr(pd *pollDesc, mode int32) int
 
 ```
 searchKey: runtime.netpollclose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41015,7 +40999,7 @@ func netpollclose(fd uintptr) int32
 
 ```
 searchKey: runtime.netpolldeadlineimpl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41026,7 +41010,7 @@ func netpolldeadlineimpl(pd *pollDesc, seq uintptr, read, write bool)
 
 ```
 searchKey: runtime.netpollgoready
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41059,7 +41043,7 @@ func netpollinited() bool
 
 ```
 searchKey: runtime.netpollopen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41070,7 +41054,7 @@ func netpollopen(fd uintptr, pd *pollDesc) int32
 
 ```
 searchKey: runtime.netpollready
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41085,7 +41069,7 @@ This may run while the world is stopped, so write barriers are not allowed.
 
 ```
 searchKey: runtime.newarray
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41111,7 +41095,7 @@ newextram allocates m's and puts them on the extra list. It is called with a wor
 
 ```
 searchKey: runtime.newm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41126,7 +41110,7 @@ id is optional pre-allocated m ID. Omit by passing -1.
 
 ```
 searchKey: runtime.newm1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41137,7 +41121,7 @@ func newm1(mp *m)
 
 ```
 searchKey: runtime.newobject
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41150,7 +41134,7 @@ implementation of new builtin compiler (both frontend and SSA backend) knows the
 
 ```
 searchKey: runtime.newosproc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41163,7 +41147,7 @@ May run with m.p==nil, so write barriers are not allowed.
 
 ```
 searchKey: runtime.newosproc0
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41178,7 +41162,7 @@ This function is not safe to use after initialization as it does not pass an M a
 
 ```
 searchKey: runtime.newproc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41264,7 +41248,7 @@ func nilfunc()
 
 ```
 searchKey: runtime.nilinterequal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41275,7 +41259,7 @@ func nilinterequal(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.nilinterhash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41286,7 +41270,7 @@ func nilinterhash(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.noSignalStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41299,7 +41283,7 @@ This is called when we receive a signal when there is no signal stack. This can 
 
 ```
 searchKey: runtime.nobarrierWakeTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41312,7 +41296,7 @@ nobarrierWakeTime looks at P's timers and returns the time when we should wake u
 
 ```
 searchKey: runtime.noescape
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41336,7 +41320,7 @@ func nonblockingPipe() (r, w int32, errno int32)
 
 ```
 searchKey: runtime.noteclear
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41349,7 +41333,7 @@ One-time notifications.
 
 ```
 searchKey: runtime.notesleep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41360,7 +41344,7 @@ func notesleep(n *note)
 
 ```
 searchKey: runtime.notetsleep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41371,7 +41355,7 @@ func notetsleep(n *note, ns int64) bool
 
 ```
 searchKey: runtime.notetsleep_internal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41382,7 +41366,7 @@ func notetsleep_internal(n *note, ns int64, gp *g, deadline int64) bool
 
 ```
 searchKey: runtime.notetsleepg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41395,7 +41379,7 @@ same as runtime·notetsleep, but called on user g (not g0) calls only nosplit fu
 
 ```
 searchKey: runtime.notewakeup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41406,7 +41390,7 @@ func notewakeup(n *note)
 
 ```
 searchKey: runtime.notifyListAdd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41419,7 +41403,7 @@ notifyListAdd adds the caller to a notify list such that it can receive notifica
 
 ```
 searchKey: runtime.notifyListCheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41430,7 +41414,7 @@ func notifyListCheck(sz uintptr)
 
 ```
 searchKey: runtime.notifyListNotifyAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41443,7 +41427,7 @@ notifyListNotifyAll notifies all entries in the list.
 
 ```
 searchKey: runtime.notifyListNotifyOne
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41456,7 +41440,7 @@ notifyListNotifyOne notifies one entry in the list.
 
 ```
 searchKey: runtime.notifyListWait
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41469,7 +41453,7 @@ notifyListWait waits for a notification. If one has been sent since notifyListAd
 
 ```
 searchKey: runtime.offAddrToLevelIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41495,7 +41479,7 @@ oneNewExtraM allocates an m and puts it on the extra list.
 
 ```
 searchKey: runtime.open
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41517,7 +41501,7 @@ func open_trampoline()
 
 ```
 searchKey: runtime.osPreemptExtEnter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41528,7 +41512,7 @@ func osPreemptExtEnter(mp *m)
 
 ```
 searchKey: runtime.osPreemptExtExit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41539,7 +41523,7 @@ func osPreemptExtExit(mp *m)
 
 ```
 searchKey: runtime.osRelax
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41552,7 +41536,7 @@ osRelax is called by the scheduler when transitioning to and from all Ps being i
 
 ```
 searchKey: runtime.osSetupTLS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41563,7 +41547,7 @@ func osSetupTLS(mp *m)
 
 ```
 searchKey: runtime.osStackAlloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41576,7 +41560,7 @@ osStackAlloc performs OS-specific initialization before s is used as stack memor
 
 ```
 searchKey: runtime.osStackFree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41670,7 +41654,7 @@ func osyield_no_g()
 
 ```
 searchKey: runtime.overLoadFactor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41683,7 +41667,7 @@ overLoadFactor reports whether count items placed in 1<<B buckets is over loadFa
 
 ```
 searchKey: runtime.panicCheck1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41696,7 +41680,7 @@ Check to make sure we can really generate a panic. If the panic was generated fr
 
 ```
 searchKey: runtime.panicCheck2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41711,7 +41695,7 @@ Using this function is necessary for any panic that may be generated by runtime.
 
 ```
 searchKey: runtime.panicIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41724,7 +41708,7 @@ Implemented in assembly, as they take arguments in registers. Declared here to m
 
 ```
 searchKey: runtime.panicIndexU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41735,7 +41719,7 @@ func panicIndexU(x uint, y int)
 
 ```
 searchKey: runtime.panicSlice3Acap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41746,7 +41730,7 @@ func panicSlice3Acap(x int, y int)
 
 ```
 searchKey: runtime.panicSlice3AcapU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41757,7 +41741,7 @@ func panicSlice3AcapU(x uint, y int)
 
 ```
 searchKey: runtime.panicSlice3Alen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41768,7 +41752,7 @@ func panicSlice3Alen(x int, y int)
 
 ```
 searchKey: runtime.panicSlice3AlenU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41779,7 +41763,7 @@ func panicSlice3AlenU(x uint, y int)
 
 ```
 searchKey: runtime.panicSlice3B
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41790,7 +41774,7 @@ func panicSlice3B(x int, y int)
 
 ```
 searchKey: runtime.panicSlice3BU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41801,7 +41785,7 @@ func panicSlice3BU(x uint, y int)
 
 ```
 searchKey: runtime.panicSlice3C
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41812,7 +41796,7 @@ func panicSlice3C(x int, y int)
 
 ```
 searchKey: runtime.panicSlice3CU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41823,7 +41807,7 @@ func panicSlice3CU(x uint, y int)
 
 ```
 searchKey: runtime.panicSliceAcap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41834,7 +41818,7 @@ func panicSliceAcap(x int, y int)
 
 ```
 searchKey: runtime.panicSliceAcapU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41845,7 +41829,7 @@ func panicSliceAcapU(x uint, y int)
 
 ```
 searchKey: runtime.panicSliceAlen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41856,7 +41840,7 @@ func panicSliceAlen(x int, y int)
 
 ```
 searchKey: runtime.panicSliceAlenU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41867,7 +41851,7 @@ func panicSliceAlenU(x uint, y int)
 
 ```
 searchKey: runtime.panicSliceB
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41878,7 +41862,7 @@ func panicSliceB(x int, y int)
 
 ```
 searchKey: runtime.panicSliceBU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41889,7 +41873,7 @@ func panicSliceBU(x uint, y int)
 
 ```
 searchKey: runtime.panicSliceConvert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41911,7 +41895,7 @@ func panicdivide()
 
 ```
 searchKey: runtime.panicdottypeE
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41924,7 +41908,7 @@ panicdottypeE is called when doing an e.(T) conversion and the conversion fails.
 
 ```
 searchKey: runtime.panicdottypeI
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41981,7 +41965,7 @@ func panicmem()
 
 ```
 searchKey: runtime.panicmemAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -41992,7 +41976,7 @@ func panicmemAddr(addr uintptr)
 
 ```
 searchKey: runtime.panicnildottype
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42053,7 +42037,7 @@ It is called from the generated wrapper code.
 
 ```
 searchKey: runtime.park_m
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42066,7 +42050,7 @@ park continuation on g0.
 
 ```
 searchKey: runtime.parkunlock_c
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42088,7 +42072,7 @@ func parsedebugvars()
 
 ```
 searchKey: runtime.pcdatastart
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42099,7 +42083,7 @@ func pcdatastart(f funcInfo, table uint32) uint32
 
 ```
 searchKey: runtime.pcdatavalue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42110,7 +42094,7 @@ func pcdatavalue(f funcInfo, table uint32, targetpc uintptr, cache *pcvalueCache
 
 ```
 searchKey: runtime.pcdatavalue1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42121,7 +42105,7 @@ func pcdatavalue1(f funcInfo, table uint32, targetpc uintptr, cache *pcvalueCach
 
 ```
 searchKey: runtime.pcdatavalue2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42134,7 +42118,7 @@ Like pcdatavalue, but also return the start PC of this PCData value. It doesn't 
 
 ```
 searchKey: runtime.pcvalue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42147,7 +42131,7 @@ Returns the PCData value, and the PC where this value starts. TODO: the start PC
 
 ```
 searchKey: runtime.pcvalueCacheKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42160,7 +42144,7 @@ pcvalueCacheKey returns the outermost index in a pcvalueCache to use for targetp
 
 ```
 searchKey: runtime.persistentalloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42175,7 +42159,7 @@ Consider marking persistentalloc'd types go:notinheap.
 
 ```
 searchKey: runtime.pidleput
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42227,7 +42211,7 @@ func plugin_lastmoduleinit() (path string, syms map[string]interface{}, errstr s
 
 ```
 searchKey: runtime.pluginftabverify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42264,7 +42248,7 @@ pollWork reports whether there is non-background work this P could be doing. Thi
 
 ```
 searchKey: runtime.poll_runtime_Semacquire
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42275,7 +42259,7 @@ func poll_runtime_Semacquire(addr *uint32)
 
 ```
 searchKey: runtime.poll_runtime_Semrelease
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42286,7 +42270,7 @@ func poll_runtime_Semrelease(addr *uint32)
 
 ```
 searchKey: runtime.poll_runtime_isPollServerDescriptor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42299,7 +42283,7 @@ poll_runtime_isPollServerDescriptor reports whether fd is a descriptor being use
 
 ```
 searchKey: runtime.poll_runtime_pollClose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42310,7 +42294,7 @@ func poll_runtime_pollClose(pd *pollDesc)
 
 ```
 searchKey: runtime.poll_runtime_pollReset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42334,7 +42318,7 @@ func poll_runtime_pollServerInit()
 
 ```
 searchKey: runtime.poll_runtime_pollSetDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42345,7 +42329,7 @@ func poll_runtime_pollSetDeadline(pd *pollDesc, d int64, mode int)
 
 ```
 searchKey: runtime.poll_runtime_pollUnblock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42356,7 +42340,7 @@ func poll_runtime_pollUnblock(pd *pollDesc)
 
 ```
 searchKey: runtime.poll_runtime_pollWait
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42369,7 +42353,7 @@ poll_runtime_pollWait, which is internal/poll.runtime_pollWait, waits for a desc
 
 ```
 searchKey: runtime.poll_runtime_pollWaitCanceled
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42380,7 +42364,7 @@ func poll_runtime_pollWaitCanceled(pd *pollDesc, mode int)
 
 ```
 searchKey: runtime.preemptM
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42393,7 +42377,7 @@ preemptM sends a preemption request to mp. This request may be handled asynchron
 
 ```
 searchKey: runtime.preemptPark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42419,7 +42403,7 @@ Tell all goroutines that they have been preempted and they should stop. This fun
 
 ```
 searchKey: runtime.preemptone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42432,7 +42416,7 @@ Tell the goroutine running on processor P to stop. This function is purely best-
 
 ```
 searchKey: runtime.prepGoExitFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42456,7 +42440,7 @@ prepareFreeWorkbufs moves busy workbuf spans to free list so they can be freed t
 
 ```
 searchKey: runtime.preprintpanics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42469,7 +42453,7 @@ Call all Error and String methods before freezing the world. Used when crashing 
 
 ```
 searchKey: runtime.printAncestorTraceback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42482,7 +42466,7 @@ printAncestorTraceback prints the traceback of the given ancestor. TODO: Unify t
 
 ```
 searchKey: runtime.printAncestorTracebackFuncInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42495,7 +42479,7 @@ printAncestorTraceback prints the given function info at a given pc within an an
 
 ```
 searchKey: runtime.printArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42508,7 +42492,7 @@ printArgs prints function arguments in traceback.
 
 ```
 searchKey: runtime.printCgoTraceback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42534,7 +42518,7 @@ printDebugLog prints the debug log.
 
 ```
 searchKey: runtime.printDebugLogPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42547,7 +42531,7 @@ printDebugLogPC prints a single symbolized PC. If returnPC is true, pc is a retu
 
 ```
 searchKey: runtime.printOneCgoTraceback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42560,7 +42544,7 @@ printOneCgoTraceback prints the traceback of a single cgo caller. This can print
 
 ```
 searchKey: runtime.printScavTrace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42575,7 +42559,7 @@ released should be the amount of memory released since the last time this was ca
 
 ```
 searchKey: runtime.printany
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42588,7 +42572,7 @@ printany prints an argument passed to panic. If panic is called with a value tha
 
 ```
 searchKey: runtime.printanycustomtype
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42599,7 +42583,7 @@ func printanycustomtype(i interface{})
 
 ```
 searchKey: runtime.printbool
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42610,7 +42594,7 @@ func printbool(v bool)
 
 ```
 searchKey: runtime.printcomplex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42621,7 +42605,7 @@ func printcomplex(c complex128)
 
 ```
 searchKey: runtime.printcreatedby
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42632,7 +42616,7 @@ func printcreatedby(gp *g)
 
 ```
 searchKey: runtime.printcreatedby1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42643,7 +42627,7 @@ func printcreatedby1(f funcInfo, pc uintptr)
 
 ```
 searchKey: runtime.printeface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42654,7 +42638,7 @@ func printeface(e eface)
 
 ```
 searchKey: runtime.printfloat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42665,7 +42649,7 @@ func printfloat(v float64)
 
 ```
 searchKey: runtime.printhex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42676,7 +42660,7 @@ func printhex(v uint64)
 
 ```
 searchKey: runtime.printiface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42687,7 +42671,7 @@ func printiface(i iface)
 
 ```
 searchKey: runtime.printint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42720,7 +42704,7 @@ func printnl()
 
 ```
 searchKey: runtime.printpanics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42733,7 +42717,7 @@ Print all currently active panics. Used when crashing. Should only be called aft
 
 ```
 searchKey: runtime.printpointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42744,7 +42728,7 @@ func printpointer(p unsafe.Pointer)
 
 ```
 searchKey: runtime.printslice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42766,7 +42750,7 @@ func printsp()
 
 ```
 searchKey: runtime.printstring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42777,7 +42761,7 @@ func printstring(s string)
 
 ```
 searchKey: runtime.printuint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42788,7 +42772,7 @@ func printuint(v uint64)
 
 ```
 searchKey: runtime.printuintptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42832,7 +42816,7 @@ func procUnpin()
 
 ```
 searchKey: runtime.procyield
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42843,7 +42827,7 @@ func procyield(cycles uint32)
 
 ```
 searchKey: runtime.profilealloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42854,7 +42838,7 @@ func profilealloc(mp *m, x unsafe.Pointer, size uintptr)
 
 ```
 searchKey: runtime.pthread_attr_getstacksize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42876,7 +42860,7 @@ func pthread_attr_getstacksize_trampoline()
 
 ```
 searchKey: runtime.pthread_attr_init
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42898,7 +42882,7 @@ func pthread_attr_init_trampoline()
 
 ```
 searchKey: runtime.pthread_attr_setdetachstate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42920,7 +42904,7 @@ func pthread_attr_setdetachstate_trampoline()
 
 ```
 searchKey: runtime.pthread_cond_init
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42942,7 +42926,7 @@ func pthread_cond_init_trampoline()
 
 ```
 searchKey: runtime.pthread_cond_signal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42964,7 +42948,7 @@ func pthread_cond_signal_trampoline()
 
 ```
 searchKey: runtime.pthread_cond_timedwait_relative_np
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -42986,7 +42970,7 @@ func pthread_cond_timedwait_relative_np_trampoline()
 
 ```
 searchKey: runtime.pthread_cond_wait
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43008,7 +42992,7 @@ func pthread_cond_wait_trampoline()
 
 ```
 searchKey: runtime.pthread_create
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43030,7 +43014,7 @@ func pthread_create_trampoline()
 
 ```
 searchKey: runtime.pthread_kill
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43052,7 +43036,7 @@ func pthread_kill_trampoline()
 
 ```
 searchKey: runtime.pthread_mutex_init
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43074,7 +43058,7 @@ func pthread_mutex_init_trampoline()
 
 ```
 searchKey: runtime.pthread_mutex_lock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43096,7 +43080,7 @@ func pthread_mutex_lock_trampoline()
 
 ```
 searchKey: runtime.pthread_mutex_unlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43144,7 +43128,7 @@ There's no corresponding barrier for the read side because the read side natural
 
 ```
 searchKey: runtime.putCachedDlogger
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43155,7 +43139,7 @@ func putCachedDlogger(l *dlogger) bool
 
 ```
 searchKey: runtime.putempty
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43168,7 +43152,7 @@ putempty puts a workbuf onto the work.empty list. Upon entry this goroutine owns
 
 ```
 searchKey: runtime.putfull
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43181,7 +43165,7 @@ putfull puts the workbuf on the work.full list for the GC. putfull accepts parti
 
 ```
 searchKey: runtime.queuefinalizer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43192,7 +43176,7 @@ func queuefinalizer(p unsafe.Pointer, fn *funcval, nret uintptr, fint *_type, ot
 
 ```
 searchKey: runtime.r4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43203,7 +43187,7 @@ func r4(p unsafe.Pointer) uintptr
 
 ```
 searchKey: runtime.r8
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43214,7 +43198,7 @@ func r8(p unsafe.Pointer) uintptr
 
 ```
 searchKey: runtime.raceReadObjectPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43225,7 +43209,7 @@ func raceReadObjectPC(t *_type, addr unsafe.Pointer, callerpc, pc uintptr)
 
 ```
 searchKey: runtime.raceWriteObjectPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43236,7 +43220,7 @@ func raceWriteObjectPC(t *_type, addr unsafe.Pointer, callerpc, pc uintptr)
 
 ```
 searchKey: runtime.raceacquire
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43247,7 +43231,7 @@ func raceacquire(addr unsafe.Pointer)
 
 ```
 searchKey: runtime.raceacquirectx
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43258,7 +43242,7 @@ func raceacquirectx(racectx uintptr, addr unsafe.Pointer)
 
 ```
 searchKey: runtime.raceacquireg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43269,7 +43253,7 @@ func raceacquireg(gp *g, addr unsafe.Pointer)
 
 ```
 searchKey: runtime.racectxend
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43302,7 +43286,7 @@ func racefini()
 
 ```
 searchKey: runtime.racefree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43324,7 +43308,7 @@ func racegoend()
 
 ```
 searchKey: runtime.racegostart
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43346,7 +43330,7 @@ func raceinit() (uintptr, uintptr)
 
 ```
 searchKey: runtime.racemalloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43357,7 +43341,7 @@ func racemalloc(p unsafe.Pointer, sz uintptr)
 
 ```
 searchKey: runtime.racemapshadow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43368,7 +43352,7 @@ func racemapshadow(addr unsafe.Pointer, size uintptr)
 
 ```
 searchKey: runtime.racenotify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43392,7 +43376,7 @@ func raceproccreate() uintptr
 
 ```
 searchKey: runtime.raceprocdestroy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43403,7 +43387,7 @@ func raceprocdestroy(ctx uintptr)
 
 ```
 searchKey: runtime.racereadpc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43414,7 +43398,7 @@ func racereadpc(addr unsafe.Pointer, callerpc, pc uintptr)
 
 ```
 searchKey: runtime.racereadrangepc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43425,7 +43409,7 @@ func racereadrangepc(addr unsafe.Pointer, sz, callerpc, pc uintptr)
 
 ```
 searchKey: runtime.racerelease
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43436,7 +43420,7 @@ func racerelease(addr unsafe.Pointer)
 
 ```
 searchKey: runtime.racereleaseacquire
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43447,7 +43431,7 @@ func racereleaseacquire(addr unsafe.Pointer)
 
 ```
 searchKey: runtime.racereleaseacquireg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43458,7 +43442,7 @@ func racereleaseacquireg(gp *g, addr unsafe.Pointer)
 
 ```
 searchKey: runtime.racereleaseg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43469,7 +43453,7 @@ func racereleaseg(gp *g, addr unsafe.Pointer)
 
 ```
 searchKey: runtime.racereleasemerge
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43480,7 +43464,7 @@ func racereleasemerge(addr unsafe.Pointer)
 
 ```
 searchKey: runtime.racereleasemergeg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43491,7 +43475,7 @@ func racereleasemergeg(gp *g, addr unsafe.Pointer)
 
 ```
 searchKey: runtime.racesync
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43502,7 +43486,7 @@ func racesync(c *hchan, sg *sudog)
 
 ```
 searchKey: runtime.racewritepc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43513,7 +43497,7 @@ func racewritepc(addr unsafe.Pointer, callerpc, pc uintptr)
 
 ```
 searchKey: runtime.racewriterangepc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43524,7 +43508,7 @@ func racewriterangepc(addr unsafe.Pointer, sz, callerpc, pc uintptr)
 
 ```
 searchKey: runtime.raise
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43546,7 +43530,7 @@ func raise_trampoline()
 
 ```
 searchKey: runtime.raisebadsignal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43559,7 +43543,7 @@ raisebadsignal is called when a signal is received on a non-Go thread, and the G
 
 ```
 searchKey: runtime.raiseproc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43581,7 +43565,7 @@ func raiseproc_trampoline()
 
 ```
 searchKey: runtime.rawbyteslice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43594,7 +43578,7 @@ rawbyteslice allocates a new byte slice. The byte slice is not zeroed.
 
 ```
 searchKey: runtime.rawruneslice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43607,7 +43591,7 @@ rawruneslice allocates a new rune slice. The rune slice is not zeroed.
 
 ```
 searchKey: runtime.rawstring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43620,7 +43604,7 @@ rawstring allocates storage for a new string. The returned string and byte slice
 
 ```
 searchKey: runtime.rawstringtmp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43631,7 +43615,7 @@ func rawstringtmp(buf *tmpBuf, l int) (s string, b []byte)
 
 ```
 searchKey: runtime.read
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43642,7 +43626,7 @@ func read(fd int32, p unsafe.Pointer, n int32) int32
 
 ```
 searchKey: runtime.readGCStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43653,7 +43637,7 @@ func readGCStats(pauses *[]uint64)
 
 ```
 searchKey: runtime.readGCStats_m
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43677,7 +43661,7 @@ func readGOGC() int32
 
 ```
 searchKey: runtime.readMetrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43690,7 +43674,7 @@ readMetrics is the implementation of runtime/metrics.Read.
 
 ```
 searchKey: runtime.readUnaligned32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43703,7 +43687,7 @@ Note: These routines perform the read with a native endianness.
 
 ```
 searchKey: runtime.readUnaligned64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43725,7 +43709,7 @@ func read_trampoline()
 
 ```
 searchKey: runtime.readgstatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43738,7 +43722,7 @@ All reads and writes of g's status go through readgstatus, casgstatus castogscan
 
 ```
 searchKey: runtime.readmemstats_m
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43749,7 +43733,7 @@ func readmemstats_m(stats *MemStats)
 
 ```
 searchKey: runtime.readvarint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43762,7 +43746,7 @@ readvarint reads a varint from p.
 
 ```
 searchKey: runtime.readvarintUnsafe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43777,7 +43761,7 @@ There is a similar function runtime.readvarint, which takes a slice of bytes, ra
 
 ```
 searchKey: runtime.ready
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43805,7 +43789,7 @@ There may be a significant delay between when this function runs and when the sc
 
 ```
 searchKey: runtime.readyWithTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43816,7 +43800,7 @@ func readyWithTime(s *sudog, traceskip int)
 
 ```
 searchKey: runtime.record
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43829,7 +43813,7 @@ Write b's data to r.
 
 ```
 searchKey: runtime.recordForPanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43844,7 +43828,7 @@ The text written during a process crash (following "panic" or "fatal error") is 
 
 ```
 searchKey: runtime.recordspan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43863,7 +43847,7 @@ The heap lock must be held.
 
 ```
 searchKey: runtime.recovery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43876,7 +43860,7 @@ Unwind the stack after a deferred function calls recover after a panic. Then arr
 
 ```
 searchKey: runtime.recv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43901,7 +43885,7 @@ For synchronous channels, both values are the same. For asynchronous channels, t
 
 ```
 searchKey: runtime.recvDirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43912,7 +43896,7 @@ func recvDirect(t *_type, sg *sudog, dst unsafe.Pointer)
 
 ```
 searchKey: runtime.reentersyscall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43955,7 +43939,7 @@ func reflectOffsUnlock()
 
 ```
 searchKey: runtime.reflect_addReflectOff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43968,7 +43952,7 @@ reflect_addReflectOff adds a pointer to the reflection offset lookup map.
 
 ```
 searchKey: runtime.reflect_chancap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43979,7 +43963,7 @@ func reflect_chancap(c *hchan) int
 
 ```
 searchKey: runtime.reflect_chanclose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -43990,7 +43974,7 @@ func reflect_chanclose(c *hchan)
 
 ```
 searchKey: runtime.reflect_chanlen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44001,7 +43985,7 @@ func reflect_chanlen(c *hchan) int
 
 ```
 searchKey: runtime.reflect_chanrecv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44012,7 +43996,7 @@ func reflect_chanrecv(c *hchan, nb bool, elem unsafe.Pointer) (selected bool, re
 
 ```
 searchKey: runtime.reflect_chansend
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44023,7 +44007,7 @@ func reflect_chansend(c *hchan, elem unsafe.Pointer, nb bool) (selected bool)
 
 ```
 searchKey: runtime.reflect_gcbits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44036,7 +44020,7 @@ gcbits returns the GC type info for x, for testing. The result is the bitmap ent
 
 ```
 searchKey: runtime.reflect_ifaceE2I
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44047,7 +44031,7 @@ func reflect_ifaceE2I(inter *interfacetype, e eface, dst *iface)
 
 ```
 searchKey: runtime.reflect_mapaccess
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44058,7 +44042,7 @@ func reflect_mapaccess(t *maptype, h *hmap, key unsafe.Pointer) unsafe.Pointer
 
 ```
 searchKey: runtime.reflect_mapassign
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44069,7 +44053,7 @@ func reflect_mapassign(t *maptype, h *hmap, key unsafe.Pointer, elem unsafe.Poin
 
 ```
 searchKey: runtime.reflect_mapdelete
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44080,7 +44064,7 @@ func reflect_mapdelete(t *maptype, h *hmap, key unsafe.Pointer)
 
 ```
 searchKey: runtime.reflect_mapiterelem
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44091,7 +44075,7 @@ func reflect_mapiterelem(it *hiter) unsafe.Pointer
 
 ```
 searchKey: runtime.reflect_mapiterkey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44102,7 +44086,7 @@ func reflect_mapiterkey(it *hiter) unsafe.Pointer
 
 ```
 searchKey: runtime.reflect_mapiternext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44113,7 +44097,7 @@ func reflect_mapiternext(it *hiter)
 
 ```
 searchKey: runtime.reflect_maplen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44124,7 +44108,7 @@ func reflect_maplen(h *hmap) int
 
 ```
 searchKey: runtime.reflect_memclrNoHeapPointers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44135,7 +44119,7 @@ func reflect_memclrNoHeapPointers(ptr unsafe.Pointer, n uintptr)
 
 ```
 searchKey: runtime.reflect_memmove
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44146,7 +44130,7 @@ func reflect_memmove(to, from unsafe.Pointer, n uintptr)
 
 ```
 searchKey: runtime.reflect_resolveNameOff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44159,7 +44143,7 @@ reflect_resolveNameOff resolves a name offset from a base pointer.
 
 ```
 searchKey: runtime.reflect_resolveTextOff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44172,7 +44156,7 @@ reflect_resolveTextOff resolves a function pointer offset from a base type.
 
 ```
 searchKey: runtime.reflect_resolveTypeOff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44185,7 +44169,7 @@ reflect_resolveTypeOff resolves an *rtype offset from a base type.
 
 ```
 searchKey: runtime.reflect_rselect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44196,7 +44180,7 @@ func reflect_rselect(cases []runtimeSelect) (int, bool)
 
 ```
 searchKey: runtime.reflect_typedmemclr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44207,7 +44191,7 @@ func reflect_typedmemclr(typ *_type, ptr unsafe.Pointer)
 
 ```
 searchKey: runtime.reflect_typedmemclrpartial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44218,7 +44202,7 @@ func reflect_typedmemclrpartial(typ *_type, ptr unsafe.Pointer, off, size uintpt
 
 ```
 searchKey: runtime.reflect_typedmemmove
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44229,7 +44213,7 @@ func reflect_typedmemmove(typ *_type, dst, src unsafe.Pointer)
 
 ```
 searchKey: runtime.reflect_typedmemmovepartial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44242,7 +44226,7 @@ typedmemmovepartial is like typedmemmove but assumes that dst and src point off 
 
 ```
 searchKey: runtime.reflect_typedslicecopy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44253,7 +44237,7 @@ func reflect_typedslicecopy(elemType *_type, dst, src slice) int
 
 ```
 searchKey: runtime.reflect_typehash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44275,7 +44259,7 @@ func reflect_typelinks() ([]unsafe.Pointer, [][]int32)
 
 ```
 searchKey: runtime.reflect_unsafe_New
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44286,7 +44270,7 @@ func reflect_unsafe_New(typ *_type) unsafe.Pointer
 
 ```
 searchKey: runtime.reflect_unsafe_NewArray
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44297,7 +44281,7 @@ func reflect_unsafe_NewArray(typ *_type, n int) unsafe.Pointer
 
 ```
 searchKey: runtime.reflectcall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44330,7 +44314,7 @@ Arguments passed through to reflectcall do not escape. The type is used only in 
 
 ```
 searchKey: runtime.reflectcallSave
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44345,7 +44329,7 @@ This is marked as a wrapper by the compiler so it doesn't appear in tracebacks.
 
 ```
 searchKey: runtime.reflectcallmove
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44360,7 +44344,7 @@ It must be nosplit and must only call nosplit functions because the stack map of
 
 ```
 searchKey: runtime.reflectlite_chanlen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44371,7 +44355,7 @@ func reflectlite_chanlen(c *hchan) int
 
 ```
 searchKey: runtime.reflectlite_ifaceE2I
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44382,7 +44366,7 @@ func reflectlite_ifaceE2I(inter *interfacetype, e eface, dst *iface)
 
 ```
 searchKey: runtime.reflectlite_maplen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44393,7 +44377,7 @@ func reflectlite_maplen(h *hmap) int
 
 ```
 searchKey: runtime.reflectlite_resolveNameOff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44406,7 +44390,7 @@ reflectlite_resolveNameOff resolves a name offset from a base pointer.
 
 ```
 searchKey: runtime.reflectlite_resolveTypeOff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44419,7 +44403,7 @@ reflectlite_resolveTypeOff resolves an *rtype offset from a base type.
 
 ```
 searchKey: runtime.reflectlite_typedmemmove
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44430,7 +44414,7 @@ func reflectlite_typedmemmove(typ *_type, dst, src unsafe.Pointer)
 
 ```
 searchKey: runtime.reflectlite_unsafe_New
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44441,7 +44425,7 @@ func reflectlite_unsafe_New(typ *_type) unsafe.Pointer
 
 ```
 searchKey: runtime.releaseLockRank
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44454,7 +44438,7 @@ This function may be called in nosplit context and thus must be nosplit.
 
 ```
 searchKey: runtime.releaseSudog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44465,7 +44449,7 @@ func releaseSudog(s *sudog)
 
 ```
 searchKey: runtime.releasem
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44476,7 +44460,7 @@ func releasem(mp *m)
 
 ```
 searchKey: runtime.removefinalizer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44489,7 +44473,7 @@ Removes the finalizer (if any) from the object p.
 
 ```
 searchKey: runtime.resetForSleep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44502,7 +44486,7 @@ resetForSleep is called after the goroutine is parked for timeSleep. We can't ca
 
 ```
 searchKey: runtime.resetTimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44526,7 +44510,7 @@ func resetspinning()
 
 ```
 searchKey: runtime.resettimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44539,7 +44523,7 @@ resettimer resets the time when a timer should fire. If used for an inactive tim
 
 ```
 searchKey: runtime.restoreGsignalStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44552,7 +44536,7 @@ restoreGsignalStack restores the gsignal stack to the value it had before enteri
 
 ```
 searchKey: runtime.resumeG
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44565,7 +44549,7 @@ resumeG undoes the effects of suspendG, allowing the suspended goroutine to cont
 
 ```
 searchKey: runtime.retake
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44756,7 +44740,7 @@ return0 is a stub used to return 0 from deferproc. It is called at the very end 
 
 ```
 searchKey: runtime.round2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44769,7 +44753,7 @@ round x up to a power of 2.
 
 ```
 searchKey: runtime.roundupsize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44793,7 +44777,7 @@ func rt0_go()
 
 ```
 searchKey: runtime.runGCProg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44808,7 +44792,7 @@ runGCProg returns the number of 1- or 2-bit entries written to memory.
 
 ```
 searchKey: runtime.runOneTimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44821,7 +44805,7 @@ runOneTimer runs a single timer. The caller must have locked the timers for pp. 
 
 ```
 searchKey: runtime.runOpenDeferFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44868,7 +44852,7 @@ This is the goroutine that runs all of the finalizers
 
 ```
 searchKey: runtime.runqempty
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44881,7 +44865,7 @@ runqempty reports whether _p_ has no Gs on its local run queue. It never returns
 
 ```
 searchKey: runtime.runqgrab
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44894,7 +44878,7 @@ Grabs a batch of goroutines from _p_'s runnable queue into batch. Batch is a rin
 
 ```
 searchKey: runtime.runqput
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44907,7 +44891,7 @@ runqput tries to put g on the local runnable queue. If next is false, runqput ad
 
 ```
 searchKey: runtime.runqputbatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44920,7 +44904,7 @@ runqputbatch tries to put all the G's on q on the local runnable queue. If the q
 
 ```
 searchKey: runtime.runqputslow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44933,7 +44917,7 @@ Put g and a batch of work from local runnable queue on global queue. Executed on
 
 ```
 searchKey: runtime.runtime_debug_WriteHeapDump
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44955,7 +44939,7 @@ func runtime_debug_freeOSMemory()
 
 ```
 searchKey: runtime.runtime_expandFinalInlineFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -44979,7 +44963,7 @@ func runtime_getProfLabel() unsafe.Pointer
 
 ```
 searchKey: runtime.runtime_goroutineProfileWithLabels
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45014,7 +44998,7 @@ func runtime_pprof_runtime_cyclesPerSecond() int64
 
 ```
 searchKey: runtime.runtime_setProfLabel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45025,7 +45009,7 @@ func runtime_setProfLabel(labels unsafe.Pointer)
 
 ```
 searchKey: runtime.runtimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45038,7 +45022,7 @@ runtimer examines the first timer in timers. If it is ready based on now, it run
 
 ```
 searchKey: runtime.save
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45053,7 +45037,7 @@ save must not have write barriers because invoking a write barrier can clobber g
 
 ```
 searchKey: runtime.saveAncestors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45066,7 +45050,7 @@ saveAncestors copies previous ancestors of the given caller g and includes infor
 
 ```
 searchKey: runtime.saveblockevent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45077,7 +45061,7 @@ func saveblockevent(cycles, rate int64, skip int, which bucketType)
 
 ```
 searchKey: runtime.saveg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45101,7 +45085,7 @@ sbrk0 returns the current process brk, or 0 if not implemented.
 
 ```
 searchKey: runtime.scanConservative
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45118,7 +45102,7 @@ If state != nil, it's assumed that [b, b+n) is a block in the stack and may cont
 
 ```
 searchKey: runtime.scanblock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45135,7 +45119,7 @@ If stk != nil, possible stack pointers are also reported to stk.putPtr.
 
 ```
 searchKey: runtime.scanframeworker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45148,7 +45132,7 @@ Scan a stack frame: local variables and function arguments/results.
 
 ```
 searchKey: runtime.scanobject
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45161,7 +45145,7 @@ scanobject scans the object starting at b, adding pointers to gcw. b must point 
 
 ```
 searchKey: runtime.scanstack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45178,7 +45162,7 @@ scanstack is marked go:systemstack because it must not be preempted while using 
 
 ```
 searchKey: runtime.scavengeSleep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45197,7 +45181,7 @@ Returns the amount of time actually slept.
 
 ```
 searchKey: runtime.schedEnableUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45212,7 +45196,7 @@ This does not stop already running user goroutines, so the caller should first s
 
 ```
 searchKey: runtime.schedEnabled
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45249,7 +45233,7 @@ The new G calls runtime·main.
 
 ```
 searchKey: runtime.schedtrace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45273,7 +45257,7 @@ One round of scheduler: find a runnable goroutine and execute it. Never returns.
 
 ```
 searchKey: runtime.selectgo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45292,7 +45276,7 @@ selectgo returns the index of the chosen scase, which matches the ordinal positi
 
 ```
 searchKey: runtime.selectnbrecv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45324,7 +45308,7 @@ if selected, ok = selectnbrecv(&v, c); selected {
 
 ```
 searchKey: runtime.selectnbsend
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45356,7 +45340,7 @@ if selectnbsend(c, v) {
 
 ```
 searchKey: runtime.selectsetpc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45367,7 +45351,7 @@ func selectsetpc(pc *uintptr)
 
 ```
 searchKey: runtime.sellock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45378,7 +45362,7 @@ func sellock(scases []scase, lockorder []uint16)
 
 ```
 searchKey: runtime.selparkcommit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45389,7 +45373,7 @@ func selparkcommit(gp *g, _ unsafe.Pointer) bool
 
 ```
 searchKey: runtime.selunlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45400,7 +45384,7 @@ func selunlock(scases []scase, lockorder []uint16)
 
 ```
 searchKey: runtime.semacquire
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45413,7 +45397,7 @@ Called from runtime.
 
 ```
 searchKey: runtime.semacquire1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45424,7 +45408,7 @@ func semacquire1(addr *uint32, lifo bool, profile semaProfileFlags, skipframes i
 
 ```
 searchKey: runtime.semacreate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45435,7 +45419,7 @@ func semacreate(mp *m)
 
 ```
 searchKey: runtime.semasleep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45446,7 +45430,7 @@ func semasleep(ns int64) int32
 
 ```
 searchKey: runtime.semawakeup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45457,7 +45441,7 @@ func semawakeup(mp *m)
 
 ```
 searchKey: runtime.semrelease
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45468,7 +45452,7 @@ func semrelease(addr *uint32)
 
 ```
 searchKey: runtime.semrelease1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45479,7 +45463,7 @@ func semrelease1(addr *uint32, handoff bool, skipframes int)
 
 ```
 searchKey: runtime.send
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45492,7 +45476,7 @@ send processes a send operation on an empty channel c. The value ep sent by the 
 
 ```
 searchKey: runtime.sendDirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45503,7 +45487,7 @@ func sendDirect(t *_type, sg *sudog, src unsafe.Pointer)
 
 ```
 searchKey: runtime.setCheckmark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45516,7 +45500,7 @@ setCheckmark throws if marking object is a checkmarks violation, and otherwise s
 
 ```
 searchKey: runtime.setGCPercent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45527,7 +45511,7 @@ func setGCPercent(in int32) (out int32)
 
 ```
 searchKey: runtime.setGCPhase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45538,7 +45522,7 @@ func setGCPhase(x uint32)
 
 ```
 searchKey: runtime.setGNoWB
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45551,7 +45535,7 @@ setGNoWB performs *gp = new without a write barrier. For times when it's impract
 
 ```
 searchKey: runtime.setGsignalStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45564,7 +45548,7 @@ setGsignalStack sets the gsignal stack of the current m to an alternate signal s
 
 ```
 searchKey: runtime.setMNoWB
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45577,7 +45561,7 @@ setMNoWB performs *mp = new without a write barrier. For times when it's impract
 
 ```
 searchKey: runtime.setMaxStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45588,7 +45572,7 @@ func setMaxStack(in int) (out int)
 
 ```
 searchKey: runtime.setMaxThreads
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45599,7 +45583,7 @@ func setMaxThreads(in int) (out int)
 
 ```
 searchKey: runtime.setNonblock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45610,7 +45594,7 @@ func setNonblock(fd int32)
 
 ```
 searchKey: runtime.setPanicOnFault
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45621,7 +45605,7 @@ func setPanicOnFault(new bool) (old bool)
 
 ```
 searchKey: runtime.setProcessCPUProfiler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45634,7 +45618,7 @@ setProcessCPUProfiler is called when the profiling timer changes. It is called w
 
 ```
 searchKey: runtime.setSignalstackSP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45647,7 +45631,7 @@ setSignaltstackSP sets the ss_sp field of a stackt.
 
 ```
 searchKey: runtime.setThreadCPUProfiler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45660,7 +45644,7 @@ setThreadCPUProfiler makes any thread-specific changes required to implement pro
 
 ```
 searchKey: runtime.setTraceback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45671,7 +45655,7 @@ func setTraceback(level string)
 
 ```
 searchKey: runtime.setcpuprofilerate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45684,7 +45668,7 @@ setcpuprofilerate sets the CPU profiling rate to hz times per second. If hz <= 0
 
 ```
 searchKey: runtime.setg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45695,7 +45679,7 @@ func setg(gg *g)
 
 ```
 searchKey: runtime.setitimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45717,7 +45701,7 @@ func setitimer_trampoline()
 
 ```
 searchKey: runtime.setprofilebucket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45730,7 +45714,7 @@ Set the heap profile bucket associated with addr to b.
 
 ```
 searchKey: runtime.setsig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45741,7 +45725,7 @@ func setsig(i uint32, fn uintptr)
 
 ```
 searchKey: runtime.setsigsegv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45756,7 +45740,7 @@ This is exported via linkname to assembly in runtime/cgo.
 
 ```
 searchKey: runtime.setsigstack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45780,7 +45764,7 @@ Called from assembly only; declared for go vet.
 
 ```
 searchKey: runtime.shade
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45793,7 +45777,7 @@ Shade the object if it isn't already. The object is not nil and known to be in t
 
 ```
 searchKey: runtime.shouldPushSigpanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45806,7 +45790,7 @@ shouldPushSigpanic reports whether pc should be used as sigpanic's return PC (pu
 
 ```
 searchKey: runtime.showframe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45819,7 +45803,7 @@ showframe reports whether the frame with the given characteristics should be pri
 
 ```
 searchKey: runtime.showfuncinfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45832,7 +45816,7 @@ showfuncinfo reports whether a function with the given characteristics should be
 
 ```
 searchKey: runtime.shrinkstack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45847,7 +45831,7 @@ gp must be stopped and we must own its stack. It may be in _Grunning, but only i
 
 ```
 searchKey: runtime.siftdownTimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45858,7 +45842,7 @@ func siftdownTimer(t []*timer, i int)
 
 ```
 searchKey: runtime.siftupTimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45869,7 +45853,7 @@ func siftupTimer(t []*timer, i int)
 
 ```
 searchKey: runtime.sigInitIgnored
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45882,7 +45866,7 @@ sigInitIgnored marks the signal as already ignored. This is called at program st
 
 ```
 searchKey: runtime.sigInstallGoHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45893,7 +45877,7 @@ func sigInstallGoHandler(sig uint32) bool
 
 ```
 searchKey: runtime.sigNotOnStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45906,7 +45890,7 @@ This is called if we receive a signal when there is a signal stack but we are no
 
 ```
 searchKey: runtime.sigNoteSetup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45921,7 +45905,7 @@ The current implementation of notes on Darwin is not async-signal-safe, because 
 
 ```
 searchKey: runtime.sigNoteSleep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45934,7 +45918,7 @@ sigNoteSleep waits for a note created by sigNoteSetup to be woken.
 
 ```
 searchKey: runtime.sigNoteWakeup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45960,7 +45944,7 @@ sigRecvPrepareForFixup is used to temporarily wake up the signal_recv() running 
 
 ```
 searchKey: runtime.sigaction
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45982,7 +45966,7 @@ func sigaction_trampoline()
 
 ```
 searchKey: runtime.sigaddset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -45993,7 +45977,7 @@ func sigaddset(mask *sigset, i int)
 
 ```
 searchKey: runtime.sigaltstack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46015,7 +45999,7 @@ func sigaltstack_trampoline()
 
 ```
 searchKey: runtime.sigblock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46028,7 +46012,7 @@ sigblock blocks signals in the current thread's signal mask. This is used to blo
 
 ```
 searchKey: runtime.sigdelset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46039,7 +46023,7 @@ func sigdelset(mask *sigset, i int)
 
 ```
 searchKey: runtime.sigdisable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46052,7 +46036,7 @@ sigdisable disables the Go signal handler for the signal sig. It is only called 
 
 ```
 searchKey: runtime.sigenable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46065,7 +46049,7 @@ sigenable enables the Go signal handler to catch the signal sig. It is only call
 
 ```
 searchKey: runtime.sigfwd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46076,7 +46060,7 @@ func sigfwd(fn uintptr, sig uint32, info *siginfo, ctx unsafe.Pointer)
 
 ```
 searchKey: runtime.sigfwdgo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46089,7 +46073,7 @@ Determines if the signal should be handled by Go and if not, forwards the signal
 
 ```
 searchKey: runtime.sighandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46104,7 +46088,7 @@ The garbage collector may have stopped the world, so write barriers are not allo
 
 ```
 searchKey: runtime.sigignore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46117,7 +46101,7 @@ sigignore ignores the signal sig. It is only called while holding the os/signal.
 
 ```
 searchKey: runtime.sigismember
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46128,7 +46112,7 @@ func sigismember(mask *sigset, i int) bool
 
 ```
 searchKey: runtime.signalDuringFork
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46141,7 +46125,7 @@ signalDuringFork is called if we receive a signal while doing a fork. We do not 
 
 ```
 searchKey: runtime.signalM
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46165,7 +46149,7 @@ signalWaitUntilIdle waits until the signal delivery mechanism is idle. This is u
 
 ```
 searchKey: runtime.signal_disable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46178,7 +46162,7 @@ Must only be called from a single goroutine at a time.
 
 ```
 searchKey: runtime.signal_enable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46191,7 +46175,7 @@ Must only be called from a single goroutine at a time.
 
 ```
 searchKey: runtime.signal_ignore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46204,7 +46188,7 @@ Must only be called from a single goroutine at a time.
 
 ```
 searchKey: runtime.signal_ignored
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46230,7 +46214,7 @@ Called to receive the next queued signal. Must only be called from a single goro
 
 ```
 searchKey: runtime.signalstack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46243,7 +46227,7 @@ signalstack sets the current thread's alternate signal stack to s.
 
 ```
 searchKey: runtime.signame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46297,7 +46281,7 @@ func sigpipe()
 
 ```
 searchKey: runtime.sigprocmask
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46319,7 +46303,7 @@ func sigprocmask_trampoline()
 
 ```
 searchKey: runtime.sigprof
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46345,7 +46329,7 @@ sigprofNonGo is called if we receive a SIGPROF signal on a non-Go thread, and th
 
 ```
 searchKey: runtime.sigprofNonGoPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46358,7 +46342,7 @@ sigprofNonGoPC is called when a profiling signal arrived on a non-Go thread and 
 
 ```
 searchKey: runtime.sigsave
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46371,7 +46355,7 @@ sigsave saves the current thread's signal mask into *p. This is used to preserve
 
 ```
 searchKey: runtime.sigsend
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46397,7 +46381,7 @@ sigtramp is the callback from libc when a signal is received. It is called with 
 
 ```
 searchKey: runtime.sigtrampgo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46412,7 +46396,7 @@ It must be nosplit because getg() is still the G that was running (if any) when 
 
 ```
 searchKey: runtime.slicebytetostring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46425,7 +46409,7 @@ slicebytetostring converts a byte slice to a string. It is inserted by the compi
 
 ```
 searchKey: runtime.slicebytetostringtmp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46450,7 +46434,7 @@ where k is []byte, T1 to Tn is a nesting of struct and array literals.
 
 ```
 searchKey: runtime.slicecopy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46463,7 +46447,7 @@ slicecopy is used to copy from a string or slice of pointerless elements into a 
 
 ```
 searchKey: runtime.slicerunetostring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46474,7 +46458,7 @@ func slicerunetostring(buf *tmpBuf, a []rune) string
 
 ```
 searchKey: runtime.spanHasNoSpecials
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46487,7 +46471,7 @@ spanHasNoSpecials marks a span as having no specials in the arena bitmap.
 
 ```
 searchKey: runtime.spanHasSpecials
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46515,7 +46499,7 @@ Spills/loads arguments in registers to/from an internal/abi.RegArgs respectively
 
 ```
 searchKey: runtime.stackOverflow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46526,7 +46510,7 @@ func stackOverflow(x *byte)
 
 ```
 searchKey: runtime.stackcache_clear
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46537,7 +46521,7 @@ func stackcache_clear(c *mcache)
 
 ```
 searchKey: runtime.stackcacherefill
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46550,7 +46534,7 @@ stackcacherefill/stackcacherelease implement a global pool of stack segments. Th
 
 ```
 searchKey: runtime.stackcacherelease
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46574,7 +46558,7 @@ stackcheck checks that SP is in range [g->stack.lo, g->stack.hi).
 
 ```
 searchKey: runtime.stackfree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46600,7 +46584,7 @@ func stackinit()
 
 ```
 searchKey: runtime.stacklog2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46613,7 +46597,7 @@ stacklog2 returns ⌊log_2(n)⌋.
 
 ```
 searchKey: runtime.stackpoolfree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46682,7 +46666,7 @@ startTheWorldGC undoes the effects of stopTheWorldGC.
 
 ```
 searchKey: runtime.startTheWorldWithSema
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46693,7 +46677,7 @@ func startTheWorldWithSema(emitTraceEvent bool) int64
 
 ```
 searchKey: runtime.startTimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46706,7 +46690,7 @@ startTimer adds t to the timer heap.
 
 ```
 searchKey: runtime.startlockedm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46719,7 +46703,7 @@ Schedules the locked m to run the locked gp. May run during STW, so write barrie
 
 ```
 searchKey: runtime.startm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46753,7 +46737,7 @@ It must not have write barriers even though the write barrier explicitly ignores
 
 ```
 searchKey: runtime.step
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46766,7 +46750,7 @@ step advances to the next pc, value pair in the encoded table.
 
 ```
 searchKey: runtime.stopTheWorld
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46783,7 +46767,7 @@ This is also used by routines that do stack dumps. If the system is in panic or 
 
 ```
 searchKey: runtime.stopTheWorldGC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46825,7 +46809,7 @@ It is allowed to acquire worldsema once and then execute multiple startTheWorldW
 
 ```
 searchKey: runtime.stopTimer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46864,7 +46848,7 @@ Stops execution of the current m until new work is available. Returns with acqui
 
 ```
 searchKey: runtime.strequal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46875,7 +46859,7 @@ func strequal(p, q unsafe.Pointer) bool
 
 ```
 searchKey: runtime.strhash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46886,7 +46870,7 @@ func strhash(p unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.strhashFallback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46897,7 +46881,7 @@ func strhashFallback(a unsafe.Pointer, h uintptr) uintptr
 
 ```
 searchKey: runtime.stringDataOnStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46910,7 +46894,7 @@ stringDataOnStack reports whether the string's data is stored on the current gor
 
 ```
 searchKey: runtime.stringHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46923,7 +46907,7 @@ Testing adapters for hash quality tests (see hash_test.go)
 
 ```
 searchKey: runtime.stringtoslicebyte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46934,7 +46918,7 @@ func stringtoslicebyte(buf *tmpBuf, s string) []byte
 
 ```
 searchKey: runtime.stringtoslicerune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46945,7 +46929,7 @@ func stringtoslicerune(buf *[tmpStringBufSize]rune, s string) []rune
 
 ```
 searchKey: runtime.subtract1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46960,7 +46944,7 @@ nosplit because it is used during write barriers and must not be preempted.
 
 ```
 searchKey: runtime.subtractb
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46986,7 +46970,7 @@ sweepone sweeps some unswept heap span and returns the number of pages returned 
 
 ```
 searchKey: runtime.sync_atomic_CompareAndSwapPointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -46997,7 +46981,7 @@ func sync_atomic_CompareAndSwapPointer(ptr *unsafe.Pointer, old, new unsafe.Poin
 
 ```
 searchKey: runtime.sync_atomic_CompareAndSwapUintptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47008,7 +46992,7 @@ func sync_atomic_CompareAndSwapUintptr(ptr *uintptr, old, new uintptr) bool
 
 ```
 searchKey: runtime.sync_atomic_StorePointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47019,7 +47003,7 @@ func sync_atomic_StorePointer(ptr *unsafe.Pointer, new unsafe.Pointer)
 
 ```
 searchKey: runtime.sync_atomic_StoreUintptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47030,7 +47014,7 @@ func sync_atomic_StoreUintptr(ptr *uintptr, new uintptr)
 
 ```
 searchKey: runtime.sync_atomic_SwapPointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47041,7 +47025,7 @@ func sync_atomic_SwapPointer(ptr *unsafe.Pointer, new unsafe.Pointer) unsafe.Poi
 
 ```
 searchKey: runtime.sync_atomic_SwapUintptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47096,7 +47080,7 @@ func sync_nanotime() int64
 
 ```
 searchKey: runtime.sync_runtime_Semacquire
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47107,7 +47091,7 @@ func sync_runtime_Semacquire(addr *uint32)
 
 ```
 searchKey: runtime.sync_runtime_SemacquireMutex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47118,7 +47102,7 @@ func sync_runtime_SemacquireMutex(addr *uint32, lifo bool, skipframes int)
 
 ```
 searchKey: runtime.sync_runtime_Semrelease
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47129,7 +47113,7 @@ func sync_runtime_Semrelease(addr *uint32, handoff bool, skipframes int)
 
 ```
 searchKey: runtime.sync_runtime_canSpin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47175,7 +47159,7 @@ func sync_runtime_procUnpin()
 
 ```
 searchKey: runtime.sync_runtime_registerPoolCleanup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47186,7 +47170,7 @@ func sync_runtime_registerPoolCleanup(f func())
 
 ```
 searchKey: runtime.sync_throw
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47197,7 +47181,7 @@ func sync_throw(s string)
 
 ```
 searchKey: runtime.syncadjustsudogs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47210,7 +47194,7 @@ syncadjustsudogs adjusts gp's sudogs and copies the part of gp's stack they refe
 
 ```
 searchKey: runtime.sysAlloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47223,7 +47207,7 @@ Don't split the stack as this function may be invoked without a valid G, which p
 
 ```
 searchKey: runtime.sysFault
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47234,7 +47218,7 @@ func sysFault(v unsafe.Pointer, n uintptr)
 
 ```
 searchKey: runtime.sysFree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47247,7 +47231,7 @@ Don't split the stack as this function may be invoked without a valid G, which p
 
 ```
 searchKey: runtime.sysHugePage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47258,7 +47242,7 @@ func sysHugePage(v unsafe.Pointer, n uintptr)
 
 ```
 searchKey: runtime.sysMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47269,7 +47253,7 @@ func sysMap(v unsafe.Pointer, n uintptr, sysStat *sysMemStat)
 
 ```
 searchKey: runtime.sysReserve
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47280,7 +47264,7 @@ func sysReserve(v unsafe.Pointer, n uintptr) unsafe.Pointer
 
 ```
 searchKey: runtime.sysReserveAligned
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47293,7 +47277,7 @@ sysReserveAligned is like sysReserve, but the returned pointer is aligned to ali
 
 ```
 searchKey: runtime.sysUnused
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47304,7 +47288,7 @@ func sysUnused(v unsafe.Pointer, n uintptr)
 
 ```
 searchKey: runtime.sysUsed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47315,7 +47299,7 @@ func sysUsed(v unsafe.Pointer, n uintptr)
 
 ```
 searchKey: runtime.sysargs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47392,7 +47376,7 @@ func syscallX()
 
 ```
 searchKey: runtime.syscall_Exit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47414,7 +47398,7 @@ func syscall_Getpagesize() int
 
 ```
 searchKey: runtime.syscall_cgocaller
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47427,7 +47411,7 @@ wrapper for syscall package to call cgocall for libc (cgo) calls.
 
 ```
 searchKey: runtime.syscall_rawSyscall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47438,7 +47422,7 @@ func syscall_rawSyscall(fn, a1, a2, a3 uintptr) (r1, r2, err uintptr)
 
 ```
 searchKey: runtime.syscall_rawSyscall6
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47516,7 +47500,7 @@ Called from syscall package before fork.
 
 ```
 searchKey: runtime.syscall_runtime_doAllThreadsSyscall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47544,7 +47528,7 @@ func syscall_runtime_envs() []string
 
 ```
 searchKey: runtime.syscall_setenv_c
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47557,7 +47541,7 @@ Update the C environment if cgo is loaded. Called from syscall.Setenv.
 
 ```
 searchKey: runtime.syscall_syscall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47568,7 +47552,7 @@ func syscall_syscall(fn, a1, a2, a3 uintptr) (r1, r2, err uintptr)
 
 ```
 searchKey: runtime.syscall_syscall6
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47579,7 +47563,7 @@ func syscall_syscall6(fn, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2, err uintptr)
 
 ```
 searchKey: runtime.syscall_syscall6X
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47590,7 +47574,7 @@ func syscall_syscall6X(fn, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2, err uintptr)
 
 ```
 searchKey: runtime.syscall_syscallPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47601,7 +47585,7 @@ func syscall_syscallPtr(fn, a1, a2, a3 uintptr) (r1, r2, err uintptr)
 
 ```
 searchKey: runtime.syscall_syscallX
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47612,7 +47596,7 @@ func syscall_syscallX(fn, a1, a2, a3 uintptr) (r1, r2, err uintptr)
 
 ```
 searchKey: runtime.syscall_unsetenv_c
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47625,7 +47609,7 @@ Update the C environment if cgo is loaded. Called from syscall.unsetenv.
 
 ```
 searchKey: runtime.sysctl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47647,7 +47631,7 @@ func sysctl_trampoline()
 
 ```
 searchKey: runtime.sysctlbyname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47658,7 +47642,7 @@ func sysctlbyname(name *byte, oldp *byte, oldlenp *uintptr, newp *byte, newlen u
 
 ```
 searchKey: runtime.sysctlbynameInt32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47693,7 +47677,7 @@ Always runs without a P, so write barriers are not allowed.
 
 ```
 searchKey: runtime.systemstack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47766,7 +47750,7 @@ Ensure that defer arg sizes that map to the same defer size class also map to th
 
 ```
 searchKey: runtime.throw
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47803,7 +47787,7 @@ timeHistogramMetricsBuckets generates a slice of boundaries for the timeHistogra
 
 ```
 searchKey: runtime.timeSleep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47827,7 +47811,7 @@ func time_now() (sec int64, nsec int32, mono int64)
 
 ```
 searchKey: runtime.timediv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47840,7 +47824,7 @@ Poor mans 64-bit division. This is a very special function, do not use it if you
 
 ```
 searchKey: runtime.tooManyOverflowBuckets
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47853,7 +47837,7 @@ tooManyOverflowBuckets reports whether noverflow buckets is too many for a map w
 
 ```
 searchKey: runtime.tophash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47866,7 +47850,7 @@ tophash calculates the tophash value for hash.
 
 ```
 searchKey: runtime.totaldefersize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47879,7 +47863,7 @@ total size of memory block for defer with arg size sz
 
 ```
 searchKey: runtime.traceAppend
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47892,7 +47876,7 @@ traceAppend appends v to buf in little-endian-base-128 encoding.
 
 ```
 searchKey: runtime.traceEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47905,7 +47889,7 @@ traceEvent writes a single event to trace buffer, flushing the buffer if necessa
 
 ```
 searchKey: runtime.traceEventLocked
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47916,7 +47900,7 @@ func traceEventLocked(extraBytes int, mp *m, pid int32, bufp *traceBufPtr, ev by
 
 ```
 searchKey: runtime.traceFullQueue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -47973,7 +47957,7 @@ func traceGCSTWDone()
 
 ```
 searchKey: runtime.traceGCSTWStart
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48006,7 +47990,7 @@ func traceGCSweepDone()
 
 ```
 searchKey: runtime.traceGCSweepSpan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48036,7 +48020,7 @@ traceGCSweepStart must be paired with traceGCSweepDone and there must be no pree
 
 ```
 searchKey: runtime.traceGoCreate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48058,7 +48042,7 @@ func traceGoEnd()
 
 ```
 searchKey: runtime.traceGoPark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48102,7 +48086,7 @@ func traceGoStart()
 
 ```
 searchKey: runtime.traceGoSysBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48124,7 +48108,7 @@ func traceGoSysCall()
 
 ```
 searchKey: runtime.traceGoSysExit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48135,7 +48119,7 @@ func traceGoSysExit(ts int64)
 
 ```
 searchKey: runtime.traceGoUnpark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48146,7 +48130,7 @@ func traceGoUnpark(gp *g, skip int)
 
 ```
 searchKey: runtime.traceGomaxprocs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48179,7 +48163,7 @@ func traceHeapGoal()
 
 ```
 searchKey: runtime.traceProcFree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48203,7 +48187,7 @@ func traceProcStart()
 
 ```
 searchKey: runtime.traceProcStop
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48214,7 +48198,7 @@ func traceProcStop(pp *p)
 
 ```
 searchKey: runtime.traceReleaseBuffer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48227,7 +48211,7 @@ traceReleaseBuffer releases a buffer previously acquired with traceAcquireBuffer
 
 ```
 searchKey: runtime.traceStackID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48238,7 +48222,7 @@ func traceStackID(mp *m, buf []uintptr, skip int) uint64
 
 ```
 searchKey: runtime.trace_userLog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48249,7 +48233,7 @@ func trace_userLog(id uint64, category, message string)
 
 ```
 searchKey: runtime.trace_userRegion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48260,7 +48244,7 @@ func trace_userRegion(id, mode uint64, name string)
 
 ```
 searchKey: runtime.trace_userTaskCreate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48271,7 +48255,7 @@ func trace_userTaskCreate(id, parentID uint64, taskType string)
 
 ```
 searchKey: runtime.trace_userTaskEnd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48282,7 +48266,7 @@ func trace_userTaskEnd(id uint64)
 
 ```
 searchKey: runtime.tracealloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48293,7 +48277,7 @@ func tracealloc(p unsafe.Pointer, size uintptr, typ *_type)
 
 ```
 searchKey: runtime.traceback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48304,7 +48288,7 @@ func traceback(pc, sp, lr uintptr, gp *g)
 
 ```
 searchKey: runtime.traceback1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48315,7 +48299,7 @@ func traceback1(pc, sp, lr uintptr, gp *g, flags uint)
 
 ```
 searchKey: runtime.tracebackCgoContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48328,7 +48312,7 @@ tracebackCgoContext handles tracing back a cgo context value, from the context a
 
 ```
 searchKey: runtime.tracebackHexdump
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48341,7 +48325,7 @@ tracebackHexdump hexdumps part of stk around frame.sp and frame.fp for debugging
 
 ```
 searchKey: runtime.tracebackdefers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48354,7 +48338,7 @@ Traceback over the deferred function calls. Report them like calls that have bee
 
 ```
 searchKey: runtime.tracebackothers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48365,7 +48349,7 @@ func tracebackothers(me *g)
 
 ```
 searchKey: runtime.tracebacktrap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48378,7 +48362,7 @@ tracebacktrap is like traceback but expects that the PC and SP were obtained fro
 
 ```
 searchKey: runtime.tracefree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48400,7 +48384,7 @@ func tracegc()
 
 ```
 searchKey: runtime.typeBitsBulkBarrier
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48419,7 +48403,7 @@ Callers must perform cgo checks if writeBarrier.cgo.
 
 ```
 searchKey: runtime.typedmemclr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48434,7 +48418,7 @@ If the caller knows that typ has pointers, it can alternatively call memclrHasPo
 
 ```
 searchKey: runtime.typedmemmove
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48449,7 +48433,7 @@ TODO: Perfect for go:nosplitrec since we can't have a safe point anywhere in the
 
 ```
 searchKey: runtime.typedslicecopy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48460,7 +48444,7 @@ func typedslicecopy(typ *_type, dstPtr unsafe.Pointer, dstLen int, srcPtr unsafe
 
 ```
 searchKey: runtime.typehash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48486,7 +48470,7 @@ typelinksinit scans the types from extra modules and builds the moduledata typem
 
 ```
 searchKey: runtime.typesEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48503,7 +48487,7 @@ Only typelinksinit needs this function.
 
 ```
 searchKey: runtime.unblocksig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48516,7 +48500,7 @@ unblocksig removes sig from the current thread's signal mask. This is nosplit an
 
 ```
 searchKey: runtime.unexportedPanicForTesting
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48527,7 +48511,7 @@ func unexportedPanicForTesting(b []byte, i int) byte
 
 ```
 searchKey: runtime.unimplemented
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48538,7 +48522,7 @@ func unimplemented(name string)
 
 ```
 searchKey: runtime.unlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48549,7 +48533,7 @@ func unlock(l *mutex)
 
 ```
 searchKey: runtime.unlock2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48573,7 +48557,7 @@ func unlockOSThread()
 
 ```
 searchKey: runtime.unlockWithRank
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48584,7 +48568,7 @@ func unlockWithRank(l *mutex)
 
 ```
 searchKey: runtime.unlockextra
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48634,7 +48618,7 @@ The linker redirects a reference of a method that it determined unreachable to a
 
 ```
 searchKey: runtime.unsafeslice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48645,7 +48629,7 @@ func unsafeslice(et *_type, len int)
 
 ```
 searchKey: runtime.unsafeslice64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48667,7 +48651,7 @@ func unspillArgs()
 
 ```
 searchKey: runtime.unwindm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48678,7 +48662,7 @@ func unwindm(restore *bool)
 
 ```
 searchKey: runtime.updateTimer0When
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48691,7 +48675,7 @@ updateTimer0When sets the P's timer0When field. The caller must have locked the 
 
 ```
 searchKey: runtime.updateTimerModifiedEarliest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48704,7 +48688,7 @@ updateTimerModifiedEarliest updates the recorded nextwhen field of the earlier t
 
 ```
 searchKey: runtime.updateTimerPMask
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48767,7 +48751,7 @@ usesLibcall indicates whether this runtime performs system calls via libcall.
 
 ```
 searchKey: runtime.usleep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48778,7 +48762,7 @@ func usleep(usec uint32)
 
 ```
 searchKey: runtime.usleep_no_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48800,7 +48784,7 @@ func usleep_trampoline()
 
 ```
 searchKey: runtime.verifyTimerHeap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48813,7 +48797,7 @@ verifyTimerHeap verifies that the timer heap is in a valid state. This is only f
 
 ```
 searchKey: runtime.waitForSigusr1Callback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48826,7 +48810,7 @@ waitForSigusr1Callback is called from the signal handler during WaitForSigusr1. 
 
 ```
 searchKey: runtime.wakeNetPoller
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48891,7 +48875,7 @@ func walltime_trampoline()
 
 ```
 searchKey: runtime.wantAsyncPreempt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48904,7 +48888,7 @@ wantAsyncPreempt returns whether an asynchronous preemption is queued for gp.
 
 ```
 searchKey: runtime.wbBufFlush
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48923,7 +48907,7 @@ TODO: A "go:nosplitrec" annotation would be perfect for this.
 
 ```
 searchKey: runtime.wbBufFlush1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48940,7 +48924,7 @@ This must be non-preemptible because it uses the P's workbuf.
 
 ```
 searchKey: runtime.wirep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48975,7 +48959,7 @@ func worldStopped()
 
 ```
 searchKey: runtime.write
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48988,7 +48972,7 @@ write must be nosplit on Windows (see write1)
 
 ```
 searchKey: runtime.write1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48999,7 +48983,7 @@ func write1(fd uintptr, p unsafe.Pointer, n int32) int32
 
 ```
 searchKey: runtime.writeErr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -49021,7 +49005,7 @@ func write_trampoline()
 
 ```
 searchKey: runtime.writeheapdump_m
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -49098,7 +49082,7 @@ func _VDSO()
 
 ```
 searchKey: runtime._cgo_panic_internal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

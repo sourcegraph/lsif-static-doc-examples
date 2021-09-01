@@ -15,7 +15,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="sentryDebug" href="#sentryDebug">var sentryDebug</a>
@@ -32,14 +32,14 @@ var sentryDebug, _ = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CaptureError" href="#CaptureError">func CaptureError(err error, tags map[string]string)</a>
 
 ```
 searchKey: sentry.CaptureError
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -52,7 +52,7 @@ CaptureError adds the given error to the default Sentry client delivery queue fo
 
 ```
 searchKey: sentry.CapturePanic
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -78,7 +78,7 @@ Init initializes the default Sentry client that uses SENTRY_DSN_BACKEND environm
 
 ```
 searchKey: sentry.Recoverer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -97,7 +97,7 @@ Recovery handler to wrap the stdlib net/http Mux. Example:
 
 ```
 searchKey: sentry.captureError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -15,7 +15,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleRing_Do" href="#ExampleRing_Do">func ExampleRing_Do()</a>

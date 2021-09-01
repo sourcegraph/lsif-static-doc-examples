@@ -21,7 +21,7 @@ Package searcher provides a client for our just in time text searching service "
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockSearch" href="#MockSearch">var MockSearch</a>
@@ -60,7 +60,7 @@ var searchHTTPClient = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="searcherError" href="#searcherError">type searcherError struct</a>
@@ -81,7 +81,7 @@ type searcherError struct {
 
 ```
 searchKey: searcher.searcherError.BadRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -92,7 +92,7 @@ func (e *searcherError) BadRequest() bool
 
 ```
 searchKey: searcher.searcherError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -103,7 +103,7 @@ func (e *searcherError) Error() string
 
 ```
 searchKey: searcher.searcherError.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -113,14 +113,14 @@ func (e *searcherError) Temporary() bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Search" href="#Search">func Search(ctx context.Context, searcherURLs *endpoint.Map, repo api.RepoName, branch string, commit api.CommitID, indexed bool, p *search.TextPatternInfo, fetchTimeout time.Duration, indexerEndpoints []string) (matches []*protocol.FileMatch, limitHit bool, err error)</a>
 
 ```
 searchKey: searcher.Search
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -133,7 +133,7 @@ Search searches repo@commit with p.
 
 ```
 searchKey: searcher.textSearchURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

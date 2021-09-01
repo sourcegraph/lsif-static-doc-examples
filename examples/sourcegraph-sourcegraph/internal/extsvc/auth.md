@@ -34,7 +34,7 @@ Package auth provides the Authenticator interface, which can be used to add auth
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Authenticator" href="#Authenticator">type Authenticator interface</a>
@@ -114,7 +114,7 @@ func (basic *BasicAuth) Authenticate(req *http.Request) error
 
 ```
 searchKey: auth.BasicAuth.Hash
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -144,7 +144,7 @@ BasicAuthWithSSH implements HTTP Basic Authentication for extsvc clients and hol
 
 ```
 searchKey: auth.BasicAuthWithSSH.Hash
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -155,7 +155,7 @@ func (basic *BasicAuthWithSSH) Hash() string
 
 ```
 searchKey: auth.BasicAuthWithSSH.SSHPrivateKey
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -166,7 +166,7 @@ func (basic *BasicAuthWithSSH) SSHPrivateKey() (privateKey, passphrase string)
 
 ```
 searchKey: auth.BasicAuthWithSSH.SSHPublicKey
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -203,7 +203,7 @@ func (token *OAuthBearerToken) Authenticate(req *http.Request) error
 
 ```
 searchKey: auth.OAuthBearerToken.Hash
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -233,7 +233,7 @@ OAuthBearerTokenWithSSH implements OAuth Bearer Token authentication for extsvc 
 
 ```
 searchKey: auth.OAuthBearerTokenWithSSH.Hash
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -244,7 +244,7 @@ func (token *OAuthBearerTokenWithSSH) Hash() string
 
 ```
 searchKey: auth.OAuthBearerTokenWithSSH.SSHPrivateKey
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -255,7 +255,7 @@ func (token *OAuthBearerTokenWithSSH) SSHPrivateKey() (privateKey, passphrase st
 
 ```
 searchKey: auth.OAuthBearerTokenWithSSH.SSHPublicKey
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -279,7 +279,7 @@ OAuthClient implements OAuth 1 signature authentication for extsvc implementatio
 
 ```
 searchKey: auth.newOAuthClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -301,7 +301,7 @@ func (c *OAuthClient) Authenticate(req *http.Request) error
 
 ```
 searchKey: auth.OAuthClient.Hash
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -311,14 +311,14 @@ func (c *OAuthClient) Hash() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestBasicAuth" href="#TestBasicAuth">func TestBasicAuth(t *testing.T)</a>
 
 ```
 searchKey: auth.TestBasicAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -329,7 +329,7 @@ func TestBasicAuth(t *testing.T)
 
 ```
 searchKey: auth.TestOAuthBearerToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -340,7 +340,7 @@ func TestOAuthBearerToken(t *testing.T)
 
 ```
 searchKey: auth.TestOAuthClient
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

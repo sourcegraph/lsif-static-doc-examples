@@ -47,7 +47,7 @@ Package inventory scans a directory tree to identify the programming languages, 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="fileReadBufferSize" href="#fileReadBufferSize">const fileReadBufferSize</a>
@@ -66,7 +66,7 @@ fileReadBufferSize is the size of the buffer we'll use while reading file conten
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="newLine" href="#newLine">var newLine</a>
@@ -83,7 +83,7 @@ var newLine = []byte{'\n'}
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Context" href="#Context">type Context struct</a>
@@ -183,7 +183,7 @@ Inventory summarizes a tree's contents (e.g., which programming languages are us
 
 ```
 searchKey: inventory.Sum
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -217,7 +217,7 @@ Lang represents a programming language used in a directory tree.
 
 ```
 searchKey: inventory.getLang
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -242,7 +242,7 @@ type fi struct {
 
 ```
 searchKey: inventory.fi.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -253,7 +253,7 @@ func (f fi) IsDir() bool
 
 ```
 searchKey: inventory.fi.ModTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -264,7 +264,7 @@ func (f fi) ModTime() time.Time
 
 ```
 searchKey: inventory.fi.Mode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -275,7 +275,7 @@ func (f fi) Mode() os.FileMode
 
 ```
 searchKey: inventory.fi.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -286,7 +286,7 @@ func (f fi) Name() string
 
 ```
 searchKey: inventory.fi.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -297,7 +297,7 @@ func (f fi) Size() int64
 
 ```
 searchKey: inventory.fi.Sys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -322,7 +322,7 @@ type nopReadCloser struct {
 
 ```
 searchKey: inventory.nopReadCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -343,14 +343,14 @@ func (n *nopReadCloser) Read(p []byte) (int, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkGetLang" href="#BenchmarkGetLang">func BenchmarkGetLang(b *testing.B)</a>
 
 ```
 searchKey: inventory.BenchmarkGetLang
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -361,7 +361,7 @@ func BenchmarkGetLang(b *testing.B)
 
 ```
 searchKey: inventory.BenchmarkIsVendor
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -372,7 +372,7 @@ func BenchmarkIsVendor(b *testing.B)
 
 ```
 searchKey: inventory.GetLanguageByFilename
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -385,7 +385,7 @@ GetLanguageByFilename returns the guessed language for the named file (and safe 
 
 ```
 searchKey: inventory.TestContext_Entries
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -396,7 +396,7 @@ func TestContext_Entries(t *testing.T)
 
 ```
 searchKey: inventory.TestGetLang_language
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -407,7 +407,7 @@ func TestGetLang_language(t *testing.T)
 
 ```
 searchKey: inventory.TestGet_readFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -418,7 +418,7 @@ func TestGet_readFile(t *testing.T)
 
 ```
 searchKey: inventory.countLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -431,7 +431,7 @@ countLines counts the number of lines in the supplied reader it uses buf as a te
 
 ```
 searchKey: inventory.fakeContents
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -453,7 +453,7 @@ func init()
 
 ```
 searchKey: inventory.makeFileReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -464,7 +464,7 @@ func makeFileReader(ctx context.Context, path, contents string) func(context.Con
 
 ```
 searchKey: inventory.newFileReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -475,7 +475,7 @@ func newFileReader(files []fs.FileInfo) func(_ context.Context, path string) (io
 
 ```
 searchKey: inventory.preferLanguage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -488,7 +488,7 @@ preferLanguage updates LanguagesByExtension to have lang listed first for ext.
 
 ```
 searchKey: inventory.readFileTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

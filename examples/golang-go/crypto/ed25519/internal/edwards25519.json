@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "crypto/ed25519/internal/edwards25519",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -455,7 +454,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -562,7 +560,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.Point.Bytes",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -896,7 +894,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.Scalar.Bytes",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1162,7 +1160,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.Scalar.signedRadix16",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1278,7 +1276,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.affineCached.Zero",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1698,7 +1696,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.projCached.Zero",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2000,7 +1998,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.projP2.Zero",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2029,7 +2027,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -2050,7 +2047,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.BenchmarkScalarBaseMult",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -2074,7 +2071,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.BenchmarkScalarMult",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -2098,7 +2095,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.BenchmarkVarTimeDoubleScalarBaseMult",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -2122,7 +2119,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestAddSubNegOnBasePoint",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2146,7 +2143,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestAffineLookupTable",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2170,7 +2167,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestAllocations",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2194,7 +2191,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestBaseMultVsDalek",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2218,7 +2215,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestBasepointNafTableGeneration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2242,7 +2239,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestBasepointTableGeneration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2266,7 +2263,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestComparable",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2290,7 +2287,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestGenerator",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2314,7 +2311,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestInvalidEncodings",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2338,7 +2335,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestNafLookupTable5",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2362,7 +2359,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestNafLookupTable8",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2386,7 +2383,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestNonCanonicalPoints",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2410,7 +2407,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestProjLookupTable",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2434,7 +2431,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarAddLikeSubNeg",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2458,7 +2455,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarAliasing",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2482,7 +2479,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarEqual",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2506,7 +2503,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarGenerate",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2530,7 +2527,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarMultDistributesOverAdd",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2554,7 +2551,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarMultMatchesBaseMult",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2578,7 +2575,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarMultNonIdentityPoint",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2602,7 +2599,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarMultSmallScalars",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2626,7 +2623,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarMultVsDalek",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2650,7 +2647,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarMultiplyDistributesOverAdd",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2674,7 +2671,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarNonAdjacentForm",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2698,7 +2695,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarSetBytesWithClamping",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2722,7 +2719,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarSetCanonicalBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2746,7 +2743,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestScalarSetUniformBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2770,7 +2767,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestVarTimeDoubleBaseMultMatchesBaseMult",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2794,7 +2791,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.TestVarTimeDoubleBaseMultVsDalek",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2841,7 +2838,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.bigIntFromLittleEndianBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2864,7 +2861,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.checkInitialized",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2887,7 +2884,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.checkOnCurve",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2910,7 +2907,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.copyFieldElement",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2933,7 +2930,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.decodeHex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2956,7 +2953,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.isReduced",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2979,7 +2976,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.load3",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3002,7 +2999,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.load4",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3025,7 +3022,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.scMulAdd",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3048,7 +3045,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.scReduce",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

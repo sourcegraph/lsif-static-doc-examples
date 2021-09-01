@@ -178,7 +178,7 @@ Package reflectlite implements lightweight version of reflect, not using any pac
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Array" href="#Array">const Array</a>
@@ -725,7 +725,7 @@ u := &(*tUncommon)(unsafe.Pointer(t)).u
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="dummy" href="#dummy">var dummy</a>
@@ -767,7 +767,7 @@ var pinUnexpMethI = pinUnexpMeth(EmbedWithUnexpMeth{})
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Buffer" href="#Buffer">type Buffer struct</a>
@@ -798,7 +798,7 @@ type EmbedWithUnexpMeth struct{}
 
 ```
 searchKey: reflectlite.EmbedWithUnexpMeth.f
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -822,7 +822,7 @@ A Kind represents the specific kind of type that a Type represents. The zero Kin
 
 ```
 searchKey: reflectlite.Kind.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -894,7 +894,7 @@ Type values are comparable, such as with the == operator, so they can be used as
 
 ```
 searchKey: reflectlite.StructFieldType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -907,7 +907,7 @@ Field returns the i'th struct field.
 
 ```
 searchKey: reflectlite.TField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -918,7 +918,7 @@ func TField(typ Type, i int) Type
 
 ```
 searchKey: reflectlite.TypeOf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -931,7 +931,7 @@ TypeOf returns the reflection Type that represents the dynamic type of i. If i i
 
 ```
 searchKey: reflectlite.toType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -986,7 +986,7 @@ To compare two Values, compare the results of the Interface method. Using == on 
 
 ```
 searchKey: reflectlite.Field
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -999,7 +999,7 @@ Field returns the i'th field of the struct v. It panics if v's Kind is not Struc
 
 ```
 searchKey: reflectlite.ValueOf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1012,7 +1012,7 @@ ValueOf returns a new Value initialized to the concrete value stored in the inte
 
 ```
 searchKey: reflectlite.Zero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1025,7 +1025,7 @@ Zero returns a Value representing the zero value for the specified type. The res
 
 ```
 searchKey: reflectlite.unpackEface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1038,7 +1038,7 @@ unpackEface converts the empty interface i to a Value.
 
 ```
 searchKey: reflectlite.Value.CanSet
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1051,7 +1051,7 @@ CanSet reports whether the value of v can be changed. A Value can be changed onl
 
 ```
 searchKey: reflectlite.Value.Elem
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1064,7 +1064,7 @@ Elem returns the value that the interface v contains or that the pointer v point
 
 ```
 searchKey: reflectlite.Value.IsNil
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1077,7 +1077,7 @@ IsNil reports whether its argument v is nil. The argument must be a chan, func, 
 
 ```
 searchKey: reflectlite.Value.IsValid
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1090,7 +1090,7 @@ IsValid reports whether v represents a value. It returns false if v is the zero 
 
 ```
 searchKey: reflectlite.Value.Kind
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1103,7 +1103,7 @@ Kind returns v's Kind. If v is the zero Value (IsValid returns false), Kind retu
 
 ```
 searchKey: reflectlite.Value.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1129,7 +1129,7 @@ Set assigns x to the value v. It panics if CanSet returns false. As in Go, x's v
 
 ```
 searchKey: reflectlite.Value.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1155,7 +1155,7 @@ assignTo returns a value v that can be assigned directly to typ. It panics if v 
 
 ```
 searchKey: reflectlite.Value.numMethod
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1168,7 +1168,7 @@ NumMethod returns the number of exported methods in the value's method set.
 
 ```
 searchKey: reflectlite.Value.pointer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1197,7 +1197,7 @@ A ValueError occurs when a Value method is invoked on a Value that does not supp
 
 ```
 searchKey: reflectlite.ValueError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1283,7 +1283,7 @@ type flag uintptr
 
 ```
 searchKey: reflectlite.flag.kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1294,7 +1294,7 @@ func (f flag) kind() Kind
 
 ```
 searchKey: reflectlite.flag.mustBeAssignable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1307,7 +1307,7 @@ mustBeAssignable panics if f records that the value is not assignable, which is 
 
 ```
 searchKey: reflectlite.flag.mustBeExported
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1320,7 +1320,7 @@ mustBeExported panics if f records that the value was obtained using an unexport
 
 ```
 searchKey: reflectlite.flag.ro
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1358,7 +1358,7 @@ struct {
 
 ```
 searchKey: reflectlite.funcType.in
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1369,7 +1369,7 @@ func (t *funcType) in() []*rtype
 
 ```
 searchKey: reflectlite.funcType.out
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1413,7 +1413,7 @@ interfaceType represents an interface type.
 
 ```
 searchKey: reflectlite.interfaceType.NumMethod
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1516,7 +1516,7 @@ func (n name) data(off int, whySafe string) *byte
 
 ```
 searchKey: reflectlite.name.hasTag
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1527,7 +1527,7 @@ func (n name) hasTag() bool
 
 ```
 searchKey: reflectlite.name.isExported
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1538,7 +1538,7 @@ func (n name) isExported() bool
 
 ```
 searchKey: reflectlite.name.name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1549,7 +1549,7 @@ func (n name) name() (s string)
 
 ```
 searchKey: reflectlite.name.pkgPath
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1573,7 +1573,7 @@ readVarint parses a varint as encoded by encoding/binary. It returns the number 
 
 ```
 searchKey: reflectlite.name.tag
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1665,7 +1665,7 @@ func (t *rtype) AssignableTo(u Type) bool
 
 ```
 searchKey: reflectlite.rtype.Comparable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1676,7 +1676,7 @@ func (t *rtype) Comparable() bool
 
 ```
 searchKey: reflectlite.rtype.Elem
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1709,7 +1709,7 @@ func (t *rtype) In(i int) Type
 
 ```
 searchKey: reflectlite.rtype.Key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1720,7 +1720,7 @@ func (t *rtype) Key() Type
 
 ```
 searchKey: reflectlite.rtype.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1731,7 +1731,7 @@ func (t *rtype) Kind() Kind
 
 ```
 searchKey: reflectlite.rtype.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1742,7 +1742,7 @@ func (t *rtype) Len() int
 
 ```
 searchKey: reflectlite.rtype.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1753,7 +1753,7 @@ func (t *rtype) Name() string
 
 ```
 searchKey: reflectlite.rtype.NumField
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1764,7 +1764,7 @@ func (t *rtype) NumField() int
 
 ```
 searchKey: reflectlite.rtype.NumIn
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1775,7 +1775,7 @@ func (t *rtype) NumIn() int
 
 ```
 searchKey: reflectlite.rtype.NumMethod
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1786,7 +1786,7 @@ func (t *rtype) NumMethod() int
 
 ```
 searchKey: reflectlite.rtype.NumOut
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1808,7 +1808,7 @@ func (t *rtype) Out(i int) Type
 
 ```
 searchKey: reflectlite.rtype.PkgPath
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1819,7 +1819,7 @@ func (t *rtype) PkgPath() string
 
 ```
 searchKey: reflectlite.rtype.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1830,7 +1830,7 @@ func (t *rtype) Size() uintptr
 
 ```
 searchKey: reflectlite.rtype.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1841,7 +1841,7 @@ func (t *rtype) String() string
 
 ```
 searchKey: reflectlite.rtype.chanDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1852,7 +1852,7 @@ func (t *rtype) chanDir() chanDir
 
 ```
 searchKey: reflectlite.rtype.common
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1863,7 +1863,7 @@ func (t *rtype) common() *rtype
 
 ```
 searchKey: reflectlite.rtype.exportedMethods
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1874,7 +1874,7 @@ func (t *rtype) exportedMethods() []method
 
 ```
 searchKey: reflectlite.rtype.hasName
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1896,7 +1896,7 @@ func (t *rtype) nameOff(off nameOff) name
 
 ```
 searchKey: reflectlite.rtype.pointers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1918,7 +1918,7 @@ func (t *rtype) typeOff(off typeOff) *rtype
 
 ```
 searchKey: reflectlite.rtype.uncommon
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1962,7 +1962,7 @@ Struct field
 
 ```
 searchKey: reflectlite.structField.embedded
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1973,7 +1973,7 @@ func (f *structField) embedded() bool
 
 ```
 searchKey: reflectlite.structField.offset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2079,7 +2079,7 @@ uncommonType is present only for defined types or types with methods (if T is a 
 
 ```
 searchKey: reflectlite.uncommonType.exportedMethods
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2090,7 +2090,7 @@ func (t *uncommonType) exportedMethods() []method
 
 ```
 searchKey: reflectlite.uncommonType.methods
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2100,14 +2100,14 @@ func (t *uncommonType) methods() []method
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FirstMethodNameBytes" href="#FirstMethodNameBytes">func FirstMethodNameBytes(t Type) *byte</a>
 
 ```
 searchKey: reflectlite.FirstMethodNameBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2118,7 +2118,7 @@ func FirstMethodNameBytes(t Type) *byte
 
 ```
 searchKey: reflectlite.Swapper
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2133,7 +2133,7 @@ Swapper panics if the provided interface is not a slice.
 
 ```
 searchKey: reflectlite.ToInterface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2152,7 +2152,7 @@ It panics if the Value was obtained by accessing unexported struct fields.
 
 ```
 searchKey: reflectlite.add
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2167,7 +2167,7 @@ The whySafe string is ignored, so that the function still inlines as efficiently
 
 ```
 searchKey: reflectlite.arrayAt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2180,7 +2180,7 @@ arrayAt returns the i-th element of p, an array whose elements are eltSize bytes
 
 ```
 searchKey: reflectlite.chanlen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2193,7 +2193,7 @@ implemented in runtime:
 
 ```
 searchKey: reflectlite.directlyAssignable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2206,7 +2206,7 @@ directlyAssignable reports whether a value x of type V can be directly assigned 
 
 ```
 searchKey: reflectlite.escapes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2219,7 +2219,7 @@ Dummy annotation marking that the value x escapes, for use in cases where the re
 
 ```
 searchKey: reflectlite.haveIdenticalType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2230,7 +2230,7 @@ func haveIdenticalType(T, V Type, cmpTags bool) bool
 
 ```
 searchKey: reflectlite.haveIdenticalUnderlyingType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2241,7 +2241,7 @@ func haveIdenticalUnderlyingType(T, V *rtype, cmpTags bool) bool
 
 ```
 searchKey: reflectlite.ifaceE2I
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2252,7 +2252,7 @@ func ifaceE2I(t *rtype, src interface{}, dst unsafe.Pointer)
 
 ```
 searchKey: reflectlite.ifaceIndir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2265,7 +2265,7 @@ ifaceIndir reports whether t is stored indirectly in an interface value.
 
 ```
 searchKey: reflectlite.implements
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2278,7 +2278,7 @@ implements reports whether the type V implements the interface type T.
 
 ```
 searchKey: reflectlite.maplen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2302,7 +2302,7 @@ methodName returns the name of the calling method, assumed to be two stack frame
 
 ```
 searchKey: reflectlite.packEface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2315,7 +2315,7 @@ packEface converts v to the empty interface.
 
 ```
 searchKey: reflectlite.resolveNameOff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2328,7 +2328,7 @@ resolveNameOff resolves a name offset from a base pointer. The (*rtype).nameOff 
 
 ```
 searchKey: reflectlite.resolveTypeOff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2341,7 +2341,7 @@ resolveTypeOff resolves an *rtype offset from a base type. The (*rtype).typeOff 
 
 ```
 searchKey: reflectlite.typedmemmove
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2354,7 +2354,7 @@ typedmemmove copies a value of type t to dst from src.
 
 ```
 searchKey: reflectlite.unsafe_New
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2367,7 +2367,7 @@ implemented in package runtime
 
 ```
 searchKey: reflectlite.valueInterface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

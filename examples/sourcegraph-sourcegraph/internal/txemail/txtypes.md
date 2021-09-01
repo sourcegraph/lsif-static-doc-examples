@@ -11,7 +11,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Message" href="#Message">type Message struct</a>

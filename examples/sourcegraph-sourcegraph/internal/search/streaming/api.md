@@ -47,7 +47,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DisplayLimit" href="#DisplayLimit">const DisplayLimit</a>
@@ -192,7 +192,7 @@ ShardTimeout is when we ran out of time before searching a shard/repository.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="skippedHandlers" href="#skippedHandlers">var skippedHandlers</a>
@@ -222,7 +222,7 @@ var updateGolden = flag.Bool("update", false, "Updastdata goldens")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Namer" href="#Namer">type Namer interface</a>
@@ -279,7 +279,7 @@ Progress is an aggregate type representing a progress update.
 
 ```
 searchKey: api.BuildProgressEvent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -347,7 +347,7 @@ Skipped is a description of shards or documents that were skipped.
 
 ```
 searchKey: api.displayLimitHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -358,7 +358,7 @@ func displayLimitHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.excludedArchiveHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -369,7 +369,7 @@ func excludedArchiveHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.excludedForkHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -380,7 +380,7 @@ func excludedForkHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.repositoryCloningHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -391,7 +391,7 @@ func repositoryCloningHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.repositoryMissingHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -402,7 +402,7 @@ func repositoryMissingHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.shardMatchLimitHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -413,7 +413,7 @@ func shardMatchLimitHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.shardTimeoutHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -424,7 +424,7 @@ func shardTimeoutHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.skippedReposHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -490,7 +490,7 @@ type repo struct {
 
 ```
 searchKey: api.repo.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -500,14 +500,14 @@ func (r repo) Name() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestNumber" href="#TestNumber">func TestNumber(t *testing.T)</a>
 
 ```
 searchKey: api.TestNumber
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -518,7 +518,7 @@ func TestNumber(t *testing.T)
 
 ```
 searchKey: api.TestSearchProgress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -529,7 +529,7 @@ func TestSearchProgress(t *testing.T)
 
 ```
 searchKey: api.intPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -540,7 +540,7 @@ func intPtr(i int) *int
 
 ```
 searchKey: api.number
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -551,7 +551,7 @@ func number(i int) string
 
 ```
 searchKey: api.plural
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

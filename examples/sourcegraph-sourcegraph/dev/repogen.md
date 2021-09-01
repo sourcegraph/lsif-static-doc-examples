@@ -16,10 +16,6 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="fileSize" href="#fileSize">var fileSize</a>
 
 ```
@@ -44,15 +40,11 @@ var numFiles = flag.Int("nf", 100, "number of files to write")
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="inDir" href="#inDir">func inDir(d string, f func() error) error</a>
 
 ```
 searchKey: main.inDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -76,7 +68,7 @@ func main()
 
 ```
 searchKey: main.repogen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -89,7 +81,7 @@ repogen creates a repo with nf files, each of the given size.
 
 ```
 searchKey: main.run
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -102,7 +94,7 @@ run executes an external command.
 
 ```
 searchKey: main.write
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -115,7 +107,7 @@ write writes a file with lots of the given byte b, up to the given size in bytes
 
 ```
 searchKey: main.writeIthFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

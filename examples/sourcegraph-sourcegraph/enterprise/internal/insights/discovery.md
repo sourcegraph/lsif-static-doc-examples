@@ -85,7 +85,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="settingsExample" href="#settingsExample">var settingsExample</a>
@@ -102,7 +102,7 @@ var settingsExample = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AllReposIterator" href="#AllReposIterator">type AllReposIterator struct</a>
@@ -215,7 +215,7 @@ DefaultRepoListerListFunc describes the behavior when the List method of the par
 
 ```
 searchKey: discovery.DefaultRepoListerListFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -291,7 +291,7 @@ func (f *DefaultRepoListerListFunc) appendCall(r0 DefaultRepoListerListFuncCall)
 
 ```
 searchKey: discovery.DefaultRepoListerListFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -325,7 +325,7 @@ DefaultRepoListerListFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: discovery.DefaultRepoListerListFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -338,7 +338,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: discovery.DefaultRepoListerListFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -381,7 +381,7 @@ NewMockDefaultRepoLister creates a new mock of the DefaultRepoLister interface. 
 
 ```
 searchKey: discovery.NewMockDefaultRepoListerFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -437,7 +437,7 @@ NewMockRepoStore creates a new mock of the RepoStore interface. All methods retu
 
 ```
 searchKey: discovery.NewMockRepoStoreFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -496,7 +496,7 @@ NewMockSettingStore creates a new mock of the SettingStore interface. All method
 
 ```
 searchKey: discovery.NewMockSettingStoreFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -568,7 +568,7 @@ RepoStoreListFunc describes the behavior when the List method of the parent Mock
 
 ```
 searchKey: discovery.RepoStoreListFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -644,7 +644,7 @@ func (f *RepoStoreListFunc) appendCall(r0 RepoStoreListFuncCall)
 
 ```
 searchKey: discovery.RepoStoreListFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -681,7 +681,7 @@ RepoStoreListFuncCall is an object that describes an invocation of method List o
 
 ```
 searchKey: discovery.RepoStoreListFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -694,7 +694,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: discovery.RepoStoreListFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -741,7 +741,7 @@ SettingStoreGetLastestSchemaSettingsFunc describes the behavior when the GetLast
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -817,7 +817,7 @@ func (f *SettingStoreGetLastestSchemaSettingsFunc) appendCall(r0 SettingStoreGet
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -854,7 +854,7 @@ SettingStoreGetLastestSchemaSettingsFuncCall is an object that describes an invo
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -867,7 +867,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: discovery.SettingStoreGetLastestSchemaSettingsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -898,7 +898,7 @@ SettingStoreGetLatestFunc describes the behavior when the GetLatest method of th
 
 ```
 searchKey: discovery.SettingStoreGetLatestFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -974,7 +974,7 @@ func (f *SettingStoreGetLatestFunc) appendCall(r0 SettingStoreGetLatestFuncCall)
 
 ```
 searchKey: discovery.SettingStoreGetLatestFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1011,7 +1011,7 @@ SettingStoreGetLatestFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: discovery.SettingStoreGetLatestFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1024,7 +1024,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: discovery.SettingStoreGetLatestFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1050,14 +1050,14 @@ type cachedPageRequest struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Discover" href="#Discover">func Discover(ctx context.Context, settingStore SettingStore) ([]*schema.Insight, error)</a>
 
 ```
 searchKey: discovery.Discover
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1072,7 +1072,7 @@ TODO(slimsag): future: include user/org settings and consider security implicati
 
 ```
 searchKey: discovery.EncodeSeriesID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1087,7 +1087,7 @@ Note that since the series ID hash is stored in the database, it must remain sta
 
 ```
 searchKey: discovery.TestAllReposIterator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1100,7 +1100,7 @@ TestAllReposIterator tests the AllReposIterator in the common use cases.
 
 ```
 searchKey: discovery.TestAllReposIterator_DotCom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1113,7 +1113,7 @@ TestAllReposIterator tests the AllReposIterator for Sourcegraph.com mode. Unfort
 
 ```
 searchKey: discovery.TestDiscover
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1124,7 +1124,7 @@ func TestDiscover(t *testing.T)
 
 ```
 searchKey: discovery.TestEncodeSeriesID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1135,7 +1135,7 @@ func TestEncodeSeriesID(t *testing.T)
 
 ```
 searchKey: discovery.Test_parseUserSettings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1146,7 +1146,7 @@ func Test_parseUserSettings(t *testing.T)
 
 ```
 searchKey: discovery.parseUserSettings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1157,7 +1157,7 @@ func parseUserSettings(settings *api.Settings) (*schema.Settings, error)
 
 ```
 searchKey: discovery.sha256String
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

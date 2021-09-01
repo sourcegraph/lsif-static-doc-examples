@@ -118,10 +118,6 @@ See [https://blog.golang.org/context](https://blog.golang.org/context) for examp
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="shortDuration" href="#shortDuration">const shortDuration</a>
 
 ```
@@ -147,10 +143,6 @@ const veryLongDuration = 1000 * time.Hour // an arbitrary upper bound on the tes
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Canceled" href="#Canceled">var Canceled</a>
 
@@ -276,10 +268,6 @@ var todo = new(emptyCtx)
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CancelFunc" href="#CancelFunc">type CancelFunc func()</a>
 
 ```
@@ -297,7 +285,7 @@ A CancelFunc tells an operation to abandon its work. A CancelFunc does not wait 
 
 ```
 searchKey: context.WithCancel
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -312,7 +300,7 @@ Canceling this context releases resources associated with it, so code should cal
 
 ```
 searchKey: context.WithDeadline
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -327,7 +315,7 @@ Canceling this context releases resources associated with it, so code should cal
 
 ```
 searchKey: context.WithTimeout
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -483,7 +471,7 @@ TODO returns a non-nil, empty Context. Code should use context.TODO when it's un
 
 ```
 searchKey: context.WithValue
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -520,7 +508,7 @@ A cancelCtx can be canceled. When canceled, it also cancels any children that im
 
 ```
 searchKey: context.newCancelCtx
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -533,7 +521,7 @@ newCancelCtx returns an initialized cancelCtx.
 
 ```
 searchKey: context.parentCancelCtx
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -546,7 +534,7 @@ parentCancelCtx returns the underlying *cancelCtx for parent. It does this by lo
 
 ```
 searchKey: context.cancelCtx.Done
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -557,7 +545,7 @@ func (c *cancelCtx) Done() <-chan struct{}
 
 ```
 searchKey: context.cancelCtx.Err
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -568,7 +556,7 @@ func (c *cancelCtx) Err() error
 
 ```
 searchKey: context.cancelCtx.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -630,7 +618,7 @@ type deadlineExceededError struct{}
 
 ```
 searchKey: context.deadlineExceededError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -641,7 +629,7 @@ func (deadlineExceededError) Error() string
 
 ```
 searchKey: context.deadlineExceededError.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -652,7 +640,7 @@ func (deadlineExceededError) Temporary() bool
 
 ```
 searchKey: context.deadlineExceededError.Timeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -676,7 +664,7 @@ An emptyCtx is never canceled, has no values, and has no deadline. It is not str
 
 ```
 searchKey: context.emptyCtx.Deadline
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -687,7 +675,7 @@ func (*emptyCtx) Deadline() (deadline time.Time, ok bool)
 
 ```
 searchKey: context.emptyCtx.Done
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -698,7 +686,7 @@ func (*emptyCtx) Done() <-chan struct{}
 
 ```
 searchKey: context.emptyCtx.Err
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -709,7 +697,7 @@ func (*emptyCtx) Err() error
 
 ```
 searchKey: context.emptyCtx.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -779,7 +767,7 @@ type myDoneCtx struct {
 
 ```
 searchKey: context.myDoneCtx.Done
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -865,7 +853,7 @@ A timerCtx carries a timer and a deadline. It embeds a cancelCtx to implement Do
 
 ```
 searchKey: context.timerCtx.Deadline
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -876,7 +864,7 @@ func (c *timerCtx) Deadline() (deadline time.Time, ok bool)
 
 ```
 searchKey: context.timerCtx.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -914,7 +902,7 @@ A valueCtx carries a key-value pair. It implements Value for that key and delega
 
 ```
 searchKey: context.valueCtx.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -934,15 +922,11 @@ func (c *valueCtx) Value(key interface{}) interface{}
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="XTestAllocs" href="#XTestAllocs">func XTestAllocs(t testingT, testingShort func() bool, testingAllocsPerRun func(int, func()) float64)</a>
 
 ```
 searchKey: context.XTestAllocs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -953,7 +937,7 @@ func XTestAllocs(t testingT, testingShort func() bool, testingAllocsPerRun func(
 
 ```
 searchKey: context.XTestBackground
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -964,7 +948,7 @@ func XTestBackground(t testingT)
 
 ```
 searchKey: context.XTestCancelRemoves
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -975,7 +959,7 @@ func XTestCancelRemoves(t testingT)
 
 ```
 searchKey: context.XTestCanceledTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -986,7 +970,7 @@ func XTestCanceledTimeout(t testingT)
 
 ```
 searchKey: context.XTestChildFinishesFirst
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -997,7 +981,7 @@ func XTestChildFinishesFirst(t testingT)
 
 ```
 searchKey: context.XTestCustomContextGoroutines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1008,7 +992,7 @@ func XTestCustomContextGoroutines(t testingT)
 
 ```
 searchKey: context.XTestDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1019,7 +1003,7 @@ func XTestDeadline(t testingT)
 
 ```
 searchKey: context.XTestDeadlineExceededSupportsTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1030,7 +1014,7 @@ func XTestDeadlineExceededSupportsTimeout(t testingT)
 
 ```
 searchKey: context.XTestInterlockedCancels
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1041,7 +1025,7 @@ func XTestInterlockedCancels(t testingT)
 
 ```
 searchKey: context.XTestInvalidDerivedFail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1052,7 +1036,7 @@ func XTestInvalidDerivedFail(t testingT)
 
 ```
 searchKey: context.XTestLayersCancel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1063,7 +1047,7 @@ func XTestLayersCancel(t testingT)
 
 ```
 searchKey: context.XTestLayersTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1074,7 +1058,7 @@ func XTestLayersTimeout(t testingT)
 
 ```
 searchKey: context.XTestParentFinishesChild
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1085,7 +1069,7 @@ func XTestParentFinishesChild(t testingT)
 
 ```
 searchKey: context.XTestSimultaneousCancels
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1096,7 +1080,7 @@ func XTestSimultaneousCancels(t testingT)
 
 ```
 searchKey: context.XTestTODO
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1107,7 +1091,7 @@ func XTestTODO(t testingT)
 
 ```
 searchKey: context.XTestTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1118,7 +1102,7 @@ func XTestTimeout(t testingT)
 
 ```
 searchKey: context.XTestValues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1129,7 +1113,7 @@ func XTestValues(t testingT)
 
 ```
 searchKey: context.XTestWithCancel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1140,7 +1124,7 @@ func XTestWithCancel(t testingT)
 
 ```
 searchKey: context.XTestWithCancelCanceledParent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1151,7 +1135,7 @@ func XTestWithCancelCanceledParent(t testingT)
 
 ```
 searchKey: context.XTestWithValueChecksKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1162,7 +1146,7 @@ func XTestWithValueChecksKey(t testingT)
 
 ```
 searchKey: context.contains
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1173,7 +1157,7 @@ func contains(m map[canceler]struct{}, key canceler) bool
 
 ```
 searchKey: context.contextName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1195,7 +1179,7 @@ func init()
 
 ```
 searchKey: context.propagateCancel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1208,7 +1192,7 @@ propagateCancel arranges for child to be canceled when parent is.
 
 ```
 searchKey: context.quiescent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1221,7 +1205,7 @@ quiescent returns an arbitrary duration by which the program should have complet
 
 ```
 searchKey: context.recoveredValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1232,7 +1216,7 @@ func recoveredValue(fn func()) (v interface{})
 
 ```
 searchKey: context.removeChild
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1245,7 +1229,7 @@ removeChild removes a context from its parent.
 
 ```
 searchKey: context.stringify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1258,7 +1242,7 @@ stringify tries a bit to stringify v, without using fmt, since we don't want con
 
 ```
 searchKey: context.testDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1269,7 +1253,7 @@ func testDeadline(c Context, name string, t testingT)
 
 ```
 searchKey: context.testLayers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

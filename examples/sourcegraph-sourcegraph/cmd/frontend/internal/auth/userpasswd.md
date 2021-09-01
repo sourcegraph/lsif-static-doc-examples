@@ -43,7 +43,7 @@ Package userpasswd implements builtin username-password authentication and signu
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="providerType" href="#providerType">const providerType</a>
@@ -60,7 +60,7 @@ const providerType = "builtin"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="resetPasswordEmailTemplates" href="#resetPasswordEmailTemplates">var resetPasswordEmailTemplates</a>
@@ -88,7 +88,7 @@ var setPasswordEmailTemplates = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="credentials" href="#credentials">type credentials struct</a>
@@ -125,7 +125,7 @@ type provider struct {
 
 ```
 searchKey: userpasswd.provider.CachedInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -138,7 +138,7 @@ CachedInfo implements providers.Provider.
 
 ```
 searchKey: userpasswd.provider.Config
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -151,7 +151,7 @@ Config implements providers.Provider.
 
 ```
 searchKey: userpasswd.provider.ConfigID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -176,14 +176,14 @@ Refresh implements providers.Provider.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="HandleCheckUsernameTaken" href="#HandleCheckUsernameTaken">func HandleCheckUsernameTaken(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)</a>
 
 ```
 searchKey: userpasswd.HandleCheckUsernameTaken
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -196,7 +196,7 @@ Check availability of username for signup form
 
 ```
 searchKey: userpasswd.HandleResetPasswordCode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -209,7 +209,7 @@ HandleResetPasswordCode resets the password if the correct code is provided.
 
 ```
 searchKey: userpasswd.HandleResetPasswordInit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -222,7 +222,7 @@ HandleResetPasswordInit initiates the builtin-auth password reset flow by sendin
 
 ```
 searchKey: userpasswd.HandleSetPasswordEmail
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -235,7 +235,7 @@ HandleSetPasswordEmail sends the password reset email directly to the user for u
 
 ```
 searchKey: userpasswd.HandleSignIn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -248,7 +248,7 @@ HandleSignIn accepts a POST containing username-password credentials and authent
 
 ```
 searchKey: userpasswd.HandleSignUp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -261,7 +261,7 @@ HandleSignUp handles submission of the user signup form.
 
 ```
 searchKey: userpasswd.HandleSiteInit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -287,7 +287,7 @@ ResetPasswordEnabled reports whether the reset-password flow is enabled (per sit
 
 ```
 searchKey: userpasswd.TestCheckEmailAbuse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -298,7 +298,7 @@ func TestCheckEmailAbuse(t *testing.T)
 
 ```
 searchKey: userpasswd.TestHandleSetPasswordEmail
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -309,7 +309,7 @@ func TestHandleSetPasswordEmail(t *testing.T)
 
 ```
 searchKey: userpasswd.TestValidateCustom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -320,7 +320,7 @@ func TestValidateCustom(t *testing.T)
 
 ```
 searchKey: userpasswd.checkEmailAbuse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -333,7 +333,7 @@ checkEmailAbuse performs abuse prevention checks to prevent email abuse, i.e. us
 
 ```
 searchKey: userpasswd.getByEmailOrUsername
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -357,7 +357,7 @@ getProviderConfig returns the builtin auth provider config. At most 1 can be spe
 
 ```
 searchKey: userpasswd.handleEnabledCheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -368,7 +368,7 @@ func handleEnabledCheck(w http.ResponseWriter) (handled bool)
 
 ```
 searchKey: userpasswd.handleNotAuthenticatedCheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -379,7 +379,7 @@ func handleNotAuthenticatedCheck(w http.ResponseWriter, r *http.Request) (handle
 
 ```
 searchKey: userpasswd.handleSignUp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -394,7 +394,7 @@ doServeSignUp is called to create a new user account. It is called for the norma
 
 ```
 searchKey: userpasswd.httpLogAndError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -429,7 +429,7 @@ Watch for configuration changes related to the builtin auth provider.
 
 ```
 searchKey: userpasswd.validateConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

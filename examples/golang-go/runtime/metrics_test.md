@@ -14,7 +14,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleRead_readingAllMetrics" href="#ExampleRead_readingAllMetrics">func ExampleRead_readingAllMetrics()</a>
@@ -43,7 +43,7 @@ func ExampleRead_readingOneMetric()
 
 ```
 searchKey: metrics_test.TestDescriptionDocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -54,7 +54,7 @@ func TestDescriptionDocs(t *testing.T)
 
 ```
 searchKey: metrics_test.TestDescriptionNameFormat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -65,7 +65,7 @@ func TestDescriptionNameFormat(t *testing.T)
 
 ```
 searchKey: metrics_test.extractMetricDocs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -76,7 +76,7 @@ func extractMetricDocs(t *testing.T) map[string]string
 
 ```
 searchKey: metrics_test.medianBucket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

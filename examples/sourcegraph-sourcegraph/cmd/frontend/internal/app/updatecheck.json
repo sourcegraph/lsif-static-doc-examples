@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app/updatecheck",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -74,7 +73,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -482,7 +480,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -545,7 +542,7 @@
                       "newPage": false,
                       "searchKey": "updatecheck.Status.HasUpdate",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -591,7 +588,7 @@
                       "newPage": false,
                       "searchKey": "updatecheck.getLatestRelease",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -614,7 +611,7 @@
                       "newPage": false,
                       "searchKey": "updatecheck.newBuild",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -707,7 +704,7 @@
                       "newPage": false,
                       "searchKey": "updatecheck.translateEventSummary",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -777,7 +774,7 @@
                       "newPage": false,
                       "searchKey": "updatecheck.readPingRequest",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -800,7 +797,7 @@
                       "newPage": false,
                       "searchKey": "updatecheck.readPingRequestFromBody",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -823,7 +820,7 @@
                       "newPage": false,
                       "searchKey": "updatecheck.readPingRequestFromQuery",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -852,7 +849,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -873,7 +869,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.Handler",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -917,7 +913,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.Start",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -939,7 +935,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.TestCanUpdate",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -963,7 +959,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.TestLatestDockerComposeOrPureDockerVersionPushed",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -987,7 +983,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.TestLatestDockerVersionPushed",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1011,7 +1007,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.TestLatestKubernetesVersionPushed",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1035,7 +1031,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.TestParseRedisInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1059,7 +1055,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.TestSerializeAutomationUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1083,7 +1079,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.TestSerializeBasic",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1107,7 +1103,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.TestSerializeCodeIntelUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1131,7 +1127,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.TestSerializeFromQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1155,7 +1151,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.TestSerializeOldCodeIntelUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1202,7 +1198,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.canUpdate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1225,7 +1221,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.canUpdateDate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1248,7 +1244,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.canUpdateVersion",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1271,7 +1267,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.check",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1294,7 +1290,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.compareJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1317,7 +1313,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.externalServiceKinds",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1340,7 +1336,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalAggregatedCodeIntelUsageJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1363,7 +1359,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalAggregatedSearchUsageJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1386,7 +1382,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalBatchChangesUsageJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1409,7 +1405,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalCodeInsightsUsageJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1432,7 +1428,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalCodeMonitoringUsageJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1455,7 +1451,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalExtensionsUsageStatisticsJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1478,7 +1474,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalGrowthStatisticsJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1501,7 +1497,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalHomepagePanelsJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1524,7 +1520,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalRepositoriesJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1547,7 +1543,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalRetentionStatisticsJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1570,7 +1566,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalSavedSearchesJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1593,7 +1589,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalSearchOnboardingJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1616,7 +1612,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getAndMarshalSiteActivityJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1639,7 +1635,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getDependencyVersions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1662,7 +1658,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getInitialSiteAdminEmail",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1685,7 +1681,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getRedisVersion",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1708,7 +1704,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getTotalReposCount",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1731,7 +1727,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getTotalUsersCount",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1754,7 +1750,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.getUsersActiveTodayCount",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1777,7 +1773,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.hasFindRefsOccurred",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1800,7 +1796,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.hasSearchOccurred",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1823,7 +1819,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.logPing",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1846,7 +1842,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.marshalPing",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1869,7 +1865,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.parseRedisInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1892,7 +1888,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.recordOperation",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1915,7 +1911,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.reserializeCodeIntelUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1938,7 +1934,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.reserializeNewCodeIntelUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1961,7 +1957,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.reserializeOldCodeIntelUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1984,7 +1980,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.reserializeSearchUsage",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2007,7 +2003,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.toBool",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2030,7 +2026,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.toInt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2053,7 +2049,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.toRawMessage",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2076,7 +2072,7 @@
                 "newPage": false,
                 "searchKey": "updatecheck.updateBody",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

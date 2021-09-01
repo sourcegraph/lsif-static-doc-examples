@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -71,9 +69,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -286,9 +282,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -327,7 +321,7 @@
                       "newPage": false,
                       "searchKey": "csv.ParseError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -349,7 +343,7 @@
                       "newPage": false,
                       "searchKey": "csv.ParseError.Unwrap",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -394,7 +388,7 @@
                       "newPage": false,
                       "searchKey": "csv.NewReader",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -438,7 +432,7 @@
                       "newPage": false,
                       "searchKey": "csv.Reader.Read",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -460,7 +454,7 @@
                       "newPage": false,
                       "searchKey": "csv.Reader.ReadAll",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -482,7 +476,7 @@
                       "newPage": false,
                       "searchKey": "csv.Reader.readLine",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -551,7 +545,7 @@
                       "newPage": false,
                       "searchKey": "csv.NewWriter",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -573,7 +567,7 @@
                       "newPage": false,
                       "searchKey": "csv.Writer.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -595,7 +589,7 @@
                       "newPage": false,
                       "searchKey": "csv.Writer.Flush",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -829,9 +823,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -850,7 +842,7 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkRead",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -874,7 +866,7 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadLargeFields",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -898,7 +890,7 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecord",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -922,7 +914,7 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecordLargeFields",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -946,7 +938,7 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecordWithFieldsPerRecord",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -970,7 +962,7 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecordWithoutFieldsPerRecord",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -994,7 +986,7 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadWithFieldsPerRecord",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1018,7 +1010,7 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadWithoutFieldsPerRecord",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1042,7 +1034,7 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1066,7 +1058,7 @@
                 "newPage": false,
                 "searchKey": "csv.TestError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1090,7 +1082,7 @@
                 "newPage": false,
                 "searchKey": "csv.TestRead",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1114,7 +1106,7 @@
                 "newPage": false,
                 "searchKey": "csv.TestWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1138,7 +1130,7 @@
                 "newPage": false,
                 "searchKey": "csv.benchmarkRead",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1161,7 +1153,7 @@
                 "newPage": false,
                 "searchKey": "csv.errorWithPosition",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1184,7 +1176,7 @@
                 "newPage": false,
                 "searchKey": "csv.firstError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1207,7 +1199,7 @@
                 "newPage": false,
                 "searchKey": "csv.lengthNL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1230,7 +1222,7 @@
                 "newPage": false,
                 "searchKey": "csv.makePositions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1253,7 +1245,7 @@
                 "newPage": false,
                 "searchKey": "csv.nextRune",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1276,7 +1268,7 @@
                 "newPage": false,
                 "searchKey": "csv.validDelim",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

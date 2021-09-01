@@ -153,7 +153,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="filename" href="#filename">const filename</a>
@@ -183,7 +183,7 @@ genericPkg is a prefix for packages that should be type checked with generics.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="H" href="#H">var H</a>
@@ -368,7 +368,7 @@ var verifyErrors = flag.Bool("verify", false, "verify errors (rather than list t
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="gen" href="#gen">type gen struct</a>
@@ -550,7 +550,7 @@ type testEntry struct {
 
 ```
 searchKey: types_test.dup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -611,14 +611,14 @@ func (w *walker) walk(dir string)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkCheck" href="#BenchmarkCheck">func BenchmarkCheck(b *testing.B)</a>
 
 ```
 searchKey: types_test.BenchmarkCheck
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -668,7 +668,7 @@ ExampleScope prints the tree of Scopes of a package created from a set of parsed
 
 ```
 searchKey: types_test.TestAlignofNaclSlice
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -681,7 +681,7 @@ Issue 16464
 
 ```
 searchKey: types_test.TestAssignableTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -692,7 +692,7 @@ func TestAssignableTo(t *testing.T)
 
 ```
 searchKey: types_test.TestBuiltinSignatures
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -703,7 +703,7 @@ func TestBuiltinSignatures(t *testing.T)
 
 ```
 searchKey: types_test.TestCheck
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -714,7 +714,7 @@ func TestCheck(t *testing.T)
 
 ```
 searchKey: types_test.TestCheckExpr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -725,7 +725,7 @@ func TestCheckExpr(t *testing.T)
 
 ```
 searchKey: types_test.TestCompositeLitTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -738,7 +738,7 @@ TestCompositeLitTypes verifies that Info.Types registers the correct types for c
 
 ```
 searchKey: types_test.TestConvertibleTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -749,7 +749,7 @@ func TestConvertibleTo(t *testing.T)
 
 ```
 searchKey: types_test.TestDefsInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -760,7 +760,7 @@ func TestDefsInfo(t *testing.T)
 
 ```
 searchKey: types_test.TestErrorCodeExamples
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -771,7 +771,7 @@ func TestErrorCodeExamples(t *testing.T)
 
 ```
 searchKey: types_test.TestErrorCodeStyle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -782,7 +782,7 @@ func TestErrorCodeStyle(t *testing.T)
 
 ```
 searchKey: types_test.TestEvalArith
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -793,7 +793,7 @@ func TestEvalArith(t *testing.T)
 
 ```
 searchKey: types_test.TestEvalBasic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -804,7 +804,7 @@ func TestEvalBasic(t *testing.T)
 
 ```
 searchKey: types_test.TestEvalComposite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -815,7 +815,7 @@ func TestEvalComposite(t *testing.T)
 
 ```
 searchKey: types_test.TestEvalPos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -826,7 +826,7 @@ func TestEvalPos(t *testing.T)
 
 ```
 searchKey: types_test.TestExamples
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -837,7 +837,7 @@ func TestExamples(t *testing.T)
 
 ```
 searchKey: types_test.TestExprString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -848,7 +848,7 @@ func TestExprString(t *testing.T)
 
 ```
 searchKey: types_test.TestFailedImport
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -861,7 +861,7 @@ TestFailedImport tests that we don't get follow-on errors elsewhere in a package
 
 ```
 searchKey: types_test.TestFiles
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -872,7 +872,7 @@ func TestFiles(t *testing.T)
 
 ```
 searchKey: types_test.TestFixedbugs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -883,7 +883,7 @@ func TestFixedbugs(t *testing.T)
 
 ```
 searchKey: types_test.TestHilbert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -894,7 +894,7 @@ func TestHilbert(t *testing.T)
 
 ```
 searchKey: types_test.TestIdentical_issue15173
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -905,7 +905,7 @@ func TestIdentical_issue15173(t *testing.T)
 
 ```
 searchKey: types_test.TestImplicitsInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -916,7 +916,7 @@ func TestImplicitsInfo(t *testing.T)
 
 ```
 searchKey: types_test.TestIncompleteInterfaces
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -927,7 +927,7 @@ func TestIncompleteInterfaces(t *testing.T)
 
 ```
 searchKey: types_test.TestIndexRepresentability
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -940,7 +940,7 @@ TestIndexRepresentability tests that constant index operands must be representab
 
 ```
 searchKey: types_test.TestInitOrderInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -951,7 +951,7 @@ func TestInitOrderInfo(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue13898
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -964,7 +964,7 @@ This tests that the package associated with the types.Object.Pkg method is the t
 
 ```
 searchKey: types_test.TestIssue15305
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -975,7 +975,7 @@ func TestIssue15305(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue16902
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -986,7 +986,7 @@ func TestIssue16902(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue22525
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -997,7 +997,7 @@ func TestIssue22525(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue25627
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1008,7 +1008,7 @@ func TestIssue25627(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue28005
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1019,7 +1019,7 @@ func TestIssue28005(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue28282
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1030,7 +1030,7 @@ func TestIssue28282(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue29029
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1041,7 +1041,7 @@ func TestIssue29029(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue34151
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1052,7 +1052,7 @@ func TestIssue34151(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue34921
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1065,7 +1065,7 @@ TestIssue34921 verifies that we don't update an imported type's underlying type 
 
 ```
 searchKey: types_test.TestIssue43088
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1076,7 +1076,7 @@ func TestIssue43088(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue43124
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1087,7 +1087,7 @@ func TestIssue43124(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue44515
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1098,7 +1098,7 @@ func TestIssue44515(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue46453
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1109,7 +1109,7 @@ func TestIssue46453(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue5770
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1120,7 +1120,7 @@ func TestIssue5770(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue5849
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1131,7 +1131,7 @@ func TestIssue5849(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue6413
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1142,7 +1142,7 @@ func TestIssue6413(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue7245
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1153,7 +1153,7 @@ func TestIssue7245(t *testing.T)
 
 ```
 searchKey: types_test.TestIssue7827
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1166,7 +1166,7 @@ This tests that uses of existing vars on the LHS of an assignment are Uses, not 
 
 ```
 searchKey: types_test.TestIssue8518
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1177,7 +1177,7 @@ func TestIssue8518(t *testing.T)
 
 ```
 searchKey: types_test.TestLongConstants
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1188,7 +1188,7 @@ func TestLongConstants(t *testing.T)
 
 ```
 searchKey: types_test.TestLookupFieldOrMethod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1199,7 +1199,7 @@ func TestLookupFieldOrMethod(t *testing.T)
 
 ```
 searchKey: types_test.TestManual
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1218,7 +1218,7 @@ Provide the -verify flag to verify errors against ERROR comments in the input fi
 
 ```
 searchKey: types_test.TestMultiFileInitOrder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1229,7 +1229,7 @@ func TestMultiFileInitOrder(t *testing.T)
 
 ```
 searchKey: types_test.TestMultipleSizeUse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1242,7 +1242,7 @@ Issue 16316
 
 ```
 searchKey: types_test.TestNewMethodSet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1253,7 +1253,7 @@ func TestNewMethodSet(t *testing.T)
 
 ```
 searchKey: types_test.TestObjectParents
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1266,7 +1266,7 @@ TestObjectParents verifies that objects have parent scopes or not as specified b
 
 ```
 searchKey: types_test.TestPredicatesInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1277,7 +1277,7 @@ func TestPredicatesInfo(t *testing.T)
 
 ```
 searchKey: types_test.TestQualifiedTypeString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1288,7 +1288,7 @@ func TestQualifiedTypeString(t *testing.T)
 
 ```
 searchKey: types_test.TestResolveIdents
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1299,7 +1299,7 @@ func TestResolveIdents(t *testing.T)
 
 ```
 searchKey: types_test.TestScopeLookupParent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1312,7 +1312,7 @@ TestScopeLookupParent ensures that (*Scope).LookupParent returns the correct res
 
 ```
 searchKey: types_test.TestScopesInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1323,7 +1323,7 @@ func TestScopesInfo(t *testing.T)
 
 ```
 searchKey: types_test.TestSelection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1334,7 +1334,7 @@ func TestSelection(t *testing.T)
 
 ```
 searchKey: types_test.TestSelf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1345,7 +1345,7 @@ func TestSelf(t *testing.T)
 
 ```
 searchKey: types_test.TestStdFixed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1356,7 +1356,7 @@ func TestStdFixed(t *testing.T)
 
 ```
 searchKey: types_test.TestStdKen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1367,7 +1367,7 @@ func TestStdKen(t *testing.T)
 
 ```
 searchKey: types_test.TestStdTest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1378,7 +1378,7 @@ func TestStdTest(t *testing.T)
 
 ```
 searchKey: types_test.TestStdlib
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1389,7 +1389,7 @@ func TestStdlib(t *testing.T)
 
 ```
 searchKey: types_test.TestTypeString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1400,7 +1400,7 @@ func TestTypeString(t *testing.T)
 
 ```
 searchKey: types_test.TestTypesInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1411,7 +1411,7 @@ func TestTypesInfo(t *testing.T)
 
 ```
 searchKey: types_test.TestUsesInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1422,7 +1422,7 @@ func TestUsesInfo(t *testing.T)
 
 ```
 searchKey: types_test.TestValuesInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1433,7 +1433,7 @@ func TestValuesInfo(t *testing.T)
 
 ```
 searchKey: types_test.asGoVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1446,7 +1446,7 @@ asGoVersion returns a regular Go language version string if s is a Go version st
 
 ```
 searchKey: types_test.checkExample
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1457,7 +1457,7 @@ func checkExample(t *testing.T, example string) error
 
 ```
 searchKey: types_test.checkFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1468,7 +1468,7 @@ func checkFiles(t *testing.T, sizes Sizes, goVersion string, filenames []string,
 
 ```
 searchKey: types_test.eliminate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1479,7 +1479,7 @@ func eliminate(t *testing.T, errmap map[string][]string, errlist []error)
 
 ```
 searchKey: types_test.errMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1494,7 +1494,7 @@ srcs must be a slice of the same length as files, containing the original source
 
 ```
 searchKey: types_test.exprString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1505,7 +1505,7 @@ func exprString(fset *token.FileSet, expr ast.Expr) string
 
 ```
 searchKey: types_test.findStructType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1518,7 +1518,7 @@ findStructType typechecks src and returns the first struct type encountered.
 
 ```
 searchKey: types_test.firstComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1531,7 +1531,7 @@ firstComment returns the contents of the first non-empty comment in the given fi
 
 ```
 searchKey: types_test.makePkg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1542,7 +1542,7 @@ func makePkg(src string) (*Package, error)
 
 ```
 searchKey: types_test.mayTypecheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1553,7 +1553,7 @@ func mayTypecheck(t *testing.T, path, source string, info *Info) (string, error)
 
 ```
 searchKey: types_test.mode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1564,7 +1564,7 @@ func mode(tv types.TypeAndValue) string
 
 ```
 searchKey: types_test.modeForSource
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1575,7 +1575,7 @@ func modeForSource(src string) parser.Mode
 
 ```
 searchKey: types_test.mustParse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1586,7 +1586,7 @@ func mustParse(t *testing.T, src string) *ast.File
 
 ```
 searchKey: types_test.mustTypecheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1597,7 +1597,7 @@ func mustTypecheck(t *testing.T, path, source string, info *Info) string
 
 ```
 searchKey: types_test.newDefined
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1610,7 +1610,7 @@ newDefined creates a new defined type named T with the given underlying type. He
 
 ```
 searchKey: types_test.parseFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1621,7 +1621,7 @@ func parseFiles(t *testing.T, filenames []string, srcs [][]byte, mode parser.Mod
 
 ```
 searchKey: types_test.pkgFilenames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1634,7 +1634,7 @@ pkgFilenames returns the list of package filenames for the given directory.
 
 ```
 searchKey: types_test.pkgFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1645,7 +1645,7 @@ func pkgFiles(fset *token.FileSet, path string, mode parser.Mode) ([]*ast.File, 
 
 ```
 searchKey: types_test.pkgFor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1660,7 +1660,7 @@ If source begins with "package generic_" and type parameters are enabled, generi
 
 ```
 searchKey: types_test.predString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1671,7 +1671,7 @@ func predString(tv TypeAndValue) string
 
 ```
 searchKey: types_test.program
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1682,7 +1682,7 @@ func program(n int, out string) []byte
 
 ```
 searchKey: types_test.readCode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1693,7 +1693,7 @@ func readCode(err Error) int
 
 ```
 searchKey: types_test.runbench
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1704,7 +1704,7 @@ func runbench(b *testing.B, path string, ignoreFuncBodies, writeInfo bool)
 
 ```
 searchKey: types_test.sameSlice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1715,7 +1715,7 @@ func sameSlice(a, b []int) bool
 
 ```
 searchKey: types_test.split
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1728,7 +1728,7 @@ split splits string s at the first occurrence of s.
 
 ```
 searchKey: types_test.splitError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1741,7 +1741,7 @@ splitError splits an error's error message into a position string and the actual
 
 ```
 searchKey: types_test.testBuiltinSignature
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1752,7 +1752,7 @@ func testBuiltinSignature(t *testing.T, name, src0, want string)
 
 ```
 searchKey: types_test.testDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1763,7 +1763,7 @@ func testDir(t *testing.T, dir string)
 
 ```
 searchKey: types_test.testEval
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1774,7 +1774,7 @@ func testEval(t *testing.T, fset *token.FileSet, pkg *Package, pos token.Pos, ex
 
 ```
 searchKey: types_test.testPkg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1787,7 +1787,7 @@ TODO(rFindley) reconcile the different test setup in go/types with types2.
 
 ```
 searchKey: types_test.testTestDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1798,7 +1798,7 @@ func testTestDir(t *testing.T, path string, ignore ...string)
 
 ```
 searchKey: types_test.typecheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1811,7 +1811,7 @@ typecheck typechecks the given package files.
 
 ```
 searchKey: types_test.walkCodes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1822,7 +1822,7 @@ func walkCodes(t *testing.T, f func(string, int, *ast.ValueSpec))
 
 ```
 searchKey: types_test.walkPkgDirs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

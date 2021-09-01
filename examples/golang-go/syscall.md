@@ -2216,7 +2216,7 @@ Deprecated: this package is locked down. Callers should use the corresponding pa
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="AF_APPLETALK" href="#AF_APPLETALK">const AF_APPLETALK</a>
@@ -20815,7 +20815,7 @@ const _AT_FDCWD = -0x2
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="ForkLock" href="#ForkLock">var ForkLock</a>
@@ -21114,7 +21114,7 @@ Single-word zero for use when we need a valid pointer to 0 bytes. See mksyscall.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="BpfHdr" href="#BpfHdr">type BpfHdr struct</a>
@@ -21154,7 +21154,7 @@ type BpfInsn struct {
 
 ```
 searchKey: syscall.BpfJump
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -21167,7 +21167,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BpfStmt
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -21209,7 +21209,7 @@ type BpfStat struct {
 
 ```
 searchKey: syscall.BpfStats
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -21251,7 +21251,7 @@ type Cmsghdr struct {
 
 ```
 searchKey: syscall.socketControlMessageHeaderAndData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21364,7 +21364,7 @@ if errors.Is(err, fs.ErrNotExist) ...
 
 ```
 searchKey: syscall.Ioctl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21375,7 +21375,7 @@ func Ioctl(fd, req, arg uintptr) Errno
 
 ```
 searchKey: syscall.RawSyscall
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -21386,7 +21386,7 @@ func RawSyscall(trap, a1, a2, a3 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.RawSyscall6
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -21397,7 +21397,7 @@ func RawSyscall6(trap, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err Errn
 
 ```
 searchKey: syscall.Syscall
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -21408,7 +21408,7 @@ func Syscall(trap, a1, a2, a3 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.Syscall6
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -21419,7 +21419,7 @@ func Syscall6(trap, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.Syscall9
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -21430,7 +21430,7 @@ func Syscall9(trap, a1, a2, a3, a4, a5, a6, a7, a8, a9 uintptr) (r1, r2 uintptr,
 
 ```
 searchKey: syscall.forkAndExecInChild
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21443,7 +21443,7 @@ Fork, dup fd onto 0..len(fd), and exec(argv0, argvv, envv) in child. If a dup or
 
 ```
 searchKey: syscall.rawSyscall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21454,7 +21454,7 @@ func rawSyscall(fn, a1, a2, a3 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.rawSyscall6
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21465,7 +21465,7 @@ func rawSyscall6(fn, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.readdir_r
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21476,7 +21476,7 @@ func readdir_r(dir uintptr, entry *Dirent, result **Dirent) (res Errno)
 
 ```
 searchKey: syscall.syscall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21489,7 +21489,7 @@ Implemented in the runtime package (runtime/sys_darwin.go)
 
 ```
 searchKey: syscall.syscall6
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21500,7 +21500,7 @@ func syscall6(fn, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.syscall6X
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21511,7 +21511,7 @@ func syscall6X(fn, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.syscallPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21522,7 +21522,7 @@ func syscallPtr(fn, a1, a2, a3 uintptr) (r1, r2 uintptr, err Errno)
 
 ```
 searchKey: syscall.syscallX
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21535,7 +21535,7 @@ Implemented in the runtime package (runtime/sys_darwin_64.go)
 
 ```
 searchKey: syscall.Errno.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -21557,7 +21557,7 @@ func (e Errno) Is(target error) bool
 
 ```
 searchKey: syscall.Errno.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -21568,7 +21568,7 @@ func (e Errno) Temporary() bool
 
 ```
 searchKey: syscall.Errno.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -21667,7 +21667,7 @@ type ICMPv6Filter struct {
 
 ```
 searchKey: syscall.GetsockoptICMPv6Filter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -21692,7 +21692,7 @@ type IPMreq struct {
 
 ```
 searchKey: syscall.GetsockoptIPMreq
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -21717,7 +21717,7 @@ type IPv6MTUInfo struct {
 
 ```
 searchKey: syscall.GetsockoptIPv6MTUInfo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -21742,7 +21742,7 @@ type IPv6Mreq struct {
 
 ```
 searchKey: syscall.GetsockoptIPv6Mreq
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -21920,7 +21920,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.InterfaceAddrMessage.sockaddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21949,7 +21949,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.InterfaceMessage.sockaddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21978,7 +21978,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.InterfaceMulticastAddrMessage.sockaddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22289,7 +22289,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.RouteMessage.sockaddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22406,7 +22406,7 @@ A Signal is a number describing a process signal. It implements the os.Signal in
 
 ```
 searchKey: syscall.Signal.Signal
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -22417,7 +22417,7 @@ func (s Signal) Signal()
 
 ```
 searchKey: syscall.Signal.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -22441,7 +22441,7 @@ type Sockaddr interface {
 
 ```
 searchKey: syscall.Accept
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22452,7 +22452,7 @@ func Accept(fd int) (nfd int, sa Sockaddr, err error)
 
 ```
 searchKey: syscall.Getpeername
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22463,7 +22463,7 @@ func Getpeername(fd int) (sa Sockaddr, err error)
 
 ```
 searchKey: syscall.Getsockname
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22474,7 +22474,7 @@ func Getsockname(fd int) (sa Sockaddr, err error)
 
 ```
 searchKey: syscall.Recvfrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22485,7 +22485,7 @@ func Recvfrom(fd int, p []byte, flags int) (n int, from Sockaddr, err error)
 
 ```
 searchKey: syscall.Recvmsg
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22496,7 +22496,7 @@ func Recvmsg(fd int, p, oob []byte, flags int) (n, oobn int, recvflags int, from
 
 ```
 searchKey: syscall.anyToSockaddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22507,7 +22507,7 @@ func anyToSockaddr(rsa *RawSockaddrAny) (Sockaddr, error)
 
 ```
 searchKey: syscall.parseNetworkLayerAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22520,7 +22520,7 @@ parseNetworkLayerAddr parses b as an internet socket address in conventional BSD
 
 ```
 searchKey: syscall.parseSockaddrInet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22554,7 +22554,7 @@ type SockaddrDatalink struct {
 
 ```
 searchKey: syscall.parseLinkLayerAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22567,7 +22567,7 @@ parseLinkLayerAddr parses b as a datalink socket address in conventional BSD ker
 
 ```
 searchKey: syscall.parseSockaddrLink
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22580,7 +22580,7 @@ parseSockaddrLink parses b as a datalink socket address.
 
 ```
 searchKey: syscall.SockaddrDatalink.sockaddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22606,7 +22606,7 @@ type SockaddrInet4 struct {
 
 ```
 searchKey: syscall.SockaddrInet4.sockaddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22633,7 +22633,7 @@ type SockaddrInet6 struct {
 
 ```
 searchKey: syscall.SockaddrInet6.sockaddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22658,7 +22658,7 @@ type SockaddrUnix struct {
 
 ```
 searchKey: syscall.SockaddrUnix.sockaddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22811,7 +22811,7 @@ type Timespec struct {
 
 ```
 searchKey: syscall.NsecToTimespec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22824,7 +22824,7 @@ NsecToTimespec converts a number of nanoseconds into a Timespec.
 
 ```
 searchKey: syscall.setTimespec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22835,7 +22835,7 @@ func setTimespec(sec, nsec int64) Timespec
 
 ```
 searchKey: syscall.Timespec.Nano
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -22848,7 +22848,7 @@ Nano returns the time stored in ts as nanoseconds.
 
 ```
 searchKey: syscall.Timespec.Unix
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -22876,7 +22876,7 @@ type Timeval struct {
 
 ```
 searchKey: syscall.BpfTimeout
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -22889,7 +22889,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.NsecToTimeval
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22902,7 +22902,7 @@ NsecToTimeval converts a number of nanoseconds into a Timeval.
 
 ```
 searchKey: syscall.setTimeval
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -22913,7 +22913,7 @@ func setTimeval(sec, usec int64) Timeval
 
 ```
 searchKey: syscall.Timeval.Nano
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -22926,7 +22926,7 @@ Nano returns the time stored in tv as nanoseconds.
 
 ```
 searchKey: syscall.Timeval.Unix
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -22964,7 +22964,7 @@ type WaitStatus uint32
 
 ```
 searchKey: syscall.WaitStatus.Continued
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -22975,7 +22975,7 @@ func (w WaitStatus) Continued() bool
 
 ```
 searchKey: syscall.WaitStatus.CoreDump
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -22986,7 +22986,7 @@ func (w WaitStatus) CoreDump() bool
 
 ```
 searchKey: syscall.WaitStatus.ExitStatus
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -22997,7 +22997,7 @@ func (w WaitStatus) ExitStatus() int
 
 ```
 searchKey: syscall.WaitStatus.Exited
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -23008,7 +23008,7 @@ func (w WaitStatus) Exited() bool
 
 ```
 searchKey: syscall.WaitStatus.Signal
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -23019,7 +23019,7 @@ func (w WaitStatus) Signal() Signal
 
 ```
 searchKey: syscall.WaitStatus.Signaled
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -23030,7 +23030,7 @@ func (w WaitStatus) Signaled() bool
 
 ```
 searchKey: syscall.WaitStatus.StopSignal
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -23041,7 +23041,7 @@ func (w WaitStatus) StopSignal() Signal
 
 ```
 searchKey: syscall.WaitStatus.Stopped
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -23052,7 +23052,7 @@ func (w WaitStatus) Stopped() bool
 
 ```
 searchKey: syscall.WaitStatus.TrapCause
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -23225,14 +23225,14 @@ type _Socklen uint32
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="Access" href="#Access">func Access(path string, mode uint32) (err error)</a>
 
 ```
 searchKey: syscall.Access
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23243,7 +23243,7 @@ func Access(path string, mode uint32) (err error)
 
 ```
 searchKey: syscall.Adjtime
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23254,7 +23254,7 @@ func Adjtime(delta *Timeval, olddelta *Timeval) (err error)
 
 ```
 searchKey: syscall.Bind
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23265,7 +23265,7 @@ func Bind(fd int, sa Sockaddr) (err error)
 
 ```
 searchKey: syscall.BpfBuflen
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -23278,7 +23278,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BpfDatalink
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -23291,7 +23291,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BpfHeadercmpl
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -23304,7 +23304,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BpfInterface
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -23317,7 +23317,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.BytePtrFromString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23330,7 +23330,7 @@ BytePtrFromString returns a pointer to a NUL-terminated array of bytes containin
 
 ```
 searchKey: syscall.ByteSliceFromString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23343,7 +23343,7 @@ ByteSliceFromString returns a NUL-terminated slice of bytes containing the text 
 
 ```
 searchKey: syscall.Chdir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23354,7 +23354,7 @@ func Chdir(path string) (err error)
 
 ```
 searchKey: syscall.CheckBpfVersion
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -23367,7 +23367,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.Chflags
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23378,7 +23378,7 @@ func Chflags(path string, flags int) (err error)
 
 ```
 searchKey: syscall.Chmod
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23389,7 +23389,7 @@ func Chmod(path string, mode uint32) (err error)
 
 ```
 searchKey: syscall.Chown
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23400,7 +23400,7 @@ func Chown(path string, uid int, gid int) (err error)
 
 ```
 searchKey: syscall.Chroot
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23422,7 +23422,7 @@ func Clearenv()
 
 ```
 searchKey: syscall.Close
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23433,7 +23433,7 @@ func Close(fd int) (err error)
 
 ```
 searchKey: syscall.CloseOnExec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23444,7 +23444,7 @@ func CloseOnExec(fd int)
 
 ```
 searchKey: syscall.CmsgLen
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23457,7 +23457,7 @@ CmsgLen returns the value to store in the Len field of the Cmsghdr structure, ta
 
 ```
 searchKey: syscall.CmsgSpace
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23470,7 +23470,7 @@ CmsgSpace returns the number of bytes an ancillary element with payload of the p
 
 ```
 searchKey: syscall.Connect
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23481,7 +23481,7 @@ func Connect(fd int, sa Sockaddr) (err error)
 
 ```
 searchKey: syscall.Dup
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23492,7 +23492,7 @@ func Dup(fd int) (nfd int, err error)
 
 ```
 searchKey: syscall.Dup2
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23514,7 +23514,7 @@ func Environ() []string
 
 ```
 searchKey: syscall.Exchangedata
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23525,7 +23525,7 @@ func Exchangedata(path1 string, path2 string, options int) (err error)
 
 ```
 searchKey: syscall.Exec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23538,7 +23538,7 @@ Exec invokes the execve(2) system call.
 
 ```
 searchKey: syscall.Exit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23549,7 +23549,7 @@ func Exit(code int)
 
 ```
 searchKey: syscall.Fchdir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23560,7 +23560,7 @@ func Fchdir(fd int) (err error)
 
 ```
 searchKey: syscall.Fchflags
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23571,7 +23571,7 @@ func Fchflags(fd int, flags int) (err error)
 
 ```
 searchKey: syscall.Fchmod
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23582,7 +23582,7 @@ func Fchmod(fd int, mode uint32) (err error)
 
 ```
 searchKey: syscall.Fchown
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23593,7 +23593,7 @@ func Fchown(fd int, uid int, gid int) (err error)
 
 ```
 searchKey: syscall.FcntlFlock
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23606,7 +23606,7 @@ FcntlFlock performs a fcntl syscall for the F_GETLK, F_SETLK or F_SETLKW command
 
 ```
 searchKey: syscall.Flock
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23617,7 +23617,7 @@ func Flock(fd int, how int) (err error)
 
 ```
 searchKey: syscall.FlushBpf
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -23630,7 +23630,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.ForkExec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23643,7 +23643,7 @@ Combination of fork and exec, careful to be thread safe.
 
 ```
 searchKey: syscall.Fpathconf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23654,7 +23654,7 @@ func Fpathconf(fd int, name int) (val int, err error)
 
 ```
 searchKey: syscall.Fstat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23665,7 +23665,7 @@ func Fstat(fd int, stat *Stat_t) (err error)
 
 ```
 searchKey: syscall.Fstatfs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23676,7 +23676,7 @@ func Fstatfs(fd int, stat *Statfs_t) (err error)
 
 ```
 searchKey: syscall.Fsync
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23687,7 +23687,7 @@ func Fsync(fd int) (err error)
 
 ```
 searchKey: syscall.Ftruncate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23698,7 +23698,7 @@ func Ftruncate(fd int, length int64) (err error)
 
 ```
 searchKey: syscall.Futimes
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23709,7 +23709,7 @@ func Futimes(fd int, tv []Timeval) (err error)
 
 ```
 searchKey: syscall.Getdirentries
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23742,7 +23742,7 @@ func Getegid() (egid int)
 
 ```
 searchKey: syscall.Getenv
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23764,7 +23764,7 @@ func Geteuid() (uid int)
 
 ```
 searchKey: syscall.Getfsstat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23808,7 +23808,7 @@ func Getpagesize() int
 
 ```
 searchKey: syscall.Getpgid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23852,7 +23852,7 @@ func Getppid() (ppid int)
 
 ```
 searchKey: syscall.Getpriority
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23863,7 +23863,7 @@ func Getpriority(which int, who int) (prio int, err error)
 
 ```
 searchKey: syscall.Getrlimit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23874,7 +23874,7 @@ func Getrlimit(which int, lim *Rlimit) (err error)
 
 ```
 searchKey: syscall.Getrusage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23885,7 +23885,7 @@ func Getrusage(who int, rusage *Rusage) (err error)
 
 ```
 searchKey: syscall.Getsid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23896,7 +23896,7 @@ func Getsid(pid int) (sid int, err error)
 
 ```
 searchKey: syscall.GetsockoptByte
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23907,7 +23907,7 @@ func GetsockoptByte(fd, level, opt int) (value byte, err error)
 
 ```
 searchKey: syscall.GetsockoptInet4Addr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23918,7 +23918,7 @@ func GetsockoptInet4Addr(fd, level, opt int) (value [4]byte, err error)
 
 ```
 searchKey: syscall.GetsockoptInt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23929,7 +23929,7 @@ func GetsockoptInt(fd, level, opt int) (value int, err error)
 
 ```
 searchKey: syscall.Gettimeofday
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23973,7 +23973,7 @@ func Issetugid() (tainted bool)
 
 ```
 searchKey: syscall.Kevent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -23984,7 +23984,7 @@ func Kevent(kq int, changes, events []Kevent_t, timeout *Timespec) (n int, err e
 
 ```
 searchKey: syscall.Kill
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24006,7 +24006,7 @@ func Kqueue() (fd int, err error)
 
 ```
 searchKey: syscall.Lchown
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24017,7 +24017,7 @@ func Lchown(path string, uid int, gid int) (err error)
 
 ```
 searchKey: syscall.Link
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24028,7 +24028,7 @@ func Link(path string, link string) (err error)
 
 ```
 searchKey: syscall.Listen
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24039,7 +24039,7 @@ func Listen(s int, backlog int) (err error)
 
 ```
 searchKey: syscall.Lstat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24050,7 +24050,7 @@ func Lstat(path string, stat *Stat_t) (err error)
 
 ```
 searchKey: syscall.Mkdir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24061,7 +24061,7 @@ func Mkdir(path string, mode uint32) (err error)
 
 ```
 searchKey: syscall.Mkfifo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24072,7 +24072,7 @@ func Mkfifo(path string, mode uint32) (err error)
 
 ```
 searchKey: syscall.Mknod
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24083,7 +24083,7 @@ func Mknod(path string, mode uint32, dev int) (err error)
 
 ```
 searchKey: syscall.Mlock
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24094,7 +24094,7 @@ func Mlock(b []byte) (err error)
 
 ```
 searchKey: syscall.Mlockall
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24105,7 +24105,7 @@ func Mlockall(flags int) (err error)
 
 ```
 searchKey: syscall.Mmap
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24116,7 +24116,7 @@ func Mmap(fd int, offset int64, length int, prot int, flags int) (data []byte, e
 
 ```
 searchKey: syscall.Mprotect
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24127,7 +24127,7 @@ func Mprotect(b []byte, prot int) (err error)
 
 ```
 searchKey: syscall.Munlock
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24149,7 +24149,7 @@ func Munlockall() (err error)
 
 ```
 searchKey: syscall.Munmap
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24160,7 +24160,7 @@ func Munmap(b []byte) (err error)
 
 ```
 searchKey: syscall.Open
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24171,7 +24171,7 @@ func Open(path string, mode int, perm uint32) (fd int, err error)
 
 ```
 searchKey: syscall.ParseDirent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24184,7 +24184,7 @@ ParseDirent parses up to max directory entries in buf, appending the names to na
 
 ```
 searchKey: syscall.ParseRoutingMessage
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24199,7 +24199,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.ParseRoutingSockaddr
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24214,7 +24214,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.ParseSocketControlMessage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24227,7 +24227,7 @@ ParseSocketControlMessage parses b as an array of socket control messages.
 
 ```
 searchKey: syscall.ParseUnixRights
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24240,7 +24240,7 @@ ParseUnixRights decodes a socket control message that contains an integer array 
 
 ```
 searchKey: syscall.Pathconf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24251,7 +24251,7 @@ func Pathconf(path string, name int) (val int, err error)
 
 ```
 searchKey: syscall.Pipe
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24262,7 +24262,7 @@ func Pipe(p []int) (err error)
 
 ```
 searchKey: syscall.Pread
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24273,7 +24273,7 @@ func Pread(fd int, p []byte, offset int64) (n int, err error)
 
 ```
 searchKey: syscall.PtraceAttach
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24284,7 +24284,7 @@ func PtraceAttach(pid int) (err error)
 
 ```
 searchKey: syscall.PtraceDetach
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24295,7 +24295,7 @@ func PtraceDetach(pid int) (err error)
 
 ```
 searchKey: syscall.Pwrite
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24306,7 +24306,7 @@ func Pwrite(fd int, p []byte, offset int64) (n int, err error)
 
 ```
 searchKey: syscall.Read
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24317,7 +24317,7 @@ func Read(fd int, p []byte) (n int, err error)
 
 ```
 searchKey: syscall.ReadDirent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24328,7 +24328,7 @@ func ReadDirent(fd int, buf []byte) (n int, err error)
 
 ```
 searchKey: syscall.Readlink
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24339,7 +24339,7 @@ func Readlink(path string, buf []byte) (n int, err error)
 
 ```
 searchKey: syscall.Rename
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24350,7 +24350,7 @@ func Rename(from string, to string) (err error)
 
 ```
 searchKey: syscall.Revoke
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24361,7 +24361,7 @@ func Revoke(path string) (err error)
 
 ```
 searchKey: syscall.Rmdir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24372,7 +24372,7 @@ func Rmdir(path string) (err error)
 
 ```
 searchKey: syscall.RouteRIB
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24387,7 +24387,7 @@ Deprecated: Use golang.org/x/net/route instead.
 
 ```
 searchKey: syscall.Seek
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24398,7 +24398,7 @@ func Seek(fd int, offset int64, whence int) (newoffset int64, err error)
 
 ```
 searchKey: syscall.Select
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24409,7 +24409,7 @@ func Select(n int, r *FdSet, w *FdSet, e *FdSet, timeout *Timeval) (err error)
 
 ```
 searchKey: syscall.Sendfile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24420,7 +24420,7 @@ func Sendfile(outfd int, infd int, offset *int64, count int) (written int, err e
 
 ```
 searchKey: syscall.Sendmsg
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24431,7 +24431,7 @@ func Sendmsg(fd int, p, oob []byte, to Sockaddr, flags int) (err error)
 
 ```
 searchKey: syscall.SendmsgN
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24442,7 +24442,7 @@ func SendmsgN(fd int, p, oob []byte, to Sockaddr, flags int) (n int, err error)
 
 ```
 searchKey: syscall.Sendto
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24453,7 +24453,7 @@ func Sendto(fd int, p []byte, flags int, to Sockaddr) (err error)
 
 ```
 searchKey: syscall.SetBpf
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24466,7 +24466,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfBuflen
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24479,7 +24479,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfDatalink
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24492,7 +24492,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfHeadercmpl
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24505,7 +24505,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfImmediate
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24518,7 +24518,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfInterface
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24531,7 +24531,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfPromisc
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24544,7 +24544,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetBpfTimeout
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24557,7 +24557,7 @@ Deprecated: Use golang.org/x/net/bpf instead.
 
 ```
 searchKey: syscall.SetKevent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24568,7 +24568,7 @@ func SetKevent(k *Kevent_t, fd, mode, flags int)
 
 ```
 searchKey: syscall.SetNonblock
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24579,7 +24579,7 @@ func SetNonblock(fd int, nonblocking bool) (err error)
 
 ```
 searchKey: syscall.Setegid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24590,7 +24590,7 @@ func Setegid(egid int) (err error)
 
 ```
 searchKey: syscall.Setenv
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24601,7 +24601,7 @@ func Setenv(key, value string) error
 
 ```
 searchKey: syscall.Seteuid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24612,7 +24612,7 @@ func Seteuid(euid int) (err error)
 
 ```
 searchKey: syscall.Setgid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24623,7 +24623,7 @@ func Setgid(gid int) (err error)
 
 ```
 searchKey: syscall.Setgroups
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24634,7 +24634,7 @@ func Setgroups(gids []int) (err error)
 
 ```
 searchKey: syscall.Setlogin
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24645,7 +24645,7 @@ func Setlogin(name string) (err error)
 
 ```
 searchKey: syscall.Setpgid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24656,7 +24656,7 @@ func Setpgid(pid int, pgid int) (err error)
 
 ```
 searchKey: syscall.Setpriority
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24667,7 +24667,7 @@ func Setpriority(which int, who int, prio int) (err error)
 
 ```
 searchKey: syscall.Setprivexec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24678,7 +24678,7 @@ func Setprivexec(flag int) (err error)
 
 ```
 searchKey: syscall.Setregid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24689,7 +24689,7 @@ func Setregid(rgid int, egid int) (err error)
 
 ```
 searchKey: syscall.Setreuid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24700,7 +24700,7 @@ func Setreuid(ruid int, euid int) (err error)
 
 ```
 searchKey: syscall.Setrlimit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24722,7 +24722,7 @@ func Setsid() (pid int, err error)
 
 ```
 searchKey: syscall.SetsockoptByte
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24733,7 +24733,7 @@ func SetsockoptByte(fd, level, opt int, value byte) (err error)
 
 ```
 searchKey: syscall.SetsockoptICMPv6Filter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24744,7 +24744,7 @@ func SetsockoptICMPv6Filter(fd, level, opt int, filter *ICMPv6Filter) error
 
 ```
 searchKey: syscall.SetsockoptIPMreq
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24755,7 +24755,7 @@ func SetsockoptIPMreq(fd, level, opt int, mreq *IPMreq) (err error)
 
 ```
 searchKey: syscall.SetsockoptIPv6Mreq
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24766,7 +24766,7 @@ func SetsockoptIPv6Mreq(fd, level, opt int, mreq *IPv6Mreq) (err error)
 
 ```
 searchKey: syscall.SetsockoptInet4Addr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24777,7 +24777,7 @@ func SetsockoptInet4Addr(fd, level, opt int, value [4]byte) (err error)
 
 ```
 searchKey: syscall.SetsockoptInt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24788,7 +24788,7 @@ func SetsockoptInt(fd, level, opt int, value int) (err error)
 
 ```
 searchKey: syscall.SetsockoptLinger
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24799,7 +24799,7 @@ func SetsockoptLinger(fd, level, opt int, l *Linger) (err error)
 
 ```
 searchKey: syscall.SetsockoptString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24810,7 +24810,7 @@ func SetsockoptString(fd, level, opt int, s string) (err error)
 
 ```
 searchKey: syscall.SetsockoptTimeval
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24821,7 +24821,7 @@ func SetsockoptTimeval(fd, level, opt int, tv *Timeval) (err error)
 
 ```
 searchKey: syscall.Settimeofday
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24832,7 +24832,7 @@ func Settimeofday(tp *Timeval) (err error)
 
 ```
 searchKey: syscall.Setuid
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24843,7 +24843,7 @@ func Setuid(uid int) (err error)
 
 ```
 searchKey: syscall.Shutdown
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24854,7 +24854,7 @@ func Shutdown(s int, how int) (err error)
 
 ```
 searchKey: syscall.SlicePtrFromStrings
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24867,7 +24867,7 @@ SlicePtrFromStrings converts a slice of strings to a slice of pointers to NUL-te
 
 ```
 searchKey: syscall.Socket
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24878,7 +24878,7 @@ func Socket(domain, typ, proto int) (fd int, err error)
 
 ```
 searchKey: syscall.Socketpair
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24889,7 +24889,7 @@ func Socketpair(domain, typ, proto int) (fd [2]int, err error)
 
 ```
 searchKey: syscall.StartProcess
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24902,7 +24902,7 @@ StartProcess wraps ForkExec for package os.
 
 ```
 searchKey: syscall.Stat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24913,7 +24913,7 @@ func Stat(path string, stat *Stat_t) (err error)
 
 ```
 searchKey: syscall.Statfs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24924,7 +24924,7 @@ func Statfs(path string, stat *Statfs_t) (err error)
 
 ```
 searchKey: syscall.StringBytePtr
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24939,7 +24939,7 @@ Deprecated: Use BytePtrFromString instead.
 
 ```
 searchKey: syscall.StringByteSlice
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24954,7 +24954,7 @@ Deprecated: Use ByteSliceFromString instead.
 
 ```
 searchKey: syscall.StringSlicePtr
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -24969,7 +24969,7 @@ Deprecated: Use SlicePtrFromStrings instead.
 
 ```
 searchKey: syscall.Symlink
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24991,7 +24991,7 @@ func Sync() (err error)
 
 ```
 searchKey: syscall.Sysctl
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25002,7 +25002,7 @@ func Sysctl(name string) (value string, err error)
 
 ```
 searchKey: syscall.SysctlUint32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25013,7 +25013,7 @@ func SysctlUint32(name string) (value uint32, err error)
 
 ```
 searchKey: syscall.TimespecToNsec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25026,7 +25026,7 @@ TimespecToNSec returns the time stored in ts as nanoseconds.
 
 ```
 searchKey: syscall.TimevalToNsec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25039,7 +25039,7 @@ TimevalToNsec returns the time stored in tv as nanoseconds.
 
 ```
 searchKey: syscall.Truncate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25050,7 +25050,7 @@ func Truncate(path string, length int64) (err error)
 
 ```
 searchKey: syscall.Umask
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25061,7 +25061,7 @@ func Umask(newmask int) (oldmask int)
 
 ```
 searchKey: syscall.Undelete
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25072,7 +25072,7 @@ func Undelete(path string) (err error)
 
 ```
 searchKey: syscall.UnixRights
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25085,7 +25085,7 @@ UnixRights encodes a set of open file descriptors into a socket control message 
 
 ```
 searchKey: syscall.Unlink
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25096,7 +25096,7 @@ func Unlink(path string) (err error)
 
 ```
 searchKey: syscall.Unmount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25107,7 +25107,7 @@ func Unmount(path string, flags int) (err error)
 
 ```
 searchKey: syscall.Unsetenv
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25118,7 +25118,7 @@ func Unsetenv(key string) error
 
 ```
 searchKey: syscall.Utimes
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25129,7 +25129,7 @@ func Utimes(path string, tv []Timeval) (err error)
 
 ```
 searchKey: syscall.UtimesNano
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25140,7 +25140,7 @@ func UtimesNano(path string, ts []Timespec) error
 
 ```
 searchKey: syscall.Wait4
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25151,7 +25151,7 @@ func Wait4(pid int, wstatus *WaitStatus, options int, rusage *Rusage) (wpid int,
 
 ```
 searchKey: syscall.Write
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25162,7 +25162,7 @@ func Write(fd int, p []byte) (n int, err error)
 
 ```
 searchKey: syscall.accept
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25173,7 +25173,7 @@ func accept(s int, rsa *RawSockaddrAny, addrlen *_Socklen) (fd int, err error)
 
 ```
 searchKey: syscall.bind
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25184,7 +25184,7 @@ func bind(s int, addr unsafe.Pointer, addrlen _Socklen) (err error)
 
 ```
 searchKey: syscall.clen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25197,7 +25197,7 @@ clen returns the index of the first NULL byte in n or len(n) if n contains no NU
 
 ```
 searchKey: syscall.closedir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25208,7 +25208,7 @@ func closedir(dir uintptr) (err error)
 
 ```
 searchKey: syscall.cmsgAlignOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25221,7 +25221,7 @@ Round the length of a raw sockaddr up to align it properly.
 
 ```
 searchKey: syscall.connect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25243,7 +25243,7 @@ func copyenv()
 
 ```
 searchKey: syscall.direntIno
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25254,7 +25254,7 @@ func direntIno(buf []byte) (uint64, bool)
 
 ```
 searchKey: syscall.direntNamlen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25265,7 +25265,7 @@ func direntNamlen(buf []byte) (uint64, bool)
 
 ```
 searchKey: syscall.direntReclen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25276,7 +25276,7 @@ func direntReclen(buf []byte) (uint64, bool)
 
 ```
 searchKey: syscall.errnoErr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25289,7 +25289,7 @@ errnoErr returns common boxed Errno values, to prevent allocations at runtime.
 
 ```
 searchKey: syscall.execve
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25300,7 +25300,7 @@ func execve(path *byte, argv **byte, envp **byte) (err error)
 
 ```
 searchKey: syscall.exit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25311,7 +25311,7 @@ func exit(res int) (err error)
 
 ```
 searchKey: syscall.faketimeWrite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25322,7 +25322,7 @@ func faketimeWrite(fd int, p []byte) int
 
 ```
 searchKey: syscall.fcntl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25333,7 +25333,7 @@ func fcntl(fd int, cmd int, arg int) (val int, err error)
 
 ```
 searchKey: syscall.fcntlPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25344,7 +25344,7 @@ func fcntlPtr(fd int, cmd int, arg unsafe.Pointer) (val int, err error)
 
 ```
 searchKey: syscall.fdopendir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25366,7 +25366,7 @@ func fork() (pid int, err error)
 
 ```
 searchKey: syscall.forkExec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25377,7 +25377,7 @@ func forkExec(argv0 string, argv []string, attr *ProcAttr) (pid int, err error)
 
 ```
 searchKey: syscall.forkExecPipe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25390,7 +25390,7 @@ Try to open a pipe with O_CLOEXEC set on both file descriptors.
 
 ```
 searchKey: syscall.fstatat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25401,7 +25401,7 @@ func fstatat(fd int, path string, stat *Stat_t, flags int) (err error)
 
 ```
 searchKey: syscall.futimes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25412,7 +25412,7 @@ func futimes(fd int, timeval *[2]Timeval) (err error)
 
 ```
 searchKey: syscall.getcwd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25423,7 +25423,7 @@ func getcwd(buf []byte) (n int, err error)
 
 ```
 searchKey: syscall.getgroups
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25434,7 +25434,7 @@ func getgroups(ngid int, gid *_Gid_t) (n int, err error)
 
 ```
 searchKey: syscall.getpeername
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25445,7 +25445,7 @@ func getpeername(fd int, rsa *RawSockaddrAny, addrlen *_Socklen) (err error)
 
 ```
 searchKey: syscall.getsockname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25456,7 +25456,7 @@ func getsockname(fd int, rsa *RawSockaddrAny, addrlen *_Socklen) (err error)
 
 ```
 searchKey: syscall.getsockopt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25478,7 +25478,7 @@ func init()
 
 ```
 searchKey: syscall.ioctl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25489,7 +25489,7 @@ func ioctl(fd int, req int, arg int) (err error)
 
 ```
 searchKey: syscall.ioctlPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25500,7 +25500,7 @@ func ioctlPtr(fd int, req uint, arg unsafe.Pointer) (err error)
 
 ```
 searchKey: syscall.kevent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25511,7 +25511,7 @@ func kevent(kq int, change unsafe.Pointer, nchange int, event unsafe.Pointer, ne
 
 ```
 searchKey: syscall.kill
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26897,7 +26897,7 @@ func libc_writev_trampoline()
 
 ```
 searchKey: syscall.mmap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26908,7 +26908,7 @@ func mmap(addr uintptr, length uintptr, prot int, flag int, fd int, pos int64) (
 
 ```
 searchKey: syscall.msanRead
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26919,7 +26919,7 @@ func msanRead(addr unsafe.Pointer, len int)
 
 ```
 searchKey: syscall.msanWrite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26930,7 +26930,7 @@ func msanWrite(addr unsafe.Pointer, len int)
 
 ```
 searchKey: syscall.munmap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26941,7 +26941,7 @@ func munmap(addr uintptr, length uintptr) (err error)
 
 ```
 searchKey: syscall.nametomib
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26954,7 +26954,7 @@ Translate "kern.hostname" to []_C_int{0,1,2,3}.
 
 ```
 searchKey: syscall.openat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26965,7 +26965,7 @@ func openat(fd int, path string, flags int, perm uint32) (fdret int, err error)
 
 ```
 searchKey: syscall.pipe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26976,7 +26976,7 @@ func pipe(p *[2]int32) (err error)
 
 ```
 searchKey: syscall.ptrace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26989,7 +26989,7 @@ Nosplit because it is called from forkAndExecInChild.
 
 ```
 searchKey: syscall.ptrace1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27000,7 +27000,7 @@ func ptrace1(request int, pid int, addr uintptr, data uintptr) (err error)
 
 ```
 searchKey: syscall.read
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27011,7 +27011,7 @@ func read(fd int, p []byte) (n int, err error)
 
 ```
 searchKey: syscall.readInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27024,7 +27024,7 @@ readInt returns the size-bytes unsigned integer in native byte order at offset o
 
 ```
 searchKey: syscall.readIntBE
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27035,7 +27035,7 @@ func readIntBE(b []byte, size uintptr) uint64
 
 ```
 searchKey: syscall.readIntLE
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27046,7 +27046,7 @@ func readIntLE(b []byte, size uintptr) uint64
 
 ```
 searchKey: syscall.readlen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27057,7 +27057,7 @@ func readlen(fd int, buf *byte, nbuf int) (n int, err error)
 
 ```
 searchKey: syscall.recvfrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27068,7 +27068,7 @@ func recvfrom(fd int, p []byte, flags int, from *RawSockaddrAny, fromlen *_Sockl
 
 ```
 searchKey: syscall.recvmsg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27079,7 +27079,7 @@ func recvmsg(s int, msg *Msghdr, flags int) (n int, err error)
 
 ```
 searchKey: syscall.rsaAlignOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27162,7 +27162,7 @@ func runtime_envs() []string
 
 ```
 searchKey: syscall.sendfile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27173,7 +27173,7 @@ func sendfile(outfd int, infd int, offset *int64, count int) (written int, err e
 
 ```
 searchKey: syscall.sendmsg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27184,7 +27184,7 @@ func sendmsg(s int, msg *Msghdr, flags int) (n int, err error)
 
 ```
 searchKey: syscall.sendto
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27195,7 +27195,7 @@ func sendto(s int, buf []byte, flags int, to unsafe.Pointer, addrlen _Socklen) (
 
 ```
 searchKey: syscall.setattrlistTimes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27206,7 +27206,7 @@ func setattrlistTimes(path string, times []Timespec) error
 
 ```
 searchKey: syscall.setenv_c
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27219,7 +27219,7 @@ setenv_c and unsetenv_c are provided by the runtime but are no-ops if cgo isn't 
 
 ```
 searchKey: syscall.setgroups
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27230,7 +27230,7 @@ func setgroups(ngid int, gid *_Gid_t) (err error)
 
 ```
 searchKey: syscall.setsockopt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27241,7 +27241,7 @@ func setsockopt(s int, level int, name int, val unsafe.Pointer, vallen uintptr) 
 
 ```
 searchKey: syscall.socket
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27252,7 +27252,7 @@ func socket(domain int, typ int, proto int) (fd int, err error)
 
 ```
 searchKey: syscall.socketpair
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27263,7 +27263,7 @@ func socketpair(domain int, typ int, proto int, fd *[2]int32) (err error)
 
 ```
 searchKey: syscall.sysctl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27274,7 +27274,7 @@ func sysctl(mib []_C_int, old *byte, oldlen *uintptr, new *byte, newlen uintptr)
 
 ```
 searchKey: syscall.unlinkat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27285,7 +27285,7 @@ func unlinkat(fd int, path string, flags int) (err error)
 
 ```
 searchKey: syscall.unsetenv_c
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27296,7 +27296,7 @@ func unsetenv_c(k string)
 
 ```
 searchKey: syscall.utimensat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27307,7 +27307,7 @@ func utimensat(dirfd int, path string, times *[2]Timespec, flag int) error
 
 ```
 searchKey: syscall.utimes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27318,7 +27318,7 @@ func utimes(path string, timeval *[2]Timeval) (err error)
 
 ```
 searchKey: syscall.wait4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27329,7 +27329,7 @@ func wait4(pid int, wstatus *_C_int, options int, rusage *Rusage) (wpid int, err
 
 ```
 searchKey: syscall.write
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27340,7 +27340,7 @@ func write(fd int, p []byte) (n int, err error)
 
 ```
 searchKey: syscall.writelen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27351,7 +27351,7 @@ func writelen(fd int, buf *byte, nbuf int) (n int, err error)
 
 ```
 searchKey: syscall.writev
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

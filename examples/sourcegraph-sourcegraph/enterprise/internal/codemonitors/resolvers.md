@@ -144,7 +144,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MonitorKind" href="#MonitorKind">const MonitorKind</a>
@@ -304,7 +304,7 @@ const triggerEventPagingFmtStr = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="stateToStatus" href="#stateToStatus">var stateToStatus</a>
@@ -323,7 +323,7 @@ stateToStatus maps the state of the dbworker job to the public GraphQL status of
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Option" href="#Option">type Option interface</a>
@@ -343,7 +343,7 @@ type Option interface {
 
 ```
 searchKey: resolvers.WithActions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -354,7 +354,7 @@ func WithActions(actions []*graphqlbackend.CreateActionArgs) Option
 
 ```
 searchKey: resolvers.WithOwner
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -365,7 +365,7 @@ func WithOwner(owner graphql.ID) Option
 
 ```
 searchKey: resolvers.WithPostHooks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -389,7 +389,7 @@ type Resolver struct {
 
 ```
 searchKey: resolvers.newTestResolver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -446,7 +446,7 @@ func (r *Resolver) Monitors(ctx context.Context, userID int32, args *graphqlback
 
 ```
 searchKey: resolvers.Resolver.NodeResolvers
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -457,7 +457,7 @@ func (r *Resolver) NodeResolvers() map[string]graphqlbackend.NodeByIDFunc
 
 ```
 searchKey: resolvers.Resolver.Now
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -634,7 +634,7 @@ Action <<UNION>>
 
 ```
 searchKey: resolvers.action.ToMonitorEmail
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -707,7 +707,7 @@ func (m *monitor) Actions(ctx context.Context, args *graphqlbackend.ListActionAr
 
 ```
 searchKey: resolvers.monitor.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -729,7 +729,7 @@ func (m *monitor) CreatedBy(ctx context.Context) (*graphqlbackend.UserResolver, 
 
 ```
 searchKey: resolvers.monitor.Description
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -740,7 +740,7 @@ func (m *monitor) Description() string
 
 ```
 searchKey: resolvers.monitor.Enabled
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -751,7 +751,7 @@ func (m *monitor) Enabled() bool
 
 ```
 searchKey: resolvers.monitor.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -899,7 +899,7 @@ MonitorEvent
 
 ```
 searchKey: resolvers.monitorActionEvent.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -910,7 +910,7 @@ func (m *monitorActionEvent) ID() graphql.ID
 
 ```
 searchKey: resolvers.monitorActionEvent.Message
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -921,7 +921,7 @@ func (m *monitorActionEvent) Message() *string
 
 ```
 searchKey: resolvers.monitorActionEvent.Status
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -932,7 +932,7 @@ func (m *monitorActionEvent) Status() (string, error)
 
 ```
 searchKey: resolvers.monitorActionEvent.Timestamp
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1064,7 +1064,7 @@ Email
 
 ```
 searchKey: resolvers.monitorEmail.Enabled
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1086,7 +1086,7 @@ func (m *monitorEmail) Events(ctx context.Context, args *graphqlbackend.ListEven
 
 ```
 searchKey: resolvers.monitorEmail.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1097,7 +1097,7 @@ func (m *monitorEmail) Header() string
 
 ```
 searchKey: resolvers.monitorEmail.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1108,7 +1108,7 @@ func (m *monitorEmail) ID() graphql.ID
 
 ```
 searchKey: resolvers.monitorEmail.Priority
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1157,7 +1157,7 @@ func (q *monitorQuery) Events(ctx context.Context, args *graphqlbackend.ListEven
 
 ```
 searchKey: resolvers.monitorQuery.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1168,7 +1168,7 @@ func (q *monitorQuery) ID() graphql.ID
 
 ```
 searchKey: resolvers.monitorQuery.Query
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1194,7 +1194,7 @@ MonitorTrigger <<UNION>>
 
 ```
 searchKey: resolvers.monitorTrigger.ToMonitorQuery
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1233,7 +1233,7 @@ func (m *monitorTriggerEvent) Actions(ctx context.Context, args *graphqlbackend.
 
 ```
 searchKey: resolvers.monitorTriggerEvent.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1244,7 +1244,7 @@ func (m *monitorTriggerEvent) ID() graphql.ID
 
 ```
 searchKey: resolvers.monitorTriggerEvent.Message
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1255,7 +1255,7 @@ func (m *monitorTriggerEvent) Message() *string
 
 ```
 searchKey: resolvers.monitorTriggerEvent.Status
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1266,7 +1266,7 @@ func (m *monitorTriggerEvent) Status() (string, error)
 
 ```
 searchKey: resolvers.monitorTriggerEvent.Timestamp
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1404,7 +1404,7 @@ type testUser struct {
 
 ```
 searchKey: resolvers.testUser.id
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1414,14 +1414,14 @@ func (u *testUser) id() graphql.ID
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewResolver" href="#NewResolver">func NewResolver(db dbutil.DB) graphqlbackend.CodeMonitorsResolver</a>
 
 ```
 searchKey: resolvers.NewResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1434,7 +1434,7 @@ NewResolver returns a new Resolver that uses the given database
 
 ```
 searchKey: resolvers.TestCreateCodeMonitor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1445,7 +1445,7 @@ func TestCreateCodeMonitor(t *testing.T)
 
 ```
 searchKey: resolvers.TestEditCodeMonitor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1456,7 +1456,7 @@ func TestEditCodeMonitor(t *testing.T)
 
 ```
 searchKey: resolvers.TestIsAllowedToCreate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1467,7 +1467,7 @@ func TestIsAllowedToCreate(t *testing.T)
 
 ```
 searchKey: resolvers.TestIsAllowedToEdit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1478,7 +1478,7 @@ func TestIsAllowedToEdit(t *testing.T)
 
 ```
 searchKey: resolvers.TestListCodeMonitors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1489,7 +1489,7 @@ func TestListCodeMonitors(t *testing.T)
 
 ```
 searchKey: resolvers.TestMonitorKindEqualsResolvers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1500,7 +1500,7 @@ func TestMonitorKindEqualsResolvers(t *testing.T)
 
 ```
 searchKey: resolvers.TestQueryMonitor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1511,7 +1511,7 @@ func TestQueryMonitor(t *testing.T)
 
 ```
 searchKey: resolvers.TestTriggerTestEmailAction
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1522,7 +1522,7 @@ func TestTriggerTestEmailAction(t *testing.T)
 
 ```
 searchKey: resolvers.actionEventPaging
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1533,7 +1533,7 @@ func actionEventPaging(ctx context.Context, t *testing.T, schema *graphql.Schema
 
 ```
 searchKey: resolvers.actionPaging
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1544,7 +1544,7 @@ func actionPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, use
 
 ```
 searchKey: resolvers.addUserToOrg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1566,7 +1566,7 @@ func init()
 
 ```
 searchKey: resolvers.insertTestUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1577,7 +1577,7 @@ func insertTestUser(t *testing.T, db *sql.DB, name string, isAdmin bool) (userID
 
 ```
 searchKey: resolvers.marshalDateTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1588,7 +1588,7 @@ func marshalDateTime(t testing.TB, ts time.Time) string
 
 ```
 searchKey: resolvers.monitorPaging
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1599,7 +1599,7 @@ func monitorPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, us
 
 ```
 searchKey: resolvers.newResolverWithClock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1612,7 +1612,7 @@ newResolverWithClock is used in tests to set the clock manually.
 
 ```
 searchKey: resolvers.ownerForID64Query
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1623,7 +1623,7 @@ func ownerForID64Query(ctx context.Context, monitorID int64) (*sqlf.Query, error
 
 ```
 searchKey: resolvers.queryByID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1634,7 +1634,7 @@ func queryByID(ctx context.Context, t *testing.T, schema *graphql.Schema, r *Res
 
 ```
 searchKey: resolvers.queryByUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1645,7 +1645,7 @@ func queryByUser(ctx context.Context, t *testing.T, schema *graphql.Schema, r *R
 
 ```
 searchKey: resolvers.recipientPaging
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1656,7 +1656,7 @@ func recipientPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, 
 
 ```
 searchKey: resolvers.requireHasNextPage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1667,7 +1667,7 @@ func requireHasNextPage(t *testing.T, r graphqlbackend.MonitorConnectionResolver
 
 ```
 searchKey: resolvers.requireNodeCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1678,7 +1678,7 @@ func requireNodeCount(t *testing.T, r graphqlbackend.MonitorConnectionResolver, 
 
 ```
 searchKey: resolvers.sendTestEmail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1689,7 +1689,7 @@ func sendTestEmail(ctx context.Context, recipient graphql.ID, description string
 
 ```
 searchKey: resolvers.splitActionIDs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1702,7 +1702,7 @@ splitActionIDs splits actions into three buckets: create, delete and update. Not
 
 ```
 searchKey: resolvers.triggerEventPaging
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

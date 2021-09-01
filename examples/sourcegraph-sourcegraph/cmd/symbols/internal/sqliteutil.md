@@ -12,7 +12,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="libSqlite3Pcre" href="#libSqlite3Pcre">var libSqlite3Pcre</a>
@@ -29,7 +29,7 @@ var libSqlite3Pcre = env.Get("LIBSQLITE3_PCRE", "", "path to the libsqlite3-pcre
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MustRegisterSqlite3WithPcre" href="#MustRegisterSqlite3WithPcre">func MustRegisterSqlite3WithPcre()</a>

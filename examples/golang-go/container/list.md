@@ -56,10 +56,6 @@ for e := l.Front(); e != nil; e = e.Next() {
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Element" href="#Element">type Element struct</a>
 
 ```
@@ -90,7 +86,7 @@ Element is an element of a linked list.
 
 ```
 searchKey: list.Element.Next
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -103,7 +99,7 @@ Next returns the next list element or nil.
 
 ```
 searchKey: list.Element.Prev
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -145,7 +141,7 @@ New returns an initialized list.
 
 ```
 searchKey: list.List.Back
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -158,7 +154,7 @@ Back returns the last element of list l or nil if the list is empty.
 
 ```
 searchKey: list.List.Front
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -171,7 +167,7 @@ Front returns the first element of list l or nil if the list is empty.
 
 ```
 searchKey: list.List.Init
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -210,7 +206,7 @@ InsertBefore inserts a new element e with value v immediately before mark and re
 
 ```
 searchKey: list.List.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -366,7 +362,7 @@ insertValue is a convenience wrapper for insert(&Element{Value: v}, at).
 
 ```
 searchKey: list.List.lazyInit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -403,15 +399,11 @@ remove removes e from its list, decrements l.len, and returns e.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestExtending" href="#TestExtending">func TestExtending(t *testing.T)</a>
 
 ```
 searchKey: list.TestExtending
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -422,7 +414,7 @@ func TestExtending(t *testing.T)
 
 ```
 searchKey: list.TestInsertAfterUnknownMark
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -435,7 +427,7 @@ Test that a list l is not modified when calling InsertAfter with a mark that is 
 
 ```
 searchKey: list.TestInsertBeforeUnknownMark
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -448,7 +440,7 @@ Test that a list l is not modified when calling InsertBefore with a mark that is
 
 ```
 searchKey: list.TestIssue4103
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -459,7 +451,7 @@ func TestIssue4103(t *testing.T)
 
 ```
 searchKey: list.TestIssue6349
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -470,7 +462,7 @@ func TestIssue6349(t *testing.T)
 
 ```
 searchKey: list.TestList
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -481,7 +473,7 @@ func TestList(t *testing.T)
 
 ```
 searchKey: list.TestMove
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -492,7 +484,7 @@ func TestMove(t *testing.T)
 
 ```
 searchKey: list.TestMoveUnknownMark
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -505,7 +497,7 @@ Test that a list l is not modified when calling MoveAfter or MoveBefore with a m
 
 ```
 searchKey: list.TestRemove
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -516,7 +508,7 @@ func TestRemove(t *testing.T)
 
 ```
 searchKey: list.TestZeroList
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -529,7 +521,7 @@ Test PushFront, PushBack, PushFrontList, PushBackList with uninitialized List
 
 ```
 searchKey: list.checkList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -540,7 +532,7 @@ func checkList(t *testing.T, l *List, es []interface{})
 
 ```
 searchKey: list.checkListLen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -551,7 +543,7 @@ func checkListLen(t *testing.T, l *List, len int) bool
 
 ```
 searchKey: list.checkListPointers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -75,10 +75,6 @@ This package parses both the original “// +build” syntax and the “//go:bui
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="constraintTests" href="#constraintTests">var constraintTests</a>
 
 ```
@@ -191,10 +187,6 @@ var plusBuildLinesTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AndExpr" href="#AndExpr">type AndExpr struct</a>
 
 ```
@@ -225,7 +217,7 @@ func (x *AndExpr) Eval(ok func(tag string) bool) bool
 
 ```
 searchKey: constraint.AndExpr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -236,7 +228,7 @@ func (x *AndExpr) String() string
 
 ```
 searchKey: constraint.AndExpr.isExpr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -273,7 +265,7 @@ An Expr is a build tag constraint expression. The underlying concrete type is *A
 
 ```
 searchKey: constraint.Parse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -286,7 +278,7 @@ Parse parses a single build constraint line of the form “//go:build ...” or 
 
 ```
 searchKey: constraint.and
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -297,7 +289,7 @@ func and(x, y Expr) Expr
 
 ```
 searchKey: constraint.not
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -308,7 +300,7 @@ func not(x Expr) Expr
 
 ```
 searchKey: constraint.or
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -319,7 +311,7 @@ func or(x, y Expr) Expr
 
 ```
 searchKey: constraint.parseExpr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -332,7 +324,7 @@ parseExpr parses a boolean build tag expression.
 
 ```
 searchKey: constraint.parsePlusBuildExpr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -345,7 +337,7 @@ parsePlusBuildExpr parses a legacy build tag expression (as used with “// +bui
 
 ```
 searchKey: constraint.pushNot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -358,7 +350,7 @@ pushNot applies DeMorgan's law to push negations down the expression, so that on
 
 ```
 searchKey: constraint.tag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -395,7 +387,7 @@ func (x *NotExpr) Eval(ok func(tag string) bool) bool
 
 ```
 searchKey: constraint.NotExpr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -406,7 +398,7 @@ func (x *NotExpr) String() string
 
 ```
 searchKey: constraint.NotExpr.isExpr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -443,7 +435,7 @@ func (x *OrExpr) Eval(ok func(tag string) bool) bool
 
 ```
 searchKey: constraint.OrExpr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -454,7 +446,7 @@ func (x *OrExpr) String() string
 
 ```
 searchKey: constraint.OrExpr.isExpr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -481,7 +473,7 @@ A SyntaxError reports a syntax error in a parsed build expression.
 
 ```
 searchKey: constraint.SyntaxError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -518,7 +510,7 @@ func (x *TagExpr) Eval(ok func(tag string) bool) bool
 
 ```
 searchKey: constraint.TagExpr.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -529,7 +521,7 @@ func (x *TagExpr) String() string
 
 ```
 searchKey: constraint.TagExpr.isExpr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -560,7 +552,7 @@ An exprParser holds state for parsing a build expression.
 
 ```
 searchKey: constraint.exprParser.and
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -573,7 +565,7 @@ and parses a sequence of && expressions. On entry, the next input token has not 
 
 ```
 searchKey: constraint.exprParser.atom
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -586,7 +578,7 @@ atom parses a tag or a parenthesized expression. On entry, the next input token 
 
 ```
 searchKey: constraint.exprParser.lex
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -599,7 +591,7 @@ lex finds and consumes the next token in the input stream. On return, p.tok is s
 
 ```
 searchKey: constraint.exprParser.not
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -612,7 +604,7 @@ not parses a ! expression. On entry, the next input token has not yet been lexed
 
 ```
 searchKey: constraint.exprParser.or
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -623,15 +615,11 @@ or parses a sequence of || expressions. On entry, the next input token has not y
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="IsGoBuild" href="#IsGoBuild">func IsGoBuild(line string) bool</a>
 
 ```
 searchKey: constraint.IsGoBuild
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -644,7 +632,7 @@ IsGoBuild reports whether the line of text is a “//go:build” constraint. It 
 
 ```
 searchKey: constraint.IsPlusBuild
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -657,7 +645,7 @@ IsPlusBuild reports whether the line of text is a “// +build” constraint. It
 
 ```
 searchKey: constraint.PlusBuildLines
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -670,7 +658,7 @@ PlusBuildLines returns a sequence of “// +build” lines that evaluate to the 
 
 ```
 searchKey: constraint.TestExprEval
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -681,7 +669,7 @@ func TestExprEval(t *testing.T)
 
 ```
 searchKey: constraint.TestExprString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -692,7 +680,7 @@ func TestExprString(t *testing.T)
 
 ```
 searchKey: constraint.TestLex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -703,7 +691,7 @@ func TestLex(t *testing.T)
 
 ```
 searchKey: constraint.TestParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -714,7 +702,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: constraint.TestParseError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -725,7 +713,7 @@ func TestParseError(t *testing.T)
 
 ```
 searchKey: constraint.TestParseExpr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -736,7 +724,7 @@ func TestParseExpr(t *testing.T)
 
 ```
 searchKey: constraint.TestParsePlusBuildExpr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -747,7 +735,7 @@ func TestParsePlusBuildExpr(t *testing.T)
 
 ```
 searchKey: constraint.TestPlusBuildLines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -758,7 +746,7 @@ func TestPlusBuildLines(t *testing.T)
 
 ```
 searchKey: constraint.andArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -769,7 +757,7 @@ func andArg(x Expr) string
 
 ```
 searchKey: constraint.appendSplitAnd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -782,7 +770,7 @@ appendSplitAnd appends x to list while splitting apart any top-level && expressi
 
 ```
 searchKey: constraint.appendSplitOr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -795,7 +783,7 @@ appendSplitOr appends x to list while splitting apart any top-level || expressio
 
 ```
 searchKey: constraint.isValidTag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -808,7 +796,7 @@ isValidTag reports whether the word is a valid build tag. Tags must be letters, 
 
 ```
 searchKey: constraint.lexHelp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -819,7 +807,7 @@ func lexHelp(p *exprParser) (tok string, err error)
 
 ```
 searchKey: constraint.orArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -830,7 +818,7 @@ func orArg(x Expr) string
 
 ```
 searchKey: constraint.splitGoBuild
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -843,7 +831,7 @@ splitGoBuild splits apart the leading //go:build prefix in line from the build e
 
 ```
 searchKey: constraint.splitPlusBuild
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -149,10 +149,6 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AWSCodeCommitSchemaJSON" href="#AWSCodeCommitSchemaJSON">var AWSCodeCommitSchemaJSON</a>
 
 ```
@@ -323,10 +319,6 @@ var SiteSchemaJSON string
 SiteSchemaJSON is the content of the file "site.schema.json". 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="AWSCodeCommitConnection" href="#AWSCodeCommitConnection">type AWSCodeCommitConnection struct</a>
 
@@ -531,7 +523,7 @@ type AuthProviders struct {
 
 ```
 searchKey: schema.AuthProviders.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -749,7 +741,7 @@ BitbucketServerConnection description: Configuration for a connection to Bitbuck
 
 ```
 searchKey: schema.BitbucketServerConnection.WebhookSecret
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -777,7 +769,7 @@ BitbucketServerIdentityProvider description: The source of identity to use when 
 
 ```
 searchKey: schema.BitbucketServerIdentityProvider.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1084,7 +1076,7 @@ EncryptionKey description: Config for a key
 
 ```
 searchKey: schema.EncryptionKey.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1781,7 +1773,7 @@ IdentityProvider description: The source of identity to use when computing permi
 
 ```
 searchKey: schema.IdentityProvider.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1974,7 +1966,7 @@ type Notifier struct {
 
 ```
 searchKey: schema.Notifier.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go

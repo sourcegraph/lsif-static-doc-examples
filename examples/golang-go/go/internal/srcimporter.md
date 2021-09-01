@@ -39,7 +39,7 @@ Package srcimporter implements importing directly from source files rather than 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="maxTime" href="#maxTime">const maxTime</a>
@@ -56,7 +56,7 @@ const maxTime = 2 * time.Second
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="importedObjectTests" href="#importedObjectTests">var importedObjectTests</a>
@@ -97,7 +97,7 @@ Importing is a sentinel taking the place in Importer.packages for a package that
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Importer" href="#Importer">type Importer struct</a>
@@ -122,7 +122,7 @@ An Importer provides the context for importing packages from source code.
 
 ```
 searchKey: srcimporter.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -215,14 +215,14 @@ func (p *Importer) parseFiles(dir string, filenames []string) ([]*ast.File, erro
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestCgo" href="#TestCgo">func TestCgo(t *testing.T)</a>
 
 ```
 searchKey: srcimporter.TestCgo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -233,7 +233,7 @@ func TestCgo(t *testing.T)
 
 ```
 searchKey: srcimporter.TestImportStdLib
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -244,7 +244,7 @@ func TestImportStdLib(t *testing.T)
 
 ```
 searchKey: srcimporter.TestImportedTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -255,7 +255,7 @@ func TestImportedTypes(t *testing.T)
 
 ```
 searchKey: srcimporter.TestIssue20855
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -266,7 +266,7 @@ func TestIssue20855(t *testing.T)
 
 ```
 searchKey: srcimporter.TestIssue23092
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -279,7 +279,7 @@ TestIssue23092 tests relative imports.
 
 ```
 searchKey: srcimporter.TestIssue24392
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -292,7 +292,7 @@ TestIssue24392 tests imports against a path containing 'testdata'.
 
 ```
 searchKey: srcimporter.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -303,7 +303,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: srcimporter.TestReimport
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -314,7 +314,7 @@ func TestReimport(t *testing.T)
 
 ```
 searchKey: srcimporter.doImport
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -325,7 +325,7 @@ func doImport(t *testing.T, path, srcDir string)
 
 ```
 searchKey: srcimporter.setUsesCgo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -336,7 +336,7 @@ func setUsesCgo(conf *types.Config)
 
 ```
 searchKey: srcimporter.testImportPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -347,7 +347,7 @@ func testImportPath(t *testing.T, pkgPath string)
 
 ```
 searchKey: srcimporter.verifyInterfaceMethodRecvs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -360,7 +360,7 @@ verifyInterfaceMethodRecvs verifies that method receiver types are named if the 
 
 ```
 searchKey: srcimporter.walkDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

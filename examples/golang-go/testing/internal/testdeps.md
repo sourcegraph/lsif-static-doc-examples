@@ -32,7 +32,7 @@ This package is imported by the generated main package, which passes TestDeps in
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ImportPath" href="#ImportPath">var ImportPath</a>
@@ -84,7 +84,7 @@ var matchRe *regexp.Regexp
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestDeps" href="#TestDeps">type TestDeps struct{}</a>
@@ -104,7 +104,7 @@ TestDeps is an implementation of the testing.testDeps interface, suitable for pa
 
 ```
 searchKey: testdeps.TestDeps.ImportPath
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -161,7 +161,7 @@ func (TestDeps) StartTestLog(w io.Writer)
 
 ```
 searchKey: testdeps.TestDeps.StopCPUProfile
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ func (TestDeps) StopCPUProfile()
 
 ```
 searchKey: testdeps.TestDeps.StopTestLog
-tags: [function]
+tags: [method]
 ```
 
 ```Go

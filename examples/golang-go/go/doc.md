@@ -180,10 +180,6 @@ Package doc extracts source code documentation from a Go AST.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AllDecls" href="#AllDecls">const AllDecls</a>
 
 ```
@@ -386,10 +382,6 @@ const urquo = "”"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="IllegalPrefixes" href="#IllegalPrefixes">var IllegalPrefixes</a>
 
@@ -785,10 +777,6 @@ var update = flag.Bool("update", false, "update golden (.out) files")
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Example" href="#Example">type Example struct</a>
 
 ```
@@ -856,7 +844,7 @@ Func is the documentation for a func declaration.
 
 ```
 searchKey: doc.customizeRecv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -932,7 +920,7 @@ Package is the documentation for an entire package.
 
 ```
 searchKey: doc.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -945,7 +933,7 @@ New computes the package documentation for the given package AST. New takes owne
 
 ```
 searchKey: doc.NewFromFiles
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1069,7 +1057,7 @@ type data struct {
 
 ```
 searchKey: doc.data.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1133,7 +1121,7 @@ type lineWrapper struct {
 
 ```
 searchKey: doc.lineWrapper.flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1263,7 +1251,7 @@ reader accumulates documentation for a single package. It modifies the AST: Comm
 
 ```
 searchKey: doc.reader.cleanupTypes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1289,7 +1277,7 @@ collectEmbeddedMethods collects the embedded methods of typ in mset.
 
 ```
 searchKey: doc.reader.computeMethodSets
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1546,15 +1534,11 @@ func (r *reader) remember(typ *ast.InterfaceType)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Examples" href="#Examples">func Examples(testFiles ...*ast.File) []*Example</a>
 
 ```
 searchKey: doc.Examples
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1579,7 +1563,7 @@ Playable Examples must be in a package whose name ends in "_test". An Example is
 
 ```
 searchKey: doc.IsPredeclared
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1592,7 +1576,7 @@ IsPredeclared reports whether s is a predeclared identifier.
 
 ```
 searchKey: doc.Synopsis
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1605,7 +1589,7 @@ Synopsis returns a cleaned version of the first sentence in s. That sentence end
 
 ```
 searchKey: doc.Test
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1616,7 +1600,7 @@ func Test(t *testing.T)
 
 ```
 searchKey: doc.TestAnchorID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1627,7 +1611,7 @@ func TestAnchorID(t *testing.T)
 
 ```
 searchKey: doc.TestBlocks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1638,7 +1622,7 @@ func TestBlocks(t *testing.T)
 
 ```
 searchKey: doc.TestCommentEscape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1649,7 +1633,7 @@ func TestCommentEscape(t *testing.T)
 
 ```
 searchKey: doc.TestEmphasize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1660,7 +1644,7 @@ func TestEmphasize(t *testing.T)
 
 ```
 searchKey: doc.TestIsHeading
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1671,7 +1655,7 @@ func TestIsHeading(t *testing.T)
 
 ```
 searchKey: doc.TestSynopsis
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1682,7 +1666,7 @@ func TestSynopsis(t *testing.T)
 
 ```
 searchKey: doc.TestToText
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1693,7 +1677,7 @@ func TestToText(t *testing.T)
 
 ```
 searchKey: doc.ToHTML
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1716,7 +1700,7 @@ Go identifiers that appear in the words map are italicized; if the corresponding
 
 ```
 searchKey: doc.ToText
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1731,7 +1715,7 @@ A pair of (consecutive) backticks (`) is converted to a unicode left quote (“)
 
 ```
 searchKey: doc.anchorID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1742,7 +1726,7 @@ func anchorID(line string) string
 
 ```
 searchKey: doc.baseTypeName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1755,7 +1739,7 @@ baseTypeName returns the name of the base type of x (or "") and whether the type
 
 ```
 searchKey: doc.blocks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1766,7 +1750,7 @@ func blocks(text string) []block
 
 ```
 searchKey: doc.classifyExamples
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1790,7 +1774,7 @@ Examples with malformed names are not associated with anything.
 
 ```
 searchKey: doc.clean
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1803,7 +1787,7 @@ clean replaces each sequence of space, \n, \r, or \t characters with a single sp
 
 ```
 searchKey: doc.commentEscape
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1816,7 +1800,7 @@ Escape comment text for HTML. If nice is set, also turn ` into &ldquo; and ' int
 
 ```
 searchKey: doc.commonPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1827,7 +1811,7 @@ func commonPrefix(a, b string) string
 
 ```
 searchKey: doc.convertQuotes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1838,7 +1822,7 @@ func convertQuotes(text string) string
 
 ```
 searchKey: doc.copyConstType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1851,7 +1835,7 @@ copyConstType returns a copy of typ with position pos. typ must be a valid const
 
 ```
 searchKey: doc.emphasize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1864,7 +1848,7 @@ Emphasize and escape a line of text for HTML. URLs are converted into links; if 
 
 ```
 searchKey: doc.exampleOutput
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1877,7 +1861,7 @@ Extracts the expected output and whether there was a valid output comment
 
 ```
 searchKey: doc.fields
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1890,7 +1874,7 @@ fields returns a struct's fields or an interface's methods.
 
 ```
 searchKey: doc.filterCompositeLit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1901,7 +1885,7 @@ func filterCompositeLit(lit *ast.CompositeLit, filter Filter, export bool)
 
 ```
 searchKey: doc.filterExprList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1912,7 +1896,7 @@ func filterExprList(list []ast.Expr, filter Filter, export bool) []ast.Expr
 
 ```
 searchKey: doc.filterFuncs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1923,7 +1907,7 @@ func filterFuncs(a []*Func, f Filter) []*Func
 
 ```
 searchKey: doc.filterIdentList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1936,7 +1920,7 @@ filterIdentList removes unexported names from list in place and returns the resu
 
 ```
 searchKey: doc.filterTypes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1947,7 +1931,7 @@ func filterTypes(a []*Type, f Filter) []*Type
 
 ```
 searchKey: doc.filterValues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1958,7 +1942,7 @@ func filterValues(a []*Value, f Filter) []*Value
 
 ```
 searchKey: doc.firstSentenceLen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1971,7 +1955,7 @@ firstSentenceLen returns the length of the first sentence in s. The sentence end
 
 ```
 searchKey: doc.hasExportedName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1984,7 +1968,7 @@ hasExportedName reports whether list contains any exported names.
 
 ```
 searchKey: doc.heading
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1997,7 +1981,7 @@ heading returns the trimmed line if it passes as a section heading; otherwise it
 
 ```
 searchKey: doc.indentFmt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2008,7 +1992,7 @@ func indentFmt(indent, s string) string
 
 ```
 searchKey: doc.indentLen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2019,7 +2003,7 @@ func indentLen(s string) int
 
 ```
 searchKey: doc.isBlank
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2030,7 +2014,7 @@ func isBlank(s string) bool
 
 ```
 searchKey: doc.isExampleSuffix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2041,7 +2025,7 @@ func isExampleSuffix(s string) bool
 
 ```
 searchKey: doc.isGoFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2052,7 +2036,7 @@ func isGoFile(fi fs.FileInfo) bool
 
 ```
 searchKey: doc.isTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2065,7 +2049,7 @@ isTest tells whether name looks like a test, example, or benchmark. It is a Test
 
 ```
 searchKey: doc.lastComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2078,7 +2062,7 @@ lastComment returns the last comment inside the provided block.
 
 ```
 searchKey: doc.matchDecl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2089,7 +2073,7 @@ func matchDecl(d *ast.GenDecl, f Filter) bool
 
 ```
 searchKey: doc.matchFields
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2100,7 +2084,7 @@ func matchFields(fields *ast.FieldList, f Filter) bool
 
 ```
 searchKey: doc.nodeFmt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2111,7 +2095,7 @@ func nodeFmt(node interface{}, fset *token.FileSet) string
 
 ```
 searchKey: doc.noteBodies
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2124,7 +2108,7 @@ noteBodies returns a list of note body strings given a list of notes. This is on
 
 ```
 searchKey: doc.playExample
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2137,7 +2121,7 @@ playExample synthesizes a new *ast.File based on the provided file with the prov
 
 ```
 searchKey: doc.playExampleFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2150,7 +2134,7 @@ playExampleFile takes a whole file example and synthesizes a new *ast.File such 
 
 ```
 searchKey: doc.readTemplate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2161,7 +2145,7 @@ func readTemplate(filename string) *template.Template
 
 ```
 searchKey: doc.recvString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2174,7 +2158,7 @@ recvString returns a string representation of recv of the form "T", "*T", or "BA
 
 ```
 searchKey: doc.removeErrorField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2187,7 +2171,7 @@ removeErrorField removes anonymous fields named "error" from an interface. This 
 
 ```
 searchKey: doc.removeStar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2198,7 +2182,7 @@ func removeStar(s string) string
 
 ```
 searchKey: doc.simpleImporter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2211,7 +2195,7 @@ simpleImporter returns a (dummy) package object named by the last path component
 
 ```
 searchKey: doc.sortBy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2224,7 +2208,7 @@ sortBy is a helper function for sorting
 
 ```
 searchKey: doc.sortedFuncs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2235,7 +2219,7 @@ func sortedFuncs(m methodSet, allMethods bool) []*Func
 
 ```
 searchKey: doc.sortedKeys
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2246,7 +2230,7 @@ func sortedKeys(m map[string]int) []string
 
 ```
 searchKey: doc.sortedTypes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2257,7 +2241,7 @@ func sortedTypes(m map[string]*namedType, allMethods bool) []*Type
 
 ```
 searchKey: doc.sortedValues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2268,7 +2252,7 @@ func sortedValues(m []*Value, tok token.Token) []*Value
 
 ```
 searchKey: doc.sortingName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2281,7 +2265,7 @@ sortingName returns the name to use when sorting d into place.
 
 ```
 searchKey: doc.specNames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2292,7 +2276,7 @@ func specNames(specs []ast.Spec) []string
 
 ```
 searchKey: doc.splitExampleName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2307,7 +2291,7 @@ One of i == len(s) or s[i] == '_' must be true.
 
 ```
 searchKey: doc.stripOutputComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2320,7 +2304,7 @@ stripOutputComment finds and removes the "Output:" or "Unordered output:" commen
 
 ```
 searchKey: doc.synopsisFmt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2331,7 +2315,7 @@ func synopsisFmt(s string) string
 
 ```
 searchKey: doc.test
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2342,7 +2326,7 @@ func test(t *testing.T, mode Mode)
 
 ```
 searchKey: doc.unindent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2353,7 +2337,7 @@ func unindent(block []string)
 
 ```
 searchKey: doc.updateIdentList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

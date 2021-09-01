@@ -104,10 +104,6 @@ By default, a Scanner skips white space and Go comments and recognizes all liter
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Char" href="#Char">const Char</a>
 
 ```
@@ -445,10 +441,6 @@ internal use only
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="f100" href="#f100">var f100</a>
 
 ```
@@ -495,10 +487,6 @@ var tokenString = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Position" href="#Position">type Position struct</a>
 
 ```
@@ -521,7 +509,7 @@ A source position is represented by a Position value. A position is valid if Lin
 
 ```
 searchKey: scanner.Position.IsValid
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -534,7 +522,7 @@ IsValid reports whether the position is valid.
 
 ```
 searchKey: scanner.Position.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -631,7 +619,7 @@ Init initializes a Scanner with a new source and returns s. Error is set to nil,
 
 ```
 searchKey: scanner.Scanner.Next
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -644,7 +632,7 @@ Next reads and returns the next Unicode character. It returns EOF at the end of 
 
 ```
 searchKey: scanner.Scanner.Peek
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -657,7 +645,7 @@ Peek returns the next Unicode character in the source without advancing the scan
 
 ```
 searchKey: scanner.Scanner.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -670,7 +658,7 @@ Pos returns the position of the character immediately after the character or tok
 
 ```
 searchKey: scanner.Scanner.Scan
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -683,7 +671,7 @@ Scan reads the next token or Unicode character from source and returns it. It on
 
 ```
 searchKey: scanner.Scanner.TokenText
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -742,7 +730,7 @@ func (s *Scanner) isIdentRune(ch rune, i int) bool
 
 ```
 searchKey: scanner.Scanner.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -755,7 +743,7 @@ next reads and returns the next Unicode character. It is designed such that only
 
 ```
 searchKey: scanner.Scanner.scanChar
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -799,7 +787,7 @@ func (s *Scanner) scanEscape(quote rune) rune
 
 ```
 searchKey: scanner.Scanner.scanIdentifier
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -821,7 +809,7 @@ func (s *Scanner) scanNumber(ch rune, seenDot bool) (rune, rune)
 
 ```
 searchKey: scanner.Scanner.scanRawString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -928,15 +916,11 @@ type token struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestError" href="#TestError">func TestError(t *testing.T)</a>
 
 ```
 searchKey: scanner.TestError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -947,7 +931,7 @@ func TestError(t *testing.T)
 
 ```
 searchKey: scanner.TestIOError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -958,7 +942,7 @@ func TestIOError(t *testing.T)
 
 ```
 searchKey: scanner.TestInvalidExponent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -969,7 +953,7 @@ func TestInvalidExponent(t *testing.T)
 
 ```
 searchKey: scanner.TestIssue29723
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -980,7 +964,7 @@ func TestIssue29723(t *testing.T)
 
 ```
 searchKey: scanner.TestIssue30320
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -991,7 +975,7 @@ func TestIssue30320(t *testing.T)
 
 ```
 searchKey: scanner.TestNext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1002,7 +986,7 @@ func TestNext(t *testing.T)
 
 ```
 searchKey: scanner.TestNextEOFHandling
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1013,7 +997,7 @@ func TestNextEOFHandling(t *testing.T)
 
 ```
 searchKey: scanner.TestNumbers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1024,7 +1008,7 @@ func TestNumbers(t *testing.T)
 
 ```
 searchKey: scanner.TestPos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1035,7 +1019,7 @@ func TestPos(t *testing.T)
 
 ```
 searchKey: scanner.TestPosition
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1046,7 +1030,7 @@ func TestPosition(t *testing.T)
 
 ```
 searchKey: scanner.TestScan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1057,7 +1041,7 @@ func TestScan(t *testing.T)
 
 ```
 searchKey: scanner.TestScanCustomIdent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1068,7 +1052,7 @@ func TestScanCustomIdent(t *testing.T)
 
 ```
 searchKey: scanner.TestScanEOFHandling
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1079,7 +1063,7 @@ func TestScanEOFHandling(t *testing.T)
 
 ```
 searchKey: scanner.TestScanNext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1090,7 +1074,7 @@ func TestScanNext(t *testing.T)
 
 ```
 searchKey: scanner.TestScanSelectedMask
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1101,7 +1085,7 @@ func TestScanSelectedMask(t *testing.T)
 
 ```
 searchKey: scanner.TestScanWhitespace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1112,7 +1096,7 @@ func TestScanWhitespace(t *testing.T)
 
 ```
 searchKey: scanner.TestScanZeroMode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1123,7 +1107,7 @@ func TestScanZeroMode(t *testing.T)
 
 ```
 searchKey: scanner.TokenString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1136,7 +1120,7 @@ TokenString returns a printable string for a token or Unicode character.
 
 ```
 searchKey: scanner.checkNextPos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1147,7 +1131,7 @@ func checkNextPos(t *testing.T, s *Scanner, offset, line, column int, char rune)
 
 ```
 searchKey: scanner.checkPos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1158,7 +1142,7 @@ func checkPos(t *testing.T, got, want Position)
 
 ```
 searchKey: scanner.checkScanPos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1169,7 +1153,7 @@ func checkScanPos(t *testing.T, s *Scanner, offset, line, column int, char rune)
 
 ```
 searchKey: scanner.checkTok
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1180,7 +1164,7 @@ func checkTok(t *testing.T, s *Scanner, line int, got, want rune, text string)
 
 ```
 searchKey: scanner.checkTokErr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1191,7 +1175,7 @@ func checkTokErr(t *testing.T, s *Scanner, line int, want rune, text string)
 
 ```
 searchKey: scanner.countNewlines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1202,7 +1186,7 @@ func countNewlines(s string) int
 
 ```
 searchKey: scanner.digitVal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1213,7 +1197,7 @@ func digitVal(ch rune) int
 
 ```
 searchKey: scanner.extractInts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1224,7 +1208,7 @@ func extractInts(t string, mode uint) (res string)
 
 ```
 searchKey: scanner.invalidSep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1237,7 +1221,7 @@ invalidSep returns the index of the first invalid separator in x, or -1.
 
 ```
 searchKey: scanner.isDecimal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1248,7 +1232,7 @@ func isDecimal(ch rune) bool
 
 ```
 searchKey: scanner.isHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1259,7 +1243,7 @@ func isHex(ch rune) bool
 
 ```
 searchKey: scanner.litname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1270,7 +1254,7 @@ func litname(prefix rune) string
 
 ```
 searchKey: scanner.lower
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1281,7 +1265,7 @@ func lower(ch rune) rune
 
 ```
 searchKey: scanner.makeSource
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1292,7 +1276,7 @@ func makeSource(pattern string) *bytes.Buffer
 
 ```
 searchKey: scanner.readRuneSegments
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1303,7 +1287,7 @@ func readRuneSegments(t *testing.T, segments []string)
 
 ```
 searchKey: scanner.testError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1314,7 +1298,7 @@ func testError(t *testing.T, src, pos, msg string, tok rune)
 
 ```
 searchKey: scanner.testScan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1325,7 +1309,7 @@ func testScan(t *testing.T, mode uint)
 
 ```
 searchKey: scanner.testScanSelectedMode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

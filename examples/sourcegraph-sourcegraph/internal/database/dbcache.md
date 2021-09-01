@@ -22,7 +22,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="defaultReposMaxAge" href="#defaultReposMaxAge">const defaultReposMaxAge</a>
@@ -41,7 +41,7 @@ defaultReposMaxAge is how long we cache the list of default repos. The list chan
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultRepoLister" href="#DefaultRepoLister">type DefaultRepoLister struct</a>
@@ -67,7 +67,7 @@ DefaultRepoLister holds the list of default repos which are cached for defaultRe
 
 ```
 searchKey: dbcache.NewDefaultRepoLister
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -142,7 +142,7 @@ type cachedRepos struct {
 
 ```
 searchKey: dbcache.cachedRepos.Repos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -154,14 +154,14 @@ Repos returns the current cached repos and boolean value indicating whether an u
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkDefaultRepos_List_Empty" href="#BenchmarkDefaultRepos_List_Empty">func BenchmarkDefaultRepos_List_Empty(b *testing.B)</a>
 
 ```
 searchKey: dbcache.BenchmarkDefaultRepos_List_Empty
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ func BenchmarkDefaultRepos_List_Empty(b *testing.B)
 
 ```
 searchKey: dbcache.TestListDefaultRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

@@ -57,7 +57,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefinitionsCountMigrationID" href="#DefinitionsCountMigrationID">const DefinitionsCountMigrationID</a>
@@ -181,7 +181,7 @@ const updateBatchUpdateQuery = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="temporaryTableExpression" href="#temporaryTableExpression">var temporaryTableExpression</a>
@@ -209,7 +209,7 @@ var temporaryTableName = "t_migration_payload"
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Migrator" href="#Migrator">type Migrator struct</a>
@@ -599,14 +599,14 @@ func (m *testMigrationDriver) MigrateRowUp(scanner scanner) ([]interface{}, erro
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewDiagnosticsCountMigrator" href="#NewDiagnosticsCountMigrator">func NewDiagnosticsCountMigrator(store *lsifstore.Store, batchSize int) oobmigration.Migrator</a>
 
 ```
 searchKey: migration.NewDiagnosticsCountMigrator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -619,7 +619,7 @@ NewDiagnosticsCountMigrator creates a new Migrator instance that reads records f
 
 ```
 searchKey: migration.NewDocumentColumnSplitMigrator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -632,7 +632,7 @@ NewDocumentColumnSplitMigrator creates a new Migrator instance that reads record
 
 ```
 searchKey: migration.NewLocationsCountMigrator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -645,7 +645,7 @@ NewLocationsCountMigrator creates a new Migrator instance that reads records fro
 
 ```
 searchKey: migration.TestDiagnosticsCountMigrator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -656,7 +656,7 @@ func TestDiagnosticsCountMigrator(t *testing.T)
 
 ```
 searchKey: migration.TestDocumentColumnSplitMigrator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -667,7 +667,7 @@ func TestDocumentColumnSplitMigrator(t *testing.T)
 
 ```
 searchKey: migration.TestLocationsCountMigrator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -678,7 +678,7 @@ func TestLocationsCountMigrator(t *testing.T)
 
 ```
 searchKey: migration.TestMigratorRemovesBoundsWithoutData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -700,7 +700,7 @@ func init()
 
 ```
 searchKey: migration.newMigrator
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

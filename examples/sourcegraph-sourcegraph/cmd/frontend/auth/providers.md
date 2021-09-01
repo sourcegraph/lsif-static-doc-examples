@@ -23,10 +23,6 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="MockProviders" href="#MockProviders">var MockProviders</a>
 
 ```
@@ -63,10 +59,6 @@ var curProvidersMu sync.RWMutex
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ConfigID" href="#ConfigID">type ConfigID struct</a>
 
@@ -164,7 +156,7 @@ An authentication provider implementation can have multiple Provider instances. 
 
 ```
 searchKey: providers.GetProviderByConfigID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -186,7 +178,7 @@ type sortProviders []Provider
 
 ```
 searchKey: providers.sortProviders.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -219,10 +211,6 @@ func (p sortProviders) Swap(i, j int)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BuiltinAuthEnabled" href="#BuiltinAuthEnabled">func BuiltinAuthEnabled() bool</a>
 
 ```
@@ -251,7 +239,7 @@ Providers returns the set of currently registered authentication providers. When
 
 ```
 searchKey: providers.Update
-tags: [method]
+tags: [function]
 ```
 
 ```Go

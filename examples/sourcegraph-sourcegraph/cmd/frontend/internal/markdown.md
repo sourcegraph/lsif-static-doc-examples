@@ -12,7 +12,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="once" href="#once">var once</a>
@@ -40,14 +40,14 @@ var policy *bluemonday.Policy
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Render" href="#Render">func Render(content string) string</a>
 
 ```
 searchKey: markdown.Render
-tags: [method]
+tags: [function]
 ```
 
 ```Go

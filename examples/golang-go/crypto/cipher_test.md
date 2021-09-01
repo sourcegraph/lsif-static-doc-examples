@@ -76,7 +76,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="almost1K" href="#almost1K">const almost1K</a>
@@ -106,7 +106,7 @@ const almost8K = 8*1024 - 5
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="aesGCMTests" href="#aesGCMTests">var aesGCMTests</a>
@@ -235,7 +235,7 @@ var ofbTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="noopBlock" href="#noopBlock">type noopBlock int</a>
@@ -253,7 +253,7 @@ type noopBlock int
 
 ```
 searchKey: cipher_test.noopBlock.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -316,7 +316,7 @@ type wrapper struct {
 
 ```
 searchKey: cipher_test.wrapper.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -348,14 +348,14 @@ func (w *wrapper) Encrypt(dst, src []byte)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkAESCBCDecrypt1K" href="#BenchmarkAESCBCDecrypt1K">func BenchmarkAESCBCDecrypt1K(b *testing.B)</a>
 
 ```
 searchKey: cipher_test.BenchmarkAESCBCDecrypt1K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -366,7 +366,7 @@ func BenchmarkAESCBCDecrypt1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCBCEncrypt1K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -377,7 +377,7 @@ func BenchmarkAESCBCEncrypt1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCFBDecrypt1K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -388,7 +388,7 @@ func BenchmarkAESCFBDecrypt1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCFBDecrypt8K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -399,7 +399,7 @@ func BenchmarkAESCFBDecrypt8K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCFBEncrypt1K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -410,7 +410,7 @@ func BenchmarkAESCFBEncrypt1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCTR1K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -421,7 +421,7 @@ func BenchmarkAESCTR1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESCTR8K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -432,7 +432,7 @@ func BenchmarkAESCTR8K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESGCM
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -443,7 +443,7 @@ func BenchmarkAESGCM(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkAESOFB1K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -454,7 +454,7 @@ func BenchmarkAESOFB1K(b *testing.B)
 
 ```
 searchKey: cipher_test.BenchmarkXORBytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -575,7 +575,7 @@ func ExampleStreamWriter()
 
 ```
 searchKey: cipher_test.TestAESGCM
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -586,7 +586,7 @@ func TestAESGCM(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCBCDecrypterAES
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -597,7 +597,7 @@ func TestCBCDecrypterAES(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCBCEncrypterAES
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -608,7 +608,7 @@ func TestCBCEncrypterAES(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCFBInverse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -619,7 +619,7 @@ func TestCFBInverse(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCFBVectors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -630,7 +630,7 @@ func TestCFBVectors(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCTR
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -641,7 +641,7 @@ func TestCTR(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCTR_AES
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -652,7 +652,7 @@ func TestCTR_AES(t *testing.T)
 
 ```
 searchKey: cipher_test.TestCryptBlocks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -663,7 +663,7 @@ func TestCryptBlocks(t *testing.T)
 
 ```
 searchKey: cipher_test.TestEmptyPlaintext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -674,7 +674,7 @@ func TestEmptyPlaintext(t *testing.T)
 
 ```
 searchKey: cipher_test.TestGCMAsm
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -685,7 +685,7 @@ func TestGCMAsm(t *testing.T)
 
 ```
 searchKey: cipher_test.TestGCMCounterWrap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -696,7 +696,7 @@ func TestGCMCounterWrap(t *testing.T)
 
 ```
 searchKey: cipher_test.TestGCMInvalidTagSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -707,7 +707,7 @@ func TestGCMInvalidTagSize(t *testing.T)
 
 ```
 searchKey: cipher_test.TestOFB
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -718,7 +718,7 @@ func TestOFB(t *testing.T)
 
 ```
 searchKey: cipher_test.TestTagFailureOverwrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -729,7 +729,7 @@ func TestTagFailureOverwrite(t *testing.T)
 
 ```
 searchKey: cipher_test.TestXOR
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -740,7 +740,7 @@ func TestXOR(t *testing.T)
 
 ```
 searchKey: cipher_test.benchmarkAESGCMOpen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -751,7 +751,7 @@ func benchmarkAESGCMOpen(b *testing.B, buf []byte, keySize int)
 
 ```
 searchKey: cipher_test.benchmarkAESGCMSeal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -762,7 +762,7 @@ func benchmarkAESGCMSeal(b *testing.B, buf []byte, keySize int)
 
 ```
 searchKey: cipher_test.benchmarkAESStream
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -773,7 +773,7 @@ func benchmarkAESStream(b *testing.B, mode func(cipher.Block, []byte) cipher.Str
 
 ```
 searchKey: cipher_test.inc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -784,7 +784,7 @@ func inc(b []byte)
 
 ```
 searchKey: cipher_test.min
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -795,7 +795,7 @@ func min(a, b []byte) int
 
 ```
 searchKey: cipher_test.mustPanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -806,7 +806,7 @@ func mustPanic(t *testing.T, msg string, f func())
 
 ```
 searchKey: cipher_test.wrap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -819,7 +819,7 @@ wrap wraps the Block interface so that it does not fulfill any optimizing interf
 
 ```
 searchKey: cipher_test.xor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

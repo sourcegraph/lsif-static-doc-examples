@@ -93,7 +93,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="metricListAllCount" href="#metricListAllCount">var metricListAllCount</a>
@@ -154,7 +154,7 @@ var zoektHTTPClient = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EndpointMap" href="#EndpointMap">type EndpointMap interface</a>
@@ -232,7 +232,7 @@ func (ss *FakeSearcher) StreamSearch(ctx context.Context, q zoektquery.Q, opts *
 
 ```
 searchKey: backend.FakeSearcher.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -266,7 +266,7 @@ HorizontalSearcher is a Streamer which aggregates searches over Map. It manages 
 
 ```
 searchKey: backend.HorizontalSearcher.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -318,7 +318,7 @@ StreamSearch does a search which merges the stream from every endpoint in Map.
 
 ```
 searchKey: backend.HorizontalSearcher.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -329,7 +329,7 @@ func (s *HorizontalSearcher) String() string
 
 ```
 searchKey: backend.HorizontalSearcher.searchers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -342,7 +342,7 @@ searchers returns the list of clients to aggregate over.
 
 ```
 searchKey: backend.HorizontalSearcher.syncSearchers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -375,7 +375,7 @@ Indexers provides methods over the set of indexed-search servers in a Sourcegrap
 
 ```
 searchKey: backend.Indexers.Enabled
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -461,7 +461,7 @@ func (s *StreamSearchAdapter) StreamSearch(ctx context.Context, q query.Q, opts 
 
 ```
 searchKey: backend.StreamSearchAdapter.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -518,7 +518,7 @@ Note: Zoekt starts up background goroutines, so call Close when done using the C
 
 ```
 searchKey: backend.Zoekt.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -531,7 +531,7 @@ Close will tear down the background goroutines.
 
 ```
 searchKey: backend.Zoekt.Enabled
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -570,7 +570,7 @@ SetEnabled will disable zoekt if b is false.
 
 ```
 searchKey: backend.Zoekt.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -592,7 +592,7 @@ func (c *Zoekt) list(ctx context.Context) (map[string]*zoekt.Repository, error)
 
 ```
 searchKey: backend.Zoekt.start
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -642,7 +642,7 @@ type atomicMap struct {
 
 ```
 searchKey: backend.atomicMap.Endpoints
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -737,7 +737,7 @@ func (m *meteredSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoe
 
 ```
 searchKey: backend.meteredSearcher.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -764,7 +764,7 @@ type mockSearcher struct {
 
 ```
 searchKey: backend.mockSearcher.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -808,7 +808,7 @@ func (s *mockSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.
 
 ```
 searchKey: backend.mockSearcher.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -832,7 +832,7 @@ prefixMap assigns keys to values if the value is a prefix of key.
 
 ```
 searchKey: backend.prefixMap.Endpoints
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -906,14 +906,14 @@ type zoektStream struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AggregateStreamSearch" href="#AggregateStreamSearch">func AggregateStreamSearch(ctx context.Context, streamSearch func(context.Context, query.Q, *zoekt.SearchOptions, zoekt.Sender) error, q query.Q, opts *zoekt.SearchOptions) (*zoekt.SearchResult, error)</a>
 
 ```
 searchKey: backend.AggregateStreamSearch
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -926,7 +926,7 @@ AggregateStreamSearch aggregates the stream events into a single batch result.
 
 ```
 searchKey: backend.BenchmarkDedup
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -937,7 +937,7 @@ func BenchmarkDedup(b *testing.B)
 
 ```
 searchKey: backend.GetIndexOptions
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -955,7 +955,7 @@ GetIndexOptions returns a json blob for consumption by sourcegraph-zoekt-indexse
 
 ```
 searchKey: backend.NewMeteredSearcher
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -966,7 +966,7 @@ func NewMeteredSearcher(hostname string, z zoekt.Streamer) zoekt.Streamer
 
 ```
 searchKey: backend.TestDedupper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -977,7 +977,7 @@ func TestDedupper(t *testing.T)
 
 ```
 searchKey: backend.TestDoStreamSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -988,7 +988,7 @@ func TestDoStreamSearch(t *testing.T)
 
 ```
 searchKey: backend.TestFindEndpoint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -999,7 +999,7 @@ func TestFindEndpoint(t *testing.T)
 
 ```
 searchKey: backend.TestGetIndexOptions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1010,7 +1010,7 @@ func TestGetIndexOptions(t *testing.T)
 
 ```
 searchKey: backend.TestGetIndexOptions_batch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1021,7 +1021,7 @@ func TestGetIndexOptions_batch(t *testing.T)
 
 ```
 searchKey: backend.TestGetIndexOptions_getVersion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1032,7 +1032,7 @@ func TestGetIndexOptions_getVersion(t *testing.T)
 
 ```
 searchKey: backend.TestHorizontalSearcher
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1043,7 +1043,7 @@ func TestHorizontalSearcher(t *testing.T)
 
 ```
 searchKey: backend.TestReposSubset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1054,7 +1054,7 @@ func TestReposSubset(t *testing.T)
 
 ```
 searchKey: backend.TestSyncSearchers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1065,7 +1065,7 @@ func TestSyncSearchers(t *testing.T)
 
 ```
 searchKey: backend.ZoektDial
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1078,7 +1078,7 @@ ZoektDial connects to a Searcher HTTP RPC server at address (host:port).
 
 ```
 searchKey: backend.backgroundSearch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1089,7 +1089,7 @@ func backgroundSearch(searcher zoekt.Searcher) func(t *testing.T)
 
 ```
 searchKey: backend.boolPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1100,7 +1100,7 @@ func boolPtr(b bool) *bool
 
 ```
 searchKey: backend.endpointsString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1113,7 +1113,7 @@ endpointsString creates a user readable String for an endpoint map.
 
 ```
 searchKey: backend.equalKeys
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1124,7 +1124,7 @@ func equalKeys(a map[string]zoekt.Streamer, b map[string]struct{}) bool
 
 ```
 searchKey: backend.findEndpoint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1137,7 +1137,7 @@ findEndpoint returns the endpoint in eps which matches hostname.
 
 ```
 searchKey: backend.getBoolPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1148,7 +1148,7 @@ func getBoolPtr(b *bool, default_ bool) bool
 
 ```
 searchKey: backend.getIndexOptions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1164,7 +1164,7 @@ func getIndexOptions(
 
 ```
 searchKey: backend.marshal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1175,7 +1175,7 @@ func marshal(o *zoektIndexOptions) []byte
 
 ```
 searchKey: backend.parseVersionContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1186,7 +1186,7 @@ func parseVersionContext(name string, repoRevStrs ...string) *schema.VersionCont
 
 ```
 searchKey: backend.queryString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1197,7 +1197,7 @@ func queryString(q query.Q) string
 
 ```
 searchKey: backend.randSleep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

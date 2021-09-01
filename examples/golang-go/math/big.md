@@ -881,10 +881,6 @@ Finally, *Int, *Rat, and *Float satisfy the fmt package's Scanner interface for 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Above" href="#Above">const Above</a>
 
 ```
@@ -1349,10 +1345,6 @@ const _W = bits.UintSize // word size in bits
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="argshlVU" href="#argshlVU">var argshlVU</a>
 
@@ -2519,10 +2511,6 @@ var _RoundingMode_index = [...]uint8{0, 13, 26, 32, 44, 57, 70}
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Accuracy" href="#Accuracy">type Accuracy int8</a>
 
 ```
@@ -2540,7 +2528,7 @@ Accuracy describes the rounding error produced by the most recent operation that
 
 ```
 searchKey: big.makeAcc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2551,7 +2539,7 @@ func makeAcc(above bool) Accuracy
 
 ```
 searchKey: big.Accuracy.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2581,7 +2569,7 @@ The order of slice elements is not significant. Negative elements may be used to
 
 ```
 searchKey: big.Bits.Float
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2616,7 +2604,7 @@ func (x Bits) mul(y Bits) Bits
 
 ```
 searchKey: big.Bits.norm
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2657,7 +2645,7 @@ An ErrNaN panic is raised by a Float operation that would lead to a NaN under IE
 
 ```
 searchKey: big.ErrNaN.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2707,7 +2695,7 @@ Operations always take pointer arguments (*Float) rather than Float values, and 
 
 ```
 searchKey: big.NewFloat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2720,7 +2708,7 @@ NewFloat allocates and returns a new Float set to x, with precision 53 and round
 
 ```
 searchKey: big.ParseFloat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2733,7 +2721,7 @@ ParseFloat is like f.Parse(s, base) with f set to the given precision and roundi
 
 ```
 searchKey: big.makeFloat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2744,7 +2732,7 @@ func makeFloat(s string) *Float
 
 ```
 searchKey: big.newFloat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2781,7 +2769,7 @@ Abs sets z to the (possibly rounded) value |x| (the absolute value of x) and ret
 
 ```
 searchKey: big.Float.Acc
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2852,7 +2840,7 @@ Copy sets z to x, with the same precision, rounding mode, and accuracy as x, and
 
 ```
 searchKey: big.Float.Float32
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2865,7 +2853,7 @@ Float32 returns the float32 value nearest to x. If x is too small to be represen
 
 ```
 searchKey: big.Float.Float64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2904,7 +2892,7 @@ GobDecode implements the gob.GobDecoder interface. The result is rounded per the
 
 ```
 searchKey: big.Float.GobEncode
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2930,7 +2918,7 @@ Int returns the result of truncating x towards zero; or nil if x is an infinity.
 
 ```
 searchKey: big.Float.Int64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2943,7 +2931,7 @@ Int64 returns the integer resulting from truncating x towards zero. If math.MinI
 
 ```
 searchKey: big.Float.IsInf
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2956,7 +2944,7 @@ IsInf reports whether x is +Inf or -Inf.
 
 ```
 searchKey: big.Float.IsInt
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2991,7 +2979,7 @@ x and mant may be the same in which case x is set to its mantissa value.
 
 ```
 searchKey: big.Float.MarshalText
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3004,7 +2992,7 @@ MarshalText implements the encoding.TextMarshaler interface. Only the Float valu
 
 ```
 searchKey: big.Float.MinPrec
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3017,7 +3005,7 @@ MinPrec returns the minimum precision required to represent x exactly (i.e., the
 
 ```
 searchKey: big.Float.Mode
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3093,7 +3081,7 @@ The returned *Float f is nil and the value of z is valid but not defined if an e
 
 ```
 searchKey: big.Float.Prec
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3302,7 +3290,7 @@ SetUint64 sets z to the (possibly rounded) value of x and returns z. If z's prec
 
 ```
 searchKey: big.Float.Sign
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3321,7 +3309,7 @@ Sign returns:
 
 ```
 searchKey: big.Float.Signbit
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3351,7 +3339,7 @@ The function panics if z < 0. The value of z is undefined in that case.
 
 ```
 searchKey: big.Float.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3415,7 +3403,7 @@ The precision prec controls the number of digits (excluding the exponent) printe
 
 ```
 searchKey: big.Float.Uint64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3480,7 +3468,7 @@ fmtX appends the string of x in the format "0x1." mantissa "p" exponent with a h
 
 ```
 searchKey: big.Float.int64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3491,7 +3479,7 @@ func (x *Float) int64() int64
 
 ```
 searchKey: big.Float.ord
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3620,7 +3608,7 @@ ucmp returns -1, 0, or +1, depending on whether |x| < |y|, |x| == |y|, or |x| > 
 
 ```
 searchKey: big.Float.uint64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3670,7 +3658,7 @@ z = x - y for |x| > |y|, ignoring signs of x and y for the subtraction but using
 
 ```
 searchKey: big.Float.validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3701,7 +3689,7 @@ Operations always take pointer arguments (*Int) rather than Int values, and each
 
 ```
 searchKey: big.NewInt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3714,7 +3702,7 @@ NewInt allocates and returns a new Int set to x.
 
 ```
 searchKey: big.altSetBit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3725,7 +3713,7 @@ func altSetBit(z *Int, x *Int, i int, b uint) *Int
 
 ```
 searchKey: big.euclidExtGCD
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3738,7 +3726,7 @@ euclidExtGCD is a reference implementation of Euclid's extended GCD algorithm fo
 
 ```
 searchKey: big.randInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3751,7 +3739,7 @@ randInt returns a pseudo-random Int in the range [1<<(size-1), (1<<size) - 1]
 
 ```
 searchKey: big.tri
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3855,7 +3843,7 @@ Bit returns the value of the i'th bit of x. That is, it returns (x>>i)&1. The bi
 
 ```
 searchKey: big.Int.BitLen
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3868,7 +3856,7 @@ BitLen returns the length of the absolute value of x in bits. The bit length of 
 
 ```
 searchKey: big.Int.Bits
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3881,7 +3869,7 @@ Bits provides raw (unchecked but fast) access to x by returning its absolute val
 
 ```
 searchKey: big.Int.Bytes
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4046,7 +4034,7 @@ GobDecode implements the gob.GobDecoder interface.
 
 ```
 searchKey: big.Int.GobEncode
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4059,7 +4047,7 @@ GobEncode implements the gob.GobEncoder interface.
 
 ```
 searchKey: big.Int.Int64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4072,7 +4060,7 @@ Int64 returns the int64 representation of x. If x cannot be represented in an in
 
 ```
 searchKey: big.Int.IsInt64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4085,7 +4073,7 @@ IsInt64 reports whether x can be represented as an int64.
 
 ```
 searchKey: big.Int.IsUint64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4111,7 +4099,7 @@ Lsh sets z = x << n and returns z.
 
 ```
 searchKey: big.Int.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4124,7 +4112,7 @@ MarshalJSON implements the json.Marshaler interface.
 
 ```
 searchKey: big.Int.MarshalText
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4448,7 +4436,7 @@ SetUint64 sets z to x and returns z.
 
 ```
 searchKey: big.Int.Sign
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4480,7 +4468,7 @@ Sqrt sets z to ⌊√x⌋, the largest integer such that z² ≤ x, and returns 
 
 ```
 searchKey: big.Int.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4519,7 +4507,7 @@ Text returns the string representation of x in the given base. Base must be betw
 
 ```
 searchKey: big.Int.TrailingZeroBits
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4532,7 +4520,7 @@ TrailingZeroBits returns the number of consecutive least significant zero bits o
 
 ```
 searchKey: big.Int.Uint64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4715,7 +4703,7 @@ Operations always take pointer arguments (*Rat) rather than Rat values, and each
 
 ```
 searchKey: big.NewRat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4728,7 +4716,7 @@ NewRat creates a new Rat with numerator a and denominator b.
 
 ```
 searchKey: big.delta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4786,7 +4774,7 @@ Cmp compares x and y and returns:
 
 ```
 searchKey: big.Rat.Denom
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4799,7 +4787,7 @@ Denom returns the denominator of x; it is always > 0. The result is a reference 
 
 ```
 searchKey: big.Rat.Float32
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4812,7 +4800,7 @@ Float32 returns the nearest float32 value for x and a bool indicating whether f 
 
 ```
 searchKey: big.Rat.Float64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4851,7 +4839,7 @@ GobDecode implements the gob.GobDecoder interface.
 
 ```
 searchKey: big.Rat.GobEncode
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4877,7 +4865,7 @@ Inv sets z to 1/x and returns z. If x == 0, Inv panics.
 
 ```
 searchKey: big.Rat.IsInt
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4890,7 +4878,7 @@ IsInt reports whether the denominator of x is 1.
 
 ```
 searchKey: big.Rat.MarshalText
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4929,7 +4917,7 @@ Neg sets z to -x and returns z.
 
 ```
 searchKey: big.Rat.Num
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4955,7 +4943,7 @@ Quo sets z to the quotient x/y and returns z. If y == 0, Quo panics.
 
 ```
 searchKey: big.Rat.RatString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5085,7 +5073,7 @@ SetUint64 sets z to x and returns z.
 
 ```
 searchKey: big.Rat.Sign
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5104,7 +5092,7 @@ Sign returns:
 
 ```
 searchKey: big.Rat.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5143,7 +5131,7 @@ UnmarshalText implements the encoding.TextUnmarshaler interface.
 
 ```
 searchKey: big.Rat.marshal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5156,7 +5144,7 @@ marshal implements String returning a slice of bytes
 
 ```
 searchKey: big.Rat.norm
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5180,7 +5168,7 @@ RoundingMode determines how a Float value is rounded to the desired precision. R
 
 ```
 searchKey: big.RoundingMode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5218,7 +5206,7 @@ A Word represents a single digit of a multi-precision unsigned integer.
 
 ```
 searchKey: big.addMulVVW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5229,7 +5217,7 @@ func addMulVVW(z, x []Word, y Word) (c Word)
 
 ```
 searchKey: big.addMulVVW_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5240,7 +5228,7 @@ func addMulVVW_g(z, x []Word, y Word) (c Word)
 
 ```
 searchKey: big.addVV
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5251,7 +5239,7 @@ func addVV(z, x, y []Word) (c Word)
 
 ```
 searchKey: big.addVV_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5264,7 +5252,7 @@ The resulting carry c is either 0 or 1.
 
 ```
 searchKey: big.addVW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5275,7 +5263,7 @@ func addVW(z, x []Word, y Word) (c Word)
 
 ```
 searchKey: big.addVW_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5288,7 +5276,7 @@ The resulting carry c is either 0 or 1.
 
 ```
 searchKey: big.addVWlarge
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5301,7 +5289,7 @@ addVWlarge is addVW, but intended for large z. The only difference is that we ch
 
 ```
 searchKey: big.bigEndianWord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5314,7 +5302,7 @@ bigEndianWord returns the contents of buf interpreted as a big-endian encoded Wo
 
 ```
 searchKey: big.divWVW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5327,7 +5315,7 @@ divWVW overwrites z with ⌊x/y⌋, returning the remainder r. The caller must e
 
 ```
 searchKey: big.divWW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5340,7 +5328,7 @@ q = ( x1 << _W + x0 - r)/y. m = floor(( _B^2 - 1 ) / d - _B). Requiring x1<y. An
 
 ```
 searchKey: big.lehmerSimulate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5360,7 +5348,7 @@ Requirements: A >= B and len(B.abs) >= 2 Since we are calculating with full word
 
 ```
 searchKey: big.maxPow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5373,7 +5361,7 @@ maxPow returns (b**n, n) such that b**n is the largest power b**n <= _M. For ins
 
 ```
 searchKey: big.mulAddVWW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5384,7 +5372,7 @@ func mulAddVWW(z, x []Word, y, r Word) (c Word)
 
 ```
 searchKey: big.mulAddVWW_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5395,7 +5383,7 @@ func mulAddVWW_g(z, x []Word, y, r Word) (c Word)
 
 ```
 searchKey: big.mulAddWWW_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5408,7 +5396,7 @@ z1<<_W + z0 = x*y + c
 
 ```
 searchKey: big.mulWW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5421,7 +5409,7 @@ implemented in arith_$GOARCH.s
 
 ```
 searchKey: big.mulWW_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5434,7 +5422,7 @@ z1<<_W + z0 = x*y
 
 ```
 searchKey: big.pow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5447,7 +5435,7 @@ pow returns x**n for n > 0, and 1 otherwise.
 
 ```
 searchKey: big.reciprocalWord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5471,7 +5459,7 @@ func rndW() Word
 
 ```
 searchKey: big.shlVU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5482,7 +5470,7 @@ func shlVU(z, x []Word, s uint) (c Word)
 
 ```
 searchKey: big.shlVU_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5493,7 +5481,7 @@ func shlVU_g(z, x []Word, s uint) (c Word)
 
 ```
 searchKey: big.shrVU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5504,7 +5492,7 @@ func shrVU(z, x []Word, s uint) (c Word)
 
 ```
 searchKey: big.shrVU_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5515,7 +5503,7 @@ func shrVU_g(z, x []Word, s uint) (c Word)
 
 ```
 searchKey: big.subVV
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5526,7 +5514,7 @@ func subVV(z, x, y []Word) (c Word)
 
 ```
 searchKey: big.subVV_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5539,7 +5527,7 @@ The resulting carry c is either 0 or 1.
 
 ```
 searchKey: big.subVW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5550,7 +5538,7 @@ func subVW(z, x []Word, y Word) (c Word)
 
 ```
 searchKey: big.subVW_g
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5561,7 +5549,7 @@ func subVW_g(z, x []Word, y Word) (c Word)
 
 ```
 searchKey: big.subVWlarge
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5707,7 +5695,7 @@ byteReader is a local wrapper around fmt.ScanState; it implements the ByteReader
 
 ```
 searchKey: big.byteReader.ReadByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5718,7 +5706,7 @@ func (r byteReader) ReadByte() (byte, error)
 
 ```
 searchKey: big.byteReader.UnreadByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5745,7 +5733,7 @@ A decimal represents an unsigned floating-point number in decimal representation
 
 ```
 searchKey: big.decimal.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5878,7 +5866,7 @@ type funVW func(z, x []Word, y Word) (c Word)
 
 ```
 searchKey: big.makeFunVW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5951,7 +5939,7 @@ type matrix struct {
 
 ```
 searchKey: big.newHilbert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5962,7 +5950,7 @@ func newHilbert(n int) *matrix
 
 ```
 searchKey: big.newInverseHilbert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5973,7 +5961,7 @@ func newInverseHilbert(n int) *matrix
 
 ```
 searchKey: big.newMatrix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5984,7 +5972,7 @@ func newMatrix(n, m int) *matrix
 
 ```
 searchKey: big.newUnit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5995,7 +5983,7 @@ func newUnit(n int) *matrix
 
 ```
 searchKey: big.matrix.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6086,7 +6074,7 @@ A number is normalized if the slice contains no leading 0 digits. During arithme
 
 ```
 searchKey: big.fibo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6097,7 +6085,7 @@ func fibo(n int) nat
 
 ```
 searchKey: big.getNat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6110,7 +6098,7 @@ getNat returns a *nat of len n. The contents may not be zero. The pool holds *na
 
 ```
 searchKey: big.mulDenom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6123,7 +6111,7 @@ mulDenom sets z to the denominator product x*y (by taking into account that 0 va
 
 ```
 searchKey: big.natFromString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6134,7 +6122,7 @@ func natFromString(s string) nat
 
 ```
 searchKey: big.norm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6145,7 +6133,7 @@ func norm(x nat) nat
 
 ```
 searchKey: big.rndNat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6158,7 +6146,7 @@ rndNat returns a random nat value >= 0 of (usually) n words in length. In extrem
 
 ```
 searchKey: big.rndNat1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6217,7 +6205,7 @@ bit returns the value of the i'th bit, with lsb == bit 0.
 
 ```
 searchKey: big.nat.bitLen
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6243,7 +6231,7 @@ bytes writes the value of z into buf using big-endian encoding. The value of z i
 
 ```
 searchKey: big.nat.clear
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6495,7 +6483,7 @@ mulRange computes the product of all the unsigned integers in the range [a, b] i
 
 ```
 searchKey: big.nat.norm
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6517,7 +6505,7 @@ func (z nat) or(x, y nat) nat
 
 ```
 searchKey: big.nat.probablyPrimeLucas
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6737,7 +6725,7 @@ func (z nat) sub(x, y nat) nat
 
 ```
 searchKey: big.nat.trailingZeroBits
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6811,15 +6799,11 @@ type shiftTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkAddMulVVW" href="#BenchmarkAddMulVVW">func BenchmarkAddMulVVW(b *testing.B)</a>
 
 ```
 searchKey: big.BenchmarkAddMulVVW
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6830,7 +6814,7 @@ func BenchmarkAddMulVVW(b *testing.B)
 
 ```
 searchKey: big.BenchmarkAddVV
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6841,7 +6825,7 @@ func BenchmarkAddVV(b *testing.B)
 
 ```
 searchKey: big.BenchmarkAddVW
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6852,7 +6836,7 @@ func BenchmarkAddVW(b *testing.B)
 
 ```
 searchKey: big.BenchmarkAddVWext
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6865,7 +6849,7 @@ Benchmarking addVW using vector of maximum uint to force carry flag set
 
 ```
 searchKey: big.BenchmarkBinomial
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6876,7 +6860,7 @@ func BenchmarkBinomial(b *testing.B)
 
 ```
 searchKey: big.BenchmarkBitset
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6887,7 +6871,7 @@ func BenchmarkBitset(b *testing.B)
 
 ```
 searchKey: big.BenchmarkBitsetNeg
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6898,7 +6882,7 @@ func BenchmarkBitsetNeg(b *testing.B)
 
 ```
 searchKey: big.BenchmarkBitsetNegOrig
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6909,7 +6893,7 @@ func BenchmarkBitsetNegOrig(b *testing.B)
 
 ```
 searchKey: big.BenchmarkBitsetOrig
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6920,7 +6904,7 @@ func BenchmarkBitsetOrig(b *testing.B)
 
 ```
 searchKey: big.BenchmarkDecimalConversion
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6931,7 +6915,7 @@ func BenchmarkDecimalConversion(b *testing.B)
 
 ```
 searchKey: big.BenchmarkDiv
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6942,7 +6926,7 @@ func BenchmarkDiv(b *testing.B)
 
 ```
 searchKey: big.BenchmarkDivWVW
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6953,7 +6937,7 @@ func BenchmarkDivWVW(b *testing.B)
 
 ```
 searchKey: big.BenchmarkExp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6964,7 +6948,7 @@ func BenchmarkExp(b *testing.B)
 
 ```
 searchKey: big.BenchmarkExp2
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6975,7 +6959,7 @@ func BenchmarkExp2(b *testing.B)
 
 ```
 searchKey: big.BenchmarkExp3Power
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6986,7 +6970,7 @@ func BenchmarkExp3Power(b *testing.B)
 
 ```
 searchKey: big.BenchmarkFibo
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -6997,7 +6981,7 @@ func BenchmarkFibo(b *testing.B)
 
 ```
 searchKey: big.BenchmarkFloatAdd
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7008,7 +6992,7 @@ func BenchmarkFloatAdd(b *testing.B)
 
 ```
 searchKey: big.BenchmarkFloatSqrt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7019,7 +7003,7 @@ func BenchmarkFloatSqrt(b *testing.B)
 
 ```
 searchKey: big.BenchmarkFloatString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7030,7 +7014,7 @@ func BenchmarkFloatString(b *testing.B)
 
 ```
 searchKey: big.BenchmarkFloatSub
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7041,7 +7025,7 @@ func BenchmarkFloatSub(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD100000x100000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7052,7 +7036,7 @@ func BenchmarkGCD100000x100000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD10000x10000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7063,7 +7047,7 @@ func BenchmarkGCD10000x10000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD10000x100000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7074,7 +7058,7 @@ func BenchmarkGCD10000x100000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD1000x1000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7085,7 +7069,7 @@ func BenchmarkGCD1000x1000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD1000x10000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7096,7 +7080,7 @@ func BenchmarkGCD1000x10000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD1000x100000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7107,7 +7091,7 @@ func BenchmarkGCD1000x100000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD100x100
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7118,7 +7102,7 @@ func BenchmarkGCD100x100(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD100x1000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7129,7 +7113,7 @@ func BenchmarkGCD100x1000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD100x10000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7140,7 +7124,7 @@ func BenchmarkGCD100x10000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD100x100000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7151,7 +7135,7 @@ func BenchmarkGCD100x100000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD10x10
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7162,7 +7146,7 @@ func BenchmarkGCD10x10(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD10x100
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7173,7 +7157,7 @@ func BenchmarkGCD10x100(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD10x1000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7184,7 +7168,7 @@ func BenchmarkGCD10x1000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD10x10000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7195,7 +7179,7 @@ func BenchmarkGCD10x10000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkGCD10x100000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7206,7 +7190,7 @@ func BenchmarkGCD10x100000(b *testing.B)
 
 ```
 searchKey: big.BenchmarkHilbert
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7217,7 +7201,7 @@ func BenchmarkHilbert(b *testing.B)
 
 ```
 searchKey: big.BenchmarkIntSqr
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7228,7 +7212,7 @@ func BenchmarkIntSqr(b *testing.B)
 
 ```
 searchKey: big.BenchmarkLeafSize
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7239,7 +7223,7 @@ func BenchmarkLeafSize(b *testing.B)
 
 ```
 searchKey: big.BenchmarkModInverse
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7250,7 +7234,7 @@ func BenchmarkModInverse(b *testing.B)
 
 ```
 searchKey: big.BenchmarkModSqrt225_3Mod4
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7261,7 +7245,7 @@ func BenchmarkModSqrt225_3Mod4(b *testing.B)
 
 ```
 searchKey: big.BenchmarkModSqrt225_Tonelli
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7272,7 +7256,7 @@ func BenchmarkModSqrt225_Tonelli(b *testing.B)
 
 ```
 searchKey: big.BenchmarkModSqrt231_5Mod8
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7283,7 +7267,7 @@ func BenchmarkModSqrt231_5Mod8(b *testing.B)
 
 ```
 searchKey: big.BenchmarkModSqrt231_Tonelli
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7294,7 +7278,7 @@ func BenchmarkModSqrt231_Tonelli(b *testing.B)
 
 ```
 searchKey: big.BenchmarkMul
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7305,7 +7289,7 @@ func BenchmarkMul(b *testing.B)
 
 ```
 searchKey: big.BenchmarkMulAddVWW
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7316,7 +7300,7 @@ func BenchmarkMulAddVWW(b *testing.B)
 
 ```
 searchKey: big.BenchmarkNatMul
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7327,7 +7311,7 @@ func BenchmarkNatMul(b *testing.B)
 
 ```
 searchKey: big.BenchmarkNatSetBytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7338,7 +7322,7 @@ func BenchmarkNatSetBytes(b *testing.B)
 
 ```
 searchKey: big.BenchmarkNatSqr
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7349,7 +7333,7 @@ func BenchmarkNatSqr(b *testing.B)
 
 ```
 searchKey: big.BenchmarkNonZeroShifts
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7360,7 +7344,7 @@ func BenchmarkNonZeroShifts(b *testing.B)
 
 ```
 searchKey: big.BenchmarkParseFloatLargeExp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7371,7 +7355,7 @@ func BenchmarkParseFloatLargeExp(b *testing.B)
 
 ```
 searchKey: big.BenchmarkParseFloatSmallExp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7382,7 +7366,7 @@ func BenchmarkParseFloatSmallExp(b *testing.B)
 
 ```
 searchKey: big.BenchmarkProbablyPrime
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7393,7 +7377,7 @@ func BenchmarkProbablyPrime(b *testing.B)
 
 ```
 searchKey: big.BenchmarkQuoRem
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7404,7 +7388,7 @@ func BenchmarkQuoRem(b *testing.B)
 
 ```
 searchKey: big.BenchmarkRatCmp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7415,7 +7399,7 @@ func BenchmarkRatCmp(b *testing.B)
 
 ```
 searchKey: big.BenchmarkScan
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7426,7 +7410,7 @@ func BenchmarkScan(b *testing.B)
 
 ```
 searchKey: big.BenchmarkScanPi
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7437,7 +7421,7 @@ func BenchmarkScanPi(b *testing.B)
 
 ```
 searchKey: big.BenchmarkSqrt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7448,7 +7432,7 @@ func BenchmarkSqrt(b *testing.B)
 
 ```
 searchKey: big.BenchmarkString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7459,7 +7443,7 @@ func BenchmarkString(b *testing.B)
 
 ```
 searchKey: big.BenchmarkStringPiParallel
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7470,7 +7454,7 @@ func BenchmarkStringPiParallel(b *testing.B)
 
 ```
 searchKey: big.BenchmarkSubVV
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7481,7 +7465,7 @@ func BenchmarkSubVV(b *testing.B)
 
 ```
 searchKey: big.BenchmarkSubVW
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7492,7 +7476,7 @@ func BenchmarkSubVW(b *testing.B)
 
 ```
 searchKey: big.BenchmarkSubVWext
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7505,7 +7489,7 @@ Benchmarking subVW using vector of zero to force carry flag set
 
 ```
 searchKey: big.BenchmarkZeroShifts
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -7516,7 +7500,7 @@ func BenchmarkZeroShifts(b *testing.B)
 
 ```
 searchKey: big.Jacobi
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7529,7 +7513,7 @@ Jacobi returns the Jacobi symbol (x/y), either +1, -1, or 0. The y argument must
 
 ```
 searchKey: big.LeafSizeHelper
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -7540,7 +7524,7 @@ func LeafSizeHelper(b *testing.B, base, size int)
 
 ```
 searchKey: big.TestAbsZ
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7551,7 +7535,7 @@ func TestAbsZ(t *testing.T)
 
 ```
 searchKey: big.TestAppendText
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7562,7 +7546,7 @@ func TestAppendText(t *testing.T)
 
 ```
 searchKey: big.TestBinomial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7573,7 +7557,7 @@ func TestBinomial(t *testing.T)
 
 ```
 searchKey: big.TestBit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7584,7 +7568,7 @@ func TestBit(t *testing.T)
 
 ```
 searchKey: big.TestBitLen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7595,7 +7579,7 @@ func TestBitLen(t *testing.T)
 
 ```
 searchKey: big.TestBitSet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7606,7 +7590,7 @@ func TestBitSet(t *testing.T)
 
 ```
 searchKey: big.TestBits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7617,7 +7601,7 @@ func TestBits(t *testing.T)
 
 ```
 searchKey: big.TestBitwise
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7628,7 +7612,7 @@ func TestBitwise(t *testing.T)
 
 ```
 searchKey: big.TestBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7639,7 +7623,7 @@ func TestBytes(t *testing.T)
 
 ```
 searchKey: big.TestCalibrate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7650,7 +7634,7 @@ func TestCalibrate(t *testing.T)
 
 ```
 searchKey: big.TestCmp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7661,7 +7645,7 @@ func TestCmp(t *testing.T)
 
 ```
 searchKey: big.TestCmpAbs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7672,7 +7656,7 @@ func TestCmpAbs(t *testing.T)
 
 ```
 searchKey: big.TestDecimalInit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7683,7 +7667,7 @@ func TestDecimalInit(t *testing.T)
 
 ```
 searchKey: big.TestDecimalRounding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7694,7 +7678,7 @@ func TestDecimalRounding(t *testing.T)
 
 ```
 searchKey: big.TestDecimalString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7705,7 +7689,7 @@ func TestDecimalString(t *testing.T)
 
 ```
 searchKey: big.TestDivWW
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7716,7 +7700,7 @@ func TestDivWW(t *testing.T)
 
 ```
 searchKey: big.TestDivisionSigns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7727,7 +7711,7 @@ func TestDivisionSigns(t *testing.T)
 
 ```
 searchKey: big.TestExp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7738,7 +7722,7 @@ func TestExp(t *testing.T)
 
 ```
 searchKey: big.TestExpNN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7749,7 +7733,7 @@ func TestExpNN(t *testing.T)
 
 ```
 searchKey: big.TestFibo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7760,7 +7744,7 @@ func TestFibo(t *testing.T)
 
 ```
 searchKey: big.TestFillBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7771,7 +7755,7 @@ func TestFillBytes(t *testing.T)
 
 ```
 searchKey: big.TestFloat32Distribution
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7782,7 +7766,7 @@ func TestFloat32Distribution(t *testing.T)
 
 ```
 searchKey: big.TestFloat32SpecialCases
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7793,7 +7777,7 @@ func TestFloat32SpecialCases(t *testing.T)
 
 ```
 searchKey: big.TestFloat64Distribution
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7804,7 +7788,7 @@ func TestFloat64Distribution(t *testing.T)
 
 ```
 searchKey: big.TestFloat64SpecialCases
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7815,7 +7799,7 @@ func TestFloat64SpecialCases(t *testing.T)
 
 ```
 searchKey: big.TestFloat64Text
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7826,7 +7810,7 @@ func TestFloat64Text(t *testing.T)
 
 ```
 searchKey: big.TestFloatAbs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7837,7 +7821,7 @@ func TestFloatAbs(t *testing.T)
 
 ```
 searchKey: big.TestFloatAdd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7850,7 +7834,7 @@ TestFloatAdd tests Float.Add/Sub by comparing the result of a "manual" addition/
 
 ```
 searchKey: big.TestFloatAdd32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7863,7 +7847,7 @@ TestFloatAdd32 tests that Float.Add/Sub of numbers with 24bit mantissa behaves l
 
 ```
 searchKey: big.TestFloatAdd64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7876,7 +7860,7 @@ TestFloatAdd64 tests that Float.Add/Sub of numbers with 53bit mantissa behaves l
 
 ```
 searchKey: big.TestFloatAddRoundZero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7889,7 +7873,7 @@ TestFloatAddRoundZero tests Float.Add/Sub rounding when the result is exactly ze
 
 ```
 searchKey: big.TestFloatArithmeticOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7900,7 +7884,7 @@ func TestFloatArithmeticOverflow(t *testing.T)
 
 ```
 searchKey: big.TestFloatArithmeticRounding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7913,7 +7897,7 @@ For rounding modes ToNegativeInf and ToPositiveInf, rounding is affected by the 
 
 ```
 searchKey: big.TestFloatArithmeticSpecialValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7926,7 +7910,7 @@ TestFloatArithmeticSpecialValues tests that Float operations produce the correct
 
 ```
 searchKey: big.TestFloatCmpSpecialValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7939,7 +7923,7 @@ TestFloatCmpSpecialValues tests that Cmp produces the correct results for combin
 
 ```
 searchKey: big.TestFloatCorruptGob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7950,7 +7934,7 @@ func TestFloatCorruptGob(t *testing.T)
 
 ```
 searchKey: big.TestFloatFloat32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7961,7 +7945,7 @@ func TestFloatFloat32(t *testing.T)
 
 ```
 searchKey: big.TestFloatFloat64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7972,7 +7956,7 @@ func TestFloatFloat64(t *testing.T)
 
 ```
 searchKey: big.TestFloatFormat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7983,7 +7967,7 @@ func TestFloatFormat(t *testing.T)
 
 ```
 searchKey: big.TestFloatGobEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -7994,7 +7978,7 @@ func TestFloatGobEncoding(t *testing.T)
 
 ```
 searchKey: big.TestFloatInc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8005,7 +7989,7 @@ func TestFloatInc(t *testing.T)
 
 ```
 searchKey: big.TestFloatInt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8016,7 +8000,7 @@ func TestFloatInt(t *testing.T)
 
 ```
 searchKey: big.TestFloatInt64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8027,7 +8011,7 @@ func TestFloatInt64(t *testing.T)
 
 ```
 searchKey: big.TestFloatIsInt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8038,7 +8022,7 @@ func TestFloatIsInt(t *testing.T)
 
 ```
 searchKey: big.TestFloatJSONEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8049,7 +8033,7 @@ func TestFloatJSONEncoding(t *testing.T)
 
 ```
 searchKey: big.TestFloatMantExp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8060,7 +8044,7 @@ func TestFloatMantExp(t *testing.T)
 
 ```
 searchKey: big.TestFloatMantExpAliasing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8071,7 +8055,7 @@ func TestFloatMantExpAliasing(t *testing.T)
 
 ```
 searchKey: big.TestFloatMinPrec
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8082,7 +8066,7 @@ func TestFloatMinPrec(t *testing.T)
 
 ```
 searchKey: big.TestFloatMul
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8095,7 +8079,7 @@ TestFloatMul tests Float.Mul/Quo by comparing the result of a "manual" multiplic
 
 ```
 searchKey: big.TestFloatMul64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8108,7 +8092,7 @@ TestFloatMul64 tests that Float.Mul/Quo of numbers with 53bit mantissa behaves l
 
 ```
 searchKey: big.TestFloatNeg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8119,7 +8103,7 @@ func TestFloatNeg(t *testing.T)
 
 ```
 searchKey: big.TestFloatPredicates
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8130,7 +8114,7 @@ func TestFloatPredicates(t *testing.T)
 
 ```
 searchKey: big.TestFloatQuo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8141,7 +8125,7 @@ func TestFloatQuo(t *testing.T)
 
 ```
 searchKey: big.TestFloatQuoSmoke
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8154,7 +8138,7 @@ TestFloatQuoSmoke tests all divisions x/y for values x, y in the range [-n, +n];
 
 ```
 searchKey: big.TestFloatRat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8165,7 +8149,7 @@ func TestFloatRat(t *testing.T)
 
 ```
 searchKey: big.TestFloatRound
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8178,7 +8162,7 @@ TestFloatRound tests basic rounding.
 
 ```
 searchKey: big.TestFloatRound24
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8191,7 +8175,7 @@ TestFloatRound24 tests that rounding a float64 to 24 bits matches IEEE-754 round
 
 ```
 searchKey: big.TestFloatScan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8202,7 +8186,7 @@ func TestFloatScan(t *testing.T)
 
 ```
 searchKey: big.TestFloatSetFloat64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8213,7 +8197,7 @@ func TestFloatSetFloat64(t *testing.T)
 
 ```
 searchKey: big.TestFloatSetFloat64String
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8224,7 +8208,7 @@ func TestFloatSetFloat64String(t *testing.T)
 
 ```
 searchKey: big.TestFloatSetInf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8235,7 +8219,7 @@ func TestFloatSetInf(t *testing.T)
 
 ```
 searchKey: big.TestFloatSetInt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8246,7 +8230,7 @@ func TestFloatSetInt(t *testing.T)
 
 ```
 searchKey: big.TestFloatSetInt64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8257,7 +8241,7 @@ func TestFloatSetInt64(t *testing.T)
 
 ```
 searchKey: big.TestFloatSetMantExp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8268,7 +8252,7 @@ func TestFloatSetMantExp(t *testing.T)
 
 ```
 searchKey: big.TestFloatSetPrec
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8279,7 +8263,7 @@ func TestFloatSetPrec(t *testing.T)
 
 ```
 searchKey: big.TestFloatSetRat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8290,7 +8274,7 @@ func TestFloatSetRat(t *testing.T)
 
 ```
 searchKey: big.TestFloatSetUint64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8301,7 +8285,7 @@ func TestFloatSetUint64(t *testing.T)
 
 ```
 searchKey: big.TestFloatSign
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8312,7 +8296,7 @@ func TestFloatSign(t *testing.T)
 
 ```
 searchKey: big.TestFloatSqrt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8323,7 +8307,7 @@ func TestFloatSqrt(t *testing.T)
 
 ```
 searchKey: big.TestFloatSqrt64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8336,7 +8320,7 @@ TestFloatSqrt64 tests that Float.Sqrt of numbers with 53bit mantissa behaves lik
 
 ```
 searchKey: big.TestFloatSqrtSpecial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8347,7 +8331,7 @@ func TestFloatSqrtSpecial(t *testing.T)
 
 ```
 searchKey: big.TestFloatString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8358,7 +8342,7 @@ func TestFloatString(t *testing.T)
 
 ```
 searchKey: big.TestFloatText
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8369,7 +8353,7 @@ func TestFloatText(t *testing.T)
 
 ```
 searchKey: big.TestFloatUint64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8380,7 +8364,7 @@ func TestFloatUint64(t *testing.T)
 
 ```
 searchKey: big.TestFloatZeroValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8391,7 +8375,7 @@ func TestFloatZeroValue(t *testing.T)
 
 ```
 searchKey: big.TestFormat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8402,7 +8386,7 @@ func TestFormat(t *testing.T)
 
 ```
 searchKey: big.TestFromBits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8413,7 +8397,7 @@ func TestFromBits(t *testing.T)
 
 ```
 searchKey: big.TestFunNN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8424,7 +8408,7 @@ func TestFunNN(t *testing.T)
 
 ```
 searchKey: big.TestFunVV
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8435,7 +8419,7 @@ func TestFunVV(t *testing.T)
 
 ```
 searchKey: big.TestFunVW
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8446,7 +8430,7 @@ func TestFunVW(t *testing.T)
 
 ```
 searchKey: big.TestFunVWExt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8459,7 +8443,7 @@ Extended testing to addVW and subVW using various kinds of input data. We utiliz
 
 ```
 searchKey: big.TestFunVWW
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8470,7 +8454,7 @@ func TestFunVWW(t *testing.T)
 
 ```
 searchKey: big.TestGcd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8481,7 +8465,7 @@ func TestGcd(t *testing.T)
 
 ```
 searchKey: big.TestGetString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8492,7 +8476,7 @@ func TestGetString(t *testing.T)
 
 ```
 searchKey: big.TestGobEncodingNilIntInSlice
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8505,7 +8489,7 @@ Sending a nil Int pointer (inside a slice) on a round trip through gob should yi
 
 ```
 searchKey: big.TestGobEncodingNilRatInSlice
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8518,7 +8502,7 @@ Sending a nil Rat pointer (inside a slice) on a round trip through gob should yi
 
 ```
 searchKey: big.TestHilbert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8529,7 +8513,7 @@ func TestHilbert(t *testing.T)
 
 ```
 searchKey: big.TestInt64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8540,7 +8524,7 @@ func TestInt64(t *testing.T)
 
 ```
 searchKey: big.TestIntCmpSelf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8551,7 +8535,7 @@ func TestIntCmpSelf(t *testing.T)
 
 ```
 searchKey: big.TestIntGobEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8562,7 +8546,7 @@ func TestIntGobEncoding(t *testing.T)
 
 ```
 searchKey: big.TestIntJSONEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8573,7 +8557,7 @@ func TestIntJSONEncoding(t *testing.T)
 
 ```
 searchKey: big.TestIntText
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8584,7 +8568,7 @@ func TestIntText(t *testing.T)
 
 ```
 searchKey: big.TestIntXMLEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8595,7 +8579,7 @@ func TestIntXMLEncoding(t *testing.T)
 
 ```
 searchKey: big.TestIsFinite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8606,7 +8590,7 @@ func TestIsFinite(t *testing.T)
 
 ```
 searchKey: big.TestIsInt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8617,7 +8601,7 @@ func TestIsInt(t *testing.T)
 
 ```
 searchKey: big.TestIssue20490
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8628,7 +8612,7 @@ func TestIssue20490(t *testing.T)
 
 ```
 searchKey: big.TestIssue22830
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8641,7 +8625,7 @@ We can't test this together with the other Exp tests above because it requires a
 
 ```
 searchKey: big.TestIssue2379
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8652,7 +8636,7 @@ func TestIssue2379(t *testing.T)
 
 ```
 searchKey: big.TestIssue2607
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8663,7 +8647,7 @@ func TestIssue2607(t *testing.T)
 
 ```
 searchKey: big.TestIssue31084
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8674,7 +8658,7 @@ func TestIssue31084(t *testing.T)
 
 ```
 searchKey: big.TestIssue31184
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8685,7 +8669,7 @@ func TestIssue31184(t *testing.T)
 
 ```
 searchKey: big.TestIssue34919
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8698,7 +8682,7 @@ TestIssue34919 verifies that a Rat's denominator is not modified when simply acc
 
 ```
 searchKey: big.TestIssue3521
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8709,7 +8693,7 @@ func TestIssue3521(t *testing.T)
 
 ```
 searchKey: big.TestIssue37499
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8722,7 +8706,7 @@ TestIssue37499 triggers the edge case of divBasic where the inaccurate estimate 
 
 ```
 searchKey: big.TestIssue42552
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8735,7 +8719,7 @@ TestIssue42552 triggers an edge case of recursive division where the first divis
 
 ```
 searchKey: big.TestIssue42838
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8746,7 +8730,7 @@ func TestIssue42838(t *testing.T)
 
 ```
 searchKey: big.TestIssue45910
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8757,7 +8741,7 @@ func TestIssue45910(t *testing.T)
 
 ```
 searchKey: big.TestIssue6866
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8768,7 +8752,7 @@ func TestIssue6866(t *testing.T)
 
 ```
 searchKey: big.TestIssue820
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8779,7 +8763,7 @@ func TestIssue820(t *testing.T)
 
 ```
 searchKey: big.TestJacobi
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8790,7 +8774,7 @@ func TestJacobi(t *testing.T)
 
 ```
 searchKey: big.TestJacobiPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8801,7 +8785,7 @@ func TestJacobiPanic(t *testing.T)
 
 ```
 searchKey: big.TestLinkerGC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8814,7 +8798,7 @@ Tests that the linker is able to remove references to Float, Rat, and Int if unu
 
 ```
 searchKey: big.TestLsh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8825,7 +8809,7 @@ func TestLsh(t *testing.T)
 
 ```
 searchKey: big.TestLshRsh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8836,7 +8820,7 @@ func TestLshRsh(t *testing.T)
 
 ```
 searchKey: big.TestLshSelf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8847,7 +8831,7 @@ func TestLshSelf(t *testing.T)
 
 ```
 searchKey: big.TestLucasPseudoprimes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8858,7 +8842,7 @@ func TestLucasPseudoprimes(t *testing.T)
 
 ```
 searchKey: big.TestMaxBase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8869,7 +8853,7 @@ func TestMaxBase(t *testing.T)
 
 ```
 searchKey: big.TestMillerRabinPseudoprimes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8880,7 +8864,7 @@ func TestMillerRabinPseudoprimes(t *testing.T)
 
 ```
 searchKey: big.TestModInverse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8891,7 +8875,7 @@ func TestModInverse(t *testing.T)
 
 ```
 searchKey: big.TestModSqrt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8902,7 +8886,7 @@ func TestModSqrt(t *testing.T)
 
 ```
 searchKey: big.TestModW
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8913,7 +8897,7 @@ func TestModW(t *testing.T)
 
 ```
 searchKey: big.TestMontgomery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8924,7 +8908,7 @@ func TestMontgomery(t *testing.T)
 
 ```
 searchKey: big.TestMul
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8935,7 +8919,7 @@ func TestMul(t *testing.T)
 
 ```
 searchKey: big.TestMulAddWWW
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8946,7 +8930,7 @@ func TestMulAddWWW(t *testing.T)
 
 ```
 searchKey: big.TestMulBits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8957,7 +8941,7 @@ func TestMulBits(t *testing.T)
 
 ```
 searchKey: big.TestMulRangeN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8968,7 +8952,7 @@ func TestMulRangeN(t *testing.T)
 
 ```
 searchKey: big.TestMulRangeZ
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8979,7 +8963,7 @@ func TestMulRangeZ(t *testing.T)
 
 ```
 searchKey: big.TestMulUnbalanced
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -8992,7 +8976,7 @@ TestMulUnbalanced tests that multiplying numbers of different lengths does not c
 
 ```
 searchKey: big.TestMulWW
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9003,7 +8987,7 @@ func TestMulWW(t *testing.T)
 
 ```
 searchKey: big.TestNLZ
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9014,7 +8998,7 @@ func TestNLZ(t *testing.T)
 
 ```
 searchKey: big.TestNatDiv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9025,7 +9009,7 @@ func TestNatDiv(t *testing.T)
 
 ```
 searchKey: big.TestNormBits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9036,7 +9020,7 @@ func TestNormBits(t *testing.T)
 
 ```
 searchKey: big.TestNot
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9047,7 +9031,7 @@ func TestNot(t *testing.T)
 
 ```
 searchKey: big.TestProbablyPrime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9058,7 +9042,7 @@ func TestProbablyPrime(t *testing.T)
 
 ```
 searchKey: big.TestProdZZ
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9069,7 +9053,7 @@ func TestProdZZ(t *testing.T)
 
 ```
 searchKey: big.TestQuo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9080,7 +9064,7 @@ func TestQuo(t *testing.T)
 
 ```
 searchKey: big.TestQuoStepD6
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9091,7 +9075,7 @@ func TestQuoStepD6(t *testing.T)
 
 ```
 searchKey: big.TestRatAbs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9102,7 +9086,7 @@ func TestRatAbs(t *testing.T)
 
 ```
 searchKey: big.TestRatBin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9113,7 +9097,7 @@ func TestRatBin(t *testing.T)
 
 ```
 searchKey: big.TestRatCmp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9124,7 +9108,7 @@ func TestRatCmp(t *testing.T)
 
 ```
 searchKey: big.TestRatGobEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9135,7 +9119,7 @@ func TestRatGobEncoding(t *testing.T)
 
 ```
 searchKey: big.TestRatInv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9146,7 +9130,7 @@ func TestRatInv(t *testing.T)
 
 ```
 searchKey: big.TestRatJSONEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9157,7 +9141,7 @@ func TestRatJSONEncoding(t *testing.T)
 
 ```
 searchKey: big.TestRatNeg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9168,7 +9152,7 @@ func TestRatNeg(t *testing.T)
 
 ```
 searchKey: big.TestRatScan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9179,7 +9163,7 @@ func TestRatScan(t *testing.T)
 
 ```
 searchKey: big.TestRatSetFrac64Rat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9190,7 +9174,7 @@ func TestRatSetFrac64Rat(t *testing.T)
 
 ```
 searchKey: big.TestRatSetInt64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9201,7 +9185,7 @@ func TestRatSetInt64(t *testing.T)
 
 ```
 searchKey: big.TestRatSetString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9212,7 +9196,7 @@ func TestRatSetString(t *testing.T)
 
 ```
 searchKey: big.TestRatSetUint64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9223,7 +9207,7 @@ func TestRatSetUint64(t *testing.T)
 
 ```
 searchKey: big.TestRatSign
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9234,7 +9218,7 @@ func TestRatSign(t *testing.T)
 
 ```
 searchKey: big.TestRatXMLEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9245,7 +9229,7 @@ func TestRatXMLEncoding(t *testing.T)
 
 ```
 searchKey: big.TestRsh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9256,7 +9240,7 @@ func TestRsh(t *testing.T)
 
 ```
 searchKey: big.TestRshSelf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9267,7 +9251,7 @@ func TestRshSelf(t *testing.T)
 
 ```
 searchKey: big.TestScan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9278,7 +9262,7 @@ func TestScan(t *testing.T)
 
 ```
 searchKey: big.TestScanBase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9289,7 +9273,7 @@ func TestScanBase(t *testing.T)
 
 ```
 searchKey: big.TestScanExponent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9300,7 +9284,7 @@ func TestScanExponent(t *testing.T)
 
 ```
 searchKey: big.TestScanPi
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9313,7 +9297,7 @@ Test case for BenchmarkScanPi.
 
 ```
 searchKey: big.TestScanPiParallel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9324,7 +9308,7 @@ func TestScanPiParallel(t *testing.T)
 
 ```
 searchKey: big.TestSet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9335,7 +9319,7 @@ func TestSet(t *testing.T)
 
 ```
 searchKey: big.TestSetBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9346,7 +9330,7 @@ func TestSetBytes(t *testing.T)
 
 ```
 searchKey: big.TestSetFloat64NonFinite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9359,7 +9343,7 @@ TestSetFloat64NonFinite checks that SetFloat64 of a non-finite value returns nil
 
 ```
 searchKey: big.TestSetString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9370,7 +9354,7 @@ func TestSetString(t *testing.T)
 
 ```
 searchKey: big.TestSetZ
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9381,7 +9365,7 @@ func TestSetZ(t *testing.T)
 
 ```
 searchKey: big.TestShiftLeft
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9392,7 +9376,7 @@ func TestShiftLeft(t *testing.T)
 
 ```
 searchKey: big.TestShiftOverlap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9403,7 +9387,7 @@ func TestShiftOverlap(t *testing.T)
 
 ```
 searchKey: big.TestShiftRight
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9414,7 +9398,7 @@ func TestShiftRight(t *testing.T)
 
 ```
 searchKey: big.TestSignZ
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9425,7 +9409,7 @@ func TestSignZ(t *testing.T)
 
 ```
 searchKey: big.TestSqr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9436,7 +9420,7 @@ func TestSqr(t *testing.T)
 
 ```
 searchKey: big.TestSqrt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9447,7 +9431,7 @@ func TestSqrt(t *testing.T)
 
 ```
 searchKey: big.TestSticky
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9458,7 +9442,7 @@ func TestSticky(t *testing.T)
 
 ```
 searchKey: big.TestString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9469,7 +9453,7 @@ func TestString(t *testing.T)
 
 ```
 searchKey: big.TestStringPowers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9480,7 +9464,7 @@ func TestStringPowers(t *testing.T)
 
 ```
 searchKey: big.TestSumZZ
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9491,7 +9475,7 @@ func TestSumZZ(t *testing.T)
 
 ```
 searchKey: big.TestTrailingZeroBits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9502,7 +9486,7 @@ func TestTrailingZeroBits(t *testing.T)
 
 ```
 searchKey: big.TestUint64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9513,7 +9497,7 @@ func TestUint64(t *testing.T)
 
 ```
 searchKey: big.TestZeroRat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9524,7 +9508,7 @@ func TestZeroRat(t *testing.T)
 
 ```
 searchKey: big.actualPrec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9537,7 +9521,7 @@ actualPrec returns the number of actually used mantissa bits.
 
 ```
 searchKey: big.addAt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9550,7 +9534,7 @@ addAt implements z += x<<(_W*i); z must be long enough. (we don't use nat.add be
 
 ```
 searchKey: big.alias
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9569,7 +9553,7 @@ reflect-based operations to the same effect).
 
 ```
 searchKey: big.alike
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9582,7 +9566,7 @@ alike(x, y) is like x.Cmp(y) == 0 but also considers the sign of 0 (0 != -0).
 
 ```
 searchKey: big.alike32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9593,7 +9577,7 @@ func alike32(x, y float32) bool
 
 ```
 searchKey: big.alike64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9604,7 +9588,7 @@ func alike64(x, y float64) bool
 
 ```
 searchKey: big.allocBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9617,7 +9601,7 @@ allocBytes returns the number of bytes allocated by invoking f.
 
 ```
 searchKey: big.altBit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9628,7 +9612,7 @@ func altBit(x *Int, i int) uint
 
 ```
 searchKey: big.appendZeros
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9641,7 +9625,7 @@ appendZeros appends n 0 digits to buf and returns buf.
 
 ```
 searchKey: big.basicMul
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9654,7 +9638,7 @@ basicMul multiplies x and y and leaves the result in z. The (non-normalized) res
 
 ```
 searchKey: big.basicSqr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9667,7 +9651,7 @@ basicSqr sets z = x*x and is asymptotically faster than basicMul by about a fact
 
 ```
 searchKey: big.benchmarkDiv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9678,7 +9662,7 @@ func benchmarkDiv(b *testing.B, aSize, bSize int)
 
 ```
 searchKey: big.benchmarkIntSqr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9689,7 +9673,7 @@ func benchmarkIntSqr(b *testing.B, nwords int)
 
 ```
 searchKey: big.benchmarkNatMul
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9700,7 +9684,7 @@ func benchmarkNatMul(b *testing.B, nwords int)
 
 ```
 searchKey: big.benchmarkNatSqr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9711,7 +9695,7 @@ func benchmarkNatSqr(b *testing.B, nwords int)
 
 ```
 searchKey: big.checkBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9722,7 +9706,7 @@ func checkBytes(b []byte) bool
 
 ```
 searchKey: big.checkGcd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9733,7 +9717,7 @@ func checkGcd(aBytes, bBytes []byte) bool
 
 ```
 searchKey: big.checkIsBestApprox32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9746,7 +9730,7 @@ checkIsBestApprox32 checks that f is the best possible float32 approximation of 
 
 ```
 searchKey: big.checkIsBestApprox64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9759,7 +9743,7 @@ checkIsBestApprox64 checks that f is the best possible float64 approximation of 
 
 ```
 searchKey: big.checkLehmerExtGcd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9770,7 +9754,7 @@ func checkLehmerExtGcd(aBytes, bBytes []byte) bool
 
 ```
 searchKey: big.checkLehmerGcd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9781,7 +9765,7 @@ func checkLehmerGcd(aBytes, bBytes []byte) bool
 
 ```
 searchKey: big.checkMul
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9792,7 +9776,7 @@ func checkMul(a, b []byte) bool
 
 ```
 searchKey: big.checkNonLossyRoundtrip32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9805,7 +9789,7 @@ checkNonLossyRoundtrip32 checks that a float->Rat->float roundtrip is non-lossy 
 
 ```
 searchKey: big.checkNonLossyRoundtrip64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9818,7 +9802,7 @@ checkNonLossyRoundtrip64 checks that a float->Rat->float roundtrip is non-lossy 
 
 ```
 searchKey: big.checkQuo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9829,7 +9813,7 @@ func checkQuo(x, y []byte) bool
 
 ```
 searchKey: big.checkSetBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9851,7 +9835,7 @@ func computeKaratsubaThresholds()
 
 ```
 searchKey: big.computeSqrThreshold
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9862,7 +9846,7 @@ func computeSqrThreshold(from, to, step, nruns int, lower, upper string) int
 
 ```
 searchKey: big.cutSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9873,7 +9857,7 @@ func cutSpace(r rune) rune
 
 ```
 searchKey: big.divisors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9886,7 +9870,7 @@ construct table of powers of bb*leafSize to use in subdivisions
 
 ```
 searchKey: big.doHilbert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9897,7 +9881,7 @@ func doHilbert(t *testing.T, n int)
 
 ```
 searchKey: big.euclidUpdate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9910,7 +9894,7 @@ euclidUpdate performs a single step of the Euclidean GCD algorithm if extended i
 
 ```
 searchKey: big.fdiv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9921,7 +9905,7 @@ func fdiv(a, b float64) float64
 
 ```
 searchKey: big.fmtE
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9934,7 +9918,7 @@ func fmtE(buf []byte, fmt byte, prec int, d decimal) []byte
 
 ```
 searchKey: big.fmtF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9947,7 +9931,7 @@ func fmtF(buf []byte, prec int, d decimal) []byte
 
 ```
 searchKey: big.fnorm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9960,7 +9944,7 @@ fnorm normalizes mantissa m by shifting it to the left such that the msb of the 
 
 ```
 searchKey: big.format
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9971,7 +9955,7 @@ func format(base int) string
 
 ```
 searchKey: big.fromBinary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9982,7 +9966,7 @@ func fromBinary(s string) int64
 
 ```
 searchKey: big.greaterThan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9995,7 +9979,7 @@ greaterThan reports whether the two digit numbers x1 x2 > y1 y2. TODO(rsc): In c
 
 ```
 searchKey: big.isEven32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10006,7 +9990,7 @@ func isEven32(f float32) bool
 
 ```
 searchKey: big.isEven64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10017,7 +10001,7 @@ func isEven64(f float64) bool
 
 ```
 searchKey: big.isFinite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10030,7 +10014,7 @@ isFinite reports whether f represents a finite rational value. It is equivalent 
 
 ```
 searchKey: big.isNormalized
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10041,7 +10025,7 @@ func isNormalized(x *Int) bool
 
 ```
 searchKey: big.itoa
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10052,7 +10036,7 @@ func itoa(x nat, base int) []byte
 
 ```
 searchKey: big.karatsuba
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10065,7 +10049,7 @@ karatsuba multiplies x and y and leaves the result in z. Both x and y must have 
 
 ```
 searchKey: big.karatsubaAdd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10078,7 +10062,7 @@ Fast version of z[0:n+n>>1].add(z[0:n+n>>1], x[0:n]) w/o bounds checks. Factored
 
 ```
 searchKey: big.karatsubaLen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10091,7 +10075,7 @@ karatsubaLen computes an approximation to the maximum k <= n such that k = p<<i 
 
 ```
 searchKey: big.karatsubaLoad
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10102,7 +10086,7 @@ func karatsubaLoad(b *testing.B)
 
 ```
 searchKey: big.karatsubaSqr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10117,7 +10101,7 @@ The algorithm and the layout of z are the same as for karatsuba.
 
 ```
 searchKey: big.karatsubaSub
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10130,7 +10114,7 @@ Like karatsubaAdd, but does subtract.
 
 ```
 searchKey: big.lehmerUpdate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10150,7 +10134,7 @@ where the signs of u0, u1, v0, v1 are given by even For even == true: u0, v1 >= 
 
 ```
 searchKey: big.log2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10163,7 +10147,7 @@ log2 computes the integer binary logarithm of x. The result is the integer n for
 
 ```
 searchKey: big.low32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10176,7 +10160,7 @@ low32 returns the least significant 32 bits of x.
 
 ```
 searchKey: big.low64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10189,7 +10173,7 @@ low64 returns the least significant 64 bits of x.
 
 ```
 searchKey: big.makeWordVec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10202,7 +10186,7 @@ Construct a vector comprising the same word, usually '0' or 'maximum uint'
 
 ```
 searchKey: big.max
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10213,7 +10197,7 @@ func max(x, y int) int
 
 ```
 searchKey: big.measureKaratsuba
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10226,7 +10210,7 @@ measureKaratsuba returns the time to run a Karatsuba-relevant benchmark given Ka
 
 ```
 searchKey: big.measureSqr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10237,7 +10221,7 @@ func measureSqr(words, nruns int, mode string) time.Duration
 
 ```
 searchKey: big.min
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10248,7 +10232,7 @@ func min(x, y int) int
 
 ```
 searchKey: big.msb32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10261,7 +10245,7 @@ msb32 returns the 32 most significant bits of x.
 
 ```
 searchKey: big.msb64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10274,7 +10258,7 @@ msb64 returns the 64 most significant bits of x.
 
 ```
 searchKey: big.mulBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10287,7 +10271,7 @@ mulBytes returns x*y via grade school multiplication. Both inputs and the result
 
 ```
 searchKey: big.nlz
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10300,7 +10284,7 @@ nlz returns the number of leading zeros in x. Wraps bits.LeadingZeros call for c
 
 ```
 searchKey: big.putNat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10311,7 +10295,7 @@ func putNat(x *nat)
 
 ```
 searchKey: big.quotToFloat32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10324,7 +10308,7 @@ quotToFloat32 returns the non-negative float32 value nearest to the quotient a/b
 
 ```
 searchKey: big.quotToFloat64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10337,7 +10321,7 @@ quotToFloat64 returns the non-negative float64 value nearest to the quotient a/b
 
 ```
 searchKey: big.ratTok
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10348,7 +10332,7 @@ func ratTok(ch rune) bool
 
 ```
 searchKey: big.resetTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10359,7 +10343,7 @@ func resetTable(table []divisor)
 
 ```
 searchKey: big.rndV
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10370,7 +10354,7 @@ func rndV(n int) []Word
 
 ```
 searchKey: big.roundShortest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10381,7 +10365,7 @@ func roundShortest(d *decimal, x *Float)
 
 ```
 searchKey: big.runGCD
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10392,7 +10376,7 @@ func runGCD(b *testing.B, aSize, bSize uint)
 
 ```
 searchKey: big.runGCDExt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10403,7 +10387,7 @@ func runGCDExt(b *testing.B, aSize, bSize uint, calcXY bool)
 
 ```
 searchKey: big.runModWTests
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10414,7 +10398,7 @@ func runModWTests(t *testing.T, tests []modWTest)
 
 ```
 searchKey: big.same
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10425,7 +10409,7 @@ func same(x, y nat) bool
 
 ```
 searchKey: big.scanExponent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10449,7 +10433,7 @@ A base 2 exponent is only permitted if base2ok is set.
 
 ```
 searchKey: big.scanSign
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10460,7 +10444,7 @@ func scanSign(r io.ByteScanner) (neg bool, err error)
 
 ```
 searchKey: big.shouldRoundUp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10473,7 +10457,7 @@ shouldRoundUp reports if x should be rounded up if shortened to n digits. n must
 
 ```
 searchKey: big.shr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10486,7 +10470,7 @@ shr implements x >> s, for s <= maxShift.
 
 ```
 searchKey: big.testBitFun
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10497,7 +10481,7 @@ func testBitFun(t *testing.T, msg string, f bitFun, x, y *Int, exp string)
 
 ```
 searchKey: big.testBitFunSelf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10508,7 +10492,7 @@ func testBitFunSelf(t *testing.T, msg string, f bitFun, x, y *Int, exp string)
 
 ```
 searchKey: big.testBitset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10519,7 +10503,7 @@ func testBitset(t *testing.T, x *Int)
 
 ```
 searchKey: big.testFloatRound
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10530,7 +10514,7 @@ func testFloatRound(t *testing.T, x, r int64, prec uint, mode RoundingMode)
 
 ```
 searchKey: big.testFunNN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10541,7 +10525,7 @@ func testFunNN(t *testing.T, msg string, f funNN, a argNN)
 
 ```
 searchKey: big.testFunVV
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10552,7 +10536,7 @@ func testFunVV(t *testing.T, msg string, f funVV, a argVV)
 
 ```
 searchKey: big.testFunVW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10563,7 +10547,7 @@ func testFunVW(t *testing.T, msg string, f funVW, a argVW)
 
 ```
 searchKey: big.testFunVWW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10574,7 +10558,7 @@ func testFunVWW(t *testing.T, msg string, f funVWW, a argVWW)
 
 ```
 searchKey: big.testFunVWext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10585,7 +10569,7 @@ func testFunVWext(t *testing.T, msg string, f funVW, f_g funVW, a argVW)
 
 ```
 searchKey: big.testFunWVW
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10596,7 +10580,7 @@ func testFunWVW(t *testing.T, msg string, f funWVW, a argWVW)
 
 ```
 searchKey: big.testFunZZ
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10607,7 +10591,7 @@ func testFunZZ(t *testing.T, msg string, f funZZ, a argZZ)
 
 ```
 searchKey: big.testGcd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10618,7 +10602,7 @@ func testGcd(t *testing.T, d, x, y, a, b *Int)
 
 ```
 searchKey: big.testModSqrt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10631,7 +10615,7 @@ testModSqrt is a helper for TestModSqrt, which checks that ModSqrt can compute a
 
 ```
 searchKey: big.testPseudoprimes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10642,7 +10626,7 @@ func testPseudoprimes(t *testing.T, name string, cond func(nat) bool, want []int
 
 ```
 searchKey: big.testRatBin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10653,7 +10637,7 @@ func testRatBin(t *testing.T, i int, name string, f ratBinFun, a ratBinArg)
 
 ```
 searchKey: big.testShiftFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10664,7 +10648,7 @@ func testShiftFunc(t *testing.T, f func(z, x []Word, s uint) Word, a argVU)
 
 ```
 searchKey: big.testSqr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10675,7 +10659,7 @@ func testSqr(t *testing.T, x nat)
 
 ```
 searchKey: big.toBinary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10686,7 +10670,7 @@ func toBinary(x int64) string
 
 ```
 searchKey: big.trim
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10699,7 +10683,7 @@ trim cuts off any trailing zeros from x's mantissa; they are meaningless for the
 
 ```
 searchKey: big.umax32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10710,7 +10694,7 @@ func umax32(x, y uint32) uint32
 
 ```
 searchKey: big.validateBinaryOperands
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10721,7 +10705,7 @@ func validateBinaryOperands(x, y *Float)
 
 ```
 searchKey: big.writeMultiple
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

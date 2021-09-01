@@ -22,10 +22,6 @@ Package httptrace provides mechanisms to trace the events within HTTP client req
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ClientTrace" href="#ClientTrace">type ClientTrace struct</a>
 
 ```
@@ -131,7 +127,7 @@ See [https://blog.golang.org/http-tracing](https://blog.golang.org/http-tracing)
 
 ```
 searchKey: httptrace.ContextClientTrace
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -157,7 +153,7 @@ compose modifies t such that it respects the previously-registered hooks in old,
 
 ```
 searchKey: httptrace.ClientTrace.hasNetHooks
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -264,15 +260,11 @@ unique type to prevent assignment.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestCompose" href="#TestCompose">func TestCompose(t *testing.T)</a>
 
 ```
 searchKey: httptrace.TestCompose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -283,7 +275,7 @@ func TestCompose(t *testing.T)
 
 ```
 searchKey: httptrace.TestWithClientTrace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -294,7 +286,7 @@ func TestWithClientTrace(t *testing.T)
 
 ```
 searchKey: httptrace.WithClientTrace
-tags: [method]
+tags: [function]
 ```
 
 ```Go

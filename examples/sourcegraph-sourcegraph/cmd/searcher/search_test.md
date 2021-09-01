@@ -24,7 +24,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="sortByLineNumber" href="#sortByLineNumber">type sortByLineNumber []protocol.LineMatch</a>
@@ -42,7 +42,7 @@ type sortByLineNumber []protocol.LineMatch
 
 ```
 searchKey: search_test.sortByLineNumber.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -86,7 +86,7 @@ type sortByPath []protocol.FileMatch
 
 ```
 searchKey: search_test.sortByPath.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -118,14 +118,14 @@ func (m sortByPath) Swap(i, j int)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestSearch" href="#TestSearch">func TestSearch(t *testing.T)</a>
 
 ```
 searchKey: search_test.TestSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -136,7 +136,7 @@ func TestSearch(t *testing.T)
 
 ```
 searchKey: search_test.TestSearch_badrequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -147,7 +147,7 @@ func TestSearch_badrequest(t *testing.T)
 
 ```
 searchKey: search_test.addpaxheader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -158,7 +158,7 @@ func addpaxheader(w *tar.Writer, body string) error
 
 ```
 searchKey: search_test.doSearch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -169,7 +169,7 @@ func doSearch(u string, p *protocol.Request) ([]protocol.FileMatch, error)
 
 ```
 searchKey: search_test.newStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -180,7 +180,7 @@ func newStore(files map[string]string) (*store.Store, func(), error)
 
 ```
 searchKey: search_test.sanityCheckSorted
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -191,7 +191,7 @@ func sanityCheckSorted(m []protocol.FileMatch) error
 
 ```
 searchKey: search_test.toString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

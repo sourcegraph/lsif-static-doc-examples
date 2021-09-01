@@ -98,7 +98,7 @@ Package updatecheck provides a client and HTTP handler for checking and serving 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="redisInfoCommand" href="#redisInfoCommand">const redisInfoCommand</a>
@@ -117,7 +117,7 @@ output of running the INFO command in redis-cli
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="codeIntelActionNames" href="#codeIntelActionNames">var codeIntelActionNames</a>
@@ -309,7 +309,7 @@ var timeNow = time.Now
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Status" href="#Status">type Status struct</a>
@@ -346,7 +346,7 @@ Last returns the status of the last-completed software update check.
 
 ```
 searchKey: updatecheck.Status.HasUpdate
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -374,7 +374,7 @@ build is the JSON shape of the update check handler's response body.
 
 ```
 searchKey: updatecheck.getLatestRelease
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -385,7 +385,7 @@ func getLatestRelease(deployType string) build
 
 ```
 searchKey: updatecheck.newBuild
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -451,7 +451,7 @@ type jsonEventSummary struct {
 
 ```
 searchKey: updatecheck.translateEventSummary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -551,7 +551,7 @@ pingRequest is the payload of the update check request. These values either supp
 
 ```
 searchKey: updatecheck.readPingRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -564,7 +564,7 @@ readPingRequest reads the ping request payload from the request. If the request 
 
 ```
 searchKey: updatecheck.readPingRequestFromBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -575,7 +575,7 @@ func readPingRequestFromBody(body io.ReadCloser) (*pingRequest, error)
 
 ```
 searchKey: updatecheck.readPingRequestFromQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -585,14 +585,14 @@ func readPingRequestFromQuery(q url.Values) (*pingRequest, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Handler" href="#Handler">func Handler(w http.ResponseWriter, r *http.Request)</a>
 
 ```
 searchKey: updatecheck.Handler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -618,7 +618,7 @@ IsPending returns whether an update check is in progress.
 
 ```
 searchKey: updatecheck.Start
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -631,7 +631,7 @@ Start starts checking for software updates periodically.
 
 ```
 searchKey: updatecheck.TestCanUpdate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -642,7 +642,7 @@ func TestCanUpdate(t *testing.T)
 
 ```
 searchKey: updatecheck.TestLatestDockerComposeOrPureDockerVersionPushed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -653,7 +653,7 @@ func TestLatestDockerComposeOrPureDockerVersionPushed(t *testing.T)
 
 ```
 searchKey: updatecheck.TestLatestDockerVersionPushed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -664,7 +664,7 @@ func TestLatestDockerVersionPushed(t *testing.T)
 
 ```
 searchKey: updatecheck.TestLatestKubernetesVersionPushed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -675,7 +675,7 @@ func TestLatestKubernetesVersionPushed(t *testing.T)
 
 ```
 searchKey: updatecheck.TestParseRedisInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -686,7 +686,7 @@ func TestParseRedisInfo(t *testing.T)
 
 ```
 searchKey: updatecheck.TestSerializeAutomationUsage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -697,7 +697,7 @@ func TestSerializeAutomationUsage(t *testing.T)
 
 ```
 searchKey: updatecheck.TestSerializeBasic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -708,7 +708,7 @@ func TestSerializeBasic(t *testing.T)
 
 ```
 searchKey: updatecheck.TestSerializeCodeIntelUsage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -719,7 +719,7 @@ func TestSerializeCodeIntelUsage(t *testing.T)
 
 ```
 searchKey: updatecheck.TestSerializeFromQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -730,7 +730,7 @@ func TestSerializeFromQuery(t *testing.T)
 
 ```
 searchKey: updatecheck.TestSerializeOldCodeIntelUsage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -752,7 +752,7 @@ func authProviderTypes() []string
 
 ```
 searchKey: updatecheck.canUpdate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -765,7 +765,7 @@ canUpdate returns true if the latestReleaseBuild is newer than the clientVersion
 
 ```
 searchKey: updatecheck.canUpdateDate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -778,7 +778,7 @@ canUpdateDate returns true if clientVersionString contains a date more than 40 d
 
 ```
 searchKey: updatecheck.canUpdateVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -791,7 +791,7 @@ canUpdateVersion returns true if the latest released build is newer than the cli
 
 ```
 searchKey: updatecheck.check
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -804,7 +804,7 @@ check performs an update check and updates the global state.
 
 ```
 searchKey: updatecheck.compareJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -815,7 +815,7 @@ func compareJSON(t *testing.T, actual []byte, expected string)
 
 ```
 searchKey: updatecheck.externalServiceKinds
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -826,7 +826,7 @@ func externalServiceKinds(ctx context.Context) (kinds []string, err error)
 
 ```
 searchKey: updatecheck.getAndMarshalAggregatedCodeIntelUsageJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -837,7 +837,7 @@ func getAndMarshalAggregatedCodeIntelUsageJSON(ctx context.Context, db dbutil.DB
 
 ```
 searchKey: updatecheck.getAndMarshalAggregatedSearchUsageJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -848,7 +848,7 @@ func getAndMarshalAggregatedSearchUsageJSON(ctx context.Context, db dbutil.DB) (
 
 ```
 searchKey: updatecheck.getAndMarshalBatchChangesUsageJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -859,7 +859,7 @@ func getAndMarshalBatchChangesUsageJSON(ctx context.Context, db dbutil.DB) (_ js
 
 ```
 searchKey: updatecheck.getAndMarshalCodeInsightsUsageJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -870,7 +870,7 @@ func getAndMarshalCodeInsightsUsageJSON(ctx context.Context, db dbutil.DB) (_ js
 
 ```
 searchKey: updatecheck.getAndMarshalCodeMonitoringUsageJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -881,7 +881,7 @@ func getAndMarshalCodeMonitoringUsageJSON(ctx context.Context, db dbutil.DB) (_ 
 
 ```
 searchKey: updatecheck.getAndMarshalExtensionsUsageStatisticsJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -892,7 +892,7 @@ func getAndMarshalExtensionsUsageStatisticsJSON(ctx context.Context, db dbutil.D
 
 ```
 searchKey: updatecheck.getAndMarshalGrowthStatisticsJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -903,7 +903,7 @@ func getAndMarshalGrowthStatisticsJSON(ctx context.Context, db dbutil.DB) (_ jso
 
 ```
 searchKey: updatecheck.getAndMarshalHomepagePanelsJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -914,7 +914,7 @@ func getAndMarshalHomepagePanelsJSON(ctx context.Context, db dbutil.DB) (_ json.
 
 ```
 searchKey: updatecheck.getAndMarshalRepositoriesJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -925,7 +925,7 @@ func getAndMarshalRepositoriesJSON(ctx context.Context) (_ json.RawMessage, err 
 
 ```
 searchKey: updatecheck.getAndMarshalRetentionStatisticsJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -936,7 +936,7 @@ func getAndMarshalRetentionStatisticsJSON(ctx context.Context, db dbutil.DB) (_ 
 
 ```
 searchKey: updatecheck.getAndMarshalSavedSearchesJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -947,7 +947,7 @@ func getAndMarshalSavedSearchesJSON(ctx context.Context, db dbutil.DB) (_ json.R
 
 ```
 searchKey: updatecheck.getAndMarshalSearchOnboardingJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -958,7 +958,7 @@ func getAndMarshalSearchOnboardingJSON(ctx context.Context, db dbutil.DB) (_ jso
 
 ```
 searchKey: updatecheck.getAndMarshalSiteActivityJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -969,7 +969,7 @@ func getAndMarshalSiteActivityJSON(ctx context.Context, db dbutil.DB, criticalOn
 
 ```
 searchKey: updatecheck.getDependencyVersions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -980,7 +980,7 @@ func getDependencyVersions(ctx context.Context, db dbutil.DB, logFunc func(strin
 
 ```
 searchKey: updatecheck.getInitialSiteAdminEmail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -991,7 +991,7 @@ func getInitialSiteAdminEmail(ctx context.Context) (_ string, err error)
 
 ```
 searchKey: updatecheck.getRedisVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1002,7 +1002,7 @@ func getRedisVersion(dialFunc func() (redis.Conn, error)) (string, error)
 
 ```
 searchKey: updatecheck.getTotalReposCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1013,7 +1013,7 @@ func getTotalReposCount(ctx context.Context) (_ int, err error)
 
 ```
 searchKey: updatecheck.getTotalUsersCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1024,7 +1024,7 @@ func getTotalUsersCount(ctx context.Context) (_ int, err error)
 
 ```
 searchKey: updatecheck.getUsersActiveTodayCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1035,7 +1035,7 @@ func getUsersActiveTodayCount(ctx context.Context) (_ int, err error)
 
 ```
 searchKey: updatecheck.hasFindRefsOccurred
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1046,7 +1046,7 @@ func hasFindRefsOccurred(ctx context.Context) (_ bool, err error)
 
 ```
 searchKey: updatecheck.hasSearchOccurred
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1057,7 +1057,7 @@ func hasSearchOccurred(ctx context.Context) (_ bool, err error)
 
 ```
 searchKey: updatecheck.logPing
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1068,7 +1068,7 @@ func logPing(r *http.Request, pr *pingRequest, hasUpdate bool)
 
 ```
 searchKey: updatecheck.marshalPing
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1079,7 +1079,7 @@ func marshalPing(pr *pingRequest, hasUpdate bool, clientAddr string, now time.Ti
 
 ```
 searchKey: updatecheck.parseRedisInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1090,7 +1090,7 @@ func parseRedisInfo(buf []byte) (map[string]string, error)
 
 ```
 searchKey: updatecheck.recordOperation
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1103,7 +1103,7 @@ recordOperation returns a record fn that is called on any given return err. If a
 
 ```
 searchKey: updatecheck.reserializeCodeIntelUsage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1116,7 +1116,7 @@ reserializeCodeIntelUsage returns the given data in the shape of the current cod
 
 ```
 searchKey: updatecheck.reserializeNewCodeIntelUsage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1127,7 +1127,7 @@ func reserializeNewCodeIntelUsage(payload json.RawMessage) (json.RawMessage, err
 
 ```
 searchKey: updatecheck.reserializeOldCodeIntelUsage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1138,7 +1138,7 @@ func reserializeOldCodeIntelUsage(payload json.RawMessage) (json.RawMessage, err
 
 ```
 searchKey: updatecheck.reserializeSearchUsage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1151,7 +1151,7 @@ reserializeSearchUsage will reserialize a code intel usage statistics struct wit
 
 ```
 searchKey: updatecheck.toBool
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1162,7 +1162,7 @@ func toBool(val string) bool
 
 ```
 searchKey: updatecheck.toInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1173,7 +1173,7 @@ func toInt(val string) int32
 
 ```
 searchKey: updatecheck.toRawMessage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1184,7 +1184,7 @@ func toRawMessage(val string) json.RawMessage
 
 ```
 searchKey: updatecheck.updateBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

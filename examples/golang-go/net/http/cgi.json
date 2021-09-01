@@ -24,9 +24,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -168,9 +166,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -277,7 +273,7 @@
                       "newPage": false,
                       "searchKey": "cgi.Handler.stderr",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -465,7 +461,7 @@
                       "newPage": false,
                       "searchKey": "cgi.response.Flush",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -488,7 +484,7 @@
                       "newPage": false,
                       "searchKey": "cgi.response.Header",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -585,9 +581,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -628,7 +622,7 @@
                 "newPage": false,
                 "searchKey": "cgi.RequestFromMap",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -650,7 +644,7 @@
                 "newPage": false,
                 "searchKey": "cgi.Serve",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -672,7 +666,7 @@
                 "newPage": false,
                 "searchKey": "cgi.Test500WithEmptyHeaders",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -696,7 +690,7 @@
                 "newPage": false,
                 "searchKey": "cgi.Test500WithNoContentType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -720,7 +714,7 @@
                 "newPage": false,
                 "searchKey": "cgi.Test500WithNoHeaders",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -744,7 +738,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestBeChildCGIProcess",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -768,7 +762,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestCGIBasicGet",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -792,7 +786,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestCGIBasicGetAbsPath",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -816,7 +810,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestCGIBasicPost",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -840,7 +834,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestCGIEnvIPv6",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -864,7 +858,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestCGIPostChunked",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -888,7 +882,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestChildContentType",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -912,7 +906,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestChildOnlyHeaders",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -936,7 +930,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestCopyError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -960,7 +954,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestDirUnix",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -984,7 +978,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestDirWindows",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1008,7 +1002,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestDropProxyHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1032,7 +1026,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestDupHeaders",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1056,7 +1050,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestEnvOverride",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1080,7 +1074,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestHandlerStderr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1104,7 +1098,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestHostingOurselves",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1128,7 +1122,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestInternalRedirect",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1152,7 +1146,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestKillChildAfterCopyError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1176,7 +1170,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestNilRequestBody",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1200,7 +1194,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestPathInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1224,7 +1218,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestPathInfoDirRoot",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1248,7 +1242,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestPathInfoNoRoot",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1272,7 +1266,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestRedirect",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1296,7 +1290,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestRemoveLeadingDuplicates",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1320,7 +1314,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1344,7 +1338,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestRequestWithTLS",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1368,7 +1362,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestRequestWithoutHost",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1392,7 +1386,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestRequestWithoutRemotePort",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1416,7 +1410,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestRequestWithoutRequestURI",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1440,7 +1434,7 @@
                 "newPage": false,
                 "searchKey": "cgi.TestResponse",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1464,7 +1458,7 @@
                 "newPage": false,
                 "searchKey": "cgi.check",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1487,7 +1481,7 @@
                 "newPage": false,
                 "searchKey": "cgi.chunk",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1510,7 +1504,7 @@
                 "newPage": false,
                 "searchKey": "cgi.envMap",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1533,7 +1527,7 @@
                 "newPage": false,
                 "searchKey": "cgi.findPerl",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1556,7 +1550,7 @@
                 "newPage": false,
                 "searchKey": "cgi.isProcessRunning",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1579,7 +1573,7 @@
                 "newPage": false,
                 "searchKey": "cgi.newRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1602,7 +1596,7 @@
                 "newPage": false,
                 "searchKey": "cgi.removeLeadingDuplicates",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1625,7 +1619,7 @@
                 "newPage": false,
                 "searchKey": "cgi.runCgiTest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1648,7 +1642,7 @@
                 "newPage": false,
                 "searchKey": "cgi.runResponseChecks",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1671,7 +1665,7 @@
                 "newPage": false,
                 "searchKey": "cgi.upperCaseAndUnderscore",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1694,7 +1688,7 @@
                 "newPage": false,
                 "searchKey": "cgi.want500Test",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

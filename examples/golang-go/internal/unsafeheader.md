@@ -14,7 +14,7 @@ This package allows packages that cannot import "reflect" to use types that are 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Slice" href="#Slice">type Slice struct</a>

@@ -101,7 +101,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrPermsSyncedAtNotSet" href="#ErrPermsSyncedAtNotSet">var ErrPermsSyncedAtNotSet</a>
@@ -162,7 +162,7 @@ var now = timeutil.Now().UnixNano()
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockPerms" href="#MockPerms">type MockPerms struct</a>
@@ -246,7 +246,7 @@ PermsStore is the unified interface for managing permissions explicitly in the d
 
 ```
 searchKey: database.Perms
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -750,14 +750,14 @@ permsLoadValues contains return values of (*PermsStore).load method.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewAuthzStore" href="#NewAuthzStore">func NewAuthzStore(db dbutil.DB, clock func() time.Time) database.AuthzStore</a>
 
 ```
 searchKey: database.NewAuthzStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -770,7 +770,7 @@ NewAuthzStore returns an OSS database.AuthzStore set with enterprise implementat
 
 ```
 searchKey: database.NewExternalServicesStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -783,7 +783,7 @@ NewExternalServicesStore returns an OSS database.ExternalServicesStore set with 
 
 ```
 searchKey: database.TestAuthzStore_AuthorizedRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -794,7 +794,7 @@ func TestAuthzStore_AuthorizedRepos(t *testing.T)
 
 ```
 searchKey: database.TestAuthzStore_GrantPendingPermissions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -805,7 +805,7 @@ func TestAuthzStore_GrantPendingPermissions(t *testing.T)
 
 ```
 searchKey: database.TestAuthzStore_RevokeUserPermissions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -816,7 +816,7 @@ func TestAuthzStore_RevokeUserPermissions(t *testing.T)
 
 ```
 searchKey: database.TestExternalServices_ValidateConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -829,7 +829,7 @@ This test lives in cmd/enterprise because it tests a proprietary super-set of th
 
 ```
 searchKey: database.TestIntegration_PermsStore
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -840,7 +840,7 @@ func TestIntegration_PermsStore(t *testing.T)
 
 ```
 searchKey: database.bitmapToArray
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -851,7 +851,7 @@ func bitmapToArray(bm *roaring.Bitmap) []int
 
 ```
 searchKey: database.checkRegularPermsTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -862,7 +862,7 @@ func checkRegularPermsTable(s *PermsStore, sql string, expects map[int32][]uint3
 
 ```
 searchKey: database.checkRepoPendingPermsTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -878,7 +878,7 @@ func checkRepoPendingPermsTable(
 
 ```
 searchKey: database.checkUserPendingPermsTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -896,7 +896,7 @@ func checkUserPendingPermsTable(
 
 ```
 searchKey: database.cleanupPermsTables
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -907,7 +907,7 @@ func cleanupPermsTables(t *testing.T, s *PermsStore)
 
 ```
 searchKey: database.cleanupReposTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -918,7 +918,7 @@ func cleanupReposTable(t *testing.T, s *PermsStore)
 
 ```
 searchKey: database.cleanupUsersTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -940,7 +940,7 @@ func clock() time.Time
 
 ```
 searchKey: database.deleteUserPendingPermissionsQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -951,7 +951,7 @@ func deleteUserPendingPermissionsQuery(p *authz.UserPendingPermissions) *sqlf.Qu
 
 ```
 searchKey: database.equal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -973,7 +973,7 @@ func init()
 
 ```
 searchKey: database.insertUserPendingPermissionsBatchQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -987,7 +987,7 @@ func insertUserPendingPermissionsBatchQuery(
 
 ```
 searchKey: database.loadRepoPendingPermissionsQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -998,7 +998,7 @@ func loadRepoPendingPermissionsQuery(p *authz.RepoPermissions, lock string) *sql
 
 ```
 searchKey: database.loadRepoPermissionsQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1009,7 +1009,7 @@ func loadRepoPermissionsQuery(p *authz.RepoPermissions, lock string) *sqlf.Query
 
 ```
 searchKey: database.loadUserPendingPermissionsQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1020,7 +1020,7 @@ func loadUserPendingPermissionsQuery(p *authz.UserPendingPermissions, lock strin
 
 ```
 searchKey: database.loadUserPermissionsQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1031,7 +1031,7 @@ func loadUserPermissionsQuery(p *authz.UserPermissions, lock string) *sqlf.Query
 
 ```
 searchKey: database.testPermsStore_DatabaseDeadlocks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1042,7 +1042,7 @@ func testPermsStore_DatabaseDeadlocks(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_DeleteAllUserPendingPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1053,7 +1053,7 @@ func testPermsStore_DeleteAllUserPendingPermissions(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_DeleteAllUserPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1064,7 +1064,7 @@ func testPermsStore_DeleteAllUserPermissions(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_GetUserIDsByExternalAccounts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1075,7 +1075,7 @@ func testPermsStore_GetUserIDsByExternalAccounts(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_GrantPendingPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1086,7 +1086,7 @@ func testPermsStore_GrantPendingPermissions(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_ListExternalAccounts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1097,7 +1097,7 @@ func testPermsStore_ListExternalAccounts(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_ListPendingUsers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1108,7 +1108,7 @@ func testPermsStore_ListPendingUsers(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_LoadRepoPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1119,7 +1119,7 @@ func testPermsStore_LoadRepoPermissions(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_LoadUserPendingPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1130,7 +1130,7 @@ func testPermsStore_LoadUserPendingPermissions(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_LoadUserPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1141,7 +1141,7 @@ func testPermsStore_LoadUserPermissions(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_Metrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1152,7 +1152,7 @@ func testPermsStore_Metrics(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_RepoIDsWithNoPerms
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1163,7 +1163,7 @@ func testPermsStore_RepoIDsWithNoPerms(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_ReposIDsWithOldestPerms
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1174,7 +1174,7 @@ func testPermsStore_ReposIDsWithOldestPerms(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_SetPendingPermissionsAfterGrant
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1187,7 +1187,7 @@ This test is used to ensure we ignore invalid pending user IDs on updating repos
 
 ```
 searchKey: database.testPermsStore_SetRepoPendingPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1198,7 +1198,7 @@ func testPermsStore_SetRepoPendingPermissions(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_SetRepoPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1209,7 +1209,7 @@ func testPermsStore_SetRepoPermissions(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_SetUserPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1220,7 +1220,7 @@ func testPermsStore_SetUserPermissions(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_TouchRepoPermissions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1231,7 +1231,7 @@ func testPermsStore_TouchRepoPermissions(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_UserIDsWithNoPerms
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1242,7 +1242,7 @@ func testPermsStore_UserIDsWithNoPerms(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.testPermsStore_UserIDsWithOldestPerms
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1253,7 +1253,7 @@ func testPermsStore_UserIDsWithOldestPerms(db *sql.DB) func(*testing.T)
 
 ```
 searchKey: database.toBitmap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1264,7 +1264,7 @@ func toBitmap(ids ...uint32) *roaring.Bitmap
 
 ```
 searchKey: database.updateUserPendingPermissionsBatchQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1277,7 +1277,7 @@ updateUserPendingPermissionsBatchQuery composes a SQL query that does both addit
 
 ```
 searchKey: database.upsertRepoPendingPermissionsBatchQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1288,7 +1288,7 @@ func upsertRepoPendingPermissionsBatchQuery(ps ...*authz.RepoPermissions) (*sqlf
 
 ```
 searchKey: database.upsertRepoPermissionsBatchQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1301,7 +1301,7 @@ upsertRepoPermissionsBatchQuery composes a SQL query that does both addition (fo
 
 ```
 searchKey: database.upsertRepoPermissionsQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1314,7 +1314,7 @@ upsertRepoPermissionsQuery upserts single row of repository permissions, it does
 
 ```
 searchKey: database.upsertUserPermissionsBatchQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1327,7 +1327,7 @@ upsertUserPermissionsBatchQuery composes a SQL query that does both addition (fo
 
 ```
 searchKey: database.upsertUserPermissionsQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

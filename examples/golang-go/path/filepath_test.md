@@ -120,7 +120,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="lsep" href="#lsep">const lsep</a>
@@ -148,7 +148,7 @@ const sep = filepath.Separator
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EvalSymlinksTestDirs" href="#EvalSymlinksTestDirs">var EvalSymlinksTestDirs</a>
@@ -459,7 +459,7 @@ var winsplittests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EvalSymlinksTest" href="#EvalSymlinksTest">type EvalSymlinksTest struct</a>
@@ -678,7 +678,7 @@ type statDirEntry struct {
 
 ```
 searchKey: filepath_test.statDirEntry.Info
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -689,7 +689,7 @@ func (d *statDirEntry) Info() (fs.FileInfo, error)
 
 ```
 searchKey: filepath_test.statDirEntry.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -700,7 +700,7 @@ func (d *statDirEntry) IsDir() bool
 
 ```
 searchKey: filepath_test.statDirEntry.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -711,7 +711,7 @@ func (d *statDirEntry) Name() string
 
 ```
 searchKey: filepath_test.statDirEntry.Type
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -721,7 +721,7 @@ func (d *statDirEntry) Type() fs.FileMode
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleBase" href="#ExampleBase">func ExampleBase()</a>
@@ -838,7 +838,7 @@ func ExampleWalk()
 
 ```
 searchKey: filepath_test.TestAbs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -849,7 +849,7 @@ func TestAbs(t *testing.T)
 
 ```
 searchKey: filepath_test.TestAbsEmptyString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -862,7 +862,7 @@ Empty path needs to be special-cased on Windows. See golang.org/issue/24441. We 
 
 ```
 searchKey: filepath_test.TestBase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -873,7 +873,7 @@ func TestBase(t *testing.T)
 
 ```
 searchKey: filepath_test.TestBug3486
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -884,7 +884,7 @@ func TestBug3486(t *testing.T)
 
 ```
 searchKey: filepath_test.TestClean
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -895,7 +895,7 @@ func TestClean(t *testing.T)
 
 ```
 searchKey: filepath_test.TestDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -906,7 +906,7 @@ func TestDir(t *testing.T)
 
 ```
 searchKey: filepath_test.TestDriveLetterInEvalSymlinks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -917,7 +917,7 @@ func TestDriveLetterInEvalSymlinks(t *testing.T)
 
 ```
 searchKey: filepath_test.TestEvalSymlinks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -928,7 +928,7 @@ func TestEvalSymlinks(t *testing.T)
 
 ```
 searchKey: filepath_test.TestEvalSymlinksAboveRoot
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -941,7 +941,7 @@ Issue 30520 part 1.
 
 ```
 searchKey: filepath_test.TestEvalSymlinksAboveRootChdir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -954,7 +954,7 @@ Issue 30520 part 2.
 
 ```
 searchKey: filepath_test.TestEvalSymlinksIsNotExist
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -965,7 +965,7 @@ func TestEvalSymlinksIsNotExist(t *testing.T)
 
 ```
 searchKey: filepath_test.TestExt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -976,7 +976,7 @@ func TestExt(t *testing.T)
 
 ```
 searchKey: filepath_test.TestFromAndToSlash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -987,7 +987,7 @@ func TestFromAndToSlash(t *testing.T)
 
 ```
 searchKey: filepath_test.TestGlob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -998,7 +998,7 @@ func TestGlob(t *testing.T)
 
 ```
 searchKey: filepath_test.TestGlobError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1009,7 +1009,7 @@ func TestGlobError(t *testing.T)
 
 ```
 searchKey: filepath_test.TestGlobSymlink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1020,7 +1020,7 @@ func TestGlobSymlink(t *testing.T)
 
 ```
 searchKey: filepath_test.TestGlobUNC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1031,7 +1031,7 @@ func TestGlobUNC(t *testing.T)
 
 ```
 searchKey: filepath_test.TestIsAbs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1042,7 +1042,7 @@ func TestIsAbs(t *testing.T)
 
 ```
 searchKey: filepath_test.TestIssue13582
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1053,7 +1053,7 @@ func TestIssue13582(t *testing.T)
 
 ```
 searchKey: filepath_test.TestIssue29372
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1064,7 +1064,7 @@ func TestIssue29372(t *testing.T)
 
 ```
 searchKey: filepath_test.TestJoin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1075,7 +1075,7 @@ func TestJoin(t *testing.T)
 
 ```
 searchKey: filepath_test.TestMatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1086,7 +1086,7 @@ func TestMatch(t *testing.T)
 
 ```
 searchKey: filepath_test.TestNonWindowsGlobEscape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1097,7 +1097,7 @@ func TestNonWindowsGlobEscape(t *testing.T)
 
 ```
 searchKey: filepath_test.TestRel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1108,7 +1108,7 @@ func TestRel(t *testing.T)
 
 ```
 searchKey: filepath_test.TestSplit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1119,7 +1119,7 @@ func TestSplit(t *testing.T)
 
 ```
 searchKey: filepath_test.TestSplitList
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1130,7 +1130,7 @@ func TestSplitList(t *testing.T)
 
 ```
 searchKey: filepath_test.TestVolumeName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1141,7 +1141,7 @@ func TestVolumeName(t *testing.T)
 
 ```
 searchKey: filepath_test.TestWalk
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1152,7 +1152,7 @@ func TestWalk(t *testing.T)
 
 ```
 searchKey: filepath_test.TestWalkDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1163,7 +1163,7 @@ func TestWalkDir(t *testing.T)
 
 ```
 searchKey: filepath_test.TestWalkFileError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1174,7 +1174,7 @@ func TestWalkFileError(t *testing.T)
 
 ```
 searchKey: filepath_test.TestWalkSkipDirOnFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1185,7 +1185,7 @@ func TestWalkSkipDirOnFile(t *testing.T)
 
 ```
 searchKey: filepath_test.TestWalkSymlink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1196,7 +1196,7 @@ func TestWalkSymlink(t *testing.T)
 
 ```
 searchKey: filepath_test.TestWindowsGlob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1207,7 +1207,7 @@ func TestWindowsGlob(t *testing.T)
 
 ```
 searchKey: filepath_test.chdir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1220,7 +1220,7 @@ chdir changes the current working directory to the named directory, and then res
 
 ```
 searchKey: filepath_test.checkMarks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1231,7 +1231,7 @@ func checkMarks(t *testing.T, report bool)
 
 ```
 searchKey: filepath_test.chtmpdir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1242,7 +1242,7 @@ func chtmpdir(t *testing.T) (restore func())
 
 ```
 searchKey: filepath_test.contains
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1255,7 +1255,7 @@ contains reports whether vector contains the string s.
 
 ```
 searchKey: filepath_test.errp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1266,7 +1266,7 @@ func errp(e error) string
 
 ```
 searchKey: filepath_test.makeTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1277,7 +1277,7 @@ func makeTree(t *testing.T)
 
 ```
 searchKey: filepath_test.mark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1290,7 +1290,7 @@ Assumes that each node name is unique. Good enough for a test. If clear is true,
 
 ```
 searchKey: filepath_test.markTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1301,7 +1301,7 @@ func markTree(n *Node)
 
 ```
 searchKey: filepath_test.prepareTestDirTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1312,7 +1312,7 @@ func prepareTestDirTree(tree string) (string, error)
 
 ```
 searchKey: filepath_test.simpleJoin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1325,7 +1325,7 @@ simpleJoin builds a file name from the directory and path. It does not use Join 
 
 ```
 searchKey: filepath_test.tempDirCanonical
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1338,7 +1338,7 @@ tempDirCanonical returns a temporary directory for the test to use, ensuring tha
 
 ```
 searchKey: filepath_test.testEvalSymlinks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1349,7 +1349,7 @@ func testEvalSymlinks(t *testing.T, path, want string)
 
 ```
 searchKey: filepath_test.testEvalSymlinksAfterChdir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1360,7 +1360,7 @@ func testEvalSymlinksAfterChdir(t *testing.T, wd, path, want string)
 
 ```
 searchKey: filepath_test.testWalk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1371,7 +1371,7 @@ func testWalk(t *testing.T, walk func(string, fs.WalkDirFunc) error, errVisit in
 
 ```
 searchKey: filepath_test.testWalkSymlink
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1382,7 +1382,7 @@ func testWalkSymlink(t *testing.T, mklink func(target, link string) error)
 
 ```
 searchKey: filepath_test.touch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1393,7 +1393,7 @@ func touch(t *testing.T, name string)
 
 ```
 searchKey: filepath_test.walkTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -24,9 +24,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -96,9 +94,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -416,7 +412,7 @@
                       "newPage": false,
                       "searchKey": "jsonrpc.clientCodec.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -555,7 +551,7 @@
                       "newPage": false,
                       "searchKey": "jsonrpc.clientResponse.reset",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -602,7 +598,7 @@
                       "newPage": false,
                       "searchKey": "jsonrpc.pipe.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -625,7 +621,7 @@
                       "newPage": false,
                       "searchKey": "jsonrpc.pipe.LocalAddr",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -648,7 +644,7 @@
                       "newPage": false,
                       "searchKey": "jsonrpc.pipe.RemoteAddr",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -764,7 +760,7 @@
                       "newPage": false,
                       "searchKey": "jsonrpc.pipeAddr.Network",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -787,7 +783,7 @@
                       "newPage": false,
                       "searchKey": "jsonrpc.pipeAddr.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -834,7 +830,7 @@
                       "newPage": false,
                       "searchKey": "jsonrpc.serverCodec.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -950,7 +946,7 @@
                       "newPage": false,
                       "searchKey": "jsonrpc.serverRequest.reset",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1001,9 +997,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1022,7 +1016,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.Dial",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1044,7 +1038,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.NewClient",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1066,7 +1060,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.NewClientCodec",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1088,7 +1082,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.NewServerCodec",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1110,7 +1104,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.ServeConn",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1132,7 +1126,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.TestBuiltinTypes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1156,7 +1150,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.TestClient",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1180,7 +1174,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.TestMalformedInput",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1204,7 +1198,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.TestMalformedOutput",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1228,7 +1222,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.TestServer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1252,7 +1246,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.TestServerEmptyMessage",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1276,7 +1270,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.TestServerErrorHasNullResult",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1300,7 +1294,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.TestServerNoParams",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1324,7 +1318,7 @@
                 "newPage": false,
                 "searchKey": "jsonrpc.TestUnexpectedError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]

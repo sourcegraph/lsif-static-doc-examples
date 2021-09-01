@@ -107,10 +107,6 @@ The trace tool computes the latency of a task by measuring the time between the 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="regionEndCode" href="#regionEndCode">const regionEndCode</a>
 
 ```
@@ -134,10 +130,6 @@ const regionStartCode = uint64(0)
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="bgTask" href="#bgTask">var bgTask</a>
 
@@ -189,10 +181,6 @@ var tracing struct {
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Region" href="#Region">type Region struct</a>
 
 ```
@@ -213,7 +201,7 @@ Region is a region of code whose execution time interval is traced.
 
 ```
 searchKey: trace.StartRegion
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -230,7 +218,7 @@ defer trace.StartRegion(ctx, "myTracedRegion").End()
 
 ```
 searchKey: trace.Region.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -258,7 +246,7 @@ Task is a data type for tracing a user-defined, logical operation.
 
 ```
 searchKey: trace.NewTask
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -285,7 +273,7 @@ go func() {  // continue processing the task in a separate goroutine.
 
 ```
 searchKey: trace.fromContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -296,7 +284,7 @@ func fromContext(ctx context.Context) *Task
 
 ```
 searchKey: trace.Task.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -318,10 +306,6 @@ type traceContextKey struct{}
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="IsEnabled" href="#IsEnabled">func IsEnabled() bool</a>
 
 ```
@@ -339,7 +323,7 @@ IsEnabled reports whether tracing is enabled. The information is advisory only. 
 
 ```
 searchKey: trace.Log
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -352,7 +336,7 @@ Log emits a one-off event with the given category and message. Category can be e
 
 ```
 searchKey: trace.Logf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -365,7 +349,7 @@ Logf is like Log, but the value is formatted using the specified format spec.
 
 ```
 searchKey: trace.Start
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -391,7 +375,7 @@ Stop stops the current tracing, if any. Stop only returns after all the writes f
 
 ```
 searchKey: trace.WithRegion
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -417,7 +401,7 @@ func newID() uint64
 
 ```
 searchKey: trace.userLog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -430,7 +414,7 @@ emits UserLog event.
 
 ```
 searchKey: trace.userRegion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -443,7 +427,7 @@ emits UserRegion event.
 
 ```
 searchKey: trace.userTaskCreate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -456,7 +440,7 @@ emits UserTaskCreate event.
 
 ```
 searchKey: trace.userTaskEnd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

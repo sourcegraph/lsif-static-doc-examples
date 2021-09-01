@@ -107,7 +107,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="getCommitIndexMetadataStr" href="#getCommitIndexMetadataStr">const getCommitIndexMetadataStr</a>
@@ -157,7 +157,7 @@ const upsertCommitIndexMetadataStampStr = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CommitIndexMetadata" href="#CommitIndexMetadata">type CommitIndexMetadata struct</a>
@@ -179,7 +179,7 @@ type CommitIndexMetadata struct {
 
 ```
 searchKey: compression.getMetadata
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -211,7 +211,7 @@ type CommitIndexer struct {
 
 ```
 searchKey: compression.NewCommitIndexer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -318,7 +318,7 @@ CommitStoreGetFunc describes the behavior when the Get method of the parent Mock
 
 ```
 searchKey: compression.CommitStoreGetFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -394,7 +394,7 @@ func (f *CommitStoreGetFunc) appendCall(r0 CommitStoreGetFuncCall)
 
 ```
 searchKey: compression.CommitStoreGetFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -437,7 +437,7 @@ CommitStoreGetFuncCall is an object that describes an invocation of method Get o
 
 ```
 searchKey: compression.CommitStoreGetFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -450,7 +450,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: compression.CommitStoreGetFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -481,7 +481,7 @@ CommitStoreGetMetadataFunc describes the behavior when the GetMetadata method of
 
 ```
 searchKey: compression.CommitStoreGetMetadataFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -557,7 +557,7 @@ func (f *CommitStoreGetMetadataFunc) appendCall(r0 CommitStoreGetMetadataFuncCal
 
 ```
 searchKey: compression.CommitStoreGetMetadataFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -594,7 +594,7 @@ CommitStoreGetMetadataFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: compression.CommitStoreGetMetadataFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -607,7 +607,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: compression.CommitStoreGetMetadataFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -638,7 +638,7 @@ CommitStoreInsertCommitsFunc describes the behavior when the InsertCommits metho
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -714,7 +714,7 @@ func (f *CommitStoreInsertCommitsFunc) appendCall(r0 CommitStoreInsertCommitsFun
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -751,7 +751,7 @@ CommitStoreInsertCommitsFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -764,7 +764,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: compression.CommitStoreInsertCommitsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -795,7 +795,7 @@ CommitStoreSaveFunc describes the behavior when the Save method of the parent Mo
 
 ```
 searchKey: compression.CommitStoreSaveFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -871,7 +871,7 @@ func (f *CommitStoreSaveFunc) appendCall(r0 CommitStoreSaveFuncCall)
 
 ```
 searchKey: compression.CommitStoreSaveFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -908,7 +908,7 @@ CommitStoreSaveFuncCall is an object that describes an invocation of method Save
 
 ```
 searchKey: compression.CommitStoreSaveFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -921,7 +921,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: compression.CommitStoreSaveFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -952,7 +952,7 @@ CommitStoreUpsertMetadataStampFunc describes the behavior when the UpsertMetadat
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1028,7 +1028,7 @@ func (f *CommitStoreUpsertMetadataStampFunc) appendCall(r0 CommitStoreUpsertMeta
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1065,7 +1065,7 @@ CommitStoreUpsertMetadataStampFuncCall is an object that describes an invocation
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1078,7 +1078,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: compression.CommitStoreUpsertMetadataStampFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1104,7 +1104,7 @@ type DBCommitStore struct {
 
 ```
 searchKey: compression.NewCommitStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1240,7 +1240,7 @@ NewMockCommitStore creates a new mock of the CommitStore interface. All methods 
 
 ```
 searchKey: compression.NewMockCommitStoreFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1330,14 +1330,14 @@ type RepoStore interface {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewCommitIndexerWorker" href="#NewCommitIndexerWorker">func NewCommitIndexerWorker(ctx context.Context, base dbutil.DB, insights dbutil.DB) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: compression.NewCommitIndexerWorker
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1348,7 +1348,7 @@ func NewCommitIndexerWorker(ctx context.Context, base dbutil.DB, insights dbutil
 
 ```
 searchKey: compression.TestCommitIndexer_indexAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1359,7 +1359,7 @@ func TestCommitIndexer_indexAll(t *testing.T)
 
 ```
 searchKey: compression.Test_getMetadata_InsertNewRecord
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1370,7 +1370,7 @@ func Test_getMetadata_InsertNewRecord(t *testing.T)
 
 ```
 searchKey: compression.Test_getMetadata_NoInsertRequired
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1381,7 +1381,7 @@ func Test_getMetadata_NoInsertRequired(t *testing.T)
 
 ```
 searchKey: compression.commit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1394,7 +1394,7 @@ commit build a fake commit for test scenarios
 
 ```
 searchKey: compression.getCommits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1407,7 +1407,7 @@ getCommits fetches the commits from the remote gitserver for a repository after 
 
 ```
 searchKey: compression.max
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1418,7 +1418,7 @@ func max(a, b time.Time) time.Time
 
 ```
 searchKey: compression.mockCommits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1429,7 +1429,7 @@ func mockCommits(commits map[string][]*git.Commit) func(ctx context.Context, nam
 
 ```
 searchKey: compression.mockIds
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1440,7 +1440,7 @@ func mockIds(ids map[string]int) func(ctx context.Context, name api.RepoName) (*
 
 ```
 searchKey: compression.mockIterator
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

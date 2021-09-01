@@ -32,10 +32,6 @@ Package ring implements operations on circular lists.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Ring" href="#Ring">type Ring struct</a>
 
 ```
@@ -56,7 +52,7 @@ A Ring is an element of a circular list, or ring. Rings do not have a beginning 
 
 ```
 searchKey: ring.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -69,7 +65,7 @@ New creates a ring of n elements.
 
 ```
 searchKey: ring.makeN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -93,7 +89,7 @@ Do calls function f on each element of the ring, in forward order. The behavior 
 
 ```
 searchKey: ring.Ring.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -136,7 +132,7 @@ Move moves n % r.Len() elements backward (n < 0) or forward (n >= 0) in the ring
 
 ```
 searchKey: ring.Ring.Next
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -149,7 +145,7 @@ Next returns the next ring element. r must not be empty.
 
 ```
 searchKey: ring.Ring.Prev
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -175,7 +171,7 @@ Unlink removes n % r.Len() elements from the ring r, starting at r.Next(). If n 
 
 ```
 searchKey: ring.Ring.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -184,15 +180,11 @@ func (r *Ring) init() *Ring
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestCornerCases" href="#TestCornerCases">func TestCornerCases(t *testing.T)</a>
 
 ```
 searchKey: ring.TestCornerCases
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -203,7 +195,7 @@ func TestCornerCases(t *testing.T)
 
 ```
 searchKey: ring.TestLink1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -214,7 +206,7 @@ func TestLink1(t *testing.T)
 
 ```
 searchKey: ring.TestLink2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -225,7 +217,7 @@ func TestLink2(t *testing.T)
 
 ```
 searchKey: ring.TestLink3
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -236,7 +228,7 @@ func TestLink3(t *testing.T)
 
 ```
 searchKey: ring.TestLinkUnlink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -247,7 +239,7 @@ func TestLinkUnlink(t *testing.T)
 
 ```
 searchKey: ring.TestMoveEmptyRing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -260,7 +252,7 @@ Test that calling Move() on an empty Ring initializes it.
 
 ```
 searchKey: ring.TestNew
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -271,7 +263,7 @@ func TestNew(t *testing.T)
 
 ```
 searchKey: ring.TestUnlink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -282,7 +274,7 @@ func TestUnlink(t *testing.T)
 
 ```
 searchKey: ring.dump
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -295,7 +287,7 @@ For debugging - keep around.
 
 ```
 searchKey: ring.sumN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -306,7 +298,7 @@ func sumN(n int) int
 
 ```
 searchKey: ring.verify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -82,10 +82,6 @@ For the most part, this package follows the syntax as specified by RFC 5322 and 
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrHeaderNotPresent" href="#ErrHeaderNotPresent">var ErrHeaderNotPresent</a>
 
 ```
@@ -158,10 +154,6 @@ var rfc2047Decoder = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Address" href="#Address">type Address struct</a>
 
 ```
@@ -182,7 +174,7 @@ Address represents a single mail address. An address such as "Barry Gibbs <bg@ex
 
 ```
 searchKey: mail.ParseAddress
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -195,7 +187,7 @@ ParseAddress parses a single RFC 5322 address, e.g. "Barry Gibbs <bg@example.com
 
 ```
 searchKey: mail.Address.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -276,7 +268,7 @@ AddressList parses the named header field as a list of addresses.
 
 ```
 searchKey: mail.Header.Date
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -318,7 +310,7 @@ A Message represents a parsed mail message.
 
 ```
 searchKey: mail.ReadMessage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -356,7 +348,7 @@ func (p *addrParser) consume(c byte) bool
 
 ```
 searchKey: mail.addrParser.consumeAddrSpec
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -382,7 +374,7 @@ consumeAtom parses an RFC 5322 atom at the start of p. If dot is true, consumeAt
 
 ```
 searchKey: mail.addrParser.consumeComment
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -393,7 +385,7 @@ func (p *addrParser) consumeComment() (string, bool)
 
 ```
 searchKey: mail.addrParser.consumeDisplayNameComment
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -404,7 +396,7 @@ func (p *addrParser) consumeDisplayNameComment() (string, error)
 
 ```
 searchKey: mail.addrParser.consumeGroupList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -415,7 +407,7 @@ func (p *addrParser) consumeGroupList() ([]*Address, error)
 
 ```
 searchKey: mail.addrParser.consumePhrase
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -428,7 +420,7 @@ consumePhrase parses the RFC 5322 phrase at the start of p.
 
 ```
 searchKey: mail.addrParser.consumeQuotedString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -452,7 +444,7 @@ func (p *addrParser) decodeRFC2047Word(s string) (word string, isEncoded bool, e
 
 ```
 searchKey: mail.addrParser.empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -463,7 +455,7 @@ func (p *addrParser) empty() bool
 
 ```
 searchKey: mail.addrParser.len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -487,7 +479,7 @@ parseAddress parses a single RFC 5322 address at the start of p.
 
 ```
 searchKey: mail.addrParser.parseAddressList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -498,7 +490,7 @@ func (p *addrParser) parseAddressList() ([]*Address, error)
 
 ```
 searchKey: mail.addrParser.parseSingleAddress
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -509,7 +501,7 @@ func (p *addrParser) parseSingleAddress() (*Address, error)
 
 ```
 searchKey: mail.addrParser.peek
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -520,7 +512,7 @@ func (p *addrParser) peek() byte
 
 ```
 searchKey: mail.addrParser.skipCFWS
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -533,7 +525,7 @@ skipCFWS skips CFWS as defined in RFC5322.
 
 ```
 searchKey: mail.addrParser.skipSpace
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -557,7 +549,7 @@ type charsetError string
 
 ```
 searchKey: mail.charsetError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -588,15 +580,11 @@ func (d debugT) Printf(format string, args ...interface{})
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ParseAddressList" href="#ParseAddressList">func ParseAddressList(list string) ([]*Address, error)</a>
 
 ```
 searchKey: mail.ParseAddressList
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -609,7 +597,7 @@ ParseAddressList parses the given string as a list of addresses.
 
 ```
 searchKey: mail.ParseDate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -622,7 +610,7 @@ ParseDate parses an RFC 5322 date string.
 
 ```
 searchKey: mail.TestAddressFormattingAndParsing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -633,7 +621,7 @@ func TestAddressFormattingAndParsing(t *testing.T)
 
 ```
 searchKey: mail.TestAddressParser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -644,7 +632,7 @@ func TestAddressParser(t *testing.T)
 
 ```
 searchKey: mail.TestAddressParsing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -655,7 +643,7 @@ func TestAddressParsing(t *testing.T)
 
 ```
 searchKey: mail.TestAddressParsingAndFormatting
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -668,7 +656,7 @@ Check if all valid addresses can be parsed, formatted and parsed again
 
 ```
 searchKey: mail.TestAddressParsingError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -679,7 +667,7 @@ func TestAddressParsingError(t *testing.T)
 
 ```
 searchKey: mail.TestAddressString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -690,7 +678,7 @@ func TestAddressString(t *testing.T)
 
 ```
 searchKey: mail.TestDateParsing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -701,7 +689,7 @@ func TestDateParsing(t *testing.T)
 
 ```
 searchKey: mail.TestDateParsingCFWS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -712,7 +700,7 @@ func TestDateParsingCFWS(t *testing.T)
 
 ```
 searchKey: mail.TestEmptyAddress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -723,7 +711,7 @@ func TestEmptyAddress(t *testing.T)
 
 ```
 searchKey: mail.TestParsing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -745,7 +733,7 @@ func buildDateLayouts()
 
 ```
 searchKey: mail.headerEq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -756,7 +744,7 @@ func headerEq(a, b Header) bool
 
 ```
 searchKey: mail.isAtext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -769,7 +757,7 @@ isAtext reports whether r is an RFC 5322 atext character. If dot is true, period
 
 ```
 searchKey: mail.isMultibyte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -782,7 +770,7 @@ isMultibyte reports whether r is a multi-byte UTF-8 character as supported by RF
 
 ```
 searchKey: mail.isQtext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -795,7 +783,7 @@ isQtext reports whether r is an RFC 5322 qtext character.
 
 ```
 searchKey: mail.isVchar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -808,7 +796,7 @@ isVchar reports whether r is an RFC 5322 VCHAR character.
 
 ```
 searchKey: mail.isWSP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -821,7 +809,7 @@ isWSP reports whether r is a WSP (white space). WSP is a space or horizontal tab
 
 ```
 searchKey: mail.quoteString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

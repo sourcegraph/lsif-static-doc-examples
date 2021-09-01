@@ -12,7 +12,7 @@ Command goremancmd exists for testing the internally vendored goreman that ./cmd
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="do" href="#do">func do() error</a>

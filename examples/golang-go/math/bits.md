@@ -78,10 +78,6 @@ Package bits implements bit counting and manipulation functions for the predecla
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DeBruijn64" href="#DeBruijn64">const DeBruijn64</a>
 
 ```
@@ -247,10 +243,6 @@ const uintSize = 32 << (^uint(0) >> 63) // 32 or 64
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="deBruijn32tab" href="#deBruijn32tab">var deBruijn32tab</a>
 
 ```
@@ -297,15 +289,11 @@ var overflowError error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Add" href="#Add">func Add(x, y, carry uint) (sum, carryOut uint)</a>
 
 ```
 searchKey: bits.Add
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -320,7 +308,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Add32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -335,7 +323,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Add64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -350,7 +338,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Div
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -363,7 +351,7 @@ Div returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/
 
 ```
 searchKey: bits.Div32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -376,7 +364,7 @@ Div32 returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo
 
 ```
 searchKey: bits.Div64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -389,7 +377,7 @@ Div64 returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo
 
 ```
 searchKey: bits.LeadingZeros
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -402,7 +390,7 @@ LeadingZeros returns the number of leading zero bits in x; the result is UintSiz
 
 ```
 searchKey: bits.LeadingZeros16
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -415,7 +403,7 @@ LeadingZeros16 returns the number of leading zero bits in x; the result is 16 fo
 
 ```
 searchKey: bits.LeadingZeros32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -428,7 +416,7 @@ LeadingZeros32 returns the number of leading zero bits in x; the result is 32 fo
 
 ```
 searchKey: bits.LeadingZeros64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -441,7 +429,7 @@ LeadingZeros64 returns the number of leading zero bits in x; the result is 64 fo
 
 ```
 searchKey: bits.LeadingZeros8
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -454,7 +442,7 @@ LeadingZeros8 returns the number of leading zero bits in x; the result is 8 for 
 
 ```
 searchKey: bits.Len
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -467,7 +455,7 @@ Len returns the minimum number of bits required to represent x; the result is 0 
 
 ```
 searchKey: bits.Len16
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -480,7 +468,7 @@ Len16 returns the minimum number of bits required to represent x; the result is 
 
 ```
 searchKey: bits.Len32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -493,7 +481,7 @@ Len32 returns the minimum number of bits required to represent x; the result is 
 
 ```
 searchKey: bits.Len64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -506,7 +494,7 @@ Len64 returns the minimum number of bits required to represent x; the result is 
 
 ```
 searchKey: bits.Len8
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -519,7 +507,7 @@ Len8 returns the minimum number of bits required to represent x; the result is 0
 
 ```
 searchKey: bits.Mul
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -534,7 +522,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Mul32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -549,7 +537,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Mul64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -564,7 +552,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.OnesCount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -577,7 +565,7 @@ OnesCount returns the number of one bits ("population count") in x.
 
 ```
 searchKey: bits.OnesCount16
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -590,7 +578,7 @@ OnesCount16 returns the number of one bits ("population count") in x.
 
 ```
 searchKey: bits.OnesCount32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -603,7 +591,7 @@ OnesCount32 returns the number of one bits ("population count") in x.
 
 ```
 searchKey: bits.OnesCount64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -616,7 +604,7 @@ OnesCount64 returns the number of one bits ("population count") in x.
 
 ```
 searchKey: bits.OnesCount8
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -629,7 +617,7 @@ OnesCount8 returns the number of one bits ("population count") in x.
 
 ```
 searchKey: bits.Rem
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -642,7 +630,7 @@ Rem returns the remainder of (hi, lo) divided by y. Rem panics for y == 0 (divis
 
 ```
 searchKey: bits.Rem32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -655,7 +643,7 @@ Rem32 returns the remainder of (hi, lo) divided by y. Rem32 panics for y == 0 (d
 
 ```
 searchKey: bits.Rem64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -668,7 +656,7 @@ Rem64 returns the remainder of (hi, lo) divided by y. Rem64 panics for y == 0 (d
 
 ```
 searchKey: bits.Reverse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -681,7 +669,7 @@ Reverse returns the value of x with its bits in reversed order.
 
 ```
 searchKey: bits.Reverse16
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -694,7 +682,7 @@ Reverse16 returns the value of x with its bits in reversed order.
 
 ```
 searchKey: bits.Reverse32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -707,7 +695,7 @@ Reverse32 returns the value of x with its bits in reversed order.
 
 ```
 searchKey: bits.Reverse64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -720,7 +708,7 @@ Reverse64 returns the value of x with its bits in reversed order.
 
 ```
 searchKey: bits.Reverse8
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -733,7 +721,7 @@ Reverse8 returns the value of x with its bits in reversed order.
 
 ```
 searchKey: bits.ReverseBytes
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -748,7 +736,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.ReverseBytes16
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -763,7 +751,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.ReverseBytes32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -778,7 +766,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.ReverseBytes64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -793,7 +781,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.RotateLeft
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -808,7 +796,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.RotateLeft16
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -823,7 +811,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.RotateLeft32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -838,7 +826,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.RotateLeft64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -853,7 +841,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.RotateLeft8
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -868,7 +856,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Sub
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -883,7 +871,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Sub32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -898,7 +886,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Sub64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -913,7 +901,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.TrailingZeros
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -926,7 +914,7 @@ TrailingZeros returns the number of trailing zero bits in x; the result is UintS
 
 ```
 searchKey: bits.TrailingZeros16
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -939,7 +927,7 @@ TrailingZeros16 returns the number of trailing zero bits in x; the result is 16 
 
 ```
 searchKey: bits.TrailingZeros32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -952,7 +940,7 @@ TrailingZeros32 returns the number of trailing zero bits in x; the result is 32 
 
 ```
 searchKey: bits.TrailingZeros64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -965,7 +953,7 @@ TrailingZeros64 returns the number of trailing zero bits in x; the result is 64 
 
 ```
 searchKey: bits.TrailingZeros8
-tags: [method]
+tags: [function]
 ```
 
 ```Go

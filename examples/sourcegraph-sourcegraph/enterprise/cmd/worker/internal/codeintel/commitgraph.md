@@ -106,7 +106,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DBStore" href="#DBStore">type DBStore interface</a>
@@ -146,7 +146,7 @@ DBStoreCalculateVisibleUploadsFunc describes the behavior when the CalculateVisi
 
 ```
 searchKey: commitgraph.DBStoreCalculateVisibleUploadsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -222,7 +222,7 @@ func (f *DBStoreCalculateVisibleUploadsFunc) appendCall(r0 DBStoreCalculateVisib
 
 ```
 searchKey: commitgraph.DBStoreCalculateVisibleUploadsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -268,7 +268,7 @@ DBStoreCalculateVisibleUploadsFuncCall is an object that describes an invocation
 
 ```
 searchKey: commitgraph.DBStoreCalculateVisibleUploadsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -281,7 +281,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: commitgraph.DBStoreCalculateVisibleUploadsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -312,7 +312,7 @@ DBStoreDirtyRepositoriesFunc describes the behavior when the DirtyRepositories m
 
 ```
 searchKey: commitgraph.DBStoreDirtyRepositoriesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -388,7 +388,7 @@ func (f *DBStoreDirtyRepositoriesFunc) appendCall(r0 DBStoreDirtyRepositoriesFun
 
 ```
 searchKey: commitgraph.DBStoreDirtyRepositoriesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -422,7 +422,7 @@ DBStoreDirtyRepositoriesFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: commitgraph.DBStoreDirtyRepositoriesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -435,7 +435,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: commitgraph.DBStoreDirtyRepositoriesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -466,7 +466,7 @@ DBStoreGetOldestCommitDateFunc describes the behavior when the GetOldestCommitDa
 
 ```
 searchKey: commitgraph.DBStoreGetOldestCommitDateFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -542,7 +542,7 @@ func (f *DBStoreGetOldestCommitDateFunc) appendCall(r0 DBStoreGetOldestCommitDat
 
 ```
 searchKey: commitgraph.DBStoreGetOldestCommitDateFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -582,7 +582,7 @@ DBStoreGetOldestCommitDateFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: commitgraph.DBStoreGetOldestCommitDateFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -595,7 +595,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: commitgraph.DBStoreGetOldestCommitDateFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -640,7 +640,7 @@ GitserverClientCommitGraphFunc describes the behavior when the CommitGraph metho
 
 ```
 searchKey: commitgraph.GitserverClientCommitGraphFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -716,7 +716,7 @@ func (f *GitserverClientCommitGraphFunc) appendCall(r0 GitserverClientCommitGrap
 
 ```
 searchKey: commitgraph.GitserverClientCommitGraphFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -756,7 +756,7 @@ GitserverClientCommitGraphFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: commitgraph.GitserverClientCommitGraphFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -769,7 +769,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: commitgraph.GitserverClientCommitGraphFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -800,7 +800,7 @@ GitserverClientHeadFunc describes the behavior when the Head method of the paren
 
 ```
 searchKey: commitgraph.GitserverClientHeadFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -876,7 +876,7 @@ func (f *GitserverClientHeadFunc) appendCall(r0 GitserverClientHeadFuncCall)
 
 ```
 searchKey: commitgraph.GitserverClientHeadFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -913,7 +913,7 @@ GitserverClientHeadFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: commitgraph.GitserverClientHeadFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -926,7 +926,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: commitgraph.GitserverClientHeadFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -970,7 +970,7 @@ LockerLockFunc describes the behavior when the Lock method of the parent MockLoc
 
 ```
 searchKey: commitgraph.LockerLockFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1046,7 +1046,7 @@ func (f *LockerLockFunc) appendCall(r0 LockerLockFuncCall)
 
 ```
 searchKey: commitgraph.LockerLockFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1089,7 +1089,7 @@ LockerLockFuncCall is an object that describes an invocation of method Lock on a
 
 ```
 searchKey: commitgraph.LockerLockFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1102,7 +1102,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: commitgraph.LockerLockFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1151,7 +1151,7 @@ NewMockDBStore creates a new mock of the DBStore interface. All methods return z
 
 ```
 searchKey: commitgraph.NewMockDBStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1236,7 +1236,7 @@ NewMockGitserverClient creates a new mock of the GitserverClient interface. All 
 
 ```
 searchKey: commitgraph.NewMockGitserverClientFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1305,7 +1305,7 @@ NewMockLocker creates a new mock of the Locker interface. All methods return zer
 
 ```
 searchKey: commitgraph.NewMockLockerFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1431,7 +1431,7 @@ type operations struct {
 
 ```
 searchKey: commitgraph.newOperations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1441,14 +1441,14 @@ func newOperations(dbStore DBStore, observationContext *observation.Context) *op
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewUpdater" href="#NewUpdater">func NewUpdater(dbStore DBStore,...</a>
 
 ```
 searchKey: commitgraph.NewUpdater
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1467,7 +1467,7 @@ NewUpdater returns a background routine that periodically updates the commit gra
 
 ```
 searchKey: commitgraph.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1478,7 +1478,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: commitgraph.TestUpdater
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1489,7 +1489,7 @@ func TestUpdater(t *testing.T)
 
 ```
 searchKey: commitgraph.TestUpdaterLocked
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1500,7 +1500,7 @@ func TestUpdaterLocked(t *testing.T)
 
 ```
 searchKey: commitgraph.TestUpdaterNoUploads
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

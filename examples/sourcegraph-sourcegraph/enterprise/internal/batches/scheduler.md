@@ -24,7 +24,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Scheduler" href="#Scheduler">type Scheduler struct</a>
@@ -48,7 +48,7 @@ Scheduler provides a scheduling service that moves changesets from the scheduled
 
 ```
 searchKey: scheduler.NewScheduler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -59,7 +59,7 @@ func NewScheduler(ctx context.Context, bstore *store.Store) *Scheduler
 
 ```
 searchKey: scheduler.Scheduler.Start
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -70,7 +70,7 @@ func (s *Scheduler) Start()
 
 ```
 searchKey: scheduler.Scheduler.Stop
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -81,7 +81,7 @@ func (s *Scheduler) Stop()
 
 ```
 searchKey: scheduler.Scheduler.enqueueChangeset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -111,7 +111,7 @@ backoff implements a very simple bounded exponential backoff strategy.
 
 ```
 searchKey: scheduler.newBackoff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -122,7 +122,7 @@ func newBackoff(init time.Duration, multiplier int, limit time.Duration) *backof
 
 ```
 searchKey: scheduler.backoff.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -133,7 +133,7 @@ func (b *backoff) next() time.Duration
 
 ```
 searchKey: scheduler.backoff.reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -173,7 +173,7 @@ It is important that the caller calls stop() when the ticker is no longer in use
 
 ```
 searchKey: scheduler.newTicker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -184,7 +184,7 @@ func newTicker(schedule *window.Schedule) *ticker
 
 ```
 searchKey: scheduler.ticker.stop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -194,14 +194,14 @@ func (t *ticker) stop()
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestTickerGoBrrr" href="#TestTickerGoBrrr">func TestTickerGoBrrr(t *testing.T)</a>
 
 ```
 searchKey: scheduler.TestTickerGoBrrr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -212,7 +212,7 @@ func TestTickerGoBrrr(t *testing.T)
 
 ```
 searchKey: scheduler.TestTickerRateLimited
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -223,7 +223,7 @@ func TestTickerRateLimited(t *testing.T)
 
 ```
 searchKey: scheduler.TestTickerZero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

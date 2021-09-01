@@ -27,10 +27,6 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="dsn" href="#dsn">var dsn</a>
 
 ```
@@ -54,10 +50,6 @@ var eventPayload = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="GitHubWebhook" href="#GitHubWebhook">type GitHubWebhook struct</a>
 
@@ -166,15 +158,11 @@ WebhookHandler is a handler for a webhook event, the 'event' param could be any 
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestGithubWebhookDispatchError" href="#TestGithubWebhookDispatchError">func TestGithubWebhookDispatchError(t *testing.T)</a>
 
 ```
 searchKey: webhooks.TestGithubWebhookDispatchError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -185,7 +173,7 @@ func TestGithubWebhookDispatchError(t *testing.T)
 
 ```
 searchKey: webhooks.TestGithubWebhookDispatchNoHandler
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -196,7 +184,7 @@ func TestGithubWebhookDispatchNoHandler(t *testing.T)
 
 ```
 searchKey: webhooks.TestGithubWebhookDispatchSuccess
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -207,7 +195,7 @@ func TestGithubWebhookDispatchSuccess(t *testing.T)
 
 ```
 searchKey: webhooks.TestGithubWebhookDispatchSuccessMultiple
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -218,7 +206,7 @@ func TestGithubWebhookDispatchSuccessMultiple(t *testing.T)
 
 ```
 searchKey: webhooks.TestGithubWebhookExternalServices
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -229,7 +217,7 @@ func TestGithubWebhookExternalServices(t *testing.T)
 
 ```
 searchKey: webhooks.errString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -240,7 +228,7 @@ func errString(err error) string
 
 ```
 searchKey: webhooks.marshalJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -251,7 +239,7 @@ func marshalJSON(t testing.TB, v interface{}) string
 
 ```
 searchKey: webhooks.sign
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

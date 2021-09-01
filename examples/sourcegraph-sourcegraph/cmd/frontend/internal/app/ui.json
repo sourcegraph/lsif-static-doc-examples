@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app/ui",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1298,7 +1297,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1778,7 +1776,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1819,7 +1816,7 @@
                       "newPage": false,
                       "searchKey": "ui.newCommon",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1910,7 +1907,7 @@
                       "newPage": false,
                       "searchKey": "ui.serveBasicPage",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1933,7 +1930,7 @@
                       "newPage": false,
                       "searchKey": "ui.serveBrandedPageString",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1956,7 +1953,7 @@
                       "newPage": false,
                       "searchKey": "ui.serveRepoOrBlob",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1979,7 +1976,7 @@
                       "newPage": false,
                       "searchKey": "ui.serveTree",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2026,7 +2023,7 @@
                       "newPage": false,
                       "searchKey": "ui.findLineRangeInQueryParameters",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2049,7 +2046,7 @@
                       "newPage": false,
                       "searchKey": "ui.getLineRange",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2119,7 +2116,7 @@
                       "newPage": false,
                       "searchKey": "ui.recoverError.Error",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2171,7 +2168,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -2192,7 +2188,7 @@
                 "newPage": false,
                 "searchKey": "ui.InitRouter",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2236,7 +2232,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestFindLineRangeInQueryParameters",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2260,7 +2256,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestGetBlobPreviewImageURL",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2284,7 +2280,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestGetBlobPreviewTitle",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2308,7 +2304,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestLoadTemplate",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2332,7 +2328,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestNewCommon_repo_error",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2356,7 +2352,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestRedirectTreeOrBlob",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2380,7 +2376,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestRedirects",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2404,7 +2400,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestRepoShortName",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2428,7 +2424,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestRouter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2452,7 +2448,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestRouter_RootPath",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2476,7 +2472,7 @@
                 "newPage": false,
                 "searchKey": "ui.TestServeHelp",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2500,7 +2496,7 @@
                 "newPage": false,
                 "searchKey": "ui.Test_serveRawWithContentArchive",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2524,7 +2520,7 @@
                 "newPage": false,
                 "searchKey": "ui.Test_serveRawWithContentTypePlain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2548,7 +2544,7 @@
                 "newPage": false,
                 "searchKey": "ui.Test_serveRawWithHTTPRequestMethodHEAD",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2572,7 +2568,7 @@
                 "newPage": false,
                 "searchKey": "ui.brandNameSubtitle",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2595,7 +2591,7 @@
                 "newPage": false,
                 "searchKey": "ui.dangerouslyServeError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2618,7 +2614,7 @@
                 "newPage": false,
                 "searchKey": "ui.doLoadTemplate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2641,7 +2637,7 @@
                 "newPage": false,
                 "searchKey": "ui.formatLineRange",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2664,7 +2660,7 @@
                 "newPage": false,
                 "searchKey": "ui.getBlobPreviewImageURL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2687,7 +2683,7 @@
                 "newPage": false,
                 "searchKey": "ui.getBlobPreviewTitle",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2710,7 +2706,7 @@
                 "newPage": false,
                 "searchKey": "ui.handler",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2779,7 +2775,7 @@
                 "newPage": false,
                 "searchKey": "ui.initHTTPTestGitServer",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2802,7 +2798,7 @@
                 "newPage": false,
                 "searchKey": "ui.initRouter",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2825,7 +2821,7 @@
                 "newPage": false,
                 "searchKey": "ui.limitString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2848,7 +2844,7 @@
                 "newPage": false,
                 "searchKey": "ui.loadTemplate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2871,7 +2867,7 @@
                 "newPage": false,
                 "searchKey": "ui.mapKeys",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2917,7 +2913,7 @@
                 "newPage": false,
                 "searchKey": "ui.openArchiveReader",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2940,7 +2936,7 @@
                 "newPage": false,
                 "searchKey": "ui.redirectTreeOrBlob",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2963,7 +2959,7 @@
                 "newPage": false,
                 "searchKey": "ui.renderTemplate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2986,7 +2982,7 @@
                 "newPage": false,
                 "searchKey": "ui.repoShortName",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3032,7 +3028,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveDefLanding",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3055,7 +3051,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveDefRedirectToDefLanding",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3078,7 +3074,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3101,7 +3097,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveErrorNoDebug",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3124,7 +3120,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveErrorTest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3147,7 +3143,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveHelp",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3170,7 +3166,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveHome",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3193,7 +3189,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveOldRouteDefLanding",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3216,7 +3212,7 @@
                 "newPage": false,
                 "searchKey": "ui.servePingFromSelfHosted",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3239,7 +3235,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveRaw",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3262,7 +3258,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveRepoLanding",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3285,7 +3281,7 @@
                 "newPage": false,
                 "searchKey": "ui.serveSignIn",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3308,7 +3304,7 @@
                 "newPage": false,
                 "searchKey": "ui.staticRedirectHandler",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

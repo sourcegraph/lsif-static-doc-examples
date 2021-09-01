@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestGoImportPath" href="#TestGoImportPath">func TestGoImportPath(t *testing.T)</a>
 
 ```
 searchKey: middleware_test.TestGoImportPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

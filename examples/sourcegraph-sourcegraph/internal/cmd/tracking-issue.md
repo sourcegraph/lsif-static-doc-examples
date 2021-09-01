@@ -126,7 +126,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="beginAssigneeMarkerFmt" href="#beginAssigneeMarkerFmt">const beginAssigneeMarkerFmt</a>
@@ -233,7 +233,7 @@ const queriesPerLoadRequest = 10
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="categorizers" href="#categorizers">var categorizers</a>
@@ -334,7 +334,7 @@ var testUpdateFixture = flag.Bool("update.fixture", false, "update testdata API 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AssigneeRenderer" href="#AssigneeRenderer">type AssigneeRenderer struct</a>
@@ -357,7 +357,7 @@ type AssigneeRenderer struct {
 
 ```
 searchKey: main.NewAssigneeRenderer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -368,7 +368,7 @@ func NewAssigneeRenderer(context IssueContext, assignee string) *AssigneeRendere
 
 ```
 searchKey: main.AssigneeRenderer.Render
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -420,7 +420,7 @@ findPullRequest returns the index of the given pull request in the current conte
 
 ```
 searchKey: main.AssigneeRenderer.readTrackingIssueURLs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -435,7 +435,7 @@ Note: We use the fact that rendered work items always reference themselves first
 
 ```
 searchKey: main.AssigneeRenderer.renderCompletedIssues
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -448,7 +448,7 @@ renderCompletedIssues returns a rendered list of closed issues along with that i
 
 ```
 searchKey: main.AssigneeRenderer.renderCompletedPullRequests
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -461,7 +461,7 @@ renderCompletedPullRequests returns a rendered list of closed pull request along
 
 ```
 searchKey: main.AssigneeRenderer.renderCompletedTrackingIssues
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -474,7 +474,7 @@ renderCompletedTrackingIsssues returns a rendered list of closed tracking issues
 
 ```
 searchKey: main.AssigneeRenderer.renderCompletedWork
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -500,7 +500,7 @@ renderIssue returns the given issue rendered as markdown. This will also set the
 
 ```
 searchKey: main.AssigneeRenderer.renderPendingIssues
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -513,7 +513,7 @@ renderPendingIssues returns a rendered list of unclosed issues along with that i
 
 ```
 searchKey: main.AssigneeRenderer.renderPendingPullRequests
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -526,7 +526,7 @@ renderPendingPullRequests returns a rendered list of unclosed pull requests alon
 
 ```
 searchKey: main.AssigneeRenderer.renderPendingTrackingIssues
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -539,7 +539,7 @@ renderPendingTrackingIssues returns a rendered list of tracking issues (with ren
 
 ```
 searchKey: main.AssigneeRenderer.renderPendingWork
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -565,7 +565,7 @@ renderPullRequest returns the given pull request rendered as markdown. This will
 
 ```
 searchKey: main.AssigneeRenderer.resetDisplayFlags
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -626,7 +626,7 @@ Issue represents an existing GitHub Issue.
 
 ```
 searchKey: main.unmarshalIssue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -639,7 +639,7 @@ unmarshalIssue unmarshals the given node into an issue object.
 
 ```
 searchKey: main.Issue.Closed
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -650,7 +650,7 @@ func (issue *Issue) Closed() bool
 
 ```
 searchKey: main.Issue.SafeLabels
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -661,7 +661,7 @@ func (issue *Issue) SafeLabels() []string
 
 ```
 searchKey: main.Issue.SafeTitle
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -701,7 +701,7 @@ IssueContext tracks a visible set of issues, tracking issues, and pull requests 
 
 ```
 searchKey: main.NewIssueContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -746,7 +746,7 @@ IssueLoader efficiently fetches issues and pull request that match a given set o
 
 ```
 searchKey: main.NewIssueLoader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -772,7 +772,7 @@ Load will load all issues and pull requests matching the configured queries. Tra
 
 ```
 searchKey: main.IssueLoader.makeNextRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -843,7 +843,7 @@ type Matcher struct {
 
 ```
 searchKey: main.NewMatcher
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -953,7 +953,7 @@ PullRequest represents an existing GitHub PullRequest.
 
 ```
 searchKey: main.unmarshalPullRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -966,7 +966,7 @@ unmarshalPullRequest unmarshals the given node into an pull request object.
 
 ```
 searchKey: main.PullRequest.Closed
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -977,7 +977,7 @@ func (pullRequest *PullRequest) Closed() bool
 
 ```
 searchKey: main.PullRequest.Done
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -988,7 +988,7 @@ func (pullRequest *PullRequest) Done() bool
 
 ```
 searchKey: main.PullRequest.Merged
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -999,7 +999,7 @@ func (pullRequest *PullRequest) Merged() bool
 
 ```
 searchKey: main.PullRequest.SafeLabels
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1010,7 +1010,7 @@ func (pullRequest *PullRequest) SafeLabels() []string
 
 ```
 searchKey: main.PullRequest.SafeTitle
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1072,14 +1072,14 @@ type SearchResult struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Emojis" href="#Emojis">func Emojis(labels []string, repository, body string, additional map[string]string) string</a>
 
 ```
 searchKey: main.Emojis
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1092,7 +1092,7 @@ Emojis returns a string of emojis that should be displayed with an issue or a pu
 
 ```
 searchKey: main.ListTrackingIssues
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1105,7 +1105,7 @@ ListTrackingIssues returns all issues with the `tracking` label (and at least on
 
 ```
 searchKey: main.LoadIssues
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1118,7 +1118,7 @@ LoadIssues will load all issues and pull requests matching the configured querie
 
 ```
 searchKey: main.LoadTrackingIssues
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1131,7 +1131,7 @@ LoadTrackingIssues returns all issues and pull requests which are relevant to th
 
 ```
 searchKey: main.RenderTrackingIssue
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1144,7 +1144,7 @@ RenderTrackingIssue renders the work section of the given tracking issue.
 
 ```
 searchKey: main.Resolve
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1157,7 +1157,7 @@ Resolve will populate the relationship fields of the registered issues and pull 
 
 ```
 searchKey: main.SortByIntegerKeyPair
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1168,7 +1168,7 @@ func SortByIntegerKeyPair(parts []MarkdownByIntegerKeyPair) (markdown []string)
 
 ```
 searchKey: main.TestIntegration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1179,7 +1179,7 @@ func TestIntegration(t *testing.T)
 
 ```
 searchKey: main.categorizeCustomerIssue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1192,7 +1192,7 @@ categorizeCustomerIssue adds a customer emoji if the repository matches sourcegr
 
 ```
 searchKey: main.categorizeLabels
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1205,7 +1205,7 @@ categorizeLabels adds emojis based on the issue labels.
 
 ```
 searchKey: main.categorizeSecurityIssue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1218,7 +1218,7 @@ categorizeSecurityIssue adds a security emoji if the repository matches sourcegr
 
 ```
 searchKey: main.checkForCycles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1231,7 +1231,7 @@ checkForCycles checks for a cycle over the tracked issues relationship in the se
 
 ```
 searchKey: main.chunkQueries
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1244,7 +1244,7 @@ chunkQueries returns the given queries spread across a number of slices. Each sl
 
 ```
 searchKey: main.contains
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1255,7 +1255,7 @@ func contains(haystack []string, needle string) bool
 
 ```
 searchKey: main.deduplicateIssues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1266,7 +1266,7 @@ func deduplicateIssues(issues []*Issue) (deduplicated []*Issue)
 
 ```
 searchKey: main.deduplicatePullRequests
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1277,7 +1277,7 @@ func deduplicatePullRequests(pullRequests []*PullRequest) (deduplicated []*PullR
 
 ```
 searchKey: main.estimateFromLabelSet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1290,7 +1290,7 @@ estimateFromLabelSet returns the value of a `estimate/` lables in the given labe
 
 ```
 searchKey: main.estimateFromLabelSets
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1303,7 +1303,7 @@ estimateFromLabelSets returns the sum of `estimate/` labels in the given label s
 
 ```
 searchKey: main.findAssignees
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1316,7 +1316,7 @@ findAssignees returns the list of assignees for the given tracking issue. A user
 
 ```
 searchKey: main.formatTimeSince
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1329,7 +1329,7 @@ formatTimeSince will return a string containing the number of days since the giv
 
 ```
 searchKey: main.getOrUpdateLastUpdateTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1340,7 +1340,7 @@ func getOrUpdateLastUpdateTime(update bool) (time.Time, error)
 
 ```
 searchKey: main.indexOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1351,7 +1351,7 @@ func indexOf(s, marker string) (int, bool)
 
 ```
 searchKey: main.linkPullRequestsAndIssues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1364,7 +1364,7 @@ linkPullRequestsAndIssues populates the LinkedPullRequests and LinkedIssues fiel
 
 ```
 searchKey: main.linkTrackingIssues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1377,7 +1377,7 @@ linkTrackingIssues populates the TrackedIssues, TrackedPullRequests, and Tracked
 
 ```
 searchKey: main.loadIssues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1401,7 +1401,7 @@ func main()
 
 ```
 searchKey: main.makeFragmentArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1414,7 +1414,7 @@ makeFragmentArgs makes `n` named GraphQL fragment and an associated set of varia
 
 ```
 searchKey: main.makeQueries
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1427,7 +1427,7 @@ makeQueries returns a set of search queries that, when queried together, should 
 
 ```
 searchKey: main.makeSearchQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1440,7 +1440,7 @@ makeSearchQuery creates a GraphQL `search` fragment that captures the fields of 
 
 ```
 searchKey: main.matchingIssues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1453,7 +1453,7 @@ matchingIssues returns the given issues that match the given matcher.
 
 ```
 searchKey: main.matchingPullRequests
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1466,7 +1466,7 @@ matchingPullRequests returns the given pull requests that match the given matche
 
 ```
 searchKey: main.matchingTrackingIssues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1479,7 +1479,7 @@ matchingTrackingIssues returns the given tracking issues that match the matcher 
 
 ```
 searchKey: main.mockLastUpdate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1490,7 +1490,7 @@ func mockLastUpdate(t *testing.T)
 
 ```
 searchKey: main.nonTrackingLabels
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1501,7 +1501,7 @@ func nonTrackingLabels(labels []string) (filtered []string)
 
 ```
 searchKey: main.partition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1523,7 +1523,7 @@ func readFixturesFile() (trackingIssues []*Issue, issues []*Issue, pullRequests 
 
 ```
 searchKey: main.redactLabels
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1534,7 +1534,7 @@ func redactLabels(labels []string) (redacted []string)
 
 ```
 searchKey: main.renderPullRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1547,7 +1547,7 @@ renderPullRequest returns the given pull request rendered in markdown.
 
 ```
 searchKey: main.run
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1558,7 +1558,7 @@ func run(token, org string, dry, verbose bool) (err error)
 
 ```
 searchKey: main.testAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1582,7 +1582,7 @@ func testFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequests []*P
 
 ```
 searchKey: main.unmarshalSearchNodes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1595,7 +1595,7 @@ unmarshalSearchNodes unmarshals the given nodes into a list of issues and a list
 
 ```
 searchKey: main.updateIssue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1606,7 +1606,7 @@ func updateIssue(ctx context.Context, cli *graphql.Client, issue *Issue) (err er
 
 ```
 searchKey: main.updateIssues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1630,7 +1630,7 @@ func updateTestFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequest
 
 ```
 searchKey: main.visitNode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1643,7 +1643,7 @@ visitNode performs a depth-first-search over tracked issues relationships. This 
 
 ```
 searchKey: main.writeFixturesFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -193,7 +193,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EvBatch" href="#EvBatch">const EvBatch</a>
@@ -1125,7 +1125,7 @@ const unordered = ^uint64(0)
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BreakTimestampsForTesting" href="#BreakTimestampsForTesting">var BreakTimestampsForTesting</a>
@@ -1181,7 +1181,7 @@ bandsPerSeries is the number of bands to divide each series into. This is only c
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Event" href="#Event">type Event struct</a>
@@ -1227,7 +1227,7 @@ Event describes one event in the trace.
 
 ```
 searchKey: trace.Event.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1360,7 +1360,7 @@ An MMUCurve is the minimum mutator utilization curve across multiple window size
 
 ```
 searchKey: trace.NewMMUCurve
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1463,7 +1463,7 @@ ParseResult is the result of Parse.
 
 ```
 searchKey: trace.Parse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1476,7 +1476,7 @@ Parse parses, post-processes and verifies the trace.
 
 ```
 searchKey: trace.parse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1635,7 +1635,7 @@ It returns true if further calls to addMU would be pointless.
 
 ```
 searchKey: trace.accumulator.resetTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1678,7 +1678,7 @@ type bandUtilHeap []bandUtil
 
 ```
 searchKey: trace.bandUtilHeap.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1700,7 +1700,7 @@ func (h bandUtilHeap) Less(i, j int) bool
 
 ```
 searchKey: trace.bandUtilHeap.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1774,7 +1774,7 @@ type eventList []*Event
 
 ```
 searchKey: trace.eventList.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1818,7 +1818,7 @@ type eventSeqList []*Event
 
 ```
 searchKey: trace.eventSeqList.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1865,7 +1865,7 @@ type gState struct {
 
 ```
 searchKey: trace.stateTransition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1998,7 +1998,7 @@ type mmuSeries struct {
 
 ```
 searchKey: trace.newMMUSeries
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2092,7 +2092,7 @@ add adds a uniform function over [l, r] scaled so the total weight of the unifor
 
 ```
 searchKey: trace.mud.approxInvCumulativeSum
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2165,7 +2165,7 @@ type orderEventList []orderEvent
 
 ```
 searchKey: trace.orderEventList.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2229,7 +2229,7 @@ totalUtil is total utilization, measured in nanoseconds. This is a separate type
 
 ```
 searchKey: trace.totalUtilOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2264,7 +2264,7 @@ type utilHeap []UtilWindow
 
 ```
 searchKey: trace.utilHeap.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2286,7 +2286,7 @@ func (h utilHeap) Less(i, j int) bool
 
 ```
 searchKey: trace.utilHeap.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2318,14 +2318,14 @@ func (h utilHeap) Swap(i, j int)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkMMU" href="#BenchmarkMMU">func BenchmarkMMU(b *testing.B)</a>
 
 ```
 searchKey: trace.BenchmarkMMU
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2336,7 +2336,7 @@ func BenchmarkMMU(b *testing.B)
 
 ```
 searchKey: trace.GoroutineStats
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2349,7 +2349,7 @@ GoroutineStats generates statistics for all goroutines in the trace.
 
 ```
 searchKey: trace.MutatorUtilization
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2364,7 +2364,7 @@ If the UtilPerProc flag is not given, this always returns a single utilization f
 
 ```
 searchKey: trace.Print
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2377,7 +2377,7 @@ Print dumps events to stdout. For debugging.
 
 ```
 searchKey: trace.PrintEvent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2390,7 +2390,7 @@ PrintEvent dumps the event to stdout. For debugging.
 
 ```
 searchKey: trace.RelatedGoroutines
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2403,7 +2403,7 @@ RelatedGoroutines finds a set of goroutines related to goroutine goid.
 
 ```
 searchKey: trace.TestCorruptedInputs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2414,7 +2414,7 @@ func TestCorruptedInputs(t *testing.T)
 
 ```
 searchKey: trace.TestMMU
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2425,7 +2425,7 @@ func TestMMU(t *testing.T)
 
 ```
 searchKey: trace.TestMMUTrace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2436,7 +2436,7 @@ func TestMMUTrace(t *testing.T)
 
 ```
 searchKey: trace.TestMUD
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2447,7 +2447,7 @@ func TestMUD(t *testing.T)
 
 ```
 searchKey: trace.TestMUDTracking
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2458,7 +2458,7 @@ func TestMUDTracking(t *testing.T)
 
 ```
 searchKey: trace.TestParseCanned
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2469,7 +2469,7 @@ func TestParseCanned(t *testing.T)
 
 ```
 searchKey: trace.TestParseVersion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2480,7 +2480,7 @@ func TestParseVersion(t *testing.T)
 
 ```
 searchKey: trace.TestTimestampOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2491,7 +2491,7 @@ func TestTimestampOverflow(t *testing.T)
 
 ```
 searchKey: trace.addUtil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2502,7 +2502,7 @@ func addUtil(util []MutatorUtil, mu MutatorUtil) []MutatorUtil
 
 ```
 searchKey: trace.aeq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2515,7 +2515,7 @@ aeq returns true if x and y are equal up to 8 digits (1 part in 100 million).
 
 ```
 searchKey: trace.appendVarint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2526,7 +2526,7 @@ func appendVarint(buf []byte, v uint64) []byte
 
 ```
 searchKey: trace.argNum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2550,7 +2550,7 @@ func goCmd() string
 
 ```
 searchKey: trace.mmuSlow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2561,7 +2561,7 @@ func mmuSlow(util []MutatorUtil, window time.Duration) (mmu float64)
 
 ```
 searchKey: trace.order1005
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2574,7 +2574,7 @@ order1005 merges a set of per-P event batches into a single, consistent stream.
 
 ```
 searchKey: trace.order1007
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2587,7 +2587,7 @@ order1007 merges a set of per-P event batches into a single, consistent stream. 
 
 ```
 searchKey: trace.parseEvents
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2600,7 +2600,7 @@ Parse events transforms raw events into events. It does analyze and verify per-e
 
 ```
 searchKey: trace.parseHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2613,7 +2613,7 @@ parseHeader parses trace header of the form "go 1.7 trace\x00\x00\x00\x00" and r
 
 ```
 searchKey: trace.postProcessTrace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2626,7 +2626,7 @@ postProcessTrace does inter-event verification and information restoration. The 
 
 ```
 searchKey: trace.readStr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2637,7 +2637,7 @@ func readStr(r io.Reader, off0 int) (s string, off int, err error)
 
 ```
 searchKey: trace.readTrace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2650,7 +2650,7 @@ readTrace does wire-format parsing and verification. It does not care about spec
 
 ```
 searchKey: trace.readVal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2663,7 +2663,7 @@ readVal reads unsigned base-128 value from r.
 
 ```
 searchKey: trace.removeFutile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2676,7 +2676,7 @@ removeFutile removes all constituents of futile wakeups (block, unblock, start).
 
 ```
 searchKey: trace.symbolize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2689,7 +2689,7 @@ symbolize attaches func/file/line info to stack traces.
 
 ```
 searchKey: trace.transition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2700,7 +2700,7 @@ func transition(gs map[uint64]gState, g uint64, init, next gState)
 
 ```
 searchKey: trace.transitionReady
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

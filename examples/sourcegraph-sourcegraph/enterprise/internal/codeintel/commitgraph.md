@@ -35,7 +35,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CommitGraphView" href="#CommitGraphView">type CommitGraphView struct</a>
@@ -127,7 +127,7 @@ type Graph struct {
 
 ```
 searchKey: commitgraph.NewGraph
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -140,7 +140,7 @@ NewGraph creates a commit graph decorated with the set of uploads visible from t
 
 ```
 searchKey: commitgraph.Graph.Gather
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -153,7 +153,7 @@ Gather reads the graph's stream to completion and returns a map of the values. T
 
 ```
 searchKey: commitgraph.Graph.Stream
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -223,14 +223,14 @@ type VisibilityRelationship struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkCalculateVisibleUploads" href="#BenchmarkCalculateVisibleUploads">func BenchmarkCalculateVisibleUploads(b *testing.B)</a>
 
 ```
 searchKey: commitgraph.BenchmarkCalculateVisibleUploads
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -241,7 +241,7 @@ func BenchmarkCalculateVisibleUploads(b *testing.B)
 
 ```
 searchKey: commitgraph.TestCalculateVisibleUploads
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -252,7 +252,7 @@ func TestCalculateVisibleUploads(t *testing.T)
 
 ```
 searchKey: commitgraph.TestCalculateVisibleUploadsAlternateCommitGraph
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -263,7 +263,7 @@ func TestCalculateVisibleUploadsAlternateCommitGraph(t *testing.T)
 
 ```
 searchKey: commitgraph.adjustVisibleUploads
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -276,7 +276,7 @@ adjustVisibleUploads returns a copy of the given uploads map with the distance a
 
 ```
 searchKey: commitgraph.makeTestGraph
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -289,7 +289,7 @@ makeTestGraph calls Gather on a new graph then sorts the uploads deterministical
 
 ```
 searchKey: commitgraph.populateUploadsByTraversal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -310,7 +310,7 @@ For all remaining commits, we can easily re-calculate the visible uploads withou
 
 ```
 searchKey: commitgraph.populateUploadsForCommit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -342,7 +342,7 @@ func readBenchmarkCommitGraph() (*gitserver.CommitGraph, error)
 
 ```
 searchKey: commitgraph.readBenchmarkFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -353,7 +353,7 @@ func readBenchmarkFile(path string) ([]byte, error)
 
 ```
 searchKey: commitgraph.replaces
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -366,7 +366,7 @@ replaces returns true if upload1 has a smaller distance than upload2. Ties are b
 
 ```
 searchKey: commitgraph.reverseGraph
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -379,7 +379,7 @@ reverseGraph returns the reverse of the given graph by flipping all the edges.
 
 ```
 searchKey: commitgraph.traverseForCommit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -394,7 +394,7 @@ NOTE: We assume that each commit with multiple parents have been assigned data w
 
 ```
 searchKey: commitgraph.traverseForUploads
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

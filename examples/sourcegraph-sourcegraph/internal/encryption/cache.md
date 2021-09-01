@@ -16,7 +16,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Key" href="#Key">type Key struct</a>
@@ -40,7 +40,7 @@ Key provides an LRU cache wrapper for any encryption.Key implementation, caching
 
 ```
 searchKey: cache.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -90,14 +90,14 @@ func (k *testKey) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.S
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestCacheKey" href="#TestCacheKey">func TestCacheKey(t *testing.T)</a>
 
 ```
 searchKey: cache.TestCacheKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -108,7 +108,7 @@ func TestCacheKey(t *testing.T)
 
 ```
 searchKey: cache.hash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

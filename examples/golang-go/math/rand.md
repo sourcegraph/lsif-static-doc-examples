@@ -90,10 +90,6 @@ This package's outputs might be easily predictable regardless of how it's seeded
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="int32max" href="#int32max">const int32max</a>
 
 ```
@@ -172,10 +168,6 @@ const rngTap = 273
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="fe" href="#fe">var fe</a>
 
@@ -269,10 +261,6 @@ var wn = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Rand" href="#Rand">type Rand struct</a>
 
 ```
@@ -302,7 +290,7 @@ A Rand is a source of random numbers.
 
 ```
 searchKey: rand.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -315,7 +303,7 @@ New returns a new Rand that uses random values from src to generate other random
 
 ```
 searchKey: rand.Rand.ExpFloat64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -332,7 +320,7 @@ sample = ExpFloat64() / desiredRateParameter
 
 ```
 searchKey: rand.Rand.Float32
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -345,7 +333,7 @@ Float32 returns, as a float32, a pseudo-random number in the half-open interval 
 
 ```
 searchKey: rand.Rand.Float64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -358,7 +346,7 @@ Float64 returns, as a float64, a pseudo-random number in the half-open interval 
 
 ```
 searchKey: rand.Rand.Int
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -371,7 +359,7 @@ Int returns a non-negative pseudo-random int.
 
 ```
 searchKey: rand.Rand.Int31
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -397,7 +385,7 @@ Int31n returns, as an int32, a non-negative pseudo-random number in the half-ope
 
 ```
 searchKey: rand.Rand.Int63
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -436,7 +424,7 @@ Intn returns, as an int, a non-negative pseudo-random number in the half-open in
 
 ```
 searchKey: rand.Rand.NormFloat64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -505,7 +493,7 @@ Shuffle pseudo-randomizes the order of elements. n is the number of elements. Sh
 
 ```
 searchKey: rand.Rand.Uint32
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -518,7 +506,7 @@ Uint32 returns a pseudo-random 32-bit value as a uint32.
 
 ```
 searchKey: rand.Rand.Uint64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -562,7 +550,7 @@ A Source represents a source of uniformly-distributed pseudo-random int64 values
 
 ```
 searchKey: rand.NewSource
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -614,7 +602,7 @@ A Zipf generates Zipf distributed variates.
 
 ```
 searchKey: rand.NewZipf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -627,7 +615,7 @@ NewZipf returns a Zipf variate generator. The generator generates values k ∈ [
 
 ```
 searchKey: rand.Zipf.Uint64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -676,7 +664,7 @@ type lockedSource struct {
 
 ```
 searchKey: rand.lockedSource.Int63
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -698,7 +686,7 @@ func (r *lockedSource) Seed(seed int64)
 
 ```
 searchKey: rand.lockedSource.Uint64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -750,7 +738,7 @@ type rngSource struct {
 
 ```
 searchKey: rand.rngSource.Int63
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -776,7 +764,7 @@ Seed uses the provided seed value to initialize the generator to a deterministic
 
 ```
 searchKey: rand.rngSource.Uint64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -786,10 +774,6 @@ func (rng *rngSource) Uint64() uint64
 Uint64 returns a non-negative pseudo-random 64-bit integer as an uint64. 
 
 ## <a id="func" href="#func">Functions</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ExpFloat64" href="#ExpFloat64">func ExpFloat64() float64</a>
 
@@ -886,7 +870,7 @@ Int31 returns a non-negative pseudo-random 31-bit integer as an int32 from the d
 
 ```
 searchKey: rand.Int31n
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -899,7 +883,7 @@ Int31n returns, as an int32, a non-negative pseudo-random number in the half-ope
 
 ```
 searchKey: rand.Int31nForTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -923,7 +907,7 @@ Int63 returns a non-negative pseudo-random 63-bit integer as an int64 from the d
 
 ```
 searchKey: rand.Int63n
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -936,7 +920,7 @@ Int63n returns, as an int64, a non-negative pseudo-random number in the half-ope
 
 ```
 searchKey: rand.Intn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -966,7 +950,7 @@ sample = NormFloat64() * desiredStdDev + desiredMean
 
 ```
 searchKey: rand.Perm
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -979,7 +963,7 @@ Perm returns, as a slice of n ints, a pseudo-random permutation of the integers 
 
 ```
 searchKey: rand.Read
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -992,7 +976,7 @@ Read generates len(p) random bytes from the default Source and writes them into 
 
 ```
 searchKey: rand.Seed
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1005,7 +989,7 @@ Seed uses the provided seed value to initialize the default Source to a determin
 
 ```
 searchKey: rand.Shuffle
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1044,7 +1028,7 @@ Uint64 returns a pseudo-random 64-bit value as a uint64 from the default Source.
 
 ```
 searchKey: rand.absInt32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1055,7 +1039,7 @@ func absInt32(i int32) uint32
 
 ```
 searchKey: rand.read
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1066,7 +1050,7 @@ func read(p []byte, src Source, readVal *int64, readPos *int8) (n int, err error
 
 ```
 searchKey: rand.seedrand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

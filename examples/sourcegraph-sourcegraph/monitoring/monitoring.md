@@ -117,10 +117,6 @@ To learn more about the generator, see the top-level program: [https://github.co
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BitsPerSecond" href="#BitsPerSecond">const BitsPerSecond</a>
 
 ```
@@ -430,10 +426,6 @@ const localPrometheusURL = "http://127.0.0.1:9090"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="PanelOptions" href="#PanelOptions">var PanelOptions</a>
 
 ```
@@ -450,10 +442,6 @@ PanelOptions exports available shared `ObservablePanelOption` implementations.
 See `ObservablePanelOption` for more details. 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Container" href="#Container">type Container struct</a>
 
@@ -513,7 +501,7 @@ alertDescription generates an alert description for the specified coontainer's a
 
 ```
 searchKey: monitoring.Container.renderDashboard
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -526,7 +514,7 @@ renderDashboard generates the Grafana renderDashboard for this container.
 
 ```
 searchKey: monitoring.Container.renderRules
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -541,7 +529,7 @@ renderRules generates the Prometheus rules file which defines our high-level ale
 
 ```
 searchKey: monitoring.Container.validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -607,7 +595,7 @@ These correspond to collapsible sections in a Grafana dashboard.
 
 ```
 searchKey: monitoring.Group.validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -748,7 +736,7 @@ These correspond to Grafana graphs.
 
 ```
 searchKey: monitoring.Observable.validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -865,7 +853,7 @@ LessOrEqual indicates the alert should fire when less than or equal to the given
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.isEmpty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -876,7 +864,7 @@ func (a *ObservableAlertDefinition) isEmpty() bool
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -900,7 +888,7 @@ ObservableOwner denotes a team that owns an Observable. The current teams are de
 
 ```
 searchKey: monitoring.ObservableOwner.toMarkdown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1027,7 +1015,7 @@ Min sets the minimum value of the Y axis on the panel. The default is zero.
 
 ```
 searchKey: monitoring.ObservablePanel.MinAuto
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1137,7 +1125,7 @@ These correspond to a row of Grafana graphs.
 
 ```
 searchKey: monitoring.Row.validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1161,7 +1149,7 @@ UnitType for controlling the unit type display on graphs.
 
 ```
 searchKey: monitoring.UnitType.short
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1188,7 +1176,7 @@ type documentation struct {
 
 ```
 searchKey: monitoring.renderDocumentation
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1236,7 +1224,7 @@ Shared panel options should be declared as functions on this struct - see the `O
 
 ```
 searchKey: monitoring.panelOptionsLibrary.AlertThresholds
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1277,7 +1265,7 @@ Fill sets the fill opacity for all series on the panel. Set to 0 to disable fill
 
 ```
 searchKey: monitoring.panelOptionsLibrary.HoverShowAll
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1303,7 +1291,7 @@ HoverSort sorts the series either "ascending", "descending", or "none". Default 
 
 ```
 searchKey: monitoring.panelOptionsLibrary.LegendOnRight
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1316,7 +1304,7 @@ LegendOnRight moves the legend to the right side of the panel
 
 ```
 searchKey: monitoring.panelOptionsLibrary.NoLegend
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1329,7 +1317,7 @@ NoLegend disables the legend on the panel
 
 ```
 searchKey: monitoring.panelOptionsLibrary.OpinionatedDefaults
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1344,7 +1332,7 @@ It is applied in the default PanelOptions().
 
 ```
 searchKey: monitoring.panelOptionsLibrary.basicPanel
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1384,7 +1372,7 @@ func (g *promGroup) appendRow(alertQuery string, labels map[string]string, durat
 
 ```
 searchKey: monitoring.promGroup.validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1418,7 +1406,7 @@ promRule is a subset of a Prometheus recording or alert rule definition.
 
 ```
 searchKey: monitoring.promRule.validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1444,15 +1432,11 @@ promRulesFile represents a Prometheus recording rules file (which we use for def
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Generate" href="#Generate">func Generate(logger log15.Logger, opts GenerateOptions, containers ...*Container) error</a>
 
 ```
 searchKey: monitoring.Generate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1465,7 +1449,7 @@ Generate is the main Sourcegraph monitoring generator entrypoint.
 
 ```
 searchKey: monitoring.Int64Ptr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1478,7 +1462,7 @@ IntPtr converts an int64 value to a pointer, useful for setting fields in some A
 
 ```
 searchKey: monitoring.StringPtr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1491,7 +1475,7 @@ StringPtr converts a string value to a pointer, useful for setting fields in som
 
 ```
 searchKey: monitoring.boolPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1504,7 +1488,7 @@ boolPtr converts a boolean value to a pointer, useful for setting fields in some
 
 ```
 searchKey: monitoring.fprintObservableHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1519,7 +1503,7 @@ See `observableAnchor`.
 
 ```
 searchKey: monitoring.fprintOwnedBy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1532,7 +1516,7 @@ fprintOwnedBy prints information about who owns a particular monitoring definiti
 
 ```
 searchKey: monitoring.fprintSubtitle
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1545,7 +1529,7 @@ fprintSubtitle prints subtitle-class text
 
 ```
 searchKey: monitoring.isValidGrafanaUID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1564,7 +1548,7 @@ Instead of having to describe all the steps to navigate there because the UID is
 
 ```
 searchKey: monitoring.observableDocAnchor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1579,7 +1563,7 @@ Must match Prometheus template in `docker-images/prometheus/cmd/prom-wrapper/rec
 
 ```
 searchKey: monitoring.observablePanelID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1592,7 +1576,7 @@ observablePanelID generates a panel ID unique per dashboard for an observable at
 
 ```
 searchKey: monitoring.prometheusAlertName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1605,7 +1589,7 @@ prometheusAlertName creates an alertname that is unique given the combination of
 
 ```
 searchKey: monitoring.pruneAssets
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1616,7 +1600,7 @@ func pruneAssets(logger log15.Logger, filelist []string, grafanaDir, promDir str
 
 ```
 searchKey: monitoring.setPanelPos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1629,7 +1613,7 @@ setPanelSize is a helper to set a panel's position.
 
 ```
 searchKey: monitoring.setPanelSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1642,7 +1626,7 @@ setPanelSize is a helper to set a panel's size.
 
 ```
 searchKey: monitoring.toMarkdown
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1655,7 +1639,7 @@ toMarkdown converts a Go string to Markdown, and optionally converts it to a lis
 
 ```
 searchKey: monitoring.upperFirst
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1668,7 +1652,7 @@ upperFirst returns s with an uppercase first rune.
 
 ```
 searchKey: monitoring.withPeriod
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -37,10 +37,6 @@ A heap is a common way to implement a priority queue. To build a priority queue,
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Interface" href="#Interface">type Interface interface</a>
 
 ```
@@ -79,7 +75,7 @@ type myHeap []int
 
 ```
 searchKey: heap.myHeap.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -101,7 +97,7 @@ func (h *myHeap) Less(i, j int) bool
 
 ```
 searchKey: heap.myHeap.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -143,15 +139,11 @@ func (h myHeap) verify(t *testing.T, i int)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDup" href="#BenchmarkDup">func BenchmarkDup(b *testing.B)</a>
 
 ```
 searchKey: heap.BenchmarkDup
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -162,7 +154,7 @@ func BenchmarkDup(b *testing.B)
 
 ```
 searchKey: heap.Fix
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -175,7 +167,7 @@ Fix re-establishes the heap ordering after the element at index i has changed it
 
 ```
 searchKey: heap.Init
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -188,7 +180,7 @@ Init establishes the heap invariants required by the other routines in this pack
 
 ```
 searchKey: heap.Pop
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -201,7 +193,7 @@ Pop removes and returns the minimum element (according to Less) from the heap. T
 
 ```
 searchKey: heap.Push
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -214,7 +206,7 @@ Push pushes the element x onto the heap. The complexity is O(log n) where n = h.
 
 ```
 searchKey: heap.Remove
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -227,7 +219,7 @@ Remove removes and returns the element at index i from the heap. The complexity 
 
 ```
 searchKey: heap.Test
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -238,7 +230,7 @@ func Test(t *testing.T)
 
 ```
 searchKey: heap.TestFix
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -249,7 +241,7 @@ func TestFix(t *testing.T)
 
 ```
 searchKey: heap.TestInit0
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -260,7 +252,7 @@ func TestInit0(t *testing.T)
 
 ```
 searchKey: heap.TestInit1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -271,7 +263,7 @@ func TestInit1(t *testing.T)
 
 ```
 searchKey: heap.TestRemove0
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -282,7 +274,7 @@ func TestRemove0(t *testing.T)
 
 ```
 searchKey: heap.TestRemove1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -293,7 +285,7 @@ func TestRemove1(t *testing.T)
 
 ```
 searchKey: heap.TestRemove2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -304,7 +296,7 @@ func TestRemove2(t *testing.T)
 
 ```
 searchKey: heap.down
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -315,7 +307,7 @@ func down(h Interface, i0, n int) bool
 
 ```
 searchKey: heap.up
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

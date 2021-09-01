@@ -25,7 +25,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="config" href="#config">var config</a>
@@ -57,7 +57,7 @@ This is a singleton because, well, the entire site configuration system essentia
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="configuration" href="#configuration">type configuration struct</a>
@@ -106,7 +106,7 @@ func newConfiguration() *configuration
 
 ```
 searchKey: config.configuration.Active
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -117,7 +117,7 @@ func (c *configuration) Active() *window.Configuration
 
 ```
 searchKey: config.configuration.Subscribe
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -139,7 +139,7 @@ func (c *configuration) Unsubscribe(ch chan *window.Configuration)
 
 ```
 searchKey: config.configuration.notify
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -149,7 +149,7 @@ func (c *configuration) notify()
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ActiveWindow" href="#ActiveWindow">func ActiveWindow() *window.Configuration</a>
@@ -195,7 +195,7 @@ Subscribe returns a channel that will receive a message with the new configurati
 
 ```
 searchKey: config.TestConfiguration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -206,7 +206,7 @@ func TestConfiguration(t *testing.T)
 
 ```
 searchKey: config.Unsubscribe
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -219,7 +219,7 @@ Unsubscribe removes a channel returned from Subscribe() from the notification li
 
 ```
 searchKey: config.sameConfiguration
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

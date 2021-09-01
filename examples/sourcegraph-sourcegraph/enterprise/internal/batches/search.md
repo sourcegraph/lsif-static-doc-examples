@@ -21,7 +21,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrExpr" href="#ErrExpr">type ErrExpr struct</a>
@@ -44,7 +44,7 @@ ErrExpr is a base type for errors that occur in a specific expression within a p
 
 ```
 searchKey: search.createErrExpr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -55,7 +55,7 @@ func createErrExpr(input string, expr *syntax.Expr) ErrExpr
 
 ```
 searchKey: search.ErrExpr.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -80,7 +80,7 @@ type ErrUnsupportedField struct {
 
 ```
 searchKey: search.ErrUnsupportedField.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -105,7 +105,7 @@ type ErrUnsupportedValueType struct {
 
 ```
 searchKey: search.ErrUnsupportedValueType.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -131,14 +131,14 @@ TextSearchTerm represents a single term within a search string.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ParseTextSearch" href="#ParseTextSearch">func ParseTextSearch(search string) ([]TextSearchTerm, error)</a>
 
 ```
 searchKey: search.ParseTextSearch
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -151,7 +151,7 @@ ParseTextSearch parses a free-form text search string into a slice of expression
 
 ```
 searchKey: search.TestChangesetSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

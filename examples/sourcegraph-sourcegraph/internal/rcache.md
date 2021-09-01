@@ -40,7 +40,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultMutexDelay" href="#DefaultMutexDelay">const DefaultMutexDelay</a>
@@ -105,7 +105,7 @@ const dataVersionToDelete = "v1"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="deleteBatchSize" href="#deleteBatchSize">var deleteBatchSize</a>
@@ -146,7 +146,7 @@ var pool = redispool.Cache
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Cache" href="#Cache">type Cache struct</a>
@@ -169,7 +169,7 @@ Cache implements httpcache.Cache
 
 ```
 searchKey: rcache.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -182,7 +182,7 @@ New creates a redis backed Cache
 
 ```
 searchKey: rcache.NewWithTTL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -256,7 +256,7 @@ func (r *Cache) SetMulti(keyvals ...[2]string)
 
 ```
 searchKey: rcache.Cache.rkeyPrefix
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -307,14 +307,14 @@ TB is a subset of testing.TB
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DeleteOldCacheData" href="#DeleteOldCacheData">func DeleteOldCacheData(c redis.Conn) error</a>
 
 ```
 searchKey: rcache.DeleteOldCacheData
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -327,7 +327,7 @@ DeleteOldCacheData deletes the rcache data in the given Redis instance that's pr
 
 ```
 searchKey: rcache.SetupForTest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -340,7 +340,7 @@ SetupForTest adjusts the globalPrefix and clears it out. You will have conflicts
 
 ```
 searchKey: rcache.TestCache_deleteKeysWithPrefix
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -351,7 +351,7 @@ func TestCache_deleteKeysWithPrefix(t *testing.T)
 
 ```
 searchKey: rcache.TestCache_multi
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -362,7 +362,7 @@ func TestCache_multi(t *testing.T)
 
 ```
 searchKey: rcache.TestCache_namespace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -373,7 +373,7 @@ func TestCache_namespace(t *testing.T)
 
 ```
 searchKey: rcache.TestCache_simple
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -384,7 +384,7 @@ func TestCache_simple(t *testing.T)
 
 ```
 searchKey: rcache.TestTryAcquireMutex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -395,7 +395,7 @@ func TestTryAcquireMutex(t *testing.T)
 
 ```
 searchKey: rcache.TryAcquireMutex
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -414,7 +414,7 @@ A caller can therefore assume that they are the sole holder of the lock as long 
 
 ```
 searchKey: rcache.bytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -425,7 +425,7 @@ func bytes(s ...string) [][]byte
 
 ```
 searchKey: rcache.deleteKeysWithPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

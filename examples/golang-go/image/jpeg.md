@@ -185,7 +185,7 @@ JPEG is defined in ITU-T T.81: [https://www.w3.org/Graphics/JPEG/itu-t81.pdf](ht
     * [func idct(src *block)](#idct)
     * [func init()](#init.dct_test.go)
     * [func init()](#init.reader.go)
-    * [func init()](#init.writer.go.0xc038aba908)
+    * [func init()](#init.writer.go.0xc0594abb58)
     * [func min(x, y int) int](#min)
     * [func pixString(pix []byte, stride, x, y int) string](#pixString)
     * [func readPng(filename string) (image.Image, error)](#readPng)
@@ -198,10 +198,6 @@ JPEG is defined in ITU-T T.81: [https://www.w3.org/Graphics/JPEG/itu-t81.pdf](ht
 
 
 ## <a id="const" href="#const">Constants</a>
-
-```
-tags: [package]
-```
 
 ### <a id="DefaultQuality" href="#DefaultQuality">const DefaultQuality</a>
 
@@ -980,10 +976,6 @@ const w7 = 565 // 2048*sqrt(2)*cos(7*pi/16)
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="bitCount" href="#bitCount">var bitCount</a>
 
 ```
@@ -1198,10 +1190,6 @@ zigzag maps from the natural ordering to the zig-zag ordering. For example, zigz
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="FormatError" href="#FormatError">type FormatError string</a>
 
 ```
@@ -1219,7 +1207,7 @@ A FormatError reports that the input is not a valid JPEG.
 
 ```
 searchKey: jpeg.FormatError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1274,7 +1262,7 @@ An UnsupportedError reports that the input uses a valid but unimplemented JPEG f
 
 ```
 searchKey: jpeg.UnsupportedError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1313,7 +1301,7 @@ type block [blockSize]int32
 
 ```
 searchKey: jpeg.block.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1396,7 +1384,7 @@ type decoder struct {
 
 ```
 searchKey: jpeg.decoder.applyBlack
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1411,7 +1399,7 @@ Adobe CMYK JPEG images are inverted, where 255 means no ink instead of full ink,
 
 ```
 searchKey: jpeg.decoder.convertToRGB
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1435,7 +1423,7 @@ decode reads a JPEG image from r and returns it as an image.Image.
 
 ```
 searchKey: jpeg.decoder.decodeBit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1483,7 +1471,7 @@ ensureNBits reads bytes from the byte buffer to ensure that d.bits.n is at least
 
 ```
 searchKey: jpeg.decoder.fill
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1509,7 +1497,7 @@ ignore ignores the next n bytes.
 
 ```
 searchKey: jpeg.decoder.isRGB
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1620,7 +1608,7 @@ Specified in section B.2.3.
 
 ```
 searchKey: jpeg.decoder.readByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1633,7 +1621,7 @@ readByte returns the next byte, whether buffered or not buffered. It does not ca
 
 ```
 searchKey: jpeg.decoder.readByteStuffedByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1685,7 +1673,7 @@ reconstructBlock dequantizes, performs the inverse DCT and stores the block to t
 
 ```
 searchKey: jpeg.decoder.reconstructProgressiveImage
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1722,7 +1710,7 @@ refineNonZeroes refines non-zero entries of b in zig-zag order. If nz >= 0, the 
 
 ```
 searchKey: jpeg.decoder.unreadByteStuffedByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1798,7 +1786,7 @@ emitHuffRLE emits a run of runLength copies of value encoded with the given Huff
 
 ```
 searchKey: jpeg.encoder.flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1857,7 +1845,7 @@ writeDHT writes the Define Huffman Table marker.
 
 ```
 searchKey: jpeg.encoder.writeDQT
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2045,15 +2033,11 @@ writer is a buffered writer.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDecodeBaseline" href="#BenchmarkDecodeBaseline">func BenchmarkDecodeBaseline(b *testing.B)</a>
 
 ```
 searchKey: jpeg.BenchmarkDecodeBaseline
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2064,7 +2048,7 @@ func BenchmarkDecodeBaseline(b *testing.B)
 
 ```
 searchKey: jpeg.BenchmarkDecodeProgressive
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2075,7 +2059,7 @@ func BenchmarkDecodeProgressive(b *testing.B)
 
 ```
 searchKey: jpeg.BenchmarkEncodeRGBA
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2086,7 +2070,7 @@ func BenchmarkEncodeRGBA(b *testing.B)
 
 ```
 searchKey: jpeg.BenchmarkEncodeYCbCr
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2097,7 +2081,7 @@ func BenchmarkEncodeYCbCr(b *testing.B)
 
 ```
 searchKey: jpeg.BenchmarkFDCT
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2108,7 +2092,7 @@ func BenchmarkFDCT(b *testing.B)
 
 ```
 searchKey: jpeg.BenchmarkIDCT
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2119,7 +2103,7 @@ func BenchmarkIDCT(b *testing.B)
 
 ```
 searchKey: jpeg.Decode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2132,7 +2116,7 @@ Decode reads a JPEG image from r and returns it as an image.Image.
 
 ```
 searchKey: jpeg.DecodeConfig
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2145,7 +2129,7 @@ DecodeConfig returns the color model and dimensions of a JPEG image without deco
 
 ```
 searchKey: jpeg.Encode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2158,7 +2142,7 @@ Encode writes the Image m to w in JPEG 4:2:0 baseline format with the given opti
 
 ```
 searchKey: jpeg.TestDCT
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2169,7 +2153,7 @@ func TestDCT(t *testing.T)
 
 ```
 searchKey: jpeg.TestDecodeEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2180,7 +2164,7 @@ func TestDecodeEOF(t *testing.T)
 
 ```
 searchKey: jpeg.TestDecodeProgressive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2193,7 +2177,7 @@ TestDecodeProgressive tests that decoding the baseline and progressive versions 
 
 ```
 searchKey: jpeg.TestEncodeYCbCr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2204,7 +2188,7 @@ func TestEncodeYCbCr(t *testing.T)
 
 ```
 searchKey: jpeg.TestExtraneousData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2215,7 +2199,7 @@ func TestExtraneousData(t *testing.T)
 
 ```
 searchKey: jpeg.TestLargeImageWithShortData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2226,7 +2210,7 @@ func TestLargeImageWithShortData(t *testing.T)
 
 ```
 searchKey: jpeg.TestPaddedRSTMarker
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2237,7 +2221,7 @@ func TestPaddedRSTMarker(t *testing.T)
 
 ```
 searchKey: jpeg.TestTruncatedSOSDataDoesntPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2248,7 +2232,7 @@ func TestTruncatedSOSDataDoesntPanic(t *testing.T)
 
 ```
 searchKey: jpeg.TestUnscaledQuant
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2259,7 +2243,7 @@ func TestUnscaledQuant(t *testing.T)
 
 ```
 searchKey: jpeg.TestWriteGrayscale
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2272,7 +2256,7 @@ TestWriteGrayscale tests that a grayscale images survives a round-trip through e
 
 ```
 searchKey: jpeg.TestWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2283,7 +2267,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: jpeg.TestZigUnzig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2294,7 +2278,7 @@ func TestZigUnzig(t *testing.T)
 
 ```
 searchKey: jpeg.alpha
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2307,7 +2291,7 @@ alpha returns 1 if i is 0 and returns √2 otherwise.
 
 ```
 searchKey: jpeg.averageDelta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2320,7 +2304,7 @@ averageDelta returns the average delta in RGB space. The two images must have th
 
 ```
 searchKey: jpeg.benchmarkDCT
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2331,7 +2315,7 @@ func benchmarkDCT(b *testing.B, f func(*block))
 
 ```
 searchKey: jpeg.benchmarkDecode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2342,7 +2326,7 @@ func benchmarkDecode(b *testing.B, filename string)
 
 ```
 searchKey: jpeg.check
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2355,7 +2339,7 @@ check checks that the two pix data are equal, within the given bounds.
 
 ```
 searchKey: jpeg.decodeFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2366,7 +2350,7 @@ func decodeFile(filename string) (image.Image, error)
 
 ```
 searchKey: jpeg.delta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2377,7 +2361,7 @@ func delta(u0, u1 uint32) int64
 
 ```
 searchKey: jpeg.differ
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2390,7 +2374,7 @@ differ reports whether any pair-wise elements in b0 and b1 differ by 2 or more. 
 
 ```
 searchKey: jpeg.div
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2403,7 +2387,7 @@ div returns a/b rounded to the nearest integer, instead of rounded to zero.
 
 ```
 searchKey: jpeg.fdct
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2416,7 +2400,7 @@ fdct performs a forward DCT on an 8x8 block of coefficients, including a level s
 
 ```
 searchKey: jpeg.grayToY
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2429,7 +2413,7 @@ grayToY stores the 8x8 region of m whose top-left corner is p in yBlock.
 
 ```
 searchKey: jpeg.idct
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2464,7 +2448,7 @@ tags: [function private]
 func init()
 ```
 
-### <a id="init.writer.go.0xc038aba908" href="#init.writer.go.0xc038aba908">func init()</a>
+### <a id="init.writer.go.0xc0594abb58" href="#init.writer.go.0xc0594abb58">func init()</a>
 
 ```
 searchKey: jpeg.init
@@ -2479,7 +2463,7 @@ func init()
 
 ```
 searchKey: jpeg.min
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2492,7 +2476,7 @@ min returns the minimum of two integers.
 
 ```
 searchKey: jpeg.pixString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2503,7 +2487,7 @@ func pixString(pix []byte, stride, x, y int) string
 
 ```
 searchKey: jpeg.readPng
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2514,7 +2498,7 @@ func readPng(filename string) (image.Image, error)
 
 ```
 searchKey: jpeg.rgbaToYCbCr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2527,7 +2511,7 @@ rgbaToYCbCr is a specialized version of toYCbCr for image.RGBA images.
 
 ```
 searchKey: jpeg.scale
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2540,7 +2524,7 @@ scale scales the 16x16 region represented by the 4 src blocks to the 8x8 dst blo
 
 ```
 searchKey: jpeg.slowFDCT
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2563,7 +2547,7 @@ b acts as both dst and src.
 
 ```
 searchKey: jpeg.slowIDCT
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2586,7 +2570,7 @@ b acts as both dst and src.
 
 ```
 searchKey: jpeg.toYCbCr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2599,7 +2583,7 @@ toYCbCr converts the 8x8 region of m whose top-left corner is p to its YCbCr val
 
 ```
 searchKey: jpeg.yCbCrToYCbCr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

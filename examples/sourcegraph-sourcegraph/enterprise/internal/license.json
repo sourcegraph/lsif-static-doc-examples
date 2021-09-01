@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/internal/license",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -74,7 +73,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -194,7 +192,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -235,7 +232,7 @@
                       "newPage": false,
                       "searchKey": "license.ParseSignedKey",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -279,7 +276,7 @@
                       "newPage": false,
                       "searchKey": "license.Info.IsExpired",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -301,7 +298,7 @@
                       "newPage": false,
                       "searchKey": "license.Info.IsExpiredWithGracePeriod",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -323,7 +320,7 @@
                       "newPage": false,
                       "searchKey": "license.Info.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -368,7 +365,7 @@
                       "newPage": false,
                       "searchKey": "license.Info.encode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -443,7 +440,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -464,7 +460,7 @@
                 "newPage": false,
                 "searchKey": "license.GenerateSignedKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -486,7 +482,7 @@
                 "newPage": false,
                 "searchKey": "license.ParseTagsInput",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -508,7 +504,7 @@
                 "newPage": false,
                 "searchKey": "license.TestGenerateParseSignedKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -532,7 +528,7 @@
                 "newPage": false,
                 "searchKey": "license.TestInfo_EncodeDecode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -556,7 +552,7 @@
                 "newPage": false,
                 "searchKey": "license.TestParseSignedKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -580,7 +576,7 @@
                 "newPage": false,
                 "searchKey": "license.TestParseTagsInput",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]

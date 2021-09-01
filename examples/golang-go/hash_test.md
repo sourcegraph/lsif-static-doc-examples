@@ -13,7 +13,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="marshalTests" href="#marshalTests">var marshalTests</a>
@@ -30,7 +30,7 @@ var marshalTests = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Example_binaryMarshaler" href="#Example_binaryMarshaler">func Example_binaryMarshaler()</a>
@@ -48,7 +48,7 @@ func Example_binaryMarshaler()
 
 ```
 searchKey: hash_test.TestMarshalHash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -59,7 +59,7 @@ func TestMarshalHash(t *testing.T)
 
 ```
 searchKey: hash_test.fromHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

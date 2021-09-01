@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/internal/licensing",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -495,7 +494,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -900,7 +898,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1007,7 +1004,7 @@
                       "newPage": false,
                       "searchKey": "licensing.ParseProductLicenseKey",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1029,7 +1026,7 @@
                       "newPage": false,
                       "searchKey": "licensing.ParseProductLicenseKeyWithBuiltinOrGenerationKey",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1051,7 +1048,7 @@
                       "newPage": false,
                       "searchKey": "licensing.toInfo",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1074,7 +1071,7 @@
                       "newPage": false,
                       "searchKey": "licensing.Info.Plan",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1096,7 +1093,7 @@
                       "newPage": false,
                       "searchKey": "licensing.Info.hasUnknownPlan",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1164,7 +1161,7 @@
                       "newPage": false,
                       "searchKey": "licensing.Plan.MaxExternalServiceCount",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1186,7 +1183,7 @@
                       "newPage": false,
                       "searchKey": "licensing.Plan.isKnown",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1209,7 +1206,7 @@
                       "newPage": false,
                       "searchKey": "licensing.Plan.tag",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1278,7 +1275,7 @@
                       "newPage": false,
                       "searchKey": "licensing.NewFeatureNotActivatedError",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1306,7 +1303,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1327,7 +1323,7 @@
                 "newPage": false,
                 "searchKey": "licensing.ActualUserCount",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1349,7 +1345,7 @@
                 "newPage": false,
                 "searchKey": "licensing.ActualUserCountDate",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1371,7 +1367,7 @@
                 "newPage": false,
                 "searchKey": "licensing.Check",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1393,7 +1389,7 @@
                 "newPage": false,
                 "searchKey": "licensing.GenerateProductLicenseKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1415,7 +1411,7 @@
                 "newPage": false,
                 "searchKey": "licensing.GetMaxUsers",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1437,7 +1433,7 @@
                 "newPage": false,
                 "searchKey": "licensing.IsFeatureEnabledLenient",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1459,7 +1455,7 @@
                 "newPage": false,
                 "searchKey": "licensing.IsFeatureNotActivated",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1481,7 +1477,7 @@
                 "newPage": false,
                 "searchKey": "licensing.ProductNameWithBrand",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1503,7 +1499,7 @@
                 "newPage": false,
                 "searchKey": "licensing.StartMaxUserCount",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1525,7 +1521,7 @@
                 "newPage": false,
                 "searchKey": "licensing.TestCheckFeature",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1549,7 +1545,7 @@
                 "newPage": false,
                 "searchKey": "licensing.TestInfo_Plan",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1573,7 +1569,7 @@
                 "newPage": false,
                 "searchKey": "licensing.TestInfo_hasUnknownPlan",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1597,7 +1593,7 @@
                 "newPage": false,
                 "searchKey": "licensing.TestPlan_isKnown",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1621,7 +1617,7 @@
                 "newPage": false,
                 "searchKey": "licensing.TestProductNameWithBrand",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1667,7 +1663,7 @@
                 "newPage": false,
                 "searchKey": "licensing.checkFeature",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1690,7 +1686,7 @@
                 "newPage": false,
                 "searchKey": "licensing.checkMaxUsers",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1713,7 +1709,7 @@
                 "newPage": false,
                 "searchKey": "licensing.getMaxUsers",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1828,7 +1824,7 @@
                 "newPage": false,
                 "searchKey": "licensing.setMaxUsers",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

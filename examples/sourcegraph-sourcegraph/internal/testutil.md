@@ -24,7 +24,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="gzipReadCloser" href="#gzipReadCloser">type gzipReadCloser struct</a>
@@ -45,7 +45,7 @@ type gzipReadCloser struct {
 
 ```
 searchKey: testutil.gzipReadCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -66,14 +66,14 @@ func (z *gzipReadCloser) Read(p []byte) (int, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AssertGolden" href="#AssertGolden">func AssertGolden(t testing.TB, path string, update bool, want interface{})</a>
 
 ```
 searchKey: testutil.AssertGolden
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -84,7 +84,7 @@ func AssertGolden(t testing.TB, path string, update bool, want interface{})
 
 ```
 searchKey: testutil.CreateZip
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -95,7 +95,7 @@ func CreateZip(files map[string]string) ([]byte, error)
 
 ```
 searchKey: testutil.Diff
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -106,7 +106,7 @@ func Diff(b1, b2 string) (string, error)
 
 ```
 searchKey: testutil.FetchTarFromGithub
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -117,7 +117,7 @@ func FetchTarFromGithub(ctx context.Context, repo api.RepoName, commit api.Commi
 
 ```
 searchKey: testutil.MockZipFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -128,7 +128,7 @@ func MockZipFile(data []byte) (*store.ZipFile, error)
 
 ```
 searchKey: testutil.NewStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -139,7 +139,7 @@ func NewStore(files map[string]string) (*store.Store, func(), error)
 
 ```
 searchKey: testutil.TempZipFileOnDisk
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -150,7 +150,7 @@ func TempZipFileOnDisk(data []byte) (string, func(), error)
 
 ```
 searchKey: testutil.TempZipFromFiles
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -161,7 +161,7 @@ func TempZipFromFiles(files map[string]string) (path string, cleanup func(), err
 
 ```
 searchKey: testutil.addpaxheader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ func addpaxheader(w *tar.Writer, body string) error
 
 ```
 searchKey: testutil.fsync
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -183,7 +183,7 @@ func fsync(path string) error
 
 ```
 searchKey: testutil.marshal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -194,7 +194,7 @@ func marshal(t testing.TB, v interface{}) []byte
 
 ```
 searchKey: testutil.openGzipReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -17,7 +17,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="closeFunc" href="#closeFunc">var closeFunc</a>
@@ -56,14 +56,14 @@ var sw socktest.Switch
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestMain" href="#TestMain">func TestMain(m *testing.M)</a>
 
 ```
 searchKey: socktest_test.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -74,7 +74,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: socktest_test.TestSocket
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -85,7 +85,7 @@ func TestSocket(t *testing.T)
 
 ```
 searchKey: socktest_test.TestSwitch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -239,9 +237,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1224,9 +1220,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1442,7 +1436,7 @@
                       "newPage": false,
                       "searchKey": "server.GitRepoSyncer.Type",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1598,7 +1592,7 @@
                       "newPage": false,
                       "searchKey": "server.PerforceDepotSyncer.Type",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1643,7 +1637,7 @@
                       "newPage": false,
                       "searchKey": "server.RepositoryLock.Release",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1777,7 +1771,7 @@
                       "newPage": false,
                       "searchKey": "server.makeTestServer",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1800,7 +1794,7 @@
                       "newPage": false,
                       "searchKey": "server.Server.Handler",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1844,7 +1838,7 @@
                       "newPage": false,
                       "searchKey": "server.Server.RegisterMetrics",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1866,7 +1860,7 @@
                       "newPage": false,
                       "searchKey": "server.Server.SetupAndClearTmp",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1888,7 +1882,7 @@
                       "newPage": false,
                       "searchKey": "server.Server.Stop",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2001,7 +1995,7 @@
                       "newPage": false,
                       "searchKey": "server.Server.cleanupRepos",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2208,7 +2202,7 @@
                       "newPage": false,
                       "searchKey": "server.Server.findGitDirs",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2277,7 +2271,7 @@
                       "newPage": false,
                       "searchKey": "server.Server.gitServiceHandler",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2645,7 +2639,7 @@
                       "newPage": false,
                       "searchKey": "server.Server.howManyBytesToFree",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2737,7 +2731,7 @@
                       "newPage": false,
                       "searchKey": "server.Server.queryCloneLimiter",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2829,7 +2823,7 @@
                       "newPage": false,
                       "searchKey": "server.Server.serverContext",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3219,7 +3213,7 @@
                       "newPage": false,
                       "searchKey": "server.flushFunc.Flush",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3266,7 +3260,7 @@
                       "newPage": false,
                       "searchKey": "server.newFlushingResponseWriter",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -3289,7 +3283,7 @@
                       "newPage": false,
                       "searchKey": "server.flushingResponseWriter.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3312,7 +3306,7 @@
                       "newPage": false,
                       "searchKey": "server.flushingResponseWriter.Header",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3381,7 +3375,7 @@
                       "newPage": false,
                       "searchKey": "server.flushingResponseWriter.periodicFlush",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3615,7 +3609,7 @@
                       "newPage": false,
                       "searchKey": "server.progressWriter.Bytes",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3638,7 +3632,7 @@
                       "newPage": false,
                       "searchKey": "server.progressWriter.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3708,7 +3702,7 @@
                       "newPage": false,
                       "searchKey": "server.newSSHAgent",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -3731,7 +3725,7 @@
                       "newPage": false,
                       "searchKey": "server.sshAgent.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3754,7 +3748,7 @@
                       "newPage": false,
                       "searchKey": "server.sshAgent.Listen",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3777,7 +3771,7 @@
                       "newPage": false,
                       "searchKey": "server.sshAgent.Socket",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3894,7 +3888,7 @@
                       "newPage": false,
                       "searchKey": "server.newURLRedactor",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -3992,9 +3986,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -4013,7 +4005,7 @@
                 "newPage": false,
                 "searchKey": "server.BenchmarkQuickRevParseHeadQuickSymbolicRefHead_packed_refs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -4037,7 +4029,7 @@
                 "newPage": false,
                 "searchKey": "server.BenchmarkQuickRevParseHeadQuickSymbolicRefHead_unpacked_refs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -4061,7 +4053,7 @@
                 "newPage": false,
                 "searchKey": "server.TestCleanupExpired",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4085,7 +4077,7 @@
                 "newPage": false,
                 "searchKey": "server.TestCleanupInactive",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4109,7 +4101,7 @@
                 "newPage": false,
                 "searchKey": "server.TestCleanupOldLocks",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4133,7 +4125,7 @@
                 "newPage": false,
                 "searchKey": "server.TestCleanup_computeStats",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4157,7 +4149,7 @@
                 "newPage": false,
                 "searchKey": "server.TestCloneRepo",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4181,7 +4173,7 @@
                 "newPage": false,
                 "searchKey": "server.TestCloneRepo_EnsureValidity",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4205,7 +4197,7 @@
                 "newPage": false,
                 "searchKey": "server.TestConfigureRemoteGitCommand",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4229,7 +4221,7 @@
                 "newPage": false,
                 "searchKey": "server.TestConfigureRemoteGitCommand_tls",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4253,7 +4245,7 @@
                 "newPage": false,
                 "searchKey": "server.TestCustomGitFetch",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4277,7 +4269,7 @@
                 "newPage": false,
                 "searchKey": "server.TestDecomposePerforceRemoteURL",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4301,7 +4293,7 @@
                 "newPage": false,
                 "searchKey": "server.TestEmptyCustomGitFetch",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4325,7 +4317,7 @@
                 "newPage": false,
                 "searchKey": "server.TestFlushingResponseWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4349,7 +4341,7 @@
                 "newPage": false,
                 "searchKey": "server.TestFreeUpSpace",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4373,7 +4365,7 @@
                 "newPage": false,
                 "searchKey": "server.TestGitGCAuto",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4397,7 +4389,7 @@
                 "newPage": false,
                 "searchKey": "server.TestHandleRepoUpdate",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4421,7 +4413,7 @@
                 "newPage": false,
                 "searchKey": "server.TestHostnameMatch",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4445,7 +4437,7 @@
                 "newPage": false,
                 "searchKey": "server.TestHowManyBytesToFree",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4469,7 +4461,7 @@
                 "newPage": false,
                 "searchKey": "server.TestJitterDuration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4493,7 +4485,7 @@
                 "newPage": false,
                 "searchKey": "server.TestMain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4517,7 +4509,7 @@
                 "newPage": false,
                 "searchKey": "server.TestMaybeCorruptStderrRe",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4541,7 +4533,7 @@
                 "newPage": false,
                 "searchKey": "server.TestProgressWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4565,7 +4557,7 @@
                 "newPage": false,
                 "searchKey": "server.TestRemoveBadRefs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4589,7 +4581,7 @@
                 "newPage": false,
                 "searchKey": "server.TestRemoveRepoDirectory",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4613,7 +4605,7 @@
                 "newPage": false,
                 "searchKey": "server.TestRemoveRepoDirectory_Empty",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4637,7 +4629,7 @@
                 "newPage": false,
                 "searchKey": "server.TestRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4661,7 +4653,7 @@
                 "newPage": false,
                 "searchKey": "server.TestSSHAgent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4685,7 +4677,7 @@
                 "newPage": false,
                 "searchKey": "server.TestServer_handleGet",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4709,7 +4701,7 @@
                 "newPage": false,
                 "searchKey": "server.TestServer_handleGet_invalid",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4733,7 +4725,7 @@
                 "newPage": false,
                 "searchKey": "server.TestServer_handleList",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4757,7 +4749,7 @@
                 "newPage": false,
                 "searchKey": "server.TestServer_handleP4Exec",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4781,7 +4773,7 @@
                 "newPage": false,
                 "searchKey": "server.TestServer_handleRepoInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4805,7 +4797,7 @@
                 "newPage": false,
                 "searchKey": "server.TestSetupAndClearTmp",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4829,7 +4821,7 @@
                 "newPage": false,
                 "searchKey": "server.TestSetupAndClearTmp_Empty",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4853,7 +4845,7 @@
                 "newPage": false,
                 "searchKey": "server.TestSyncRepoState",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4877,7 +4869,7 @@
                 "newPage": false,
                 "searchKey": "server.TestUpdateFileIfDifferent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4901,7 +4893,7 @@
                 "newPage": false,
                 "searchKey": "server.TestUrlRedactor",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4925,7 +4917,7 @@
                 "newPage": false,
                 "searchKey": "server.Test_Gitolite_listRepos",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4949,7 +4941,7 @@
                 "newPage": false,
                 "searchKey": "server.assertPaths",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4972,7 +4964,7 @@
                 "newPage": false,
                 "searchKey": "server.bestEffortWalk",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4995,7 +4987,7 @@
                 "newPage": false,
                 "searchKey": "server.buildCustomFetchMappings",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5018,7 +5010,7 @@
                 "newPage": false,
                 "searchKey": "server.checkMaybeCorruptRepo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5041,7 +5033,7 @@
                 "newPage": false,
                 "searchKey": "server.checkSpecArgSafety",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5064,7 +5056,7 @@
                 "newPage": false,
                 "searchKey": "server.cleanUpTmpRepo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5087,7 +5079,7 @@
                 "newPage": false,
                 "searchKey": "server.cloneStatus",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5110,7 +5102,7 @@
                 "newPage": false,
                 "searchKey": "server.computeLatestCommitTimestamp",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5133,7 +5125,7 @@
                 "newPage": false,
                 "searchKey": "server.computeRefHash",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5156,7 +5148,7 @@
                 "newPage": false,
                 "searchKey": "server.configureRemoteGitCommand",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5179,7 +5171,7 @@
                 "newPage": false,
                 "searchKey": "server.customFetchCmd",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5202,7 +5194,7 @@
                 "newPage": false,
                 "searchKey": "server.debounce",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5225,7 +5217,7 @@
                 "newPage": false,
                 "searchKey": "server.decomposePerforceRemoteURL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5248,7 +5240,7 @@
                 "newPage": false,
                 "searchKey": "server.dirSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5271,7 +5263,7 @@
                 "newPage": false,
                 "searchKey": "server.ensureHEAD",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5294,7 +5286,7 @@
                 "newPage": false,
                 "searchKey": "server.ensureRefPrefix",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5317,7 +5309,7 @@
                 "newPage": false,
                 "searchKey": "server.errorString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5340,7 +5332,7 @@
                 "newPage": false,
                 "searchKey": "server.flowrateWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5363,7 +5355,7 @@
                 "newPage": false,
                 "searchKey": "server.fsync",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5409,7 +5401,7 @@
                 "newPage": false,
                 "searchKey": "server.getGitolitePhabCallsign",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5432,7 +5424,7 @@
                 "newPage": false,
                 "searchKey": "server.getRecloneTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5455,7 +5447,7 @@
                 "newPage": false,
                 "searchKey": "server.getRepositoryType",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5478,7 +5470,7 @@
                 "newPage": false,
                 "searchKey": "server.gitConfigGet",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5501,7 +5493,7 @@
                 "newPage": false,
                 "searchKey": "server.gitConfigSet",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5524,7 +5516,7 @@
                 "newPage": false,
                 "searchKey": "server.gitConfigUnset",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5547,7 +5539,7 @@
                 "newPage": false,
                 "searchKey": "server.gitDirModTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5570,7 +5562,7 @@
                 "newPage": false,
                 "searchKey": "server.gitGC",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5593,7 +5585,7 @@
                 "newPage": false,
                 "searchKey": "server.hackilyGetHTTPFlusher",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5616,7 +5608,7 @@
                 "newPage": false,
                 "searchKey": "server.honeySampleRate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5662,7 +5654,7 @@
                 "newPage": false,
                 "searchKey": "server.isAbsoluteRevision",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5685,7 +5677,7 @@
                 "newPage": false,
                 "searchKey": "server.isAlwaysCloningTest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5708,7 +5700,7 @@
                 "newPage": false,
                 "searchKey": "server.isEmptyDir",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5731,7 +5723,7 @@
                 "newPage": false,
                 "searchKey": "server.jitterDuration",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5754,7 +5746,7 @@
                 "newPage": false,
                 "searchKey": "server.makeFakeRepo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5777,7 +5769,7 @@
                 "newPage": false,
                 "searchKey": "server.makeSingleCommitRepo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5800,7 +5792,7 @@
                 "newPage": false,
                 "searchKey": "server.mapToLog15Ctx",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5823,7 +5815,7 @@
                 "newPage": false,
                 "searchKey": "server.mkFiles",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5846,7 +5838,7 @@
                 "newPage": false,
                 "searchKey": "server.p4ping",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5869,7 +5861,7 @@
                 "newPage": false,
                 "searchKey": "server.p4pingWithTrust",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5892,7 +5884,7 @@
                 "newPage": false,
                 "searchKey": "server.p4trust",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5915,7 +5907,7 @@
                 "newPage": false,
                 "searchKey": "server.quickRevParseHead",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5938,7 +5930,7 @@
                 "newPage": false,
                 "searchKey": "server.quickSymbolicRefHead",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5961,7 +5953,7 @@
                 "newPage": false,
                 "searchKey": "server.readCloneProgress",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5984,7 +5976,7 @@
                 "newPage": false,
                 "searchKey": "server.refspecOverridesFetchCmd",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6007,7 +5999,7 @@
                 "newPage": false,
                 "searchKey": "server.removeBadRefs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6030,7 +6022,7 @@
                 "newPage": false,
                 "searchKey": "server.removeFileOlderThan",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6053,7 +6045,7 @@
                 "newPage": false,
                 "searchKey": "server.renameAndSync",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6076,7 +6068,7 @@
                 "newPage": false,
                 "searchKey": "server.runCmd",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6099,7 +6091,7 @@
                 "newPage": false,
                 "searchKey": "server.runCommand",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6122,7 +6114,7 @@
                 "newPage": false,
                 "searchKey": "server.runWith",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6145,7 +6137,7 @@
                 "newPage": false,
                 "searchKey": "server.runWithRemoteOpts",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6168,7 +6160,7 @@
                 "newPage": false,
                 "searchKey": "server.scanCRLF",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6191,7 +6183,7 @@
                 "newPage": false,
                 "searchKey": "server.setGitAttributes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6214,7 +6206,7 @@
                 "newPage": false,
                 "searchKey": "server.setHEAD",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6237,7 +6229,7 @@
                 "newPage": false,
                 "searchKey": "server.setLastChanged",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6260,7 +6252,7 @@
                 "newPage": false,
                 "searchKey": "server.setRecloneTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6283,7 +6275,7 @@
                 "newPage": false,
                 "searchKey": "server.setRepositoryType",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6306,7 +6298,7 @@
                 "newPage": false,
                 "searchKey": "server.shortGitCommandSlow",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6329,7 +6321,7 @@
                 "newPage": false,
                 "searchKey": "server.shortGitCommandTimeout",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6352,7 +6344,7 @@
                 "newPage": false,
                 "searchKey": "server.staticGetRemoteURL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6375,7 +6367,7 @@
                 "newPage": false,
                 "searchKey": "server.updateFileIfDifferent",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6421,7 +6413,7 @@
                 "newPage": false,
                 "searchKey": "server.wrapCmdError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6444,7 +6436,7 @@
                 "newPage": false,
                 "searchKey": "server.writeFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6467,7 +6459,7 @@
                 "newPage": false,
                 "searchKey": "server.writeTempFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

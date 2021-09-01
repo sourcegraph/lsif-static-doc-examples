@@ -399,10 +399,6 @@ Unicode character classes are those in unicode.Categories and unicode.Scripts.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ClassNL" href="#ClassNL">const ClassNL</a>
 
 ```
@@ -1250,10 +1246,6 @@ const _Op_name_1 = "opPseudo"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="anyRune" href="#anyRune">var anyRune</a>
 
 ```
@@ -1703,10 +1695,6 @@ var _Op_index_0 = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="EmptyOp" href="#EmptyOp">type EmptyOp uint8</a>
 
 ```
@@ -1724,7 +1712,7 @@ An EmptyOp specifies a kind or mixture of zero-width assertions.
 
 ```
 searchKey: syntax.EmptyOpContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1753,7 +1741,7 @@ An Error describes a failure to parse a regular expression and gives the offendi
 
 ```
 searchKey: syntax.Error.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1777,7 +1765,7 @@ An ErrorCode describes a failure to parse a regular expression.
 
 ```
 searchKey: syntax.ErrorCode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1858,7 +1846,7 @@ MatchRunePos checks whether the instruction matches (and consumes) r. If so, Mat
 
 ```
 searchKey: syntax.Inst.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1869,7 +1857,7 @@ func (i *Inst) String() string
 
 ```
 searchKey: syntax.Inst.op
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1895,7 +1883,7 @@ An InstOp is an instruction opcode.
 
 ```
 searchKey: syntax.InstOp.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1919,7 +1907,7 @@ An Op is a single regular expression operator.
 
 ```
 searchKey: syntax.Op.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1947,7 +1935,7 @@ A Prog is a compiled regular expression program.
 
 ```
 searchKey: syntax.Compile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1960,7 +1948,7 @@ Compile compiles the regexp into a program to be executed. The regexp should hav
 
 ```
 searchKey: syntax.Prog.Prefix
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1973,7 +1961,7 @@ Prefix returns a literal string that all matches for the regexp must start with.
 
 ```
 searchKey: syntax.Prog.StartCond
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1986,7 +1974,7 @@ StartCond returns the leading empty-width conditions that must be true in any ma
 
 ```
 searchKey: syntax.Prog.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2033,7 +2021,7 @@ A Regexp is a node in a regular expression syntax tree.
 
 ```
 searchKey: syntax.Parse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2046,7 +2034,7 @@ Parse parses a regular expression string s, controlled by the specified Flags, a
 
 ```
 searchKey: syntax.literalRegexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2057,7 +2045,7 @@ func literalRegexp(s string, flags Flags) *Regexp
 
 ```
 searchKey: syntax.simplify1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2078,7 +2066,7 @@ simplify1 is factored out of Simplify because the implementation for other opera
 
 ```
 searchKey: syntax.Regexp.CapNames
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2104,7 +2092,7 @@ Equal reports whether x and y have identical structure.
 
 ```
 searchKey: syntax.Regexp.MaxCap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2117,7 +2105,7 @@ MaxCap walks the regexp to find the maximum capture index.
 
 ```
 searchKey: syntax.Regexp.Simplify
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2130,7 +2118,7 @@ Simplify returns a regexp equivalent to re but without counted repetitions and w
 
 ```
 searchKey: syntax.Regexp.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2234,7 +2222,7 @@ func (c *compiler) empty(op EmptyOp) frag
 
 ```
 searchKey: syntax.compiler.fail
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2245,7 +2233,7 @@ func (c *compiler) fail() frag
 
 ```
 searchKey: syntax.compiler.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2280,7 +2268,7 @@ loop returns the fragment for the main loop of a plus or star. For plus, it can 
 
 ```
 searchKey: syntax.compiler.nop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2384,7 +2372,7 @@ type parser struct {
 
 ```
 searchKey: syntax.parser.alternate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2421,7 +2409,7 @@ collapse returns the result of applying op to sub. If sub contains op nodes, the
 
 ```
 searchKey: syntax.parser.concat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2645,7 +2633,7 @@ parseRepeat parses {min} (max=min) or {min,} (max=-1) or {min,max}. If s is not 
 
 ```
 searchKey: syntax.parser.parseRightParen
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2671,7 +2659,7 @@ parseUnicodeClass parses a leading Unicode character class like \p{Han} from the
 
 ```
 searchKey: syntax.parser.parseVerticalBar
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2747,7 +2735,7 @@ func (p *parser) reuse(re *Regexp)
 
 ```
 searchKey: syntax.parser.swapVerticalBar
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2777,7 +2765,7 @@ These aren't really pointers: they're integers, so we can reinterpret them this 
 
 ```
 searchKey: syntax.makePatchList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2825,7 +2813,7 @@ ranges implements sort.Interface on a []rune. The choice of receiver type defini
 
 ```
 searchKey: syntax.ranges.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2856,15 +2844,11 @@ func (ra ranges) Swap(i, j int)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkEmptyOpContext" href="#BenchmarkEmptyOpContext">func BenchmarkEmptyOpContext(b *testing.B)</a>
 
 ```
 searchKey: syntax.BenchmarkEmptyOpContext
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2875,7 +2859,7 @@ func BenchmarkEmptyOpContext(b *testing.B)
 
 ```
 searchKey: syntax.IsWordChar
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2888,7 +2872,7 @@ IsWordChar reports whether r is consider a `word character' during the evaluatio
 
 ```
 searchKey: syntax.TestAppendRangeCollapse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2899,7 +2883,7 @@ func TestAppendRangeCollapse(t *testing.T)
 
 ```
 searchKey: syntax.TestCompile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2910,7 +2894,7 @@ func TestCompile(t *testing.T)
 
 ```
 searchKey: syntax.TestFoldConstants
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2921,7 +2905,7 @@ func TestFoldConstants(t *testing.T)
 
 ```
 searchKey: syntax.TestParseFoldCase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2932,7 +2916,7 @@ func TestParseFoldCase(t *testing.T)
 
 ```
 searchKey: syntax.TestParseInvalidRegexps
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2943,7 +2927,7 @@ func TestParseInvalidRegexps(t *testing.T)
 
 ```
 searchKey: syntax.TestParseLiteral
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2954,7 +2938,7 @@ func TestParseLiteral(t *testing.T)
 
 ```
 searchKey: syntax.TestParseMatchNL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2965,7 +2949,7 @@ func TestParseMatchNL(t *testing.T)
 
 ```
 searchKey: syntax.TestParseNoMatchNL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2976,7 +2960,7 @@ func TestParseNoMatchNL(t *testing.T)
 
 ```
 searchKey: syntax.TestParseSimple
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2987,7 +2971,7 @@ func TestParseSimple(t *testing.T)
 
 ```
 searchKey: syntax.TestSimplify
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2998,7 +2982,7 @@ func TestSimplify(t *testing.T)
 
 ```
 searchKey: syntax.TestToStringEquivalentParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3009,7 +2993,7 @@ func TestToStringEquivalentParse(t *testing.T)
 
 ```
 searchKey: syntax.appendClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3022,7 +3006,7 @@ appendClass returns the result of appending the class x to the class r. It assum
 
 ```
 searchKey: syntax.appendFoldedClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3035,7 +3019,7 @@ appendFolded returns the result of appending the case folding of the class x to 
 
 ```
 searchKey: syntax.appendFoldedRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3048,7 +3032,7 @@ appendFoldedRange returns the result of appending the range lo-hi and its case f
 
 ```
 searchKey: syntax.appendLiteral
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3061,7 +3045,7 @@ appendLiteral returns the result of appending the literal x to the class r.
 
 ```
 searchKey: syntax.appendNegatedClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3074,7 +3058,7 @@ appendNegatedClass returns the result of appending the negation of the class x t
 
 ```
 searchKey: syntax.appendNegatedTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3087,7 +3071,7 @@ appendNegatedTable returns the result of appending the negation of x to the clas
 
 ```
 searchKey: syntax.appendRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3100,7 +3084,7 @@ appendRange returns the result of appending the range lo-hi to the class r.
 
 ```
 searchKey: syntax.appendTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3113,7 +3097,7 @@ appendTable returns the result of appending x to the class r.
 
 ```
 searchKey: syntax.bw
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3124,7 +3108,7 @@ func bw(b *strings.Builder, args ...string)
 
 ```
 searchKey: syntax.checkUTF8
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3135,7 +3119,7 @@ func checkUTF8(s string) error
 
 ```
 searchKey: syntax.cleanAlt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3148,7 +3132,7 @@ cleanAlt cleans re for eventual inclusion in an alternation.
 
 ```
 searchKey: syntax.cleanClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3161,7 +3145,7 @@ cleanClass sorts the ranges (pairs of elements of r), merges them, and eliminate
 
 ```
 searchKey: syntax.dump
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3174,7 +3158,7 @@ dump prints a string representation of the regexp showing the structure explicit
 
 ```
 searchKey: syntax.dumpInst
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3185,7 +3169,7 @@ func dumpInst(b *strings.Builder, i *Inst)
 
 ```
 searchKey: syntax.dumpProg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3196,7 +3180,7 @@ func dumpProg(b *strings.Builder, p *Prog)
 
 ```
 searchKey: syntax.dumpRegexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3209,7 +3193,7 @@ dumpRegexp writes an encoding of the syntax tree for the regexp re to b. It is u
 
 ```
 searchKey: syntax.escape
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3220,7 +3204,7 @@ func escape(b *strings.Builder, r rune, force bool)
 
 ```
 searchKey: syntax.isCharClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3233,7 +3217,7 @@ can this be represented as a character class? single-rune literal string, char c
 
 ```
 searchKey: syntax.isUpperFold
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3244,7 +3228,7 @@ func isUpperFold(r rune) bool
 
 ```
 searchKey: syntax.isValidCaptureName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3257,7 +3241,7 @@ isValidCaptureName reports whether name is a valid capture name: [A-Za-z0-9_]+. 
 
 ```
 searchKey: syntax.isalnum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3268,7 +3252,7 @@ func isalnum(c rune) bool
 
 ```
 searchKey: syntax.matchRune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3281,7 +3265,7 @@ does re match r?
 
 ```
 searchKey: syntax.mergeCharClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3294,7 +3278,7 @@ mergeCharClass makes dst = dst|src. The caller must ensure that dst.Op >= src.Op
 
 ```
 searchKey: syntax.minFoldRune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3307,7 +3291,7 @@ minFoldRune returns the minimum rune fold-equivalent to r.
 
 ```
 searchKey: syntax.mkCharClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3318,7 +3302,7 @@ func mkCharClass(f func(rune) bool) string
 
 ```
 searchKey: syntax.negateClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3331,7 +3315,7 @@ negateClass overwrites r and returns r's negation. It assumes the class r is alr
 
 ```
 searchKey: syntax.nextRune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3342,7 +3326,7 @@ func nextRune(s string) (c rune, t string, err error)
 
 ```
 searchKey: syntax.repeatIsValid
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3355,7 +3339,7 @@ repeatIsValid reports whether the repetition re is valid. Valid means that the c
 
 ```
 searchKey: syntax.testParseDump
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3368,7 +3352,7 @@ Test Parse -> Dump.
 
 ```
 searchKey: syntax.u32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3379,7 +3363,7 @@ func u32(i uint32) string
 
 ```
 searchKey: syntax.unhex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3390,7 +3374,7 @@ func unhex(c rune) rune
 
 ```
 searchKey: syntax.unicodeTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3403,7 +3387,7 @@ unicodeTable returns the unicode.RangeTable identified by name and the table of 
 
 ```
 searchKey: syntax.writeRegexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

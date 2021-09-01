@@ -47,7 +47,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ArchiveFormatTar" href="#ArchiveFormatTar">const ArchiveFormatTar</a>
@@ -79,7 +79,7 @@ ArchiveFormatZip indicates a zip archive is desired.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ArchiveCacheDir" href="#ArchiveCacheDir">var ArchiveCacheDir</a>
@@ -175,7 +175,7 @@ var initOnce sync.Once
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ArchiveFS" href="#ArchiveFS">type ArchiveFS struct</a>
@@ -210,7 +210,7 @@ ArchiveFS is a ctxvfs.FileSystem backed by an Archiver.
 
 ```
 searchKey: vfsutil.NewGitHubRepoVFS
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -223,7 +223,7 @@ NewGitHubRepoVFS creates a new VFS backed by a GitHub downloadable repository ar
 
 ```
 searchKey: vfsutil.NewGitServer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -236,7 +236,7 @@ NewGitServer returns a VFS to repo at commit. It is backed by an archive fetched
 
 ```
 searchKey: vfsutil.NewZipVFS
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -249,7 +249,7 @@ NewZipVFS downloads a zip archive from a URL (or fetches from the local cache on
 
 ```
 searchKey: vfsutil.ArchiveFS.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -315,7 +315,7 @@ func (fs *ArchiveFS) Stat(ctx context.Context, path string) (fs.FileInfo, error)
 
 ```
 searchKey: vfsutil.ArchiveFS.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -377,7 +377,7 @@ ArchiveOpts describes options for fetching a repository archive.
 
 ```
 searchKey: vfsutil.ArchiveOpts.cacheKey
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -404,7 +404,7 @@ Evicter implements Evict
 
 ```
 searchKey: vfsutil.GitServerFetchArchive
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -460,7 +460,7 @@ type cachedFile struct {
 
 ```
 searchKey: vfsutil.cachedFetch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -473,7 +473,7 @@ cachedFetch will open a file from the local cache with key. If missing, fetcher 
 
 ```
 searchKey: vfsutil.cachedFile.Evict
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -485,14 +485,14 @@ Evict will remove the file from the cache. It does not close File. It also does 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestGitHubRepoVFS" href="#TestGitHubRepoVFS">func TestGitHubRepoVFS(t *testing.T)</a>
 
 ```
 searchKey: vfsutil.TestGitHubRepoVFS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -514,7 +514,7 @@ func initArchiveCacheDir()
 
 ```
 searchKey: vfsutil.testVFS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -536,7 +536,7 @@ func useEmptyArchiveCacheDir() func()
 
 ```
 searchKey: vfsutil.zipNewFileReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

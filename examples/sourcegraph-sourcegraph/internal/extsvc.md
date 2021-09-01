@@ -90,7 +90,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="IDParam" href="#IDParam">const IDParam</a>
@@ -323,7 +323,7 @@ TypePhabricator is the (api.ExternalRepoSpec).ServiceType value for Phabricator 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GitHubDotCom" href="#GitHubDotCom">var GitHubDotCom</a>
@@ -421,7 +421,7 @@ Precompute these for use in ParseServiceType below since the constants are mixed
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Account" href="#Account">type Account struct</a>
@@ -564,7 +564,7 @@ Accounts contains a list of accounts that belong to the same external service. A
 
 ```
 searchKey: extsvc.Accounts.TracingFields
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -592,7 +592,7 @@ type CodeHost struct {
 
 ```
 searchKey: extsvc.CodeHostOf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -605,7 +605,7 @@ CodeHostOf returns the CodeHost of the given repo, if any, as determined by a co
 
 ```
 searchKey: extsvc.NewCodeHost
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -629,7 +629,7 @@ type ErrRateLimitUnsupported struct {
 
 ```
 searchKey: extsvc.ErrRateLimitUnsupported.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -673,7 +673,7 @@ RateLimitConfig represents the internal rate limit configured for an external se
 
 ```
 searchKey: extsvc.ExtractRateLimitConfig
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -686,7 +686,7 @@ ExtractRateLimitConfig extracts the rate limit config from the given args. If ra
 
 ```
 searchKey: extsvc.GetLimitFromConfig
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -754,14 +754,14 @@ type jsonError struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DecodeURN" href="#DecodeURN">func DecodeURN(urn string) (kind string, id int64)</a>
 
 ```
 searchKey: extsvc.DecodeURN
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -774,7 +774,7 @@ DecodeURN returns the kind of the external service and its ID.
 
 ```
 searchKey: extsvc.IsHostOfAccount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -787,7 +787,7 @@ IsHostOfAccount returns true if the account belongs to given code host.
 
 ```
 searchKey: extsvc.IsHostOfRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -800,7 +800,7 @@ IsHostOfRepo returns true if the repository belongs to given code host.
 
 ```
 searchKey: extsvc.KindToType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -813,7 +813,7 @@ KindToType returns a Type constants given a Kind It will panic when given an unk
 
 ```
 searchKey: extsvc.NormalizeBaseURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -826,7 +826,7 @@ NormalizeBaseURL modifies the input and returns a normalized form of the a base 
 
 ```
 searchKey: extsvc.ParseConfig
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -839,7 +839,7 @@ ParseConfig attempts to unmarshal the given JSON config into a configuration str
 
 ```
 searchKey: extsvc.ParseServiceKind
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -852,7 +852,7 @@ ParseServiceKind will return a ServiceKind constant after doing a case insensiti
 
 ```
 searchKey: extsvc.ParseServiceType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -865,7 +865,7 @@ ParseServiceType will return a ServiceType constant after doing a case insensiti
 
 ```
 searchKey: extsvc.TestCodeHostOf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -876,7 +876,7 @@ func TestCodeHostOf(t *testing.T)
 
 ```
 searchKey: extsvc.TestDecodeURN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -887,7 +887,7 @@ func TestDecodeURN(t *testing.T)
 
 ```
 searchKey: extsvc.TestEncodeURN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -898,7 +898,7 @@ func TestEncodeURN(t *testing.T)
 
 ```
 searchKey: extsvc.TestExtractRateLimitConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -909,7 +909,7 @@ func TestExtractRateLimitConfig(t *testing.T)
 
 ```
 searchKey: extsvc.TypeToKind
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -922,7 +922,7 @@ TypeToKind returns a Kind constants given a Type It will panic when given an unk
 
 ```
 searchKey: extsvc.URN
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -935,7 +935,7 @@ URN returns a unique resource identifier of an external service by given kind an
 
 ```
 searchKey: extsvc.WebhookURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -946,7 +946,7 @@ func WebhookURL(kind string, externalServiceID int64, externalURL string) string
 
 ```
 searchKey: extsvc.getJSONOrError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -957,7 +957,7 @@ func getJSONOrError(field *json.RawMessage, v interface{}) error
 
 ```
 searchKey: extsvc.limitOrInf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -968,7 +968,7 @@ func limitOrInf(enabled bool, perHour float64) rate.Limit
 
 ```
 searchKey: extsvc.mustParseURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -979,7 +979,7 @@ func mustParseURL(rawurl string) *url.URL
 
 ```
 searchKey: extsvc.setJSONOrError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

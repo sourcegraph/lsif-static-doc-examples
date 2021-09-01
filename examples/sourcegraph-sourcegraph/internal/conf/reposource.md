@@ -69,7 +69,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultRepositoryPathPattern" href="#DefaultRepositoryPathPattern">const DefaultRepositoryPathPattern</a>
@@ -97,7 +97,7 @@ const NameTransformationRegex NameTransformationKind = "regex"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="cloneURLResolvers" href="#cloneURLResolvers">var cloneURLResolvers</a>
@@ -138,7 +138,7 @@ var otherRepoNameReplacer = strings.NewReplacer(":", "-", "@", "-", "//", "")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AWS" href="#AWS">type AWS struct</a>
@@ -308,7 +308,7 @@ NameTransformation describes the rule to transform a repository name.
 
 ```
 searchKey: reposource.NewNameTransformation
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -319,7 +319,7 @@ func NewNameTransformation(opts NameTransformationOptions) (NameTransformation, 
 
 ```
 searchKey: reposource.NameTransformation.Kind
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -382,7 +382,7 @@ NameTransformations is a list of transformation rules.
 
 ```
 searchKey: reposource.CompileGitLabNameTransformations
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -512,14 +512,14 @@ urlToRepoNameErr is similar to urlToRepoName, but with an expected error value
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AWSRepoName" href="#AWSRepoName">func AWSRepoName(repositoryPathPattern, name string) api.RepoName</a>
 
 ```
 searchKey: reposource.AWSRepoName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -530,7 +530,7 @@ func AWSRepoName(repositoryPathPattern, name string) api.RepoName
 
 ```
 searchKey: reposource.BitbucketCloudRepoName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -541,7 +541,7 @@ func BitbucketCloudRepoName(repositoryPathPattern, host, nameWithOwner string) a
 
 ```
 searchKey: reposource.BitbucketServerRepoName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -552,7 +552,7 @@ func BitbucketServerRepoName(repositoryPathPattern, host, projectKey, repoSlug s
 
 ```
 searchKey: reposource.CustomCloneURLToRepoName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -565,7 +565,7 @@ CustomCloneURLToRepoName maps from clone URL to repo name using custom mappings 
 
 ```
 searchKey: reposource.GitHubRepoName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -576,7 +576,7 @@ func GitHubRepoName(repositoryPathPattern, host, nameWithOwner string) api.RepoN
 
 ```
 searchKey: reposource.GitLabRepoName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -587,7 +587,7 @@ func GitLabRepoName(repositoryPathPattern, host, pathWithNamespace string, nts N
 
 ```
 searchKey: reposource.GitoliteRepoName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -600,7 +600,7 @@ GitoliteRepoName returns the Sourcegraph name for a repository given the Gitolit
 
 ```
 searchKey: reposource.OtherRepoName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -611,7 +611,7 @@ func OtherRepoName(repositoryPathPattern, base, relativeRepoPath string) string
 
 ```
 searchKey: reposource.PerforceRepoName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -622,7 +622,7 @@ func PerforceRepoName(repositoryPathPattern, depot string) api.RepoName
 
 ```
 searchKey: reposource.TestAWS_cloneURLToRepoName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -633,7 +633,7 @@ func TestAWS_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestBitbucketCloud_cloneURLToRepoName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -644,7 +644,7 @@ func TestBitbucketCloud_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestBitbucketServer_cloneURLToRepoName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -655,7 +655,7 @@ func TestBitbucketServer_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestCustomCloneURLToRepoName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -666,7 +666,7 @@ func TestCustomCloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestGitHub_cloneURLToRepoName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -677,7 +677,7 @@ func TestGitHub_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestGitLab_cloneURLToRepoName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -688,7 +688,7 @@ func TestGitLab_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestGitolite_cloneURLToRepoName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -699,7 +699,7 @@ func TestGitolite_cloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestNameTransformations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -710,7 +710,7 @@ func TestNameTransformations(t *testing.T)
 
 ```
 searchKey: reposource.TestOtherCloneURLToRepoName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -721,7 +721,7 @@ func TestOtherCloneURLToRepoName(t *testing.T)
 
 ```
 searchKey: reposource.TestParseCloneURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -732,7 +732,7 @@ func TestParseCloneURL(t *testing.T)
 
 ```
 searchKey: reposource.cloneURLToRepoName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -743,7 +743,7 @@ func cloneURLToRepoName(cloneURL, baseURL, repositoryPathPattern string) (string
 
 ```
 searchKey: reposource.hostname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -767,7 +767,7 @@ func init()
 
 ```
 searchKey: reposource.mapString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -778,7 +778,7 @@ func mapString(r *regexp.Regexp, in string, outTmpl string) string
 
 ```
 searchKey: reposource.parseCloneURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -791,7 +791,7 @@ parseCloneURL parses a git clone URL into a URL struct. It supports the SCP-styl
 
 ```
 searchKey: reposource.parseURLs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

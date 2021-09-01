@@ -151,10 +151,6 @@ Package cmplx provides basic constants and mathematical functions for complex nu
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="abs" href="#abs">var abs</a>
 
 ```
@@ -800,10 +796,6 @@ var zero = 0.0
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ff" href="#ff">type ff struct</a>
 
 ```
@@ -819,15 +811,11 @@ type ff struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Abs" href="#Abs">func Abs(x complex128) float64</a>
 
 ```
 searchKey: cmplx.Abs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -840,7 +828,7 @@ Abs returns the absolute value (also called the modulus) of x.
 
 ```
 searchKey: cmplx.Acos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -853,7 +841,7 @@ Acos returns the inverse cosine of x.
 
 ```
 searchKey: cmplx.Acosh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -866,7 +854,7 @@ Acosh returns the inverse hyperbolic cosine of x.
 
 ```
 searchKey: cmplx.Asin
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -879,7 +867,7 @@ Asin returns the inverse sine of x.
 
 ```
 searchKey: cmplx.Asinh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -892,7 +880,7 @@ Asinh returns the inverse hyperbolic sine of x.
 
 ```
 searchKey: cmplx.Atan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -905,7 +893,7 @@ Atan returns the inverse tangent of x.
 
 ```
 searchKey: cmplx.Atanh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -918,7 +906,7 @@ Atanh returns the inverse hyperbolic tangent of x.
 
 ```
 searchKey: cmplx.BenchmarkAbs
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -929,7 +917,7 @@ func BenchmarkAbs(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkAcos
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -940,7 +928,7 @@ func BenchmarkAcos(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkAcosh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -951,7 +939,7 @@ func BenchmarkAcosh(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkAsin
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -962,7 +950,7 @@ func BenchmarkAsin(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkAsinh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -973,7 +961,7 @@ func BenchmarkAsinh(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkAtan
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -984,7 +972,7 @@ func BenchmarkAtan(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkAtanh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -995,7 +983,7 @@ func BenchmarkAtanh(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkConj
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1006,7 +994,7 @@ func BenchmarkConj(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkCos
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1017,7 +1005,7 @@ func BenchmarkCos(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkCosh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1028,7 +1016,7 @@ func BenchmarkCosh(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkExp
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1039,7 +1027,7 @@ func BenchmarkExp(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkLog
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1050,7 +1038,7 @@ func BenchmarkLog(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkLog10
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1061,7 +1049,7 @@ func BenchmarkLog10(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkPhase
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1072,7 +1060,7 @@ func BenchmarkPhase(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkPolar
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1083,7 +1071,7 @@ func BenchmarkPolar(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkPow
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1094,7 +1082,7 @@ func BenchmarkPow(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkRect
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1105,7 +1093,7 @@ func BenchmarkRect(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkSin
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1116,7 +1104,7 @@ func BenchmarkSin(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkSinh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1127,7 +1115,7 @@ func BenchmarkSinh(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkSqrt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1138,7 +1126,7 @@ func BenchmarkSqrt(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkTan
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1149,7 +1137,7 @@ func BenchmarkTan(b *testing.B)
 
 ```
 searchKey: cmplx.BenchmarkTanh
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1160,7 +1148,7 @@ func BenchmarkTanh(b *testing.B)
 
 ```
 searchKey: cmplx.Conj
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1173,7 +1161,7 @@ Conj returns the complex conjugate of x.
 
 ```
 searchKey: cmplx.Cos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1186,7 +1174,7 @@ Cos returns the cosine of x.
 
 ```
 searchKey: cmplx.Cosh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1199,7 +1187,7 @@ Cosh returns the hyperbolic cosine of x.
 
 ```
 searchKey: cmplx.Cot
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1212,7 +1200,7 @@ Cot returns the cotangent of x.
 
 ```
 searchKey: cmplx.Exp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1238,7 +1226,7 @@ Inf returns a complex infinity, complex(+Inf, +Inf).
 
 ```
 searchKey: cmplx.IsInf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1251,7 +1239,7 @@ IsInf reports whether either real(x) or imag(x) is an infinity.
 
 ```
 searchKey: cmplx.IsNaN
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1264,7 +1252,7 @@ IsNaN reports whether either real(x) or imag(x) is NaN and neither is an infinit
 
 ```
 searchKey: cmplx.Log
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1277,7 +1265,7 @@ Log returns the natural logarithm of x.
 
 ```
 searchKey: cmplx.Log10
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1303,7 +1291,7 @@ NaN returns a complex `not-a-number' value.
 
 ```
 searchKey: cmplx.Phase
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1316,7 +1304,7 @@ Phase returns the phase (also called the argument) of x. The returned value is i
 
 ```
 searchKey: cmplx.Polar
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1329,7 +1317,7 @@ Polar returns the absolute value r and phase θ of x, such that x = r * e**θi. 
 
 ```
 searchKey: cmplx.Pow
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1347,7 +1335,7 @@ Pow(0, c) for real(c)<0 returns Inf+0i if imag(c) is zero, otherwise Inf+Inf i.
 
 ```
 searchKey: cmplx.Rect
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1360,7 +1348,7 @@ Rect returns the complex number x with polar coordinates r, θ.
 
 ```
 searchKey: cmplx.Sin
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1373,7 +1361,7 @@ Sin returns the sine of x.
 
 ```
 searchKey: cmplx.Sinh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1386,7 +1374,7 @@ Sinh returns the hyperbolic sine of x.
 
 ```
 searchKey: cmplx.Sqrt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1399,7 +1387,7 @@ Sqrt returns the square root of x. The result r is chosen so that real(r) ≥ 0 
 
 ```
 searchKey: cmplx.Tan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1412,7 +1400,7 @@ Tan returns the tangent of x.
 
 ```
 searchKey: cmplx.Tanh
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1425,7 +1413,7 @@ Tanh returns the hyperbolic tangent of x.
 
 ```
 searchKey: cmplx.TestAbs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1436,7 +1424,7 @@ func TestAbs(t *testing.T)
 
 ```
 searchKey: cmplx.TestAcos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1447,7 +1435,7 @@ func TestAcos(t *testing.T)
 
 ```
 searchKey: cmplx.TestAcosh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1458,7 +1446,7 @@ func TestAcosh(t *testing.T)
 
 ```
 searchKey: cmplx.TestAsin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1469,7 +1457,7 @@ func TestAsin(t *testing.T)
 
 ```
 searchKey: cmplx.TestAsinh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1480,7 +1468,7 @@ func TestAsinh(t *testing.T)
 
 ```
 searchKey: cmplx.TestAtan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1491,7 +1479,7 @@ func TestAtan(t *testing.T)
 
 ```
 searchKey: cmplx.TestAtanh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1502,7 +1490,7 @@ func TestAtanh(t *testing.T)
 
 ```
 searchKey: cmplx.TestConj
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1513,7 +1501,7 @@ func TestConj(t *testing.T)
 
 ```
 searchKey: cmplx.TestCos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1524,7 +1512,7 @@ func TestCos(t *testing.T)
 
 ```
 searchKey: cmplx.TestCosh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1535,7 +1523,7 @@ func TestCosh(t *testing.T)
 
 ```
 searchKey: cmplx.TestExp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1546,7 +1534,7 @@ func TestExp(t *testing.T)
 
 ```
 searchKey: cmplx.TestInfiniteLoopIntanSeries
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1559,7 +1547,7 @@ See issue 17577
 
 ```
 searchKey: cmplx.TestIsNaN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1570,7 +1558,7 @@ func TestIsNaN(t *testing.T)
 
 ```
 searchKey: cmplx.TestLog
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1581,7 +1569,7 @@ func TestLog(t *testing.T)
 
 ```
 searchKey: cmplx.TestLog10
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1592,7 +1580,7 @@ func TestLog10(t *testing.T)
 
 ```
 searchKey: cmplx.TestPolar
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1603,7 +1591,7 @@ func TestPolar(t *testing.T)
 
 ```
 searchKey: cmplx.TestPow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1614,7 +1602,7 @@ func TestPow(t *testing.T)
 
 ```
 searchKey: cmplx.TestRect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1625,7 +1613,7 @@ func TestRect(t *testing.T)
 
 ```
 searchKey: cmplx.TestSin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1636,7 +1624,7 @@ func TestSin(t *testing.T)
 
 ```
 searchKey: cmplx.TestSinh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1647,7 +1635,7 @@ func TestSinh(t *testing.T)
 
 ```
 searchKey: cmplx.TestSqrt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1658,7 +1646,7 @@ func TestSqrt(t *testing.T)
 
 ```
 searchKey: cmplx.TestTan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1669,7 +1657,7 @@ func TestTan(t *testing.T)
 
 ```
 searchKey: cmplx.TestTanHuge
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1680,7 +1668,7 @@ func TestTanHuge(t *testing.T)
 
 ```
 searchKey: cmplx.TestTanh
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1691,7 +1679,7 @@ func TestTanh(t *testing.T)
 
 ```
 searchKey: cmplx.alike
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1702,7 +1690,7 @@ func alike(a, b float64) bool
 
 ```
 searchKey: cmplx.cAlike
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1713,7 +1701,7 @@ func cAlike(a, b complex128) bool
 
 ```
 searchKey: cmplx.cSoclose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1724,7 +1712,7 @@ func cSoclose(a, b complex128, e float64) bool
 
 ```
 searchKey: cmplx.cTolerance
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1735,7 +1723,7 @@ func cTolerance(a, b complex128, e float64) bool
 
 ```
 searchKey: cmplx.cVeryclose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1746,7 +1734,7 @@ func cVeryclose(a, b complex128) bool
 
 ```
 searchKey: cmplx.isExact
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1757,7 +1745,7 @@ func isExact(x float64) bool
 
 ```
 searchKey: cmplx.reducePi
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1770,7 +1758,7 @@ reducePi reduces the input argument x to the range (-Pi/2, Pi/2]. x must be grea
 
 ```
 searchKey: cmplx.sinhcosh
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1783,7 +1771,7 @@ calculate sinh and cosh
 
 ```
 searchKey: cmplx.tanSeries
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1796,7 +1784,7 @@ Taylor series expansion for cosh(2y) - cos(2x)
 
 ```
 searchKey: cmplx.tolerance
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1809,7 +1797,7 @@ functions borrowed from pkg/math/all_test.go
 
 ```
 searchKey: cmplx.veryclose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

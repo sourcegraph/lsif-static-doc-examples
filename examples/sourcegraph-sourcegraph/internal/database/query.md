@@ -22,7 +22,7 @@ Package query provides an expression tree structure which can be converted into 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Q" href="#Q">type Q interface{}</a>
@@ -42,7 +42,7 @@ Q is a query item. It is converted into a *sqlf.Query by Eval.
 
 ```
 searchKey: query.And
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -55,7 +55,7 @@ And returns a Q which when evaluated will join the children by "AND".
 
 ```
 searchKey: query.Not
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -68,7 +68,7 @@ Not returns a Q which when evaluated will wrap child with "NOT".
 
 ```
 searchKey: query.Or
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -141,14 +141,14 @@ func (printfBindVar) BindVar(i int) string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Eval" href="#Eval">func Eval(q Q, atomToQueryFn func(q Q) (*sqlf.Query, error)) (*sqlf.Query, error)</a>
 
 ```
 searchKey: query.Eval
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -179,7 +179,7 @@ Typically we expect atomToQueryFn to return a SQL condition like "name LIKE $q".
 
 ```
 searchKey: query.Print
-tags: [method]
+tags: [function]
 ```
 
 ```Go

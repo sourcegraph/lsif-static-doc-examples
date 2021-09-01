@@ -33,10 +33,6 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="addr" href="#addr">const addr</a>
 
 ```
@@ -49,10 +45,6 @@ const addr = ":3189"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="builtins" href="#builtins">var builtins</a>
 
@@ -89,10 +81,6 @@ var initDatabaseMemo = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
@@ -116,7 +104,7 @@ Config is the configuration that controls what jobs will be initialized and moni
 
 ```
 searchKey: shared.Config.Load
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -129,7 +117,7 @@ Load reads from the environment and stores the transformed data on the config ob
 
 ```
 searchKey: shared.Config.Validate
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -195,7 +183,7 @@ MemoizedConstructor wraps a function returning a value and an error and memoizes
 
 ```
 searchKey: shared.NewMemoizedConstructor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -208,7 +196,7 @@ NewMemoizedConstructor memoizes the given constructor
 
 ```
 searchKey: shared.MemoizedConstructor.Init
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -234,10 +222,6 @@ type routinesResult struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="InitDatabase" href="#InitDatabase">func InitDatabase() (*sql.DB, error)</a>
 
 ```
@@ -255,7 +239,7 @@ InitDatabase initializes and returns a connection to the frontend database.
 
 ```
 searchKey: shared.Start
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -268,7 +252,7 @@ Start runs the worker. This method does not return.
 
 ```
 searchKey: shared.WatchServiceConnectionValue
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -283,7 +267,7 @@ This method should only be called for critical values like database connection c
 
 ```
 searchKey: shared.emitJobCountMetrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -296,7 +280,7 @@ emitJobCountMetrics registers and emits an initial value for gauges referencing 
 
 ```
 searchKey: shared.jobNames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -309,7 +293,7 @@ jobNames returns an ordered slice of keys from the given map.
 
 ```
 searchKey: shared.loadConfigs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -322,7 +306,7 @@ loadConfigs calls Load on the configs of each of the jobs registered in this bin
 
 ```
 searchKey: shared.mustCreateBackgroundRoutines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -335,7 +319,7 @@ mustCreateBackgroundRoutines runs the Routines function of each of the given job
 
 ```
 searchKey: shared.mustValidateConfigs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -348,7 +332,7 @@ mustValidateConfigs calls Validate on the configs of each of the jobs that will 
 
 ```
 searchKey: shared.runRoutinesConcurrently
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -361,7 +345,7 @@ runRoutinesConcurrently returns a channel that will be populated with the return
 
 ```
 searchKey: shared.safeSplit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -374,7 +358,7 @@ safeSplit is strings.Split but returns nil (not a []string{""}) on empty input.
 
 ```
 searchKey: shared.shouldRunJob
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -47,7 +47,7 @@ It is in a separate package from app so that other packages may use it to genera
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CheckUsernameTaken" href="#CheckUsernameTaken">const CheckUsernameTaken</a>
@@ -341,7 +341,7 @@ same as spec.unresolvedRevPattern but also not allowing path components starting
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="router" href="#router">var router</a>
@@ -358,7 +358,7 @@ var router = newRouter()
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Router" href="#Router">func Router() *mux.Router</a>
@@ -378,7 +378,7 @@ Router returns the frontend app router.
 
 ```
 searchKey: router.TestOldTreesRedirect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -389,7 +389,7 @@ func TestOldTreesRedirect(t *testing.T)
 
 ```
 searchKey: router.URLToRepoTreeEntry
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -400,7 +400,7 @@ func URLToRepoTreeEntry(repo api.RepoName, rev, path string) *url.URL
 
 ```
 searchKey: router.addOldTreeRedirectRoute
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -422,7 +422,7 @@ func newRouter() *mux.Router
 
 ```
 searchKey: router.revStr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

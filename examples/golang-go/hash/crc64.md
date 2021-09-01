@@ -49,10 +49,6 @@ Package crc64 implements the 64-bit cyclic redundancy check, or CRC-64, checksum
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ECMA" href="#ECMA">const ECMA</a>
 
 ```
@@ -120,10 +116,6 @@ const marshaledSize = len(magic) + 8 + 8
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="golden" href="#golden">var golden</a>
 
 ```
@@ -170,10 +162,6 @@ var slicing8TablesBuildOnce sync.Once
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Table" href="#Table">type Table [256]uint64</a>
 
 ```
@@ -191,7 +179,7 @@ Table is a 256-word table representing the polynomial for efficient processing.
 
 ```
 searchKey: crc64.MakeTable
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -204,7 +192,7 @@ MakeTable returns a Table constructed from the specified polynomial. The content
 
 ```
 searchKey: crc64.makeTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -231,7 +219,7 @@ digest represents the partial evaluation of a checksum.
 
 ```
 searchKey: crc64.digest.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -242,7 +230,7 @@ func (d *digest) BlockSize() int
 
 ```
 searchKey: crc64.digest.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -253,7 +241,7 @@ func (d *digest) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: crc64.digest.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -264,7 +252,7 @@ func (d *digest) Reset()
 
 ```
 searchKey: crc64.digest.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -286,7 +274,7 @@ func (d *digest) Sum(in []byte) []byte
 
 ```
 searchKey: crc64.digest.Sum64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -334,15 +322,11 @@ type test struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkCrc64" href="#BenchmarkCrc64">func BenchmarkCrc64(b *testing.B)</a>
 
 ```
 searchKey: crc64.BenchmarkCrc64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -353,7 +337,7 @@ func BenchmarkCrc64(b *testing.B)
 
 ```
 searchKey: crc64.Checksum
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -366,7 +350,7 @@ Checksum returns the CRC-64 checksum of data using the polynomial represented by
 
 ```
 searchKey: crc64.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -379,7 +363,7 @@ New creates a new hash.Hash64 computing the CRC-64 checksum using the polynomial
 
 ```
 searchKey: crc64.TestGolden
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -390,7 +374,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: crc64.TestGoldenMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -401,7 +385,7 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: crc64.TestMarshalTableMismatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -412,7 +396,7 @@ func TestMarshalTableMismatch(t *testing.T)
 
 ```
 searchKey: crc64.Update
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -425,7 +409,7 @@ Update returns the result of adding the bytes in p to the crc.
 
 ```
 searchKey: crc64.appendUint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -436,7 +420,7 @@ func appendUint64(b []byte, x uint64) []byte
 
 ```
 searchKey: crc64.bench
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -469,7 +453,7 @@ func buildSlicing8TablesOnce()
 
 ```
 searchKey: crc64.makeSlicingBy8Table
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -480,7 +464,7 @@ func makeSlicingBy8Table(t *Table) *[8]Table
 
 ```
 searchKey: crc64.readUint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -491,7 +475,7 @@ func readUint64(b []byte) uint64
 
 ```
 searchKey: crc64.tableSum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -504,7 +488,7 @@ tableSum returns the ISO checksum of table t.
 
 ```
 searchKey: crc64.update
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -10,7 +10,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleCertificate_Verify" href="#ExampleCertificate_Verify">func ExampleCertificate_Verify()</a>

@@ -152,10 +152,6 @@ The PNG specification is at [https://www.w3.org/TR/PNG/](https://www.w3.org/TR/P
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BestCompression" href="#BestCompression">const BestCompression</a>
 
 ```
@@ -681,10 +677,6 @@ const pngHeader = "\x89PNG\r\n\x1a\n"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="chunkOrderError" href="#chunkOrderError">var chunkOrderError</a>
 
 ```
@@ -801,10 +793,6 @@ var readerErrors = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CompressionLevel" href="#CompressionLevel">type CompressionLevel int</a>
 
 ```
@@ -896,7 +884,7 @@ A FormatError reports that the input is not a valid PNG.
 
 ```
 searchKey: png.FormatError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -920,7 +908,7 @@ An UnsupportedError reports that the input uses a valid but unimplemented PNG fe
 
 ```
 searchKey: png.UnsupportedError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -978,7 +966,7 @@ then this reader presents xxxyy. For well-formed PNG data, the decoder state imm
 
 ```
 searchKey: png.decoder.checkHeader
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -989,7 +977,7 @@ func (d *decoder) checkHeader() error
 
 ```
 searchKey: png.decoder.decode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1015,7 +1003,7 @@ mergePassInto merges a single pass into a full sized image.
 
 ```
 searchKey: png.decoder.parseChunk
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1094,7 +1082,7 @@ readImagePass reads a single image pass, sized according to the pass number.
 
 ```
 searchKey: png.decoder.verifyChecksum
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1156,7 +1144,7 @@ func (e *encoder) writeChunk(b []byte, name string)
 
 ```
 searchKey: png.encoder.writeIDATs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1169,7 +1157,7 @@ Write the actual image data to one or more IDAT chunks.
 
 ```
 searchKey: png.encoder.writeIEND
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1180,7 +1168,7 @@ func (e *encoder) writeIEND()
 
 ```
 searchKey: png.encoder.writeIHDR
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1254,7 +1242,7 @@ type pool struct {
 
 ```
 searchKey: png.pool.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1274,15 +1262,11 @@ func (p *pool) Put(b *EncoderBuffer)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDecodeGray" href="#BenchmarkDecodeGray">func BenchmarkDecodeGray(b *testing.B)</a>
 
 ```
 searchKey: png.BenchmarkDecodeGray
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1293,7 +1277,7 @@ func BenchmarkDecodeGray(b *testing.B)
 
 ```
 searchKey: png.BenchmarkDecodeInterlacing
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1304,7 +1288,7 @@ func BenchmarkDecodeInterlacing(b *testing.B)
 
 ```
 searchKey: png.BenchmarkDecodeNRGBAGradient
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1315,7 +1299,7 @@ func BenchmarkDecodeNRGBAGradient(b *testing.B)
 
 ```
 searchKey: png.BenchmarkDecodeNRGBAOpaque
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1326,7 +1310,7 @@ func BenchmarkDecodeNRGBAOpaque(b *testing.B)
 
 ```
 searchKey: png.BenchmarkDecodePaletted
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1337,7 +1321,7 @@ func BenchmarkDecodePaletted(b *testing.B)
 
 ```
 searchKey: png.BenchmarkDecodeRGB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1348,7 +1332,7 @@ func BenchmarkDecodeRGB(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeGray
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1359,7 +1343,7 @@ func BenchmarkEncodeGray(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeGrayWithBufferPool
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1370,7 +1354,7 @@ func BenchmarkEncodeGrayWithBufferPool(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeNRGBA
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1381,7 +1365,7 @@ func BenchmarkEncodeNRGBA(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeNRGBOpaque
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1392,7 +1376,7 @@ func BenchmarkEncodeNRGBOpaque(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodePaletted
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1403,7 +1387,7 @@ func BenchmarkEncodePaletted(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeRGBA
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1414,7 +1398,7 @@ func BenchmarkEncodeRGBA(b *testing.B)
 
 ```
 searchKey: png.BenchmarkEncodeRGBOpaque
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1425,7 +1409,7 @@ func BenchmarkEncodeRGBOpaque(b *testing.B)
 
 ```
 searchKey: png.BenchmarkPaeth
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1436,7 +1420,7 @@ func BenchmarkPaeth(b *testing.B)
 
 ```
 searchKey: png.Decode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1449,7 +1433,7 @@ Decode reads a PNG image from r and returns it as an image.Image. The type of Im
 
 ```
 searchKey: png.DecodeConfig
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1462,7 +1446,7 @@ DecodeConfig returns the color model and dimensions of a PNG image without decod
 
 ```
 searchKey: png.Encode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1475,7 +1459,7 @@ Encode writes the Image m to w in PNG format. Any Image may be encoded, but imag
 
 ```
 searchKey: png.TestDimensionOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1486,7 +1470,7 @@ func TestDimensionOverflow(t *testing.T)
 
 ```
 searchKey: png.TestGray8Transparent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1497,7 +1481,7 @@ func TestGray8Transparent(t *testing.T)
 
 ```
 searchKey: png.TestIncompleteIDATOnRowBoundary
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1508,7 +1492,7 @@ func TestIncompleteIDATOnRowBoundary(t *testing.T)
 
 ```
 searchKey: png.TestInterlaced
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1519,7 +1503,7 @@ func TestInterlaced(t *testing.T)
 
 ```
 searchKey: png.TestMultipletRNSChunks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1530,7 +1514,7 @@ func TestMultipletRNSChunks(t *testing.T)
 
 ```
 searchKey: png.TestPaeth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1541,7 +1525,7 @@ func TestPaeth(t *testing.T)
 
 ```
 searchKey: png.TestPaethDecode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1552,7 +1536,7 @@ func TestPaethDecode(t *testing.T)
 
 ```
 searchKey: png.TestPaletted8OutOfRangePixel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1563,7 +1547,7 @@ func TestPaletted8OutOfRangePixel(t *testing.T)
 
 ```
 searchKey: png.TestPalettedDecodeConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1574,7 +1558,7 @@ func TestPalettedDecodeConfig(t *testing.T)
 
 ```
 searchKey: png.TestReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1585,7 +1569,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: png.TestReaderError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1596,7 +1580,7 @@ func TestReaderError(t *testing.T)
 
 ```
 searchKey: png.TestSubImage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1607,7 +1591,7 @@ func TestSubImage(t *testing.T)
 
 ```
 searchKey: png.TestTrailingIDATChunks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1618,7 +1602,7 @@ func TestTrailingIDATChunks(t *testing.T)
 
 ```
 searchKey: png.TestUnknownChunkLengthUnderflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1629,7 +1613,7 @@ func TestUnknownChunkLengthUnderflow(t *testing.T)
 
 ```
 searchKey: png.TestWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1640,7 +1624,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: png.TestWriterLevels
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1651,7 +1635,7 @@ func TestWriterLevels(t *testing.T)
 
 ```
 searchKey: png.TestWriterPaletted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1662,7 +1646,7 @@ func TestWriterPaletted(t *testing.T)
 
 ```
 searchKey: png.abs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1673,7 +1657,7 @@ func abs(x int) int
 
 ```
 searchKey: png.abs8
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1686,7 +1670,7 @@ The absolute value of a byte interpreted as a signed int8.
 
 ```
 searchKey: png.benchmarkDecode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1697,7 +1681,7 @@ func benchmarkDecode(b *testing.B, filename string, bytesPerPixel int)
 
 ```
 searchKey: png.cbPaletted
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1708,7 +1692,7 @@ func cbPaletted(cb int) bool
 
 ```
 searchKey: png.diff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1719,7 +1703,7 @@ func diff(m0, m1 image.Image) error
 
 ```
 searchKey: png.encodeDecode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1730,7 +1714,7 @@ func encodeDecode(m image.Image) (image.Image, error)
 
 ```
 searchKey: png.filter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1743,7 +1727,7 @@ Chooses the filter to use for encoding the current row, and applies it. The retu
 
 ```
 searchKey: png.filterPaeth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1767,7 +1751,7 @@ func init()
 
 ```
 searchKey: png.levelToZlib
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1780,7 +1764,7 @@ This function is required because we want the zero value of Encoder.CompressionL
 
 ```
 searchKey: png.min
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1791,7 +1775,7 @@ func min(a, b int) int
 
 ```
 searchKey: png.opaque
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1804,7 +1788,7 @@ Returns whether or not the image is fully opaque.
 
 ```
 searchKey: png.paeth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1817,7 +1801,7 @@ paeth implements the Paeth filter function, as per the PNG specification.
 
 ```
 searchKey: png.readPNG
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1828,7 +1812,7 @@ func readPNG(filename string) (image.Image, error)
 
 ```
 searchKey: png.slowAbs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1839,7 +1823,7 @@ func slowAbs(x int) int
 
 ```
 searchKey: png.slowFilterPaeth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1852,7 +1836,7 @@ slowFilterPaeth is a slow but simple implementation of func filterPaeth.
 
 ```
 searchKey: png.slowPaeth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1865,7 +1849,7 @@ slowPaeth is a slow but simple implementation of the Paeth function. It is a str
 
 ```
 searchKey: png.sng
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1878,7 +1862,7 @@ An approximation of the sng command-line tool.
 
 ```
 searchKey: png.zeroMemory
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

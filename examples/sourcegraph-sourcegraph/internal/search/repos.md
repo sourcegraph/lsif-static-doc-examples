@@ -58,7 +58,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="regexpFlags" href="#regexpFlags">const regexpFlags</a>
@@ -77,7 +77,7 @@ Cf. golang/go/src/regexp/syntax/parse.go.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockResolveRepoGroups" href="#MockResolveRepoGroups">var MockResolveRepoGroups</a>
@@ -105,7 +105,7 @@ var dsn = flag.String("dsn", "", "Database connection string to use in integrati
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExcludedRepos" href="#ExcludedRepos">type ExcludedRepos struct</a>
@@ -128,7 +128,7 @@ ExcludedRepos is a type that counts how many repos with a certain label were exc
 
 ```
 searchKey: repos.computeExcludedRepositories
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -169,7 +169,7 @@ type Options struct {
 
 ```
 searchKey: repos.Options.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -207,7 +207,7 @@ type RepoPath string
 
 ```
 searchKey: repos.RepoPath.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -218,7 +218,7 @@ func (r RepoPath) String() string
 
 ```
 searchKey: repos.RepoPath.value
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -240,7 +240,7 @@ type RepoRegexpPattern string
 
 ```
 searchKey: repos.RepoRegexpPattern.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -251,7 +251,7 @@ func (r RepoRegexpPattern) String() string
 
 ```
 searchKey: repos.RepoRegexpPattern.value
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -278,7 +278,7 @@ type Resolved struct {
 
 ```
 searchKey: repos.Resolved.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -328,7 +328,7 @@ type badRequestError struct {
 
 ```
 searchKey: repos.badRequestError.BadRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -339,7 +339,7 @@ func (e *badRequestError) BadRequest() bool
 
 ```
 searchKey: repos.badRequestError.Cause
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -350,7 +350,7 @@ func (e *badRequestError) Cause() error
 
 ```
 searchKey: repos.badRequestError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -387,14 +387,14 @@ a patternRevspec maps an include pattern to a list of revisions for repos matchi
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkGetRevsForMatchedRepo" href="#BenchmarkGetRevsForMatchedRepo">func BenchmarkGetRevsForMatchedRepo(b *testing.B)</a>
 
 ```
 searchKey: repos.BenchmarkGetRevsForMatchedRepo
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -405,7 +405,7 @@ func BenchmarkGetRevsForMatchedRepo(b *testing.B)
 
 ```
 searchKey: repos.ExactlyOneRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -418,7 +418,7 @@ ExactlyOneRepo returns whether exactly one repo: literal field is specified and 
 
 ```
 searchKey: repos.RepoGroupsToIncludePatterns
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -431,7 +431,7 @@ RepoGroupsToIncludePatterns converts the repo groups from settings to an include
 
 ```
 searchKey: repos.ResolveRepoGroups
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -444,7 +444,7 @@ ResolveRepoGroups retrieves the repository group from settings and checks the da
 
 ```
 searchKey: repos.ResolveRepoGroupsFromSettings
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -468,7 +468,7 @@ func SearchLimits() schema.SearchLimits
 
 ```
 searchKey: repos.TestDefaultRepositories
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -479,7 +479,7 @@ func TestDefaultRepositories(t *testing.T)
 
 ```
 searchKey: repos.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -490,7 +490,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: repos.TestRepoGroupValuesToRegexp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -501,7 +501,7 @@ func TestRepoGroupValuesToRegexp(t *testing.T)
 
 ```
 searchKey: repos.TestResolveRepositoriesWithSearchContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -512,7 +512,7 @@ func TestResolveRepositoriesWithSearchContext(t *testing.T)
 
 ```
 searchKey: repos.TestResolveRepositoriesWithUserSearchContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -523,7 +523,7 @@ func TestResolveRepositoriesWithUserSearchContext(t *testing.T)
 
 ```
 searchKey: repos.TestRevisionValidation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -534,7 +534,7 @@ func TestRevisionValidation(t *testing.T)
 
 ```
 searchKey: repos.TestSearchRevspecs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -547,7 +547,7 @@ TestSearchRevspecs tests a repository name against a list of repository specs wi
 
 ```
 searchKey: repos.TestUseDefaultReposIfMissingOrGlobalSearchContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -558,7 +558,7 @@ func TestUseDefaultReposIfMissingOrGlobalSearchContext(t *testing.T)
 
 ```
 searchKey: repos.UnionRegExps
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -569,7 +569,7 @@ func UnionRegExps(patterns []string) string
 
 ```
 searchKey: repos.defaultRepositories
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -582,7 +582,7 @@ defaultRepositories returns the intersection of calling getRawDefaultRepos (db) 
 
 ```
 searchKey: repos.filterRepoHasCommitAfter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -593,7 +593,7 @@ func filterRepoHasCommitAfter(ctx context.Context, revisions []*search.Repositor
 
 ```
 searchKey: repos.findPatternRevs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -606,7 +606,7 @@ findPatternRevs mutates the given list of include patterns to be a raw list of t
 
 ```
 searchKey: repos.getRevsForMatchedRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -619,7 +619,7 @@ given a repo name, determine whether it matched any patterns for which we have r
 
 ```
 searchKey: repos.optimizeRepoPatternWithHeuristics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -630,7 +630,7 @@ func optimizeRepoPatternWithHeuristics(repoPattern string) string
 
 ```
 searchKey: repos.repoGroupValuesToRegexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -643,7 +643,7 @@ repoGroupValuesToRegexp does a lookup of all repo groups by name and converts th
 
 ```
 searchKey: repos.resolveVersionContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -656,7 +656,7 @@ NOTE: This function is not called if the version context is not used
 
 ```
 searchKey: repos.stringSliceToRevisionSpecifiers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

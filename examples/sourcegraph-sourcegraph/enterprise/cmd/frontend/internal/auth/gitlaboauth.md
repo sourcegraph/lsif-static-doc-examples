@@ -40,7 +40,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="PkgName" href="#PkgName">const PkgName</a>
@@ -90,7 +90,7 @@ const userKey key = iota
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockProvider" href="#MockProvider">type MockProvider struct</a>
@@ -111,7 +111,7 @@ type MockProvider struct {
 
 ```
 searchKey: gitlaboauth.newMockProvider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -192,14 +192,14 @@ func (s *sessionIssuerHelper) SessionData(token *oauth2.Token) oauth.SessionData
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CallbackHandler" href="#CallbackHandler">func CallbackHandler(config *oauth2.Config, success, failure http.Handler) http.Handler</a>
 
 ```
 searchKey: gitlaboauth.CallbackHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -210,7 +210,7 @@ func CallbackHandler(config *oauth2.Config, success, failure http.Handler) http.
 
 ```
 searchKey: gitlaboauth.LoginHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -221,7 +221,7 @@ func LoginHandler(config *oauth2.Config, failure http.Handler) http.Handler
 
 ```
 searchKey: gitlaboauth.Middleware
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -232,7 +232,7 @@ func Middleware(db dbutil.DB) *auth.Middleware
 
 ```
 searchKey: gitlaboauth.TestMiddleware
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -245,7 +245,7 @@ TestMiddleware exercises the Middleware with requests that simulate the OAuth 2 
 
 ```
 searchKey: gitlaboauth.TestParseConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -256,7 +256,7 @@ func TestParseConfig(t *testing.T)
 
 ```
 searchKey: gitlaboauth.TestSessionIssuerHelper_CreateCodeHostConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -267,7 +267,7 @@ func TestSessionIssuerHelper_CreateCodeHostConnection(t *testing.T)
 
 ```
 searchKey: gitlaboauth.UserFromContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -280,7 +280,7 @@ UserFromContext returns the GitLab User from the ctx.
 
 ```
 searchKey: gitlaboauth.WithUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -304,7 +304,7 @@ func getStateConfig() gologin.CookieConfig
 
 ```
 searchKey: gitlaboauth.gitlabClientFromAuthURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -315,7 +315,7 @@ func gitlabClientFromAuthURL(authURL, oauthToken string) (*gitlab.Client, error)
 
 ```
 searchKey: gitlaboauth.gitlabHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -348,7 +348,7 @@ func init()
 
 ```
 searchKey: gitlaboauth.parseConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -359,7 +359,7 @@ func parseConfig(cfg *conf.Unified) (ps map[schema.GitLabAuthProvider]providers.
 
 ```
 searchKey: gitlaboauth.parseProvider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -370,7 +370,7 @@ func parseProvider(callbackURL string, p *schema.GitLabAuthProvider, sourceCfg s
 
 ```
 searchKey: gitlaboauth.provider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -381,7 +381,7 @@ func provider(serviceID string, oauth2Config oauth2.Config) *oauth.Provider
 
 ```
 searchKey: gitlaboauth.requestedScopes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -392,7 +392,7 @@ func requestedScopes(extraScopes []string) []string
 
 ```
 searchKey: gitlaboauth.validateResponse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

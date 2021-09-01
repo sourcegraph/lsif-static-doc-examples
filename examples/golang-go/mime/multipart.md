@@ -120,10 +120,6 @@ The implementation is sufficient for HTTP (RFC 2388) and the multipart bodies ge
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="boundary" href="#boundary">const boundary</a>
 
 ```
@@ -238,10 +234,6 @@ const textbValue = "bar"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrMessageTooLarge" href="#ErrMessageTooLarge">var ErrMessageTooLarge</a>
 
 ```
@@ -301,10 +293,6 @@ var quoteEscaper = strings.NewReplacer("\\", "\\\\", `"`, "\\\"")
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="File" href="#File">type File interface</a>
 
 ```
@@ -327,7 +315,7 @@ File is an interface to access the file part of a multipart message. Its content
 
 ```
 searchKey: multipart.testFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -358,7 +346,7 @@ A FileHeader describes a file part of a multipart request.
 
 ```
 searchKey: multipart.FileHeader.Open
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -387,7 +375,7 @@ Form is a parsed multipart form. Its File parts are stored either in memory or o
 
 ```
 searchKey: multipart.Form.RemoveAll
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -433,7 +421,7 @@ A Part represents a single part in a multipart body.
 
 ```
 searchKey: multipart.newPart
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -444,7 +432,7 @@ func newPart(mr *Reader, rawPart bool) (*Part, error)
 
 ```
 searchKey: multipart.Part.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -455,7 +443,7 @@ func (p *Part) Close() error
 
 ```
 searchKey: multipart.Part.FileName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -468,7 +456,7 @@ FileName returns the filename parameter of the Part's Content-Disposition header
 
 ```
 searchKey: multipart.Part.FormName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -494,7 +482,7 @@ Read reads the body of a part, after its headers and before the next part (if an
 
 ```
 searchKey: multipart.Part.parseContentDisposition
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -505,7 +493,7 @@ func (p *Part) parseContentDisposition()
 
 ```
 searchKey: multipart.Part.populateHeaders
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -539,7 +527,7 @@ Reader is an iterator over parts in a MIME multipart body. Reader's underlying p
 
 ```
 searchKey: multipart.NewReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -554,7 +542,7 @@ The boundary is usually obtained from the "boundary" parameter of the message's 
 
 ```
 searchKey: multipart.Reader.NextPart
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -569,7 +557,7 @@ As a special case, if the "Content-Transfer-Encoding" header has a value of "quo
 
 ```
 searchKey: multipart.Reader.NextRawPart
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -660,7 +648,7 @@ A Writer generates multipart messages.
 
 ```
 searchKey: multipart.NewWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -673,7 +661,7 @@ NewWriter returns a new multipart Writer with a random boundary, writing to w.
 
 ```
 searchKey: multipart.Writer.Boundary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -686,7 +674,7 @@ Boundary returns the Writer's boundary.
 
 ```
 searchKey: multipart.Writer.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -738,7 +726,7 @@ CreatePart creates a new multipart section with the provided header. The body of
 
 ```
 searchKey: multipart.Writer.FormDataContentType
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -821,7 +809,7 @@ type headerBody struct {
 
 ```
 searchKey: multipart.formData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -909,7 +897,7 @@ func (p *part) Write(d []byte) (n int, err error)
 
 ```
 searchKey: multipart.part.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -959,7 +947,7 @@ type sectionReadCloser struct {
 
 ```
 searchKey: multipart.sectionReadCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1044,15 +1032,11 @@ func (r *stickyErrorReader) Read(p []byte) (n int, _ error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestBoundaryLine" href="#TestBoundaryLine">func TestBoundaryLine(t *testing.T)</a>
 
 ```
 searchKey: multipart.TestBoundaryLine
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1063,7 +1047,7 @@ func TestBoundaryLine(t *testing.T)
 
 ```
 searchKey: multipart.TestLineContinuation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1074,7 +1058,7 @@ func TestLineContinuation(t *testing.T)
 
 ```
 searchKey: multipart.TestLineLimit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1085,7 +1069,7 @@ func TestLineLimit(t *testing.T)
 
 ```
 searchKey: multipart.TestMultipart
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1096,7 +1080,7 @@ func TestMultipart(t *testing.T)
 
 ```
 searchKey: multipart.TestMultipartOnlyNewlines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1107,7 +1091,7 @@ func TestMultipartOnlyNewlines(t *testing.T)
 
 ```
 searchKey: multipart.TestMultipartSlowInput
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1118,7 +1102,7 @@ func TestMultipartSlowInput(t *testing.T)
 
 ```
 searchKey: multipart.TestMultipartStreamReadahead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1131,7 +1115,7 @@ TestMultipartStreamReadahead tests that PartReader does not block on reading pas
 
 ```
 searchKey: multipart.TestMultipartTruncated
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1142,7 +1126,7 @@ func TestMultipartTruncated(t *testing.T)
 
 ```
 searchKey: multipart.TestNameAccessors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1153,7 +1137,7 @@ func TestNameAccessors(t *testing.T)
 
 ```
 searchKey: multipart.TestNested
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1166,7 +1150,7 @@ Test parsing an image attachment from gmail, which previously failed.
 
 ```
 searchKey: multipart.TestNoBoundary
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1177,7 +1161,7 @@ func TestNoBoundary(t *testing.T)
 
 ```
 searchKey: multipart.TestParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1188,7 +1172,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: multipart.TestParseAllSizes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1199,7 +1183,7 @@ func TestParseAllSizes(t *testing.T)
 
 ```
 searchKey: multipart.TestQuotedPrintableEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1210,7 +1194,7 @@ func TestQuotedPrintableEncoding(t *testing.T)
 
 ```
 searchKey: multipart.TestRawPart
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1221,7 +1205,7 @@ func TestRawPart(t *testing.T)
 
 ```
 searchKey: multipart.TestReadForm
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1232,7 +1216,7 @@ func TestReadForm(t *testing.T)
 
 ```
 searchKey: multipart.TestReadFormMaxMemoryOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1245,7 +1229,7 @@ Issue 40430: Handle ReadForm(math.MaxInt64)
 
 ```
 searchKey: multipart.TestReadFormWithNamelessFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1256,7 +1240,7 @@ func TestReadFormWithNamelessFile(t *testing.T)
 
 ```
 searchKey: multipart.TestReadFormWithTextContentType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1267,7 +1251,7 @@ func TestReadFormWithTextContentType(t *testing.T)
 
 ```
 searchKey: multipart.TestReadForm_NoReadAfterEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1278,7 +1262,7 @@ func TestReadForm_NoReadAfterEOF(t *testing.T)
 
 ```
 searchKey: multipart.TestReadForm_NonFileMaxMemory
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1291,7 +1275,7 @@ TestReadForm_NonFileMaxMemory asserts that the ReadForm maxMemory limit is appli
 
 ```
 searchKey: multipart.TestSortedHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1302,7 +1286,7 @@ func TestSortedHeader(t *testing.T)
 
 ```
 searchKey: multipart.TestVariousTextLineEndings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1313,7 +1297,7 @@ func TestVariousTextLineEndings(t *testing.T)
 
 ```
 searchKey: multipart.TestWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1324,7 +1308,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: multipart.TestWriterBoundaryGoroutines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1335,7 +1319,7 @@ func TestWriterBoundaryGoroutines(t *testing.T)
 
 ```
 searchKey: multipart.TestWriterSetBoundary
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1346,7 +1330,7 @@ func TestWriterSetBoundary(t *testing.T)
 
 ```
 searchKey: multipart.escapeQuotes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1357,7 +1341,7 @@ func escapeQuotes(s string) string
 
 ```
 searchKey: multipart.escapeString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1368,7 +1352,7 @@ func escapeString(v string) string
 
 ```
 searchKey: multipart.expectEq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1379,7 +1363,7 @@ func expectEq(t *testing.T, expected, actual, what string)
 
 ```
 searchKey: multipart.matchAfterPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1394,7 +1378,7 @@ matchAfterPrefix returns +1 if the buffer does match the boundary, meaning the p
 
 ```
 searchKey: multipart.partsFromReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1416,7 +1400,7 @@ func randomBoundary() string
 
 ```
 searchKey: multipart.scanUntilBoundary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1429,7 +1413,7 @@ scanUntilBoundary scans buf to identify how much of it can be safely returned as
 
 ```
 searchKey: multipart.skipLWSPChar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1446,7 +1430,7 @@ LWSP-char = SPACE / HTAB
 
 ```
 searchKey: multipart.testMultipart
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1457,7 +1441,7 @@ func testMultipart(t *testing.T, r io.Reader, onlyNewlines bool)
 
 ```
 searchKey: multipart.testMultipartBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1468,7 +1452,7 @@ func testMultipartBody(sep string) string
 
 ```
 searchKey: multipart.testQuotedPrintableEncoding
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

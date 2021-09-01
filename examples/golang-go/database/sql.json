@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -375,9 +373,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1622,9 +1618,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1663,7 +1657,7 @@
                       "newPage": false,
                       "searchKey": "sql.ColumnType.DatabaseTypeName",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1685,7 +1679,7 @@
                       "newPage": false,
                       "searchKey": "sql.ColumnType.DecimalSize",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1707,7 +1701,7 @@
                       "newPage": false,
                       "searchKey": "sql.ColumnType.Length",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1729,7 +1723,7 @@
                       "newPage": false,
                       "searchKey": "sql.ColumnType.Name",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1751,7 +1745,7 @@
                       "newPage": false,
                       "searchKey": "sql.ColumnType.Nullable",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1773,7 +1767,7 @@
                       "newPage": false,
                       "searchKey": "sql.ColumnType.ScanType",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1840,7 +1834,7 @@
                       "newPage": false,
                       "searchKey": "sql.Conn.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2063,7 +2057,7 @@
                       "newPage": false,
                       "searchKey": "sql.Conn.txCtx",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2109,7 +2103,7 @@
                       "newPage": false,
                       "searchKey": "sql.Open",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -2131,7 +2125,7 @@
                       "newPage": false,
                       "searchKey": "sql.OpenDB",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -2153,7 +2147,7 @@
                       "newPage": false,
                       "searchKey": "sql.newTestDB",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2176,7 +2170,7 @@
                       "newPage": false,
                       "searchKey": "sql.newTestDBConnector",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2199,7 +2193,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.Begin",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2243,7 +2237,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2287,7 +2281,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.Driver",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2353,7 +2347,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.Ping",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2617,7 +2611,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.Stats",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2800,7 +2794,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.connectionCleanerRunLocked",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2938,7 +2932,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.maxIdleConnsLocked",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2961,7 +2955,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.maybeOpenNewConnections",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2984,7 +2978,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.nextRequestKeyLocked",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3030,7 +3024,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.numDeps",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3076,7 +3070,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.numFreeConns",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3099,7 +3093,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.numOpenConns",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3352,7 +3346,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.shortestIdleTimeLocked",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3375,7 +3369,7 @@
                       "newPage": false,
                       "searchKey": "sql.DB.startCleanerLocked",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3466,7 +3460,7 @@
                       "newPage": false,
                       "searchKey": "sql.IsolationLevel.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3511,7 +3505,7 @@
                       "newPage": false,
                       "searchKey": "sql.Named",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -3578,7 +3572,7 @@
                       "newPage": false,
                       "searchKey": "sql.NullBool.Value",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3645,7 +3639,7 @@
                       "newPage": false,
                       "searchKey": "sql.NullByte.Value",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3712,7 +3706,7 @@
                       "newPage": false,
                       "searchKey": "sql.NullFloat64.Value",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3779,7 +3773,7 @@
                       "newPage": false,
                       "searchKey": "sql.NullInt16.Value",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3846,7 +3840,7 @@
                       "newPage": false,
                       "searchKey": "sql.NullInt32.Value",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3913,7 +3907,7 @@
                       "newPage": false,
                       "searchKey": "sql.NullInt64.Value",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -3980,7 +3974,7 @@
                       "newPage": false,
                       "searchKey": "sql.NullString.Value",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -4047,7 +4041,7 @@
                       "newPage": false,
                       "searchKey": "sql.NullTime.Value",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -4137,7 +4131,7 @@
                       "newPage": false,
                       "searchKey": "sql.resultFromStatement",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -4183,7 +4177,7 @@
                       "newPage": false,
                       "searchKey": "sql.Row.Err",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -4250,7 +4244,7 @@
                       "newPage": false,
                       "searchKey": "sql.Rows.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -4272,7 +4266,7 @@
                       "newPage": false,
                       "searchKey": "sql.Rows.ColumnTypes",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -4294,7 +4288,7 @@
                       "newPage": false,
                       "searchKey": "sql.Rows.Columns",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -4316,7 +4310,7 @@
                       "newPage": false,
                       "searchKey": "sql.Rows.Err",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -4338,7 +4332,7 @@
                       "newPage": false,
                       "searchKey": "sql.Rows.Next",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -4360,7 +4354,7 @@
                       "newPage": false,
                       "searchKey": "sql.Rows.NextResultSet",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -4496,7 +4490,7 @@
                       "newPage": false,
                       "searchKey": "sql.Rows.nextLocked",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4564,7 +4558,7 @@
                       "newPage": false,
                       "searchKey": "sql.Stmt.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -4741,7 +4735,7 @@
                       "newPage": false,
                       "searchKey": "sql.Stmt.finalClose",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4787,7 +4781,7 @@
                       "newPage": false,
                       "searchKey": "sql.Stmt.removeClosedStmtLocked",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4833,7 +4827,7 @@
                       "newPage": false,
                       "searchKey": "sql.Tx.Commit",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -5031,7 +5025,7 @@
                       "newPage": false,
                       "searchKey": "sql.Tx.Rollback",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -5097,7 +5091,7 @@
                       "newPage": false,
                       "searchKey": "sql.Tx.awaitDone",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5143,7 +5137,7 @@
                       "newPage": false,
                       "searchKey": "sql.Tx.closePrepared",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5212,7 +5206,7 @@
                       "newPage": false,
                       "searchKey": "sql.Tx.isDone",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5258,7 +5252,7 @@
                       "newPage": false,
                       "searchKey": "sql.Tx.txCtx",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5327,7 +5321,7 @@
                       "newPage": false,
                       "searchKey": "sql.Valuer_P.Value",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5374,7 +5368,7 @@
                       "newPage": false,
                       "searchKey": "sql.Valuer_V.Value",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5515,7 +5509,7 @@
                       "newPage": false,
                       "searchKey": "sql.badConn.Begin",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5538,7 +5532,7 @@
                       "newPage": false,
                       "searchKey": "sql.badConn.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -5765,9 +5759,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/database/sql#concurrentDBExecTest.init.sql_test.go.0xc0291c8ae8",
+                    "pathID": "/database/sql#concurrentDBExecTest.init.sql_test.go.0xc039566370",
                     "documentation": {
-                      "identifier": "concurrentDBExecTest.init.sql_test.go.0xc0291c8ae8",
+                      "identifier": "concurrentDBExecTest.init.sql_test.go.0xc039566370",
                       "newPage": false,
                       "searchKey": "sql.concurrentDBExecTest.init",
                       "tags": [
@@ -5858,9 +5852,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/database/sql#concurrentDBQueryTest.init.sql_test.go.0xc0291c8ae8",
+                    "pathID": "/database/sql#concurrentDBQueryTest.init.sql_test.go.0xc039566370",
                     "documentation": {
-                      "identifier": "concurrentDBQueryTest.init.sql_test.go.0xc0291c8ae8",
+                      "identifier": "concurrentDBQueryTest.init.sql_test.go.0xc039566370",
                       "newPage": false,
                       "searchKey": "sql.concurrentDBQueryTest.init",
                       "tags": [
@@ -5951,9 +5945,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/database/sql#concurrentRandomTest.init.sql_test.go.0xc0291c8ae8",
+                    "pathID": "/database/sql#concurrentRandomTest.init.sql_test.go.0xc039566370",
                     "documentation": {
-                      "identifier": "concurrentRandomTest.init.sql_test.go.0xc0291c8ae8",
+                      "identifier": "concurrentRandomTest.init.sql_test.go.0xc039566370",
                       "newPage": false,
                       "searchKey": "sql.concurrentRandomTest.init",
                       "tags": [
@@ -6044,9 +6038,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/database/sql#concurrentStmtExecTest.init.sql_test.go.0xc0291c8ae8",
+                    "pathID": "/database/sql#concurrentStmtExecTest.init.sql_test.go.0xc039566370",
                     "documentation": {
-                      "identifier": "concurrentStmtExecTest.init.sql_test.go.0xc0291c8ae8",
+                      "identifier": "concurrentStmtExecTest.init.sql_test.go.0xc039566370",
                       "newPage": false,
                       "searchKey": "sql.concurrentStmtExecTest.init",
                       "tags": [
@@ -6137,9 +6131,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/database/sql#concurrentStmtQueryTest.init.sql_test.go.0xc0291c8ae8",
+                    "pathID": "/database/sql#concurrentStmtQueryTest.init.sql_test.go.0xc039566370",
                     "documentation": {
-                      "identifier": "concurrentStmtQueryTest.init.sql_test.go.0xc0291c8ae8",
+                      "identifier": "concurrentStmtQueryTest.init.sql_test.go.0xc039566370",
                       "newPage": false,
                       "searchKey": "sql.concurrentStmtQueryTest.init",
                       "tags": [
@@ -6253,9 +6247,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/database/sql#concurrentTxExecTest.init.sql_test.go.0xc0291c8ae8",
+                    "pathID": "/database/sql#concurrentTxExecTest.init.sql_test.go.0xc039566370",
                     "documentation": {
-                      "identifier": "concurrentTxExecTest.init.sql_test.go.0xc0291c8ae8",
+                      "identifier": "concurrentTxExecTest.init.sql_test.go.0xc039566370",
                       "newPage": false,
                       "searchKey": "sql.concurrentTxExecTest.init",
                       "tags": [
@@ -6346,9 +6340,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/database/sql#concurrentTxQueryTest.init.sql_test.go.0xc0291c8ae8",
+                    "pathID": "/database/sql#concurrentTxQueryTest.init.sql_test.go.0xc039566370",
                     "documentation": {
-                      "identifier": "concurrentTxQueryTest.init.sql_test.go.0xc0291c8ae8",
+                      "identifier": "concurrentTxQueryTest.init.sql_test.go.0xc039566370",
                       "newPage": false,
                       "searchKey": "sql.concurrentTxQueryTest.init",
                       "tags": [
@@ -6439,9 +6433,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/database/sql#concurrentTxStmtExecTest.init.sql_test.go.0xc0291c8ae8",
+                    "pathID": "/database/sql#concurrentTxStmtExecTest.init.sql_test.go.0xc039566370",
                     "documentation": {
-                      "identifier": "concurrentTxStmtExecTest.init.sql_test.go.0xc0291c8ae8",
+                      "identifier": "concurrentTxStmtExecTest.init.sql_test.go.0xc039566370",
                       "newPage": false,
                       "searchKey": "sql.concurrentTxStmtExecTest.init",
                       "tags": [
@@ -6532,9 +6526,9 @@
                 },
                 {
                   "node": {
-                    "pathID": "/database/sql#concurrentTxStmtQueryTest.init.sql_test.go.0xc0291c8ae8",
+                    "pathID": "/database/sql#concurrentTxStmtQueryTest.init.sql_test.go.0xc039566370",
                     "documentation": {
-                      "identifier": "concurrentTxStmtQueryTest.init.sql_test.go.0xc0291c8ae8",
+                      "identifier": "concurrentTxStmtQueryTest.init.sql_test.go.0xc039566370",
                       "newPage": false,
                       "searchKey": "sql.concurrentTxStmtQueryTest.init",
                       "tags": [
@@ -6700,7 +6694,7 @@
                       "newPage": false,
                       "searchKey": "sql.ctxOnlyConn.Begin",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -6723,7 +6717,7 @@
                       "newPage": false,
                       "searchKey": "sql.ctxOnlyConn.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7187,7 +7181,7 @@
                       "newPage": false,
                       "searchKey": "sql.driverConn.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7210,7 +7204,7 @@
                       "newPage": false,
                       "searchKey": "sql.driverConn.closeDBLocked",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7256,7 +7250,7 @@
                       "newPage": false,
                       "searchKey": "sql.driverConn.finalClose",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7418,7 +7412,7 @@
                       "newPage": false,
                       "searchKey": "sql.driverResult.LastInsertId",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7441,7 +7435,7 @@
                       "newPage": false,
                       "searchKey": "sql.driverResult.RowsAffected",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7488,7 +7482,7 @@
                       "newPage": false,
                       "searchKey": "sql.driverStmt.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7558,7 +7552,7 @@
                       "newPage": false,
                       "searchKey": "sql.dsnConnector.Driver",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7605,7 +7599,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeConn.Begin",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7628,7 +7622,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeConn.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7697,7 +7691,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeConn.IsValid",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7858,7 +7852,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeConn.isBad",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7881,7 +7875,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeConn.isDirtyAndMark",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -7973,7 +7967,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeConn.touchMem",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -8020,7 +8014,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeConnector.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -8066,7 +8060,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeConnector.Driver",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -8182,7 +8176,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeDB.wipe",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -8393,7 +8387,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeStmt.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -8485,7 +8479,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeStmt.NumInput",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -8601,7 +8595,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeTx.Commit",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -8624,7 +8618,7 @@
                       "newPage": false,
                       "searchKey": "sql.fakeTx.Rollback",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -8997,7 +8991,7 @@
                       "newPage": false,
                       "searchKey": "sql.rowsCursor.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -9043,7 +9037,7 @@
                       "newPage": false,
                       "searchKey": "sql.rowsCursor.Columns",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -9066,7 +9060,7 @@
                       "newPage": false,
                       "searchKey": "sql.rowsCursor.HasNextResultSet",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -9112,7 +9106,7 @@
                       "newPage": false,
                       "searchKey": "sql.rowsCursor.NextResultSet",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -9135,7 +9129,7 @@
                       "newPage": false,
                       "searchKey": "sql.rowsCursor.touchMem",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -9205,7 +9199,7 @@
                       "newPage": false,
                       "searchKey": "sql.stubDriverStmt.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -9251,7 +9245,7 @@
                       "newPage": false,
                       "searchKey": "sql.stubDriverStmt.NumInput",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -9442,9 +9436,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -9463,7 +9455,7 @@
                 "newPage": false,
                 "searchKey": "sql.BenchmarkConcurrentDBExec",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -9487,7 +9479,7 @@
                 "newPage": false,
                 "searchKey": "sql.BenchmarkConcurrentRandom",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -9511,7 +9503,7 @@
                 "newPage": false,
                 "searchKey": "sql.BenchmarkConcurrentStmtExec",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -9535,7 +9527,7 @@
                 "newPage": false,
                 "searchKey": "sql.BenchmarkConcurrentStmtQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -9559,7 +9551,7 @@
                 "newPage": false,
                 "searchKey": "sql.BenchmarkConcurrentTxExec",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -9583,7 +9575,7 @@
                 "newPage": false,
                 "searchKey": "sql.BenchmarkConcurrentTxQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -9607,7 +9599,7 @@
                 "newPage": false,
                 "searchKey": "sql.BenchmarkConcurrentTxStmtExec",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -9631,7 +9623,7 @@
                 "newPage": false,
                 "searchKey": "sql.BenchmarkConcurrentTxStmtQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -9655,7 +9647,7 @@
                 "newPage": false,
                 "searchKey": "sql.BenchmarkManyConcurrentQueries",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -9701,7 +9693,7 @@
                 "newPage": false,
                 "searchKey": "sql.Register",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -9723,7 +9715,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestBadDriver",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9747,7 +9739,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestBogusPreboundParameters",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9771,7 +9763,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestCloseConnBeforeStmts",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9795,7 +9787,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestCloseStmtBeforeRows",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9819,7 +9811,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestConcurrency",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9843,7 +9835,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestConnExpiresFreshOutOfPool",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9867,7 +9859,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestConnIsValid",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9891,7 +9883,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestConnMaxLifetime",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9915,7 +9907,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestConnQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9939,7 +9931,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestConnRaw",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9963,7 +9955,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestConnTx",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -9987,7 +9979,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestConnectionLeak",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10011,7 +10003,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestConversions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10035,7 +10027,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestCursorFake",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10059,7 +10051,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestDecimal",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10083,7 +10075,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestDriverArgs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10107,7 +10099,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestDriverPanic",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10131,7 +10123,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestDrivers",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10155,7 +10147,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestErrBadConnReconnect",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10179,7 +10171,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestExec",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10203,7 +10195,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestInvalidNilValues",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10227,7 +10219,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestIssue18429",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10251,7 +10243,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestIssue18719",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10275,7 +10267,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestIssue20160",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10299,7 +10291,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestIssue20575",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10323,7 +10315,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestIssue20622",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10347,7 +10339,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestIssue20647",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10371,7 +10363,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestIssue2542Deadlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10395,7 +10387,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestIssue4902",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10419,7 +10411,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestIssue6081",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10443,7 +10435,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestIssue6651",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10467,7 +10459,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestManyErrBadConn",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10491,7 +10483,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestMaxIdleConns",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10515,7 +10507,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestMaxIdleTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10539,7 +10531,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestMaxOpenConns",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10563,7 +10555,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestMaxOpenConnsOnBusy",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10587,7 +10579,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestMultiResultSetQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10611,7 +10603,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNamedValueChecker",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10635,7 +10627,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNamedValueCheckerSkip",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10659,7 +10651,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNullBoolParam",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10683,7 +10675,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNullByteParam",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10707,7 +10699,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNullByteSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10731,7 +10723,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNullFloat64Param",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10755,7 +10747,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNullInt16Param",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10779,7 +10771,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNullInt32Param",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10803,7 +10795,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNullInt64Param",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10827,7 +10819,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNullString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10851,7 +10843,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNullStringParam",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10875,7 +10867,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestNullTimeParam",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10899,7 +10891,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestOpenConnector",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10923,7 +10915,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestOpenDB",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10947,7 +10939,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestParentStmtOutlivesTxStmt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10971,7 +10963,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestPendingConnsAfterErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -10995,7 +10987,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestPing",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11019,7 +11011,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestPointerParamsAndScans",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11043,7 +11035,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestPoolExhaustOnCancel",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11067,7 +11059,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11091,7 +11083,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestQueryContext",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11115,7 +11107,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestQueryContextWait",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11139,7 +11131,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestQueryExecContextOnly",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11163,7 +11155,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestQueryNamedArg",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11187,7 +11179,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestQueryRow",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11211,7 +11203,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestQueryRowClosingStmt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11235,7 +11227,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestQueryRowNilScanDest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11259,7 +11251,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestRawBytesAllocs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11283,7 +11275,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestRowErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11307,7 +11299,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestRowsCloseOrder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11331,7 +11323,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestRowsColumnTypes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11355,7 +11347,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestRowsColumns",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11379,7 +11371,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestRowsImplicitClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11403,7 +11395,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestRowsScanProperlyWrapsErrors",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11427,7 +11419,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestSimultaneousQueries",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11451,7 +11443,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestSingleOpenConn",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11475,7 +11467,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestStatementClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11499,7 +11491,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestStatementErrorAfterClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11523,7 +11515,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestStatementQueryRow",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11547,7 +11539,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestStatementQueryRowConcurrent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11571,7 +11563,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestStats",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11595,7 +11587,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestStatsMaxIdleClosedTen",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11619,7 +11611,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestStatsMaxIdleClosedZero",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11643,7 +11635,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestStmtCloseDeps",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11667,7 +11659,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestStmtCloseOrder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11691,7 +11683,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxCannotCommitAfterRollback",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11715,7 +11707,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxContextWait",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11739,7 +11731,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxContextWaitNoDiscard",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11763,7 +11755,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxEndBadConn",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11787,7 +11779,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxErrBadConn",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11811,7 +11803,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxPrepare",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11835,7 +11827,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11859,7 +11851,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxQueryInvalid",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11883,7 +11875,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxRollbackCommitErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11907,7 +11899,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxStmt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11931,7 +11923,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxStmtClosedRePrepares",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11955,7 +11947,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxStmtDeadlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -11979,7 +11971,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxStmtFromTxStmtRePrepares",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -12003,7 +11995,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTxStmtPreparedOnce",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -12027,7 +12019,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestTypedString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -12051,7 +12043,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestUnsupportedOptions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -12075,7 +12067,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestUserDefinedBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -12099,7 +12091,7 @@
                 "newPage": false,
                 "searchKey": "sql.TestValueConverters",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -12123,7 +12115,7 @@
                 "newPage": false,
                 "searchKey": "sql.asBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12146,7 +12138,7 @@
                 "newPage": false,
                 "searchKey": "sql.asString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12169,7 +12161,7 @@
                 "newPage": false,
                 "searchKey": "sql.callValuerValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12192,7 +12184,7 @@
                 "newPage": false,
                 "searchKey": "sql.checkSubsetTypes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12215,7 +12207,7 @@
                 "newPage": false,
                 "searchKey": "sql.cloneBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12238,7 +12230,7 @@
                 "newPage": false,
                 "searchKey": "sql.closeDB",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12261,7 +12253,7 @@
                 "newPage": false,
                 "searchKey": "sql.colTypeToReflectType",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12284,7 +12276,7 @@
                 "newPage": false,
                 "searchKey": "sql.contains",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12330,7 +12322,7 @@
                 "newPage": false,
                 "searchKey": "sql.convertAssign",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12353,7 +12345,7 @@
                 "newPage": false,
                 "searchKey": "sql.convertAssignRows",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12376,7 +12368,7 @@
                 "newPage": false,
                 "searchKey": "sql.converterForType",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12399,7 +12391,7 @@
                 "newPage": false,
                 "searchKey": "sql.ctxDriverBegin",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12422,7 +12414,7 @@
                 "newPage": false,
                 "searchKey": "sql.ctxDriverExec",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12445,7 +12437,7 @@
                 "newPage": false,
                 "searchKey": "sql.ctxDriverPrepare",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12468,7 +12460,7 @@
                 "newPage": false,
                 "searchKey": "sql.ctxDriverQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12491,7 +12483,7 @@
                 "newPage": false,
                 "searchKey": "sql.ctxDriverStmtExec",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12514,7 +12506,7 @@
                 "newPage": false,
                 "searchKey": "sql.ctxDriverStmtQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12537,7 +12529,7 @@
                 "newPage": false,
                 "searchKey": "sql.defaultCheckNamedValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12560,7 +12552,7 @@
                 "newPage": false,
                 "searchKey": "sql.describeNamedValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12583,7 +12575,7 @@
                 "newPage": false,
                 "searchKey": "sql.doConcurrentTest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12606,7 +12598,7 @@
                 "newPage": false,
                 "searchKey": "sql.driverArgsConnLocked",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12629,7 +12621,7 @@
                 "newPage": false,
                 "searchKey": "sql.errf",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12652,7 +12644,7 @@
                 "newPage": false,
                 "searchKey": "sql.exec",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12675,7 +12667,7 @@
                 "newPage": false,
                 "searchKey": "sql.float32Value",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12698,7 +12690,7 @@
                 "newPage": false,
                 "searchKey": "sql.float64Value",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12761,9 +12753,9 @@
           },
           {
             "node": {
-              "pathID": "/database/sql#init.sql_test.go.0xc0291c8ae8",
+              "pathID": "/database/sql#init.sql_test.go.0xc039566370",
               "documentation": {
-                "identifier": "init.sql_test.go.0xc0291c8ae8",
+                "identifier": "init.sql_test.go.0xc039566370",
                 "newPage": false,
                 "searchKey": "sql.init",
                 "tags": [
@@ -12790,7 +12782,7 @@
                 "newPage": false,
                 "searchKey": "sql.intPtrValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12813,7 +12805,7 @@
                 "newPage": false,
                 "searchKey": "sql.intValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12836,7 +12828,7 @@
                 "newPage": false,
                 "searchKey": "sql.namedValueToValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12859,7 +12851,7 @@
                 "newPage": false,
                 "searchKey": "sql.nullTestRun",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12882,7 +12874,7 @@
                 "newPage": false,
                 "searchKey": "sql.numPrepares",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12905,7 +12897,7 @@
                 "newPage": false,
                 "searchKey": "sql.rowsColumnInfoSetupConnLocked",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12928,7 +12920,7 @@
                 "newPage": false,
                 "searchKey": "sql.rowsiFromStatement",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12951,7 +12943,7 @@
                 "newPage": false,
                 "searchKey": "sql.setHookOpenErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12974,7 +12966,7 @@
                 "newPage": false,
                 "searchKey": "sql.setHookpostCloseConn",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -12997,7 +12989,7 @@
                 "newPage": false,
                 "searchKey": "sql.setRowsCloseHook",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13020,7 +13012,7 @@
                 "newPage": false,
                 "searchKey": "sql.setStrictFakeConnClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13066,7 +13058,7 @@
                 "newPage": false,
                 "searchKey": "sql.strconvErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13089,7 +13081,7 @@
                 "newPage": false,
                 "searchKey": "sql.timeValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13112,7 +13104,7 @@
                 "newPage": false,
                 "searchKey": "sql.uintValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13158,7 +13150,7 @@
                 "newPage": false,
                 "searchKey": "sql.validateNamedValueName",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13181,7 +13173,7 @@
                 "newPage": false,
                 "searchKey": "sql.waitCondition",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13204,7 +13196,7 @@
                 "newPage": false,
                 "searchKey": "sql.waitForFree",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13227,7 +13219,7 @@
                 "newPage": false,
                 "searchKey": "sql.waitForRowsClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -13250,7 +13242,7 @@
                 "newPage": false,
                 "searchKey": "sql.withLock",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

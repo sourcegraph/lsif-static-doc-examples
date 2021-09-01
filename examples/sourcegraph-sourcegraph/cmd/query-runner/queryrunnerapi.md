@@ -26,10 +26,6 @@ Package queryrunnerapi implements a client for the query-runner service.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="PathSavedQueryWasCreatedOrUpdated" href="#PathSavedQueryWasCreatedOrUpdated">const PathSavedQueryWasCreatedOrUpdated</a>
 
 ```
@@ -65,10 +61,6 @@ const PathTestNotification = "/test-notification"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Client" href="#Client">var Client</a>
 
 ```
@@ -96,10 +88,6 @@ var queryRunnerURL = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ErrorResponse" href="#ErrorResponse">type ErrorResponse struct</a>
 

@@ -12,7 +12,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleNewTLSServer" href="#ExampleNewTLSServer">func ExampleNewTLSServer()</a>

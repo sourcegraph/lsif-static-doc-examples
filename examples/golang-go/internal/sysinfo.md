@@ -14,7 +14,7 @@ Package sysinfo implements high level hardware information gathering that can be
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CPU" href="#CPU">var CPU</a>
@@ -31,7 +31,7 @@ var CPU cpuInfo
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="cpuInfo" href="#cpuInfo">type cpuInfo struct</a>
@@ -52,7 +52,7 @@ type cpuInfo struct {
 
 ```
 searchKey: sysinfo.cpuInfo.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go

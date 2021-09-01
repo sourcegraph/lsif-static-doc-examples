@@ -17,7 +17,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="server" href="#server">type server struct</a>
@@ -39,7 +39,7 @@ type server struct {
 
 ```
 searchKey: httpserver.server.Start
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -50,7 +50,7 @@ func (s *server) Start()
 
 ```
 searchKey: httpserver.server.Stop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -60,14 +60,14 @@ func (s *server) Stop()
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="New" href="#New">func New(listener net.Listener, httpServer *http.Server) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: httpserver.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -80,7 +80,7 @@ New returns a BackgroundRoutine that serves the given server on the given listen
 
 ```
 searchKey: httpserver.NewFromAddr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -93,7 +93,7 @@ New returns a BackgroundRoutine that serves the given handler on the given addre
 
 ```
 searchKey: httpserver.NewHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -106,7 +106,7 @@ NewHandler creates an HTTP handler with a default /healthz endpoint. If a functi
 
 ```
 searchKey: httpserver.NewListener
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -119,7 +119,7 @@ NewListener returns a TCP listener accepting connections on the given address.
 
 ```
 searchKey: httpserver.SanitizeAddr
-tags: [method]
+tags: [function]
 ```
 
 ```Go

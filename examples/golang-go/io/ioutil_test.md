@@ -29,7 +29,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="patternHasSeparator" href="#patternHasSeparator">const patternHasSeparator</a>
@@ -48,7 +48,7 @@ This string is from os.errPatternHasSeparator.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleReadAll" href="#ExampleReadAll">func ExampleReadAll()</a>
@@ -143,7 +143,7 @@ func ExampleWriteFile()
 
 ```
 searchKey: ioutil_test.TestReadDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -154,7 +154,7 @@ func TestReadDir(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestReadFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -165,7 +165,7 @@ func TestReadFile(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestReadOnlyWriteFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -176,7 +176,7 @@ func TestReadOnlyWriteFile(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestTempDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -187,7 +187,7 @@ func TestTempDir(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestTempDir_BadDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -200,7 +200,7 @@ test that we return a nice error message if the dir argument to TempDir doesn't 
 
 ```
 searchKey: ioutil_test.TestTempDir_BadPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -211,7 +211,7 @@ func TestTempDir_BadPattern(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestTempFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -222,7 +222,7 @@ func TestTempFile(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestTempFile_BadPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -233,7 +233,7 @@ func TestTempFile_BadPattern(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestTempFile_pattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -244,7 +244,7 @@ func TestTempFile_pattern(t *testing.T)
 
 ```
 searchKey: ioutil_test.TestWriteFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -255,7 +255,7 @@ func TestWriteFile(t *testing.T)
 
 ```
 searchKey: ioutil_test.checkSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -88,10 +88,6 @@ Package gosym implements access to the Go symbol and line number tables embedded
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="go116magic" href="#go116magic">const go116magic</a>
 
 ```
@@ -173,10 +169,6 @@ const verUnknown version = iota
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="bigEndianSymtab" href="#bigEndianSymtab">var bigEndianSymtab</a>
 
 ```
@@ -234,10 +226,6 @@ var pclinetestBinary string
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DecodingError" href="#DecodingError">type DecodingError struct</a>
 
 ```
@@ -259,7 +247,7 @@ DecodingError represents an error during the decoding of the symbol table.
 
 ```
 searchKey: gosym.DecodingError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -340,7 +328,7 @@ For the most part, LineTable's methods should be treated as an internal detail o
 
 ```
 searchKey: gosym.NewLineTable
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -422,7 +410,7 @@ funcName returns the name of the function found at off.
 
 ```
 searchKey: gosym.LineTable.go12Funcs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -487,7 +475,7 @@ go12PCToLine maps program counter to line number for the Go 1.2 pcln table.
 
 ```
 searchKey: gosym.LineTable.initFileMap
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -500,7 +488,7 @@ initFileMap initializes the map from file name to file number.
 
 ```
 searchKey: gosym.LineTable.isGo12
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -524,7 +512,7 @@ func (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64,
 
 ```
 searchKey: gosym.LineTable.parsePclnTab
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -698,7 +686,7 @@ A Sym represents a single symbol table entry.
 
 ```
 searchKey: gosym.Sym.BaseName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -711,7 +699,7 @@ BaseName returns the symbol name without the package or receiver name.
 
 ```
 searchKey: gosym.Sym.PackageName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -724,7 +712,7 @@ PackageName returns the package part of the symbol name, or the empty string if 
 
 ```
 searchKey: gosym.Sym.ReceiverName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -737,7 +725,7 @@ ReceiverName returns the receiver type name of this symbol, or the empty string 
 
 ```
 searchKey: gosym.Sym.Static
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -770,7 +758,7 @@ Table represents a Go symbol table. It stores all of the symbols decoded from th
 
 ```
 searchKey: gosym.NewTable
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -783,7 +771,7 @@ NewTable decodes the Go symbol table (the ".gosymtab" section in ELF), returning
 
 ```
 searchKey: gosym.crack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -794,7 +782,7 @@ func crack(file string, t *testing.T) (*elf.File, *Table)
 
 ```
 searchKey: gosym.getTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -805,7 +793,7 @@ func getTable(t *testing.T) *Table
 
 ```
 searchKey: gosym.parse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -907,7 +895,7 @@ UnknownFileError represents a failure to find the specific file in the symbol ta
 
 ```
 searchKey: gosym.UnknownFileError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -934,7 +922,7 @@ UnknownLineError represents a failure to map a line to a program counter, either
 
 ```
 searchKey: gosym.UnknownLineError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -972,15 +960,11 @@ version of the pclntab
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Test115PclnParsing" href="#Test115PclnParsing">func Test115PclnParsing(t *testing.T)</a>
 
 ```
 searchKey: gosym.Test115PclnParsing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1001,7 +985,7 @@ println("hello")
 
 ```
 searchKey: gosym.TestIssue29551
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1012,7 +996,7 @@ func TestIssue29551(t *testing.T)
 
 ```
 searchKey: gosym.TestLineAline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1023,7 +1007,7 @@ func TestLineAline(t *testing.T)
 
 ```
 searchKey: gosym.TestLineFromAline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1034,7 +1018,7 @@ func TestLineFromAline(t *testing.T)
 
 ```
 searchKey: gosym.TestPCLine
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1045,7 +1029,7 @@ func TestPCLine(t *testing.T)
 
 ```
 searchKey: gosym.TestRemotePackage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1056,7 +1040,7 @@ func TestRemotePackage(t *testing.T)
 
 ```
 searchKey: gosym.TestStandardLibPackage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1067,7 +1051,7 @@ func TestStandardLibPackage(t *testing.T)
 
 ```
 searchKey: gosym.TestStandardLibPathPackage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1078,7 +1062,7 @@ func TestStandardLibPathPackage(t *testing.T)
 
 ```
 searchKey: gosym.assertString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1089,7 +1073,7 @@ func assertString(t *testing.T, dsc, out, tgt string)
 
 ```
 searchKey: gosym.dotest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1111,7 +1095,7 @@ func endtest()
 
 ```
 searchKey: gosym.skipIfNotELF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1124,7 +1108,7 @@ skipIfNotELF skips the test if we are not running on an ELF system. These tests 
 
 ```
 searchKey: gosym.walksymtab
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

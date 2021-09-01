@@ -58,7 +58,7 @@ Package symbols implements the symbol search service.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="debugLogs" href="#debugLogs">const debugLogs</a>
@@ -102,7 +102,7 @@ The version of the symbols database schema. This is included in the database fil
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="cacheSizeBytes" href="#cacheSizeBytes">var cacheSizeBytes</a>
@@ -242,7 +242,7 @@ Increasing this value may increase the size of the symbols cache, but will also 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Service" href="#Service">type Service struct</a>
@@ -295,7 +295,7 @@ Service is the symbols service.
 
 ```
 searchKey: symbols.Service.Handler
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -308,7 +308,7 @@ Handler returns the http.Handler that should be used to serve requests.
 
 ```
 searchKey: symbols.Service.Start
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -402,7 +402,7 @@ func (s *Service) search(ctx context.Context, args protocol.SearchArgs) (*result
 
 ```
 searchKey: symbols.Service.startParsers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -415,7 +415,7 @@ startParsers starts the parser process pool.
 
 ```
 searchKey: symbols.Service.watchAndEvict
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -452,7 +452,7 @@ type mockParser []string
 
 ```
 searchKey: symbols.mockParser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -515,7 +515,7 @@ symbolInDB is the same as `protocol.Symbol`, but with two additional columns: na
 
 ```
 searchKey: symbols.symbolToSymbolInDB
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -525,14 +525,14 @@ func symbolToSymbolInDB(symbol result.Symbol) symbolInDB
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkSearch" href="#BenchmarkSearch">func BenchmarkSearch(b *testing.B)</a>
 
 ```
 searchKey: symbols.BenchmarkSearch
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -556,7 +556,7 @@ NewParser runs the ctags command from the CTAGS_COMMAND environment variable, fa
 
 ```
 searchKey: symbols.TestIsLiteralEquality
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -567,7 +567,7 @@ func TestIsLiteralEquality(t *testing.T)
 
 ```
 searchKey: symbols.TestParser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -578,7 +578,7 @@ func TestParser(t *testing.T)
 
 ```
 searchKey: symbols.TestService
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -589,7 +589,7 @@ func TestService(t *testing.T)
 
 ```
 searchKey: symbols.createTar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -600,7 +600,7 @@ func createTar(files map[string]string) (io.ReadCloser, error)
 
 ```
 searchKey: symbols.entryToSymbol
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -611,7 +611,7 @@ func entryToSymbol(e *ctags.Entry) result.Symbol
 
 ```
 searchKey: symbols.filterSymbols
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -633,7 +633,7 @@ func init()
 
 ```
 searchKey: symbols.isLiteralEquality
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -646,7 +646,7 @@ isLiteralEquality checks if the given regex matches literal strings exactly. Ret
 
 ```
 searchKey: symbols.symbolInDBToSymbol
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

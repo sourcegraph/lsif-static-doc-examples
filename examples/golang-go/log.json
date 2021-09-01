@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -375,9 +373,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -447,9 +443,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -510,7 +504,7 @@
                       "newPage": false,
                       "searchKey": "log.New",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -598,7 +592,7 @@
                       "newPage": false,
                       "searchKey": "log.Logger.Flags",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -708,7 +702,7 @@
                       "newPage": false,
                       "searchKey": "log.Logger.Prefix",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -862,7 +856,7 @@
                       "newPage": false,
                       "searchKey": "log.Logger.Writer",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -935,9 +929,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -956,7 +948,7 @@
                 "newPage": false,
                 "searchKey": "log.BenchmarkItoa",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -980,7 +972,7 @@
                 "newPage": false,
                 "searchKey": "log.BenchmarkPrintln",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1004,7 +996,7 @@
                 "newPage": false,
                 "searchKey": "log.BenchmarkPrintlnNoFlags",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1028,7 +1020,7 @@
                 "newPage": false,
                 "searchKey": "log.Fatal",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1050,7 +1042,7 @@
                 "newPage": false,
                 "searchKey": "log.Fatalf",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1072,7 +1064,7 @@
                 "newPage": false,
                 "searchKey": "log.Fatalln",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1116,7 +1108,7 @@
                 "newPage": false,
                 "searchKey": "log.Output",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1138,7 +1130,7 @@
                 "newPage": false,
                 "searchKey": "log.Panic",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1160,7 +1152,7 @@
                 "newPage": false,
                 "searchKey": "log.Panicf",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1182,7 +1174,7 @@
                 "newPage": false,
                 "searchKey": "log.Panicln",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1226,7 +1218,7 @@
                 "newPage": false,
                 "searchKey": "log.Print",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1248,7 +1240,7 @@
                 "newPage": false,
                 "searchKey": "log.Printf",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1270,7 +1262,7 @@
                 "newPage": false,
                 "searchKey": "log.Println",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1292,7 +1284,7 @@
                 "newPage": false,
                 "searchKey": "log.SetFlags",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1314,7 +1306,7 @@
                 "newPage": false,
                 "searchKey": "log.SetOutput",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1336,7 +1328,7 @@
                 "newPage": false,
                 "searchKey": "log.SetPrefix",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1358,7 +1350,7 @@
                 "newPage": false,
                 "searchKey": "log.TestAll",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1382,7 +1374,7 @@
                 "newPage": false,
                 "searchKey": "log.TestDefault",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1406,7 +1398,7 @@
                 "newPage": false,
                 "searchKey": "log.TestEmptyPrintCreatesLine",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1430,7 +1422,7 @@
                 "newPage": false,
                 "searchKey": "log.TestFlagAndPrefixSetting",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1454,7 +1446,7 @@
                 "newPage": false,
                 "searchKey": "log.TestOutput",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1478,7 +1470,7 @@
                 "newPage": false,
                 "searchKey": "log.TestOutputRace",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1502,7 +1494,7 @@
                 "newPage": false,
                 "searchKey": "log.TestUTCFlag",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1548,7 +1540,7 @@
                 "newPage": false,
                 "searchKey": "log.itoa",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1571,7 +1563,7 @@
                 "newPage": false,
                 "searchKey": "log.testPrint",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

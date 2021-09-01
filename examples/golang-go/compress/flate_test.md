@@ -11,7 +11,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Example_dictionary" href="#Example_dictionary">func Example_dictionary()</a>

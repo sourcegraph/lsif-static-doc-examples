@@ -23,7 +23,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Services" href="#Services">var Services</a>
@@ -53,7 +53,7 @@ var addr = env.Get("SRC_PROF_HTTP", ":6060", "net/http/pprof http bind address."
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Dumper" href="#Dumper">type Dumper interface</a>
@@ -118,14 +118,14 @@ Service is a service's debug addr (host:port).
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewServerRoutine" href="#NewServerRoutine">func NewServerRoutine(ready <-chan struct{}, extra ...Endpoint) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: debugserver.NewServerRoutine
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -138,7 +138,7 @@ NewServerRoutine returns a background routine that exposes pprof and metrics end
 
 ```
 searchKey: debugserver.expvarHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -151,7 +151,7 @@ expvarHandler is copied from package expvar and exported so that it can be mount
 
 ```
 searchKey: debugserver.freeOSMemoryHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -162,7 +162,7 @@ func freeOSMemoryHandler(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: debugserver.gcHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -173,7 +173,7 @@ func gcHandler(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: debugserver.healthzHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -197,7 +197,7 @@ func init()
 
 ```
 searchKey: debugserver.readyHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

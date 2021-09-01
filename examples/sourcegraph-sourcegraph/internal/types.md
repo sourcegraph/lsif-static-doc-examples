@@ -163,7 +163,7 @@ Package types defines types used by the frontend.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CloneStatusCloned" href="#CloneStatusCloned">const CloneStatusCloned</a>
@@ -303,7 +303,7 @@ const UnknownSource CodeIntelSource = iota
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Assert" href="#Assert">var Assert</a>
@@ -346,7 +346,7 @@ var newValue = "a different value"
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AggregatedPingStats" href="#AggregatedPingStats">type AggregatedPingStats struct</a>
@@ -536,7 +536,7 @@ type CloneStatus string
 
 ```
 searchKey: types.ParseCloneStatus
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -763,7 +763,7 @@ Apply applies the given functional options to the ExternalService.
 
 ```
 searchKey: types.ExternalService.Clone
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -776,7 +776,7 @@ Clone returns a clone of the given external service.
 
 ```
 searchKey: types.ExternalService.Configuration
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -789,7 +789,7 @@ Configuration returns the external service config.
 
 ```
 searchKey: types.ExternalService.IsDeleted
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -802,7 +802,7 @@ IsDeleted returns true if the external service is deleted.
 
 ```
 searchKey: types.ExternalService.RedactConfigSecrets
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -815,7 +815,7 @@ RedactConfigSecrets replaces any secret fields in the Config field with Redacted
 
 ```
 searchKey: types.ExternalService.URN
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -903,7 +903,7 @@ ExternalServices is an utility type with convenience methods for operating on li
 
 ```
 searchKey: types.GenerateExternalServices
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -942,7 +942,7 @@ Apply applies the given functional options to the ExternalService.
 
 ```
 searchKey: types.ExternalServices.Clone
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -955,7 +955,7 @@ Clone returns a clone of the given external services.
 
 ```
 searchKey: types.ExternalServices.DisplayNames
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -968,7 +968,7 @@ DisplayNames returns the list of display names from all ExternalServices.
 
 ```
 searchKey: types.ExternalServices.IDs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -981,7 +981,7 @@ IDs returns the list of ids from all ExternalServices.
 
 ```
 searchKey: types.ExternalServices.Kinds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -994,7 +994,7 @@ Kinds returns the unique set of Kinds in the given external services list.
 
 ```
 searchKey: types.ExternalServices.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1027,7 +1027,7 @@ func (es ExternalServices) Swap(i, j int)
 
 ```
 searchKey: types.ExternalServices.URNs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1435,7 +1435,7 @@ Repo represents a source code repository.
 
 ```
 searchKey: types.MakeAWSCodeCommitRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1448,7 +1448,7 @@ MakeAWSCodeCommitRepo returns a configured AWS Code Commit repository.
 
 ```
 searchKey: types.MakeBitbucketServerRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1461,7 +1461,7 @@ MakeBitbucketServerRepo returns a configured Bitbucket Server repository.
 
 ```
 searchKey: types.MakeGithubRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1474,7 +1474,7 @@ MakeGithubRepo returns a configured Github repository.
 
 ```
 searchKey: types.MakeGitlabRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1487,7 +1487,7 @@ MakeGitlabRepo returns a configured Gitlab repository.
 
 ```
 searchKey: types.MakeGitoliteRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1500,7 +1500,7 @@ MakeGitoliteRepo returns a configured Gitolite repository.
 
 ```
 searchKey: types.MakeOtherRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1513,7 +1513,7 @@ MakeOtherRepo returns a configured repository from a custom host.
 
 ```
 searchKey: types.MakeRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1537,7 +1537,7 @@ Apply applies the given functional options to the Repo.
 
 ```
 searchKey: types.Repo.Clone
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1550,7 +1550,7 @@ Clone returns a clone of the given repo.
 
 ```
 searchKey: types.Repo.CloneURLs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1563,7 +1563,7 @@ CloneURLs returns all the clone URLs this repo is clonable from.
 
 ```
 searchKey: types.Repo.ExternalServiceIDs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1576,7 +1576,7 @@ ExternalServiceIDs returns the IDs of the external services this repo belongs to
 
 ```
 searchKey: types.Repo.IsDeleted
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1612,7 +1612,7 @@ Context on using other fields such as timestamps to order/resolve conflicts: We 
 
 ```
 searchKey: types.Repo.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1686,7 +1686,7 @@ RepoName represents a source code repository name and its ID.
 
 ```
 searchKey: types.RepoName.ToRepo
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1710,7 +1710,7 @@ RepoNames is an utility type with convenience methods for operating on lists of 
 
 ```
 searchKey: types.RepoNames.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1756,7 +1756,7 @@ Repos is an utility type with convenience methods for operating on lists of Repo
 
 ```
 searchKey: types.GenerateRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1782,7 +1782,7 @@ Apply applies the given functional options to the Repo.
 
 ```
 searchKey: types.Repos.Clone
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1808,7 +1808,7 @@ Concat adds the given Repos to the end of rs.
 
 ```
 searchKey: types.Repos.ExternalRepos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1834,7 +1834,7 @@ Filter returns all the Repos that match the given predicate.
 
 ```
 searchKey: types.Repos.IDs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1847,7 +1847,7 @@ IDs returns the list of ids from all Repos.
 
 ```
 searchKey: types.Repos.Kinds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1860,7 +1860,7 @@ Kinds returns the unique set of kinds from all Repos.
 
 ```
 searchKey: types.Repos.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1882,7 +1882,7 @@ func (rs Repos) Less(i, j int) bool
 
 ```
 searchKey: types.Repos.Names
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1895,7 +1895,7 @@ Names returns the list of names from all Repos.
 
 ```
 searchKey: types.Repos.NamesSummary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1908,7 +1908,7 @@ NamesSummary caps the number of repos to 20 when composing a space-separated lis
 
 ```
 searchKey: types.Repos.Sources
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2371,7 +2371,7 @@ A SourceInfo represents a source a Repo belongs to (such as an external service)
 
 ```
 searchKey: types.SourceInfo.ExternalServiceID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2520,14 +2520,14 @@ type jsonStringField struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExternalServicesToMap" href="#ExternalServicesToMap">func ExternalServicesToMap(es ExternalServices) map[string]*ExternalService</a>
 
 ```
 searchKey: types.ExternalServicesToMap
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2540,7 +2540,7 @@ ExternalServicesToMap is a helper function that returns a map whose key is the e
 
 ```
 searchKey: types.TestRoundTripRedactExternalServiceConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2551,7 +2551,7 @@ func TestRoundTripRedactExternalServiceConfig(t *testing.T)
 
 ```
 searchKey: types.redactField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2564,7 +2564,7 @@ redactField will unmarshal the passed JSON string into the passed value, and the
 
 ```
 searchKey: types.sortedSliceLess
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2577,7 +2577,7 @@ sortedSliceLess returns true if a < b
 
 ```
 searchKey: types.sourcesKeys
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2588,7 +2588,7 @@ func sourcesKeys(m map[string]*SourceInfo) []string
 
 ```
 searchKey: types.unmarshalConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2601,7 +2601,7 @@ config may contain comments, normalize with jsonc before unmarshaling with jsoni
 
 ```
 searchKey: types.unredactField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2612,7 +2612,7 @@ func unredactField(old, new string, cfg interface{}, fields ...jsonStringField) 
 
 ```
 searchKey: types.zeroFields
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

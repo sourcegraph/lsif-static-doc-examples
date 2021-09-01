@@ -14,7 +14,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="a" href="#a">var a</a>
@@ -53,14 +53,14 @@ var a, b [100]byte
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestAliasing" href="#TestAliasing">func TestAliasing(t *testing.T)</a>
 
 ```
 searchKey: subtle_test.TestAliasing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -71,7 +71,7 @@ func TestAliasing(t *testing.T)
 
 ```
 searchKey: subtle_test.testAliasing
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

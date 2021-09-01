@@ -19,7 +19,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MinimumVersion" href="#MinimumVersion">const MinimumVersion</a>
@@ -51,7 +51,7 @@ const githubAPIReleasesEndpoint = "https://api.github.com/repos/sourcegraph/src-
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="releaseMeta" href="#releaseMeta">type releaseMeta struct</a>
@@ -72,14 +72,14 @@ type releaseMeta struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestHighestMatchingVersion" href="#TestHighestMatchingVersion">func TestHighestMatchingVersion(t *testing.T)</a>
 
 ```
 searchKey: srccli.TestHighestMatchingVersion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -90,7 +90,7 @@ func TestHighestMatchingVersion(t *testing.T)
 
 ```
 searchKey: srccli.TestReleaseVersions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -114,7 +114,7 @@ Version returns the highest public version currently available via the GitHub re
 
 ```
 searchKey: srccli.highestMatchingVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -127,7 +127,7 @@ highestMatchingVersion returns the highest version with the same major and minor
 
 ```
 searchKey: srccli.releaseVersions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -140,7 +140,7 @@ releaseVersions requests the given URL and all subsequent pages of releases. Ret
 
 ```
 searchKey: srccli.releaseVersionsPage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

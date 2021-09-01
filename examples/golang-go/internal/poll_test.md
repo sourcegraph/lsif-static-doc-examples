@@ -24,7 +24,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="eofErrorTests" href="#eofErrorTests">var eofErrorTests</a>
@@ -41,14 +41,14 @@ var eofErrorTests = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestConsume" href="#TestConsume">func TestConsume(t *testing.T)</a>
 
 ```
 searchKey: poll_test.TestConsume
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -59,7 +59,7 @@ func TestConsume(t *testing.T)
 
 ```
 searchKey: poll_test.TestEOFError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -70,7 +70,7 @@ func TestEOFError(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -81,7 +81,7 @@ func TestMutexClose(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexCloseUnblock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -92,7 +92,7 @@ func TestMutexCloseUnblock(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexLock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -103,7 +103,7 @@ func TestMutexLock(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexOverflowPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -114,7 +114,7 @@ func TestMutexOverflowPanic(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -125,7 +125,7 @@ func TestMutexPanic(t *testing.T)
 
 ```
 searchKey: poll_test.TestMutexStress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -136,7 +136,7 @@ func TestMutexStress(t *testing.T)
 
 ```
 searchKey: poll_test.TestRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -147,7 +147,7 @@ func TestRead(t *testing.T)
 
 ```
 searchKey: poll_test.TestReadError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -169,7 +169,7 @@ func badStateFile() (*os.File, error)
 
 ```
 searchKey: poll_test.isBadStateFileError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -180,7 +180,7 @@ func isBadStateFileError(err error) (string, bool)
 
 ```
 searchKey: poll_test.parseReadError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

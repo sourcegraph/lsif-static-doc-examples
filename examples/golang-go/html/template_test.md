@@ -39,7 +39,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="templateFile" href="#templateFile">type templateFile struct</a>
@@ -76,7 +76,7 @@ type testCase struct {
 
 ```
 searchKey: template_test.newTestCase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -130,7 +130,7 @@ func (c *testCase) mustParse(t *Template, text string)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Example" href="#Example">func Example()</a>
@@ -244,7 +244,7 @@ func Example_escape()
 
 ```
 searchKey: template_test.TestNumbers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -255,7 +255,7 @@ func TestNumbers(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineAfterNamedExecution
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -266,7 +266,7 @@ func TestRedefineAfterNamedExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineAfterNonExecution
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -277,7 +277,7 @@ func TestRedefineAfterNonExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineEmptyAfterExecution
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -288,7 +288,7 @@ func TestRedefineEmptyAfterExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineNestedByNameAfterExecution
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -299,7 +299,7 @@ func TestRedefineNestedByNameAfterExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineNestedByTemplateAfterExecution
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -310,7 +310,7 @@ func TestRedefineNestedByTemplateAfterExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineNonEmptyAfterExecution
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -321,7 +321,7 @@ func TestRedefineNonEmptyAfterExecution(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineOtherParsers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -332,7 +332,7 @@ func TestRedefineOtherParsers(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineSafety
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -343,7 +343,7 @@ func TestRedefineSafety(t *testing.T)
 
 ```
 searchKey: template_test.TestRedefineTopUse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -354,7 +354,7 @@ func TestRedefineTopUse(t *testing.T)
 
 ```
 searchKey: template_test.TestSkipEscapeComments
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -365,7 +365,7 @@ func TestSkipEscapeComments(t *testing.T)
 
 ```
 searchKey: template_test.TestStringsInScriptsWithJsonContentTypeAreCorrectlyEscaped
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -376,7 +376,7 @@ func TestStringsInScriptsWithJsonContentTypeAreCorrectlyEscaped(t *testing.T)
 
 ```
 searchKey: template_test.TestTemplateClone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -387,7 +387,7 @@ func TestTemplateClone(t *testing.T)
 
 ```
 searchKey: template_test.createTestDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

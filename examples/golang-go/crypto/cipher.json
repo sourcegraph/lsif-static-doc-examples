@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -167,9 +165,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -263,9 +259,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -304,7 +298,7 @@
                       "newPage": false,
                       "searchKey": "cipher.NewGCM",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -326,7 +320,7 @@
                       "newPage": false,
                       "searchKey": "cipher.NewGCMWithNonceSize",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -348,7 +342,7 @@
                       "newPage": false,
                       "searchKey": "cipher.NewGCMWithTagSize",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -370,7 +364,7 @@
                       "newPage": false,
                       "searchKey": "cipher.newGCMWithNonceAndTagSize",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -438,7 +432,7 @@
                       "newPage": false,
                       "searchKey": "cipher.NewCBCDecrypter",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -460,7 +454,7 @@
                       "newPage": false,
                       "searchKey": "cipher.NewCBCEncrypter",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -505,7 +499,7 @@
                       "newPage": false,
                       "searchKey": "cipher.NewCFBDecrypter",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -527,7 +521,7 @@
                       "newPage": false,
                       "searchKey": "cipher.NewCFBEncrypter",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -549,7 +543,7 @@
                       "newPage": false,
                       "searchKey": "cipher.NewCTR",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -571,7 +565,7 @@
                       "newPage": false,
                       "searchKey": "cipher.NewOFB",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -593,7 +587,7 @@
                       "newPage": false,
                       "searchKey": "cipher.newCFB",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -684,7 +678,7 @@
                       "newPage": false,
                       "searchKey": "cipher.StreamWriter.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -752,7 +746,7 @@
                       "newPage": false,
                       "searchKey": "cipher.newCBC",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -822,7 +816,7 @@
                       "newPage": false,
                       "searchKey": "cipher.cbcDecrypter.BlockSize",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -938,7 +932,7 @@
                       "newPage": false,
                       "searchKey": "cipher.cbcEncrypter.BlockSize",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1101,7 +1095,7 @@
                       "newPage": false,
                       "searchKey": "cipher.ctr.refill",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1171,7 +1165,7 @@
                       "newPage": false,
                       "searchKey": "cipher.gcm.NonceSize",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1217,7 +1211,7 @@
                       "newPage": false,
                       "searchKey": "cipher.gcm.Overhead",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1448,7 +1442,7 @@
                       "newPage": false,
                       "searchKey": "cipher.gcmAdd",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1471,7 +1465,7 @@
                       "newPage": false,
                       "searchKey": "cipher.gcmDouble",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1541,7 +1535,7 @@
                       "newPage": false,
                       "searchKey": "cipher.ofb.refill",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1569,9 +1563,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1590,7 +1582,7 @@
                 "newPage": false,
                 "searchKey": "cipher.dup",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1613,7 +1605,7 @@
                 "newPage": false,
                 "searchKey": "cipher.gcmInc32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1636,7 +1628,7 @@
                 "newPage": false,
                 "searchKey": "cipher.reverseBits",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1659,7 +1651,7 @@
                 "newPage": false,
                 "searchKey": "cipher.sliceForAppend",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1682,7 +1674,7 @@
                 "newPage": false,
                 "searchKey": "cipher.xorBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1705,7 +1697,7 @@
                 "newPage": false,
                 "searchKey": "cipher.xorBytesSSE2",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1728,7 +1720,7 @@
                 "newPage": false,
                 "searchKey": "cipher.xorWords",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

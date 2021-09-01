@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/state",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -74,7 +73,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -146,7 +144,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -187,7 +184,7 @@
                       "newPage": false,
                       "searchKey": "state.ChangesetCounts.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -233,7 +230,7 @@
                       "newPage": false,
                       "searchKey": "state.ChangesetEvents.Len",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -324,7 +321,7 @@
                       "newPage": false,
                       "searchKey": "state.computeHistory",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -399,7 +396,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -420,7 +416,7 @@
                 "newPage": false,
                 "searchKey": "state.CalcCounts",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -442,7 +438,7 @@
                 "newPage": false,
                 "searchKey": "state.ComputeLabels",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -464,7 +460,7 @@
                 "newPage": false,
                 "searchKey": "state.GenerateTimestamps",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -486,7 +482,7 @@
                 "newPage": false,
                 "searchKey": "state.SetDerivedState",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -508,7 +504,7 @@
                 "newPage": false,
                 "searchKey": "state.TestCalcCounts",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -532,7 +528,7 @@
                 "newPage": false,
                 "searchKey": "state.TestComputeBitbucketBuildStatus",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -556,7 +552,7 @@
                 "newPage": false,
                 "searchKey": "state.TestComputeExternalState",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -580,7 +576,7 @@
                 "newPage": false,
                 "searchKey": "state.TestComputeGitLabCheckState",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -604,7 +600,7 @@
                 "newPage": false,
                 "searchKey": "state.TestComputeGithubCheckState",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -628,7 +624,7 @@
                 "newPage": false,
                 "searchKey": "state.TestComputeLabels",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -652,7 +648,7 @@
                 "newPage": false,
                 "searchKey": "state.TestComputeReviewState",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -676,7 +672,7 @@
                 "newPage": false,
                 "searchKey": "state.bbsActivity",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -699,7 +695,7 @@
                 "newPage": false,
                 "searchKey": "state.bbsChangeset",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -722,7 +718,7 @@
                 "newPage": false,
                 "searchKey": "state.bbsParticipantEvent",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -745,7 +741,7 @@
                 "newPage": false,
                 "searchKey": "state.bitbucketChangeset",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -768,7 +764,7 @@
                 "newPage": false,
                 "searchKey": "state.changesetRepoName",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -791,7 +787,7 @@
                 "newPage": false,
                 "searchKey": "state.combineCheckStates",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -814,7 +810,7 @@
                 "newPage": false,
                 "searchKey": "state.computeBitbucketBuildStatus",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -837,7 +833,7 @@
                 "newPage": false,
                 "searchKey": "state.computeCheckState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -860,7 +856,7 @@
                 "newPage": false,
                 "searchKey": "state.computeDiffStat",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -883,7 +879,7 @@
                 "newPage": false,
                 "searchKey": "state.computeExternalState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -906,7 +902,7 @@
                 "newPage": false,
                 "searchKey": "state.computeGitHubCheckState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -929,7 +925,7 @@
                 "newPage": false,
                 "searchKey": "state.computeGitLabCheckState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -952,7 +948,7 @@
                 "newPage": false,
                 "searchKey": "state.computeRev",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -975,7 +971,7 @@
                 "newPage": false,
                 "searchKey": "state.computeReviewState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -998,7 +994,7 @@
                 "newPage": false,
                 "searchKey": "state.computeSingleChangesetExternalState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1021,7 +1017,7 @@
                 "newPage": false,
                 "searchKey": "state.computeSingleChangesetReviewState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1044,7 +1040,7 @@
                 "newPage": false,
                 "searchKey": "state.computeSyncState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1067,7 +1063,7 @@
                 "newPage": false,
                 "searchKey": "state.event",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1090,7 +1086,7 @@
                 "newPage": false,
                 "searchKey": "state.ghChangeset",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1113,7 +1109,7 @@
                 "newPage": false,
                 "searchKey": "state.ghConvertToDraft",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1136,7 +1132,7 @@
                 "newPage": false,
                 "searchKey": "state.ghReadyForReview",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1159,7 +1155,7 @@
                 "newPage": false,
                 "searchKey": "state.ghReview",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1182,7 +1178,7 @@
                 "newPage": false,
                 "searchKey": "state.ghReviewDismissed",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1205,7 +1201,7 @@
                 "newPage": false,
                 "searchKey": "state.gitLabChangeset",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1228,7 +1224,7 @@
                 "newPage": false,
                 "searchKey": "state.githubChangeset",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1251,7 +1247,7 @@
                 "newPage": false,
                 "searchKey": "state.glChangeset",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1274,7 +1270,7 @@
                 "newPage": false,
                 "searchKey": "state.glClosed",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1297,7 +1293,7 @@
                 "newPage": false,
                 "searchKey": "state.glMarkWorkInProgress",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1320,7 +1316,7 @@
                 "newPage": false,
                 "searchKey": "state.glReopen",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1343,7 +1339,7 @@
                 "newPage": false,
                 "searchKey": "state.glUnmarkWorkInProgress",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1366,7 +1362,7 @@
                 "newPage": false,
                 "searchKey": "state.initialExternalState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1389,7 +1385,7 @@
                 "newPage": false,
                 "searchKey": "state.parseBitbucketBuildState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1412,7 +1408,7 @@
                 "newPage": false,
                 "searchKey": "state.parseGitLabPipelineStatus",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1435,7 +1431,7 @@
                 "newPage": false,
                 "searchKey": "state.parseGithubCheckState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1458,7 +1454,7 @@
                 "newPage": false,
                 "searchKey": "state.parseGithubCheckSuiteState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1481,7 +1477,7 @@
                 "newPage": false,
                 "searchKey": "state.reduceReviewStates",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1504,7 +1500,7 @@
                 "newPage": false,
                 "searchKey": "state.selectReviewState",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1527,7 +1523,7 @@
                 "newPage": false,
                 "searchKey": "state.setDeletedAt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1550,7 +1546,7 @@
                 "newPage": false,
                 "searchKey": "state.setDraft",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1573,7 +1569,7 @@
                 "newPage": false,
                 "searchKey": "state.setExternalDeletedAt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1596,7 +1592,7 @@
                 "newPage": false,
                 "searchKey": "state.timeToUnixMilli",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1619,7 +1615,7 @@
                 "newPage": false,
                 "searchKey": "state.unixMilliToTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

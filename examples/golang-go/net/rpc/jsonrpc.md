@@ -67,10 +67,6 @@ Package jsonrpc implements a JSON-RPC 1.0 ClientCodec and ServerCodec for the rp
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="errMissingParams" href="#errMissingParams">var errMissingParams</a>
 
 ```
@@ -94,10 +90,6 @@ var null = json.RawMessage([]byte("null"))
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Args" href="#Args">type Args struct</a>
 
@@ -269,7 +261,7 @@ type clientCodec struct {
 
 ```
 searchKey: jsonrpc.clientCodec.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -343,7 +335,7 @@ type clientResponse struct {
 
 ```
 searchKey: jsonrpc.clientResponse.reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -368,7 +360,7 @@ type pipe struct {
 
 ```
 searchKey: jsonrpc.pipe.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -379,7 +371,7 @@ func (p *pipe) Close() error
 
 ```
 searchKey: jsonrpc.pipe.LocalAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -390,7 +382,7 @@ func (p *pipe) LocalAddr() net.Addr
 
 ```
 searchKey: jsonrpc.pipe.RemoteAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -445,7 +437,7 @@ type pipeAddr int
 
 ```
 searchKey: jsonrpc.pipeAddr.Network
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -456,7 +448,7 @@ func (pipeAddr) Network() string
 
 ```
 searchKey: jsonrpc.pipeAddr.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -495,7 +487,7 @@ type serverCodec struct {
 
 ```
 searchKey: jsonrpc.serverCodec.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -554,7 +546,7 @@ type serverRequest struct {
 
 ```
 searchKey: jsonrpc.serverRequest.reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -578,15 +570,11 @@ type serverResponse struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Dial" href="#Dial">func Dial(network, address string) (*rpc.Client, error)</a>
 
 ```
 searchKey: jsonrpc.Dial
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -599,7 +587,7 @@ Dial connects to a JSON-RPC server at the specified network address.
 
 ```
 searchKey: jsonrpc.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -612,7 +600,7 @@ NewClient returns a new rpc.Client to handle requests to the set of services at 
 
 ```
 searchKey: jsonrpc.NewClientCodec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -625,7 +613,7 @@ NewClientCodec returns a new rpc.ClientCodec using JSON-RPC on conn.
 
 ```
 searchKey: jsonrpc.NewServerCodec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -638,7 +626,7 @@ NewServerCodec returns a new rpc.ServerCodec using JSON-RPC on conn.
 
 ```
 searchKey: jsonrpc.ServeConn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -651,7 +639,7 @@ ServeConn runs the JSON-RPC server on a single connection. ServeConn blocks, ser
 
 ```
 searchKey: jsonrpc.TestBuiltinTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -662,7 +650,7 @@ func TestBuiltinTypes(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestClient
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -673,7 +661,7 @@ func TestClient(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestMalformedInput
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -684,7 +672,7 @@ func TestMalformedInput(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestMalformedOutput
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -695,7 +683,7 @@ func TestMalformedOutput(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -706,7 +694,7 @@ func TestServer(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestServerEmptyMessage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -717,7 +705,7 @@ func TestServerEmptyMessage(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestServerErrorHasNullResult
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -728,7 +716,7 @@ func TestServerErrorHasNullResult(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestServerNoParams
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -739,7 +727,7 @@ func TestServerNoParams(t *testing.T)
 
 ```
 searchKey: jsonrpc.TestUnexpectedError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

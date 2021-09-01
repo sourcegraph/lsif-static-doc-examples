@@ -37,7 +37,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="poserPathErr" href="#poserPathErr">var poserPathErr</a>
@@ -54,7 +54,7 @@ var poserPathErr = &fs.PathError{Op: "poser"}
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MyError" href="#MyError">type MyError struct</a>
@@ -77,7 +77,7 @@ MyError is an error implementation that includes a time and message.
 
 ```
 searchKey: errors_test.MyError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -99,7 +99,7 @@ type errorT struct{ s string }
 
 ```
 searchKey: errors_test.errorT.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -123,7 +123,7 @@ type errorUncomparable struct {
 
 ```
 searchKey: errors_test.errorUncomparable.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -170,7 +170,7 @@ func (p *poser) As(err interface{}) bool
 
 ```
 searchKey: errors_test.poser.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -206,7 +206,7 @@ type wrapped struct {
 
 ```
 searchKey: errors_test.wrapped.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -217,7 +217,7 @@ func (e wrapped) Error() string
 
 ```
 searchKey: errors_test.wrapped.Unwrap
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -227,7 +227,7 @@ func (e wrapped) Unwrap() error
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Example" href="#Example">func Example()</a>
@@ -291,7 +291,7 @@ The fmt package's Errorf function lets us use the package's formatting features 
 
 ```
 searchKey: errors_test.TestAs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -302,7 +302,7 @@ func TestAs(t *testing.T)
 
 ```
 searchKey: errors_test.TestAsValidation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -313,7 +313,7 @@ func TestAsValidation(t *testing.T)
 
 ```
 searchKey: errors_test.TestErrorMethod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -324,7 +324,7 @@ func TestErrorMethod(t *testing.T)
 
 ```
 searchKey: errors_test.TestIs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -335,7 +335,7 @@ func TestIs(t *testing.T)
 
 ```
 searchKey: errors_test.TestNewEqual
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -346,7 +346,7 @@ func TestNewEqual(t *testing.T)
 
 ```
 searchKey: errors_test.TestUnwrap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

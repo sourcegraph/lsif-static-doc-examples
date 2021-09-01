@@ -27,7 +27,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="urlMus" href="#urlMus">var urlMus</a>
@@ -55,7 +55,7 @@ var urlMusMu sync.Mutex
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EvictStats" href="#EvictStats">type EvictStats struct</a>
@@ -125,7 +125,7 @@ File is an os.File, but includes the Path
 
 ```
 searchKey: diskcache.doFetch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -216,14 +216,14 @@ path returns the path for key.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestOpen" href="#TestOpen">func TestOpen(t *testing.T)</a>
 
 ```
 searchKey: diskcache.TestOpen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -234,7 +234,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: diskcache.copyAndClose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -245,7 +245,7 @@ func copyAndClose(dst io.WriteCloser, src io.ReadCloser) error
 
 ```
 searchKey: diskcache.fsync
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -256,7 +256,7 @@ func fsync(path string) error
 
 ```
 searchKey: diskcache.touch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -269,7 +269,7 @@ touch updates the modified time to time.Now(). It is best-effort, and will log i
 
 ```
 searchKey: diskcache.urlMu
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

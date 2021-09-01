@@ -10,14 +10,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestAllowAnonymousRequest" href="#TestAllowAnonymousRequest">func TestAllowAnonymousRequest(t *testing.T)</a>
 
 ```
 searchKey: auth_test.TestAllowAnonymousRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -28,7 +28,7 @@ func TestAllowAnonymousRequest(t *testing.T)
 
 ```
 searchKey: auth_test.TestNewUserRequiredAuthzMiddleware
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

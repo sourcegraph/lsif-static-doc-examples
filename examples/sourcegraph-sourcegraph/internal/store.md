@@ -52,7 +52,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="maxFileSize" href="#maxFileSize">const maxFileSize</a>
@@ -72,7 +72,7 @@ maxFileSize is the limit on file size in bytes. Only files smaller than this are
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="cacheSizeBytes" href="#cacheSizeBytes">var cacheSizeBytes</a>
@@ -133,7 +133,7 @@ var fetching = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FilterFunc" href="#FilterFunc">type FilterFunc func(hdr *archive/tar.Header) bool</a>
@@ -175,7 +175,7 @@ A SrcFile is a single file inside a ZipFile.
 
 ```
 searchKey: store.SrcFile.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -236,7 +236,7 @@ Note: The store fetches tarballs but stores zips. We want to be able to filter w
 
 ```
 searchKey: store.tmpStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -260,7 +260,7 @@ PrepareZip returns the path to a local zip archive of repo at commit. It will fi
 
 ```
 searchKey: store.Store.Start
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -273,7 +273,7 @@ Start initializes state and starts background goroutines. It can be called more 
 
 ```
 searchKey: store.Store.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -297,7 +297,7 @@ fetch fetches an archive from the network and stores it on disk. It does not pop
 
 ```
 searchKey: store.Store.watchAndEvict
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -310,7 +310,7 @@ watchAndEvict is a loop which periodically checks the size of the cache and evic
 
 ```
 searchKey: store.Store.watchConfig
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -359,7 +359,7 @@ Get returns a zipFile for the file on disk at path. The file MUST be Closed when
 
 ```
 searchKey: store.ZipCache.count
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -415,7 +415,7 @@ ZipFile provides efficient access to a single zip file.
 
 ```
 searchKey: store.GetZipFileWithRetry
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -428,7 +428,7 @@ GetZipFileWithRetry retries getting a zip file if the zip is for some reason inv
 
 ```
 searchKey: store.MockZipFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -439,7 +439,7 @@ func MockZipFile(data []byte) (*ZipFile, error)
 
 ```
 searchKey: store.readZipFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -450,7 +450,7 @@ func readZipFile(path string) (*ZipFile, error)
 
 ```
 searchKey: store.ZipFile.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -502,7 +502,7 @@ temporaryError wraps an error but adds the Temporary method. It does not impleme
 
 ```
 searchKey: store.temporaryError.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -526,14 +526,14 @@ type zipCacheShard struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestGetZipFileWithRetry" href="#TestGetZipFileWithRetry">func TestGetZipFileWithRetry(t *testing.T)</a>
 
 ```
 searchKey: store.TestGetZipFileWithRetry
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -544,7 +544,7 @@ func TestGetZipFileWithRetry(t *testing.T)
 
 ```
 searchKey: store.TestIngoreSizeMax
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -555,7 +555,7 @@ func TestIngoreSizeMax(t *testing.T)
 
 ```
 searchKey: store.TestPrepareZip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -566,7 +566,7 @@ func TestPrepareZip(t *testing.T)
 
 ```
 searchKey: store.TestPrepareZip_errHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -577,7 +577,7 @@ func TestPrepareZip_errHeader(t *testing.T)
 
 ```
 searchKey: store.TestPrepareZip_fetchTarFail
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -588,7 +588,7 @@ func TestPrepareZip_fetchTarFail(t *testing.T)
 
 ```
 searchKey: store.TestZipCacheDelete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -601,7 +601,7 @@ TestZipCacheDelete ensures that zip cache deletion is correctly hooked up to cac
 
 ```
 searchKey: store.copySearchable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -614,7 +614,7 @@ copySearchable copies searchable files from tr to zw. A searchable file is any f
 
 ```
 searchKey: store.emptyTar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -625,7 +625,7 @@ func emptyTar(t *testing.T) io.ReadCloser
 
 ```
 searchKey: store.ignoreSizeMax
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

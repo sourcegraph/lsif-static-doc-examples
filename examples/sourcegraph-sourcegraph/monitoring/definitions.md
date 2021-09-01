@@ -28,10 +28,6 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="workerJobs" href="#workerJobs">var workerJobs</a>
 
 ```
@@ -44,10 +40,6 @@ var workerJobs = ...
 ```
 
 ## <a id="func" href="#func">Functions</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ExecutorQueue" href="#ExecutorQueue">func ExecutorQueue() *monitoring.Container</a>
 

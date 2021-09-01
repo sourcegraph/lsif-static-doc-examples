@@ -87,7 +87,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="internalClient" href="#internalClient">var internalClient</a>
@@ -119,7 +119,7 @@ var operationPrecedence = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ChangesetSpecDelta" href="#ChangesetSpecDelta">type ChangesetSpecDelta struct</a>
@@ -146,7 +146,7 @@ type ChangesetSpecDelta struct {
 
 ```
 searchKey: reconciler.compareChangesetSpecs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -157,7 +157,7 @@ func compareChangesetSpecs(previous, current *btypes.ChangesetSpec) (*ChangesetS
 
 ```
 searchKey: reconciler.ChangesetSpecDelta.AttributesChanged
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -168,7 +168,7 @@ func (d *ChangesetSpecDelta) AttributesChanged() bool
 
 ```
 searchKey: reconciler.ChangesetSpecDelta.NeedCodeHostUpdate
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -179,7 +179,7 @@ func (d *ChangesetSpecDelta) NeedCodeHostUpdate() bool
 
 ```
 searchKey: reconciler.ChangesetSpecDelta.NeedCommitUpdate
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -190,7 +190,7 @@ func (d *ChangesetSpecDelta) NeedCommitUpdate() bool
 
 ```
 searchKey: reconciler.ChangesetSpecDelta.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -260,7 +260,7 @@ func (ops Operations) Equal(b Operations) bool
 
 ```
 searchKey: reconciler.Operations.ExecutionOrder
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -271,7 +271,7 @@ func (ops Operations) ExecutionOrder() []btypes.ReconcilerOperation
 
 ```
 searchKey: reconciler.Operations.IsNone
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -282,7 +282,7 @@ func (ops Operations) IsNone() bool
 
 ```
 searchKey: reconciler.Operations.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -319,7 +319,7 @@ Plan represents the possible operations the reconciler needs to do to reconcile 
 
 ```
 searchKey: reconciler.DeterminePlan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -375,7 +375,7 @@ Reconciler processes changesets and reconciles their current state — in Source
 
 ```
 searchKey: reconciler.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -386,7 +386,7 @@ func New(gitClient GitserverClient, sourcer sources.Sourcer, store *store.Store)
 
 ```
 searchKey: reconciler.Reconciler.HandlerFunc
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -431,7 +431,7 @@ errMissingCredentials is returned if the user that applied the last batch change
 
 ```
 searchKey: reconciler.errMissingCredentials.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -453,7 +453,7 @@ func (e errMissingCredentials) Is(target error) bool
 
 ```
 searchKey: reconciler.errMissingCredentials.NonRetryable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -477,7 +477,7 @@ errNoPushCredentials is returned if the authenticator cannot be used by git to a
 
 ```
 searchKey: reconciler.errNoPushCredentials.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -488,7 +488,7 @@ func (e errNoPushCredentials) Error() string
 
 ```
 searchKey: reconciler.errNoPushCredentials.NonRetryable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -512,7 +512,7 @@ errNoSSHCredential is returned, if the  clone URL of the repository uses the ssh
 
 ```
 searchKey: reconciler.errNoSSHCredential.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -523,7 +523,7 @@ func (e errNoSSHCredential) Error() string
 
 ```
 searchKey: reconciler.errNoSSHCredential.NonRetryable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -547,7 +547,7 @@ errPublishSameBranch is returned by publish changeset if a changeset with the sa
 
 ```
 searchKey: reconciler.errPublishSameBranch.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -558,7 +558,7 @@ func (e errPublishSameBranch) Error() string
 
 ```
 searchKey: reconciler.errPublishSameBranch.NonRetryable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -602,7 +602,7 @@ func (e *executor) Run(ctx context.Context, plan *Plan) (err error)
 
 ```
 searchKey: reconciler.executor.archiveChangeset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -628,7 +628,7 @@ closeChangeset closes the given changeset on its code host if its ExternalState 
 
 ```
 searchKey: reconciler.executor.detachChangeset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -711,7 +711,7 @@ reopenChangeset reopens the given changeset attribute on the code host.
 
 ```
 searchKey: reconciler.executor.sleep
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -825,7 +825,7 @@ type mockMissingErr struct {
 
 ```
 searchKey: reconciler.mockMissingErr.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -835,14 +835,14 @@ func (e mockMissingErr) Error() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestBatchChangeURL" href="#TestBatchChangeURL">func TestBatchChangeURL(t *testing.T)</a>
 
 ```
 searchKey: reconciler.TestBatchChangeURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -853,7 +853,7 @@ func TestBatchChangeURL(t *testing.T)
 
 ```
 searchKey: reconciler.TestDecorateChangesetBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -864,7 +864,7 @@ func TestDecorateChangesetBody(t *testing.T)
 
 ```
 searchKey: reconciler.TestDetermineReconcilerPlan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -875,7 +875,7 @@ func TestDetermineReconcilerPlan(t *testing.T)
 
 ```
 searchKey: reconciler.TestExecutor_ExecutePlan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -886,7 +886,7 @@ func TestExecutor_ExecutePlan(t *testing.T)
 
 ```
 searchKey: reconciler.TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -897,7 +897,7 @@ func TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch(t *testing.T)
 
 ```
 searchKey: reconciler.TestExecutor_UserCredentialsForGitserver
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -908,7 +908,7 @@ func TestExecutor_UserCredentialsForGitserver(t *testing.T)
 
 ```
 searchKey: reconciler.TestLoadChangesetSource
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -919,7 +919,7 @@ func TestLoadChangesetSource(t *testing.T)
 
 ```
 searchKey: reconciler.TestNamespaceURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -930,7 +930,7 @@ func TestNamespaceURL(t *testing.T)
 
 ```
 searchKey: reconciler.TestReconcilerProcess_IntegrationTest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -941,7 +941,7 @@ func TestReconcilerProcess_IntegrationTest(t *testing.T)
 
 ```
 searchKey: reconciler.batchChangeURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -952,7 +952,7 @@ func batchChangeURL(ctx context.Context, ns *database.Namespace, c *btypes.Batch
 
 ```
 searchKey: reconciler.buildCommitOpts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -963,7 +963,7 @@ func buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *pro
 
 ```
 searchKey: reconciler.buildGithubPR
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -974,7 +974,7 @@ func buildGithubPR(now time.Time, externalState btypes.ChangesetExternalState) *
 
 ```
 searchKey: reconciler.decorateChangesetBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -985,7 +985,7 @@ func decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getN
 
 ```
 searchKey: reconciler.executePlan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -998,7 +998,7 @@ executePlan executes the given reconciler plan.
 
 ```
 searchKey: reconciler.loadBatchChange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1009,7 +1009,7 @@ func loadBatchChange(ctx context.Context, tx getBatchChanger, id int64) (*btypes
 
 ```
 searchKey: reconciler.loadChangesetSource
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1020,7 +1020,7 @@ func loadChangesetSource(ctx context.Context, s *store.Store, sourcer sources.So
 
 ```
 searchKey: reconciler.loadChangesetSpecs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1031,7 +1031,7 @@ func loadChangesetSpecs(ctx context.Context, tx *store.Store, ch *btypes.Changes
 
 ```
 searchKey: reconciler.namespaceURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1042,7 +1042,7 @@ func namespaceURL(ns *database.Namespace) string
 
 ```
 searchKey: reconciler.reopenAfterDetach
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -178,10 +178,6 @@ Package printer implements printing of AST nodes.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="RawFormat" href="#RawFormat">const RawFormat</a>
 
 ```
@@ -539,10 +535,6 @@ const vtab = whiteSpace('\v')
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="aNewline" href="#aNewline">var aNewline</a>
 
 ```
@@ -623,10 +615,6 @@ var update = flag.Bool("update", false, "update golden files")
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="CommentedNode" href="#CommentedNode">type CommentedNode struct</a>
 
@@ -971,7 +959,7 @@ commentsHaveNewline reports whether a list of comments belonging to an *ast.Comm
 
 ```
 searchKey: printer.printer.containsLinebreak
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1105,7 +1093,7 @@ func (p *printer) file(src *ast.File)
 
 ```
 searchKey: printer.printer.fixGoBuildLines
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1295,7 +1283,7 @@ linesFrom returns the number of output lines between the current output line and
 
 ```
 searchKey: printer.printer.nextComment
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1550,7 +1538,7 @@ writeCommentSuffix writes a line break after a comment if indicated and processe
 
 ```
 searchKey: printer.printer.writeIndent
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1632,7 +1620,7 @@ func (p *trimmer) Write(data []byte) (n int, err error)
 
 ```
 searchKey: printer.trimmer.resetSpace
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1674,15 +1662,11 @@ type whiteSpace byte
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkPrint" href="#BenchmarkPrint">func BenchmarkPrint(b *testing.B)</a>
 
 ```
 searchKey: printer.BenchmarkPrint
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1693,7 +1677,7 @@ func BenchmarkPrint(b *testing.B)
 
 ```
 searchKey: printer.Fprint
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1706,7 +1690,7 @@ Fprint "pretty-prints" an AST node to output. It calls Config.Fprint with defaul
 
 ```
 searchKey: printer.TestBadComments
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1719,7 +1703,7 @@ Verify that the printer produces a correct program even if the position informat
 
 ```
 searchKey: printer.TestBadNodes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1732,7 +1716,7 @@ Verify that the printer doesn't crash if the AST contains BadXXX nodes.
 
 ```
 searchKey: printer.TestBaseIndent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1743,7 +1727,7 @@ func TestBaseIndent(t *testing.T)
 
 ```
 searchKey: printer.TestCommentedNode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1754,7 +1738,7 @@ func TestCommentedNode(t *testing.T)
 
 ```
 searchKey: printer.TestDeclLists
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1765,7 +1749,7 @@ func TestDeclLists(t *testing.T)
 
 ```
 searchKey: printer.TestFiles
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1776,7 +1760,7 @@ func TestFiles(t *testing.T)
 
 ```
 searchKey: printer.TestFuncType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1789,7 +1773,7 @@ TestFuncType tests that an ast.FuncType with a nil Params field can be printed (
 
 ```
 searchKey: printer.TestIssue11151
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1800,7 +1784,7 @@ func TestIssue11151(t *testing.T)
 
 ```
 searchKey: printer.TestIssue32854
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1813,7 +1797,7 @@ Verify that we don't print a newline between "return" and its results, as that w
 
 ```
 searchKey: printer.TestIssue5945
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1826,7 +1810,7 @@ Verify that the SourcePos mode doesn't emit unnecessary //line directives before
 
 ```
 searchKey: printer.TestLineComments
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1839,7 +1823,7 @@ TestLineComments, using a simple test case, checks that consecutive line comment
 
 ```
 searchKey: printer.TestParenthesizedDecl
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1852,7 +1836,7 @@ If a declaration has multiple specifications, a parenthesized declaration must b
 
 ```
 searchKey: printer.TestSourcePos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1865,7 +1849,7 @@ Verify that the SourcePos mode emits correct //line directives by testing that p
 
 ```
 searchKey: printer.TestStmtLists
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1876,7 +1860,7 @@ func TestStmtLists(t *testing.T)
 
 ```
 searchKey: printer.TestWriteErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1889,7 +1873,7 @@ Test whether the printer stops writing after the first error
 
 ```
 searchKey: printer.TestX
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1902,7 +1886,7 @@ TextX is a skeleton test that can be filled in for debugging one-off cases. Do n
 
 ```
 searchKey: printer.appendLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1915,7 +1899,7 @@ appendLines is like append(x, y...) but it avoids creating doubled blank lines, 
 
 ```
 searchKey: printer.check
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1926,7 +1910,7 @@ func check(t *testing.T, source, golden string, mode checkMode)
 
 ```
 searchKey: printer.commonPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1939,7 +1923,7 @@ commonPrefix returns the common prefix of a and b.
 
 ```
 searchKey: printer.cutoff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1950,7 +1934,7 @@ func cutoff(e *ast.BinaryExpr, depth int) int
 
 ```
 searchKey: printer.declToken
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1961,7 +1945,7 @@ func declToken(decl ast.Decl) (tok token.Token)
 
 ```
 searchKey: printer.diff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1974,7 +1958,7 @@ diff compares a and b.
 
 ```
 searchKey: printer.diffPrec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1985,7 +1969,7 @@ func diffPrec(expr ast.Expr, prec int) int
 
 ```
 searchKey: printer.format
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1998,7 +1982,7 @@ format parses src, prints the corresponding AST, verifies the resulting src is s
 
 ```
 searchKey: printer.getDoc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2011,7 +1995,7 @@ getNode returns the ast.CommentGroup associated with n, if any.
 
 ```
 searchKey: printer.getLastComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2022,7 +2006,7 @@ func getLastComment(n ast.Node) *ast.CommentGroup
 
 ```
 searchKey: printer.identCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2035,7 +2019,7 @@ identCount returns the number of identifiers found in f.
 
 ```
 searchKey: printer.identListSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2046,7 +2030,7 @@ func identListSize(list []*ast.Ident, maxSize int) (size int)
 
 ```
 searchKey: printer.idents
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2085,7 +2069,7 @@ cannot initialize in init because (printer) Fprint launches goroutines.
 
 ```
 searchKey: printer.isBinary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2096,7 +2080,7 @@ func isBinary(expr ast.Expr) bool
 
 ```
 searchKey: printer.isBlank
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2109,7 +2093,7 @@ Returns true if s contains only white space (only tabs and blanks can appear in 
 
 ```
 searchKey: printer.isNL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2120,7 +2104,7 @@ func isNL(b byte) bool
 
 ```
 searchKey: printer.isTypeName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2131,7 +2115,7 @@ func isTypeName(x ast.Expr) bool
 
 ```
 searchKey: printer.keepTypeColumn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2166,7 +2150,7 @@ leads to the type/values matrix below. A run of value columns (V) can be moved i
 
 ```
 searchKey: printer.lineAt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2179,7 +2163,7 @@ lineAt returns the line in text starting at offset offs.
 
 ```
 searchKey: printer.mayCombine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2190,7 +2174,7 @@ func mayCombine(prev token.Token, next byte) (b bool)
 
 ```
 searchKey: printer.nlimit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2203,7 +2187,7 @@ nlimit limits n to maxNewlines.
 
 ```
 searchKey: printer.normalizedNumber
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2218,7 +2202,7 @@ normalizedNumber doesn't modify the ast.BasicLit value lit points to. If lit is 
 
 ```
 searchKey: printer.reduceDepth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2229,7 +2213,7 @@ func reduceDepth(depth int) int
 
 ```
 searchKey: printer.runcheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2240,7 +2224,7 @@ func runcheck(t *testing.T, source, golden string, mode checkMode)
 
 ```
 searchKey: printer.sanitizeImportPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2251,7 +2235,7 @@ func sanitizeImportPath(lit *ast.BasicLit) *ast.BasicLit
 
 ```
 searchKey: printer.stripCommonPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2264,7 +2248,7 @@ stripCommonPrefix removes a common prefix from /*-style comment lines (unless no
 
 ```
 searchKey: printer.stripParens
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2275,7 +2259,7 @@ func stripParens(x ast.Expr) ast.Expr
 
 ```
 searchKey: printer.stripParensAlways
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2286,7 +2270,7 @@ func stripParensAlways(x ast.Expr) ast.Expr
 
 ```
 searchKey: printer.testComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2299,7 +2283,7 @@ testComment verifies that f can be parsed again after printing it with its first
 
 ```
 searchKey: printer.testprint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2310,7 +2294,7 @@ func testprint(out io.Writer, file *ast.File)
 
 ```
 searchKey: printer.trimRight
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2323,7 +2307,7 @@ trimRight returns s with trailing whitespace removed.
 
 ```
 searchKey: printer.walkBinary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

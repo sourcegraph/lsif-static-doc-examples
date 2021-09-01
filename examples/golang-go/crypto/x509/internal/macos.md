@@ -67,7 +67,7 @@ Package macOS provides cgo-less wrappers for Core Foundation and Security.framew
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SecTrustSettingsDomainAdmin" href="#SecTrustSettingsDomainAdmin">const SecTrustSettingsDomainAdmin</a>
@@ -227,7 +227,7 @@ const kSecFormatX509Cert int32 = 9
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrNoTrustSettings" href="#ErrNoTrustSettings">var ErrNoTrustSettings</a>
@@ -300,7 +300,7 @@ var SecTrustSettingsResultKey = StringToCFString("kSecTrustSettingsResult")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CFRef" href="#CFRef">type CFRef uintptr</a>
@@ -320,7 +320,7 @@ CFRef is an opaque reference to a Core Foundation object. It is a pointer, but t
 
 ```
 searchKey: macOS.CFArrayGetValueAtIndex
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -331,7 +331,7 @@ func CFArrayGetValueAtIndex(array CFRef, index int) CFRef
 
 ```
 searchKey: macOS.CFDictionaryGetValueIfPresent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -342,7 +342,7 @@ func CFDictionaryGetValueIfPresent(dict CFRef, key CFString) (value CFRef, ok bo
 
 ```
 searchKey: macOS.SecItemExport
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -353,7 +353,7 @@ func SecItemExport(cert CFRef) (data CFRef, err error)
 
 ```
 searchKey: macOS.SecPolicyCopyProperties
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -364,7 +364,7 @@ func SecPolicyCopyProperties(policy CFRef) CFRef
 
 ```
 searchKey: macOS.SecTrustSettingsCopyCertificates
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -375,7 +375,7 @@ func SecTrustSettingsCopyCertificates(domain SecTrustSettingsDomain) (certArray 
 
 ```
 searchKey: macOS.SecTrustSettingsCopyTrustSettings
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -397,7 +397,7 @@ type CFString CFRef
 
 ```
 searchKey: macOS.StringToCFString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -424,7 +424,7 @@ type OSStatus struct {
 
 ```
 searchKey: macOS.OSStatus.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -456,14 +456,14 @@ type SecTrustSettingsResult int32
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CFArrayGetCount" href="#CFArrayGetCount">func CFArrayGetCount(array CFRef) int</a>
 
 ```
 searchKey: macOS.CFArrayGetCount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -474,7 +474,7 @@ func CFArrayGetCount(array CFRef) int
 
 ```
 searchKey: macOS.CFDataGetBytePtr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -485,7 +485,7 @@ func CFDataGetBytePtr(data CFRef) uintptr
 
 ```
 searchKey: macOS.CFDataGetLength
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -496,7 +496,7 @@ func CFDataGetLength(data CFRef) int
 
 ```
 searchKey: macOS.CFDataToSlice
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -509,7 +509,7 @@ CFDataToSlice returns a copy of the contents of data as a bytes slice.
 
 ```
 searchKey: macOS.CFEqual
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -520,7 +520,7 @@ func CFEqual(a, b CFRef) bool
 
 ```
 searchKey: macOS.CFNumberGetValue
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -531,7 +531,7 @@ func CFNumberGetValue(num CFRef) (int32, error)
 
 ```
 searchKey: macOS.CFRelease
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -542,7 +542,7 @@ func CFRelease(ref CFRef)
 
 ```
 searchKey: macOS.syscall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

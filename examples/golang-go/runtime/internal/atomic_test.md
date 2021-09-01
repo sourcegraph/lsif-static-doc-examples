@@ -40,7 +40,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="sink" href="#sink">var sink</a>
@@ -57,14 +57,14 @@ var sink interface{}
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkAnd" href="#BenchmarkAnd">func BenchmarkAnd(b *testing.B)</a>
 
 ```
 searchKey: atomic_test.BenchmarkAnd
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -75,7 +75,7 @@ func BenchmarkAnd(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkAnd8
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -86,7 +86,7 @@ func BenchmarkAnd8(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkAnd8Parallel
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -97,7 +97,7 @@ func BenchmarkAnd8Parallel(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkAndParallel
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -108,7 +108,7 @@ func BenchmarkAndParallel(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkAtomicLoad
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -119,7 +119,7 @@ func BenchmarkAtomicLoad(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkAtomicLoad64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -130,7 +130,7 @@ func BenchmarkAtomicLoad64(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkAtomicStore
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -141,7 +141,7 @@ func BenchmarkAtomicStore(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkAtomicStore64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -152,7 +152,7 @@ func BenchmarkAtomicStore64(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkCas
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -163,7 +163,7 @@ func BenchmarkCas(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkCas64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -174,7 +174,7 @@ func BenchmarkCas64(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkOr
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -185,7 +185,7 @@ func BenchmarkOr(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkOr8
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -196,7 +196,7 @@ func BenchmarkOr8(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkOr8Parallel
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -207,7 +207,7 @@ func BenchmarkOr8Parallel(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkOrParallel
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -218,7 +218,7 @@ func BenchmarkOrParallel(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkXadd
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -229,7 +229,7 @@ func BenchmarkXadd(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkXadd64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -240,7 +240,7 @@ func BenchmarkXadd64(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkXchg
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -251,7 +251,7 @@ func BenchmarkXchg(b *testing.B)
 
 ```
 searchKey: atomic_test.BenchmarkXchg64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -262,7 +262,7 @@ func BenchmarkXchg64(b *testing.B)
 
 ```
 searchKey: atomic_test.TestAnd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -273,7 +273,7 @@ func TestAnd(t *testing.T)
 
 ```
 searchKey: atomic_test.TestAnd8
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -284,7 +284,7 @@ func TestAnd8(t *testing.T)
 
 ```
 searchKey: atomic_test.TestBitwiseContended
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -295,7 +295,7 @@ func TestBitwiseContended(t *testing.T)
 
 ```
 searchKey: atomic_test.TestBitwiseContended8
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ func TestBitwiseContended8(t *testing.T)
 
 ```
 searchKey: atomic_test.TestOr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -317,7 +317,7 @@ func TestOr(t *testing.T)
 
 ```
 searchKey: atomic_test.TestOr8
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -328,7 +328,7 @@ func TestOr8(t *testing.T)
 
 ```
 searchKey: atomic_test.TestStorepNoWB
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -339,7 +339,7 @@ func TestStorepNoWB(t *testing.T)
 
 ```
 searchKey: atomic_test.TestUnaligned64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -352,7 +352,7 @@ Variant of sync/atomic's TestUnaligned64:
 
 ```
 searchKey: atomic_test.TestXadduintptr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -363,7 +363,7 @@ func TestXadduintptr(t *testing.T)
 
 ```
 searchKey: atomic_test.TestXadduintptrOnUint64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -376,7 +376,7 @@ Tests that xadduintptr correctly updates 64-bit values. The place where we actua
 
 ```
 searchKey: atomic_test.runParallel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -387,7 +387,7 @@ func runParallel(N, iter int, f func())
 
 ```
 searchKey: atomic_test.shouldPanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

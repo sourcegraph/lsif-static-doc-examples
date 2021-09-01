@@ -47,7 +47,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="dsn" href="#dsn">var dsn</a>
@@ -77,7 +77,7 @@ This error is passed to txstore.Done in order to always roll-back the transactio
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="fakeRepoSyncHandler" href="#fakeRepoSyncHandler">type fakeRepoSyncHandler struct</a>
@@ -107,14 +107,14 @@ func (h *fakeRepoSyncHandler) Handle(ctx context.Context, tx dbws.Store, record 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestDiff" href="#TestDiff">func TestDiff(t *testing.T)</a>
 
 ```
 searchKey: repos_test.TestDiff
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -125,7 +125,7 @@ func TestDiff(t *testing.T)
 
 ```
 searchKey: repos_test.TestIntegration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -136,7 +136,7 @@ func TestIntegration(t *testing.T)
 
 ```
 searchKey: repos_test.assertDeletedRepoCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -147,7 +147,7 @@ func assertDeletedRepoCount(ctx context.Context, t *testing.T, db *sql.DB, want 
 
 ```
 searchKey: repos_test.assertSourceCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -158,7 +158,7 @@ func assertSourceCount(ctx context.Context, t *testing.T, db *sql.DB, want int)
 
 ```
 searchKey: repos_test.createExternalServices
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -169,7 +169,7 @@ func createExternalServices(t *testing.T, store *repos.Store) map[string]*types.
 
 ```
 searchKey: repos_test.generateExternalServices
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -180,7 +180,7 @@ func generateExternalServices(n int, base ...*types.ExternalService) types.Exter
 
 ```
 searchKey: repos_test.hasID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -191,7 +191,7 @@ func hasID(ids ...api.RepoID) func(r *types.Repo) bool
 
 ```
 searchKey: repos_test.hasNoID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -202,7 +202,7 @@ func hasNoID(r *types.Repo) bool
 
 ```
 searchKey: repos_test.insertTestUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -213,7 +213,7 @@ func insertTestUser(t *testing.T, db *sql.DB) (userID int32)
 
 ```
 searchKey: repos_test.mkExternalServices
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -224,7 +224,7 @@ func mkExternalServices(now time.Time) types.ExternalServices
 
 ```
 searchKey: repos_test.mkRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -235,7 +235,7 @@ func mkRepos(n int, base ...*types.Repo) types.Repos
 
 ```
 searchKey: repos_test.testConflictingSyncers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -246,7 +246,7 @@ func testConflictingSyncers(db *sql.DB) func(t *testing.T, store *repos.Store) f
 
 ```
 searchKey: repos_test.testDeleteExternalService
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -257,7 +257,7 @@ func testDeleteExternalService(db *sql.DB) func(t *testing.T, store *repos.Store
 
 ```
 searchKey: repos_test.testNameOnConflictDiscardNew
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -268,7 +268,7 @@ func testNameOnConflictDiscardNew(db *sql.DB) func(t *testing.T, store *repos.St
 
 ```
 searchKey: repos_test.testNameOnConflictDiscardOld
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -279,7 +279,7 @@ func testNameOnConflictDiscardOld(db *sql.DB) func(t *testing.T, store *repos.St
 
 ```
 searchKey: repos_test.testNameOnConflictOnRename
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -290,7 +290,7 @@ func testNameOnConflictOnRename(db *sql.DB) func(t *testing.T, store *repos.Stor
 
 ```
 searchKey: repos_test.testOrphanedRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -301,7 +301,7 @@ func testOrphanedRepo(db *sql.DB) func(t *testing.T, store *repos.Store) func(t 
 
 ```
 searchKey: repos_test.testStoreCountNotClonedRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -312,7 +312,7 @@ func testStoreCountNotClonedRepos(t *testing.T, store *repos.Store) func(*testin
 
 ```
 searchKey: repos_test.testStoreEnqueueSingleSyncJob
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -323,7 +323,7 @@ func testStoreEnqueueSingleSyncJob(db *sql.DB) func(t *testing.T, store *repos.S
 
 ```
 searchKey: repos_test.testStoreEnqueueSyncJobs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -334,7 +334,7 @@ func testStoreEnqueueSyncJobs(db *sql.DB, store *repos.Store) func(t *testing.T,
 
 ```
 searchKey: repos_test.testStoreListExternalRepoSpecs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -345,7 +345,7 @@ func testStoreListExternalRepoSpecs(db *sql.DB) func(t *testing.T, repoStore *re
 
 ```
 searchKey: repos_test.testStoreSetClonedRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -356,7 +356,7 @@ func testStoreSetClonedRepos(t *testing.T, store *repos.Store) func(*testing.T)
 
 ```
 searchKey: repos_test.testStoreUpsertRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -367,7 +367,7 @@ func testStoreUpsertRepos(t *testing.T, store *repos.Store) func(*testing.T)
 
 ```
 searchKey: repos_test.testStoreUpsertSources
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -378,7 +378,7 @@ func testStoreUpsertSources(t *testing.T, store *repos.Store) func(*testing.T)
 
 ```
 searchKey: repos_test.testSyncRateLimiters
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -389,7 +389,7 @@ func testSyncRateLimiters(t *testing.T, store *repos.Store) func(*testing.T)
 
 ```
 searchKey: repos_test.testSyncRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -400,7 +400,7 @@ func testSyncRepo(t *testing.T, s *repos.Store) func(*testing.T)
 
 ```
 searchKey: repos_test.testSyncRepoMaintainsOtherSources
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -413,7 +413,7 @@ Test that sync repo does not clear out any other repo relationships
 
 ```
 searchKey: repos_test.testSyncRun
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -424,7 +424,7 @@ func testSyncRun(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *test
 
 ```
 searchKey: repos_test.testSyncWorkerPlumbing
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -435,7 +435,7 @@ func testSyncWorkerPlumbing(db *sql.DB) func(t *testing.T, repoStore *repos.Stor
 
 ```
 searchKey: repos_test.testSyncer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -446,7 +446,7 @@ func testSyncer(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testi
 
 ```
 searchKey: repos_test.testSyncerSync
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -457,7 +457,7 @@ func testSyncerSync(t *testing.T, s *repos.Store) func(*testing.T)
 
 ```
 searchKey: repos_test.testUserAddedRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -468,7 +468,7 @@ func testUserAddedRepos(db *sql.DB, userID int32) func(t *testing.T, store *repo
 
 ```
 searchKey: repos_test.transact
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

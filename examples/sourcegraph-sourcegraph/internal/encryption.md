@@ -35,7 +35,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockGenerateRSAKey" href="#MockGenerateRSAKey">var MockGenerateRSAKey</a>
@@ -54,7 +54,7 @@ MockGenerateRSAKey can be used in tests to speed up key generation.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Decrypter" href="#Decrypter">type Decrypter interface</a>
@@ -127,7 +127,7 @@ type KeyVersion struct {
 
 ```
 searchKey: encryption.KeyVersion.JSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -225,7 +225,7 @@ Secret is a utility type to make it harder to accidentally leak secret values in
 
 ```
 searchKey: encryption.NewSecret
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -236,7 +236,7 @@ func NewSecret(v string) Secret
 
 ```
 searchKey: encryption.Secret.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -249,7 +249,7 @@ MarshalJSON overrides the default JSON marshaling implementation, obfuscating th
 
 ```
 searchKey: encryption.Secret.Secret
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -262,7 +262,7 @@ Secret returns the unobfuscated value
 
 ```
 searchKey: encryption.Secret.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -274,14 +274,14 @@ String implements stringer, obfuscating the value
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestGenerateKey" href="#TestGenerateKey">func TestGenerateKey(t *testing.T)</a>
 
 ```
 searchKey: encryption.TestGenerateKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

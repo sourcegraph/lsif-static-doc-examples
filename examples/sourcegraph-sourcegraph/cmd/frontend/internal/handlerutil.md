@@ -27,7 +27,7 @@ Package handlerutil contains common helper functions used by both the app and AP
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ravenClient" href="#ravenClient">var ravenClient</a>
@@ -44,7 +44,7 @@ var ravenClient *raven.Client
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="HandlerWithErrorReturn" href="#HandlerWithErrorReturn">type HandlerWithErrorReturn struct</a>
@@ -97,7 +97,7 @@ URLMovedError should be returned when a requested resource has moved to a new ad
 
 ```
 searchKey: handlerutil.URLMovedError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -107,14 +107,14 @@ func (e *URLMovedError) Error() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CSRFMiddleware" href="#CSRFMiddleware">func CSRFMiddleware(next http.Handler, isSecure func() bool) http.Handler</a>
 
 ```
 searchKey: handlerutil.CSRFMiddleware
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -127,7 +127,7 @@ CSRFMiddleware is HTTP middleware that helps prevent cross-site request forgery.
 
 ```
 searchKey: handlerutil.GetRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -140,7 +140,7 @@ GetRepo gets the repo (from the reposSvc) specified in the URL's Repo route para
 
 ```
 searchKey: handlerutil.GetRepoAndRev
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -153,7 +153,7 @@ GetRepoAndRev returns the repo object and the commit ID for a repository. It may
 
 ```
 searchKey: handlerutil.RedirectToNewRepoName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -166,7 +166,7 @@ RedirectToNewRepoName writes an HTTP redirect response with a Location that matc
 
 ```
 searchKey: handlerutil.TestGetRepo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -177,7 +177,7 @@ func TestGetRepo(t *testing.T)
 
 ```
 searchKey: handlerutil.collapseMultipleErrors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -190,7 +190,7 @@ collapseMultipleErrors returns the first err if err is a parallel.Errors list of
 
 ```
 searchKey: handlerutil.getRepoRev
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -203,7 +203,7 @@ getRepoRev resolves the repository and commit specified in the route vars.
 
 ```
 searchKey: handlerutil.httpErrCode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -227,7 +227,7 @@ func init()
 
 ```
 searchKey: handlerutil.reportError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

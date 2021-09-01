@@ -41,7 +41,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="maxNumParameters" href="#maxNumParameters">const maxNumParameters</a>
@@ -60,7 +60,7 @@ maxNumPostgresParameters is the maximum number of placeholder variables allowed 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="querySuffixCache" href="#querySuffixCache">var querySuffixCache</a>
@@ -99,7 +99,7 @@ var setup sync.Once
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Inserter" href="#Inserter">type Inserter struct</a>
@@ -128,7 +128,7 @@ Inserter allows for bulk updates to a single Postgres table.
 
 ```
 searchKey: batch.NewInserter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -141,7 +141,7 @@ NewInserter creates a new batch inserter using the given database handle, table 
 
 ```
 searchKey: batch.NewInserterWithReturn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -200,7 +200,7 @@ makeQuery returns a parameterized SQL query that has the given number of values 
 
 ```
 searchKey: batch.Inserter.pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -223,14 +223,14 @@ type ReturningScanner func(rows *sql.Rows) error
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkBatchInserter" href="#BenchmarkBatchInserter">func BenchmarkBatchInserter(b *testing.B)</a>
 
 ```
 searchKey: batch.BenchmarkBatchInserter
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -241,7 +241,7 @@ func BenchmarkBatchInserter(b *testing.B)
 
 ```
 searchKey: batch.BenchmarkBatchInserterLargePayload
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -252,7 +252,7 @@ func BenchmarkBatchInserterLargePayload(b *testing.B)
 
 ```
 searchKey: batch.InsertValues
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -265,7 +265,7 @@ InsertValues creates a new batch inserter using the given database handle, table
 
 ```
 searchKey: batch.TestBatchInserter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -276,7 +276,7 @@ func TestBatchInserter(t *testing.T)
 
 ```
 searchKey: batch.TestBatchInserterWithReturn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -287,7 +287,7 @@ func TestBatchInserterWithReturn(t *testing.T)
 
 ```
 searchKey: batch.WithInserter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ WithInserter creates a new batch inserter using the given database handle, table
 
 ```
 searchKey: batch.WithInserterWithReturn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -327,7 +327,7 @@ WithInserterWithReturn creates a new batch inserter using the given database han
 
 ```
 searchKey: batch.getMaxBatchSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -351,7 +351,7 @@ func init()
 
 ```
 searchKey: batch.makePayload
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -362,7 +362,7 @@ func makePayload(size int) string
 
 ```
 searchKey: batch.makeQueryPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -375,7 +375,7 @@ makeQueryPrefix creates the prefix of the batch insert statement (up to `VALUES 
 
 ```
 searchKey: batch.makeQuerySuffix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -392,7 +392,7 @@ This method is memoized.
 
 ```
 searchKey: batch.makeReturningSuffix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -405,7 +405,7 @@ makeReturningSuffix creates a RETURNING ... clause of the batch insert statement
 
 ```
 searchKey: batch.makeTestValues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -416,7 +416,7 @@ func makeTestValues(tableSizeFactor, payloadSize int) [][]interface{}
 
 ```
 searchKey: batch.setupTestTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -427,7 +427,7 @@ func setupTestTable(t testing.TB, db *sql.DB)
 
 ```
 searchKey: batch.testInsert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -438,7 +438,7 @@ func testInsert(t testing.TB, db *sql.DB, expectedValues [][]interface{})
 
 ```
 searchKey: batch.testInsertWithReturn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -449,7 +449,7 @@ func testInsertWithReturn(t testing.TB, db *sql.DB, expectedValues [][]interface
 
 ```
 searchKey: batch.with
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

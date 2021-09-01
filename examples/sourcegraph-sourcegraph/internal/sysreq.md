@@ -23,7 +23,7 @@ Package sysreq implements checking for Sourcegraph system requirements.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="checks" href="#checks">var checks</a>
@@ -45,7 +45,7 @@ var checks = []check{
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CheckFunc" href="#CheckFunc">type CheckFunc func(context.Context) (problem string, fix string, err error)</a>
@@ -84,7 +84,7 @@ Status describes the status of a system requirement.
 
 ```
 searchKey: sysreq.Status.Failed
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -95,7 +95,7 @@ func (s *Status) Failed() bool
 
 ```
 searchKey: sysreq.Status.OK
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -121,14 +121,14 @@ type check struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AddCheck" href="#AddCheck">func AddCheck(name string, fn CheckFunc)</a>
 
 ```
 searchKey: sysreq.AddCheck
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -141,7 +141,7 @@ AddCheck adds a new check that will be run when this package's Check func is cal
 
 ```
 searchKey: sysreq.Check
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -154,7 +154,7 @@ Check checks for the presence of system requirements, such as Docker and Git. Th
 
 ```
 searchKey: sysreq.TestCheck
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -165,7 +165,7 @@ func TestCheck(t *testing.T)
 
 ```
 searchKey: sysreq.TestCheck_skip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -176,7 +176,7 @@ func TestCheck_skip(t *testing.T)
 
 ```
 searchKey: sysreq.rlimitCheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

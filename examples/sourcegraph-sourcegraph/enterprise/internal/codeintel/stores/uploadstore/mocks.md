@@ -71,7 +71,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockStore" href="#MockStore">type MockStore struct</a>
@@ -120,7 +120,7 @@ NewMockStore creates a new mock of the Store interface. All methods return zero 
 
 ```
 searchKey: mocks.NewMockStoreFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -216,7 +216,7 @@ StoreComposeFunc describes the behavior when the Compose method of the parent Mo
 
 ```
 searchKey: mocks.StoreComposeFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -292,7 +292,7 @@ func (f *StoreComposeFunc) appendCall(r0 StoreComposeFuncCall)
 
 ```
 searchKey: mocks.StoreComposeFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -332,7 +332,7 @@ StoreComposeFuncCall is an object that describes an invocation of method Compose
 
 ```
 searchKey: mocks.StoreComposeFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -345,7 +345,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: mocks.StoreComposeFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -376,7 +376,7 @@ StoreDeleteFunc describes the behavior when the Delete method of the parent Mock
 
 ```
 searchKey: mocks.StoreDeleteFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -452,7 +452,7 @@ func (f *StoreDeleteFunc) appendCall(r0 StoreDeleteFuncCall)
 
 ```
 searchKey: mocks.StoreDeleteFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -486,7 +486,7 @@ StoreDeleteFuncCall is an object that describes an invocation of method Delete o
 
 ```
 searchKey: mocks.StoreDeleteFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -499,7 +499,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreDeleteFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -530,7 +530,7 @@ StoreGetFunc describes the behavior when the Get method of the parent MockStore 
 
 ```
 searchKey: mocks.StoreGetFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -606,7 +606,7 @@ func (f *StoreGetFunc) appendCall(r0 StoreGetFuncCall)
 
 ```
 searchKey: mocks.StoreGetFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -643,7 +643,7 @@ StoreGetFuncCall is an object that describes an invocation of method Get on an i
 
 ```
 searchKey: mocks.StoreGetFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -656,7 +656,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreGetFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -687,7 +687,7 @@ StoreInitFunc describes the behavior when the Init method of the parent MockStor
 
 ```
 searchKey: mocks.StoreInitFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -763,7 +763,7 @@ func (f *StoreInitFunc) appendCall(r0 StoreInitFuncCall)
 
 ```
 searchKey: mocks.StoreInitFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -794,7 +794,7 @@ StoreInitFuncCall is an object that describes an invocation of method Init on an
 
 ```
 searchKey: mocks.StoreInitFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -807,7 +807,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreInitFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -838,7 +838,7 @@ StoreUploadFunc describes the behavior when the Upload method of the parent Mock
 
 ```
 searchKey: mocks.StoreUploadFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -914,7 +914,7 @@ func (f *StoreUploadFunc) appendCall(r0 StoreUploadFuncCall)
 
 ```
 searchKey: mocks.StoreUploadFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -954,7 +954,7 @@ StoreUploadFuncCall is an object that describes an invocation of method Upload o
 
 ```
 searchKey: mocks.StoreUploadFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -967,7 +967,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreUploadFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go

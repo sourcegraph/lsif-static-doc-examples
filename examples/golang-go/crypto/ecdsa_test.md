@@ -11,7 +11,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Example" href="#Example">func Example()</a>
@@ -29,7 +29,7 @@ func Example()
 
 ```
 searchKey: ecdsa_test.TestEqual
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -40,7 +40,7 @@ func TestEqual(t *testing.T)
 
 ```
 searchKey: ecdsa_test.testEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

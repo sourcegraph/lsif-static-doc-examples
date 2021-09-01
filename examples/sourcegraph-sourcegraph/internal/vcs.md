@@ -36,7 +36,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="formatLocal" href="#formatLocal">const formatLocal</a>
@@ -114,7 +114,7 @@ usernameRe is the regexp for the username part in a repo URL. Eg: sourcegraph@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="schemes" href="#schemes">var schemes</a>
@@ -144,7 +144,7 @@ scpSyntax was modified from [https://golang.org/src/cmd/go/vcs.go](https://golan
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="RepoNotExistError" href="#RepoNotExistError">type RepoNotExistError struct</a>
@@ -172,7 +172,7 @@ RepoNotExistError is an error that reports a repository doesn't exist.
 
 ```
 searchKey: vcs.RepoNotExistError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -183,7 +183,7 @@ func (e *RepoNotExistError) Error() string
 
 ```
 searchKey: vcs.RepoNotExistError.NotFound
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -211,7 +211,7 @@ URL wraps url.URL to provide rsync format compatible `String()` functionality. e
 
 ```
 searchKey: vcs.ParseURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -226,7 +226,7 @@ Code copied and modified from github.com/whilp/git-urls to support perforce sche
 
 ```
 searchKey: vcs.parseLocal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -239,7 +239,7 @@ parseLocal parses rawurl into a URL object with a "file" scheme. This will effec
 
 ```
 searchKey: vcs.parseScheme
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -250,7 +250,7 @@ func parseScheme(rawurl string) (*URL, error)
 
 ```
 searchKey: vcs.parseScp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -263,7 +263,7 @@ parseScp parses rawurl into a URL object. The rawurl must be an SCP-like URL, ot
 
 ```
 searchKey: vcs.URL.IsSSH
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -276,7 +276,7 @@ IsSSH returns whether this URL is SSH based, which for vcs.URL means if the sche
 
 ```
 searchKey: vcs.URL.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -299,14 +299,14 @@ type urlFormat int
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="IsCloneInProgress" href="#IsCloneInProgress">func IsCloneInProgress(err error) bool</a>
 
 ```
 searchKey: vcs.IsCloneInProgress
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -319,7 +319,7 @@ IsCloneInProgress reports if err is a RepoNotExistError which has a clone in pro
 
 ```
 searchKey: vcs.IsRepoNotExist
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -332,7 +332,7 @@ IsRepoNotExist reports if err is a RepoNotExistError.
 
 ```
 searchKey: vcs.TestParseURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

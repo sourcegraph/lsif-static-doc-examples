@@ -469,10 +469,6 @@ Note: Fscan etc. can read one character (rune) past the input they return, which
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="badIndexString" href="#badIndexString">const badIndexString</a>
 
 ```
@@ -847,10 +843,6 @@ const unsigned = false
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="IsSpace" href="#IsSpace">var IsSpace</a>
 
 ```
@@ -935,10 +927,6 @@ var ssFree = sync.Pool{
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Formatter" href="#Formatter">type Formatter interface</a>
 
@@ -1149,7 +1137,7 @@ A fmt is the raw formatter used by Printf etc. It prints into a buffer that must
 
 ```
 searchKey: fmt.fmt.clearflags
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1480,7 +1468,7 @@ func (p *pp) Flag(b int) bool
 
 ```
 searchKey: fmt.pp.Precision
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1491,7 +1479,7 @@ func (p *pp) Precision() (prec int, ok bool)
 
 ```
 searchKey: fmt.pp.Width
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1705,7 +1693,7 @@ func (p *pp) fmtString(v string, verb rune)
 
 ```
 searchKey: fmt.pp.free
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1794,7 +1782,7 @@ readRune is a structure to enable reading UTF-8 encoded code points from an io.R
 
 ```
 searchKey: fmt.readRune.ReadRune
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1807,7 +1795,7 @@ ReadRune returns the next UTF-8 encoded code point from the io.Reader inside r.
 
 ```
 searchKey: fmt.readRune.UnreadRune
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1818,7 +1806,7 @@ func (r *readRune) UnreadRune() error
 
 ```
 searchKey: fmt.readRune.readByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1865,7 +1853,7 @@ ss is the internal implementation of ScanState.
 
 ```
 searchKey: fmt.newScanState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1891,7 +1879,7 @@ The Read method is only in ScanState so that ScanState satisfies io.Reader. It w
 
 ```
 searchKey: fmt.ss.ReadRune
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1902,7 +1890,7 @@ func (s *ss) ReadRune() (r rune, size int, err error)
 
 ```
 searchKey: fmt.ss.SkipSpace
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1926,7 +1914,7 @@ func (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []byte, err error)
 
 ```
 searchKey: fmt.ss.UnreadRune
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1937,7 +1925,7 @@ func (s *ss) UnreadRune() error
 
 ```
 searchKey: fmt.ss.Width
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1974,7 +1962,7 @@ advance determines whether the next characters in the input match those of the f
 
 ```
 searchKey: fmt.ss.complexTokens
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2074,7 +2062,7 @@ func (s *ss) errorString(err string)
 
 ```
 searchKey: fmt.ss.floatToken
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2113,7 +2101,7 @@ getBase returns the numeric base represented by the verb and its digit string.
 
 ```
 searchKey: fmt.ss.getRune
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2126,7 +2114,7 @@ The public method returns an error; this private one panics. If getRune reaches 
 
 ```
 searchKey: fmt.ss.hexByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2139,7 +2127,7 @@ hexByte returns the next hex-encoded (two-character) byte from the input. It ret
 
 ```
 searchKey: fmt.ss.hexString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2152,7 +2140,7 @@ hexString returns the space-delimited hexpair-encoded string.
 
 ```
 searchKey: fmt.ss.mustReadRune
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2165,7 +2153,7 @@ mustReadRune turns io.EOF into a panic(io.ErrUnexpectedEOF). It is called in cas
 
 ```
 searchKey: fmt.ss.notEOF
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2202,7 +2190,7 @@ peek reports whether the next character is in the ok string, without consuming i
 
 ```
 searchKey: fmt.ss.quotedString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2215,7 +2203,7 @@ quotedString returns the double- or back-quoted string represented by the next i
 
 ```
 searchKey: fmt.ss.scanBasePrefix
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2293,7 +2281,7 @@ scanOne scans a single value, deriving the scanner from the type of the argument
 
 ```
 searchKey: fmt.ss.scanPercent
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2401,7 +2389,7 @@ type wrapError struct {
 
 ```
 searchKey: fmt.wrapError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2412,7 +2400,7 @@ func (e *wrapError) Error() string
 
 ```
 searchKey: fmt.wrapError.Unwrap
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2421,15 +2409,11 @@ func (e *wrapError) Unwrap() error
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Errorf" href="#Errorf">func Errorf(format string, a ...interface{}) error</a>
 
 ```
 searchKey: fmt.Errorf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2444,7 +2428,7 @@ If the format specifier includes a %w verb with an error operand, the returned e
 
 ```
 searchKey: fmt.Fprint
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2457,7 +2441,7 @@ Fprint formats using the default formats for its operands and writes to w. Space
 
 ```
 searchKey: fmt.Fprintf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2470,7 +2454,7 @@ Fprintf formats according to a format specifier and writes to w. It returns the 
 
 ```
 searchKey: fmt.Fprintln
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2483,7 +2467,7 @@ Fprintln formats using the default formats for its operands and writes to w. Spa
 
 ```
 searchKey: fmt.Fscan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2496,7 +2480,7 @@ Fscan scans text read from r, storing successive space-separated values into suc
 
 ```
 searchKey: fmt.Fscanf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2509,7 +2493,7 @@ Fscanf scans text read from r, storing successive space-separated values into su
 
 ```
 searchKey: fmt.Fscanln
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2522,7 +2506,7 @@ Fscanln is similar to Fscan, but stops scanning at a newline and after the final
 
 ```
 searchKey: fmt.Print
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2535,7 +2519,7 @@ Print formats using the default formats for its operands and writes to standard 
 
 ```
 searchKey: fmt.Printf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2548,7 +2532,7 @@ Printf formats according to a format specifier and writes to standard output. It
 
 ```
 searchKey: fmt.Println
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2561,7 +2545,7 @@ Println formats using the default formats for its operands and writes to standar
 
 ```
 searchKey: fmt.Scan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2574,7 +2558,7 @@ Scan scans text read from standard input, storing successive space-separated val
 
 ```
 searchKey: fmt.Scanf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2587,7 +2571,7 @@ Scanf scans text read from standard input, storing successive space-separated va
 
 ```
 searchKey: fmt.Scanln
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2600,7 +2584,7 @@ Scanln is similar to Scan, but stops scanning at a newline and after the final i
 
 ```
 searchKey: fmt.Sprint
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2613,7 +2597,7 @@ Sprint formats using the default formats for its operands and returns the result
 
 ```
 searchKey: fmt.Sprintf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2626,7 +2610,7 @@ Sprintf formats according to a format specifier and returns the resulting string
 
 ```
 searchKey: fmt.Sprintln
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2639,7 +2623,7 @@ Sprintln formats using the default formats for its operands and returns the resu
 
 ```
 searchKey: fmt.Sscan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2652,7 +2636,7 @@ Sscan scans the argument string, storing successive space-separated values into 
 
 ```
 searchKey: fmt.Sscanf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2665,7 +2649,7 @@ Sscanf scans the argument string, storing successive space-separated values into
 
 ```
 searchKey: fmt.Sscanln
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2678,7 +2662,7 @@ Sscanln is similar to Sscan, but stops scanning at a newline and after the final
 
 ```
 searchKey: fmt.errorHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2691,7 +2675,7 @@ errorHandler turns local panics into error returns.
 
 ```
 searchKey: fmt.getField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2704,7 +2688,7 @@ getField gets the i'th field of the struct value. If the field is itself is an i
 
 ```
 searchKey: fmt.hasX
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2715,7 +2699,7 @@ func hasX(s string) bool
 
 ```
 searchKey: fmt.hexDigit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2728,7 +2712,7 @@ hexDigit returns the value of the hexadecimal digit.
 
 ```
 searchKey: fmt.indexRune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2739,7 +2723,7 @@ func indexRune(s string, r rune) int
 
 ```
 searchKey: fmt.intFromArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2752,7 +2736,7 @@ intFromArg gets the argNumth element of a. On return, isInt reports whether the 
 
 ```
 searchKey: fmt.isSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2763,7 +2747,7 @@ func isSpace(r rune) bool
 
 ```
 searchKey: fmt.notSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2776,7 +2760,7 @@ notSpace is the default scanning function used in Token.
 
 ```
 searchKey: fmt.parseArgNumber
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2789,7 +2773,7 @@ parseArgNumber returns the value of the bracketed number, minus 1 (explicit argu
 
 ```
 searchKey: fmt.parsenum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2802,7 +2786,7 @@ parsenum converts ASCII to integer.  num is 0 (and isnum is false) if no number 
 
 ```
 searchKey: fmt.tooLarge
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -91,10 +91,6 @@ See "The Go image/draw package" for an introduction to this package: [https://go
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Over" href="#Over">const Over</a>
 
 ```
@@ -180,10 +176,6 @@ const srcw, srch = 400, 300
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="FloydSteinberg" href="#FloydSteinberg">var FloydSteinberg</a>
 
 ```
@@ -235,10 +227,6 @@ var palette = color.Palette{
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Drawer" href="#Drawer">type Drawer interface</a>
 
 ```
@@ -276,7 +264,7 @@ Image is an image.Image with a Set method to change a single pixel.
 
 ```
 searchKey: draw.gradYellow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -287,7 +275,7 @@ func gradYellow(alpha int) Image
 
 ```
 searchKey: draw.hgradRed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -428,15 +416,11 @@ func (floydSteinberg) Draw(dst Image, r image.Rectangle, src image.Image, sp ima
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkCMYK" href="#BenchmarkCMYK">func BenchmarkCMYK(b *testing.B)</a>
 
 ```
 searchKey: draw.BenchmarkCMYK
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -447,7 +431,7 @@ func BenchmarkCMYK(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkCopyOver
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -458,7 +442,7 @@ func BenchmarkCopyOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkCopySrc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -469,7 +453,7 @@ func BenchmarkCopySrc(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkFillOver
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -480,7 +464,7 @@ func BenchmarkFillOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkFillSrc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -491,7 +475,7 @@ func BenchmarkFillSrc(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGenericMaskOver
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -502,7 +486,7 @@ func BenchmarkGenericMaskOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGenericMaskSrc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -513,7 +497,7 @@ func BenchmarkGenericMaskSrc(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGenericOver
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -524,7 +508,7 @@ func BenchmarkGenericOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGenericSrc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -535,7 +519,7 @@ func BenchmarkGenericSrc(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGlyphOver
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -546,7 +530,7 @@ func BenchmarkGlyphOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkGray
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -557,7 +541,7 @@ func BenchmarkGray(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkNRGBAOver
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -568,7 +552,7 @@ func BenchmarkNRGBAOver(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkNRGBASrc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -579,7 +563,7 @@ func BenchmarkNRGBASrc(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkPalettedFill
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -590,7 +574,7 @@ func BenchmarkPalettedFill(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkPalettedRGBA
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -601,7 +585,7 @@ func BenchmarkPalettedRGBA(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkRGBA
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -612,7 +596,7 @@ func BenchmarkRGBA(b *testing.B)
 
 ```
 searchKey: draw.BenchmarkYCbCr
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -623,7 +607,7 @@ func BenchmarkYCbCr(b *testing.B)
 
 ```
 searchKey: draw.Draw
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -636,7 +620,7 @@ Draw calls DrawMask with a nil mask.
 
 ```
 searchKey: draw.DrawMask
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -649,7 +633,7 @@ DrawMask aligns r.Min in dst with sp in src and mp in mask and then replaces the
 
 ```
 searchKey: draw.TestClip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -660,7 +644,7 @@ func TestClip(t *testing.T)
 
 ```
 searchKey: draw.TestDraw
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -671,7 +655,7 @@ func TestDraw(t *testing.T)
 
 ```
 searchKey: draw.TestDrawOverlap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -682,7 +666,7 @@ func TestDrawOverlap(t *testing.T)
 
 ```
 searchKey: draw.TestFill
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -693,7 +677,7 @@ func TestFill(t *testing.T)
 
 ```
 searchKey: draw.TestFloydSteinbergCheckerboard
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -706,7 +690,7 @@ TestFloydSteinbergCheckerboard tests that the result of Floyd-Steinberg error di
 
 ```
 searchKey: draw.TestNonZeroSrcPt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -719,7 +703,7 @@ TestNonZeroSrcPt checks drawing with a non-zero src point parameter.
 
 ```
 searchKey: draw.TestPaletted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -732,7 +716,7 @@ TestPaletted tests that the drawPaletted function behaves the same regardless of
 
 ```
 searchKey: draw.TestSqDiff
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -743,7 +727,7 @@ func TestSqDiff(t *testing.T)
 
 ```
 searchKey: draw.bench
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -756,7 +740,7 @@ bench benchmarks drawing src and mask images onto a dst image with the given op 
 
 ```
 searchKey: draw.clamp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -769,7 +753,7 @@ clamp clamps i to the interval [0, 0xffff].
 
 ```
 searchKey: draw.clip
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -782,7 +766,7 @@ clip clips r against each image's bounds (after translating into the destination
 
 ```
 searchKey: draw.drawCMYK
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -793,7 +777,7 @@ func drawCMYK(dst *image.RGBA, r image.Rectangle, src *image.CMYK, sp image.Poin
 
 ```
 searchKey: draw.drawCopyOver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -804,7 +788,7 @@ func drawCopyOver(dst *image.RGBA, r image.Rectangle, src *image.RGBA, sp image.
 
 ```
 searchKey: draw.drawCopySrc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -815,7 +799,7 @@ func drawCopySrc(dst *image.RGBA, r image.Rectangle, src *image.RGBA, sp image.P
 
 ```
 searchKey: draw.drawFillOver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -826,7 +810,7 @@ func drawFillOver(dst *image.RGBA, r image.Rectangle, sr, sg, sb, sa uint32)
 
 ```
 searchKey: draw.drawFillSrc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -837,7 +821,7 @@ func drawFillSrc(dst *image.RGBA, r image.Rectangle, sr, sg, sb, sa uint32)
 
 ```
 searchKey: draw.drawGlyphOver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -848,7 +832,7 @@ func drawGlyphOver(dst *image.RGBA, r image.Rectangle, src *image.Uniform, mask 
 
 ```
 searchKey: draw.drawGray
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -859,7 +843,7 @@ func drawGray(dst *image.RGBA, r image.Rectangle, src *image.Gray, sp image.Poin
 
 ```
 searchKey: draw.drawNRGBAOver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -870,7 +854,7 @@ func drawNRGBAOver(dst *image.RGBA, r image.Rectangle, src *image.NRGBA, sp imag
 
 ```
 searchKey: draw.drawNRGBASrc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -881,7 +865,7 @@ func drawNRGBASrc(dst *image.RGBA, r image.Rectangle, src *image.NRGBA, sp image
 
 ```
 searchKey: draw.drawPaletted
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -892,7 +876,7 @@ func drawPaletted(dst Image, r image.Rectangle, src image.Image, sp image.Point,
 
 ```
 searchKey: draw.drawRGBA
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -903,7 +887,7 @@ func drawRGBA(dst *image.RGBA, r image.Rectangle, src image.Image, sp image.Poin
 
 ```
 searchKey: draw.eq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -914,7 +898,7 @@ func eq(c0, c1 color.Color) bool
 
 ```
 searchKey: draw.fillAlpha
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -925,7 +909,7 @@ func fillAlpha(alpha int) image.Image
 
 ```
 searchKey: draw.fillBlue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -936,7 +920,7 @@ func fillBlue(alpha int) image.Image
 
 ```
 searchKey: draw.makeGolden
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -947,7 +931,7 @@ func makeGolden(dst image.Image, r image.Rectangle, src image.Image, sp image.Po
 
 ```
 searchKey: draw.processBackward
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -958,7 +942,7 @@ func processBackward(dst image.Image, r image.Rectangle, src image.Image, sp ima
 
 ```
 searchKey: draw.sqDiff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -973,7 +957,7 @@ x and y are both assumed to be in the range [0, 0xffff].
 
 ```
 searchKey: draw.vgradAlpha
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1006,7 +990,7 @@ func vgradGray() image.Image
 
 ```
 searchKey: draw.vgradGreen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1017,7 +1001,7 @@ func vgradGreen(alpha int) image.Image
 
 ```
 searchKey: draw.vgradGreenNRGBA
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

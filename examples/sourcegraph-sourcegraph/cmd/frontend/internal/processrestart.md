@@ -15,7 +15,7 @@ Package processrestart provides utilities for restarting all Sourcegraph process
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="usingGoremanServer" href="#usingGoremanServer">var usingGoremanServer</a>
@@ -34,7 +34,7 @@ usingGoremanServer is whether we are running goreman in cmd/server.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CanRestart" href="#CanRestart">func CanRestart() bool</a>

@@ -17,7 +17,7 @@ Package pubsub is a lightweight wrapper around pubsub which initializes pubsub b
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="PubSubCredentialsFile" href="#PubSubCredentialsFile">var PubSubCredentialsFile</a>
@@ -58,7 +58,7 @@ var client *pubsub.Client
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Enabled" href="#Enabled">func Enabled() bool</a>
@@ -78,7 +78,7 @@ Enabled returns true if pubsub has been configured to run.
 
 ```
 searchKey: pubsub.Publish
-tags: [method]
+tags: [function]
 ```
 
 ```Go

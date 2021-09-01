@@ -36,10 +36,6 @@ Package rand implements a cryptographically secure random number generator.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="urandomDevice" href="#urandomDevice">const urandomDevice</a>
 
 ```
@@ -52,10 +48,6 @@ const urandomDevice = "/dev/urandom"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Reader" href="#Reader">var Reader</a>
 
@@ -126,10 +118,6 @@ var smallPrimesProduct = new(big.Int).SetUint64(16294579238595022365)
 smallPrimesProduct is the product of the values in smallPrimes and allows us to reduce a candidate prime by this number and then determine whether it's coprime to all the elements of smallPrimes without further big.Int operations. 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="devReader" href="#devReader">type devReader struct</a>
 
@@ -216,15 +204,11 @@ func (r *reader) Read(b []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Int" href="#Int">func Int(rand io.Reader, max *big.Int) (n *big.Int, err error)</a>
 
 ```
 searchKey: rand.Int
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -237,7 +221,7 @@ Int returns a uniform random value in [0, max). It panics if max <= 0.
 
 ```
 searchKey: rand.Prime
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -250,7 +234,7 @@ Prime returns a number, p, of the given size, such that p is prime with high pro
 
 ```
 searchKey: rand.Read
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -263,7 +247,7 @@ Read is a helper function that calls Reader.Read using io.ReadFull. On return, n
 
 ```
 searchKey: rand.TestRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -274,7 +258,7 @@ func TestRead(t *testing.T)
 
 ```
 searchKey: rand.TestReadEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -285,7 +269,7 @@ func TestReadEmpty(t *testing.T)
 
 ```
 searchKey: rand.getEntropy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -329,7 +313,7 @@ func init()
 
 ```
 searchKey: rand.newReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -344,7 +328,7 @@ The generator uses the X9.31 algorithm with AES-128, reseeding after every 1 MB 
 
 ```
 searchKey: rand.unixIsEAGAIN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

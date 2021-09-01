@@ -67,10 +67,6 @@ Package gzip implements reading and writing of gzip format compressed files, as 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BestCompression" href="#BestCompression">const BestCompression</a>
 
 ```
@@ -226,10 +222,6 @@ const gzipID2 = 0x8b
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrChecksum" href="#ErrChecksum">var ErrChecksum</a>
 
 ```
@@ -279,10 +271,6 @@ var le = binary.LittleEndian
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Header" href="#Header">type Header struct</a>
 
@@ -335,7 +323,7 @@ Gzip files store a length and checksum of the uncompressed data. The Reader will
 
 ```
 searchKey: gzip.NewReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -352,7 +340,7 @@ The Reader.Header fields will be valid in the Reader returned.
 
 ```
 searchKey: gzip.Reader.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -408,7 +396,7 @@ Reset discards the Reader z's state and makes it equivalent to the result of its
 
 ```
 searchKey: gzip.Reader.readHeader
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -421,7 +409,7 @@ readHeader reads the GZIP header according to section 2.3.1. This method does no
 
 ```
 searchKey: gzip.Reader.readString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -458,7 +446,7 @@ A Writer is an io.WriteCloser. Writes to a Writer are compressed and written to 
 
 ```
 searchKey: gzip.NewWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -475,7 +463,7 @@ Callers that wish to set the fields in Writer.Header must do so before the first
 
 ```
 searchKey: gzip.NewWriterLevel
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -490,7 +478,7 @@ The compression level can be DefaultCompression, NoCompression, HuffmanOnly or a
 
 ```
 searchKey: gzip.Writer.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -503,7 +491,7 @@ Close closes the Writer by flushing any unwritten data to the underlying io.Writ
 
 ```
 searchKey: gzip.Writer.Flush
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -622,15 +610,11 @@ func (l *limitedWriter) Write(p []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestConcat" href="#TestConcat">func TestConcat(t *testing.T)</a>
 
 ```
 searchKey: gzip.TestConcat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -643,7 +627,7 @@ Multiple gzip files concatenated form a valid gzip file.
 
 ```
 searchKey: gzip.TestDecompressor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -654,7 +638,7 @@ func TestDecompressor(t *testing.T)
 
 ```
 searchKey: gzip.TestEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -667,7 +651,7 @@ TestEmpty tests that an empty payload still forms a valid GZIP stream.
 
 ```
 searchKey: gzip.TestGZIPFilesHaveZeroMTimes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -682,7 +666,7 @@ See [https://golang.org/issue/14937](https://golang.org/issue/14937).
 
 ```
 searchKey: gzip.TestIssue6550
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -693,7 +677,7 @@ func TestIssue6550(t *testing.T)
 
 ```
 searchKey: gzip.TestLatin1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -706,7 +690,7 @@ TestLatin1 tests the internal functions for converting to and from Latin-1.
 
 ```
 searchKey: gzip.TestLatin1RoundTrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -719,7 +703,7 @@ TestLatin1RoundTrip tests that metadata that is representable in Latin-1 survive
 
 ```
 searchKey: gzip.TestLimitedWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -732,7 +716,7 @@ Write should never return more bytes than the input slice.
 
 ```
 searchKey: gzip.TestMultistreamFalse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -743,7 +727,7 @@ func TestMultistreamFalse(t *testing.T)
 
 ```
 searchKey: gzip.TestNilStream
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -754,7 +738,7 @@ func TestNilStream(t *testing.T)
 
 ```
 searchKey: gzip.TestRoundTrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -767,7 +751,7 @@ TestRoundTrip tests that gzipping and then gunzipping is the identity function.
 
 ```
 searchKey: gzip.TestTruncatedStreams
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -778,7 +762,7 @@ func TestTruncatedStreams(t *testing.T)
 
 ```
 searchKey: gzip.TestWriterFlush
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -789,7 +773,7 @@ func TestWriterFlush(t *testing.T)
 
 ```
 searchKey: gzip.TestWriterReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -800,7 +784,7 @@ func TestWriterReset(t *testing.T)
 
 ```
 searchKey: gzip.checkZeroMTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -811,7 +795,7 @@ func checkZeroMTime(t *testing.T, path string)
 
 ```
 searchKey: gzip.noEOF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

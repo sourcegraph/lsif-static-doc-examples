@@ -41,7 +41,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultClient" href="#DefaultClient">var DefaultClient</a>
@@ -110,7 +110,7 @@ var requestMeter = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
@@ -136,7 +136,7 @@ Client is a repoupdater client.
 
 ```
 searchKey: repoupdater.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -274,7 +274,7 @@ ErrNotFound is an error that occurs when a Repo doesn't exist.
 
 ```
 searchKey: repoupdater.ErrNotFound.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -285,7 +285,7 @@ func (e *ErrNotFound) Error() string
 
 ```
 searchKey: repoupdater.ErrNotFound.NotFound
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -314,7 +314,7 @@ ErrTemporary is an error that can be retried
 
 ```
 searchKey: repoupdater.ErrTemporary.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -325,7 +325,7 @@ func (e *ErrTemporary) Error() string
 
 ```
 searchKey: repoupdater.ErrTemporary.Temporary
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -354,7 +354,7 @@ ErrUnauthorized is an error that occurs when repo access is unauthorized.
 
 ```
 searchKey: repoupdater.ErrUnauthorized.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -365,7 +365,7 @@ func (e *ErrUnauthorized) Error() string
 
 ```
 searchKey: repoupdater.ErrUnauthorized.Unauthorized
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -392,7 +392,7 @@ type repoNotFoundError struct {
 
 ```
 searchKey: repoupdater.repoNotFoundError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -403,7 +403,7 @@ func (e *repoNotFoundError) Error() string
 
 ```
 searchKey: repoupdater.repoNotFoundError.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -413,14 +413,14 @@ func (repoNotFoundError) NotFound() bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestNewClient" href="#TestNewClient">func TestNewClient(t *testing.T)</a>
 
 ```
 searchKey: repoupdater.TestNewClient
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

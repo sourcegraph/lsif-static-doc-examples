@@ -171,7 +171,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrJobAlreadyExists" href="#ErrJobAlreadyExists">var ErrJobAlreadyExists</a>
@@ -216,7 +216,7 @@ set -x
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="IDSet" href="#IDSet">type IDSet struct</a>
@@ -274,7 +274,7 @@ Remove invokes the cancel function associated with the given identifier in the s
 
 ```
 searchKey: worker.IDSet.Slice
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -323,7 +323,7 @@ NewMockRunner creates a new mock of the Runner interface. All methods return zer
 
 ```
 searchKey: worker.NewMockRunnerFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -423,7 +423,7 @@ NewMockStore creates a new mock of the Store interface. All methods return zero 
 
 ```
 searchKey: worker.NewMockStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -608,7 +608,7 @@ RunnerRunFunc describes the behavior when the Run method of the parent MockRunne
 
 ```
 searchKey: worker.RunnerRunFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -684,7 +684,7 @@ func (f *RunnerRunFunc) appendCall(r0 RunnerRunFuncCall)
 
 ```
 searchKey: worker.RunnerRunFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -718,7 +718,7 @@ RunnerRunFuncCall is an object that describes an invocation of method Run on an 
 
 ```
 searchKey: worker.RunnerRunFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -731,7 +731,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.RunnerRunFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -762,7 +762,7 @@ RunnerSetupFunc describes the behavior when the Setup method of the parent MockR
 
 ```
 searchKey: worker.RunnerSetupFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -838,7 +838,7 @@ func (f *RunnerSetupFunc) appendCall(r0 RunnerSetupFuncCall)
 
 ```
 searchKey: worker.RunnerSetupFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -875,7 +875,7 @@ RunnerSetupFuncCall is an object that describes an invocation of method Setup on
 
 ```
 searchKey: worker.RunnerSetupFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -888,7 +888,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.RunnerSetupFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -919,7 +919,7 @@ RunnerTeardownFunc describes the behavior when the Teardown method of the parent
 
 ```
 searchKey: worker.RunnerTeardownFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -995,7 +995,7 @@ func (f *RunnerTeardownFunc) appendCall(r0 RunnerTeardownFuncCall)
 
 ```
 searchKey: worker.RunnerTeardownFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1026,7 +1026,7 @@ RunnerTeardownFuncCall is an object that describes an invocation of method Teard
 
 ```
 searchKey: worker.RunnerTeardownFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1039,7 +1039,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.RunnerTeardownFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1070,7 +1070,7 @@ StoreAddExecutionLogEntryFunc describes the behavior when the AddExecutionLogEnt
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1146,7 +1146,7 @@ func (f *StoreAddExecutionLogEntryFunc) appendCall(r0 StoreAddExecutionLogEntryF
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1183,7 +1183,7 @@ StoreAddExecutionLogEntryFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1196,7 +1196,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreAddExecutionLogEntryFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1227,7 +1227,7 @@ StoreDequeueFunc describes the behavior when the Dequeue method of the parent Mo
 
 ```
 searchKey: worker.StoreDequeueFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1303,7 +1303,7 @@ func (f *StoreDequeueFunc) appendCall(r0 StoreDequeueFuncCall)
 
 ```
 searchKey: worker.StoreDequeueFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1346,7 +1346,7 @@ StoreDequeueFuncCall is an object that describes an invocation of method Dequeue
 
 ```
 searchKey: worker.StoreDequeueFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1359,7 +1359,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreDequeueFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1390,7 +1390,7 @@ StoreDoneFunc describes the behavior when the Done method of the parent MockStor
 
 ```
 searchKey: worker.StoreDoneFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1466,7 +1466,7 @@ func (f *StoreDoneFunc) appendCall(r0 StoreDoneFuncCall)
 
 ```
 searchKey: worker.StoreDoneFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1497,7 +1497,7 @@ StoreDoneFuncCall is an object that describes an invocation of method Done on an
 
 ```
 searchKey: worker.StoreDoneFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1510,7 +1510,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreDoneFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1541,7 +1541,7 @@ StoreMarkCompleteFunc describes the behavior when the MarkComplete method of the
 
 ```
 searchKey: worker.StoreMarkCompleteFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1617,7 +1617,7 @@ func (f *StoreMarkCompleteFunc) appendCall(r0 StoreMarkCompleteFuncCall)
 
 ```
 searchKey: worker.StoreMarkCompleteFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1654,7 +1654,7 @@ StoreMarkCompleteFuncCall is an object that describes an invocation of method Ma
 
 ```
 searchKey: worker.StoreMarkCompleteFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1667,7 +1667,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreMarkCompleteFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1698,7 +1698,7 @@ StoreMarkErroredFunc describes the behavior when the MarkErrored method of the p
 
 ```
 searchKey: worker.StoreMarkErroredFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1774,7 +1774,7 @@ func (f *StoreMarkErroredFunc) appendCall(r0 StoreMarkErroredFuncCall)
 
 ```
 searchKey: worker.StoreMarkErroredFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1814,7 +1814,7 @@ StoreMarkErroredFuncCall is an object that describes an invocation of method Mar
 
 ```
 searchKey: worker.StoreMarkErroredFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1827,7 +1827,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreMarkErroredFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1858,7 +1858,7 @@ StoreMarkFailedFunc describes the behavior when the MarkFailed method of the par
 
 ```
 searchKey: worker.StoreMarkFailedFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1934,7 +1934,7 @@ func (f *StoreMarkFailedFunc) appendCall(r0 StoreMarkFailedFuncCall)
 
 ```
 searchKey: worker.StoreMarkFailedFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1974,7 +1974,7 @@ StoreMarkFailedFuncCall is an object that describes an invocation of method Mark
 
 ```
 searchKey: worker.StoreMarkFailedFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1987,7 +1987,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreMarkFailedFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2018,7 +2018,7 @@ StoreQueuedCountFunc describes the behavior when the QueuedCount method of the p
 
 ```
 searchKey: worker.StoreQueuedCountFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2094,7 +2094,7 @@ func (f *StoreQueuedCountFunc) appendCall(r0 StoreQueuedCountFuncCall)
 
 ```
 searchKey: worker.StoreQueuedCountFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2131,7 +2131,7 @@ StoreQueuedCountFuncCall is an object that describes an invocation of method Que
 
 ```
 searchKey: worker.StoreQueuedCountFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2144,7 +2144,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: worker.StoreQueuedCountFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2289,14 +2289,14 @@ func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{})
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewWorker" href="#NewWorker">func NewWorker(options Options, observationContext *observation.Context) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: worker.NewWorker
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2309,7 +2309,7 @@ NewWorker creates a worker that polls a remote job queue API for work. The retur
 
 ```
 searchKey: worker.TestHandle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2320,7 +2320,7 @@ func TestHandle(t *testing.T)
 
 ```
 searchKey: worker.TestIDAddRemove
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2331,7 +2331,7 @@ func TestIDAddRemove(t *testing.T)
 
 ```
 searchKey: worker.TestIDSetSlice
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2342,7 +2342,7 @@ func TestIDSetSlice(t *testing.T)
 
 ```
 searchKey: worker.TestPrepareWorkspace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2353,7 +2353,7 @@ func TestPrepareWorkspace(t *testing.T)
 
 ```
 searchKey: worker.TestPrepareWorkspaceNoRepository
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2364,7 +2364,7 @@ func TestPrepareWorkspaceNoRepository(t *testing.T)
 
 ```
 searchKey: worker.buildScript
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2375,7 +2375,7 @@ func buildScript(dockerStep executor.DockerStep) []byte
 
 ```
 searchKey: worker.connectToFrontend
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2388,7 +2388,7 @@ connectToFrontend will ping the configured Sourcegraph instance until it receive
 
 ```
 searchKey: worker.createHoneyEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2399,7 +2399,7 @@ func createHoneyEvent(ctx context.Context, job executor.Job, err error, duration
 
 ```
 searchKey: worker.makeRelativeURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2421,7 +2421,7 @@ func makeTemporaryDirectory() (string, error)
 
 ```
 searchKey: worker.makeURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2432,7 +2432,7 @@ func makeURL(base, username, password string, path ...string) (*url.URL, error)
 
 ```
 searchKey: worker.scriptNameFromJobStep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2443,7 +2443,7 @@ func scriptNameFromJobStep(job executor.Job, i int) string
 
 ```
 searchKey: worker.union
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

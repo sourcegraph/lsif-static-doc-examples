@@ -34,7 +34,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="codeSnippet" href="#codeSnippet">const codeSnippet</a>
@@ -62,7 +62,7 @@ lines
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="tests" href="#tests">var tests</a>
@@ -79,7 +79,7 @@ var tests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="buffer" href="#buffer">type buffer struct</a>
@@ -99,7 +99,7 @@ type buffer struct {
 
 ```
 searchKey: tabwriter_test.buffer.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -121,7 +121,7 @@ func (b *buffer) Write(buf []byte) (written int, err error)
 
 ```
 searchKey: tabwriter_test.buffer.clear
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -164,14 +164,14 @@ func (panicWriter) Write([]byte) (int, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkCode" href="#BenchmarkCode">func BenchmarkCode(b *testing.B)</a>
 
 ```
 searchKey: tabwriter_test.BenchmarkCode
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -182,7 +182,7 @@ func BenchmarkCode(b *testing.B)
 
 ```
 searchKey: tabwriter_test.BenchmarkPyramid
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -193,7 +193,7 @@ func BenchmarkPyramid(b *testing.B)
 
 ```
 searchKey: tabwriter_test.BenchmarkRagged
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -204,7 +204,7 @@ func BenchmarkRagged(b *testing.B)
 
 ```
 searchKey: tabwriter_test.BenchmarkTable
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -248,7 +248,7 @@ func Example_trailingTab()
 
 ```
 searchKey: tabwriter_test.Test
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -259,7 +259,7 @@ func Test(t *testing.T)
 
 ```
 searchKey: tabwriter_test.TestPanicDuringFlush
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -270,7 +270,7 @@ func TestPanicDuringFlush(t *testing.T)
 
 ```
 searchKey: tabwriter_test.TestPanicDuringWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -281,7 +281,7 @@ func TestPanicDuringWrite(t *testing.T)
 
 ```
 searchKey: tabwriter_test.check
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -292,7 +292,7 @@ func check(t *testing.T, testname string, minwidth, tabwidth, padding int, padch
 
 ```
 searchKey: tabwriter_test.verify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -303,7 +303,7 @@ func verify(t *testing.T, testname string, w *Writer, b *buffer, src, expected s
 
 ```
 searchKey: tabwriter_test.wantPanicString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -314,7 +314,7 @@ func wantPanicString(t *testing.T, want string)
 
 ```
 searchKey: tabwriter_test.write
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

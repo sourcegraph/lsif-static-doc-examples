@@ -21,7 +21,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Commit" href="#Commit">const Commit</a>
@@ -82,7 +82,7 @@ const Symbol = "symbol"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="validSelectors" href="#validSelectors">var validSelectors</a>
@@ -99,7 +99,7 @@ var validSelectors = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SelectPath" href="#SelectPath">type SelectPath []string</a>
@@ -119,7 +119,7 @@ SelectPath represents a parsed and validated select value
 
 ```
 searchKey: filter.SelectPathFromString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -130,7 +130,7 @@ func SelectPathFromString(s string) (SelectPath, error)
 
 ```
 searchKey: filter.SelectPath.Root
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -143,7 +143,7 @@ Root is the top-level result type that is being selected. Returns an empty strin
 
 ```
 searchKey: filter.SelectPath.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go

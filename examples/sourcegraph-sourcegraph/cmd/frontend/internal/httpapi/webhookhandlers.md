@@ -17,7 +17,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="memberGetter" href="#memberGetter">type memberGetter interface</a>
@@ -62,14 +62,14 @@ type repoGetter interface {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Init" href="#Init">func Init(w *webhooks.GitHubWebhook)</a>
 
 ```
 searchKey: webhookhandlers.Init
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -80,7 +80,7 @@ func Init(w *webhooks.GitHubWebhook)
 
 ```
 searchKey: webhookhandlers.handleGitHubRepoAuthzEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -93,7 +93,7 @@ handleGithubRepoAuthzEvent handles any github event containing a repository fiel
 
 ```
 searchKey: webhookhandlers.handleGitHubUserAuthzEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -106,7 +106,7 @@ handleGitHubUserAuthzEvent handles a github webhook for the events described in 
 
 ```
 searchKey: webhookhandlers.scheduleRepoUpdate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -119,7 +119,7 @@ scheduleRepoUpdate finds an internal repo from a github repo, and posts it to re
 
 ```
 searchKey: webhookhandlers.scheduleUserUpdate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

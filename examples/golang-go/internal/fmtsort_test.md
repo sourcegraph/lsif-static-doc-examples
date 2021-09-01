@@ -26,7 +26,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="chans" href="#chans">var chans</a>
@@ -87,7 +87,7 @@ var sortTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="sortTest" href="#sortTest">type sortTest struct</a>
@@ -121,14 +121,14 @@ type toy struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestCompare" href="#TestCompare">func TestCompare(t *testing.T)</a>
 
 ```
 searchKey: fmtsort_test.TestCompare
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -139,7 +139,7 @@ func TestCompare(t *testing.T)
 
 ```
 searchKey: fmtsort_test.TestInterface
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -150,7 +150,7 @@ func TestInterface(t *testing.T)
 
 ```
 searchKey: fmtsort_test.TestOrder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ func chanMap() map[chan int]string
 
 ```
 searchKey: fmtsort_test.ct
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -194,7 +194,7 @@ func pointerMap() map[*int]string
 
 ```
 searchKey: fmtsort_test.sprint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -205,7 +205,7 @@ func sprint(data interface{}) string
 
 ```
 searchKey: fmtsort_test.sprintKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

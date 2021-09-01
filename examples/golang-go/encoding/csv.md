@@ -115,10 +115,6 @@ field`, `comma is ,`}
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="benchmarkCSVData" href="#benchmarkCSVData">const benchmarkCSVData</a>
 
 ```
@@ -131,10 +127,6 @@ const benchmarkCSVData = ...
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ErrBareQuote" href="#ErrBareQuote">var ErrBareQuote</a>
 
@@ -235,10 +227,6 @@ var writeTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ParseError" href="#ParseError">type ParseError struct</a>
 
 ```
@@ -261,7 +249,7 @@ A ParseError is returned for parsing errors. Line numbers are 1-indexed and colu
 
 ```
 searchKey: csv.ParseError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -272,7 +260,7 @@ func (e *ParseError) Error() string
 
 ```
 searchKey: csv.ParseError.Unwrap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -363,7 +351,7 @@ The Reader converts all \r\n sequences in its input to plain \n, including in mu
 
 ```
 searchKey: csv.NewReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -391,7 +379,7 @@ If this is called with an out-of-bounds index, it panics.
 
 ```
 searchKey: csv.Reader.Read
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -404,7 +392,7 @@ Read reads one record (a slice of fields) from r. If the record has an unexpecte
 
 ```
 searchKey: csv.Reader.ReadAll
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -417,7 +405,7 @@ ReadAll reads all the remaining records from r. Each record is a slice of fields
 
 ```
 searchKey: csv.Reader.readLine
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -466,7 +454,7 @@ The writes of individual records are buffered. After all data has been written, 
 
 ```
 searchKey: csv.NewWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -479,7 +467,7 @@ NewWriter returns a new Writer that writes to w.
 
 ```
 searchKey: csv.Writer.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -492,7 +480,7 @@ Error reports any error that has occurred during a previous Write or Flush.
 
 ```
 searchKey: csv.Writer.Flush
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -633,15 +621,11 @@ type readTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkRead" href="#BenchmarkRead">func BenchmarkRead(b *testing.B)</a>
 
 ```
 searchKey: csv.BenchmarkRead
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -652,7 +636,7 @@ func BenchmarkRead(b *testing.B)
 
 ```
 searchKey: csv.BenchmarkReadLargeFields
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -663,7 +647,7 @@ func BenchmarkReadLargeFields(b *testing.B)
 
 ```
 searchKey: csv.BenchmarkReadReuseRecord
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -674,7 +658,7 @@ func BenchmarkReadReuseRecord(b *testing.B)
 
 ```
 searchKey: csv.BenchmarkReadReuseRecordLargeFields
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -685,7 +669,7 @@ func BenchmarkReadReuseRecordLargeFields(b *testing.B)
 
 ```
 searchKey: csv.BenchmarkReadReuseRecordWithFieldsPerRecord
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -696,7 +680,7 @@ func BenchmarkReadReuseRecordWithFieldsPerRecord(b *testing.B)
 
 ```
 searchKey: csv.BenchmarkReadReuseRecordWithoutFieldsPerRecord
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -707,7 +691,7 @@ func BenchmarkReadReuseRecordWithoutFieldsPerRecord(b *testing.B)
 
 ```
 searchKey: csv.BenchmarkReadWithFieldsPerRecord
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -718,7 +702,7 @@ func BenchmarkReadWithFieldsPerRecord(b *testing.B)
 
 ```
 searchKey: csv.BenchmarkReadWithoutFieldsPerRecord
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -729,7 +713,7 @@ func BenchmarkReadWithoutFieldsPerRecord(b *testing.B)
 
 ```
 searchKey: csv.BenchmarkWrite
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -740,7 +724,7 @@ func BenchmarkWrite(b *testing.B)
 
 ```
 searchKey: csv.TestError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -751,7 +735,7 @@ func TestError(t *testing.T)
 
 ```
 searchKey: csv.TestRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -762,7 +746,7 @@ func TestRead(t *testing.T)
 
 ```
 searchKey: csv.TestWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -773,7 +757,7 @@ func TestWrite(t *testing.T)
 
 ```
 searchKey: csv.benchmarkRead
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -786,7 +770,7 @@ benchmarkRead measures reading the provided CSV rows data. initReader, if non-ni
 
 ```
 searchKey: csv.errorWithPosition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -797,7 +781,7 @@ func errorWithPosition(err error, recNum int, positions [][][2]int, errPositions
 
 ```
 searchKey: csv.firstError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -810,7 +794,7 @@ firstError returns the first non-nil error in errs, with the position adjusted a
 
 ```
 searchKey: csv.lengthNL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -823,7 +807,7 @@ lengthNL reports the number of bytes for the trailing \n.
 
 ```
 searchKey: csv.makePositions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -838,7 +822,7 @@ The start of each field is marked with a ยง symbol; CSV lines are separated by ย
 
 ```
 searchKey: csv.nextRune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -851,7 +835,7 @@ nextRune returns the next rune in b or utf8.RuneError.
 
 ```
 searchKey: csv.validDelim
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

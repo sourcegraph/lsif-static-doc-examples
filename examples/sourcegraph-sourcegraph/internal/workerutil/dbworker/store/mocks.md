@@ -143,7 +143,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockStore" href="#MockStore">type MockStore struct</a>
@@ -211,7 +211,7 @@ NewMockStore creates a new mock of the Store interface. All methods return zero 
 
 ```
 searchKey: mocks.NewMockStoreFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -276,7 +276,7 @@ Done delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: mocks.MockStore.Handle
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -385,7 +385,7 @@ StoreAddExecutionLogEntryFunc describes the behavior when the AddExecutionLogEnt
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -461,7 +461,7 @@ func (f *StoreAddExecutionLogEntryFunc) appendCall(r0 StoreAddExecutionLogEntryF
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -498,7 +498,7 @@ StoreAddExecutionLogEntryFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -511,7 +511,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreAddExecutionLogEntryFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -542,7 +542,7 @@ StoreDequeueFunc describes the behavior when the Dequeue method of the parent Mo
 
 ```
 searchKey: mocks.StoreDequeueFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -618,7 +618,7 @@ func (f *StoreDequeueFunc) appendCall(r0 StoreDequeueFuncCall)
 
 ```
 searchKey: mocks.StoreDequeueFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -661,7 +661,7 @@ StoreDequeueFuncCall is an object that describes an invocation of method Dequeue
 
 ```
 searchKey: mocks.StoreDequeueFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -674,7 +674,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreDequeueFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -705,7 +705,7 @@ StoreDequeueWithIndependentTransactionContextFunc describes the behavior when th
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -781,7 +781,7 @@ func (f *StoreDequeueWithIndependentTransactionContextFunc) appendCall(r0 StoreD
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -824,7 +824,7 @@ StoreDequeueWithIndependentTransactionContextFuncCall is an object that describe
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -837,7 +837,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreDequeueWithIndependentTransactionContextFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -868,7 +868,7 @@ StoreDoneFunc describes the behavior when the Done method of the parent MockStor
 
 ```
 searchKey: mocks.StoreDoneFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -944,7 +944,7 @@ func (f *StoreDoneFunc) appendCall(r0 StoreDoneFuncCall)
 
 ```
 searchKey: mocks.StoreDoneFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -975,7 +975,7 @@ StoreDoneFuncCall is an object that describes an invocation of method Done on an
 
 ```
 searchKey: mocks.StoreDoneFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -988,7 +988,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreDoneFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1019,7 +1019,7 @@ StoreHandleFunc describes the behavior when the Handle method of the parent Mock
 
 ```
 searchKey: mocks.StoreHandleFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1095,7 +1095,7 @@ func (f *StoreHandleFunc) appendCall(r0 StoreHandleFuncCall)
 
 ```
 searchKey: mocks.StoreHandleFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1123,7 +1123,7 @@ StoreHandleFuncCall is an object that describes an invocation of method Handle o
 
 ```
 searchKey: mocks.StoreHandleFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1136,7 +1136,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreHandleFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1167,7 +1167,7 @@ StoreMarkCompleteFunc describes the behavior when the MarkComplete method of the
 
 ```
 searchKey: mocks.StoreMarkCompleteFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1243,7 +1243,7 @@ func (f *StoreMarkCompleteFunc) appendCall(r0 StoreMarkCompleteFuncCall)
 
 ```
 searchKey: mocks.StoreMarkCompleteFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1280,7 +1280,7 @@ StoreMarkCompleteFuncCall is an object that describes an invocation of method Ma
 
 ```
 searchKey: mocks.StoreMarkCompleteFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1293,7 +1293,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreMarkCompleteFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1324,7 +1324,7 @@ StoreMarkErroredFunc describes the behavior when the MarkErrored method of the p
 
 ```
 searchKey: mocks.StoreMarkErroredFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1400,7 +1400,7 @@ func (f *StoreMarkErroredFunc) appendCall(r0 StoreMarkErroredFuncCall)
 
 ```
 searchKey: mocks.StoreMarkErroredFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1440,7 +1440,7 @@ StoreMarkErroredFuncCall is an object that describes an invocation of method Mar
 
 ```
 searchKey: mocks.StoreMarkErroredFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1453,7 +1453,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreMarkErroredFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1484,7 +1484,7 @@ StoreMarkFailedFunc describes the behavior when the MarkFailed method of the par
 
 ```
 searchKey: mocks.StoreMarkFailedFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1560,7 +1560,7 @@ func (f *StoreMarkFailedFunc) appendCall(r0 StoreMarkFailedFuncCall)
 
 ```
 searchKey: mocks.StoreMarkFailedFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1600,7 +1600,7 @@ StoreMarkFailedFuncCall is an object that describes an invocation of method Mark
 
 ```
 searchKey: mocks.StoreMarkFailedFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1613,7 +1613,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreMarkFailedFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1644,7 +1644,7 @@ StoreQueuedCountFunc describes the behavior when the QueuedCount method of the p
 
 ```
 searchKey: mocks.StoreQueuedCountFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1720,7 +1720,7 @@ func (f *StoreQueuedCountFunc) appendCall(r0 StoreQueuedCountFuncCall)
 
 ```
 searchKey: mocks.StoreQueuedCountFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1757,7 +1757,7 @@ StoreQueuedCountFuncCall is an object that describes an invocation of method Que
 
 ```
 searchKey: mocks.StoreQueuedCountFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1770,7 +1770,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreQueuedCountFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1801,7 +1801,7 @@ StoreRequeueFunc describes the behavior when the Requeue method of the parent Mo
 
 ```
 searchKey: mocks.StoreRequeueFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1877,7 +1877,7 @@ func (f *StoreRequeueFunc) appendCall(r0 StoreRequeueFuncCall)
 
 ```
 searchKey: mocks.StoreRequeueFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1914,7 +1914,7 @@ StoreRequeueFuncCall is an object that describes an invocation of method Requeue
 
 ```
 searchKey: mocks.StoreRequeueFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1927,7 +1927,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreRequeueFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1958,7 +1958,7 @@ StoreResetStalledFunc describes the behavior when the ResetStalled method of the
 
 ```
 searchKey: mocks.StoreResetStalledFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2034,7 +2034,7 @@ func (f *StoreResetStalledFunc) appendCall(r0 StoreResetStalledFuncCall)
 
 ```
 searchKey: mocks.StoreResetStalledFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2071,7 +2071,7 @@ StoreResetStalledFuncCall is an object that describes an invocation of method Re
 
 ```
 searchKey: mocks.StoreResetStalledFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2084,7 +2084,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreResetStalledFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go

@@ -38,7 +38,7 @@ Package phabricator is a package to interact with a Phabricator instance and its
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="requestDuration" href="#requestDuration">var requestDuration</a>
@@ -55,7 +55,7 @@ var requestDuration = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
@@ -77,7 +77,7 @@ A Client provides high level methods to a Phabricator Conduit API.
 
 ```
 searchKey: phabricator.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -251,7 +251,7 @@ type apiRepo struct {
 
 ```
 searchKey: phabricator.apiRepo.ToRepo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -433,14 +433,14 @@ func (d *unixTime) UnmarshalJSON(data []byte) error
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ParseDate" href="#ParseDate">func ParseDate(secStr string) (*time.Time, error)</a>
 
 ```
 searchKey: phabricator.ParseDate
-tags: [method]
+tags: [function]
 ```
 
 ```Go

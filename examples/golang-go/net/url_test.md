@@ -26,7 +26,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleParseQuery" href="#ExampleParseQuery">func ExampleParseQuery()</a>
@@ -220,7 +220,7 @@ func ExampleValues()
 
 ```
 searchKey: url_test.toJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

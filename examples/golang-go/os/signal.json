@@ -27,9 +27,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -74,9 +72,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -313,9 +309,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -448,7 +442,7 @@
                       "newPage": false,
                       "searchKey": "signal.signalCtx.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -471,7 +465,7 @@
                       "newPage": false,
                       "searchKey": "signal.signalCtx.stop",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -545,9 +539,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -566,7 +558,7 @@
                 "newPage": false,
                 "searchKey": "signal.Ignore",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -588,7 +580,7 @@
                 "newPage": false,
                 "searchKey": "signal.Ignored",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -610,7 +602,7 @@
                 "newPage": false,
                 "searchKey": "signal.Notify",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -632,7 +624,7 @@
                 "newPage": false,
                 "searchKey": "signal.NotifyContext",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -654,7 +646,7 @@
                 "newPage": false,
                 "searchKey": "signal.Reset",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -676,7 +668,7 @@
                 "newPage": false,
                 "searchKey": "signal.Stop",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -698,7 +690,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestAtomicStop",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -722,7 +714,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestDetectNohup",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -746,7 +738,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestIgnore",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -770,7 +762,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestIgnored",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -794,7 +786,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestNohup",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -818,7 +810,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextCancelParent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -842,7 +834,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextNotifications",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -866,7 +858,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextPrematureCancelParent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -890,7 +882,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextSimultaneousStop",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -914,7 +906,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextStop",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -938,7 +930,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestNotifyContextStringer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -962,7 +954,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestReset",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -986,7 +978,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestSIGCONT",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1010,7 +1002,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestSignal",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1034,7 +1026,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestSignalTrace",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1058,7 +1050,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestStop",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1082,7 +1074,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestStress",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1106,7 +1098,7 @@
                 "newPage": false,
                 "searchKey": "signal.TestTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1130,7 +1122,7 @@
                 "newPage": false,
                 "searchKey": "signal.atomicStopTestProgram",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1153,7 +1145,7 @@
                 "newPage": false,
                 "searchKey": "signal.cancel",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1176,7 +1168,7 @@
                 "newPage": false,
                 "searchKey": "signal.disableSignal",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1199,7 +1191,7 @@
                 "newPage": false,
                 "searchKey": "signal.enableSignal",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1222,7 +1214,7 @@
                 "newPage": false,
                 "searchKey": "signal.ignoreSignal",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1314,7 +1306,7 @@
                 "newPage": false,
                 "searchKey": "signal.process",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1360,7 +1352,7 @@
                 "newPage": false,
                 "searchKey": "signal.signalIgnored",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1406,7 +1398,7 @@
                 "newPage": false,
                 "searchKey": "signal.signal_disable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1429,7 +1421,7 @@
                 "newPage": false,
                 "searchKey": "signal.signal_enable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1452,7 +1444,7 @@
                 "newPage": false,
                 "searchKey": "signal.signal_ignore",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1475,7 +1467,7 @@
                 "newPage": false,
                 "searchKey": "signal.signal_ignored",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1521,7 +1513,7 @@
                 "newPage": false,
                 "searchKey": "signal.signum",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1544,7 +1536,7 @@
                 "newPage": false,
                 "searchKey": "signal.testCancel",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1567,7 +1559,7 @@
                 "newPage": false,
                 "searchKey": "signal.waitSig",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1590,7 +1582,7 @@
                 "newPage": false,
                 "searchKey": "signal.waitSig1",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1613,7 +1605,7 @@
                 "newPage": false,
                 "searchKey": "signal.waitSigAll",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

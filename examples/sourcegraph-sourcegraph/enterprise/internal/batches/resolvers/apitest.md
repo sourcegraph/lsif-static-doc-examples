@@ -54,7 +54,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BatchChange" href="#BatchChange">type BatchChange struct</a>
@@ -557,7 +557,7 @@ type DiffStat struct{ Added, Deleted, Changed int32 }
 
 ```
 searchKey: apitest.DiffStat.ToDiffStat
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -796,14 +796,14 @@ type UserOrg struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Exec" href="#Exec">func Exec(ctx context.Context,...</a>
 
 ```
 searchKey: apitest.Exec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -823,7 +823,7 @@ Exec executes the given query with the given input in the given graphql.Schema. 
 
 ```
 searchKey: apitest.MustExec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -843,7 +843,7 @@ MustExec uses Exec to execute the given query and calls t.Fatalf if Exec failed.
 
 ```
 searchKey: apitest.toJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -42,10 +42,6 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="awsAccessKeyID" href="#awsAccessKeyID">var awsAccessKeyID</a>
 
 ```
@@ -224,10 +220,6 @@ var username = flag.String("username", "gqltest-admin", "The username of the adm
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="searchClient" href="#searchClient">type searchClient interface</a>
 
 ```
@@ -250,15 +242,11 @@ searchClient is an interface so we can swap out a streaming vs graphql based sea
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestAccessToken" href="#TestAccessToken">func TestAccessToken(t *testing.T)</a>
 
 ```
 searchKey: main.TestAccessToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -269,7 +257,7 @@ func TestAccessToken(t *testing.T)
 
 ```
 searchKey: main.TestExternalService
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -280,7 +268,7 @@ func TestExternalService(t *testing.T)
 
 ```
 searchKey: main.TestExternalService_AWSCodeCommit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -291,7 +279,7 @@ func TestExternalService_AWSCodeCommit(t *testing.T)
 
 ```
 searchKey: main.TestExternalService_BitbucketServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -302,7 +290,7 @@ func TestExternalService_BitbucketServer(t *testing.T)
 
 ```
 searchKey: main.TestFeatureFlags
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -313,7 +301,7 @@ func TestFeatureFlags(t *testing.T)
 
 ```
 searchKey: main.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -324,7 +312,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: main.TestOrganization
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -335,7 +323,7 @@ func TestOrganization(t *testing.T)
 
 ```
 searchKey: main.TestRepository
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -346,7 +334,7 @@ func TestRepository(t *testing.T)
 
 ```
 searchKey: main.TestRepository_NameWithSpace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -357,7 +345,7 @@ func TestRepository_NameWithSpace(t *testing.T)
 
 ```
 searchKey: main.TestSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -368,7 +356,7 @@ func TestSearch(t *testing.T)
 
 ```
 searchKey: main.TestSiteConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -379,7 +367,7 @@ func TestSiteConfig(t *testing.T)
 
 ```
 searchKey: main.mustMarshalJSONString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -390,7 +378,7 @@ func mustMarshalJSONString(v interface{}) string
 
 ```
 searchKey: main.testListingSearchContexts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -401,7 +389,7 @@ func testListingSearchContexts(t *testing.T, client *gqltestutil.Client)
 
 ```
 searchKey: main.testSearchClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -412,7 +400,7 @@ func testSearchClient(t *testing.T, client searchClient)
 
 ```
 searchKey: main.testSearchContextsCRUD
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -423,7 +411,7 @@ func testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)
 
 ```
 searchKey: main.testSearchOther
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

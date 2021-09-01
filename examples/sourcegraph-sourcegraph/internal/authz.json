@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "internal/authz",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -280,7 +279,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -567,7 +565,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -608,7 +605,7 @@
                       "newPage": false,
                       "searchKey": "authz.ErrStalePermissions.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -719,7 +716,7 @@
                       "newPage": false,
                       "searchKey": "authz.Perms.String",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -808,7 +805,7 @@
                       "newPage": false,
                       "searchKey": "authz.RepoPermissions.TracingFields",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -876,7 +873,7 @@
                       "newPage": false,
                       "searchKey": "authz.RepoPermsSort.Len",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -965,7 +962,7 @@
                       "newPage": false,
                       "searchKey": "authz.UserPendingPermissions.TracingFields",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1054,7 +1051,7 @@
                       "newPage": false,
                       "searchKey": "authz.UserPermissions.TracingFields",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1082,7 +1079,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1103,7 +1099,7 @@
                 "newPage": false,
                 "searchKey": "authz.BenchmarkPermsInclude",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1127,7 +1123,7 @@
                 "newPage": false,
                 "searchKey": "authz.BenchmarkPermsString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1173,7 +1169,7 @@
                 "newPage": false,
                 "searchKey": "authz.IsUnrecognizedScheme",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1195,7 +1191,7 @@
                 "newPage": false,
                 "searchKey": "authz.ParseAuthorizationHeader",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1217,7 +1213,7 @@
                 "newPage": false,
                 "searchKey": "authz.SetProviders",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1239,7 +1235,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestParseAuthorizationHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1263,7 +1259,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestParseHTTPCredentials",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1287,7 +1283,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsInclude",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1311,7 +1307,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1335,7 +1331,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestUserPermissions_AuthorizedRepos",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1359,7 +1355,7 @@
                 "newPage": false,
                 "searchKey": "authz.bitmap",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1382,7 +1378,7 @@
                 "newPage": false,
                 "searchKey": "authz.parseHTTPAuthParams",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1405,7 +1401,7 @@
                 "newPage": false,
                 "searchKey": "authz.parseHTTPCredentials",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1428,7 +1424,7 @@
                 "newPage": false,
                 "searchKey": "authz.parseHTTPHeaderList",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

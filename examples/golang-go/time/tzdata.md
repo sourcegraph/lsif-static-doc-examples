@@ -22,10 +22,6 @@ This package will be automatically imported if you build with -tags timetzdata.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="zipdata" href="#zipdata">const zipdata</a>
 
 ```
@@ -39,15 +35,11 @@ const zipdata = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="get2s" href="#get2s">func get2s(s string) int</a>
 
 ```
 searchKey: tzdata.get2s
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -60,7 +52,7 @@ get2s returns the little-endian 16-bit value at the start of s.
 
 ```
 searchKey: tzdata.get4s
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -84,7 +76,7 @@ func init()
 
 ```
 searchKey: tzdata.loadFromEmbeddedTZData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -97,7 +89,7 @@ loadFromEmbeddedTZData returns the contents of the file with the given name in a
 
 ```
 searchKey: tzdata.registerLoadFromEmbeddedTZData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

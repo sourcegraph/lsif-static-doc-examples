@@ -220,10 +220,6 @@ The default set of command-line flags is controlled by top-level functions.  The
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ContinueOnError" href="#ContinueOnError">const ContinueOnError</a>
 
 ```
@@ -267,10 +263,6 @@ const PanicOnError // Call panic with a descriptive error.
 These constants cause FlagSet.Parse to behave as described if the parse fails. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="CommandLine" href="#CommandLine">var CommandLine</a>
 
@@ -350,10 +342,6 @@ errRange is returned by Set if a flag's value is out of range. It then gets wrap
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrorHandling" href="#ErrorHandling">type ErrorHandling int</a>
 
 ```
@@ -389,7 +377,7 @@ A Flag represents the state of a flag.
 
 ```
 searchKey: flag.Lookup
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -432,7 +420,7 @@ Flag names must be unique within a FlagSet. An attempt to define a flag whose na
 
 ```
 searchKey: flag.NewFlagSet
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -458,7 +446,7 @@ Arg returns the i'th argument. Arg(0) is the first remaining argument after flag
 
 ```
 searchKey: flag.FlagSet.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -523,7 +511,7 @@ DurationVar defines a time.Duration flag with specified name, default value, and
 
 ```
 searchKey: flag.FlagSet.ErrorHandling
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -653,7 +641,7 @@ Lookup returns the Flag structure of the named flag, returning nil if none exist
 
 ```
 searchKey: flag.FlagSet.NArg
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -666,7 +654,7 @@ NArg is the number of arguments remaining after flags have been processed.
 
 ```
 searchKey: flag.FlagSet.NFlag
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -679,7 +667,7 @@ NFlag returns the number of flags that have been set.
 
 ```
 searchKey: flag.FlagSet.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -692,7 +680,7 @@ Name returns the name of the flag set.
 
 ```
 searchKey: flag.FlagSet.Output
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -718,7 +706,7 @@ Parse parses flag definitions from the argument list, which should not include t
 
 ```
 searchKey: flag.FlagSet.Parsed
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -731,7 +719,7 @@ Parsed reports whether f.Parse has been called.
 
 ```
 searchKey: flag.FlagSet.PrintDefaults
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -887,7 +875,7 @@ VisitAll visits the flags in lexicographical order, calling fn for each. It visi
 
 ```
 searchKey: flag.FlagSet.defaultUsage
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -913,7 +901,7 @@ failf prints to standard error a formatted error and usage message and returns t
 
 ```
 searchKey: flag.FlagSet.parseOne
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -939,7 +927,7 @@ sprintf formats the message, prints it to output, and returns it.
 
 ```
 searchKey: flag.FlagSet.usage
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1017,7 +1005,7 @@ type boolValue bool
 
 ```
 searchKey: flag.newBoolValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1028,7 +1016,7 @@ func newBoolValue(val bool, p *bool) *boolValue
 
 ```
 searchKey: flag.boolValue.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1039,7 +1027,7 @@ func (b *boolValue) Get() interface{}
 
 ```
 searchKey: flag.boolValue.IsBoolFlag
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1061,7 +1049,7 @@ func (b *boolValue) Set(s string) error
 
 ```
 searchKey: flag.boolValue.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1085,7 +1073,7 @@ type durationValue time.Duration
 
 ```
 searchKey: flag.newDurationValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1096,7 +1084,7 @@ func newDurationValue(val time.Duration, p *time.Duration) *durationValue
 
 ```
 searchKey: flag.durationValue.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1118,7 +1106,7 @@ func (d *durationValue) Set(s string) error
 
 ```
 searchKey: flag.durationValue.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1142,7 +1130,7 @@ type float64Value float64
 
 ```
 searchKey: flag.newFloat64Value
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1153,7 +1141,7 @@ func newFloat64Value(val float64, p *float64) *float64Value
 
 ```
 searchKey: flag.float64Value.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1175,7 +1163,7 @@ func (f *float64Value) Set(s string) error
 
 ```
 searchKey: flag.float64Value.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1208,7 +1196,7 @@ func (f funcValue) Set(s string) error
 
 ```
 searchKey: flag.funcValue.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1232,7 +1220,7 @@ type int64Value int64
 
 ```
 searchKey: flag.newInt64Value
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1243,7 +1231,7 @@ func newInt64Value(val int64, p *int64) *int64Value
 
 ```
 searchKey: flag.int64Value.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1265,7 +1253,7 @@ func (i *int64Value) Set(s string) error
 
 ```
 searchKey: flag.int64Value.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1289,7 +1277,7 @@ type intValue int
 
 ```
 searchKey: flag.newIntValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1300,7 +1288,7 @@ func newIntValue(val int, p *int) *intValue
 
 ```
 searchKey: flag.intValue.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1322,7 +1310,7 @@ func (i *intValue) Set(s string) error
 
 ```
 searchKey: flag.intValue.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1346,7 +1334,7 @@ type stringValue string
 
 ```
 searchKey: flag.newStringValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1357,7 +1345,7 @@ func newStringValue(val string, p *string) *stringValue
 
 ```
 searchKey: flag.stringValue.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1379,7 +1367,7 @@ func (s *stringValue) Set(val string) error
 
 ```
 searchKey: flag.stringValue.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1403,7 +1391,7 @@ type uint64Value uint64
 
 ```
 searchKey: flag.newUint64Value
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1414,7 +1402,7 @@ func newUint64Value(val uint64, p *uint64) *uint64Value
 
 ```
 searchKey: flag.uint64Value.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1436,7 +1424,7 @@ func (i *uint64Value) Set(s string) error
 
 ```
 searchKey: flag.uint64Value.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1460,7 +1448,7 @@ type uintValue uint
 
 ```
 searchKey: flag.newUintValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1471,7 +1459,7 @@ func newUintValue(val uint, p *uint) *uintValue
 
 ```
 searchKey: flag.uintValue.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1493,7 +1481,7 @@ func (i *uintValue) Set(s string) error
 
 ```
 searchKey: flag.uintValue.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1502,15 +1490,11 @@ func (i *uintValue) String() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Arg" href="#Arg">func Arg(i int) string</a>
 
 ```
 searchKey: flag.Arg
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1536,7 +1520,7 @@ Args returns the non-flag command-line arguments.
 
 ```
 searchKey: flag.Bool
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1549,7 +1533,7 @@ Bool defines a bool flag with specified name, default value, and usage string. T
 
 ```
 searchKey: flag.BoolVar
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1562,7 +1546,7 @@ BoolVar defines a bool flag with specified name, default value, and usage string
 
 ```
 searchKey: flag.Duration
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1575,7 +1559,7 @@ Duration defines a time.Duration flag with specified name, default value, and us
 
 ```
 searchKey: flag.DurationVar
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1588,7 +1572,7 @@ DurationVar defines a time.Duration flag with specified name, default value, and
 
 ```
 searchKey: flag.Float64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1601,7 +1585,7 @@ Float64 defines a float64 flag with specified name, default value, and usage str
 
 ```
 searchKey: flag.Float64Var
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1614,7 +1598,7 @@ Float64Var defines a float64 flag with specified name, default value, and usage 
 
 ```
 searchKey: flag.Func
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1627,7 +1611,7 @@ Func defines a flag with the specified name and usage string. Each time the flag
 
 ```
 searchKey: flag.Int
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1640,7 +1624,7 @@ Int defines an int flag with specified name, default value, and usage string. Th
 
 ```
 searchKey: flag.Int64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1653,7 +1637,7 @@ Int64 defines an int64 flag with specified name, default value, and usage string
 
 ```
 searchKey: flag.Int64Var
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1666,7 +1650,7 @@ Int64Var defines an int64 flag with specified name, default value, and usage str
 
 ```
 searchKey: flag.IntVar
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1764,7 +1748,7 @@ To change the destination for flag messages, call CommandLine.SetOutput.
 
 ```
 searchKey: flag.ResetForTesting
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1777,7 +1761,7 @@ ResetForTesting clears all flag state and sets the usage function as directed. A
 
 ```
 searchKey: flag.Set
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1790,7 +1774,7 @@ Set sets the value of the named command-line flag.
 
 ```
 searchKey: flag.String
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1803,7 +1787,7 @@ String defines a string flag with specified name, default value, and usage strin
 
 ```
 searchKey: flag.StringVar
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1816,7 +1800,7 @@ StringVar defines a string flag with specified name, default value, and usage st
 
 ```
 searchKey: flag.Uint
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1829,7 +1813,7 @@ Uint defines a uint flag with specified name, default value, and usage string. T
 
 ```
 searchKey: flag.Uint64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1842,7 +1826,7 @@ Uint64 defines a uint64 flag with specified name, default value, and usage strin
 
 ```
 searchKey: flag.Uint64Var
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1855,7 +1839,7 @@ Uint64Var defines a uint64 flag with specified name, default value, and usage st
 
 ```
 searchKey: flag.UintVar
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1868,7 +1852,7 @@ UintVar defines a uint flag with specified name, default value, and usage string
 
 ```
 searchKey: flag.UnquoteUsage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1881,7 +1865,7 @@ UnquoteUsage extracts a back-quoted name from the usage string for a flag and re
 
 ```
 searchKey: flag.Var
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1894,7 +1878,7 @@ Var defines a flag with the specified name and usage string. The type and value 
 
 ```
 searchKey: flag.Visit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1907,7 +1891,7 @@ Visit visits the command-line flags in lexicographical order, calling fn for eac
 
 ```
 searchKey: flag.VisitAll
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1942,7 +1926,7 @@ func init()
 
 ```
 searchKey: flag.isZeroValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1955,7 +1939,7 @@ isZeroValue determines whether the string represents the zero value for a flag.
 
 ```
 searchKey: flag.numError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1966,7 +1950,7 @@ func numError(err error) error
 
 ```
 searchKey: flag.sortFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

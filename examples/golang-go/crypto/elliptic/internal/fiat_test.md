@@ -10,14 +10,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestP521Invert" href="#TestP521Invert">func TestP521Invert(t *testing.T)</a>
 
 ```
 searchKey: fiat_test.TestP521Invert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -28,7 +28,7 @@ func TestP521Invert(t *testing.T)
 
 ```
 searchKey: fiat_test.p521Random
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -18,10 +18,6 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="port" href="#port">const port</a>
 
 ```
@@ -34,10 +30,6 @@ const port = 3191
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Config" href="#Config">type Config struct</a>
 
@@ -61,7 +53,7 @@ type Config struct {
 
 ```
 searchKey: main.Config.Load
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -94,10 +86,6 @@ type config interface {
 ```
 
 ## <a id="func" href="#func">Functions</a>
-
-```
-tags: [package]
-```
 
 ### <a id="connectToDatabase" href="#connectToDatabase">func connectToDatabase() *sql.DB</a>
 

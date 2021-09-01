@@ -44,7 +44,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="globTests" href="#globTests">var globTests</a>
@@ -105,7 +105,7 @@ var tree = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Node" href="#Node">type Node struct</a>
@@ -247,7 +247,7 @@ func (subOnly) Open(name string) (File, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleWalkDir" href="#ExampleWalkDir">func ExampleWalkDir()</a>
@@ -265,7 +265,7 @@ func ExampleWalkDir()
 
 ```
 searchKey: fs_test.TestFileInfoToDirEntry
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -276,7 +276,7 @@ func TestFileInfoToDirEntry(t *testing.T)
 
 ```
 searchKey: fs_test.TestGlob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -287,7 +287,7 @@ func TestGlob(t *testing.T)
 
 ```
 searchKey: fs_test.TestGlobError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -298,7 +298,7 @@ func TestGlobError(t *testing.T)
 
 ```
 searchKey: fs_test.TestGlobMethod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -309,7 +309,7 @@ func TestGlobMethod(t *testing.T)
 
 ```
 searchKey: fs_test.TestReadDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -320,7 +320,7 @@ func TestReadDir(t *testing.T)
 
 ```
 searchKey: fs_test.TestReadFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -331,7 +331,7 @@ func TestReadFile(t *testing.T)
 
 ```
 searchKey: fs_test.TestStat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -342,7 +342,7 @@ func TestStat(t *testing.T)
 
 ```
 searchKey: fs_test.TestSub
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -353,7 +353,7 @@ func TestSub(t *testing.T)
 
 ```
 searchKey: fs_test.TestValidPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -364,7 +364,7 @@ func TestValidPath(t *testing.T)
 
 ```
 searchKey: fs_test.TestWalkDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -375,7 +375,7 @@ func TestWalkDir(t *testing.T)
 
 ```
 searchKey: fs_test.checkMarks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -386,7 +386,7 @@ func checkMarks(t *testing.T, report bool)
 
 ```
 searchKey: fs_test.contains
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -399,7 +399,7 @@ contains reports whether vector contains the string s.
 
 ```
 searchKey: fs_test.makeTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -410,7 +410,7 @@ func makeTree(t *testing.T) FS
 
 ```
 searchKey: fs_test.mark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -423,7 +423,7 @@ Assumes that each node name is unique. Good enough for a test. If clear is true,
 
 ```
 searchKey: fs_test.markTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -434,7 +434,7 @@ func markTree(n *Node)
 
 ```
 searchKey: fs_test.walkTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

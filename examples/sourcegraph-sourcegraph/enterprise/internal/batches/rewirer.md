@@ -22,7 +22,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ChangesetRewirer" href="#ChangesetRewirer">type ChangesetRewirer struct</a>
@@ -44,7 +44,7 @@ type ChangesetRewirer struct {
 
 ```
 searchKey: rewirer.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -55,7 +55,7 @@ func New(mappings btypes.RewirerMappings, batchChangeID int64) *ChangesetRewirer
 
 ```
 searchKey: rewirer.ChangesetRewirer.Rewire
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -141,7 +141,7 @@ ErrRepoNotSupported is thrown by the rewirer when it encounters a mapping target
 
 ```
 searchKey: rewirer.ErrRepoNotSupported.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -151,14 +151,14 @@ func (e ErrRepoNotSupported) Error() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestRewirer_Rewire" href="#TestRewirer_Rewire">func TestRewirer_Rewire(t *testing.T)</a>
 
 ```
 searchKey: rewirer.TestRewirer_Rewire
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -169,7 +169,7 @@ func TestRewirer_Rewire(t *testing.T)
 
 ```
 searchKey: rewirer.assertResetReconcilerState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -180,7 +180,7 @@ func assertResetReconcilerState(a ct.ChangesetAssertions) ct.ChangesetAssertions
 
 ```
 searchKey: rewirer.checkRepoSupported
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -14,10 +14,6 @@ Package assets contains static assets for the front-end Web app.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Assets" href="#Assets">var Assets</a>
 
 ```
@@ -41,10 +37,6 @@ var MockLoadWebpackManifest func() (*WebpackManifest, error)
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="WebpackManifest" href="#WebpackManifest">type WebpackManifest struct</a>
 

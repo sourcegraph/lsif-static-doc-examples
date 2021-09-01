@@ -28,7 +28,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="testKeyID" href="#testKeyID">const testKeyID</a>
@@ -47,7 +47,7 @@ testKeyID is the ID of a key defined here: [https://us-west-2.console.aws.amazon
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="shouldUpdate" href="#shouldUpdate">var shouldUpdate</a>
@@ -64,7 +64,7 @@ var shouldUpdate = flag.Bool("update", false, "Update testdata")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Key" href="#Key">type Key struct</a>
@@ -136,14 +136,14 @@ type encryptedValue struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewKey" href="#NewKey">func NewKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey) (encryption.Key, error)</a>
 
 ```
 searchKey: awskms.NewKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -154,7 +154,7 @@ func NewKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey) (encrypti
 
 ```
 searchKey: awskms.TestRoundtrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -165,7 +165,7 @@ func TestRoundtrip(t *testing.T)
 
 ```
 searchKey: awskms.aesDecrypt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -176,7 +176,7 @@ func aesDecrypt(ciphertext, key, nonce []byte) ([]byte, error)
 
 ```
 searchKey: awskms.aesEncrypt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -187,7 +187,7 @@ func aesEncrypt(plaintext, key []byte) ([]byte, []byte, error)
 
 ```
 searchKey: awskms.awsConfigOptsForKeyConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -198,7 +198,7 @@ func awsConfigOptsForKeyConfig(keyConfig schema.AWSKMSEncryptionKey) []func(*con
 
 ```
 searchKey: awskms.newClientFactory
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -209,7 +209,7 @@ func newClientFactory(t testing.TB, name string, mws ...httpcli.Middleware) (*ht
 
 ```
 searchKey: awskms.newKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -220,7 +220,7 @@ func newKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey, config aw
 
 ```
 searchKey: awskms.newRecorder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -231,7 +231,7 @@ func newRecorder(t testing.TB, file string, record bool) *recorder.Recorder
 
 ```
 searchKey: awskms.readEnvFallback
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -242,7 +242,7 @@ func readEnvFallback(key, fallback string) string
 
 ```
 searchKey: awskms.save
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

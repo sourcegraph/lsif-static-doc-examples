@@ -50,7 +50,7 @@ Note especially that this package does not itself change behavior at run time ba
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FieldTrack" href="#FieldTrack">const FieldTrack</a>
@@ -254,7 +254,7 @@ const StaticLockRankingInt = 0
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Flags" href="#Flags">type Flags struct</a>

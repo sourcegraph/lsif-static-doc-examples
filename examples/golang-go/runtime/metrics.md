@@ -171,10 +171,6 @@ Below is the full list of supported metrics, ordered lexicographically.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="KindBad" href="#KindBad">const KindBad</a>
 
 ```
@@ -229,10 +225,6 @@ KindUint64 indicates that the type of the Value is a uint64.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="allDesc" href="#allDesc">var allDesc</a>
 
 ```
@@ -247,10 +239,6 @@ var allDesc = ...
 The English language descriptions below must be kept in sync with the descriptions of each metric in doc.go. 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Description" href="#Description">type Description struct</a>
 
@@ -387,7 +375,7 @@ Value represents a metric value returned by the runtime.
 
 ```
 searchKey: metrics.Value.Float64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -402,7 +390,7 @@ If v.Kind() != KindFloat64, this method panics.
 
 ```
 searchKey: metrics.Value.Float64Histogram
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -417,7 +405,7 @@ If v.Kind() != KindFloat64Histogram, this method panics.
 
 ```
 searchKey: metrics.Value.Kind
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -430,7 +418,7 @@ Kind returns the tag representing the kind of value this is.
 
 ```
 searchKey: metrics.Value.Uint64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -456,10 +444,6 @@ ValueKind is a tag for a metric Value which indicates its type.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="All" href="#All">func All() []Description</a>
 
 ```
@@ -477,7 +461,7 @@ All returns a slice of containing metric descriptions for all supported metrics.
 
 ```
 searchKey: metrics.Read
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -498,7 +482,7 @@ Sample values with names not appearing in All will have their Value populated as
 
 ```
 searchKey: metrics.runtime_readMetrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

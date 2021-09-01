@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/scheduler",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -67,7 +66,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.NewScheduler",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -89,7 +88,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.Scheduler.Start",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -111,7 +110,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.Scheduler.Stop",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -133,7 +132,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.Scheduler.enqueueChangeset",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -180,7 +179,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.newBackoff",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -203,7 +202,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.backoff.next",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -226,7 +225,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.backoff.reset",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -273,7 +272,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.newTicker",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -296,7 +295,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.ticker.stop",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -325,7 +324,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -346,7 +344,7 @@
                 "newPage": false,
                 "searchKey": "scheduler.TestTickerGoBrrr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -370,7 +368,7 @@
                 "newPage": false,
                 "searchKey": "scheduler.TestTickerRateLimited",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -394,7 +392,7 @@
                 "newPage": false,
                 "searchKey": "scheduler.TestTickerZero",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]

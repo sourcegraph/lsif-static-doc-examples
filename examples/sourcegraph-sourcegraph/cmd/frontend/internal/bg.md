@@ -20,7 +20,7 @@ Because there can be multiple frontend processes running, these tasks must be id
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="recommendedPolicy" href="#recommendedPolicy">const recommendedPolicy</a>
@@ -37,7 +37,7 @@ const recommendedPolicy = "allkeys-lru"
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CheckRedisCacheEvictionPolicy" href="#CheckRedisCacheEvictionPolicy">func CheckRedisCacheEvictionPolicy()</a>
@@ -66,7 +66,7 @@ func DeleteOldCacheDataInRedis()
 
 ```
 searchKey: bg.DeleteOldEventLogsInPostgres
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -77,7 +77,7 @@ func DeleteOldEventLogsInPostgres(ctx context.Context, db dbutil.DB)
 
 ```
 searchKey: bg.DeleteOldSecurityEventLogsInPostgres
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -88,7 +88,7 @@ func DeleteOldSecurityEventLogsInPostgres(ctx context.Context, db dbutil.DB)
 
 ```
 searchKey: bg.getRunID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

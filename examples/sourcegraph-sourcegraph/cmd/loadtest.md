@@ -22,10 +22,6 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="gqlSearch" href="#gqlSearch">const gqlSearch</a>
 
 ```
@@ -38,10 +34,6 @@ const gqlSearch = ...
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="FrontendHost" href="#FrontendHost">var FrontendHost</a>
 
@@ -88,10 +80,6 @@ var SearchQueriesEnv = env.Get("loadTestSearches", "[]", "Search queries to use 
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="GQLSearchVars" href="#GQLSearchVars">type GQLSearchVars struct</a>
 
@@ -141,15 +129,11 @@ type GraphQLResponseSearch struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="frontendURL" href="#frontendURL">func frontendURL(thePath string) string</a>
 
 ```
 searchKey: main.frontendURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -182,7 +166,7 @@ func run() error
 
 ```
 searchKey: main.search
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

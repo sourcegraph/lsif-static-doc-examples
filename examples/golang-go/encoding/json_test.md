@@ -35,7 +35,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Gopher" href="#Gopher">const Gopher</a>
@@ -107,7 +107,7 @@ const Zebra
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Animal" href="#Animal">type Animal int</a>
@@ -125,7 +125,7 @@ type Animal int
 
 ```
 searchKey: json_test.Animal.MarshalJSON
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -158,7 +158,7 @@ type Size int
 
 ```
 searchKey: json_test.Size.MarshalText
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -179,7 +179,7 @@ func (s *Size) UnmarshalText(text []byte) error
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleDecoder" href="#ExampleDecoder">func ExampleDecoder()</a>

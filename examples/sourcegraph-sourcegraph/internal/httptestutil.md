@@ -27,7 +27,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
@@ -45,7 +45,7 @@ type Client struct{ http.Client }
 
 ```
 searchKey: httptestutil.NewTest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -199,14 +199,14 @@ func (t handlerTransport) RoundTrip(req *http.Request) (*http.Response, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewGitHubRecorderFactory" href="#NewGitHubRecorderFactory">func NewGitHubRecorderFactory(t testing.TB, update bool, name string) (*httpcli.Factory, func())</a>
 
 ```
 searchKey: httptestutil.NewGitHubRecorderFactory
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -221,7 +221,7 @@ If update is true, the HTTP requests are recorded, otherwise they're replayed fr
 
 ```
 searchKey: httptestutil.NewRecorder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -234,7 +234,7 @@ NewRecorder returns an HTTP interaction recorder with the given record mode and 
 
 ```
 searchKey: httptestutil.NewRecorderFactory
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -249,7 +249,7 @@ If update is true, the HTTP requests are recorded, otherwise they're replayed fr
 
 ```
 searchKey: httptestutil.NewRecorderOpt
-tags: [method]
+tags: [function]
 ```
 
 ```Go

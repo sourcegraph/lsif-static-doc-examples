@@ -46,7 +46,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="left" href="#left">var left</a>
@@ -131,7 +131,7 @@ Docker, starting from 0.7.x, generates names from notable scientists and hackers
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="feederDB" href="#feederDB">type feederDB struct</a>
@@ -160,7 +160,7 @@ feederDB is a front to a sqlite DB that records ownerRepo processed, orgs create
 
 ```
 searchKey: main.newFeederDB
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -243,7 +243,7 @@ feederError is an error while processing an ownerRepo line. errType partitions t
 
 ```
 searchKey: main.feederError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -254,7 +254,7 @@ func (e *feederError) Error() string
 
 ```
 searchKey: main.feederError.Unwrap
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -470,14 +470,14 @@ run spins until work channel closes or context cancels
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="extractOwnerRepoFromCSVLine" href="#extractOwnerRepoFromCSVLine">func extractOwnerRepoFromCSVLine(line string) string</a>
 
 ```
 searchKey: main.extractOwnerRepoFromCSVLine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -490,7 +490,7 @@ extractOwnerRepoFromCSVLine extracts the owner and repo from a line that comes f
 
 ```
 searchKey: main.getRandomName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -525,7 +525,7 @@ func main()
 
 ```
 searchKey: main.newGHEClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -536,7 +536,7 @@ func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*githu
 
 ```
 searchKey: main.numLinesInFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -549,7 +549,7 @@ numLinesInFile counts how many lines are in the specified file (it starts counti
 
 ```
 searchKey: main.numLinesTotal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -575,7 +575,7 @@ randomOrgNameAndSize returns a random, unique name for an org and a random size 
 
 ```
 searchKey: main.stats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

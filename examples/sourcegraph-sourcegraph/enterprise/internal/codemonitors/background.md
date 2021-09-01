@@ -39,7 +39,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="eventRetentionInDays" href="#eventRetentionInDays">const eventRetentionInDays</a>
@@ -67,7 +67,7 @@ const gqlSearchQuery = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="actionRunner" href="#actionRunner">type actionRunner struct</a>
@@ -159,7 +159,7 @@ type gqlSearchResponse struct {
 
 ```
 searchKey: background.search
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -220,14 +220,14 @@ func (r *queryRunner) Handle(ctx context.Context, workerStore dbworkerstore.Stor
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="StartBackgroundJobs" href="#StartBackgroundJobs">func StartBackgroundJobs(ctx context.Context, db *sql.DB)</a>
 
 ```
 searchKey: background.StartBackgroundJobs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -238,7 +238,7 @@ func StartBackgroundJobs(ctx context.Context, db *sql.DB)
 
 ```
 searchKey: background.TestActionRunner
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -249,7 +249,7 @@ func TestActionRunner(t *testing.T)
 
 ```
 searchKey: background.createDBWorkerStoreForActionJobs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -260,7 +260,7 @@ func createDBWorkerStoreForActionJobs(s *cm.Store) dbworkerstore.Store
 
 ```
 searchKey: background.createDBWorkerStoreForTriggerJobs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -271,7 +271,7 @@ func createDBWorkerStoreForTriggerJobs(s *cm.Store) dbworkerstore.Store
 
 ```
 searchKey: background.extractTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -284,7 +284,7 @@ extractTime extracts the time from the given search result.
 
 ```
 searchKey: background.gqlURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ func init()
 
 ```
 searchKey: background.latestResultTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -317,7 +317,7 @@ func latestResultTime(previousLastResult *time.Time, v *gqlSearchResponse, searc
 
 ```
 searchKey: background.newActionJobResetter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -328,7 +328,7 @@ func newActionJobResetter(ctx context.Context, s *cm.Store, metrics codeMonitors
 
 ```
 searchKey: background.newActionRunner
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -339,7 +339,7 @@ func newActionRunner(ctx context.Context, s *cm.Store, metrics codeMonitorsMetri
 
 ```
 searchKey: background.newQueryWithAfterFilter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -352,7 +352,7 @@ newQueryWithAfterFilter constructs a new query which finds search results introd
 
 ```
 searchKey: background.newTriggerJobsLogDeleter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -363,7 +363,7 @@ func newTriggerJobsLogDeleter(ctx context.Context, store *cm.Store) goroutine.Ba
 
 ```
 searchKey: background.newTriggerQueryEnqueuer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -374,7 +374,7 @@ func newTriggerQueryEnqueuer(ctx context.Context, store *cm.Store) goroutine.Bac
 
 ```
 searchKey: background.newTriggerQueryResetter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -385,7 +385,7 @@ func newTriggerQueryResetter(ctx context.Context, s *cm.Store, metrics codeMonit
 
 ```
 searchKey: background.newTriggerQueryRunner
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -396,7 +396,7 @@ func newTriggerQueryRunner(ctx context.Context, s *cm.Store, metrics codeMonitor
 
 ```
 searchKey: background.zeroOrVal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

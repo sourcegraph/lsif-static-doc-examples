@@ -69,7 +69,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BatchChangesSSHMigrationID" href="#BatchChangesSSHMigrationID">const BatchChangesSSHMigrationID</a>
@@ -232,7 +232,7 @@ const userCredentialMigratorProgressQuery = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="batchChangesMetrics" href="#batchChangesMetrics">type batchChangesMetrics struct</a>
@@ -355,7 +355,7 @@ bulkProcessorWorker is a wrapper for the workerutil handlerfunc to create a bulk
 
 ```
 searchKey: background.bulkProcessorWorker.HandlerFunc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -482,7 +482,7 @@ unknownJobTypeErr is returned when a ChangesetJob record is of an unknown type a
 
 ```
 searchKey: background.unknownJobTypeErr.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -493,7 +493,7 @@ func (e unknownJobTypeErr) Error() string
 
 ```
 searchKey: background.unknownJobTypeErr.NonRetryable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -550,14 +550,14 @@ func (m *userCredentialMigrator) Up(ctx context.Context) error
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="RegisterMigrations" href="#RegisterMigrations">func RegisterMigrations(cstore *store.Store, outOfBandMigrationRunner *oobmigration.Runner) error</a>
 
 ```
 searchKey: background.RegisterMigrations
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -570,7 +570,7 @@ RegisterMigrations registers all currently implemented out of band migrations by
 
 ```
 searchKey: background.Routines
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -581,7 +581,7 @@ func Routines(ctx context.Context, batchesStore *store.Store, cf *httpcli.Factor
 
 ```
 searchKey: background.TestBulkProcessor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -592,7 +592,7 @@ func TestBulkProcessor(t *testing.T)
 
 ```
 searchKey: background.TestReconcilerWorkerView
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -603,7 +603,7 @@ func TestReconcilerWorkerView(t *testing.T)
 
 ```
 searchKey: background.TestSSHMigrator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -614,7 +614,7 @@ func TestSSHMigrator(t *testing.T)
 
 ```
 searchKey: background.TestSiteCredentialMigrator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -625,7 +625,7 @@ func TestSiteCredentialMigrator(t *testing.T)
 
 ```
 searchKey: background.TestUserCredentialMigrator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -636,7 +636,7 @@ func TestUserCredentialMigrator(t *testing.T)
 
 ```
 searchKey: background.assertProgress
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -649,7 +649,7 @@ func assertProgress(t *testing.T, ctx context.Context, want float64, migrator in
 
 ```
 searchKey: background.assertReturnedChangesetIDs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -660,7 +660,7 @@ func assertReturnedChangesetIDs(t *testing.T, ctx context.Context, db dbutil.DB,
 
 ```
 searchKey: background.createBulkOperationDBWorkerStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -671,7 +671,7 @@ func createBulkOperationDBWorkerStore(s *store.Store) dbworkerstore.Store
 
 ```
 searchKey: background.createPreviouslyEncryptedUserCredential
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -688,7 +688,7 @@ func createPreviouslyEncryptedUserCredential(
 
 ```
 searchKey: background.createReconcilerDBWorkerStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -699,7 +699,7 @@ func createReconcilerDBWorkerStore(s *store.Store) dbworkerstore.Store
 
 ```
 searchKey: background.createUnencryptedUserCredential
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -716,7 +716,7 @@ func createUnencryptedUserCredential(
 
 ```
 searchKey: background.makeResetterMetrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -727,7 +727,7 @@ func makeResetterMetrics(observationContext *observation.Context, workerName str
 
 ```
 searchKey: background.newBulkOperationWorker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -745,7 +745,7 @@ newBulkOperationWorker creates a dbworker.Worker that fetches enqueued changeset
 
 ```
 searchKey: background.newBulkOperationWorkerResetter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -758,7 +758,7 @@ newBulkOperationWorkerResetter creates a dbworker.Resetter that reenqueues lost 
 
 ```
 searchKey: background.newReconcilerWorker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -777,7 +777,7 @@ newReconcilerWorker creates a dbworker.newWorker that fetches enqueued changeset
 
 ```
 searchKey: background.newReconcilerWorkerResetter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -788,7 +788,7 @@ func newReconcilerWorkerResetter(s *store.Store, metrics batchChangesMetrics) *d
 
 ```
 searchKey: background.newSpecExpireWorker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -799,7 +799,7 @@ func newSpecExpireWorker(ctx context.Context, cstore *store.Store) goroutine.Bac
 
 ```
 searchKey: background.scanFirstChangesetJobRecord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -812,7 +812,7 @@ scanFirstChangesetJobRecord wraps store.ScanFirstChangesetJob to return a generi
 
 ```
 searchKey: background.scanFirstChangesetRecord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

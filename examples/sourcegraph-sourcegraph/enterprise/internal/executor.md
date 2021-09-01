@@ -17,7 +17,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AddExecutionLogEntryRequest" href="#AddExecutionLogEntryRequest">type AddExecutionLogEntryRequest struct</a>
@@ -153,7 +153,7 @@ Job describes a series of steps to perform within an executor.
 
 ```
 searchKey: executor.Job.RecordID
-tags: [function]
+tags: [method]
 ```
 
 ```Go

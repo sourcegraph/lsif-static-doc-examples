@@ -12,14 +12,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestBswap32" href="#TestBswap32">func TestBswap32(t *testing.T)</a>
 
 ```
 searchKey: sys_test.TestBswap32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -30,7 +30,7 @@ func TestBswap32(t *testing.T)
 
 ```
 searchKey: sys_test.TestBswap64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -41,7 +41,7 @@ func TestBswap64(t *testing.T)
 
 ```
 searchKey: sys_test.TestCtz32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -52,7 +52,7 @@ func TestCtz32(t *testing.T)
 
 ```
 searchKey: sys_test.TestCtz64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

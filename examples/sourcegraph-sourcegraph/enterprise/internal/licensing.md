@@ -90,7 +90,7 @@ Package licensing handles parsing, verifying, and enforcing the product subscrip
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FeatureACLs" href="#FeatureACLs">const FeatureACLs</a>
@@ -367,7 +367,7 @@ const testPlan Plan = "test"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EnforceTiers" href="#EnforceTiers">var EnforceTiers</a>
@@ -574,7 +574,7 @@ var started bool
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Feature" href="#Feature">type Feature string</a>
@@ -635,7 +635,7 @@ GetConfiguredProductLicenseInfoWithSignature returns information about the curre
 
 ```
 searchKey: licensing.ParseProductLicenseKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -648,7 +648,7 @@ ParseProductLicenseKey parses and verifies the license key using the license ver
 
 ```
 searchKey: licensing.ParseProductLicenseKeyWithBuiltinOrGenerationKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -663,7 +663,7 @@ It is useful for local development when using a test license generation key (who
 
 ```
 searchKey: licensing.toInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -676,7 +676,7 @@ toInfo converts from the return type of license.ParseSignedKey to the return typ
 
 ```
 searchKey: licensing.Info.Plan
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -689,7 +689,7 @@ Plan is the pricing plan of the license.
 
 ```
 searchKey: licensing.Info.hasUnknownPlan
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -728,7 +728,7 @@ HasFeature reports whether the plan has the given feature.
 
 ```
 searchKey: licensing.Plan.MaxExternalServiceCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -741,7 +741,7 @@ MaxExternalServiceCount returns the number of external services that the plan su
 
 ```
 searchKey: licensing.Plan.isKnown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -754,7 +754,7 @@ isKnown reports whether the plan is a known plan.
 
 ```
 searchKey: licensing.Plan.tag
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -794,7 +794,7 @@ type featureNotActivatedError struct{ errcode.PresentationError }
 
 ```
 searchKey: licensing.NewFeatureNotActivatedError
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -804,14 +804,14 @@ func NewFeatureNotActivatedError(message string) featureNotActivatedError
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ActualUserCount" href="#ActualUserCount">func ActualUserCount(ctx context.Context) (int32, error)</a>
 
 ```
 searchKey: licensing.ActualUserCount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -824,7 +824,7 @@ ActualUserCount returns the actual max number of users that have had accounts on
 
 ```
 searchKey: licensing.ActualUserCountDate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -837,7 +837,7 @@ ActualUserCountDate returns the timestamp when the actual max number of users th
 
 ```
 searchKey: licensing.Check
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -852,7 +852,7 @@ The returned error may implement errcode.PresentationError to indicate that it c
 
 ```
 searchKey: licensing.GenerateProductLicenseKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -865,7 +865,7 @@ GenerateProductLicenseKey generates a product license key using the license gene
 
 ```
 searchKey: licensing.GetMaxUsers
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -878,7 +878,7 @@ GetMaxUsers gets the max users associated with a license key.
 
 ```
 searchKey: licensing.IsFeatureEnabledLenient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -893,7 +893,7 @@ This is useful for callers who don't want to handle errors (usually because the 
 
 ```
 searchKey: licensing.IsFeatureNotActivated
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -908,7 +908,7 @@ It is used to distinguish between the multiple reasons for errors from Check: ei
 
 ```
 searchKey: licensing.ProductNameWithBrand
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -921,7 +921,7 @@ ProductNameWithBrand returns the product name with brand (e.g., "Sourcegraph Ent
 
 ```
 searchKey: licensing.StartMaxUserCount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -934,7 +934,7 @@ StartMaxUserCount starts checking for a new count of max user accounts periodica
 
 ```
 searchKey: licensing.TestCheckFeature
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -945,7 +945,7 @@ func TestCheckFeature(t *testing.T)
 
 ```
 searchKey: licensing.TestInfo_Plan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -956,7 +956,7 @@ func TestInfo_Plan(t *testing.T)
 
 ```
 searchKey: licensing.TestInfo_hasUnknownPlan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -967,7 +967,7 @@ func TestInfo_hasUnknownPlan(t *testing.T)
 
 ```
 searchKey: licensing.TestPlan_isKnown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -978,7 +978,7 @@ func TestPlan_isKnown(t *testing.T)
 
 ```
 searchKey: licensing.TestProductNameWithBrand
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1004,7 +1004,7 @@ It returns a cleanup func so callers can use `defer TestingSkipFeatureChecks()()
 
 ```
 searchKey: licensing.checkFeature
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1015,7 +1015,7 @@ func checkFeature(info *Info, feature Feature) error
 
 ```
 searchKey: licensing.checkMaxUsers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1028,7 +1028,7 @@ checkMaxUsers runs periodically, and if a license key is in use, updates the rec
 
 ```
 searchKey: licensing.getMaxUsers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1083,7 +1083,7 @@ func maxUsersTimeKey() string
 
 ```
 searchKey: licensing.setMaxUsers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

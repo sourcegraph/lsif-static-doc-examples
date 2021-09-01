@@ -11,14 +11,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestEd25519Vectors" href="#TestEd25519Vectors">func TestEd25519Vectors(t *testing.T)</a>
 
 ```
 searchKey: ed25519_test.TestEd25519Vectors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -37,7 +37,7 @@ See [https://hdevalence.ca/blog/2020-10-04-its-25519am](https://hdevalence.ca/bl
 
 ```
 searchKey: ed25519_test.decodeHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48,7 +48,7 @@ func decodeHex(t *testing.T, s string) []byte
 
 ```
 searchKey: ed25519_test.downloadEd25519Vectors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

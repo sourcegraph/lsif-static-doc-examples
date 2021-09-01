@@ -230,7 +230,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="uploadsBatchSize" href="#uploadsBatchSize">const uploadsBatchSize</a>
@@ -247,7 +247,7 @@ const uploadsBatchSize = 100
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewMetrics" href="#NewMetrics">var NewMetrics</a>
@@ -275,7 +275,7 @@ var testSourcedCommits = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DBStore" href="#DBStore">type DBStore interface</a>
@@ -328,7 +328,7 @@ DBStoreDeleteIndexesWithoutRepositoryFunc describes the behavior when the Delete
 
 ```
 searchKey: janitor.DBStoreDeleteIndexesWithoutRepositoryFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -404,7 +404,7 @@ func (f *DBStoreDeleteIndexesWithoutRepositoryFunc) appendCall(r0 DBStoreDeleteI
 
 ```
 searchKey: janitor.DBStoreDeleteIndexesWithoutRepositoryFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -441,7 +441,7 @@ DBStoreDeleteIndexesWithoutRepositoryFuncCall is an object that describes an inv
 
 ```
 searchKey: janitor.DBStoreDeleteIndexesWithoutRepositoryFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -454,7 +454,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreDeleteIndexesWithoutRepositoryFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -485,7 +485,7 @@ DBStoreDeleteOldIndexesFunc describes the behavior when the DeleteOldIndexes met
 
 ```
 searchKey: janitor.DBStoreDeleteOldIndexesFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -561,7 +561,7 @@ func (f *DBStoreDeleteOldIndexesFunc) appendCall(r0 DBStoreDeleteOldIndexesFuncC
 
 ```
 searchKey: janitor.DBStoreDeleteOldIndexesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -601,7 +601,7 @@ DBStoreDeleteOldIndexesFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: janitor.DBStoreDeleteOldIndexesFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -614,7 +614,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreDeleteOldIndexesFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -645,7 +645,7 @@ DBStoreDeleteUploadsStuckUploadingFunc describes the behavior when the DeleteUpl
 
 ```
 searchKey: janitor.DBStoreDeleteUploadsStuckUploadingFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -721,7 +721,7 @@ func (f *DBStoreDeleteUploadsStuckUploadingFunc) appendCall(r0 DBStoreDeleteUplo
 
 ```
 searchKey: janitor.DBStoreDeleteUploadsStuckUploadingFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -758,7 +758,7 @@ DBStoreDeleteUploadsStuckUploadingFuncCall is an object that describes an invoca
 
 ```
 searchKey: janitor.DBStoreDeleteUploadsStuckUploadingFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -771,7 +771,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreDeleteUploadsStuckUploadingFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -802,7 +802,7 @@ DBStoreDeleteUploadsWithoutRepositoryFunc describes the behavior when the Delete
 
 ```
 searchKey: janitor.DBStoreDeleteUploadsWithoutRepositoryFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -878,7 +878,7 @@ func (f *DBStoreDeleteUploadsWithoutRepositoryFunc) appendCall(r0 DBStoreDeleteU
 
 ```
 searchKey: janitor.DBStoreDeleteUploadsWithoutRepositoryFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -915,7 +915,7 @@ DBStoreDeleteUploadsWithoutRepositoryFuncCall is an object that describes an inv
 
 ```
 searchKey: janitor.DBStoreDeleteUploadsWithoutRepositoryFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -928,7 +928,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreDeleteUploadsWithoutRepositoryFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -959,7 +959,7 @@ DBStoreDirtyRepositoriesFunc describes the behavior when the DirtyRepositories m
 
 ```
 searchKey: janitor.DBStoreDirtyRepositoriesFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1035,7 +1035,7 @@ func (f *DBStoreDirtyRepositoriesFunc) appendCall(r0 DBStoreDirtyRepositoriesFun
 
 ```
 searchKey: janitor.DBStoreDirtyRepositoriesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1069,7 +1069,7 @@ DBStoreDirtyRepositoriesFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: janitor.DBStoreDirtyRepositoriesFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1082,7 +1082,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreDirtyRepositoriesFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1113,7 +1113,7 @@ DBStoreDoneFunc describes the behavior when the Done method of the parent MockDB
 
 ```
 searchKey: janitor.DBStoreDoneFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1189,7 +1189,7 @@ func (f *DBStoreDoneFunc) appendCall(r0 DBStoreDoneFuncCall)
 
 ```
 searchKey: janitor.DBStoreDoneFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1220,7 +1220,7 @@ DBStoreDoneFuncCall is an object that describes an invocation of method Done on 
 
 ```
 searchKey: janitor.DBStoreDoneFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1233,7 +1233,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreDoneFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1264,7 +1264,7 @@ DBStoreGetUploadsFunc describes the behavior when the GetUploads method of the p
 
 ```
 searchKey: janitor.DBStoreGetUploadsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1340,7 +1340,7 @@ func (f *DBStoreGetUploadsFunc) appendCall(r0 DBStoreGetUploadsFuncCall)
 
 ```
 searchKey: janitor.DBStoreGetUploadsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1380,7 +1380,7 @@ DBStoreGetUploadsFuncCall is an object that describes an invocation of method Ge
 
 ```
 searchKey: janitor.DBStoreGetUploadsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1393,7 +1393,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreGetUploadsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1424,7 +1424,7 @@ DBStoreHandleFunc describes the behavior when the Handle method of the parent Mo
 
 ```
 searchKey: janitor.DBStoreHandleFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1500,7 +1500,7 @@ func (f *DBStoreHandleFunc) appendCall(r0 DBStoreHandleFuncCall)
 
 ```
 searchKey: janitor.DBStoreHandleFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1528,7 +1528,7 @@ DBStoreHandleFuncCall is an object that describes an invocation of method Handle
 
 ```
 searchKey: janitor.DBStoreHandleFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1541,7 +1541,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreHandleFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1572,7 +1572,7 @@ DBStoreHardDeleteUploadByIDFunc describes the behavior when the HardDeleteUpload
 
 ```
 searchKey: janitor.DBStoreHardDeleteUploadByIDFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1648,7 +1648,7 @@ func (f *DBStoreHardDeleteUploadByIDFunc) appendCall(r0 DBStoreHardDeleteUploadB
 
 ```
 searchKey: janitor.DBStoreHardDeleteUploadByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1682,7 +1682,7 @@ DBStoreHardDeleteUploadByIDFuncCall is an object that describes an invocation of
 
 ```
 searchKey: janitor.DBStoreHardDeleteUploadByIDFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1695,7 +1695,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: janitor.DBStoreHardDeleteUploadByIDFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1726,7 +1726,7 @@ DBStoreRefreshCommitResolvabilityFunc describes the behavior when the RefreshCom
 
 ```
 searchKey: janitor.DBStoreRefreshCommitResolvabilityFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1802,7 +1802,7 @@ func (f *DBStoreRefreshCommitResolvabilityFunc) appendCall(r0 DBStoreRefreshComm
 
 ```
 searchKey: janitor.DBStoreRefreshCommitResolvabilityFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1851,7 +1851,7 @@ DBStoreRefreshCommitResolvabilityFuncCall is an object that describes an invocat
 
 ```
 searchKey: janitor.DBStoreRefreshCommitResolvabilityFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1864,7 +1864,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreRefreshCommitResolvabilityFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1919,7 +1919,7 @@ DBStoreSoftDeleteOldUploadsFunc describes the behavior when the SoftDeleteOldUpl
 
 ```
 searchKey: janitor.DBStoreSoftDeleteOldUploadsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1995,7 +1995,7 @@ func (f *DBStoreSoftDeleteOldUploadsFunc) appendCall(r0 DBStoreSoftDeleteOldUplo
 
 ```
 searchKey: janitor.DBStoreSoftDeleteOldUploadsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2035,7 +2035,7 @@ DBStoreSoftDeleteOldUploadsFuncCall is an object that describes an invocation of
 
 ```
 searchKey: janitor.DBStoreSoftDeleteOldUploadsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2048,7 +2048,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreSoftDeleteOldUploadsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2079,7 +2079,7 @@ DBStoreStaleSourcedCommitsFunc describes the behavior when the StaleSourcedCommi
 
 ```
 searchKey: janitor.DBStoreStaleSourcedCommitsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2155,7 +2155,7 @@ func (f *DBStoreStaleSourcedCommitsFunc) appendCall(r0 DBStoreStaleSourcedCommit
 
 ```
 searchKey: janitor.DBStoreStaleSourcedCommitsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2198,7 +2198,7 @@ DBStoreStaleSourcedCommitsFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: janitor.DBStoreStaleSourcedCommitsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2211,7 +2211,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreStaleSourcedCommitsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2242,7 +2242,7 @@ DBStoreTransactFunc describes the behavior when the Transact method of the paren
 
 ```
 searchKey: janitor.DBStoreTransactFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2318,7 +2318,7 @@ func (f *DBStoreTransactFunc) appendCall(r0 DBStoreTransactFuncCall)
 
 ```
 searchKey: janitor.DBStoreTransactFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2352,7 +2352,7 @@ DBStoreTransactFuncCall is an object that describes an invocation of method Tran
 
 ```
 searchKey: janitor.DBStoreTransactFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2365,7 +2365,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: janitor.DBStoreTransactFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2409,7 +2409,7 @@ LSIFStoreClearFunc describes the behavior when the Clear method of the parent Mo
 
 ```
 searchKey: janitor.LSIFStoreClearFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2485,7 +2485,7 @@ func (f *LSIFStoreClearFunc) appendCall(r0 LSIFStoreClearFuncCall)
 
 ```
 searchKey: janitor.LSIFStoreClearFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2519,7 +2519,7 @@ LSIFStoreClearFuncCall is an object that describes an invocation of method Clear
 
 ```
 searchKey: janitor.LSIFStoreClearFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2532,7 +2532,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: janitor.LSIFStoreClearFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2615,7 +2615,7 @@ NewMockDBStore creates a new mock of the DBStore interface. All methods return z
 
 ```
 searchKey: janitor.NewMockDBStoreFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2719,7 +2719,7 @@ GetUploads delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: janitor.MockDBStore.Handle
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2827,7 +2827,7 @@ NewMockLSIFStore creates a new mock of the LSIFStore interface. All methods retu
 
 ```
 searchKey: janitor.NewMockLSIFStoreFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2994,7 +2994,7 @@ type metrics struct {
 
 ```
 searchKey: janitor.newMetrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3089,7 +3089,7 @@ type unknownCommitJanitor struct {
 
 ```
 searchKey: janitor.newJanitor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3149,14 +3149,14 @@ func (j *unknownCommitJanitor) handleSourcedCommits(ctx context.Context, tx DBSt
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewAbandonedUploadJanitor" href="#NewAbandonedUploadJanitor">func NewAbandonedUploadJanitor(dbStore DBStore, ttl, interval time.Duration, metrics *metrics) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: janitor.NewAbandonedUploadJanitor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3169,7 +3169,7 @@ NewAbandonedUploadJanitor returns a background routine that periodically removes
 
 ```
 searchKey: janitor.NewDeletedRepositoryJanitor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3182,7 +3182,7 @@ NewDeletedRepositoryJanitor returns a background routine that periodically delet
 
 ```
 searchKey: janitor.NewHardDeleter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3197,7 +3197,7 @@ This cleanup routine subsumes an old routine that would remove any records which
 
 ```
 searchKey: janitor.NewIndexResetter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3210,7 +3210,7 @@ NewIndexResetter returns a background routine that periodically resets index rec
 
 ```
 searchKey: janitor.NewRecordExpirer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3223,7 +3223,7 @@ NewRecordExpirer returns a background routine that periodically removes upload a
 
 ```
 searchKey: janitor.NewUnknownCommitJanitor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3244,7 +3244,7 @@ Note that we're rather cautious about the order that we process the batch. We do
 
 ```
 searchKey: janitor.NewUploadResetter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3257,7 +3257,7 @@ NewUploadResetter returns a background routine that periodically resets upload r
 
 ```
 searchKey: janitor.TestUnknownCommitsJanitor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3268,7 +3268,7 @@ func TestUnknownCommitsJanitor(t *testing.T)
 
 ```
 searchKey: janitor.TestUnknownCommitsJanitorUnknownCommit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3279,7 +3279,7 @@ func TestUnknownCommitsJanitorUnknownCommit(t *testing.T)
 
 ```
 searchKey: janitor.TestUnknownCommitsJanitorUnknownRepository
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3290,7 +3290,7 @@ func TestUnknownCommitsJanitorUnknownRepository(t *testing.T)
 
 ```
 searchKey: janitor.gatherCounts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3301,7 +3301,7 @@ func gatherCounts(uploadsCounts, indexesCounts map[int]int) []recordCount
 
 ```
 searchKey: janitor.isRepositoryNotFound
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3312,7 +3312,7 @@ func isRepositoryNotFound(err error) bool
 
 ```
 searchKey: janitor.isRevisionNotFound
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3323,7 +3323,7 @@ func isRevisionNotFound(err error) bool
 
 ```
 searchKey: janitor.testUnknownCommitsJanitor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3334,7 +3334,7 @@ func testUnknownCommitsJanitor(t *testing.T, resolveRevisionFunc func(commit str
 
 ```
 searchKey: janitor.uploadIDs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -42,7 +42,7 @@ Package endpoint provides a consistent hash map for URLs to kubernetes endpoints
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="metricEndpointSize" href="#metricEndpointSize">var metricEndpointSize</a>
@@ -59,7 +59,7 @@ var metricEndpointSize = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Map" href="#Map">type Map struct</a>
@@ -85,7 +85,7 @@ Map is a consistent hash map to URLs. It uses the kubernetes API to watch the en
 
 ```
 searchKey: endpoint.Empty
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -98,7 +98,7 @@ Empty returns an Endpoint map which always fails with err.
 
 ```
 searchKey: endpoint.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -122,7 +122,7 @@ Examples URL specifiers:
 
 ```
 searchKey: endpoint.Static
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -139,7 +139,7 @@ Static Maps are guaranteed to never return an error.
 
 ```
 searchKey: endpoint.Map.Endpoints
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -180,7 +180,7 @@ GetMany is the same as calling Get on each item of keys. It will only acquire th
 
 ```
 searchKey: endpoint.Map.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -191,7 +191,7 @@ func (m *Map) String() string
 
 ```
 searchKey: endpoint.Map.getUrls
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -230,7 +230,7 @@ type hashMap struct {
 
 ```
 searchKey: endpoint.endpointsToMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -241,7 +241,7 @@ func endpointsToMap(u *k8sURL, eps corev1.Endpoints) (*hashMap, error)
 
 ```
 searchKey: endpoint.hashMapNew
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -252,7 +252,7 @@ func hashMapNew(replicas int, fn hashFn) *hashMap
 
 ```
 searchKey: endpoint.newConsistentHashMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -289,7 +289,7 @@ Gets the closest item in the hash to the provided key that is not in exclude.
 
 ```
 searchKey: endpoint.hashMap.isEmpty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -318,7 +318,7 @@ type k8sURL struct {
 
 ```
 searchKey: endpoint.parseURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -339,14 +339,14 @@ func (u *k8sURL) endpointURL(endpoint string) string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestEndpoints" href="#TestEndpoints">func TestEndpoints(t *testing.T)</a>
 
 ```
 searchKey: endpoint.TestEndpoints
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -357,7 +357,7 @@ func TestEndpoints(t *testing.T)
 
 ```
 searchKey: endpoint.TestExclude
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -368,7 +368,7 @@ func TestExclude(t *testing.T)
 
 ```
 searchKey: endpoint.TestK8sURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -379,7 +379,7 @@ func TestK8sURL(t *testing.T)
 
 ```
 searchKey: endpoint.TestNew
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -390,7 +390,7 @@ func TestNew(t *testing.T)
 
 ```
 searchKey: endpoint.TestStatic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -401,7 +401,7 @@ func TestStatic(t *testing.T)
 
 ```
 searchKey: endpoint.expectEndpoints
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -412,7 +412,7 @@ func expectEndpoints(t *testing.T, m *Map, exclude map[string]bool, endpoints ..
 
 ```
 searchKey: endpoint.inform
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -138,10 +138,6 @@ To support tools that analyze Go packages, the patterns found in //go:embed line
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="dotFile" href="#dotFile">var dotFile</a>
 
 ```
@@ -156,10 +152,6 @@ var dotFile = &file{name: "./"}
 dotFile is a file for the root directory, which is omitted from the files list in a FS. 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="FS" href="#FS">type FS struct</a>
 
@@ -302,7 +294,7 @@ A file is a single file in the FS. It implements fs.FileInfo and fs.DirEntry.
 
 ```
 searchKey: embed.file.Info
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -313,7 +305,7 @@ func (f *file) Info() (fs.FileInfo, error)
 
 ```
 searchKey: embed.file.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -324,7 +316,7 @@ func (f *file) IsDir() bool
 
 ```
 searchKey: embed.file.ModTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -335,7 +327,7 @@ func (f *file) ModTime() time.Time
 
 ```
 searchKey: embed.file.Mode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -346,7 +338,7 @@ func (f *file) Mode() fs.FileMode
 
 ```
 searchKey: embed.file.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -357,7 +349,7 @@ func (f *file) Name() string
 
 ```
 searchKey: embed.file.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -368,7 +360,7 @@ func (f *file) Size() int64
 
 ```
 searchKey: embed.file.Sys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -379,7 +371,7 @@ func (f *file) Sys() interface{}
 
 ```
 searchKey: embed.file.Type
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -407,7 +399,7 @@ An openDir is a directory open for reading.
 
 ```
 searchKey: embed.openDir.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -440,7 +432,7 @@ func (d *openDir) ReadDir(count int) ([]fs.DirEntry, error)
 
 ```
 searchKey: embed.openDir.Stat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -467,7 +459,7 @@ An openFile is a regular file open for reading.
 
 ```
 searchKey: embed.openFile.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -500,7 +492,7 @@ func (f *openFile) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: embed.openFile.Stat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -509,15 +501,11 @@ func (f *openFile) Stat() (fs.FileInfo, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="sortSearch" href="#sortSearch">func sortSearch(n int, f func(int) bool) int</a>
 
 ```
 searchKey: embed.sortSearch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -530,7 +518,7 @@ sortSearch is like sort.Search, avoiding an import.
 
 ```
 searchKey: embed.split
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -543,7 +531,7 @@ split splits the name into dir and elem as described in the comment in the FS st
 
 ```
 searchKey: embed.trimSlash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

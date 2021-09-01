@@ -10,7 +10,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleReader_Multistream" href="#ExampleReader_Multistream">func ExampleReader_Multistream()</a>

@@ -28,7 +28,7 @@ Package txemail sends transactional emails.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockSend" href="#MockSend">var MockSend</a>
@@ -80,7 +80,7 @@ var textFuncMap = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Message" href="#Message">type Message struct</a>
@@ -108,7 +108,7 @@ Message describes an email message to be sent.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DisableSilently" href="#DisableSilently">func DisableSilently()</a>
@@ -128,7 +128,7 @@ DisableSilently prevents sending of emails, even if email sending is configured.
 
 ```
 searchKey: txemail.MustParseTemplate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -141,7 +141,7 @@ MustParseTemplate calls ParseTemplate and panics if an error is returned. It is 
 
 ```
 searchKey: txemail.MustValidate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -154,7 +154,7 @@ MustValidate panics if the templates are unparsable, otherwise it returns them u
 
 ```
 searchKey: txemail.ParseTemplate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -167,7 +167,7 @@ ParseTemplate is a helper func for parsing the text/template and html/template t
 
 ```
 searchKey: txemail.Send
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -182,7 +182,7 @@ Callers that do not live in the frontend should call api.InternalClient.SendEmai
 
 ```
 searchKey: txemail.TestParseTemplate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -193,7 +193,7 @@ func TestParseTemplate(t *testing.T)
 
 ```
 searchKey: txemail.TestRender
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -204,7 +204,7 @@ func TestRender(t *testing.T)
 
 ```
 searchKey: txemail.render
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -217,7 +217,7 @@ render returns the rendered message contents without sending email.
 
 ```
 searchKey: txemail.renderTemplate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

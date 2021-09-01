@@ -49,7 +49,7 @@ Package session implements a redis backed user sessions HTTP middleware.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="cookieName" href="#cookieName">const cookieName</a>
@@ -81,7 +81,7 @@ defaultExpiryPeriod is the default session expiry period (if none is specified e
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="sessionCookieKey" href="#sessionCookieKey">var sessionCookieKey</a>
@@ -109,7 +109,7 @@ var sessionStore sessions.Store
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="sessionInfo" href="#sessionInfo">type sessionInfo struct</a>
@@ -186,14 +186,14 @@ func (st *sessionsStore) setSecureOptions(s *sessions.Session)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CookieMiddleware" href="#CookieMiddleware">func CookieMiddleware(next http.Handler) http.Handler</a>
 
 ```
 searchKey: session.CookieMiddleware
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -206,7 +206,7 @@ CookieMiddleware is an http.Handler middleware that authenticates future HTTP re
 
 ```
 searchKey: session.CookieMiddlewareWithCSRFSafety
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -232,7 +232,7 @@ If the request is a simple CORS request, or if neither of these is true, then th
 
 ```
 searchKey: session.GetData
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -247,7 +247,7 @@ The value is JSON-decoded from the raw bytes stored by the call to SetData.
 
 ```
 searchKey: session.InvalidateSessionCurrentUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -260,7 +260,7 @@ InvalidateSessionCurrentUser invalidates all sessions for the current user.
 
 ```
 searchKey: session.InvalidateSessionsByID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -273,7 +273,7 @@ InvalidateSessionsByID invalidates all sessions for a user If an error occurs, i
 
 ```
 searchKey: session.NewRedisStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -299,7 +299,7 @@ Ping attempts to contact Redis and returns a non-nil error upon failure. It is i
 
 ```
 searchKey: session.ResetMockSessionStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -310,7 +310,7 @@ func ResetMockSessionStore(t *testing.T) (cleanup func())
 
 ```
 searchKey: session.SetActor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -325,7 +325,7 @@ If expiryPeriod is 0, the default expiry period is used.
 
 ```
 searchKey: session.SetData
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -340,7 +340,7 @@ The value is JSON-encoded before being stored.
 
 ```
 searchKey: session.SetSessionStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -353,7 +353,7 @@ SetSessionStore sets the backing store used for storing sessions on the server. 
 
 ```
 searchKey: session.TestCookieMiddleware
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -364,7 +364,7 @@ func TestCookieMiddleware(t *testing.T)
 
 ```
 searchKey: session.TestManualSessionExpiry
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -375,7 +375,7 @@ func TestManualSessionExpiry(t *testing.T)
 
 ```
 searchKey: session.TestMismatchedUserCreationFails
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -386,7 +386,7 @@ func TestMismatchedUserCreationFails(t *testing.T)
 
 ```
 searchKey: session.TestOldUserSessionSucceeds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -397,7 +397,7 @@ func TestOldUserSessionSucceeds(t *testing.T)
 
 ```
 searchKey: session.TestRecoverFromInvalidCookieValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -408,7 +408,7 @@ func TestRecoverFromInvalidCookieValue(t *testing.T)
 
 ```
 searchKey: session.TestSessionExpiry
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -419,7 +419,7 @@ func TestSessionExpiry(t *testing.T)
 
 ```
 searchKey: session.TestSetActorDeleteSession
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -430,7 +430,7 @@ func TestSetActorDeleteSession(t *testing.T)
 
 ```
 searchKey: session.authenticateByCookie
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -441,7 +441,7 @@ func authenticateByCookie(r *http.Request, w http.ResponseWriter) context.Contex
 
 ```
 searchKey: session.checkCookieDeleted
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -452,7 +452,7 @@ func checkCookieDeleted(t *testing.T, resp *http.Response)
 
 ```
 searchKey: session.deleteSession
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -467,7 +467,7 @@ It should only be used when there is an unrecoverable, permanent error in the se
 
 ```
 searchKey: session.hasSessionCookie
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -489,7 +489,7 @@ func init()
 
 ```
 searchKey: session.ping
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -500,7 +500,7 @@ func ping(s *redistore.RediStore) error
 
 ```
 searchKey: session.sessionCookie
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -513,7 +513,7 @@ sessionCookie returns the session cookie from the header of the given request.
 
 ```
 searchKey: session.setSessionSecureOptions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -526,7 +526,7 @@ setSessionSecureOptions set the values of the session.Options.Secure and session
 
 ```
 searchKey: session.waitForRedis
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

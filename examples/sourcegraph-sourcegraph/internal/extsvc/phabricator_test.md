@@ -14,7 +14,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="update" href="#update">var update</a>
@@ -31,14 +31,14 @@ var update = flag.Bool("update", false, "update testdata")
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestClient_GetDiffInfo" href="#TestClient_GetDiffInfo">func TestClient_GetDiffInfo(t *testing.T)</a>
 
 ```
 searchKey: phabricator_test.TestClient_GetDiffInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -49,7 +49,7 @@ func TestClient_GetDiffInfo(t *testing.T)
 
 ```
 searchKey: phabricator_test.TestClient_GetRawDiff
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -60,7 +60,7 @@ func TestClient_GetRawDiff(t *testing.T)
 
 ```
 searchKey: phabricator_test.TestClient_ListRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -71,7 +71,7 @@ func TestClient_ListRepos(t *testing.T)
 
 ```
 searchKey: phabricator_test.newClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

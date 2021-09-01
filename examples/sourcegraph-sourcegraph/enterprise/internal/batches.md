@@ -28,14 +28,14 @@ This package is the main root for all our code. It is meant to be the only batch
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="InitBackgroundJobs" href="#InitBackgroundJobs">func InitBackgroundJobs(ctx context.Context,...</a>
 
 ```
 searchKey: batches.InitBackgroundJobs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -59,7 +59,7 @@ InitBackgroundJobs starts all jobs required to run batches. Currently, it is cal
 
 ```
 searchKey: batches.InitFrontend
-tags: [method]
+tags: [function]
 ```
 
 ```Go

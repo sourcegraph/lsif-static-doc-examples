@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/internal/authz",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -229,7 +228,7 @@
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.ServiceID",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -252,7 +251,7 @@
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.ServiceType",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -275,7 +274,7 @@
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.URN",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -298,7 +297,7 @@
                       "newPage": false,
                       "searchKey": "authz.gitlabAuthzProviderParams.Validate",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -327,7 +326,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -348,7 +346,7 @@
                 "newPage": false,
                 "searchKey": "authz.ProvidersFromConfig",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -370,7 +368,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestAuthzProvidersFromConfig",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -394,7 +392,7 @@
                 "newPage": false,
                 "searchKey": "authz.TestMain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -418,7 +416,7 @@
                 "newPage": false,
                 "searchKey": "authz.asJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -441,7 +439,7 @@
                 "newPage": false,
                 "searchKey": "authz.mustURLParse",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

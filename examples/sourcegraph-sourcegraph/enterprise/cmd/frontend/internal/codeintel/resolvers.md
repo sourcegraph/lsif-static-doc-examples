@@ -805,7 +805,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefinitionsLimit" href="#DefinitionsLimit">const DefinitionsLimit</a>
@@ -979,7 +979,7 @@ const slowReferencesRequestThreshold = time.Second
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrConcurrentModification" href="#ErrConcurrentModification">var ErrConcurrentModification</a>
@@ -1075,7 +1075,7 @@ var testRange5 = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AdjustedCodeIntelligenceRange" href="#AdjustedCodeIntelligenceRange">type AdjustedCodeIntelligenceRange struct</a>
@@ -1150,7 +1150,7 @@ type CommitGraphResolver struct {
 
 ```
 searchKey: resolvers.NewCommitGraphResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1234,7 +1234,7 @@ DBStoreCommitGraphMetadataFunc describes the behavior when the CommitGraphMetada
 
 ```
 searchKey: resolvers.DBStoreCommitGraphMetadataFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1310,7 +1310,7 @@ func (f *DBStoreCommitGraphMetadataFunc) appendCall(r0 DBStoreCommitGraphMetadat
 
 ```
 searchKey: resolvers.DBStoreCommitGraphMetadataFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1350,7 +1350,7 @@ DBStoreCommitGraphMetadataFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: resolvers.DBStoreCommitGraphMetadataFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1363,7 +1363,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreCommitGraphMetadataFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1394,7 +1394,7 @@ DBStoreDefinitionDumpsFunc describes the behavior when the DefinitionDumps metho
 
 ```
 searchKey: resolvers.DBStoreDefinitionDumpsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1470,7 +1470,7 @@ func (f *DBStoreDefinitionDumpsFunc) appendCall(r0 DBStoreDefinitionDumpsFuncCal
 
 ```
 searchKey: resolvers.DBStoreDefinitionDumpsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1507,7 +1507,7 @@ DBStoreDefinitionDumpsFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: resolvers.DBStoreDefinitionDumpsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1520,7 +1520,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreDefinitionDumpsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1551,7 +1551,7 @@ DBStoreDeleteIndexByIDFunc describes the behavior when the DeleteIndexByID metho
 
 ```
 searchKey: resolvers.DBStoreDeleteIndexByIDFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1627,7 +1627,7 @@ func (f *DBStoreDeleteIndexByIDFunc) appendCall(r0 DBStoreDeleteIndexByIDFuncCal
 
 ```
 searchKey: resolvers.DBStoreDeleteIndexByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1664,7 +1664,7 @@ DBStoreDeleteIndexByIDFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: resolvers.DBStoreDeleteIndexByIDFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1677,7 +1677,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreDeleteIndexByIDFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1708,7 +1708,7 @@ DBStoreDeleteUploadByIDFunc describes the behavior when the DeleteUploadByID met
 
 ```
 searchKey: resolvers.DBStoreDeleteUploadByIDFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1784,7 +1784,7 @@ func (f *DBStoreDeleteUploadByIDFunc) appendCall(r0 DBStoreDeleteUploadByIDFuncC
 
 ```
 searchKey: resolvers.DBStoreDeleteUploadByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1821,7 +1821,7 @@ DBStoreDeleteUploadByIDFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: resolvers.DBStoreDeleteUploadByIDFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1834,7 +1834,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreDeleteUploadByIDFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1865,7 +1865,7 @@ DBStoreFindClosestDumpsFromGraphFragmentFunc describes the behavior when the Fin
 
 ```
 searchKey: resolvers.DBStoreFindClosestDumpsFromGraphFragmentFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1941,7 +1941,7 @@ func (f *DBStoreFindClosestDumpsFromGraphFragmentFunc) appendCall(r0 DBStoreFind
 
 ```
 searchKey: resolvers.DBStoreFindClosestDumpsFromGraphFragmentFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1993,7 +1993,7 @@ DBStoreFindClosestDumpsFromGraphFragmentFuncCall is an object that describes an 
 
 ```
 searchKey: resolvers.DBStoreFindClosestDumpsFromGraphFragmentFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2006,7 +2006,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreFindClosestDumpsFromGraphFragmentFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2037,7 +2037,7 @@ DBStoreFindClosestDumpsFunc describes the behavior when the FindClosestDumps met
 
 ```
 searchKey: resolvers.DBStoreFindClosestDumpsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2113,7 +2113,7 @@ func (f *DBStoreFindClosestDumpsFunc) appendCall(r0 DBStoreFindClosestDumpsFuncC
 
 ```
 searchKey: resolvers.DBStoreFindClosestDumpsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2162,7 +2162,7 @@ DBStoreFindClosestDumpsFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: resolvers.DBStoreFindClosestDumpsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2175,7 +2175,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreFindClosestDumpsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2206,7 +2206,7 @@ DBStoreGetDumpsByIDsFunc describes the behavior when the GetDumpsByIDs method of
 
 ```
 searchKey: resolvers.DBStoreGetDumpsByIDsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2282,7 +2282,7 @@ func (f *DBStoreGetDumpsByIDsFunc) appendCall(r0 DBStoreGetDumpsByIDsFuncCall)
 
 ```
 searchKey: resolvers.DBStoreGetDumpsByIDsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2319,7 +2319,7 @@ DBStoreGetDumpsByIDsFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: resolvers.DBStoreGetDumpsByIDsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2332,7 +2332,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreGetDumpsByIDsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2363,7 +2363,7 @@ DBStoreGetIndexByIDFunc describes the behavior when the GetIndexByID method of t
 
 ```
 searchKey: resolvers.DBStoreGetIndexByIDFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2439,7 +2439,7 @@ func (f *DBStoreGetIndexByIDFunc) appendCall(r0 DBStoreGetIndexByIDFuncCall)
 
 ```
 searchKey: resolvers.DBStoreGetIndexByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2479,7 +2479,7 @@ DBStoreGetIndexByIDFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: resolvers.DBStoreGetIndexByIDFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2492,7 +2492,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreGetIndexByIDFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2523,7 +2523,7 @@ DBStoreGetIndexConfigurationByRepositoryIDFunc describes the behavior when the G
 
 ```
 searchKey: resolvers.DBStoreGetIndexConfigurationByRepositoryIDFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2599,7 +2599,7 @@ func (f *DBStoreGetIndexConfigurationByRepositoryIDFunc) appendCall(r0 DBStoreGe
 
 ```
 searchKey: resolvers.DBStoreGetIndexConfigurationByRepositoryIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2639,7 +2639,7 @@ DBStoreGetIndexConfigurationByRepositoryIDFuncCall is an object that describes a
 
 ```
 searchKey: resolvers.DBStoreGetIndexConfigurationByRepositoryIDFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2652,7 +2652,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreGetIndexConfigurationByRepositoryIDFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2683,7 +2683,7 @@ DBStoreGetIndexesByIDsFunc describes the behavior when the GetIndexesByIDs metho
 
 ```
 searchKey: resolvers.DBStoreGetIndexesByIDsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2759,7 +2759,7 @@ func (f *DBStoreGetIndexesByIDsFunc) appendCall(r0 DBStoreGetIndexesByIDsFuncCal
 
 ```
 searchKey: resolvers.DBStoreGetIndexesByIDsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2796,7 +2796,7 @@ DBStoreGetIndexesByIDsFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: resolvers.DBStoreGetIndexesByIDsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2809,7 +2809,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: resolvers.DBStoreGetIndexesByIDsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2840,7 +2840,7 @@ DBStoreGetIndexesFunc describes the behavior when the GetIndexes method of the p
 
 ```
 searchKey: resolvers.DBStoreGetIndexesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2916,7 +2916,7 @@ func (f *DBStoreGetIndexesFunc) appendCall(r0 DBStoreGetIndexesFuncCall)
 
 ```
 searchKey: resolvers.DBStoreGetIndexesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2956,7 +2956,7 @@ DBStoreGetIndexesFuncCall is an object that describes an invocation of method Ge
 
 ```
 searchKey: resolvers.DBStoreGetIndexesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2969,7 +2969,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreGetIndexesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3000,7 +3000,7 @@ DBStoreGetUploadByIDFunc describes the behavior when the GetUploadByID method of
 
 ```
 searchKey: resolvers.DBStoreGetUploadByIDFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3076,7 +3076,7 @@ func (f *DBStoreGetUploadByIDFunc) appendCall(r0 DBStoreGetUploadByIDFuncCall)
 
 ```
 searchKey: resolvers.DBStoreGetUploadByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3116,7 +3116,7 @@ DBStoreGetUploadByIDFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: resolvers.DBStoreGetUploadByIDFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3129,7 +3129,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreGetUploadByIDFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3160,7 +3160,7 @@ DBStoreGetUploadsByIDsFunc describes the behavior when the GetUploadsByIDs metho
 
 ```
 searchKey: resolvers.DBStoreGetUploadsByIDsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3236,7 +3236,7 @@ func (f *DBStoreGetUploadsByIDsFunc) appendCall(r0 DBStoreGetUploadsByIDsFuncCal
 
 ```
 searchKey: resolvers.DBStoreGetUploadsByIDsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3273,7 +3273,7 @@ DBStoreGetUploadsByIDsFuncCall is an object that describes an invocation of meth
 
 ```
 searchKey: resolvers.DBStoreGetUploadsByIDsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3286,7 +3286,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: resolvers.DBStoreGetUploadsByIDsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3317,7 +3317,7 @@ DBStoreGetUploadsFunc describes the behavior when the GetUploads method of the p
 
 ```
 searchKey: resolvers.DBStoreGetUploadsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3393,7 +3393,7 @@ func (f *DBStoreGetUploadsFunc) appendCall(r0 DBStoreGetUploadsFuncCall)
 
 ```
 searchKey: resolvers.DBStoreGetUploadsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3433,7 +3433,7 @@ DBStoreGetUploadsFuncCall is an object that describes an invocation of method Ge
 
 ```
 searchKey: resolvers.DBStoreGetUploadsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3446,7 +3446,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreGetUploadsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3477,7 +3477,7 @@ DBStoreHasCommitFunc describes the behavior when the HasCommit method of the par
 
 ```
 searchKey: resolvers.DBStoreHasCommitFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3553,7 +3553,7 @@ func (f *DBStoreHasCommitFunc) appendCall(r0 DBStoreHasCommitFuncCall)
 
 ```
 searchKey: resolvers.DBStoreHasCommitFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3593,7 +3593,7 @@ DBStoreHasCommitFuncCall is an object that describes an invocation of method Has
 
 ```
 searchKey: resolvers.DBStoreHasCommitFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3606,7 +3606,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreHasCommitFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3637,7 +3637,7 @@ DBStoreHasRepositoryFunc describes the behavior when the HasRepository method of
 
 ```
 searchKey: resolvers.DBStoreHasRepositoryFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3713,7 +3713,7 @@ func (f *DBStoreHasRepositoryFunc) appendCall(r0 DBStoreHasRepositoryFuncCall)
 
 ```
 searchKey: resolvers.DBStoreHasRepositoryFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3750,7 +3750,7 @@ DBStoreHasRepositoryFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: resolvers.DBStoreHasRepositoryFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3763,7 +3763,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreHasRepositoryFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3794,7 +3794,7 @@ DBStoreMarkRepositoryAsDirtyFunc describes the behavior when the MarkRepositoryA
 
 ```
 searchKey: resolvers.DBStoreMarkRepositoryAsDirtyFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3870,7 +3870,7 @@ func (f *DBStoreMarkRepositoryAsDirtyFunc) appendCall(r0 DBStoreMarkRepositoryAs
 
 ```
 searchKey: resolvers.DBStoreMarkRepositoryAsDirtyFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3904,7 +3904,7 @@ DBStoreMarkRepositoryAsDirtyFuncCall is an object that describes an invocation o
 
 ```
 searchKey: resolvers.DBStoreMarkRepositoryAsDirtyFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3917,7 +3917,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreMarkRepositoryAsDirtyFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3948,7 +3948,7 @@ DBStoreReferenceIDsAndFiltersFunc describes the behavior when the ReferenceIDsAn
 
 ```
 searchKey: resolvers.DBStoreReferenceIDsAndFiltersFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4024,7 +4024,7 @@ func (f *DBStoreReferenceIDsAndFiltersFunc) appendCall(r0 DBStoreReferenceIDsAnd
 
 ```
 searchKey: resolvers.DBStoreReferenceIDsAndFiltersFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4076,7 +4076,7 @@ DBStoreReferenceIDsAndFiltersFuncCall is an object that describes an invocation 
 
 ```
 searchKey: resolvers.DBStoreReferenceIDsAndFiltersFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4089,7 +4089,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreReferenceIDsAndFiltersFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4120,7 +4120,7 @@ DBStoreRepoNameFunc describes the behavior when the RepoName method of the paren
 
 ```
 searchKey: resolvers.DBStoreRepoNameFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4196,7 +4196,7 @@ func (f *DBStoreRepoNameFunc) appendCall(r0 DBStoreRepoNameFuncCall)
 
 ```
 searchKey: resolvers.DBStoreRepoNameFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4233,7 +4233,7 @@ DBStoreRepoNameFuncCall is an object that describes an invocation of method Repo
 
 ```
 searchKey: resolvers.DBStoreRepoNameFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4246,7 +4246,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreRepoNameFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4277,7 +4277,7 @@ DBStoreUpdateIndexConfigurationByRepositoryIDFunc describes the behavior when th
 
 ```
 searchKey: resolvers.DBStoreUpdateIndexConfigurationByRepositoryIDFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4353,7 +4353,7 @@ func (f *DBStoreUpdateIndexConfigurationByRepositoryIDFunc) appendCall(r0 DBStor
 
 ```
 searchKey: resolvers.DBStoreUpdateIndexConfigurationByRepositoryIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4390,7 +4390,7 @@ DBStoreUpdateIndexConfigurationByRepositoryIDFuncCall is an object that describe
 
 ```
 searchKey: resolvers.DBStoreUpdateIndexConfigurationByRepositoryIDFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4403,7 +4403,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.DBStoreUpdateIndexConfigurationByRepositoryIDFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4445,7 +4445,7 @@ EnqueuerDBStoreDirtyRepositoriesFunc describes the behavior when the DirtyReposi
 
 ```
 searchKey: resolvers.EnqueuerDBStoreDirtyRepositoriesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4521,7 +4521,7 @@ func (f *EnqueuerDBStoreDirtyRepositoriesFunc) appendCall(r0 EnqueuerDBStoreDirt
 
 ```
 searchKey: resolvers.EnqueuerDBStoreDirtyRepositoriesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4555,7 +4555,7 @@ EnqueuerDBStoreDirtyRepositoriesFuncCall is an object that describes an invocati
 
 ```
 searchKey: resolvers.EnqueuerDBStoreDirtyRepositoriesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4568,7 +4568,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerDBStoreDirtyRepositoriesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4599,7 +4599,7 @@ EnqueuerDBStoreDoneFunc describes the behavior when the Done method of the paren
 
 ```
 searchKey: resolvers.EnqueuerDBStoreDoneFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4675,7 +4675,7 @@ func (f *EnqueuerDBStoreDoneFunc) appendCall(r0 EnqueuerDBStoreDoneFuncCall)
 
 ```
 searchKey: resolvers.EnqueuerDBStoreDoneFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4706,7 +4706,7 @@ EnqueuerDBStoreDoneFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: resolvers.EnqueuerDBStoreDoneFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4719,7 +4719,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerDBStoreDoneFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4750,7 +4750,7 @@ EnqueuerDBStoreGetIndexConfigurationByRepositoryIDFunc describes the behavior wh
 
 ```
 searchKey: resolvers.EnqueuerDBStoreGetIndexConfigurationByRepositoryIDFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4826,7 +4826,7 @@ func (f *EnqueuerDBStoreGetIndexConfigurationByRepositoryIDFunc) appendCall(r0 E
 
 ```
 searchKey: resolvers.EnqueuerDBStoreGetIndexConfigurationByRepositoryIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4866,7 +4866,7 @@ EnqueuerDBStoreGetIndexConfigurationByRepositoryIDFuncCall is an object that des
 
 ```
 searchKey: resolvers.EnqueuerDBStoreGetIndexConfigurationByRepositoryIDFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4879,7 +4879,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerDBStoreGetIndexConfigurationByRepositoryIDFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4910,7 +4910,7 @@ EnqueuerDBStoreGetRepositoriesWithIndexConfigurationFunc describes the behavior 
 
 ```
 searchKey: resolvers.EnqueuerDBStoreGetRepositoriesWithIndexConfigurationFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4986,7 +4986,7 @@ func (f *EnqueuerDBStoreGetRepositoriesWithIndexConfigurationFunc) appendCall(r0
 
 ```
 searchKey: resolvers.EnqueuerDBStoreGetRepositoriesWithIndexConfigurationFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5020,7 +5020,7 @@ EnqueuerDBStoreGetRepositoriesWithIndexConfigurationFuncCall is an object that d
 
 ```
 searchKey: resolvers.EnqueuerDBStoreGetRepositoriesWithIndexConfigurationFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5033,7 +5033,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerDBStoreGetRepositoriesWithIndexConfigurationFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5064,7 +5064,7 @@ EnqueuerDBStoreHandleFunc describes the behavior when the Handle method of the p
 
 ```
 searchKey: resolvers.EnqueuerDBStoreHandleFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5140,7 +5140,7 @@ func (f *EnqueuerDBStoreHandleFunc) appendCall(r0 EnqueuerDBStoreHandleFuncCall)
 
 ```
 searchKey: resolvers.EnqueuerDBStoreHandleFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5168,7 +5168,7 @@ EnqueuerDBStoreHandleFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: resolvers.EnqueuerDBStoreHandleFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5181,7 +5181,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerDBStoreHandleFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5212,7 +5212,7 @@ EnqueuerDBStoreInsertIndexFunc describes the behavior when the InsertIndex metho
 
 ```
 searchKey: resolvers.EnqueuerDBStoreInsertIndexFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5288,7 +5288,7 @@ func (f *EnqueuerDBStoreInsertIndexFunc) appendCall(r0 EnqueuerDBStoreInsertInde
 
 ```
 searchKey: resolvers.EnqueuerDBStoreInsertIndexFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5325,7 +5325,7 @@ EnqueuerDBStoreInsertIndexFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: resolvers.EnqueuerDBStoreInsertIndexFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5338,7 +5338,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerDBStoreInsertIndexFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5369,7 +5369,7 @@ EnqueuerDBStoreIsQueuedFunc describes the behavior when the IsQueued method of t
 
 ```
 searchKey: resolvers.EnqueuerDBStoreIsQueuedFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5445,7 +5445,7 @@ func (f *EnqueuerDBStoreIsQueuedFunc) appendCall(r0 EnqueuerDBStoreIsQueuedFuncC
 
 ```
 searchKey: resolvers.EnqueuerDBStoreIsQueuedFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5485,7 +5485,7 @@ EnqueuerDBStoreIsQueuedFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: resolvers.EnqueuerDBStoreIsQueuedFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5498,7 +5498,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerDBStoreIsQueuedFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5529,7 +5529,7 @@ EnqueuerDBStoreTransactFunc describes the behavior when the Transact method of t
 
 ```
 searchKey: resolvers.EnqueuerDBStoreTransactFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5605,7 +5605,7 @@ func (f *EnqueuerDBStoreTransactFunc) appendCall(r0 EnqueuerDBStoreTransactFuncC
 
 ```
 searchKey: resolvers.EnqueuerDBStoreTransactFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5639,7 +5639,7 @@ EnqueuerDBStoreTransactFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: resolvers.EnqueuerDBStoreTransactFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5652,7 +5652,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerDBStoreTransactFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5694,7 +5694,7 @@ EnqueuerGitserverClientFileExistsFunc describes the behavior when the FileExists
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientFileExistsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5770,7 +5770,7 @@ func (f *EnqueuerGitserverClientFileExistsFunc) appendCall(r0 EnqueuerGitserverC
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientFileExistsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5813,7 +5813,7 @@ EnqueuerGitserverClientFileExistsFuncCall is an object that describes an invocat
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientFileExistsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5826,7 +5826,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientFileExistsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5857,7 +5857,7 @@ EnqueuerGitserverClientHeadFunc describes the behavior when the Head method of t
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientHeadFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5933,7 +5933,7 @@ func (f *EnqueuerGitserverClientHeadFunc) appendCall(r0 EnqueuerGitserverClientH
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientHeadFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5970,7 +5970,7 @@ EnqueuerGitserverClientHeadFuncCall is an object that describes an invocation of
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientHeadFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5983,7 +5983,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientHeadFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6014,7 +6014,7 @@ EnqueuerGitserverClientListFilesFunc describes the behavior when the ListFiles m
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientListFilesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6090,7 +6090,7 @@ func (f *EnqueuerGitserverClientListFilesFunc) appendCall(r0 EnqueuerGitserverCl
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientListFilesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6133,7 +6133,7 @@ EnqueuerGitserverClientListFilesFuncCall is an object that describes an invocati
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientListFilesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6146,7 +6146,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientListFilesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6177,7 +6177,7 @@ EnqueuerGitserverClientRawContentsFunc describes the behavior when the RawConten
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientRawContentsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6253,7 +6253,7 @@ func (f *EnqueuerGitserverClientRawContentsFunc) appendCall(r0 EnqueuerGitserver
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientRawContentsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6296,7 +6296,7 @@ EnqueuerGitserverClientRawContentsFuncCall is an object that describes an invoca
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientRawContentsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6309,7 +6309,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientRawContentsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6340,7 +6340,7 @@ EnqueuerGitserverClientResolveRevisionFunc describes the behavior when the Resol
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientResolveRevisionFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6416,7 +6416,7 @@ func (f *EnqueuerGitserverClientResolveRevisionFunc) appendCall(r0 EnqueuerGitse
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientResolveRevisionFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6456,7 +6456,7 @@ EnqueuerGitserverClientResolveRevisionFuncCall is an object that describes an in
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientResolveRevisionFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6469,7 +6469,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.EnqueuerGitserverClientResolveRevisionFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6514,7 +6514,7 @@ GitserverClientCommitExistsFunc describes the behavior when the CommitExists met
 
 ```
 searchKey: resolvers.GitserverClientCommitExistsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6590,7 +6590,7 @@ func (f *GitserverClientCommitExistsFunc) appendCall(r0 GitserverClientCommitExi
 
 ```
 searchKey: resolvers.GitserverClientCommitExistsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6630,7 +6630,7 @@ GitserverClientCommitExistsFuncCall is an object that describes an invocation of
 
 ```
 searchKey: resolvers.GitserverClientCommitExistsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6643,7 +6643,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.GitserverClientCommitExistsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6674,7 +6674,7 @@ GitserverClientCommitGraphFunc describes the behavior when the CommitGraph metho
 
 ```
 searchKey: resolvers.GitserverClientCommitGraphFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6750,7 +6750,7 @@ func (f *GitserverClientCommitGraphFunc) appendCall(r0 GitserverClientCommitGrap
 
 ```
 searchKey: resolvers.GitserverClientCommitGraphFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6790,7 +6790,7 @@ GitserverClientCommitGraphFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: resolvers.GitserverClientCommitGraphFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6803,7 +6803,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.GitserverClientCommitGraphFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6837,7 +6837,7 @@ HunkCache is a LRU cache that holds git diff hunks.
 
 ```
 searchKey: resolvers.NewHunkCache
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6882,7 +6882,7 @@ IndexEnqueuerForceQueueIndexesForRepositoryFunc describes the behavior when the 
 
 ```
 searchKey: resolvers.IndexEnqueuerForceQueueIndexesForRepositoryFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6958,7 +6958,7 @@ func (f *IndexEnqueuerForceQueueIndexesForRepositoryFunc) appendCall(r0 IndexEnq
 
 ```
 searchKey: resolvers.IndexEnqueuerForceQueueIndexesForRepositoryFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6992,7 +6992,7 @@ IndexEnqueuerForceQueueIndexesForRepositoryFuncCall is an object that describes 
 
 ```
 searchKey: resolvers.IndexEnqueuerForceQueueIndexesForRepositoryFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7005,7 +7005,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.IndexEnqueuerForceQueueIndexesForRepositoryFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7036,7 +7036,7 @@ IndexEnqueuerInferIndexConfigurationFunc describes the behavior when the InferIn
 
 ```
 searchKey: resolvers.IndexEnqueuerInferIndexConfigurationFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7112,7 +7112,7 @@ func (f *IndexEnqueuerInferIndexConfigurationFunc) appendCall(r0 IndexEnqueuerIn
 
 ```
 searchKey: resolvers.IndexEnqueuerInferIndexConfigurationFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7149,7 +7149,7 @@ IndexEnqueuerInferIndexConfigurationFuncCall is an object that describes an invo
 
 ```
 searchKey: resolvers.IndexEnqueuerInferIndexConfigurationFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7162,7 +7162,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.IndexEnqueuerInferIndexConfigurationFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7197,7 +7197,7 @@ IndexesResolver wraps store.GetIndexes so that the underlying function can be in
 
 ```
 searchKey: resolvers.NewIndexesResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7274,7 +7274,7 @@ LSIFStoreBulkMonikerResultsFunc describes the behavior when the BulkMonikerResul
 
 ```
 searchKey: resolvers.LSIFStoreBulkMonikerResultsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7350,7 +7350,7 @@ func (f *LSIFStoreBulkMonikerResultsFunc) appendCall(r0 LSIFStoreBulkMonikerResu
 
 ```
 searchKey: resolvers.LSIFStoreBulkMonikerResultsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7402,7 +7402,7 @@ LSIFStoreBulkMonikerResultsFuncCall is an object that describes an invocation of
 
 ```
 searchKey: resolvers.LSIFStoreBulkMonikerResultsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7415,7 +7415,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.LSIFStoreBulkMonikerResultsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7446,7 +7446,7 @@ LSIFStoreDefinitionsFunc describes the behavior when the Definitions method of t
 
 ```
 searchKey: resolvers.LSIFStoreDefinitionsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7522,7 +7522,7 @@ func (f *LSIFStoreDefinitionsFunc) appendCall(r0 LSIFStoreDefinitionsFuncCall)
 
 ```
 searchKey: resolvers.LSIFStoreDefinitionsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7577,7 +7577,7 @@ LSIFStoreDefinitionsFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: resolvers.LSIFStoreDefinitionsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7590,7 +7590,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.LSIFStoreDefinitionsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7621,7 +7621,7 @@ LSIFStoreDiagnosticsFunc describes the behavior when the Diagnostics method of t
 
 ```
 searchKey: resolvers.LSIFStoreDiagnosticsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7697,7 +7697,7 @@ func (f *LSIFStoreDiagnosticsFunc) appendCall(r0 LSIFStoreDiagnosticsFuncCall)
 
 ```
 searchKey: resolvers.LSIFStoreDiagnosticsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7746,7 +7746,7 @@ LSIFStoreDiagnosticsFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: resolvers.LSIFStoreDiagnosticsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7759,7 +7759,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.LSIFStoreDiagnosticsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7790,7 +7790,7 @@ LSIFStoreDocumentationPageFunc describes the behavior when the DocumentationPage
 
 ```
 searchKey: resolvers.LSIFStoreDocumentationPageFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7866,7 +7866,7 @@ func (f *LSIFStoreDocumentationPageFunc) appendCall(r0 LSIFStoreDocumentationPag
 
 ```
 searchKey: resolvers.LSIFStoreDocumentationPageFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7906,7 +7906,7 @@ LSIFStoreDocumentationPageFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: resolvers.LSIFStoreDocumentationPageFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7919,7 +7919,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.LSIFStoreDocumentationPageFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7950,7 +7950,7 @@ LSIFStoreExistsFunc describes the behavior when the Exists method of the parent 
 
 ```
 searchKey: resolvers.LSIFStoreExistsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8026,7 +8026,7 @@ func (f *LSIFStoreExistsFunc) appendCall(r0 LSIFStoreExistsFuncCall)
 
 ```
 searchKey: resolvers.LSIFStoreExistsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8066,7 +8066,7 @@ LSIFStoreExistsFuncCall is an object that describes an invocation of method Exis
 
 ```
 searchKey: resolvers.LSIFStoreExistsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8079,7 +8079,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.LSIFStoreExistsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8110,7 +8110,7 @@ LSIFStoreHoverFunc describes the behavior when the Hover method of the parent Mo
 
 ```
 searchKey: resolvers.LSIFStoreHoverFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8186,7 +8186,7 @@ func (f *LSIFStoreHoverFunc) appendCall(r0 LSIFStoreHoverFuncCall)
 
 ```
 searchKey: resolvers.LSIFStoreHoverFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8238,7 +8238,7 @@ LSIFStoreHoverFuncCall is an object that describes an invocation of method Hover
 
 ```
 searchKey: resolvers.LSIFStoreHoverFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8251,7 +8251,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.LSIFStoreHoverFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8282,7 +8282,7 @@ LSIFStoreMonikersByPositionFunc describes the behavior when the MonikersByPositi
 
 ```
 searchKey: resolvers.LSIFStoreMonikersByPositionFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8358,7 +8358,7 @@ func (f *LSIFStoreMonikersByPositionFunc) appendCall(r0 LSIFStoreMonikersByPosit
 
 ```
 searchKey: resolvers.LSIFStoreMonikersByPositionFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8404,7 +8404,7 @@ LSIFStoreMonikersByPositionFuncCall is an object that describes an invocation of
 
 ```
 searchKey: resolvers.LSIFStoreMonikersByPositionFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8417,7 +8417,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.LSIFStoreMonikersByPositionFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8448,7 +8448,7 @@ LSIFStorePackageInformationFunc describes the behavior when the PackageInformati
 
 ```
 searchKey: resolvers.LSIFStorePackageInformationFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8524,7 +8524,7 @@ func (f *LSIFStorePackageInformationFunc) appendCall(r0 LSIFStorePackageInformat
 
 ```
 searchKey: resolvers.LSIFStorePackageInformationFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8570,7 +8570,7 @@ LSIFStorePackageInformationFuncCall is an object that describes an invocation of
 
 ```
 searchKey: resolvers.LSIFStorePackageInformationFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8583,7 +8583,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.LSIFStorePackageInformationFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8614,7 +8614,7 @@ LSIFStoreRangesFunc describes the behavior when the Ranges method of the parent 
 
 ```
 searchKey: resolvers.LSIFStoreRangesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8690,7 +8690,7 @@ func (f *LSIFStoreRangesFunc) appendCall(r0 LSIFStoreRangesFuncCall)
 
 ```
 searchKey: resolvers.LSIFStoreRangesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8736,7 +8736,7 @@ LSIFStoreRangesFuncCall is an object that describes an invocation of method Rang
 
 ```
 searchKey: resolvers.LSIFStoreRangesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8749,7 +8749,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.LSIFStoreRangesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8780,7 +8780,7 @@ LSIFStoreReferencesFunc describes the behavior when the References method of the
 
 ```
 searchKey: resolvers.LSIFStoreReferencesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8856,7 +8856,7 @@ func (f *LSIFStoreReferencesFunc) appendCall(r0 LSIFStoreReferencesFuncCall)
 
 ```
 searchKey: resolvers.LSIFStoreReferencesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8911,7 +8911,7 @@ LSIFStoreReferencesFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: resolvers.LSIFStoreReferencesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8924,7 +8924,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.LSIFStoreReferencesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9027,7 +9027,7 @@ NewMockDBStore creates a new mock of the DBStore interface. All methods return z
 
 ```
 searchKey: resolvers.NewMockDBStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9353,7 +9353,7 @@ NewMockEnqueuerDBStore creates a new mock of the EnqueuerDBStore interface. All 
 
 ```
 searchKey: resolvers.NewMockEnqueuerDBStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9418,7 +9418,7 @@ GetRepositoriesWithIndexConfiguration delegates to the next hook function in the
 
 ```
 searchKey: resolvers.MockEnqueuerDBStore.Handle
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9512,7 +9512,7 @@ NewMockEnqueuerGitserverClient creates a new mock of the EnqueuerGitserverClient
 
 ```
 searchKey: resolvers.NewMockEnqueuerGitserverClientFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9623,7 +9623,7 @@ NewMockGitserverClient creates a new mock of the GitserverClient interface. All 
 
 ```
 searchKey: resolvers.NewMockGitserverClientFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9696,7 +9696,7 @@ NewMockIndexEnqueuer creates a new mock of the IndexEnqueuer interface. All meth
 
 ```
 searchKey: resolvers.NewMockIndexEnqueuerFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9792,7 +9792,7 @@ NewMockLSIFStore creates a new mock of the LSIFStore interface. All methods retu
 
 ```
 searchKey: resolvers.NewMockLSIFStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9971,7 +9971,7 @@ NewMockPositionAdjuster creates a new mock of the PositionAdjuster interface. Al
 
 ```
 searchKey: resolvers.NewMockPositionAdjusterFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10053,7 +10053,7 @@ NewMockRepoUpdaterClient creates a new mock of the RepoUpdaterClient interface. 
 
 ```
 searchKey: resolvers.NewMockRepoUpdaterClientFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10108,7 +10108,7 @@ PositionAdjuster translates a position within a git tree at a source commit into
 
 ```
 searchKey: resolvers.NewPositionAdjuster
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10150,7 +10150,7 @@ PositionAdjusterAdjustPathFunc describes the behavior when the AdjustPath method
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustPathFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10226,7 +10226,7 @@ func (f *PositionAdjusterAdjustPathFunc) appendCall(r0 PositionAdjusterAdjustPat
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustPathFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10272,7 +10272,7 @@ PositionAdjusterAdjustPathFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustPathFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10285,7 +10285,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustPathFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10316,7 +10316,7 @@ PositionAdjusterAdjustPositionFunc describes the behavior when the AdjustPositio
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustPositionFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10392,7 +10392,7 @@ func (f *PositionAdjusterAdjustPositionFunc) appendCall(r0 PositionAdjusterAdjus
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustPositionFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10444,7 +10444,7 @@ PositionAdjusterAdjustPositionFuncCall is an object that describes an invocation
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustPositionFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10457,7 +10457,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustPositionFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10488,7 +10488,7 @@ PositionAdjusterAdjustRangeFunc describes the behavior when the AdjustRange meth
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustRangeFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10564,7 +10564,7 @@ func (f *PositionAdjusterAdjustRangeFunc) appendCall(r0 PositionAdjusterAdjustRa
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustRangeFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10616,7 +10616,7 @@ PositionAdjusterAdjustRangeFuncCall is an object that describes an invocation of
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustRangeFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10629,7 +10629,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.PositionAdjusterAdjustRangeFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10662,7 +10662,7 @@ QueryResolver is the main interface to bundle-related operations exposed to the 
 
 ```
 searchKey: resolvers.NewQueryResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10714,7 +10714,7 @@ RepoUpdaterClientEnqueueRepoUpdateFunc describes the behavior when the EnqueueRe
 
 ```
 searchKey: resolvers.RepoUpdaterClientEnqueueRepoUpdateFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10790,7 +10790,7 @@ func (f *RepoUpdaterClientEnqueueRepoUpdateFunc) appendCall(r0 RepoUpdaterClient
 
 ```
 searchKey: resolvers.RepoUpdaterClientEnqueueRepoUpdateFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10827,7 +10827,7 @@ RepoUpdaterClientEnqueueRepoUpdateFuncCall is an object that describes an invoca
 
 ```
 searchKey: resolvers.RepoUpdaterClientEnqueueRepoUpdateFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10840,7 +10840,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: resolvers.RepoUpdaterClientEnqueueRepoUpdateFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10880,7 +10880,7 @@ Resolver is the main interface to code intel-related operations exposed to the G
 
 ```
 searchKey: resolvers.NewResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10922,7 +10922,7 @@ UploadsResolver wraps store.GetUploads so that the underlying function can be in
 
 ```
 searchKey: resolvers.NewUploadsResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11009,7 +11009,7 @@ type cachedCommitChecker struct {
 
 ```
 searchKey: resolvers.newCachedCommitChecker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11083,7 +11083,7 @@ type operations struct {
 
 ```
 searchKey: resolvers.newOperations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11233,7 +11233,7 @@ type queryResolver struct {
 
 ```
 searchKey: resolvers.newQueryResolver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11611,7 +11611,7 @@ referencesCursor stores (enough of) the state of a previous References request u
 
 ```
 searchKey: resolvers.decodeCursor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11642,7 +11642,7 @@ type resolver struct {
 
 ```
 searchKey: resolvers.newResolver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11834,14 +11834,14 @@ TODO(efritz) - show an indication in the GraphQL response and the UI that this r
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestAdjustPath" href="#TestAdjustPath">func TestAdjustPath(t *testing.T)</a>
 
 ```
 searchKey: resolvers.TestAdjustPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11852,7 +11852,7 @@ func TestAdjustPath(t *testing.T)
 
 ```
 searchKey: resolvers.TestAdjustPosition
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11863,7 +11863,7 @@ func TestAdjustPosition(t *testing.T)
 
 ```
 searchKey: resolvers.TestAdjustPositionEmptyDiff
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11874,7 +11874,7 @@ func TestAdjustPositionEmptyDiff(t *testing.T)
 
 ```
 searchKey: resolvers.TestAdjustPositionReverse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11885,7 +11885,7 @@ func TestAdjustPositionReverse(t *testing.T)
 
 ```
 searchKey: resolvers.TestAdjustRange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11896,7 +11896,7 @@ func TestAdjustRange(t *testing.T)
 
 ```
 searchKey: resolvers.TestAdjustRangeEmptyDiff
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11907,7 +11907,7 @@ func TestAdjustRangeEmptyDiff(t *testing.T)
 
 ```
 searchKey: resolvers.TestAdjustRangeReverse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11918,7 +11918,7 @@ func TestAdjustRangeReverse(t *testing.T)
 
 ```
 searchKey: resolvers.TestDefinitions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11929,7 +11929,7 @@ func TestDefinitions(t *testing.T)
 
 ```
 searchKey: resolvers.TestDefinitionsRemote
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11940,7 +11940,7 @@ func TestDefinitionsRemote(t *testing.T)
 
 ```
 searchKey: resolvers.TestDiagnostics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11951,7 +11951,7 @@ func TestDiagnostics(t *testing.T)
 
 ```
 searchKey: resolvers.TestFallbackIndexConfiguration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11962,7 +11962,7 @@ func TestFallbackIndexConfiguration(t *testing.T)
 
 ```
 searchKey: resolvers.TestFindClosestDumps
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11973,7 +11973,7 @@ func TestFindClosestDumps(t *testing.T)
 
 ```
 searchKey: resolvers.TestFindClosestDumpsDoesNotInferClosestUploadForUnknownRepository
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11984,7 +11984,7 @@ func TestFindClosestDumpsDoesNotInferClosestUploadForUnknownRepository(t *testin
 
 ```
 searchKey: resolvers.TestFindClosestDumpsInfersClosestUploads
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11995,7 +11995,7 @@ func TestFindClosestDumpsInfersClosestUploads(t *testing.T)
 
 ```
 searchKey: resolvers.TestHover
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12006,7 +12006,7 @@ func TestHover(t *testing.T)
 
 ```
 searchKey: resolvers.TestHoverRemote
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12017,7 +12017,7 @@ func TestHoverRemote(t *testing.T)
 
 ```
 searchKey: resolvers.TestQueryResolver
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12028,7 +12028,7 @@ func TestQueryResolver(t *testing.T)
 
 ```
 searchKey: resolvers.TestRanges
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12039,7 +12039,7 @@ func TestRanges(t *testing.T)
 
 ```
 searchKey: resolvers.TestRawAdjustPosition
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12050,7 +12050,7 @@ func TestRawAdjustPosition(t *testing.T)
 
 ```
 searchKey: resolvers.TestReferences
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12061,7 +12061,7 @@ func TestReferences(t *testing.T)
 
 ```
 searchKey: resolvers.TestReferencesRemote
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -12072,7 +12072,7 @@ func TestReferencesRemote(t *testing.T)
 
 ```
 searchKey: resolvers.adjustLine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12085,7 +12085,7 @@ adjustLine translates the given line nubmerbased on the number of additions and 
 
 ```
 searchKey: resolvers.adjustPosition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12098,7 +12098,7 @@ adjustPosition translates the given position by adjusting the line number based 
 
 ```
 searchKey: resolvers.adjustRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12111,7 +12111,7 @@ adjustRange translates the given range by calling adjustPosition on both of the 
 
 ```
 searchKey: resolvers.createHoneyEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12122,7 +12122,7 @@ func createHoneyEvent(ctx context.Context, name string, observationArgs observat
 
 ```
 searchKey: resolvers.encodeCursor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12135,7 +12135,7 @@ encodeCursor returns an encoding of the given cursor suitable for a URL or a Gra
 
 ```
 searchKey: resolvers.filterUploadsWithCommits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12148,7 +12148,7 @@ filterUploadsWithCommits removes the uploads for commits which are unknown to gi
 
 ```
 searchKey: resolvers.findHunk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12161,7 +12161,7 @@ findHunk returns the last thunk that does not begin after the given line.
 
 ```
 searchKey: resolvers.intsToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12172,7 +12172,7 @@ func intsToString(ints []int) string
 
 ```
 searchKey: resolvers.isSourceLocation
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12185,7 +12185,7 @@ isSourceLocation returns true if the given location encloses the source position
 
 ```
 searchKey: resolvers.lowSlowRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12196,7 +12196,7 @@ func lowSlowRequest(name string, duration time.Duration, err *error, observation
 
 ```
 searchKey: resolvers.makeKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12207,7 +12207,7 @@ func makeKey(parts ...string) string
 
 ```
 searchKey: resolvers.monikersToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12218,7 +12218,7 @@ func monikersToString(vs []semantic.QualifiedMonikerData) string
 
 ```
 searchKey: resolvers.nextOffset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12231,7 +12231,7 @@ nextOffset determines the offset that should be used for a subsequent request. I
 
 ```
 searchKey: resolvers.observeResolver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12249,7 +12249,7 @@ func observeResolver(
 
 ```
 searchKey: resolvers.rangeContainsPosition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12262,7 +12262,7 @@ rangeContainsPosition returns true if the given range encloses the given positio
 
 ```
 searchKey: resolvers.testFilter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12275,7 +12275,7 @@ testFilter returns true if the given  encoded bloom filter includes any of the g
 
 ```
 searchKey: resolvers.uploadIDsToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

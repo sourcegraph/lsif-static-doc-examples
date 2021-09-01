@@ -41,7 +41,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestRegisterer" href="#TestRegisterer">var TestRegisterer</a>
@@ -73,7 +73,7 @@ registerer exists so we can override it in tests
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="OperationMetrics" href="#OperationMetrics">type OperationMetrics struct</a>
@@ -97,7 +97,7 @@ OperationMetrics contains three common metrics for any operation.
 
 ```
 searchKey: metrics.NewOperationMetrics
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -136,7 +136,7 @@ OperationMetricsOption alter the default behavior of NewOperationMetrics.
 
 ```
 searchKey: metrics.WithCountHelp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -149,7 +149,7 @@ WithCountHelp overrides the default help text for count metrics.
 
 ```
 searchKey: metrics.WithDurationHelp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -162,7 +162,7 @@ WithDurationHelp overrides the default help text for duration metrics.
 
 ```
 searchKey: metrics.WithErrorsHelp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -175,7 +175,7 @@ WithErrorsHelp overrides the default help text for errors metrics.
 
 ```
 searchKey: metrics.WithLabels
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -188,7 +188,7 @@ WithLabels overrides the default labels for all metrics.
 
 ```
 searchKey: metrics.WithSubsystem
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -218,7 +218,7 @@ RequestMeter wraps a Prometheus request meter (counter + duration histogram) upd
 
 ```
 searchKey: metrics.NewRequestMeter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -382,14 +382,14 @@ func (testRegisterer) Unregister(prometheus.Collector) bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MustRegisterDiskMonitor" href="#MustRegisterDiskMonitor">func MustRegisterDiskMonitor(path string)</a>
 
 ```
 searchKey: metrics.MustRegisterDiskMonitor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -404,7 +404,7 @@ It is safe to call this function more than once for the same path.
 
 ```
 searchKey: metrics.TestMustRegisterDiskMonitor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -415,7 +415,7 @@ func TestMustRegisterDiskMonitor(t *testing.T)
 
 ```
 searchKey: metrics.TestRequestMeterTransport
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -426,7 +426,7 @@ func TestRequestMeterTransport(t *testing.T)
 
 ```
 searchKey: metrics.doRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -437,7 +437,7 @@ func doRequest(hc *http.Client, u string) error
 
 ```
 searchKey: metrics.mustRegisterOnce
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -448,7 +448,7 @@ func mustRegisterOnce(c prometheus.Collector)
 
 ```
 searchKey: metrics.testingHTTPClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -21,10 +21,6 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="newVersion" href="#newVersion">var newVersion</a>
 
 ```
@@ -37,10 +33,6 @@ var newVersion string
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="changeLog" href="#changeLog">type changeLog struct</a>
 
@@ -77,7 +69,7 @@ type changeSet struct {
 
 ```
 searchKey: main.parseSet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -88,7 +80,7 @@ func parseSet(sec [][]byte, lineCount int) (*changeSet, error)
 
 ```
 searchKey: main.changeSet.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -99,7 +91,7 @@ func (cs *changeSet) String() string
 
 ```
 searchKey: main.changeSet.any
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -124,7 +116,7 @@ type changeSubset struct {
 
 ```
 searchKey: main.parseSubset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -137,7 +129,7 @@ parseSubset tries to read a change subset, which is a ### header followed by a l
 
 ```
 searchKey: main.changeSubset.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -148,7 +140,7 @@ func (css *changeSubset) String() string
 
 ```
 searchKey: main.changeSubset.any
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -156,10 +148,6 @@ func (css *changeSubset) any() bool
 ```
 
 ## <a id="func" href="#func">Functions</a>
-
-```
-tags: [package]
-```
 
 ### <a id="main" href="#main">func main()</a>
 
@@ -176,7 +164,7 @@ func main()
 
 ```
 searchKey: main.readLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

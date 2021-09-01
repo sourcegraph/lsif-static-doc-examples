@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "internal/extsvc/bitbucketserver",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -701,7 +700,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -866,7 +864,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -907,7 +904,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.Activity.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1018,7 +1015,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.NewClient",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1040,7 +1037,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.NewTestClient",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1062,7 +1059,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.newClient",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1789,7 +1786,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.Client.Username",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2036,7 +2033,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.CommitStatus.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2081,7 +2078,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.ErrAlreadyExists.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2192,7 +2189,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.PageToken.HasMore",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2214,7 +2211,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.PageToken.Query",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2236,7 +2233,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.PageToken.Values",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2303,7 +2300,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.ParticipantStatusEvent.Key",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2481,7 +2478,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.ExtractDuplicatePullRequest",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -2614,7 +2611,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.Repo.IsPersonalRepository",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2681,7 +2678,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.newSudoableOAuthClient",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2726,7 +2723,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.SudoableOAuthClient.Hash",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2973,7 +2970,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.DuplicatePullRequest",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2996,7 +2993,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.Error",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3019,7 +3016,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.ExtractExistingPullRequest",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3042,7 +3039,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.MergePreconditionFailedException",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3065,7 +3062,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.NoSuchLabelException",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3088,7 +3085,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.NoSuchPullRequestException",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3111,7 +3108,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.NotFound",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3134,7 +3131,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketserver.httpError.Unauthorized",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3163,7 +3160,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -3184,7 +3180,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.IsDuplicatePullRequest",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3206,7 +3202,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.IsNoSuchLabel",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3228,7 +3224,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.IsNotFound",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3250,7 +3246,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.IsUnauthorized",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3272,7 +3268,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.ParseWebhookEvent",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3294,7 +3290,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestAuth",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3318,7 +3314,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_CreatePullRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3342,7 +3338,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_CreatePullRequestComment",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3366,7 +3362,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_DeclinePullRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3390,7 +3386,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_FetchDefaultReviewers",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3414,7 +3410,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_LabeledRepos",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3438,7 +3434,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_LoadPullRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3462,7 +3458,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_LoadPullRequestActivities",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3486,7 +3482,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_MergePullRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3510,7 +3506,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_RepoIDs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3534,7 +3530,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_Users",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3558,7 +3554,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestClient_WithAuthenticator",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3582,7 +3578,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestMain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3606,7 +3602,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestParseQueryStrings",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3630,7 +3626,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestSudoableOAuthClient",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3654,7 +3650,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.TestUserFilters",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3678,7 +3674,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.WebhookEventType",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3700,7 +3696,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.categorize",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3723,7 +3719,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.checkGolden",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3746,7 +3742,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.ignoreHostMatcher",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3769,7 +3765,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.normalize",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3792,7 +3788,7 @@
                 "newPage": false,
                 "searchKey": "bitbucketserver.parseQueryStrings",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

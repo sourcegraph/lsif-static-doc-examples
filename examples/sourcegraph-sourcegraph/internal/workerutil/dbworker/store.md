@@ -95,7 +95,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="addExecutionLogEntryQuery" href="#addExecutionLogEntryQuery">const addExecutionLogEntryQuery</a>
@@ -222,7 +222,7 @@ const selectRecordQuery = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrDequeueRace" href="#ErrDequeueRace">var ErrDequeueRace</a>
@@ -291,7 +291,7 @@ var defaultTestStoreOptions = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExecutionLogEntry" href="#ExecutionLogEntry">type ExecutionLogEntry workerutil.ExecutionLogEntry</a>
@@ -320,7 +320,7 @@ func (e *ExecutionLogEntry) Scan(value interface{}) error
 
 ```
 searchKey: store.ExecutionLogEntry.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -509,7 +509,7 @@ Store is the persistence layer for the dbworker package that handles worker-side
 
 ```
 searchKey: store.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -522,7 +522,7 @@ New creates a new store with the given database handle and options.
 
 ```
 searchKey: store.NewWithMetrics
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -547,7 +547,7 @@ type TestRecord struct {
 
 ```
 searchKey: store.TestRecord.RecordID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -573,7 +573,7 @@ type TestRecordRetry struct {
 
 ```
 searchKey: store.TestRecordRetry.RecordID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -599,7 +599,7 @@ type TestRecordView struct {
 
 ```
 searchKey: store.TestRecordView.RecordID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -630,7 +630,7 @@ type operations struct {
 
 ```
 searchKey: store.newOperations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -657,7 +657,7 @@ type store struct {
 
 ```
 searchKey: store.newStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -668,7 +668,7 @@ func newStore(handle *basestore.TransactableHandle, options Options, observation
 
 ```
 searchKey: store.testStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -841,7 +841,7 @@ func (s *store) resetStalled(ctx context.Context, q string) ([]int, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultColumnExpressions" href="#DefaultColumnExpressions">func DefaultColumnExpressions() []*sqlf.Query</a>
@@ -861,7 +861,7 @@ DefaultColumnExpressions returns a slice of expressions for the default column n
 
 ```
 searchKey: store.ExecutionLogEntries
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -872,7 +872,7 @@ func ExecutionLogEntries(raw []workerutil.ExecutionLogEntry) (entries []Executio
 
 ```
 searchKey: store.TestStoreAddExecutionLogEntry
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -883,7 +883,7 @@ func TestStoreAddExecutionLogEntry(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueConcurrent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -894,7 +894,7 @@ func TestStoreDequeueConcurrent(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueConditions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -905,7 +905,7 @@ func TestStoreDequeueConditions(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueDelay
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -916,7 +916,7 @@ func TestStoreDequeueDelay(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueOrder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -927,7 +927,7 @@ func TestStoreDequeueOrder(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueRetryAfter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -938,7 +938,7 @@ func TestStoreDequeueRetryAfter(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueRetryAfterDisabled
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -949,7 +949,7 @@ func TestStoreDequeueRetryAfterDisabled(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -960,7 +960,7 @@ func TestStoreDequeueState(t *testing.T)
 
 ```
 searchKey: store.TestStoreDequeueView
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -971,7 +971,7 @@ func TestStoreDequeueView(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkComplete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -982,7 +982,7 @@ func TestStoreMarkComplete(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkCompleteNotProcessing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -993,7 +993,7 @@ func TestStoreMarkCompleteNotProcessing(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkErrored
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1004,7 +1004,7 @@ func TestStoreMarkErrored(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkErroredAlreadyCompleted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1015,7 +1015,7 @@ func TestStoreMarkErroredAlreadyCompleted(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkErroredAlreadyErrored
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1026,7 +1026,7 @@ func TestStoreMarkErroredAlreadyErrored(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkErroredRetriesExhausted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1037,7 +1037,7 @@ func TestStoreMarkErroredRetriesExhausted(t *testing.T)
 
 ```
 searchKey: store.TestStoreMarkFailed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1048,7 +1048,7 @@ func TestStoreMarkFailed(t *testing.T)
 
 ```
 searchKey: store.TestStoreQueuedCount
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1059,7 +1059,7 @@ func TestStoreQueuedCount(t *testing.T)
 
 ```
 searchKey: store.TestStoreQueuedCountConditions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1070,7 +1070,7 @@ func TestStoreQueuedCountConditions(t *testing.T)
 
 ```
 searchKey: store.TestStoreQueuedCountFailed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1081,7 +1081,7 @@ func TestStoreQueuedCountFailed(t *testing.T)
 
 ```
 searchKey: store.TestStoreRequeue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1092,7 +1092,7 @@ func TestStoreRequeue(t *testing.T)
 
 ```
 searchKey: store.TestStoreResetStalled
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1103,7 +1103,7 @@ func TestStoreResetStalled(t *testing.T)
 
 ```
 searchKey: store.assertDequeueRecordResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1114,7 +1114,7 @@ func assertDequeueRecordResult(t *testing.T, expectedID int, record interface{},
 
 ```
 searchKey: store.assertDequeueRecordRetryResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1125,7 +1125,7 @@ func assertDequeueRecordRetryResult(t *testing.T, expectedID, record interface{}
 
 ```
 searchKey: store.assertDequeueRecordViewResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1147,7 +1147,7 @@ func init()
 
 ```
 searchKey: store.makeConditionSuffix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1160,7 +1160,7 @@ makeConditionSuffix returns a *sqlf.Query containing "AND {c1 AND c2 AND ...}" w
 
 ```
 searchKey: store.quote
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1173,7 +1173,7 @@ quote wraps the given string in a *sqlf.Query so that it is not passed to the da
 
 ```
 searchKey: store.setupStoreTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1195,7 +1195,7 @@ func testNow() time.Time
 
 ```
 searchKey: store.testScanFirstRecord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1206,7 +1206,7 @@ func testScanFirstRecord(rows *sql.Rows, queryErr error) (v workerutil.Record, _
 
 ```
 searchKey: store.testScanFirstRecordRetry
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1217,7 +1217,7 @@ func testScanFirstRecordRetry(rows *sql.Rows, queryErr error) (v workerutil.Reco
 
 ```
 searchKey: store.testScanFirstRecordView
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

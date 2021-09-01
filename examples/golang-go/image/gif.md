@@ -126,10 +126,6 @@ The GIF specification is at [https://www.w3.org/Graphics/GIF/spec-gif89a.txt](ht
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DisposalBackground" href="#DisposalBackground">const DisposalBackground</a>
 
 ```
@@ -404,10 +400,6 @@ header, palette and trailer are parts of a valid 2x1 GIF image.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="errBadPixel" href="#errBadPixel">var errBadPixel</a>
 
 ```
@@ -510,10 +502,6 @@ testGIF is a simple GIF that we can modify to test different scenarios.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="GIF" href="#GIF">type GIF struct</a>
 
 ```
@@ -558,7 +546,7 @@ GIF represents the possibly multiple images stored in a GIF file.
 
 ```
 searchKey: gif.DecodeAll
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -571,7 +559,7 @@ DecodeAll reads a GIF image from r and returns the sequential frames and timing 
 
 ```
 searchKey: gif.readGIF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -639,7 +627,7 @@ blockReader must implement io.Reader, but its Read shouldn't ever actually be ca
 
 ```
 searchKey: gif.blockReader.ReadByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -650,7 +638,7 @@ func (b *blockReader) ReadByte() (byte, error)
 
 ```
 searchKey: gif.blockReader.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -663,7 +651,7 @@ close primarily detects whether or not a block terminator was encountered after 
 
 ```
 searchKey: gif.blockReader.fill
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -689,7 +677,7 @@ blockWriter writes the block structure of GIF image data, which comprises (n, (n
 
 ```
 searchKey: gif.blockWriter.Flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -724,7 +712,7 @@ func (b blockWriter) WriteByte(c byte) error
 
 ```
 searchKey: gif.blockWriter.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -735,7 +723,7 @@ func (b blockWriter) close()
 
 ```
 searchKey: gif.blockWriter.setup
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -799,7 +787,7 @@ decode reads a GIF image from r and stores the result in d.
 
 ```
 searchKey: gif.decoder.newImageFromDescriptor
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -810,7 +798,7 @@ func (d *decoder) newImageFromDescriptor() (*image.Paletted, error)
 
 ```
 searchKey: gif.decoder.readBlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -832,7 +820,7 @@ func (d *decoder) readColorTable(fields byte) (color.Palette, error)
 
 ```
 searchKey: gif.decoder.readExtension
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -843,7 +831,7 @@ func (d *decoder) readExtension() error
 
 ```
 searchKey: gif.decoder.readGraphicControl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -854,7 +842,7 @@ func (d *decoder) readGraphicControl() error
 
 ```
 searchKey: gif.decoder.readHeaderAndScreenDescriptor
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -913,7 +901,7 @@ func (e *encoder) colorTablesMatch(localLen, transparentIndex int) bool
 
 ```
 searchKey: gif.encoder.flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -946,7 +934,7 @@ func (e *encoder) writeByte(b byte)
 
 ```
 searchKey: gif.encoder.writeHeader
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -997,7 +985,7 @@ type offsetImage struct {
 
 ```
 searchKey: gif.offsetImage.Bounds
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1039,15 +1027,11 @@ writer is a buffered writer.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDecode" href="#BenchmarkDecode">func BenchmarkDecode(b *testing.B)</a>
 
 ```
 searchKey: gif.BenchmarkDecode
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1058,7 +1042,7 @@ func BenchmarkDecode(b *testing.B)
 
 ```
 searchKey: gif.BenchmarkEncodeRandomPaletted
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1069,7 +1053,7 @@ func BenchmarkEncodeRandomPaletted(b *testing.B)
 
 ```
 searchKey: gif.BenchmarkEncodeRandomRGBA
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1080,7 +1064,7 @@ func BenchmarkEncodeRandomRGBA(b *testing.B)
 
 ```
 searchKey: gif.BenchmarkEncodeRealisticPaletted
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1091,7 +1075,7 @@ func BenchmarkEncodeRealisticPaletted(b *testing.B)
 
 ```
 searchKey: gif.BenchmarkEncodeRealisticRGBA
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1102,7 +1086,7 @@ func BenchmarkEncodeRealisticRGBA(b *testing.B)
 
 ```
 searchKey: gif.Decode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1115,7 +1099,7 @@ Decode reads a GIF image from r and returns the first embedded image as an image
 
 ```
 searchKey: gif.DecodeConfig
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1128,7 +1112,7 @@ DecodeConfig returns the global color model and dimensions of a GIF image withou
 
 ```
 searchKey: gif.Encode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1141,7 +1125,7 @@ Encode writes the Image m to w in GIF format.
 
 ```
 searchKey: gif.EncodeAll
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1154,7 +1138,7 @@ EncodeAll writes the images in g to w in GIF format with the given loop count an
 
 ```
 searchKey: gif.TestBounds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1165,7 +1149,7 @@ func TestBounds(t *testing.T)
 
 ```
 searchKey: gif.TestColorTablesMatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1176,7 +1160,7 @@ func TestColorTablesMatch(t *testing.T)
 
 ```
 searchKey: gif.TestDecode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1187,7 +1171,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: gif.TestDecodeMemoryConsumption
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1200,7 +1184,7 @@ See golang.org/issue/22237
 
 ```
 searchKey: gif.TestEncodeAllFramesOutOfBounds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1211,7 +1195,7 @@ func TestEncodeAllFramesOutOfBounds(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeAllGo1Dot4
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1222,7 +1206,7 @@ func TestEncodeAllGo1Dot4(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeAllGo1Dot5
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1233,7 +1217,7 @@ func TestEncodeAllGo1Dot5(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeAllGo1Dot5GlobalColorModel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1244,7 +1228,7 @@ func TestEncodeAllGo1Dot5GlobalColorModel(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeBadPalettes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1255,7 +1239,7 @@ func TestEncodeBadPalettes(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeCroppedSubImages
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1266,7 +1250,7 @@ func TestEncodeCroppedSubImages(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeImplicitConfigSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1277,7 +1261,7 @@ func TestEncodeImplicitConfigSize(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeMismatchDelay
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1288,7 +1272,7 @@ func TestEncodeMismatchDelay(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeNonZeroMinPoint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1299,7 +1283,7 @@ func TestEncodeNonZeroMinPoint(t *testing.T)
 
 ```
 searchKey: gif.TestEncodePalettes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1310,7 +1294,7 @@ func TestEncodePalettes(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeWrappedImage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1321,7 +1305,7 @@ func TestEncodeWrappedImage(t *testing.T)
 
 ```
 searchKey: gif.TestEncodeZeroGIF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1332,7 +1316,7 @@ func TestEncodeZeroGIF(t *testing.T)
 
 ```
 searchKey: gif.TestLoopCount
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1343,7 +1327,7 @@ func TestLoopCount(t *testing.T)
 
 ```
 searchKey: gif.TestNoPalette
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1354,7 +1338,7 @@ func TestNoPalette(t *testing.T)
 
 ```
 searchKey: gif.TestPixelOutsidePaletteRange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1365,7 +1349,7 @@ func TestPixelOutsidePaletteRange(t *testing.T)
 
 ```
 searchKey: gif.TestSubImage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1376,7 +1360,7 @@ func TestSubImage(t *testing.T)
 
 ```
 searchKey: gif.TestTransparentIndex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1387,7 +1371,7 @@ func TestTransparentIndex(t *testing.T)
 
 ```
 searchKey: gif.TestTransparentPixelOutsidePaletteRange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1398,7 +1382,7 @@ func TestTransparentPixelOutsidePaletteRange(t *testing.T)
 
 ```
 searchKey: gif.TestUnexpectedEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1409,7 +1393,7 @@ func TestUnexpectedEOF(t *testing.T)
 
 ```
 searchKey: gif.TestWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1420,7 +1404,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: gif.averageDelta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1433,7 +1417,7 @@ averageDelta returns the average delta in RGB space. The two images must have th
 
 ```
 searchKey: gif.averageDeltaBound
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1446,7 +1430,7 @@ averageDeltaBounds returns the average delta in RGB space. The average delta is 
 
 ```
 searchKey: gif.delta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1457,7 +1441,7 @@ func delta(u0, u1 uint32) int64
 
 ```
 searchKey: gif.encodeColorTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1479,7 +1463,7 @@ func init()
 
 ```
 searchKey: gif.log2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1490,7 +1474,7 @@ func log2(x int) int
 
 ```
 searchKey: gif.lzwEncode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1503,7 +1487,7 @@ lzwEncode returns an LZW encoding (with 2-bit literals) of in.
 
 ```
 searchKey: gif.palettesEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1516,7 +1500,7 @@ palettesEqual reports whether two color.Palette values are equal, ignoring any t
 
 ```
 searchKey: gif.readByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1527,7 +1511,7 @@ func readByte(r io.ByteReader) (byte, error)
 
 ```
 searchKey: gif.readFull
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1538,7 +1522,7 @@ func readFull(r io.Reader, b []byte) error
 
 ```
 searchKey: gif.readImg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1549,7 +1533,7 @@ func readImg(filename string) (image.Image, error)
 
 ```
 searchKey: gif.testEncodeAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1560,7 +1544,7 @@ func testEncodeAll(t *testing.T, go1Dot5Fields bool, useGlobalColorModel bool)
 
 ```
 searchKey: gif.try
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1571,7 +1555,7 @@ func try(t *testing.T, b []byte, want string)
 
 ```
 searchKey: gif.uninterlace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1584,7 +1568,7 @@ uninterlace rearranges the pixels in m to account for interlaced input.
 
 ```
 searchKey: gif.writeUint16
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

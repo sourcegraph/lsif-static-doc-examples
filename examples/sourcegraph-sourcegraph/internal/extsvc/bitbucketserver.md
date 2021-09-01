@@ -174,7 +174,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ApprovedActivityAction" href="#ApprovedActivityAction">const ApprovedActivityAction</a>
@@ -553,7 +553,7 @@ userFiltersLimit defines the maximum number of UserFilters that can be passed to
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrNotMergeable" href="#ErrNotMergeable">var ErrNotMergeable</a>
@@ -631,7 +631,7 @@ var update = flag.Bool("update", false, "update testdata")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Activity" href="#Activity">type Activity struct</a>
@@ -668,7 +668,7 @@ Activity is a union type of all supported pull request activity items.
 
 ```
 searchKey: bitbucketserver.Activity.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -763,7 +763,7 @@ Client access a Bitbucket Server via the REST API.
 
 ```
 searchKey: bitbucketserver.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -776,7 +776,7 @@ NewClient returns an authenticated Bitbucket Server API client with the provided
 
 ```
 searchKey: bitbucketserver.NewTestClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -789,7 +789,7 @@ NewTestClient returns a bitbucketserver.Client that records its interactions to 
 
 ```
 searchKey: bitbucketserver.newClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1200,7 +1200,7 @@ UserPermissions retrieves the global permissions assigned to the user with the g
 
 ```
 searchKey: bitbucketserver.Client.Username
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1366,7 +1366,7 @@ Commit status is the build status for a specific commit
 
 ```
 searchKey: bitbucketserver.CommitStatus.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1392,7 +1392,7 @@ ErrAlreadyExists is returned by Client.CreatePullRequest when a Pull Request for
 
 ```
 searchKey: bitbucketserver.ErrAlreadyExists.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1470,7 +1470,7 @@ type PageToken struct {
 
 ```
 searchKey: bitbucketserver.PageToken.HasMore
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1481,7 +1481,7 @@ func (t *PageToken) HasMore() bool
 
 ```
 searchKey: bitbucketserver.PageToken.Query
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1492,7 +1492,7 @@ func (t *PageToken) Query() string
 
 ```
 searchKey: bitbucketserver.PageToken.Values
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1536,7 +1536,7 @@ type ParticipantStatusEvent struct {
 
 ```
 searchKey: bitbucketserver.ParticipantStatusEvent.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1683,7 +1683,7 @@ type PullRequest struct {
 
 ```
 searchKey: bitbucketserver.ExtractDuplicatePullRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1796,7 +1796,7 @@ type Repo struct {
 
 ```
 searchKey: bitbucketserver.Repo.IsPersonalRepository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1844,7 +1844,7 @@ SudoableOAuthClient extends the generic OAuthClient type to allow for an optiona
 
 ```
 searchKey: bitbucketserver.newSudoableOAuthClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1866,7 +1866,7 @@ func (c *SudoableOAuthClient) Authenticate(req *http.Request) error
 
 ```
 searchKey: bitbucketserver.SudoableOAuthClient.Hash
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2048,7 +2048,7 @@ type httpError struct {
 
 ```
 searchKey: bitbucketserver.httpError.DuplicatePullRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2059,7 +2059,7 @@ func (e *httpError) DuplicatePullRequest() bool
 
 ```
 searchKey: bitbucketserver.httpError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2070,7 +2070,7 @@ func (e *httpError) Error() string
 
 ```
 searchKey: bitbucketserver.httpError.ExtractExistingPullRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2081,7 +2081,7 @@ func (e *httpError) ExtractExistingPullRequest() (*PullRequest, error)
 
 ```
 searchKey: bitbucketserver.httpError.MergePreconditionFailedException
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2092,7 +2092,7 @@ func (e *httpError) MergePreconditionFailedException() bool
 
 ```
 searchKey: bitbucketserver.httpError.NoSuchLabelException
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2103,7 +2103,7 @@ func (e *httpError) NoSuchLabelException() bool
 
 ```
 searchKey: bitbucketserver.httpError.NoSuchPullRequestException
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2114,7 +2114,7 @@ func (e *httpError) NoSuchPullRequestException() bool
 
 ```
 searchKey: bitbucketserver.httpError.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2125,7 +2125,7 @@ func (e *httpError) NotFound() bool
 
 ```
 searchKey: bitbucketserver.httpError.Unauthorized
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2135,14 +2135,14 @@ func (e *httpError) Unauthorized() bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="IsDuplicatePullRequest" href="#IsDuplicatePullRequest">func IsDuplicatePullRequest(err error) bool</a>
 
 ```
 searchKey: bitbucketserver.IsDuplicatePullRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2155,7 +2155,7 @@ IsDuplicatePullRequest reports whether err is a Bitbucket Server API "Duplicate 
 
 ```
 searchKey: bitbucketserver.IsNoSuchLabel
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2168,7 +2168,7 @@ IsNoSuchLabel reports whether err is a Bitbucket Server API "No Such Label" erro
 
 ```
 searchKey: bitbucketserver.IsNotFound
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2181,7 +2181,7 @@ IsNotFound reports whether err is a Bitbucket Server API not found error.
 
 ```
 searchKey: bitbucketserver.IsUnauthorized
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2194,7 +2194,7 @@ IsUnauthorized reports whether err is a Bitbucket Server API 401 error.
 
 ```
 searchKey: bitbucketserver.ParseWebhookEvent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2205,7 +2205,7 @@ func ParseWebhookEvent(eventType string, payload []byte) (e interface{}, err err
 
 ```
 searchKey: bitbucketserver.TestAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2216,7 +2216,7 @@ func TestAuth(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_CreatePullRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2227,7 +2227,7 @@ func TestClient_CreatePullRequest(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_CreatePullRequestComment
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2238,7 +2238,7 @@ func TestClient_CreatePullRequestComment(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_DeclinePullRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2249,7 +2249,7 @@ func TestClient_DeclinePullRequest(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_FetchDefaultReviewers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2260,7 +2260,7 @@ func TestClient_FetchDefaultReviewers(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_LabeledRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2271,7 +2271,7 @@ func TestClient_LabeledRepos(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_LoadPullRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2282,7 +2282,7 @@ func TestClient_LoadPullRequest(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_LoadPullRequestActivities
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2293,7 +2293,7 @@ func TestClient_LoadPullRequestActivities(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_MergePullRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2304,7 +2304,7 @@ func TestClient_MergePullRequest(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_RepoIDs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2317,7 +2317,7 @@ NOTE: This test validates that correct repository IDs are returned from the roar
 
 ```
 searchKey: bitbucketserver.TestClient_Users
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2328,7 +2328,7 @@ func TestClient_Users(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestClient_WithAuthenticator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2339,7 +2339,7 @@ func TestClient_WithAuthenticator(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2350,7 +2350,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: bitbucketserver.TestParseQueryStrings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2361,7 +2361,7 @@ func TestParseQueryStrings(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestSudoableOAuthClient
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2372,7 +2372,7 @@ func TestSudoableOAuthClient(t *testing.T)
 
 ```
 searchKey: bitbucketserver.TestUserFilters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2383,7 +2383,7 @@ func TestUserFilters(t *testing.T)
 
 ```
 searchKey: bitbucketserver.WebhookEventType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2394,7 +2394,7 @@ func WebhookEventType(r *http.Request) string
 
 ```
 searchKey: bitbucketserver.categorize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2407,7 +2407,7 @@ categorize returns a category for an API URL. Used by metrics.
 
 ```
 searchKey: bitbucketserver.checkGolden
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2418,7 +2418,7 @@ func checkGolden(t *testing.T, name string, got interface{})
 
 ```
 searchKey: bitbucketserver.ignoreHostMatcher
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2429,7 +2429,7 @@ func ignoreHostMatcher(r *http.Request, i cassette.Request) bool
 
 ```
 searchKey: bitbucketserver.normalize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2440,7 +2440,7 @@ func normalize(path string) string
 
 ```
 searchKey: bitbucketserver.parseQueryStrings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

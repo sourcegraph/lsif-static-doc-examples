@@ -29,10 +29,6 @@ For example, a GitHub.com repository that also has Phabricator configured has ex
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="linksForRepositoryFailed" href="#linksForRepositoryFailed">var linksForRepositoryFailed</a>
 
 ```
@@ -45,10 +41,6 @@ var linksForRepositoryFailed = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Resolver" href="#Resolver">type Resolver struct</a>
 
@@ -73,7 +65,7 @@ For example, a repository might have 2 external links, one to its origin reposit
 
 ```
 searchKey: externallink.NewResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -84,7 +76,7 @@ func NewResolver(url, serviceType string) *Resolver
 
 ```
 searchKey: externallink.Resolver.ServiceKind
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -95,7 +87,7 @@ func (r *Resolver) ServiceKind() *string
 
 ```
 searchKey: externallink.Resolver.ServiceType
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -106,7 +98,7 @@ func (r *Resolver) ServiceType() *string
 
 ```
 searchKey: externallink.Resolver.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -117,7 +109,7 @@ func (r *Resolver) String() string
 
 ```
 searchKey: externallink.Resolver.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -126,15 +118,11 @@ func (r *Resolver) URL() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Commit" href="#Commit">func Commit(ctx context.Context, db dbutil.DB, repo *types.Repo, commitID api.CommitID) (links []*Resolver, err error)</a>
 
 ```
 searchKey: externallink.Commit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -147,7 +135,7 @@ Commit returns the external links for a commit in a repository.
 
 ```
 searchKey: externallink.FileOrDir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -160,7 +148,7 @@ FileOrDir returns the external links for a file or directory in a repository.
 
 ```
 searchKey: externallink.Repository
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -175,7 +163,7 @@ For example, a repository might have 2 external links, one to its origin reposit
 
 ```
 searchKey: externallink.TestCommit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -186,7 +174,7 @@ func TestCommit(t *testing.T)
 
 ```
 searchKey: externallink.TestFileOrDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -197,7 +185,7 @@ func TestFileOrDir(t *testing.T)
 
 ```
 searchKey: externallink.TestRepository
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -208,7 +196,7 @@ func TestRepository(t *testing.T)
 
 ```
 searchKey: externallink.linksForRepository
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -234,7 +222,7 @@ func resetMocks()
 
 ```
 searchKey: externallink.typeToMaybeEmptyKind
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

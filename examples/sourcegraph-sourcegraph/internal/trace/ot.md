@@ -35,7 +35,7 @@ Package ot wraps github.com/opentracing/opentracing-go and github.com./opentraci
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TraceAll" href="#TraceAll">const TraceAll</a>
@@ -113,7 +113,7 @@ const traceQuery = "trace"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="trPolicy" href="#trPolicy">var trPolicy</a>
@@ -130,7 +130,7 @@ var trPolicy = atomic.NewString(string(TraceNone))
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Transport" href="#Transport">type Transport struct</a>
@@ -195,14 +195,14 @@ func GetTracePolicy() tracePolicy
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GetTracer" href="#GetTracer">func GetTracer(ctx context.Context) opentracing.Tracer</a>
 
 ```
 searchKey: ot.GetTracer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -215,7 +215,7 @@ GetTracer returns the tracer to use for the given context. If ShouldTrace return
 
 ```
 searchKey: ot.Middleware
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -240,7 +240,7 @@ the request handler from the global tracer.
 
 ```
 searchKey: ot.MiddlewareWithTracer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -253,7 +253,7 @@ MiddlewareWithTracer is like Middleware, but uses the specified tracer instead o
 
 ```
 searchKey: ot.SetTracePolicy
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -264,7 +264,7 @@ func SetTracePolicy(newTracePolicy tracePolicy)
 
 ```
 searchKey: ot.ShouldTrace
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -277,7 +277,7 @@ ShouldTrace returns true if the shouldTraceKey context value is true.
 
 ```
 searchKey: ot.StartSpanFromContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -290,7 +290,7 @@ StartSpanFromContext starts a span using the tracer returned by GetTracer.
 
 ```
 searchKey: ot.StartSpanFromContextWithTracer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -303,7 +303,7 @@ StartSpanFromContext starts a span using the tracer returned by invoking getTrac
 
 ```
 searchKey: ot.WithShouldTrace
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -316,7 +316,7 @@ WithShouldTrace sets the shouldTraceKey context value.
 
 ```
 searchKey: ot.getTracer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -329,7 +329,7 @@ getTracer is like GetTracer, but accepts a tracer as an argument. If ShouldTrace
 
 ```
 searchKey: ot.requestWantsTracing
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

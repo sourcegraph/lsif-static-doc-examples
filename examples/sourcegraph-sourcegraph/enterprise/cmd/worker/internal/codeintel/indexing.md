@@ -264,7 +264,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="defaultRepositoriesQueuedPerSecond" href="#defaultRepositoriesQueuedPerSecond">const defaultRepositoriesQueuedPerSecond</a>
@@ -281,7 +281,7 @@ const defaultRepositoriesQueuedPerSecond = 25
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="dependencyIndexingRepositoryIDs" href="#dependencyIndexingRepositoryIDs">var dependencyIndexingRepositoryIDs</a>
@@ -351,7 +351,7 @@ var singletonOperations *operations
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DBStore" href="#DBStore">type DBStore interface</a>
@@ -394,7 +394,7 @@ DBStoreGetAutoindexDisabledRepositoriesFunc describes the behavior when the GetA
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -470,7 +470,7 @@ func (f *DBStoreGetAutoindexDisabledRepositoriesFunc) appendCall(r0 DBStoreGetAu
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -504,7 +504,7 @@ DBStoreGetAutoindexDisabledRepositoriesFuncCall is an object that describes an i
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -517,7 +517,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetAutoindexDisabledRepositoriesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -548,7 +548,7 @@ DBStoreGetRepositoriesWithIndexConfigurationFunc describes the behavior when the
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -624,7 +624,7 @@ func (f *DBStoreGetRepositoriesWithIndexConfigurationFunc) appendCall(r0 DBStore
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -658,7 +658,7 @@ DBStoreGetRepositoriesWithIndexConfigurationFuncCall is an object that describes
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -671,7 +671,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetRepositoriesWithIndexConfigurationFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -702,7 +702,7 @@ DBStoreGetUploadByIDFunc describes the behavior when the GetUploadByID method of
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -778,7 +778,7 @@ func (f *DBStoreGetUploadByIDFunc) appendCall(r0 DBStoreGetUploadByIDFuncCall)
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -818,7 +818,7 @@ DBStoreGetUploadByIDFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -831,7 +831,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetUploadByIDFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -862,7 +862,7 @@ DBStoreGetUploadsFunc describes the behavior when the GetUploads method of the p
 
 ```
 searchKey: indexing.DBStoreGetUploadsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -938,7 +938,7 @@ func (f *DBStoreGetUploadsFunc) appendCall(r0 DBStoreGetUploadsFuncCall)
 
 ```
 searchKey: indexing.DBStoreGetUploadsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -978,7 +978,7 @@ DBStoreGetUploadsFuncCall is an object that describes an invocation of method Ge
 
 ```
 searchKey: indexing.DBStoreGetUploadsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -991,7 +991,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreGetUploadsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1022,7 +1022,7 @@ DBStoreReferencesForUploadFunc describes the behavior when the ReferencesForUplo
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1098,7 +1098,7 @@ func (f *DBStoreReferencesForUploadFunc) appendCall(r0 DBStoreReferencesForUploa
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1135,7 +1135,7 @@ DBStoreReferencesForUploadFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1148,7 +1148,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreReferencesForUploadFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1203,7 +1203,7 @@ DBStoreWithFunc describes the behavior when the With method of the parent MockDB
 
 ```
 searchKey: indexing.DBStoreWithFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1279,7 +1279,7 @@ func (f *DBStoreWithFunc) appendCall(r0 DBStoreWithFuncCall)
 
 ```
 searchKey: indexing.DBStoreWithFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1310,7 +1310,7 @@ DBStoreWithFuncCall is an object that describes an invocation of method With on 
 
 ```
 searchKey: indexing.DBStoreWithFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1323,7 +1323,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.DBStoreWithFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1371,7 +1371,7 @@ GitserverClientFileExistsFunc describes the behavior when the FileExists method 
 
 ```
 searchKey: indexing.GitserverClientFileExistsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1447,7 +1447,7 @@ func (f *GitserverClientFileExistsFunc) appendCall(r0 GitserverClientFileExistsF
 
 ```
 searchKey: indexing.GitserverClientFileExistsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1490,7 +1490,7 @@ GitserverClientFileExistsFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: indexing.GitserverClientFileExistsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1503,7 +1503,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.GitserverClientFileExistsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1534,7 +1534,7 @@ GitserverClientHeadFunc describes the behavior when the Head method of the paren
 
 ```
 searchKey: indexing.GitserverClientHeadFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1610,7 +1610,7 @@ func (f *GitserverClientHeadFunc) appendCall(r0 GitserverClientHeadFuncCall)
 
 ```
 searchKey: indexing.GitserverClientHeadFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1647,7 +1647,7 @@ GitserverClientHeadFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: indexing.GitserverClientHeadFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1660,7 +1660,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.GitserverClientHeadFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1691,7 +1691,7 @@ GitserverClientListFilesFunc describes the behavior when the ListFiles method of
 
 ```
 searchKey: indexing.GitserverClientListFilesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1767,7 +1767,7 @@ func (f *GitserverClientListFilesFunc) appendCall(r0 GitserverClientListFilesFun
 
 ```
 searchKey: indexing.GitserverClientListFilesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1810,7 +1810,7 @@ GitserverClientListFilesFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: indexing.GitserverClientListFilesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1823,7 +1823,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.GitserverClientListFilesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1854,7 +1854,7 @@ GitserverClientRawContentsFunc describes the behavior when the RawContents metho
 
 ```
 searchKey: indexing.GitserverClientRawContentsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1930,7 +1930,7 @@ func (f *GitserverClientRawContentsFunc) appendCall(r0 GitserverClientRawContent
 
 ```
 searchKey: indexing.GitserverClientRawContentsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1973,7 +1973,7 @@ GitserverClientRawContentsFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: indexing.GitserverClientRawContentsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1986,7 +1986,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.GitserverClientRawContentsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2017,7 +2017,7 @@ GitserverClientResolveRevisionFunc describes the behavior when the ResolveRevisi
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2093,7 +2093,7 @@ func (f *GitserverClientResolveRevisionFunc) appendCall(r0 GitserverClientResolv
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2133,7 +2133,7 @@ GitserverClientResolveRevisionFuncCall is an object that describes an invocation
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2146,7 +2146,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.GitserverClientResolveRevisionFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2191,7 +2191,7 @@ IndexEnqueuerQueueIndexesForPackageFunc describes the behavior when the QueueInd
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2267,7 +2267,7 @@ func (f *IndexEnqueuerQueueIndexesForPackageFunc) appendCall(r0 IndexEnqueuerQue
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2301,7 +2301,7 @@ IndexEnqueuerQueueIndexesForPackageFuncCall is an object that describes an invoc
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2314,7 +2314,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForPackageFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2345,7 +2345,7 @@ IndexEnqueuerQueueIndexesForRepositoryFunc describes the behavior when the Queue
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2421,7 +2421,7 @@ func (f *IndexEnqueuerQueueIndexesForRepositoryFunc) appendCall(r0 IndexEnqueuer
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2455,7 +2455,7 @@ IndexEnqueuerQueueIndexesForRepositoryFuncCall is an object that describes an in
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2468,7 +2468,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.IndexEnqueuerQueueIndexesForRepositoryFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2552,7 +2552,7 @@ IndexingRepoStoreListRepoNamesFunc describes the behavior when the ListRepoNames
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2628,7 +2628,7 @@ func (f *IndexingRepoStoreListRepoNamesFunc) appendCall(r0 IndexingRepoStoreList
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2665,7 +2665,7 @@ IndexingRepoStoreListRepoNamesFuncCall is an object that describes an invocation
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2678,7 +2678,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.IndexingRepoStoreListRepoNamesFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2722,7 +2722,7 @@ IndexingSettingStoreGetLastestSchemaSettingsFunc describes the behavior when the
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2798,7 +2798,7 @@ func (f *IndexingSettingStoreGetLastestSchemaSettingsFunc) appendCall(r0 Indexin
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2835,7 +2835,7 @@ IndexingSettingStoreGetLastestSchemaSettingsFuncCall is an object that describes
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2848,7 +2848,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.IndexingSettingStoreGetLastestSchemaSettingsFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2908,7 +2908,7 @@ NewMockDBStore creates a new mock of the DBStore interface. All methods return z
 
 ```
 searchKey: indexing.NewMockDBStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3041,7 +3041,7 @@ NewMockGitserverClient creates a new mock of the GitserverClient interface. All 
 
 ```
 searchKey: indexing.NewMockGitserverClientFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3153,7 +3153,7 @@ NewMockIndexEnqueuer creates a new mock of the IndexEnqueuer interface. All meth
 
 ```
 searchKey: indexing.NewMockIndexEnqueuerFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3222,7 +3222,7 @@ NewMockIndexingRepoStore creates a new mock of the IndexingRepoStore interface. 
 
 ```
 searchKey: indexing.NewMockIndexingRepoStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3278,7 +3278,7 @@ NewMockIndexingSettingStore creates a new mock of the IndexingSettingStore inter
 
 ```
 searchKey: indexing.NewMockIndexingSettingStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3337,7 +3337,7 @@ NewMockPackageReferenceScanner creates a new mock of the PackageReferenceScanner
 
 ```
 searchKey: indexing.NewMockPackageReferenceScannerFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3350,7 +3350,7 @@ NewMockPackageReferenceScannerFrom creates a new mock of the MockPackageReferenc
 
 ```
 searchKey: indexing.MockPackageReferenceScanner.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3363,7 +3363,7 @@ Close delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: indexing.MockPackageReferenceScanner.Next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3394,7 +3394,7 @@ PackageReferenceScannerCloseFunc describes the behavior when the Close method of
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3470,7 +3470,7 @@ func (f *PackageReferenceScannerCloseFunc) appendCall(r0 PackageReferenceScanner
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3498,7 +3498,7 @@ PackageReferenceScannerCloseFuncCall is an object that describes an invocation o
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3511,7 +3511,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.PackageReferenceScannerCloseFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3542,7 +3542,7 @@ PackageReferenceScannerNextFunc describes the behavior when the Next method of t
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3618,7 +3618,7 @@ func (f *PackageReferenceScannerNextFunc) appendCall(r0 PackageReferenceScannerN
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3652,7 +3652,7 @@ PackageReferenceScannerNextFuncCall is an object that describes an invocation of
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3665,7 +3665,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: indexing.PackageReferenceScannerNextFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3732,7 +3732,7 @@ type operations struct {
 
 ```
 searchKey: indexing.newOperations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3742,14 +3742,14 @@ func newOperations(observationContext *observation.Context) *operations
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewDependencyIndexingScheduler" href="#NewDependencyIndexingScheduler">func NewDependencyIndexingScheduler(dbStore DBStore,...</a>
 
 ```
 searchKey: indexing.NewDependencyIndexingScheduler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3769,7 +3769,7 @@ NewDependencyIndexingScheduler returns a new worker instance that processes reco
 
 ```
 searchKey: indexing.NewIndexScheduler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3787,7 +3787,7 @@ func NewIndexScheduler(
 
 ```
 searchKey: indexing.TestDependencyIndexingSchedulerHandler
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3798,7 +3798,7 @@ func TestDependencyIndexingSchedulerHandler(t *testing.T)
 
 ```
 searchKey: indexing.TestDependencyIndexingSchedulerHandlerShouldSkipRepository
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3809,7 +3809,7 @@ func TestDependencyIndexingSchedulerHandlerShouldSkipRepository(t *testing.T)
 
 ```
 searchKey: indexing.TestDisabledAutoindexConfiguration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3820,7 +3820,7 @@ func TestDisabledAutoindexConfiguration(t *testing.T)
 
 ```
 searchKey: indexing.TestIndexSchedulerUpdate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3831,7 +3831,7 @@ func TestIndexSchedulerUpdate(t *testing.T)
 
 ```
 searchKey: indexing.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3842,7 +3842,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: indexing.deduplicateRepositoryIDs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3864,7 +3864,7 @@ func init()
 
 ```
 searchKey: indexing.isRepoNotExist
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

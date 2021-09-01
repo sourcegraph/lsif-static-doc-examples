@@ -10,15 +10,11 @@ Package shared contains the frontend command implementation shared
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Main" href="#Main">func Main(enterpriseSetupHook func(db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner) enterprise.Services)</a>
 
 ```
 searchKey: shared.Main
-tags: [method]
+tags: [function]
 ```
 
 ```Go

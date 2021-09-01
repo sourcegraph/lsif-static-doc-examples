@@ -136,10 +136,6 @@ For information about UTF-8 strings in Go, see [https://blog.golang.org/strings]
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="countCutOff" href="#countCutOff">const countCutOff</a>
 
 ```
@@ -155,10 +151,6 @@ countCutOff controls the ratio of a string length to a number of replacements at
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="asciiSpace" href="#asciiSpace">var asciiSpace</a>
 
 ```
@@ -171,10 +163,6 @@ var asciiSpace = [256]uint8{'\t': 1, '\n': 1, '\v': 1, '\f': 1, '\r': 1, ' ': 1}
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Builder" href="#Builder">type Builder struct</a>
 
@@ -196,7 +184,7 @@ A Builder is used to efficiently build a string using Write methods. It minimize
 
 ```
 searchKey: strings.Builder.Cap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -222,7 +210,7 @@ Grow grows b's capacity, if necessary, to guarantee space for another n bytes. A
 
 ```
 searchKey: strings.Builder.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -235,7 +223,7 @@ Len returns the number of accumulated bytes; b.Len() == len(b.String()).
 
 ```
 searchKey: strings.Builder.Reset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -248,7 +236,7 @@ Reset resets the Builder to be empty.
 
 ```
 searchKey: strings.Builder.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -313,7 +301,7 @@ WriteString appends the contents of s to b's buffer. It returns the length of s 
 
 ```
 searchKey: strings.Builder.copyCheck
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -354,7 +342,7 @@ A Reader implements the io.Reader, io.ReaderAt, io.ByteReader, io.ByteScanner, i
 
 ```
 searchKey: strings.NewReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -367,7 +355,7 @@ NewReader returns a new Reader reading from s. It is similar to bytes.NewBufferS
 
 ```
 searchKey: strings.Reader.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -406,7 +394,7 @@ ReadAt implements the io.ReaderAt interface.
 
 ```
 searchKey: strings.Reader.ReadByte
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -419,7 +407,7 @@ ReadByte implements the io.ByteReader interface.
 
 ```
 searchKey: strings.Reader.ReadRune
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -458,7 +446,7 @@ Seek implements the io.Seeker interface.
 
 ```
 searchKey: strings.Reader.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -471,7 +459,7 @@ Size returns the original length of the underlying string. Size is the number of
 
 ```
 searchKey: strings.Reader.UnreadByte
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -484,7 +472,7 @@ UnreadByte implements the io.ByteScanner interface.
 
 ```
 searchKey: strings.Reader.UnreadRune
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -527,7 +515,7 @@ Replacer replaces a list of strings with replacements. It is safe for concurrent
 
 ```
 searchKey: strings.NewReplacer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -542,7 +530,7 @@ NewReplacer panics if given an odd number of arguments.
 
 ```
 searchKey: strings.Replacer.PrintTrie
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -566,7 +554,7 @@ Replace returns a copy of s with all replacements performed.
 
 ```
 searchKey: strings.Replacer.Replacer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -590,7 +578,7 @@ WriteString writes s to w with all replacements performed.
 
 ```
 searchKey: strings.Replacer.build
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -601,7 +589,7 @@ func (b *Replacer) build() replacer
 
 ```
 searchKey: strings.Replacer.buildOnce
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -662,7 +650,7 @@ asciiSet is a 32-byte value, where each bit represents the presence of a given A
 
 ```
 searchKey: strings.makeASCIISet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -786,7 +774,7 @@ genericReplacer is the fully generic algorithm. It's used as a fallback when not
 
 ```
 searchKey: strings.makeGenericReplacer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -874,7 +862,7 @@ singleStringReplacer is the implementation that's used when there is only one st
 
 ```
 searchKey: strings.makeSingleStringReplacer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -954,7 +942,7 @@ stringFinder efficiently finds strings in a source text. It's implemented using 
 
 ```
 searchKey: strings.makeStringFinder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1062,15 +1050,11 @@ func (t *trieNode) add(key, val string, priority int, r *genericReplacer)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Compare" href="#Compare">func Compare(a, b string) int</a>
 
 ```
 searchKey: strings.Compare
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1085,7 +1069,7 @@ Compare is included only for symmetry with package bytes. It is usually clearer 
 
 ```
 searchKey: strings.Contains
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1098,7 +1082,7 @@ Contains reports whether substr is within s.
 
 ```
 searchKey: strings.ContainsAny
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1111,7 +1095,7 @@ ContainsAny reports whether any Unicode code points in chars are within s.
 
 ```
 searchKey: strings.ContainsRune
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1124,7 +1108,7 @@ ContainsRune reports whether the Unicode code point r is within s.
 
 ```
 searchKey: strings.Count
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1137,7 +1121,7 @@ Count counts the number of non-overlapping instances of substr in s. If substr i
 
 ```
 searchKey: strings.DumpTables
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1148,7 +1132,7 @@ func DumpTables(pattern string) ([]int, []int)
 
 ```
 searchKey: strings.EqualFold
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1161,7 +1145,7 @@ EqualFold reports whether s and t, interpreted as UTF-8 strings, are equal under
 
 ```
 searchKey: strings.Fields
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1174,7 +1158,7 @@ Fields splits the string s around each instance of one or more consecutive white
 
 ```
 searchKey: strings.FieldsFunc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1189,7 +1173,7 @@ FieldsFunc makes no guarantees about the order in which it calls f(c) and assume
 
 ```
 searchKey: strings.HasPrefix
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1202,7 +1186,7 @@ HasPrefix tests whether the string s begins with prefix.
 
 ```
 searchKey: strings.HasSuffix
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1215,7 +1199,7 @@ HasSuffix tests whether the string s ends with suffix.
 
 ```
 searchKey: strings.Index
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1228,7 +1212,7 @@ Index returns the index of the first instance of substr in s, or -1 if substr is
 
 ```
 searchKey: strings.IndexAny
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1241,7 +1225,7 @@ IndexAny returns the index of the first instance of any Unicode code point from 
 
 ```
 searchKey: strings.IndexByte
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1254,7 +1238,7 @@ IndexByte returns the index of the first instance of c in s, or -1 if c is not p
 
 ```
 searchKey: strings.IndexFunc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1267,7 +1251,7 @@ IndexFunc returns the index into s of the first Unicode code point satisfying f(
 
 ```
 searchKey: strings.IndexRune
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1280,7 +1264,7 @@ IndexRune returns the index of the first instance of the Unicode code point r, o
 
 ```
 searchKey: strings.Join
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1293,7 +1277,7 @@ Join concatenates the elements of its first argument to create a single string. 
 
 ```
 searchKey: strings.LastIndex
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1306,7 +1290,7 @@ LastIndex returns the index of the last instance of substr in s, or -1 if substr
 
 ```
 searchKey: strings.LastIndexAny
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1319,7 +1303,7 @@ LastIndexAny returns the index of the last instance of any Unicode code point fr
 
 ```
 searchKey: strings.LastIndexByte
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1332,7 +1316,7 @@ LastIndexByte returns the index of the last instance of c in s, or -1 if c is no
 
 ```
 searchKey: strings.LastIndexFunc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1345,7 +1329,7 @@ LastIndexFunc returns the index into s of the last Unicode code point satisfying
 
 ```
 searchKey: strings.Map
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1358,7 +1342,7 @@ Map returns a copy of the string s with all its characters modified according to
 
 ```
 searchKey: strings.Repeat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1373,7 +1357,7 @@ It panics if count is negative or if the result of (len(s) * count) overflows.
 
 ```
 searchKey: strings.Replace
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1386,7 +1370,7 @@ Replace returns a copy of the string s with the first n non-overlapping instance
 
 ```
 searchKey: strings.ReplaceAll
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1399,7 +1383,7 @@ ReplaceAll returns a copy of the string s with all non-overlapping instances of 
 
 ```
 searchKey: strings.Split
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1418,7 +1402,7 @@ It is equivalent to SplitN with a count of -1.
 
 ```
 searchKey: strings.SplitAfter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1437,7 +1421,7 @@ It is equivalent to SplitAfterN with a count of -1.
 
 ```
 searchKey: strings.SplitAfterN
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1460,7 +1444,7 @@ Edge cases for s and sep (for example, empty strings) are handled as described i
 
 ```
 searchKey: strings.SplitN
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1483,7 +1467,7 @@ Edge cases for s and sep (for example, empty strings) are handled as described i
 
 ```
 searchKey: strings.StringFind
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1494,7 +1478,7 @@ func StringFind(pattern, text string) int
 
 ```
 searchKey: strings.Title
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1509,7 +1493,7 @@ BUG(rsc): The rule Title uses for word boundaries does not handle Unicode punctu
 
 ```
 searchKey: strings.ToLower
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1522,7 +1506,7 @@ ToLower returns s with all Unicode letters mapped to their lower case.
 
 ```
 searchKey: strings.ToLowerSpecial
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1535,7 +1519,7 @@ ToLowerSpecial returns a copy of the string s with all Unicode letters mapped to
 
 ```
 searchKey: strings.ToTitle
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1548,7 +1532,7 @@ ToTitle returns a copy of the string s with all Unicode letters mapped to their 
 
 ```
 searchKey: strings.ToTitleSpecial
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1561,7 +1545,7 @@ ToTitleSpecial returns a copy of the string s with all Unicode letters mapped to
 
 ```
 searchKey: strings.ToUpper
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1574,7 +1558,7 @@ ToUpper returns s with all Unicode letters mapped to their upper case.
 
 ```
 searchKey: strings.ToUpperSpecial
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1587,7 +1571,7 @@ ToUpperSpecial returns a copy of the string s with all Unicode letters mapped to
 
 ```
 searchKey: strings.ToValidUTF8
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1600,7 +1584,7 @@ ToValidUTF8 returns a copy of the string s with each run of invalid UTF-8 byte s
 
 ```
 searchKey: strings.Trim
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1613,7 +1597,7 @@ Trim returns a slice of the string s with all leading and trailing Unicode code 
 
 ```
 searchKey: strings.TrimFunc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1626,7 +1610,7 @@ TrimFunc returns a slice of the string s with all leading and trailing Unicode c
 
 ```
 searchKey: strings.TrimLeft
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1641,7 +1625,7 @@ To remove a prefix, use TrimPrefix instead.
 
 ```
 searchKey: strings.TrimLeftFunc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1654,7 +1638,7 @@ TrimLeftFunc returns a slice of the string s with all leading Unicode code point
 
 ```
 searchKey: strings.TrimPrefix
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1667,7 +1651,7 @@ TrimPrefix returns s without the provided leading prefix string. If s doesn't st
 
 ```
 searchKey: strings.TrimRight
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1682,7 +1666,7 @@ To remove a suffix, use TrimSuffix instead.
 
 ```
 searchKey: strings.TrimRightFunc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1695,7 +1679,7 @@ TrimRightFunc returns a slice of the string s with all trailing Unicode code poi
 
 ```
 searchKey: strings.TrimSpace
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1708,7 +1692,7 @@ TrimSpace returns a slice of the string s, with all leading and trailing white s
 
 ```
 searchKey: strings.TrimSuffix
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1721,7 +1705,7 @@ TrimSuffix returns s without the provided trailing suffix string. If s doesn't e
 
 ```
 searchKey: strings.explode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1734,7 +1718,7 @@ explode splits s into a slice of UTF-8 strings, one string per Unicode character
 
 ```
 searchKey: strings.genSplit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1747,7 +1731,7 @@ Generic split: splits after each instance of sep, including sepSave bytes of sep
 
 ```
 searchKey: strings.getStringWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1758,7 +1742,7 @@ func getStringWriter(w io.Writer) io.StringWriter
 
 ```
 searchKey: strings.indexFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1771,7 +1755,7 @@ indexFunc is the same as IndexFunc except that if truth==false, the sense of the
 
 ```
 searchKey: strings.isSeparator
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1784,7 +1768,7 @@ isSeparator reports whether the rune could mark a word boundary. TODO: update wh
 
 ```
 searchKey: strings.lastIndexFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1797,7 +1781,7 @@ lastIndexFunc is the same as LastIndexFunc except that if truth==false, the sens
 
 ```
 searchKey: strings.longestCommonSuffix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1808,7 +1792,7 @@ func longestCommonSuffix(a, b string) (i int)
 
 ```
 searchKey: strings.makeCutsetFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1819,7 +1803,7 @@ func makeCutsetFunc(cutset string) func(rune) bool
 
 ```
 searchKey: strings.max
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1830,7 +1814,7 @@ func max(a, b int) int
 
 ```
 searchKey: strings.noescape
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

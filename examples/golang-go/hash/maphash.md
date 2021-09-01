@@ -88,10 +88,6 @@ The hash functions are not cryptographically secure. (See crypto/sha256 and cryp
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="bufSize" href="#bufSize">const bufSize</a>
 
 ```
@@ -118,10 +114,6 @@ const hashSize = 64
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="fixedSeed" href="#fixedSeed">var fixedSeed</a>
 
 ```
@@ -134,10 +126,6 @@ var fixedSeed = MakeSeed()
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Hash" href="#Hash">type Hash struct</a>
 
@@ -178,7 +166,7 @@ A Hash is not safe for concurrent use by multiple goroutines, but a Seed is. If 
 
 ```
 searchKey: maphash.Hash.BlockSize
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -191,7 +179,7 @@ BlockSize returns h's block size.
 
 ```
 searchKey: maphash.Hash.Reset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -204,7 +192,7 @@ Reset discards all bytes added to h. (The seed remains the same.)
 
 ```
 searchKey: maphash.Hash.Seed
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -230,7 +218,7 @@ SetSeed sets h to use seed, which must have been returned by MakeSeed or by anot
 
 ```
 searchKey: maphash.Hash.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -256,7 +244,7 @@ Sum appends the hash's current 64-bit value to b. It exists for implementing has
 
 ```
 searchKey: maphash.Hash.Sum64
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -310,7 +298,7 @@ WriteString adds the bytes of s to the sequence of bytes hashed by h. It always 
 
 ```
 searchKey: maphash.Hash.flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -323,7 +311,7 @@ precondition: buffer is full.
 
 ```
 searchKey: maphash.Hash.initSeed
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -381,7 +369,7 @@ type bytesKey struct {
 
 ```
 searchKey: maphash.bytesKey.bits
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -392,7 +380,7 @@ func (k *bytesKey) bits() int
 
 ```
 searchKey: maphash.bytesKey.clear
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -414,7 +402,7 @@ func (k *bytesKey) flipBit(i int)
 
 ```
 searchKey: maphash.bytesKey.hash
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -425,7 +413,7 @@ func (k *bytesKey) hash() uint64
 
 ```
 searchKey: maphash.bytesKey.name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -545,15 +533,11 @@ type key interface {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkHash1K" href="#BenchmarkHash1K">func BenchmarkHash1K(b *testing.B)</a>
 
 ```
 searchKey: maphash.BenchmarkHash1K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -564,7 +548,7 @@ func BenchmarkHash1K(b *testing.B)
 
 ```
 searchKey: maphash.BenchmarkHash320Bytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -575,7 +559,7 @@ func BenchmarkHash320Bytes(b *testing.B)
 
 ```
 searchKey: maphash.BenchmarkHash8Bytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -586,7 +570,7 @@ func BenchmarkHash8Bytes(b *testing.B)
 
 ```
 searchKey: maphash.BenchmarkHash8K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -597,7 +581,7 @@ func BenchmarkHash8K(b *testing.B)
 
 ```
 searchKey: maphash.TestHashBytesVsString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -608,7 +592,7 @@ func TestHashBytesVsString(t *testing.T)
 
 ```
 searchKey: maphash.TestHashGrouping
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -619,7 +603,7 @@ func TestHashGrouping(t *testing.T)
 
 ```
 searchKey: maphash.TestHashHighBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -630,7 +614,7 @@ func TestHashHighBytes(t *testing.T)
 
 ```
 searchKey: maphash.TestRepeat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -641,7 +625,7 @@ func TestRepeat(t *testing.T)
 
 ```
 searchKey: maphash.TestSeedFromFlush
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -652,7 +636,7 @@ func TestSeedFromFlush(t *testing.T)
 
 ```
 searchKey: maphash.TestSeedFromReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -663,7 +647,7 @@ func TestSeedFromReset(t *testing.T)
 
 ```
 searchKey: maphash.TestSeedFromSeed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -674,7 +658,7 @@ func TestSeedFromSeed(t *testing.T)
 
 ```
 searchKey: maphash.TestSeedFromSum64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -685,7 +669,7 @@ func TestSeedFromSum64(t *testing.T)
 
 ```
 searchKey: maphash.TestSeededHash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -696,7 +680,7 @@ func TestSeededHash(t *testing.T)
 
 ```
 searchKey: maphash.TestSmhasherAppendedZeros
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -709,7 +693,7 @@ a string plus adding zeros must make distinct hashes
 
 ```
 searchKey: maphash.TestSmhasherAvalanche
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -722,7 +706,7 @@ Flipping a single bit of a key should flip each output bit with 50% probability.
 
 ```
 searchKey: maphash.TestSmhasherCyclic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -735,7 +719,7 @@ Test strings with repeats, like "abcdabcdabcdabcd..."
 
 ```
 searchKey: maphash.TestSmhasherPermutation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -748,7 +732,7 @@ Test all possible combinations of n blocks from the set s. "permutation" is a ba
 
 ```
 searchKey: maphash.TestSmhasherSanity
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -761,7 +745,7 @@ Sanity checks. hash should not depend on values outside key. hash should not dep
 
 ```
 searchKey: maphash.TestSmhasherSeed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -774,7 +758,7 @@ Make sure different seed values generate different hashes.
 
 ```
 searchKey: maphash.TestSmhasherSmallKeys
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -787,7 +771,7 @@ All 0-3 byte strings have distinct hashes.
 
 ```
 searchKey: maphash.TestSmhasherSparse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -800,7 +784,7 @@ Test strings with only a few bits set
 
 ```
 searchKey: maphash.TestSmhasherText
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -813,7 +797,7 @@ All keys of the form prefix + [A-Za-z0-9]*N + suffix.
 
 ```
 searchKey: maphash.TestSmhasherTwoNonzero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -826,7 +810,7 @@ Strings with up to two nonzero bytes all have distinct hashes.
 
 ```
 searchKey: maphash.TestSmhasherWindowed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -839,7 +823,7 @@ All bit rotations of a set of distinct keys
 
 ```
 searchKey: maphash.TestSmhasherZeros
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -852,7 +836,7 @@ Different length strings of all zeros have distinct hashes.
 
 ```
 searchKey: maphash.TestUnseededHash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -863,7 +847,7 @@ func TestUnseededHash(t *testing.T)
 
 ```
 searchKey: maphash.avalancheTest1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -874,7 +858,7 @@ func avalancheTest1(t *testing.T, k key)
 
 ```
 searchKey: maphash.benchmarkSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -885,7 +869,7 @@ func benchmarkSize(b *testing.B, size int)
 
 ```
 searchKey: maphash.bytesHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -896,7 +880,7 @@ func bytesHash(b []byte) uint64
 
 ```
 searchKey: maphash.genPerm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -907,7 +891,7 @@ func genPerm(h *hashSet, b []byte, s []uint32, n int)
 
 ```
 searchKey: maphash.permutation
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -918,7 +902,7 @@ func permutation(t *testing.T, s []uint32, n int)
 
 ```
 searchKey: maphash.randBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -929,7 +913,7 @@ func randBytes(r *rand.Rand, b []byte)
 
 ```
 searchKey: maphash.rthash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -951,7 +935,7 @@ func runtime_fastrand() uint32
 
 ```
 searchKey: maphash.runtime_memhash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -962,7 +946,7 @@ func runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr
 
 ```
 searchKey: maphash.setbits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -975,7 +959,7 @@ set up to k bits at index i and greater
 
 ```
 searchKey: maphash.sparse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -986,7 +970,7 @@ func sparse(t *testing.T, n int, k int)
 
 ```
 searchKey: maphash.stringHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -997,7 +981,7 @@ func stringHash(s string) uint64
 
 ```
 searchKey: maphash.text
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1008,7 +992,7 @@ func text(t *testing.T, prefix, suffix string)
 
 ```
 searchKey: maphash.twoNonZero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1019,7 +1003,7 @@ func twoNonZero(h *hashSet, n int)
 
 ```
 searchKey: maphash.windowed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

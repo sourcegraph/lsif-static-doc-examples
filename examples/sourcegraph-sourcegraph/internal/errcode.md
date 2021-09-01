@@ -39,7 +39,7 @@ Package errcode maps Go errors to HTTP status codes as well as other useful func
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="HTTPErr" href="#HTTPErr">type HTTPErr struct</a>
@@ -60,7 +60,7 @@ type HTTPErr struct {
 
 ```
 searchKey: errcode.HTTPErr.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -71,7 +71,7 @@ func (err *HTTPErr) Error() string
 
 ```
 searchKey: errcode.HTTPErr.HTTPStatusCode
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -101,7 +101,7 @@ Mock is a convenience error which makes it easy to satisfy the optional interfac
 
 ```
 searchKey: errcode.Mock.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -112,7 +112,7 @@ func (e *Mock) Error() string
 
 ```
 searchKey: errcode.Mock.NotFound
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -154,7 +154,7 @@ type nonRetryableError struct{ error }
 
 ```
 searchKey: errcode.nonRetryableError.NonRetryable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -181,7 +181,7 @@ presentationError implements PresentationError.
 
 ```
 searchKey: errcode.presentationError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -192,7 +192,7 @@ func (e *presentationError) Error() string
 
 ```
 searchKey: errcode.presentationError.PresentationError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -202,14 +202,14 @@ func (e *presentationError) PresentationError() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="HTTP" href="#HTTP">func HTTP(err error) int</a>
 
 ```
 searchKey: errcode.HTTP
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -222,7 +222,7 @@ HTTP returns the most appropriate HTTP status code that describes err. It contai
 
 ```
 searchKey: errcode.IsAccountSuspended
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -235,7 +235,7 @@ IsAccountSuspended will check if err or one of its causes was due to the account
 
 ```
 searchKey: errcode.IsBadRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -248,7 +248,7 @@ IsBadRequest will check if err or one of its causes is a bad request.
 
 ```
 searchKey: errcode.IsForbidden
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -261,7 +261,7 @@ IsForbidden will check if err or one of its causes is a forbidden error.
 
 ```
 searchKey: errcode.IsHTTPErrorCode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -272,7 +272,7 @@ func IsHTTPErrorCode(err error, statusCode int) bool
 
 ```
 searchKey: errcode.IsNonRetryable
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -285,7 +285,7 @@ IsNonRetryable will check if err or one of its causes is a error that cannot be 
 
 ```
 searchKey: errcode.IsNotFound
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -298,7 +298,7 @@ IsNotFound will check if err or one of its causes is a not found error. Note: Th
 
 ```
 searchKey: errcode.IsTemporary
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -311,7 +311,7 @@ IsTemporary will check if err or one of its causes is temporary. A temporary err
 
 ```
 searchKey: errcode.IsTimeout
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -324,7 +324,7 @@ IsTimeout will check if err or one of its causes is a timeout. Many errors in th
 
 ```
 searchKey: errcode.IsUnauthorized
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -337,7 +337,7 @@ IsUnauthorized will check if err or one of its causes is an unauthorized error.
 
 ```
 searchKey: errcode.MakeNonRetryable
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -350,7 +350,7 @@ MakeNonRetryable makes any error non-retryable.
 
 ```
 searchKey: errcode.NewPresentationError
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -365,7 +365,7 @@ If there is an underlying error associated with this message, use WithPresentati
 
 ```
 searchKey: errcode.PresentationMessage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -378,7 +378,7 @@ PresentationMessage returns the message, if any, suitable for presentation to th
 
 ```
 searchKey: errcode.TestPresentationError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -389,7 +389,7 @@ func TestPresentationError(t *testing.T)
 
 ```
 searchKey: errcode.WithPresentationMessage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -404,7 +404,7 @@ The message should be written in full sentences and must not contain any informa
 
 ```
 searchKey: errcode.isErrorPredicate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -36,7 +36,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrNotConditions" href="#ErrNotConditions">var ErrNotConditions</a>
@@ -55,7 +55,7 @@ ErrNotConditions occurs when a PreDequeue handler returns non-sql query extra ar
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Handler" href="#Handler">type Handler interface</a>
@@ -136,7 +136,7 @@ An unlocked record signifies that it is not actively being processed and records
 
 ```
 searchKey: dbworker.NewResetter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -147,7 +147,7 @@ func NewResetter(store store.Store, options ResetterOptions) *Resetter
 
 ```
 searchKey: dbworker.newResetter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -158,7 +158,7 @@ func newResetter(store store.Store, options ResetterOptions, clock glock.Clock) 
 
 ```
 searchKey: dbworker.Resetter.Start
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -171,7 +171,7 @@ Start begins periodically calling reset stalled on the underlying store.
 
 ```
 searchKey: dbworker.Resetter.Stop
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -321,14 +321,14 @@ QueuedCount calls into the inner store.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewWorker" href="#NewWorker">func NewWorker(ctx context.Context, store store.Store, handler Handler, options workerutil.WorkerOptions) *workerutil.Worker</a>
 
 ```
 searchKey: dbworker.NewWorker
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -339,7 +339,7 @@ func NewWorker(ctx context.Context, store store.Store, handler Handler, options 
 
 ```
 searchKey: dbworker.TestResetter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -350,7 +350,7 @@ func TestResetter(t *testing.T)
 
 ```
 searchKey: dbworker.convertArguments
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -363,7 +363,7 @@ convertArguments converts the given interface value into a slice of *sqlf.Query 
 
 ```
 searchKey: dbworker.newHandlerShim
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -376,7 +376,7 @@ newHandlerShim wraps the given handler in a shim.
 
 ```
 searchKey: dbworker.newStoreShim
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

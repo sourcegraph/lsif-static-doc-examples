@@ -13,14 +13,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestCodeIntelMigrations" href="#TestCodeIntelMigrations">func TestCodeIntelMigrations(t *testing.T)</a>
 
 ```
 searchKey: migrations_test.TestCodeIntelMigrations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -31,7 +31,7 @@ func TestCodeIntelMigrations(t *testing.T)
 
 ```
 searchKey: migrations_test.TestFrontendMigrations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -42,7 +42,7 @@ func TestFrontendMigrations(t *testing.T)
 
 ```
 searchKey: migrations_test.TestIDConstraints
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -64,7 +64,7 @@ func init()
 
 ```
 searchKey: migrations_test.testMigrations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

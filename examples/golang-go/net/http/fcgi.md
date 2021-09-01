@@ -117,10 +117,6 @@ Currently only the responder role is supported.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="flagKeepConn" href="#flagKeepConn">const flagKeepConn</a>
 
 ```
@@ -358,10 +354,6 @@ const typeUnknownType recType = 11
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrConnClosed" href="#ErrConnClosed">var ErrConnClosed</a>
 
 ```
@@ -495,10 +487,6 @@ var streamTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="beginRequest" href="#beginRequest">type beginRequest struct</a>
 
 ```
@@ -545,7 +533,7 @@ bufWriter encapsulates bufio.Writer but also closes the underlying stream when C
 
 ```
 searchKey: fcgi.newWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -556,7 +544,7 @@ func newWriter(c *conn, recType recType, reqId uint16) *bufWriter
 
 ```
 searchKey: fcgi.bufWriter.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -583,7 +571,7 @@ type child struct {
 
 ```
 searchKey: fcgi.newChild
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -594,7 +582,7 @@ func newChild(rwc io.ReadWriteCloser, handler http.Handler) *child
 
 ```
 searchKey: fcgi.child.cleanUp
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -616,7 +604,7 @@ func (c *child) handleRecord(rec *record) error
 
 ```
 searchKey: fcgi.child.serve
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -658,7 +646,7 @@ conn sends records over rwc
 
 ```
 searchKey: fcgi.newConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -669,7 +657,7 @@ func newConn(rwc io.ReadWriteCloser) *conn
 
 ```
 searchKey: fcgi.conn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -770,7 +758,7 @@ type nilCloser struct {
 
 ```
 searchKey: fcgi.nilCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -794,7 +782,7 @@ type nopWriteCloser struct {
 
 ```
 searchKey: fcgi.nopWriteCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -843,7 +831,7 @@ type record struct {
 
 ```
 searchKey: fcgi.record.content
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -885,7 +873,7 @@ request holds the state for an in-progress request. As soon as it's complete, it
 
 ```
 searchKey: fcgi.newRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -896,7 +884,7 @@ func newRequest(reqId uint16, flags uint8) *request
 
 ```
 searchKey: fcgi.request.parseParams
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -929,7 +917,7 @@ response implements http.ResponseWriter.
 
 ```
 searchKey: fcgi.newResponse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -940,7 +928,7 @@ func newResponse(c *child, req *request) *response
 
 ```
 searchKey: fcgi.response.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -951,7 +939,7 @@ func (r *response) Close() error
 
 ```
 searchKey: fcgi.response.Flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -962,7 +950,7 @@ func (r *response) Flush()
 
 ```
 searchKey: fcgi.response.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1022,7 +1010,7 @@ type rwNopCloser struct {
 
 ```
 searchKey: fcgi.rwNopCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1047,7 +1035,7 @@ type signallingNopCloser struct {
 
 ```
 searchKey: fcgi.signallingNopCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1086,7 +1074,7 @@ streamWriter abstracts out the separation of a stream into discrete records. It 
 
 ```
 searchKey: fcgi.streamWriter.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1121,7 +1109,7 @@ type writeOnlyConn struct {
 
 ```
 searchKey: fcgi.writeOnlyConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1152,15 +1140,11 @@ func (c *writeOnlyConn) Write(p []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ProcessEnv" href="#ProcessEnv">func ProcessEnv(r *http.Request) map[string]string</a>
 
 ```
 searchKey: fcgi.ProcessEnv
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1173,7 +1157,7 @@ ProcessEnv returns FastCGI environment variables associated with the request r f
 
 ```
 searchKey: fcgi.Serve
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1186,7 +1170,7 @@ Serve accepts incoming FastCGI connections on the listener l, creating a new gor
 
 ```
 searchKey: fcgi.TestChildServeCleansUp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1199,7 +1183,7 @@ Test that child.serve closes the bodies of aborted requests and closes the bodie
 
 ```
 searchKey: fcgi.TestChildServeReadsEnvVars
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1212,7 +1196,7 @@ Test that environment variables set for a request can be read by a handler. Ensu
 
 ```
 searchKey: fcgi.TestGetValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1223,7 +1207,7 @@ func TestGetValues(t *testing.T)
 
 ```
 searchKey: fcgi.TestMalformedParams
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1236,7 +1220,7 @@ Verifies it doesn't crash. 	Issue 11824.
 
 ```
 searchKey: fcgi.TestResponseWriterSniffsContentType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1247,7 +1231,7 @@ func TestResponseWriterSniffsContentType(t *testing.T)
 
 ```
 searchKey: fcgi.TestSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1258,7 +1242,7 @@ func TestSize(t *testing.T)
 
 ```
 searchKey: fcgi.TestSlowRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1271,7 +1255,7 @@ Test whether server properly closes connection when processing slow requests
 
 ```
 searchKey: fcgi.TestStreams
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1282,7 +1266,7 @@ func TestStreams(t *testing.T)
 
 ```
 searchKey: fcgi.addFastCGIEnvToContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1295,7 +1279,7 @@ addFastCGIEnvToContext reports whether to include the FastCGI environment variab
 
 ```
 searchKey: fcgi.encodeSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1306,7 +1290,7 @@ func encodeSize(b []byte, size uint32) int
 
 ```
 searchKey: fcgi.filterOutUsedEnvVars
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1319,7 +1303,7 @@ filterOutUsedEnvVars returns a new map of env vars without the variables in the 
 
 ```
 searchKey: fcgi.makeRecord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1334,7 +1318,7 @@ func makeRecord(
 
 ```
 searchKey: fcgi.nameValuePair11
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1345,7 +1329,7 @@ func nameValuePair11(nameData, valueData string) []byte
 
 ```
 searchKey: fcgi.readSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1356,7 +1340,7 @@ func readSize(s []byte) (uint32, int)
 
 ```
 searchKey: fcgi.readString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

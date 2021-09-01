@@ -77,7 +77,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="timestampCount" href="#timestampCount">const timestampCount</a>
@@ -96,7 +96,7 @@ timestampCount defines how many timestamps we will return for a given dateframe.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ComputeLabelsRequiredEventTypes" href="#ComputeLabelsRequiredEventTypes">var ComputeLabelsRequiredEventTypes</a>
@@ -128,7 +128,7 @@ We specifically ignore ChangesetEventKindGitHubReviewDismissed events since GitH
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ChangesetCounts" href="#ChangesetCounts">type ChangesetCounts struct</a>
@@ -158,7 +158,7 @@ ChangesetCounts represents the states in which a given set of Changesets was at 
 
 ```
 searchKey: state.ChangesetCounts.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -182,7 +182,7 @@ ChangesetEvents is a collection of changeset events
 
 ```
 searchKey: state.ChangesetEvents.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -230,7 +230,7 @@ changesetHistory is a collection of external changeset states (open/closed/merge
 
 ```
 searchKey: state.computeHistory
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -270,14 +270,14 @@ type changesetStatesAtTime struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CalcCounts" href="#CalcCounts">func CalcCounts(start, end time.Time, cs []*btypes.Changeset, es ...*btypes.ChangesetEvent) ([]*ChangesetCounts, error)</a>
 
 ```
 searchKey: state.CalcCounts
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -290,7 +290,7 @@ CalcCounts calculates ChangesetCounts for the given Changesets and their Changes
 
 ```
 searchKey: state.ComputeLabels
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -303,7 +303,7 @@ ComputeLabels returns a sorted list of current labels based the starting set of 
 
 ```
 searchKey: state.GenerateTimestamps
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -314,7 +314,7 @@ func GenerateTimestamps(start, end time.Time) []time.Time
 
 ```
 searchKey: state.SetDerivedState
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -327,7 +327,7 @@ SetDerivedState will update the external state fields on the Changeset based on 
 
 ```
 searchKey: state.TestCalcCounts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -338,7 +338,7 @@ func TestCalcCounts(t *testing.T)
 
 ```
 searchKey: state.TestComputeBitbucketBuildStatus
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -349,7 +349,7 @@ func TestComputeBitbucketBuildStatus(t *testing.T)
 
 ```
 searchKey: state.TestComputeExternalState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -360,7 +360,7 @@ func TestComputeExternalState(t *testing.T)
 
 ```
 searchKey: state.TestComputeGitLabCheckState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -371,7 +371,7 @@ func TestComputeGitLabCheckState(t *testing.T)
 
 ```
 searchKey: state.TestComputeGithubCheckState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -382,7 +382,7 @@ func TestComputeGithubCheckState(t *testing.T)
 
 ```
 searchKey: state.TestComputeLabels
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -393,7 +393,7 @@ func TestComputeLabels(t *testing.T)
 
 ```
 searchKey: state.TestComputeReviewState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -404,7 +404,7 @@ func TestComputeReviewState(t *testing.T)
 
 ```
 searchKey: state.bbsActivity
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -415,7 +415,7 @@ func bbsActivity(id int64, t time.Time, username string, kind btypes.ChangesetEv
 
 ```
 searchKey: state.bbsChangeset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -426,7 +426,7 @@ func bbsChangeset(id int64, t time.Time) *btypes.Changeset
 
 ```
 searchKey: state.bbsParticipantEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -437,7 +437,7 @@ func bbsParticipantEvent(id int64, t time.Time, username string, kind btypes.Cha
 
 ```
 searchKey: state.bitbucketChangeset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -448,7 +448,7 @@ func bitbucketChangeset(updatedAt time.Time, state, reviewStatus string) *btypes
 
 ```
 searchKey: state.changesetRepoName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -461,7 +461,7 @@ changesetRepoName looks up a api.RepoName based on the RepoID within a changeset
 
 ```
 searchKey: state.combineCheckStates
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -474,7 +474,7 @@ combineCheckStates combines multiple check states into an overall state pending 
 
 ```
 searchKey: state.computeBitbucketBuildStatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -485,7 +485,7 @@ func computeBitbucketBuildStatus(lastSynced time.Time, pr *bitbucketserver.PullR
 
 ```
 searchKey: state.computeCheckState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -498,7 +498,7 @@ computeCheckState computes the overall check state based on the current synced c
 
 ```
 searchKey: state.computeDiffStat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -511,7 +511,7 @@ computeDiffStat computes the up to date diffstat for the changeset, based on the
 
 ```
 searchKey: state.computeExternalState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -524,7 +524,7 @@ computeExternalState computes the external state for the changeset and its assoc
 
 ```
 searchKey: state.computeGitHubCheckState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -535,7 +535,7 @@ func computeGitHubCheckState(lastSynced time.Time, pr *github.PullRequest, event
 
 ```
 searchKey: state.computeGitLabCheckState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -546,7 +546,7 @@ func computeGitLabCheckState(lastSynced time.Time, mr *gitlab.MergeRequest, even
 
 ```
 searchKey: state.computeRev
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -557,7 +557,7 @@ func computeRev(ctx context.Context, repo api.RepoName, getOid, getRef func() (s
 
 ```
 searchKey: state.computeReviewState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -570,7 +570,7 @@ computeReviewState computes the review state for the changeset and its associate
 
 ```
 searchKey: state.computeSingleChangesetExternalState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -583,7 +583,7 @@ computeSingleChangesetExternalState of a Changeset based on the metadata. It doe
 
 ```
 searchKey: state.computeSingleChangesetReviewState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -598,7 +598,7 @@ This method should NOT be called directly. Use computeReviewState instead.
 
 ```
 searchKey: state.computeSyncState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -611,7 +611,7 @@ computeSyncState computes the up to date sync state based on the changeset as it
 
 ```
 searchKey: state.event
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -622,7 +622,7 @@ func event(t *testing.T, ti time.Time, kind btypes.ChangesetEventKind, id int64)
 
 ```
 searchKey: state.ghChangeset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -633,7 +633,7 @@ func ghChangeset(id int64, t time.Time) *btypes.Changeset
 
 ```
 searchKey: state.ghConvertToDraft
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -644,7 +644,7 @@ func ghConvertToDraft(id int64, t time.Time, login string) *btypes.ChangesetEven
 
 ```
 searchKey: state.ghReadyForReview
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -655,7 +655,7 @@ func ghReadyForReview(id int64, t time.Time, login string) *btypes.ChangesetEven
 
 ```
 searchKey: state.ghReview
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -666,7 +666,7 @@ func ghReview(id int64, t time.Time, login, state string) *btypes.ChangesetEvent
 
 ```
 searchKey: state.ghReviewDismissed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -677,7 +677,7 @@ func ghReviewDismissed(id int64, t time.Time, login, reviewer string) *btypes.Ch
 
 ```
 searchKey: state.gitLabChangeset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -688,7 +688,7 @@ func gitLabChangeset(updatedAt time.Time, state gitlab.MergeRequestState, notes 
 
 ```
 searchKey: state.githubChangeset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -699,7 +699,7 @@ func githubChangeset(updatedAt time.Time, state string) *btypes.Changeset
 
 ```
 searchKey: state.glChangeset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -710,7 +710,7 @@ func glChangeset(id int64, t time.Time) *btypes.Changeset
 
 ```
 searchKey: state.glClosed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -721,7 +721,7 @@ func glClosed(id int64, t time.Time, login string) *btypes.ChangesetEvent
 
 ```
 searchKey: state.glMarkWorkInProgress
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -732,7 +732,7 @@ func glMarkWorkInProgress(id int64, t time.Time, login string) *btypes.Changeset
 
 ```
 searchKey: state.glReopen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -743,7 +743,7 @@ func glReopen(id int64, t time.Time, login string) *btypes.ChangesetEvent
 
 ```
 searchKey: state.glUnmarkWorkInProgress
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -754,7 +754,7 @@ func glUnmarkWorkInProgress(id int64, t time.Time, login string) *btypes.Changes
 
 ```
 searchKey: state.initialExternalState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -767,7 +767,7 @@ initialExternalState infers from the changeset state and the list of events in w
 
 ```
 searchKey: state.parseBitbucketBuildState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -778,7 +778,7 @@ func parseBitbucketBuildState(s string) btypes.ChangesetCheckState
 
 ```
 searchKey: state.parseGitLabPipelineStatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -789,7 +789,7 @@ func parseGitLabPipelineStatus(status gitlab.PipelineStatus) btypes.ChangesetChe
 
 ```
 searchKey: state.parseGithubCheckState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -800,7 +800,7 @@ func parseGithubCheckState(s string) btypes.ChangesetCheckState
 
 ```
 searchKey: state.parseGithubCheckSuiteState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -811,7 +811,7 @@ func parseGithubCheckSuiteState(status, conclusion string) btypes.ChangesetCheck
 
 ```
 searchKey: state.reduceReviewStates
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -824,7 +824,7 @@ reduceReviewStates reduces the given a map of review per author down to a single
 
 ```
 searchKey: state.selectReviewState
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -837,7 +837,7 @@ selectReviewState computes the single review state for a given set of ChangesetR
 
 ```
 searchKey: state.setDeletedAt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -848,7 +848,7 @@ func setDeletedAt(c *btypes.Changeset, deletedAt time.Time) *btypes.Changeset
 
 ```
 searchKey: state.setDraft
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -859,7 +859,7 @@ func setDraft(c *btypes.Changeset) *btypes.Changeset
 
 ```
 searchKey: state.setExternalDeletedAt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -870,7 +870,7 @@ func setExternalDeletedAt(c *btypes.Changeset, t time.Time) *btypes.Changeset
 
 ```
 searchKey: state.timeToUnixMilli
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -881,7 +881,7 @@ func timeToUnixMilli(t time.Time) int
 
 ```
 searchKey: state.unixMilliToTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

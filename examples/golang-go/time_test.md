@@ -271,7 +271,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="maxDuration" href="#maxDuration">const maxDuration</a>
@@ -325,7 +325,7 @@ Go runtime uses different Windows timers for time.Now and sleeping. These can ti
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="addDateTests" href="#addDateTests">var addDateTests</a>
@@ -875,7 +875,7 @@ var zones = []string{
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FormatTest" href="#FormatTest">type FormatTest struct</a>
@@ -1054,14 +1054,14 @@ parsedTime is the struct representing a parsed time value.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkAfter" href="#BenchmarkAfter">func BenchmarkAfter(b *testing.B)</a>
 
 ```
 searchKey: time_test.BenchmarkAfter
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1072,7 +1072,7 @@ func BenchmarkAfter(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkAfterFunc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1083,7 +1083,7 @@ func BenchmarkAfterFunc(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkDay
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1094,7 +1094,7 @@ func BenchmarkDay(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkFormat
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1105,7 +1105,7 @@ func BenchmarkFormat(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkFormatNow
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1116,7 +1116,7 @@ func BenchmarkFormatNow(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkHour
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1127,7 +1127,7 @@ func BenchmarkHour(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkISOWeek
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1138,7 +1138,7 @@ func BenchmarkISOWeek(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkMarshalJSON
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1149,7 +1149,7 @@ func BenchmarkMarshalJSON(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkMarshalText
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1160,7 +1160,7 @@ func BenchmarkMarshalText(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkNow
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1171,7 +1171,7 @@ func BenchmarkNow(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkNowUnixMicro
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1182,7 +1182,7 @@ func BenchmarkNowUnixMicro(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkNowUnixMilli
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1193,7 +1193,7 @@ func BenchmarkNowUnixMilli(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkNowUnixNano
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1204,7 +1204,7 @@ func BenchmarkNowUnixNano(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkParallelTimerLatency
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1217,7 +1217,7 @@ Benchmark timer latency when the thread that creates the timer is busy with othe
 
 ```
 searchKey: time_test.BenchmarkParse
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1228,7 +1228,7 @@ func BenchmarkParse(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkParseDuration
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1239,7 +1239,7 @@ func BenchmarkParseDuration(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkReset
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1250,7 +1250,7 @@ func BenchmarkReset(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkSecond
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1261,7 +1261,7 @@ func BenchmarkSecond(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkSimultaneousAfterFunc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1272,7 +1272,7 @@ func BenchmarkSimultaneousAfterFunc(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkSleep
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1283,7 +1283,7 @@ func BenchmarkSleep(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkStaggeredTickerLatency
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1296,7 +1296,7 @@ Benchmark timer latency with staggered wakeup times and varying CPU bound worklo
 
 ```
 searchKey: time_test.BenchmarkStartStop
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1307,7 +1307,7 @@ func BenchmarkStartStop(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkStop
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1318,7 +1318,7 @@ func BenchmarkStop(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkTicker
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1329,7 +1329,7 @@ func BenchmarkTicker(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkTickerReset
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1340,7 +1340,7 @@ func BenchmarkTickerReset(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkTickerResetNaive
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1351,7 +1351,7 @@ func BenchmarkTickerResetNaive(b *testing.B)
 
 ```
 searchKey: time_test.BenchmarkYear
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1769,7 +1769,7 @@ func ExampleTime_Unix()
 
 ```
 searchKey: time_test.Test12AMIsMidnight
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1780,7 +1780,7 @@ func Test12AMIsMidnight(t *testing.T)
 
 ```
 searchKey: time_test.Test12PMIsNoon
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1791,7 +1791,7 @@ func Test12PMIsNoon(t *testing.T)
 
 ```
 searchKey: time_test.TestAddDate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1802,7 +1802,7 @@ func TestAddDate(t *testing.T)
 
 ```
 searchKey: time_test.TestAddToExactSecond
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1813,7 +1813,7 @@ func TestAddToExactSecond(t *testing.T)
 
 ```
 searchKey: time_test.TestAfter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1824,7 +1824,7 @@ func TestAfter(t *testing.T)
 
 ```
 searchKey: time_test.TestAfterFunc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1837,7 +1837,7 @@ Test the basic function calling behavior. Correct queueing behavior is tested el
 
 ```
 searchKey: time_test.TestAfterQueuing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1848,7 +1848,7 @@ func TestAfterQueuing(t *testing.T)
 
 ```
 searchKey: time_test.TestAfterStop
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1859,7 +1859,7 @@ func TestAfterStop(t *testing.T)
 
 ```
 searchKey: time_test.TestAfterStress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1870,7 +1870,7 @@ func TestAfterStress(t *testing.T)
 
 ```
 searchKey: time_test.TestAfterTick
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1881,7 +1881,7 @@ func TestAfterTick(t *testing.T)
 
 ```
 searchKey: time_test.TestBadLocationErrMsg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1892,7 +1892,7 @@ func TestBadLocationErrMsg(t *testing.T)
 
 ```
 searchKey: time_test.TestConcurrentTimerReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1905,7 +1905,7 @@ Issue 25686: hard crash on concurrent timer access. Issue 37400: panic with "rac
 
 ```
 searchKey: time_test.TestConcurrentTimerResetStop
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1918,7 +1918,7 @@ Issue 37400: panic with "racy use of timers".
 
 ```
 searchKey: time_test.TestCountMallocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1929,7 +1929,7 @@ func TestCountMallocs(t *testing.T)
 
 ```
 searchKey: time_test.TestDate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1940,7 +1940,7 @@ func TestDate(t *testing.T)
 
 ```
 searchKey: time_test.TestDaysIn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1951,7 +1951,7 @@ func TestDaysIn(t *testing.T)
 
 ```
 searchKey: time_test.TestDefaultLoc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1962,7 +1962,7 @@ func TestDefaultLoc(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationHours
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1973,7 +1973,7 @@ func TestDurationHours(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationMicroseconds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1984,7 +1984,7 @@ func TestDurationMicroseconds(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationMilliseconds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1995,7 +1995,7 @@ func TestDurationMilliseconds(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationMinutes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2006,7 +2006,7 @@ func TestDurationMinutes(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationNanoseconds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2017,7 +2017,7 @@ func TestDurationNanoseconds(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationRound
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2028,7 +2028,7 @@ func TestDurationRound(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationSeconds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2039,7 +2039,7 @@ func TestDurationSeconds(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2050,7 +2050,7 @@ func TestDurationString(t *testing.T)
 
 ```
 searchKey: time_test.TestDurationTruncate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2061,7 +2061,7 @@ func TestDurationTruncate(t *testing.T)
 
 ```
 searchKey: time_test.TestEarlyLocation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2074,7 +2074,7 @@ Issue 30099.
 
 ```
 searchKey: time_test.TestEmbeddedTZData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2085,7 +2085,7 @@ func TestEmbeddedTZData(t *testing.T)
 
 ```
 searchKey: time_test.TestEnvTZUsage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2096,7 +2096,7 @@ func TestEnvTZUsage(t *testing.T)
 
 ```
 searchKey: time_test.TestEnvVarUsage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2107,7 +2107,7 @@ func TestEnvVarUsage(t *testing.T)
 
 ```
 searchKey: time_test.TestFirstZone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2120,7 +2120,7 @@ Test that we get the correct results for times before the first transition time.
 
 ```
 searchKey: time_test.TestFormat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2131,7 +2131,7 @@ func TestFormat(t *testing.T)
 
 ```
 searchKey: time_test.TestFormatAndParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2142,7 +2142,7 @@ func TestFormatAndParse(t *testing.T)
 
 ```
 searchKey: time_test.TestFormatSecondsInTimeZone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2153,7 +2153,7 @@ func TestFormatSecondsInTimeZone(t *testing.T)
 
 ```
 searchKey: time_test.TestFormatShortYear
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2164,7 +2164,7 @@ func TestFormatShortYear(t *testing.T)
 
 ```
 searchKey: time_test.TestFormatSingleDigits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2177,7 +2177,7 @@ issue 12440.
 
 ```
 searchKey: time_test.TestGoString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2188,7 +2188,7 @@ func TestGoString(t *testing.T)
 
 ```
 searchKey: time_test.TestHasMonotonicClock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2199,7 +2199,7 @@ func TestHasMonotonicClock(t *testing.T)
 
 ```
 searchKey: time_test.TestISOWeek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2210,7 +2210,7 @@ func TestISOWeek(t *testing.T)
 
 ```
 searchKey: time_test.TestInvalidTimeGob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2221,7 +2221,7 @@ func TestInvalidTimeGob(t *testing.T)
 
 ```
 searchKey: time_test.TestInvalidTimeJSON
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2232,7 +2232,7 @@ func TestInvalidTimeJSON(t *testing.T)
 
 ```
 searchKey: time_test.TestIssue5745
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2245,7 +2245,7 @@ Test that a panic while deleting a timer does not leave the timers mutex held, d
 
 ```
 searchKey: time_test.TestLoadFixed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2256,7 +2256,7 @@ func TestLoadFixed(t *testing.T)
 
 ```
 searchKey: time_test.TestLoadLocationFromTZData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2267,7 +2267,7 @@ func TestLoadLocationFromTZData(t *testing.T)
 
 ```
 searchKey: time_test.TestLoadLocationFromTZDataSlim
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2278,7 +2278,7 @@ func TestLoadLocationFromTZDataSlim(t *testing.T)
 
 ```
 searchKey: time_test.TestLoadLocationValidatesNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2289,7 +2289,7 @@ func TestLoadLocationValidatesNames(t *testing.T)
 
 ```
 searchKey: time_test.TestLoadLocationZipFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2300,7 +2300,7 @@ func TestLoadLocationZipFile(t *testing.T)
 
 ```
 searchKey: time_test.TestLocationNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2311,7 +2311,7 @@ func TestLocationNames(t *testing.T)
 
 ```
 searchKey: time_test.TestLocationRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2324,7 +2324,7 @@ golang.org/issue/4622
 
 ```
 searchKey: time_test.TestMalformedTZData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2335,7 +2335,7 @@ func TestMalformedTZData(t *testing.T)
 
 ```
 searchKey: time_test.TestMarshalBinaryZeroTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2346,7 +2346,7 @@ func TestMarshalBinaryZeroTime(t *testing.T)
 
 ```
 searchKey: time_test.TestMidnightIs12AM
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2357,7 +2357,7 @@ func TestMidnightIs12AM(t *testing.T)
 
 ```
 searchKey: time_test.TestMinutesInTimeZone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2368,7 +2368,7 @@ func TestMinutesInTimeZone(t *testing.T)
 
 ```
 searchKey: time_test.TestMissingZone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2381,7 +2381,7 @@ Check that a time without a Zone still produces a (numeric) time zone when forma
 
 ```
 searchKey: time_test.TestMonotonicAdd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2392,7 +2392,7 @@ func TestMonotonicAdd(t *testing.T)
 
 ```
 searchKey: time_test.TestMonotonicOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2403,7 +2403,7 @@ func TestMonotonicOverflow(t *testing.T)
 
 ```
 searchKey: time_test.TestMonotonicString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2414,7 +2414,7 @@ func TestMonotonicString(t *testing.T)
 
 ```
 searchKey: time_test.TestMonotonicSub
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2425,7 +2425,7 @@ func TestMonotonicSub(t *testing.T)
 
 ```
 searchKey: time_test.TestNanosecondsToLocalTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2436,7 +2436,7 @@ func TestNanosecondsToLocalTime(t *testing.T)
 
 ```
 searchKey: time_test.TestNanosecondsToUTC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2447,7 +2447,7 @@ func TestNanosecondsToUTC(t *testing.T)
 
 ```
 searchKey: time_test.TestNanosecondsToUTCAndBack
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2458,7 +2458,7 @@ func TestNanosecondsToUTCAndBack(t *testing.T)
 
 ```
 searchKey: time_test.TestNewTickerLtZeroDuration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2471,7 +2471,7 @@ Test that NewTicker panics when given a duration less than zero.
 
 ```
 searchKey: time_test.TestNextStdChunk
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2482,7 +2482,7 @@ func TestNextStdChunk(t *testing.T)
 
 ```
 searchKey: time_test.TestNoonIs12PM
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2493,7 +2493,7 @@ func TestNoonIs12PM(t *testing.T)
 
 ```
 searchKey: time_test.TestNotGobEncodableTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2504,7 +2504,7 @@ func TestNotGobEncodableTime(t *testing.T)
 
 ```
 searchKey: time_test.TestNotJSONEncodableTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2515,7 +2515,7 @@ func TestNotJSONEncodableTime(t *testing.T)
 
 ```
 searchKey: time_test.TestOverflowPeriodRuntimeTimer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2526,7 +2526,7 @@ func TestOverflowPeriodRuntimeTimer(t *testing.T)
 
 ```
 searchKey: time_test.TestOverflowSleep
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2539,7 +2539,7 @@ Test that sleeping (via Sleep or Timer) for an interval so large it overflows do
 
 ```
 searchKey: time_test.TestParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2550,7 +2550,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: time_test.TestParseDayOutOfRange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2561,7 +2561,7 @@ func TestParseDayOutOfRange(t *testing.T)
 
 ```
 searchKey: time_test.TestParseDuration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2572,7 +2572,7 @@ func TestParseDuration(t *testing.T)
 
 ```
 searchKey: time_test.TestParseDurationErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2583,7 +2583,7 @@ func TestParseDurationErrors(t *testing.T)
 
 ```
 searchKey: time_test.TestParseDurationRoundTrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2594,7 +2594,7 @@ func TestParseDurationRoundTrip(t *testing.T)
 
 ```
 searchKey: time_test.TestParseErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2605,7 +2605,7 @@ func TestParseErrors(t *testing.T)
 
 ```
 searchKey: time_test.TestParseInLocation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2620,7 +2620,7 @@ ICANN has been slowly phasing out invented abbreviation in favor of numeric time
 
 ```
 searchKey: time_test.TestParseMonthOutOfRange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2631,7 +2631,7 @@ func TestParseMonthOutOfRange(t *testing.T)
 
 ```
 searchKey: time_test.TestParseSecondsInTimeZone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2642,7 +2642,7 @@ func TestParseSecondsInTimeZone(t *testing.T)
 
 ```
 searchKey: time_test.TestParseTimeZone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2653,7 +2653,7 @@ func TestParseTimeZone(t *testing.T)
 
 ```
 searchKey: time_test.TestParseYday
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2666,7 +2666,7 @@ Issue 37387.
 
 ```
 searchKey: time_test.TestQuote
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2679,7 +2679,7 @@ Issue 45391.
 
 ```
 searchKey: time_test.TestRFC3339Conversion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2690,7 +2690,7 @@ func TestRFC3339Conversion(t *testing.T)
 
 ```
 searchKey: time_test.TestReadFileLimit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2701,7 +2701,7 @@ func TestReadFileLimit(t *testing.T)
 
 ```
 searchKey: time_test.TestReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2712,7 +2712,7 @@ func TestReset(t *testing.T)
 
 ```
 searchKey: time_test.TestRubyParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2725,7 +2725,7 @@ Problematic time zone format needs special tests.
 
 ```
 searchKey: time_test.TestSecondsToLocalTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2736,7 +2736,7 @@ func TestSecondsToLocalTime(t *testing.T)
 
 ```
 searchKey: time_test.TestSecondsToUTC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2747,7 +2747,7 @@ func TestSecondsToUTC(t *testing.T)
 
 ```
 searchKey: time_test.TestSecondsToUTCAndBack
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2758,7 +2758,7 @@ func TestSecondsToUTCAndBack(t *testing.T)
 
 ```
 searchKey: time_test.TestSleep
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2769,7 +2769,7 @@ func TestSleep(t *testing.T)
 
 ```
 searchKey: time_test.TestSleepZeroDeadlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2780,7 +2780,7 @@ func TestSleepZeroDeadlock(t *testing.T)
 
 ```
 searchKey: time_test.TestStd0xParseError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2793,7 +2793,7 @@ Issue 29918, 29916
 
 ```
 searchKey: time_test.TestSub
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2804,7 +2804,7 @@ func TestSub(t *testing.T)
 
 ```
 searchKey: time_test.TestTeardown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2817,7 +2817,7 @@ Test that a bug tearing down a ticker has been fixed. This routine should not de
 
 ```
 searchKey: time_test.TestTick
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2830,7 +2830,7 @@ Test the Tick convenience wrapper.
 
 ```
 searchKey: time_test.TestTicker
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2841,7 +2841,7 @@ func TestTicker(t *testing.T)
 
 ```
 searchKey: time_test.TestTickerStopWithDirectInitialization
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2854,7 +2854,7 @@ Issue 21874
 
 ```
 searchKey: time_test.TestTimeAddSecOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2865,7 +2865,7 @@ func TestTimeAddSecOverflow(t *testing.T)
 
 ```
 searchKey: time_test.TestTimeGob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2876,7 +2876,7 @@ func TestTimeGob(t *testing.T)
 
 ```
 searchKey: time_test.TestTimeIsDST
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2887,7 +2887,7 @@ func TestTimeIsDST(t *testing.T)
 
 ```
 searchKey: time_test.TestTimeJSON
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2898,7 +2898,7 @@ func TestTimeJSON(t *testing.T)
 
 ```
 searchKey: time_test.TestTimerStopStress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2909,7 +2909,7 @@ func TestTimerStopStress(t *testing.T)
 
 ```
 searchKey: time_test.TestTruncateRound
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2920,7 +2920,7 @@ func TestTruncateRound(t *testing.T)
 
 ```
 searchKey: time_test.TestTzset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2931,7 +2931,7 @@ func TestTzset(t *testing.T)
 
 ```
 searchKey: time_test.TestTzsetName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2942,7 +2942,7 @@ func TestTzsetName(t *testing.T)
 
 ```
 searchKey: time_test.TestTzsetOffset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2953,7 +2953,7 @@ func TestTzsetOffset(t *testing.T)
 
 ```
 searchKey: time_test.TestTzsetRule
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2964,7 +2964,7 @@ func TestTzsetRule(t *testing.T)
 
 ```
 searchKey: time_test.TestUnderscoreTwoThousand
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2977,7 +2977,7 @@ Issue 11334.
 
 ```
 searchKey: time_test.TestUnixMicro
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2988,7 +2988,7 @@ func TestUnixMicro(t *testing.T)
 
 ```
 searchKey: time_test.TestUnixMilli
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2999,7 +2999,7 @@ func TestUnixMilli(t *testing.T)
 
 ```
 searchKey: time_test.TestVersion3
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3010,7 +3010,7 @@ func TestVersion3(t *testing.T)
 
 ```
 searchKey: time_test.TestWeekdayString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3023,7 +3023,7 @@ Issue 24692: Out of range weekday panics
 
 ```
 searchKey: time_test.TestYearDay
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3034,7 +3034,7 @@ func TestYearDay(t *testing.T)
 
 ```
 searchKey: time_test.TestZeroMonthString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3047,7 +3047,7 @@ Issue 17720: Zero value of time.Month fails to print
 
 ```
 searchKey: time_test.TestZeroTimer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3060,7 +3060,7 @@ Test that zero duration timers aren't missed by the scheduler. Regression test f
 
 ```
 searchKey: time_test.TestZeroTimerResetPanics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3071,7 +3071,7 @@ func TestZeroTimerResetPanics(t *testing.T)
 
 ```
 searchKey: time_test.TestZeroTimerStopPanics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3082,7 +3082,7 @@ func TestZeroTimerStopPanics(t *testing.T)
 
 ```
 searchKey: time_test.TestZoneData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3095,7 +3095,7 @@ We should be in PST/PDT, but if the time zone files are missing we won't be. The
 
 ```
 searchKey: time_test.abs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3108,7 +3108,7 @@ abs returns the absolute time stored in t, as seconds and nanoseconds.
 
 ```
 searchKey: time_test.absString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3121,7 +3121,7 @@ absString returns abs as a decimal string.
 
 ```
 searchKey: time_test.await
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3132,7 +3132,7 @@ func await(slot int, result chan<- afterResult, ac <-chan Time)
 
 ```
 searchKey: time_test.benchmark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3143,7 +3143,7 @@ func benchmark(b *testing.B, bench func(n int))
 
 ```
 searchKey: time_test.checkTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3154,7 +3154,7 @@ func checkTime(time Time, test *ParseTest, t *testing.T)
 
 ```
 searchKey: time_test.checkZeroPanicString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3165,7 +3165,7 @@ func checkZeroPanicString(t *testing.T)
 
 ```
 searchKey: time_test.doWork
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3176,7 +3176,7 @@ func doWork(dur Duration)
 
 ```
 searchKey: time_test.equal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3189,7 +3189,7 @@ equal is a small version of reflect.DeepEqual that we use to compare the values 
 
 ```
 searchKey: time_test.equalTimeAndZone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3211,7 +3211,7 @@ func expensiveCall()
 
 ```
 searchKey: time_test.handle
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3233,7 +3233,7 @@ func init()
 
 ```
 searchKey: time_test.same
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3255,7 +3255,7 @@ func statusUpdate() string
 
 ```
 searchKey: time_test.testAfterQueuing
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3266,7 +3266,7 @@ func testAfterQueuing(delta Duration) error
 
 ```
 searchKey: time_test.testReset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3277,7 +3277,7 @@ func testReset(d Duration) error
 
 ```
 searchKey: time_test.warmupScheduler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

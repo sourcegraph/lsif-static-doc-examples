@@ -239,7 +239,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DevNullSHA" href="#DevNullSHA">const DevNullSHA</a>
@@ -363,7 +363,7 @@ const partsPerCommit = 10 // number of \x00-separated fields per commit
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Mocks" href="#Mocks">var Mocks</a>
@@ -587,7 +587,7 @@ var validRawLogDiffSearchFormatArgs = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BadCommitError" href="#BadCommitError">type BadCommitError struct</a>
@@ -609,7 +609,7 @@ type BadCommitError struct {
 
 ```
 searchKey: git.BadCommitError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -636,7 +636,7 @@ BehindAhead is a set of behind/ahead counts.
 
 ```
 searchKey: git.GetBehindAhead
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -702,7 +702,7 @@ type Branches []*Branch
 
 ```
 searchKey: git.Branches.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -775,7 +775,7 @@ ByAuthorDate sorts by author date. Requires full commit information to be includ
 
 ```
 searchKey: git.ByAuthorDate.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -826,7 +826,7 @@ type Commit struct {
 
 ```
 searchKey: git.FindNearestCommit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -841,7 +841,7 @@ Can return a commit very far away if no nearby one exists. Can theoretically ret
 
 ```
 searchKey: git.FirstEverCommit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -854,7 +854,7 @@ FirstEverCommit returns the first commit ever made to the repository.
 
 ```
 searchKey: git.GetCommit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -869,7 +869,7 @@ The remoteURLFunc is called to get the Git remote URL if it's not set in repo an
 
 ```
 searchKey: git.getCommit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -882,7 +882,7 @@ getCommit returns the commit with the given id.
 
 ```
 searchKey: git.parseCommitFromLog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -941,7 +941,7 @@ type DiffFileIterator struct {
 
 ```
 searchKey: git.Diff
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -954,7 +954,7 @@ Diff returns an iterator that can be used to access the diff between two commits
 
 ```
 searchKey: git.DiffFileIterator.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -965,7 +965,7 @@ func (i *DiffFileIterator) Close() error
 
 ```
 searchKey: git.DiffFileIterator.Next
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1102,7 +1102,7 @@ type Message string
 
 ```
 searchKey: git.Message.Body
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1115,7 +1115,7 @@ Body returns the contents of the Git commit message after the subject.
 
 ```
 searchKey: git.Message.Subject
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1141,7 +1141,7 @@ OID is a Git OID (40-char hex-encoded).
 
 ```
 searchKey: git.GetObject
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1154,7 +1154,7 @@ GetObject looks up a Git object and returns information about it.
 
 ```
 searchKey: git.decodeOID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1165,7 +1165,7 @@ func decodeOID(sha string) (OID, error)
 
 ```
 searchKey: git.OID.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1239,7 +1239,7 @@ A PersonCount is a contributor to a repository.
 
 ```
 searchKey: git.PersonCount.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1361,7 +1361,7 @@ RefGlobs is a compiled matcher based on RefGlob patterns. Use CompileRefGlobs to
 
 ```
 searchKey: git.CompileRefGlobs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1485,7 +1485,7 @@ type Tags []*Tag
 
 ```
 searchKey: git.Tags.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1555,7 +1555,7 @@ blobReader, which should be created using newBlobReader, is a struct that allows
 
 ```
 searchKey: git.newBlobReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1566,7 +1566,7 @@ func newBlobReader(ctx context.Context, repo api.RepoName, commit api.CommitID, 
 
 ```
 searchKey: git.blobReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1651,7 +1651,7 @@ type byteSlices [][]byte
 
 ```
 searchKey: git.byteSlices.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1695,7 +1695,7 @@ type closer bool
 
 ```
 searchKey: git.closer.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1746,7 +1746,7 @@ cmdFunc is a func that creates a new executable Git command.
 
 ```
 searchKey: git.gitserverCmdFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1787,7 +1787,7 @@ type diffHunkLineInfo struct {
 
 ```
 searchKey: git.diffHunkLineInfo.changed
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1809,7 +1809,7 @@ type objectInfo OID
 
 ```
 searchKey: git.objectInfo.OID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1865,14 +1865,14 @@ func (r *refResolveCache) resolveHEADSymbolicRef(ctx context.Context, repo api.R
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AbbreviateRef" href="#AbbreviateRef">func AbbreviateRef(ref string) string</a>
 
 ```
 searchKey: git.AbbreviateRef
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1885,7 +1885,7 @@ AbbreviateRef removes the "refs/heads/" prefix from a given ref. If the ref does
 
 ```
 searchKey: git.AppleTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1896,7 +1896,7 @@ func AppleTime(t string) string
 
 ```
 searchKey: git.AsJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1907,7 +1907,7 @@ func AsJSON(v interface{}) string
 
 ```
 searchKey: git.BlameFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1920,7 +1920,7 @@ BlameFile returns Git blame information about a file.
 
 ```
 searchKey: git.CommitCount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1933,7 +1933,7 @@ CommitCount returns the number of commits that would be returned by Commits.
 
 ```
 searchKey: git.Commits
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1946,7 +1946,7 @@ Commits returns all commits matching the options.
 
 ```
 searchKey: git.CommitsEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1957,7 +1957,7 @@ func CommitsEqual(a, b *Commit) bool
 
 ```
 searchKey: git.CompilePathMatcher
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1970,7 +1970,7 @@ CompilePathMatcher compiles the path options into a PathMatcher.
 
 ```
 searchKey: git.ComputeCommitHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1983,7 +1983,7 @@ Computes hash of last commit in a given repo dir On Windows, content of a "link 
 
 ```
 searchKey: git.EnsureRefPrefix
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1996,7 +1996,7 @@ EnsureRefPrefix checks whether the ref is a full ref and contains the "refs/head
 
 ```
 searchKey: git.ExecReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2009,7 +2009,7 @@ ExecReader executes an arbitrary `git` command (`git [args...]`) and returns a r
 
 ```
 searchKey: git.ExecSafe
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2024,7 +2024,7 @@ An error is only returned when there is a failure unrelated to the actual comman
 
 ```
 searchKey: git.GitCommand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2035,7 +2035,7 @@ func GitCommand(dir, name string, args ...string) *exec.Cmd
 
 ```
 searchKey: git.HasCommitAfter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2048,7 +2048,7 @@ HasCommitAfter indicates the staleness of a repository. It returns a boolean ind
 
 ```
 searchKey: git.HumanReadableBranchName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2063,7 +2063,7 @@ Example: "Change coördination mechanism" -> "change-coordination-mechanism"
 
 ```
 searchKey: git.InitGitRepository
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2076,7 +2076,7 @@ InitGitRepository initializes a new Git repository and runs cmds in a new tempor
 
 ```
 searchKey: git.IsAbsoluteRevision
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2091,7 +2091,7 @@ Note: This doesn't mean the SHA exists in a repository, nor does it mean it isn'
 
 ```
 searchKey: git.ListBranches
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2104,7 +2104,7 @@ ListBranches returns a list of all branches in the repository.
 
 ```
 searchKey: git.ListRefs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2117,7 +2117,7 @@ ListRefs returns a list of all refs in the repository.
 
 ```
 searchKey: git.ListTags
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2130,7 +2130,7 @@ ListTags returns a list of all tags in the repository.
 
 ```
 searchKey: git.LsFiles
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2143,7 +2143,7 @@ LsFiles returns the output of `git ls-files`
 
 ```
 searchKey: git.Lstat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2156,7 +2156,7 @@ Lstat returns a FileInfo describing the named file at commit. If the file is a s
 
 ```
 searchKey: git.MakeGitRepository
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2169,7 +2169,7 @@ MakeGitRepository calls initGitRepository to create a new Git repository and ret
 
 ```
 searchKey: git.MergeBase
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2182,7 +2182,7 @@ MergeBase returns the merge base commit for the specified commits.
 
 ```
 searchKey: git.MustParseTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2193,7 +2193,7 @@ func MustParseTime(layout, value string) time.Time
 
 ```
 searchKey: git.NewFileReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2206,7 +2206,7 @@ NewFileReader returns an io.ReadCloser reading from the named file at commit. Th
 
 ```
 searchKey: git.RawLogDiffSearch
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2219,7 +2219,7 @@ RawLogDiffSearch wraps RawLogDiffSearchStream providing a blocking API. See RawL
 
 ```
 searchKey: git.RawLogDiffSearchStream
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2234,7 +2234,7 @@ The returned channel must be read until closed, otherwise you may leak resources
 
 ```
 searchKey: git.ReadDir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2247,7 +2247,7 @@ ReadDir reads the contents of the named directory at commit.
 
 ```
 searchKey: git.ReadFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2273,7 +2273,7 @@ ResetMocks clears the mock functions set on Mocks (so that subsequent tests don'
 
 ```
 searchKey: git.ResolveRevision
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2288,7 +2288,7 @@ Error cases: * Repo does not exist: vcs.RepoNotExistError * Commit does not exis
 
 ```
 searchKey: git.ShortLog
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2301,7 +2301,7 @@ ShortLog returns the per-author commit statistics of the repo.
 
 ```
 searchKey: git.Stat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2314,7 +2314,7 @@ Stat returns a FileInfo describing the named file at commit.
 
 ```
 searchKey: git.TestDiff
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2325,7 +2325,7 @@ func TestDiff(t *testing.T)
 
 ```
 searchKey: git.TestDiffFileIterator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2336,7 +2336,7 @@ func TestDiffFileIterator(t *testing.T)
 
 ```
 searchKey: git.TestExecSafe
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2347,7 +2347,7 @@ func TestExecSafe(t *testing.T)
 
 ```
 searchKey: git.TestFilterAndHighlightDiff
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2358,7 +2358,7 @@ func TestFilterAndHighlightDiff(t *testing.T)
 
 ```
 searchKey: git.TestGetObject
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2369,7 +2369,7 @@ func TestGetObject(t *testing.T)
 
 ```
 searchKey: git.TestHumanReadableBranchName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2380,7 +2380,7 @@ func TestHumanReadableBranchName(t *testing.T)
 
 ```
 searchKey: git.TestIsAbsoluteRevision
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2391,7 +2391,7 @@ func TestIsAbsoluteRevision(t *testing.T)
 
 ```
 searchKey: git.TestLogOnelineBatchScanner_batchclosed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2404,7 +2404,7 @@ Test we return errLogOnelineBatchScannerClosed is returned. It is very complicat
 
 ```
 searchKey: git.TestLogOnelineBatchScanner_closed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2417,7 +2417,7 @@ This test is much simpler since we just set the batchsize to 1 to ensure we only
 
 ```
 searchKey: git.TestLogOnelineBatchScanner_debounce
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2428,7 +2428,7 @@ func TestLogOnelineBatchScanner_debounce(t *testing.T)
 
 ```
 searchKey: git.TestLogOnelineBatchScanner_empty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2439,7 +2439,7 @@ func TestLogOnelineBatchScanner_empty(t *testing.T)
 
 ```
 searchKey: git.TestLogOnelineBatchScanner_small
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2450,7 +2450,7 @@ func TestLogOnelineBatchScanner_small(t *testing.T)
 
 ```
 searchKey: git.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2461,7 +2461,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: git.TestMerger_MergeBase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2472,7 +2472,7 @@ func TestMerger_MergeBase(t *testing.T)
 
 ```
 searchKey: git.TestMessage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2483,7 +2483,7 @@ func TestMessage(t *testing.T)
 
 ```
 searchKey: git.TestParseShortLog
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2494,7 +2494,7 @@ func TestParseShortLog(t *testing.T)
 
 ```
 searchKey: git.TestRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2505,7 +2505,7 @@ func TestRead(t *testing.T)
 
 ```
 searchKey: git.TestRefGlobs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2516,7 +2516,7 @@ func TestRefGlobs(t *testing.T)
 
 ```
 searchKey: git.TestRegexpToGlobBestEffort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2527,7 +2527,7 @@ func TestRegexpToGlobBestEffort(t *testing.T)
 
 ```
 searchKey: git.TestRepository_BlameFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2538,7 +2538,7 @@ func TestRepository_BlameFile(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Branches_BehindAheadCounts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2549,7 +2549,7 @@ func TestRepository_Branches_BehindAheadCounts(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Branches_ContainsCommit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2560,7 +2560,7 @@ func TestRepository_Branches_ContainsCommit(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Branches_IncludeCommit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2571,7 +2571,7 @@ func TestRepository_Branches_IncludeCommit(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Branches_MergedInto
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2582,7 +2582,7 @@ func TestRepository_Branches_MergedInto(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Commits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2593,7 +2593,7 @@ func TestRepository_Commits(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Commits_options
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2604,7 +2604,7 @@ func TestRepository_Commits_options(t *testing.T)
 
 ```
 searchKey: git.TestRepository_Commits_options_path
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2615,7 +2615,7 @@ func TestRepository_Commits_options_path(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FileSystem
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2626,7 +2626,7 @@ func TestRepository_FileSystem(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FileSystem_Symlinks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2637,7 +2637,7 @@ func TestRepository_FileSystem_Symlinks(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FileSystem_gitSubmodules
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2648,7 +2648,7 @@ func TestRepository_FileSystem_gitSubmodules(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FileSystem_quoteChars
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2659,7 +2659,7 @@ func TestRepository_FileSystem_quoteChars(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FindNearestCommit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2670,7 +2670,7 @@ func TestRepository_FindNearestCommit(t *testing.T)
 
 ```
 searchKey: git.TestRepository_FirstEverCommit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2681,7 +2681,7 @@ func TestRepository_FirstEverCommit(t *testing.T)
 
 ```
 searchKey: git.TestRepository_GetCommit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2692,7 +2692,7 @@ func TestRepository_GetCommit(t *testing.T)
 
 ```
 searchKey: git.TestRepository_HasCommitAfter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2703,7 +2703,7 @@ func TestRepository_HasCommitAfter(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ListBranches
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2714,7 +2714,7 @@ func TestRepository_ListBranches(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ListTags
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2725,7 +2725,7 @@ func TestRepository_ListTags(t *testing.T)
 
 ```
 searchKey: git.TestRepository_RawLogDiffSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2736,7 +2736,7 @@ func TestRepository_RawLogDiffSearch(t *testing.T)
 
 ```
 searchKey: git.TestRepository_RawLogDiffSearch_empty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2747,7 +2747,7 @@ func TestRepository_RawLogDiffSearch_empty(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ResolveBranch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2758,7 +2758,7 @@ func TestRepository_ResolveBranch(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ResolveBranch_error
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2769,7 +2769,7 @@ func TestRepository_ResolveBranch_error(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ResolveTag
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2780,7 +2780,7 @@ func TestRepository_ResolveTag(t *testing.T)
 
 ```
 searchKey: git.TestRepository_ResolveTag_error
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2791,7 +2791,7 @@ func TestRepository_ResolveTag_error(t *testing.T)
 
 ```
 searchKey: git.TestRepository_parseTags_WithoutCreatorDate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2804,7 +2804,7 @@ See [https://github.com/sourcegraph/sourcegraph/issues/5453](https://github.com/
 
 ```
 searchKey: git.TestSplitHunkMatches
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2815,7 +2815,7 @@ func TestSplitHunkMatches(t *testing.T)
 
 ```
 searchKey: git.TestTruncateLongLines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2826,7 +2826,7 @@ func TestTruncateLongLines(t *testing.T)
 
 ```
 searchKey: git.TestValidateBranchName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2837,7 +2837,7 @@ func TestValidateBranchName(t *testing.T)
 
 ```
 searchKey: git.ValidateBranchName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2850,7 +2850,7 @@ ValidateBranchName returns false if the given string is not a valid branch name.
 
 ```
 searchKey: git.blameFileCmd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2861,7 +2861,7 @@ func blameFileCmd(ctx context.Context, command cmdFunc, path string, opt *BlameO
 
 ```
 searchKey: git.branches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2874,7 +2874,7 @@ branches runs the `git branch` command followed by the given arguments and retur
 
 ```
 searchKey: git.checkSpecArgSafety
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2887,7 +2887,7 @@ checkSpecArgSafety returns a non-nil err if spec begins with a "-", which could 
 
 ```
 searchKey: git.commitLog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2902,7 +2902,7 @@ The caller is responsible for doing checkSpecArgSafety on opt.Head and opt.Base.
 
 ```
 searchKey: git.commitLogArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2913,7 +2913,7 @@ func commitLogArgs(initialArgs []string, opt CommitsOptions) (args []string, err
 
 ```
 searchKey: git.compilePathMatcher
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2926,7 +2926,7 @@ compilePathMatcher compiles the path options into a PathMatcher.
 
 ```
 searchKey: git.computeDiffHunkInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2937,7 +2937,7 @@ func computeDiffHunkInfo(lines [][]byte, query *regexp.Regexp, matchContextLines
 
 ```
 searchKey: git.deadlineLabel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2948,7 +2948,7 @@ func deadlineLabel(ctx context.Context) string
 
 ```
 searchKey: git.diffHunkLineStatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2959,7 +2959,7 @@ func diffHunkLineStatus(line []byte) (added, removed bool)
 
 ```
 searchKey: git.doLogDiffSearchStream
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2972,7 +2972,7 @@ doLogDiffSearchStream is called by RawLogDiffSearchStream to send events down c.
 
 ```
 searchKey: git.ensureAbsoluteCommit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2983,7 +2983,7 @@ func ensureAbsoluteCommit(commitID api.CommitID) error
 
 ```
 searchKey: git.filterAndHighlightDiff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2996,7 +2996,7 @@ filterAndHighlightDiff returns the raw diff with query matches highlighted and o
 
 ```
 searchKey: git.filterAndResolveRefs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3009,7 +3009,7 @@ filterAndResolveRefs replaces "HEAD" entries with the names of the ref they refe
 
 ```
 searchKey: git.globQuoteMeta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3033,7 +3033,7 @@ done in init since the go vet analysis "ctrlflow" is tripped up if this is done 
 
 ```
 searchKey: git.isAllowedGitArg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3046,7 +3046,7 @@ isAllowedGitArg checks if the arg is allowed.
 
 ```
 searchKey: git.isAllowedGitCmd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3059,7 +3059,7 @@ isAllowedGitCmd checks if the cmd and arguments are allowed.
 
 ```
 searchKey: git.isBadObjectErr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3070,7 +3070,7 @@ func isBadObjectErr(output, obj string) bool
 
 ```
 searchKey: git.isValidRawLogDiffSearchFormatArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3081,7 +3081,7 @@ func isValidRawLogDiffSearchFormatArgs(formatArgs []string) bool
 
 ```
 searchKey: git.lenientParseAddress
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3104,7 +3104,7 @@ mail: expected single address, got "<foo@gmail.com>"
 
 ```
 searchKey: git.logDiffCommonArgs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3115,7 +3115,7 @@ func logDiffCommonArgs(opt RawLogDiffSearchOptions) []string
 
 ```
 searchKey: git.logOnelineBatchScanner
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3132,7 +3132,7 @@ cleanup must be called when done. This function creates a goroutine to batch up 
 
 ```
 searchKey: git.logOnelineScanner
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3151,7 +3151,7 @@ Once it returns an error the scanner should be disregarded. io.EOF is returned w
 
 ```
 searchKey: git.lsTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3164,7 +3164,7 @@ lsTree returns ls of tree at path.
 
 ```
 searchKey: git.lsTreeUncached
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3175,7 +3175,7 @@ func lsTreeUncached(ctx context.Context, repo api.RepoName, commit api.CommitID,
 
 ```
 searchKey: git.parseShortLog
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3186,7 +3186,7 @@ func parseShortLog(out []byte) ([]*PersonCount, error)
 
 ```
 searchKey: git.parseTags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3197,7 +3197,7 @@ func parseTags(in []byte) ([]*Tag, error)
 
 ```
 searchKey: git.rawLogSearchCmd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3208,7 +3208,7 @@ func rawLogSearchCmd(ctx context.Context, repo api.RepoName, opt RawLogDiffSearc
 
 ```
 searchKey: git.rawShowSearch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3221,7 +3221,7 @@ rawShowSearch runs git show on each commit in onelineCommits. We need to do this
 
 ```
 searchKey: git.readFileBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3232,7 +3232,7 @@ func readFileBytes(ctx context.Context, repo api.RepoName, commit api.CommitID, 
 
 ```
 searchKey: git.readUntilTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3243,7 +3243,7 @@ func readUntilTimeout(ctx context.Context, cmd *gitserver.Cmd) ([]byte, bool, er
 
 ```
 searchKey: git.regexpToGlobBestEffort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3258,7 +3258,7 @@ regexpToGlobBestEffort performs a best-effort conversion of the regexp p to an e
 
 ```
 searchKey: git.runRevParse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3271,7 +3271,7 @@ runRevParse sends the git rev-parse command to gitserver. It interprets missing 
 
 ```
 searchKey: git.showRef
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3282,7 +3282,7 @@ func showRef(ctx context.Context, repo api.RepoName, args ...string) ([]Ref, err
 
 ```
 searchKey: git.splitHunkMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3295,7 +3295,7 @@ splitHunkMatches returns a list of hunks that are a subset of the input hunks, f
 
 ```
 searchKey: git.truncateLongLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

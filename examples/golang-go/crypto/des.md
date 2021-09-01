@@ -83,10 +83,6 @@ DES is cryptographically broken and should not be used for secure applications.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BlockSize" href="#BlockSize">const BlockSize</a>
 
 ```
@@ -101,10 +97,6 @@ const BlockSize = 8
 The DES block size in bytes. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="encryptDESTests" href="#encryptDESTests">var encryptDESTests</a>
 
@@ -375,10 +367,6 @@ var weakKeyTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CryptTest" href="#CryptTest">type CryptTest struct</a>
 
 ```
@@ -409,7 +397,7 @@ type KeySizeError int
 
 ```
 searchKey: des.KeySizeError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -435,7 +423,7 @@ desCipher is an instance of DES encryption.
 
 ```
 searchKey: des.newCipher
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -446,7 +434,7 @@ func newCipher(key []byte) *desCipher
 
 ```
 searchKey: des.desCipher.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -507,7 +495,7 @@ A tripleDESCipher is an instance of TripleDES encryption.
 
 ```
 searchKey: des.tripleDESCipher.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -538,15 +526,11 @@ func (c *tripleDESCipher) Encrypt(dst, src []byte)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDecrypt" href="#BenchmarkDecrypt">func BenchmarkDecrypt(b *testing.B)</a>
 
 ```
 searchKey: des.BenchmarkDecrypt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -557,7 +541,7 @@ func BenchmarkDecrypt(b *testing.B)
 
 ```
 searchKey: des.BenchmarkEncrypt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -568,7 +552,7 @@ func BenchmarkEncrypt(b *testing.B)
 
 ```
 searchKey: des.BenchmarkTDESDecrypt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -579,7 +563,7 @@ func BenchmarkTDESDecrypt(b *testing.B)
 
 ```
 searchKey: des.BenchmarkTDESEncrypt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -590,7 +574,7 @@ func BenchmarkTDESEncrypt(b *testing.B)
 
 ```
 searchKey: des.NewCipher
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -603,7 +587,7 @@ NewCipher creates and returns a new cipher.Block.
 
 ```
 searchKey: des.NewTripleDESCipher
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -616,7 +600,7 @@ NewTripleDESCipher creates and returns a new cipher.Block.
 
 ```
 searchKey: des.TestDESDecryptBlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -627,7 +611,7 @@ func TestDESDecryptBlock(t *testing.T)
 
 ```
 searchKey: des.TestDESEncryptBlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -638,7 +622,7 @@ func TestDESEncryptBlock(t *testing.T)
 
 ```
 searchKey: des.TestDecryptTripleDES
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -649,7 +633,7 @@ func TestDecryptTripleDES(t *testing.T)
 
 ```
 searchKey: des.TestEncryptTripleDES
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -660,7 +644,7 @@ func TestEncryptTripleDES(t *testing.T)
 
 ```
 searchKey: des.TestFinalPermute
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -671,7 +655,7 @@ func TestFinalPermute(t *testing.T)
 
 ```
 searchKey: des.TestInitialPermutationKnownAnswer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -684,7 +668,7 @@ Defined in Pub 800-20 Decrypting the Table A.1 plaintext with the 0x01... key pr
 
 ```
 searchKey: des.TestInitialPermute
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -695,7 +679,7 @@ func TestInitialPermute(t *testing.T)
 
 ```
 searchKey: des.TestInversePermutationKnownAnswer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -708,7 +692,7 @@ Defined in Pub 800-20 Encrypting the Table A.1 ciphertext with the 0x01... key p
 
 ```
 searchKey: des.TestPermutationOperationKnownAnswerDecrypt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -721,7 +705,7 @@ Defined in Pub 800-20
 
 ```
 searchKey: des.TestPermutationOperationKnownAnswerEncrypt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -734,7 +718,7 @@ Defined in Pub 800-20
 
 ```
 searchKey: des.TestSemiWeakKeyPairs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -747,7 +731,7 @@ Use the known semi-weak key pairs to test DES implementation
 
 ```
 searchKey: des.TestSubstitutionTableKnownAnswerDecrypt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -760,7 +744,7 @@ Defined in Pub 800-20
 
 ```
 searchKey: des.TestSubstitutionTableKnownAnswerEncrypt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -773,7 +757,7 @@ Defined in Pub 800-20
 
 ```
 searchKey: des.TestVariableCiphertextKnownAnswer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -786,7 +770,7 @@ Defined in Pub 800-20
 
 ```
 searchKey: des.TestVariableKeyKnownAnswerDecrypt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -799,7 +783,7 @@ Defined in Pub 800-20
 
 ```
 searchKey: des.TestVariableKeyKnownAnswerEncrypt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -812,7 +796,7 @@ Defined in Pub 800-20
 
 ```
 searchKey: des.TestVariablePlaintextKnownAnswer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -825,7 +809,7 @@ Defined in Pub 800-20
 
 ```
 searchKey: des.TestWeakKeys
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -838,7 +822,7 @@ Use the known weak keys to test DES implementation
 
 ```
 searchKey: des.cryptBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -849,7 +833,7 @@ func cryptBlock(subkeys []uint64, dst, src []byte, decrypt bool)
 
 ```
 searchKey: des.decryptBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -862,7 +846,7 @@ Decrypt one block from src into dst, using the subkeys.
 
 ```
 searchKey: des.encryptBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -875,7 +859,7 @@ Encrypt one block from src into dst, using the subkeys.
 
 ```
 searchKey: des.feistel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -899,7 +883,7 @@ func initFeistelBox()
 
 ```
 searchKey: des.ksRotate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -912,7 +896,7 @@ creates 16 28-bit blocks rotated according to the rotation schedule
 
 ```
 searchKey: des.permuteBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -925,7 +909,7 @@ general purpose function to perform DES block permutations
 
 ```
 searchKey: des.permuteFinalBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -938,7 +922,7 @@ permuteInitialBlock is equivalent to the permutation defined by finalPermutation
 
 ```
 searchKey: des.permuteInitialBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -951,7 +935,7 @@ permuteInitialBlock is equivalent to the permutation defined by initialPermutati
 
 ```
 searchKey: des.unpack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

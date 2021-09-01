@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -285,9 +283,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -406,9 +402,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -469,7 +463,7 @@
                       "newPage": false,
                       "searchKey": "lzw.newReader",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -492,7 +486,7 @@
                       "newPage": false,
                       "searchKey": "lzw.Reader.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -558,7 +552,7 @@
                       "newPage": false,
                       "searchKey": "lzw.Reader.decode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -604,7 +598,7 @@
                       "newPage": false,
                       "searchKey": "lzw.Reader.readLSB",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -627,7 +621,7 @@
                       "newPage": false,
                       "searchKey": "lzw.Reader.readMSB",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -673,7 +667,7 @@
                       "newPage": false,
                       "searchKey": "lzw.newWriter",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -696,7 +690,7 @@
                       "newPage": false,
                       "searchKey": "lzw.Writer.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -762,7 +756,7 @@
                       "newPage": false,
                       "searchKey": "lzw.Writer.incHi",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -952,9 +946,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -973,7 +965,7 @@
                 "newPage": false,
                 "searchKey": "lzw.BenchmarkDecoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -997,7 +989,7 @@
                 "newPage": false,
                 "searchKey": "lzw.BenchmarkEncoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1021,7 +1013,7 @@
                 "newPage": false,
                 "searchKey": "lzw.NewReader",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1043,7 +1035,7 @@
                 "newPage": false,
                 "searchKey": "lzw.NewWriter",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1065,7 +1057,7 @@
                 "newPage": false,
                 "searchKey": "lzw.TestHiCodeDoesNotOverflow",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1089,7 +1081,7 @@
                 "newPage": false,
                 "searchKey": "lzw.TestNoLongerSavingPriorExpansions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1113,7 +1105,7 @@
                 "newPage": false,
                 "searchKey": "lzw.TestReader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1137,7 +1129,7 @@
                 "newPage": false,
                 "searchKey": "lzw.TestReaderReset",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1161,7 +1153,7 @@
                 "newPage": false,
                 "searchKey": "lzw.TestSmallLitWidth",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1185,7 +1177,7 @@
                 "newPage": false,
                 "searchKey": "lzw.TestWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1209,7 +1201,7 @@
                 "newPage": false,
                 "searchKey": "lzw.TestWriterReset",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1233,7 +1225,7 @@
                 "newPage": false,
                 "searchKey": "lzw.TestWriterReturnValues",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1257,7 +1249,7 @@
                 "newPage": false,
                 "searchKey": "lzw.testFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

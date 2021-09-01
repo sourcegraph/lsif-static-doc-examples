@@ -12,7 +12,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleNew" href="#ExampleNew">func ExampleNew()</a>
@@ -52,7 +52,7 @@ func ExampleSum()
 
 ```
 searchKey: sha1_test.TestOutOfBoundsRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

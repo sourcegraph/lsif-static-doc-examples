@@ -26,7 +26,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MonitorKind" href="#MonitorKind">const MonitorKind</a>
@@ -67,7 +67,7 @@ const utmSourceEmail = "code-monitoring-email"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockExternalURL" href="#MockExternalURL">var MockExternalURL</a>
@@ -117,7 +117,7 @@ var newSearchResultsEmailTemplates = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TemplateDataNewSearchResults" href="#TemplateDataNewSearchResults">type TemplateDataNewSearchResults struct</a>
@@ -142,7 +142,7 @@ type TemplateDataNewSearchResults struct {
 
 ```
 searchKey: email.NewTemplateDataForNewSearchResults
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -153,7 +153,7 @@ func NewTemplateDataForNewSearchResults(ctx context.Context, monitorDescription,
 
 ```
 searchKey: email.NewTestTemplateDataForNewSearchResults
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -163,14 +163,14 @@ func NewTestTemplateDataForNewSearchResults(ctx context.Context, monitorDescript
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SendEmailForNewSearchResult" href="#SendEmailForNewSearchResult">func SendEmailForNewSearchResult(ctx context.Context, userID int32, data *TemplateDataNewSearchResults) error</a>
 
 ```
 searchKey: email.SendEmailForNewSearchResult
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -181,7 +181,7 @@ func SendEmailForNewSearchResult(ctx context.Context, userID int32, data *Templa
 
 ```
 searchKey: email.getCodeMonitorURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -192,7 +192,7 @@ func getCodeMonitorURL(ctx context.Context, monitorID int64, utmSource string) (
 
 ```
 searchKey: email.getSearchURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -203,7 +203,7 @@ func getSearchURL(ctx context.Context, query, utmSource string) (string, error)
 
 ```
 searchKey: email.sendEmail
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -214,7 +214,7 @@ func sendEmail(ctx context.Context, userID int32, template txtypes.Templates, da
 
 ```
 searchKey: email.sourcegraphURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

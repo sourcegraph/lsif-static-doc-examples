@@ -22,7 +22,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
@@ -48,7 +48,7 @@ Impl note: To change the above, remove the invocation of the `ssh` binary and re
 
 ```
 searchKey: gitolite.NewClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -102,7 +102,7 @@ type errUnauthorized struct {
 
 ```
 searchKey: gitolite.errUnauthorized.Unauthorized
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -112,14 +112,14 @@ func (*errUnauthorized) Unauthorized() bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CloneURL" href="#CloneURL">func CloneURL(externalRepoSpec api.ExternalRepoSpec) string</a>
 
 ```
 searchKey: gitolite.CloneURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -132,7 +132,7 @@ CloneURL returns the clone URL of the external repository. The external repo spe
 
 ```
 searchKey: gitolite.ExternalRepoSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -143,7 +143,7 @@ func ExternalRepoSpec(repo *Repo, serviceID string) api.ExternalRepoSpec
 
 ```
 searchKey: gitolite.ServiceID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -154,7 +154,7 @@ func ServiceID(gitoliteHost string) string
 
 ```
 searchKey: gitolite.TestDecodeRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -165,7 +165,7 @@ func TestDecodeRepos(t *testing.T)
 
 ```
 searchKey: gitolite.TestMaybeUnauthorized
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -176,7 +176,7 @@ func TestMaybeUnauthorized(t *testing.T)
 
 ```
 searchKey: gitolite.decodeRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -187,7 +187,7 @@ func decodeRepos(host, gitoliteInfo string) []*Repo
 
 ```
 searchKey: gitolite.maybeUnauthorized
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

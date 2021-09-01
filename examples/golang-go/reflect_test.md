@@ -465,7 +465,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="V" href="#V">var V</a>
@@ -817,7 +817,7 @@ var _i = 7
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="B1" href="#B1">type B1 struct</a>
@@ -963,7 +963,7 @@ type DirectIfaceT struct {
 
 ```
 searchKey: reflect_test.DirectIfaceT.M
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1012,7 +1012,7 @@ type FuncDDD func(...interface{}) error
 
 ```
 searchKey: reflect_test.FuncDDD.M
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1034,7 +1034,7 @@ type Impl struct{}
 
 ```
 searchKey: reflect_test.Impl.F
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1060,7 +1060,7 @@ type Inner struct {
 
 ```
 searchKey: reflect_test.Inner.M
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1084,7 +1084,7 @@ type InnerInt struct {
 
 ```
 searchKey: reflect_test.InnerInt.M
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1385,7 +1385,7 @@ type NonExportedFirst int
 
 ```
 searchKey: reflect_test.NonExportedFirst.ΦExported
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1396,7 +1396,7 @@ func (i NonExportedFirst) ΦExported()
 
 ```
 searchKey: reflect_test.NonExportedFirst.nonexported
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1524,7 +1524,7 @@ This will be index 5.
 
 ```
 searchKey: reflect_test.Point.NoArgs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1565,7 +1565,7 @@ type Private struct {
 
 ```
 searchKey: reflect_test.Private.m
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1591,7 +1591,7 @@ type Public struct {
 
 ```
 searchKey: reflect_test.Public.M
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2487,7 +2487,7 @@ type StructI int
 
 ```
 searchKey: reflect_test.StructI.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2509,7 +2509,7 @@ type StructIPtr int
 
 ```
 searchKey: reflect_test.StructIPtr.Get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2843,7 +2843,7 @@ type UnExportedFirst int
 
 ```
 searchKey: reflect_test.UnExportedFirst.ΦExported
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2854,7 +2854,7 @@ func (i UnExportedFirst) ΦExported()
 
 ```
 searchKey: reflect_test.UnExportedFirst.unexported
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2892,7 +2892,7 @@ Dummy type that implements io.WriteCloser
 
 ```
 searchKey: reflect_test.WC.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2925,7 +2925,7 @@ type XM struct{ _ bool }
 
 ```
 searchKey: reflect_test.XM.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3074,7 +3074,7 @@ func (x *exhaustive) Choose(max int) int
 
 ```
 searchKey: reflect_test.exhaustive.Maybe
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3085,7 +3085,7 @@ func (x *exhaustive) Maybe() bool
 
 ```
 searchKey: reflect_test.exhaustive.Next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3109,7 +3109,7 @@ type inner struct {
 
 ```
 searchKey: reflect_test.inner.M
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3142,7 +3142,7 @@ type myint int64
 
 ```
 searchKey: reflect_test.myint.inc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3180,7 +3180,7 @@ type nonEmptyStruct struct {
 
 ```
 searchKey: reflect_test.returnNonEmpty
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3217,7 +3217,7 @@ type notAnExpr struct{}
 
 ```
 searchKey: reflect_test.notAnExpr.End
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3228,7 +3228,7 @@ func (notAnExpr) End() token.Pos
 
 ```
 searchKey: reflect_test.notAnExpr.Pos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3239,7 +3239,7 @@ func (notAnExpr) Pos() token.Pos
 
 ```
 searchKey: reflect_test.notAnExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3264,7 +3264,7 @@ type outer struct {
 
 ```
 searchKey: reflect_test.outer.M
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3306,7 +3306,7 @@ type private struct {
 
 ```
 searchKey: reflect_test.private.P
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3381,7 +3381,7 @@ type timp int
 
 ```
 searchKey: reflect_test.timp.W
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3392,7 +3392,7 @@ func (t timp) W()
 
 ```
 searchKey: reflect_test.timp.Y
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3403,7 +3403,7 @@ func (t timp) Y()
 
 ```
 searchKey: reflect_test.timp.w
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3414,7 +3414,7 @@ func (t timp) w()
 
 ```
 searchKey: reflect_test.timp.y
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3449,7 +3449,7 @@ type two [2]uintptr
 
 ```
 searchKey: reflect_test.dummy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3473,7 +3473,7 @@ type unexp struct{}
 
 ```
 searchKey: reflect_test.unexp.f
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3484,7 +3484,7 @@ func (*unexp) f() (int32, int8)
 
 ```
 searchKey: reflect_test.unexp.g
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3523,14 +3523,14 @@ type _Complex struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkCall" href="#BenchmarkCall">func BenchmarkCall(b *testing.B)</a>
 
 ```
 searchKey: reflect_test.BenchmarkCall
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3541,7 +3541,7 @@ func BenchmarkCall(b *testing.B)
 
 ```
 searchKey: reflect_test.BenchmarkCallArgCopy
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3552,7 +3552,7 @@ func BenchmarkCallArgCopy(b *testing.B)
 
 ```
 searchKey: reflect_test.BenchmarkCallMethod
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3563,7 +3563,7 @@ func BenchmarkCallMethod(b *testing.B)
 
 ```
 searchKey: reflect_test.BenchmarkFieldByName1
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3574,7 +3574,7 @@ func BenchmarkFieldByName1(b *testing.B)
 
 ```
 searchKey: reflect_test.BenchmarkFieldByName2
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3585,7 +3585,7 @@ func BenchmarkFieldByName2(b *testing.B)
 
 ```
 searchKey: reflect_test.BenchmarkFieldByName3
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3596,7 +3596,7 @@ func BenchmarkFieldByName3(b *testing.B)
 
 ```
 searchKey: reflect_test.BenchmarkInterfaceBig
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3607,7 +3607,7 @@ func BenchmarkInterfaceBig(b *testing.B)
 
 ```
 searchKey: reflect_test.BenchmarkInterfaceSmall
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3618,7 +3618,7 @@ func BenchmarkInterfaceSmall(b *testing.B)
 
 ```
 searchKey: reflect_test.BenchmarkNew
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3629,7 +3629,7 @@ func BenchmarkNew(b *testing.B)
 
 ```
 searchKey: reflect_test.BenchmarkPtrTo
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3640,7 +3640,7 @@ func BenchmarkPtrTo(b *testing.B)
 
 ```
 searchKey: reflect_test.BenchmarkSelect
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3651,7 +3651,7 @@ func BenchmarkSelect(b *testing.B)
 
 ```
 searchKey: reflect_test.EmptyInterfaceV
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3728,7 +3728,7 @@ func ExampleTypeOf()
 
 ```
 searchKey: reflect_test.GCFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3739,7 +3739,7 @@ func GCFunc(args []Value) []Value
 
 ```
 searchKey: reflect_test.Nil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3750,7 +3750,7 @@ func Nil(a interface{}, t *testing.T)
 
 ```
 searchKey: reflect_test.NotNil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3761,7 +3761,7 @@ func NotNil(a interface{}, t *testing.T)
 
 ```
 searchKey: reflect_test.ReadWriterV
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3772,7 +3772,7 @@ func ReadWriterV(x io.ReadWriter) Value
 
 ```
 searchKey: reflect_test.ReaderV
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3783,7 +3783,7 @@ func ReaderV(x io.Reader) Value
 
 ```
 searchKey: reflect_test.TestAddr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3794,7 +3794,7 @@ func TestAddr(t *testing.T)
 
 ```
 searchKey: reflect_test.TestAlias
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3805,7 +3805,7 @@ func TestAlias(t *testing.T)
 
 ```
 searchKey: reflect_test.TestAliasNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3816,7 +3816,7 @@ func TestAliasNames(t *testing.T)
 
 ```
 searchKey: reflect_test.TestAlignment
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3829,7 +3829,7 @@ Check that structure alignment & offsets viewed through reflect agree with those
 
 ```
 searchKey: reflect_test.TestAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3840,7 +3840,7 @@ func TestAll(t *testing.T)
 
 ```
 searchKey: reflect_test.TestAllocations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3851,7 +3851,7 @@ func TestAllocations(t *testing.T)
 
 ```
 searchKey: reflect_test.TestAllocsInterfaceBig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3862,7 +3862,7 @@ func TestAllocsInterfaceBig(t *testing.T)
 
 ```
 searchKey: reflect_test.TestAllocsInterfaceSmall
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3873,7 +3873,7 @@ func TestAllocsInterfaceSmall(t *testing.T)
 
 ```
 searchKey: reflect_test.TestAnonymousFields
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3884,7 +3884,7 @@ func TestAnonymousFields(t *testing.T)
 
 ```
 searchKey: reflect_test.TestAppend
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3895,7 +3895,7 @@ func TestAppend(t *testing.T)
 
 ```
 searchKey: reflect_test.TestArrayElemSet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3906,7 +3906,7 @@ func TestArrayElemSet(t *testing.T)
 
 ```
 searchKey: reflect_test.TestArrayOf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3917,7 +3917,7 @@ func TestArrayOf(t *testing.T)
 
 ```
 searchKey: reflect_test.TestArrayOfAlg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3928,7 +3928,7 @@ func TestArrayOfAlg(t *testing.T)
 
 ```
 searchKey: reflect_test.TestArrayOfDirectIface
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3939,7 +3939,7 @@ func TestArrayOfDirectIface(t *testing.T)
 
 ```
 searchKey: reflect_test.TestArrayOfGC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3950,7 +3950,7 @@ func TestArrayOfGC(t *testing.T)
 
 ```
 searchKey: reflect_test.TestArrayOfGenericAlg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3961,7 +3961,7 @@ func TestArrayOfGenericAlg(t *testing.T)
 
 ```
 searchKey: reflect_test.TestArrayOfPanicOnNegativeLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3974,7 +3974,7 @@ Ensure passing in negative lengths panics. See [https://golang.org/issue/43603](
 
 ```
 searchKey: reflect_test.TestAssignableTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3985,7 +3985,7 @@ func TestAssignableTo(t *testing.T)
 
 ```
 searchKey: reflect_test.TestBigStruct
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3996,7 +3996,7 @@ func TestBigStruct(t *testing.T)
 
 ```
 searchKey: reflect_test.TestBigUnnamedStruct
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4007,7 +4007,7 @@ func TestBigUnnamedStruct(t *testing.T)
 
 ```
 searchKey: reflect_test.TestBigZero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4018,7 +4018,7 @@ func TestBigZero(t *testing.T)
 
 ```
 searchKey: reflect_test.TestBool
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4029,7 +4029,7 @@ func TestBool(t *testing.T)
 
 ```
 searchKey: reflect_test.TestBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4040,7 +4040,7 @@ func TestBytes(t *testing.T)
 
 ```
 searchKey: reflect_test.TestCallConvert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4051,7 +4051,7 @@ func TestCallConvert(t *testing.T)
 
 ```
 searchKey: reflect_test.TestCallGC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4064,7 +4064,7 @@ Issue 9179.
 
 ```
 searchKey: reflect_test.TestCallMethodJump
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4075,7 +4075,7 @@ func TestCallMethodJump(t *testing.T)
 
 ```
 searchKey: reflect_test.TestCallPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4086,7 +4086,7 @@ func TestCallPanic(t *testing.T)
 
 ```
 searchKey: reflect_test.TestCallReturnsEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4097,7 +4097,7 @@ func TestCallReturnsEmpty(t *testing.T)
 
 ```
 searchKey: reflect_test.TestCallWithStruct
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4108,7 +4108,7 @@ func TestCallWithStruct(t *testing.T)
 
 ```
 searchKey: reflect_test.TestCanSetField
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4119,7 +4119,7 @@ func TestCanSetField(t *testing.T)
 
 ```
 searchKey: reflect_test.TestChan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4130,7 +4130,7 @@ func TestChan(t *testing.T)
 
 ```
 searchKey: reflect_test.TestChanAlloc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4141,7 +4141,7 @@ func TestChanAlloc(t *testing.T)
 
 ```
 searchKey: reflect_test.TestChanOf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4152,7 +4152,7 @@ func TestChanOf(t *testing.T)
 
 ```
 searchKey: reflect_test.TestChanOfDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4163,7 +4163,7 @@ func TestChanOfDir(t *testing.T)
 
 ```
 searchKey: reflect_test.TestChanOfGC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4174,7 +4174,7 @@ func TestChanOfGC(t *testing.T)
 
 ```
 searchKey: reflect_test.TestComparable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4185,7 +4185,7 @@ func TestComparable(t *testing.T)
 
 ```
 searchKey: reflect_test.TestConvert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4196,7 +4196,7 @@ func TestConvert(t *testing.T)
 
 ```
 searchKey: reflect_test.TestConvertNaNs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4207,7 +4207,7 @@ func TestConvertNaNs(t *testing.T)
 
 ```
 searchKey: reflect_test.TestConvertPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4218,7 +4218,7 @@ func TestConvertPanic(t *testing.T)
 
 ```
 searchKey: reflect_test.TestConvertibleTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4229,7 +4229,7 @@ func TestConvertibleTo(t *testing.T)
 
 ```
 searchKey: reflect_test.TestCopy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4240,7 +4240,7 @@ func TestCopy(t *testing.T)
 
 ```
 searchKey: reflect_test.TestCopyArray
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4251,7 +4251,7 @@ func TestCopyArray(t *testing.T)
 
 ```
 searchKey: reflect_test.TestCopyString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4262,7 +4262,7 @@ func TestCopyString(t *testing.T)
 
 ```
 searchKey: reflect_test.TestDeepEqual
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4273,7 +4273,7 @@ func TestDeepEqual(t *testing.T)
 
 ```
 searchKey: reflect_test.TestDeepEqualComplexStruct
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4284,7 +4284,7 @@ func TestDeepEqualComplexStruct(t *testing.T)
 
 ```
 searchKey: reflect_test.TestDeepEqualComplexStructInequality
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4295,7 +4295,7 @@ func TestDeepEqualComplexStructInequality(t *testing.T)
 
 ```
 searchKey: reflect_test.TestDeepEqualRecursiveStruct
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4306,7 +4306,7 @@ func TestDeepEqualRecursiveStruct(t *testing.T)
 
 ```
 searchKey: reflect_test.TestDeepEqualUnexportedMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4317,7 +4317,7 @@ func TestDeepEqualUnexportedMap(t *testing.T)
 
 ```
 searchKey: reflect_test.TestDirectIfaceMethod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4328,7 +4328,7 @@ func TestDirectIfaceMethod(t *testing.T)
 
 ```
 searchKey: reflect_test.TestEmbed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4339,7 +4339,7 @@ func TestEmbed(t *testing.T)
 
 ```
 searchKey: reflect_test.TestEmbeddedMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4350,7 +4350,7 @@ func TestEmbeddedMethods(t *testing.T)
 
 ```
 searchKey: reflect_test.TestExported
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4361,7 +4361,7 @@ func TestExported(t *testing.T)
 
 ```
 searchKey: reflect_test.TestFieldByIndex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4372,7 +4372,7 @@ func TestFieldByIndex(t *testing.T)
 
 ```
 searchKey: reflect_test.TestFieldByIndexNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4383,7 +4383,7 @@ func TestFieldByIndexNil(t *testing.T)
 
 ```
 searchKey: reflect_test.TestFieldByName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4394,7 +4394,7 @@ func TestFieldByName(t *testing.T)
 
 ```
 searchKey: reflect_test.TestFieldPkgPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4405,7 +4405,7 @@ func TestFieldPkgPath(t *testing.T)
 
 ```
 searchKey: reflect_test.TestFields
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4416,7 +4416,7 @@ func TestFields(t *testing.T)
 
 ```
 searchKey: reflect_test.TestFunc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4427,7 +4427,7 @@ func TestFunc(t *testing.T)
 
 ```
 searchKey: reflect_test.TestFuncArg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4438,7 +4438,7 @@ func TestFuncArg(t *testing.T)
 
 ```
 searchKey: reflect_test.TestFuncLayout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4449,7 +4449,7 @@ func TestFuncLayout(t *testing.T)
 
 ```
 searchKey: reflect_test.TestFuncOf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4460,7 +4460,7 @@ func TestFuncOf(t *testing.T)
 
 ```
 searchKey: reflect_test.TestFunctionValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4471,7 +4471,7 @@ func TestFunctionValue(t *testing.T)
 
 ```
 searchKey: reflect_test.TestGCBits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4482,7 +4482,7 @@ func TestGCBits(t *testing.T)
 
 ```
 searchKey: reflect_test.TestImplements
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4493,7 +4493,7 @@ func TestImplements(t *testing.T)
 
 ```
 searchKey: reflect_test.TestImplicitAppendConversion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4504,7 +4504,7 @@ func TestImplicitAppendConversion(t *testing.T)
 
 ```
 searchKey: reflect_test.TestImplicitCallConversion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4515,7 +4515,7 @@ func TestImplicitCallConversion(t *testing.T)
 
 ```
 searchKey: reflect_test.TestImplicitMapConversion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4526,7 +4526,7 @@ func TestImplicitMapConversion(t *testing.T)
 
 ```
 searchKey: reflect_test.TestImplicitSendConversion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4537,7 +4537,7 @@ func TestImplicitSendConversion(t *testing.T)
 
 ```
 searchKey: reflect_test.TestImplicitSetConversion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4548,7 +4548,7 @@ func TestImplicitSetConversion(t *testing.T)
 
 ```
 searchKey: reflect_test.TestImportPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4559,7 +4559,7 @@ func TestImportPath(t *testing.T)
 
 ```
 searchKey: reflect_test.TestIndex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4570,7 +4570,7 @@ func TestIndex(t *testing.T)
 
 ```
 searchKey: reflect_test.TestInterfaceExtraction
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4581,7 +4581,7 @@ func TestInterfaceExtraction(t *testing.T)
 
 ```
 searchKey: reflect_test.TestInterfaceGet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4592,7 +4592,7 @@ func TestInterfaceGet(t *testing.T)
 
 ```
 searchKey: reflect_test.TestInterfaceSet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4603,7 +4603,7 @@ func TestInterfaceSet(t *testing.T)
 
 ```
 searchKey: reflect_test.TestInterfaceValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4614,7 +4614,7 @@ func TestInterfaceValue(t *testing.T)
 
 ```
 searchKey: reflect_test.TestInvalid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4625,7 +4625,7 @@ func TestInvalid(t *testing.T)
 
 ```
 searchKey: reflect_test.TestIsNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4636,7 +4636,7 @@ func TestIsNil(t *testing.T)
 
 ```
 searchKey: reflect_test.TestIsZero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4647,7 +4647,7 @@ func TestIsZero(t *testing.T)
 
 ```
 searchKey: reflect_test.TestIssue22031
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4658,7 +4658,7 @@ func TestIssue22031(t *testing.T)
 
 ```
 searchKey: reflect_test.TestIssue22073
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4669,7 +4669,7 @@ func TestIssue22073(t *testing.T)
 
 ```
 searchKey: reflect_test.TestKeepFuncLive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4682,7 +4682,7 @@ Issue 18635 (function version).
 
 ```
 searchKey: reflect_test.TestKeepMethodLive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4693,7 +4693,7 @@ func TestKeepMethodLive(t *testing.T)
 
 ```
 searchKey: reflect_test.TestLargeGCProg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4706,7 +4706,7 @@ Issue 8917.
 
 ```
 searchKey: reflect_test.TestMakeFunc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4717,7 +4717,7 @@ func TestMakeFunc(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMakeFuncInterface
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4728,7 +4728,7 @@ func TestMakeFuncInterface(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMakeFuncInvalidReturnAssignments
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4739,7 +4739,7 @@ func TestMakeFuncInvalidReturnAssignments(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMakeFuncStackCopy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4750,7 +4750,7 @@ func TestMakeFuncStackCopy(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMakeFuncValidReturnAssignments
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4761,7 +4761,7 @@ func TestMakeFuncValidReturnAssignments(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMakeFuncVariadic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4772,7 +4772,7 @@ func TestMakeFuncVariadic(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4783,7 +4783,7 @@ func TestMap(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapAlloc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4794,7 +4794,7 @@ func TestMapAlloc(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapIterDelete0
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4805,7 +4805,7 @@ func TestMapIterDelete0(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapIterDelete1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4816,7 +4816,7 @@ func TestMapIterDelete1(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapIterNext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4827,7 +4827,7 @@ func TestMapIterNext(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapIterNilMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4838,7 +4838,7 @@ func TestMapIterNilMap(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapIterNonEmptyMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4849,7 +4849,7 @@ func TestMapIterNonEmptyMap(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapIterSafety
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4860,7 +4860,7 @@ func TestMapIterSafety(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapOf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4871,7 +4871,7 @@ func TestMapOf(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapOfGCKeys
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4882,7 +4882,7 @@ func TestMapOfGCKeys(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapOfGCValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4893,7 +4893,7 @@ func TestMapOfGCValues(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMapSetNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4904,7 +4904,7 @@ func TestMapSetNil(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMethod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4915,7 +4915,7 @@ func TestMethod(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMethod5
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4926,7 +4926,7 @@ func TestMethod5(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMethodByNameUnExportedFirst
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4939,7 +4939,7 @@ Issue 21177
 
 ```
 searchKey: reflect_test.TestMethodPkgPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4950,7 +4950,7 @@ func TestMethodPkgPath(t *testing.T)
 
 ```
 searchKey: reflect_test.TestMethodValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4961,7 +4961,7 @@ func TestMethodValue(t *testing.T)
 
 ```
 searchKey: reflect_test.TestNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4972,7 +4972,7 @@ func TestNames(t *testing.T)
 
 ```
 searchKey: reflect_test.TestNestedMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4983,7 +4983,7 @@ func TestNestedMethods(t *testing.T)
 
 ```
 searchKey: reflect_test.TestNilMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4994,7 +4994,7 @@ func TestNilMap(t *testing.T)
 
 ```
 searchKey: reflect_test.TestNilPtrValueSub
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5005,7 +5005,7 @@ func TestNilPtrValueSub(t *testing.T)
 
 ```
 searchKey: reflect_test.TestNumMethodOnDDD
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5016,7 +5016,7 @@ func TestNumMethodOnDDD(t *testing.T)
 
 ```
 searchKey: reflect_test.TestOffsetLock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5027,7 +5027,7 @@ func TestOffsetLock(t *testing.T)
 
 ```
 searchKey: reflect_test.TestOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5038,7 +5038,7 @@ func TestOverflow(t *testing.T)
 
 ```
 searchKey: reflect_test.TestPtrPointTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5049,7 +5049,7 @@ func TestPtrPointTo(t *testing.T)
 
 ```
 searchKey: reflect_test.TestPtrSetNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5060,7 +5060,7 @@ func TestPtrSetNil(t *testing.T)
 
 ```
 searchKey: reflect_test.TestPtrTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5071,7 +5071,7 @@ func TestPtrTo(t *testing.T)
 
 ```
 searchKey: reflect_test.TestPtrToGC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5082,7 +5082,7 @@ func TestPtrToGC(t *testing.T)
 
 ```
 searchKey: reflect_test.TestPtrToMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5093,7 +5093,7 @@ func TestPtrToMethods(t *testing.T)
 
 ```
 searchKey: reflect_test.TestReflectFuncTraceback
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5104,7 +5104,7 @@ func TestReflectFuncTraceback(t *testing.T)
 
 ```
 searchKey: reflect_test.TestReflectMethodTraceback
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5115,7 +5115,7 @@ func TestReflectMethodTraceback(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSelect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5126,7 +5126,7 @@ func TestSelect(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSelectMaxCases
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5137,7 +5137,7 @@ func TestSelectMaxCases(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSelectNop
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5148,7 +5148,7 @@ func TestSelectNop(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5159,7 +5159,7 @@ func TestSet(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSetBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5170,7 +5170,7 @@ func TestSetBytes(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSetLenCap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5181,7 +5181,7 @@ func TestSetLenCap(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSetPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5192,7 +5192,7 @@ func TestSetPanic(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSetValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5203,7 +5203,7 @@ func TestSetValue(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSlice
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5214,7 +5214,7 @@ func TestSlice(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSlice3
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5225,7 +5225,7 @@ func TestSlice3(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSliceOf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5236,7 +5236,7 @@ func TestSliceOf(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSliceOfGC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5247,7 +5247,7 @@ func TestSliceOfGC(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSliceOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5258,7 +5258,7 @@ func TestSliceOverflow(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSmallNegativeInt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5269,7 +5269,7 @@ func TestSmallNegativeInt(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSmallZero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5280,7 +5280,7 @@ func TestSmallZero(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructArg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5291,7 +5291,7 @@ func TestStructArg(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructOf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5302,7 +5302,7 @@ func TestStructOf(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructOfAlg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5313,7 +5313,7 @@ func TestStructOfAlg(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructOfDifferentPkgPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5324,7 +5324,7 @@ func TestStructOfDifferentPkgPath(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructOfDirectIface
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5335,7 +5335,7 @@ func TestStructOfDirectIface(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructOfExportRules
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5346,7 +5346,7 @@ func TestStructOfExportRules(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructOfFieldName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5357,7 +5357,7 @@ func TestStructOfFieldName(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructOfGC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5368,7 +5368,7 @@ func TestStructOfGC(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructOfGenericAlg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5379,7 +5379,7 @@ func TestStructOfGenericAlg(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructOfTooManyFields
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5390,7 +5390,7 @@ func TestStructOfTooManyFields(t *testing.T)
 
 ```
 searchKey: reflect_test.TestStructOfWithInterface
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5401,7 +5401,7 @@ func TestStructOfWithInterface(t *testing.T)
 
 ```
 searchKey: reflect_test.TestSwapper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5412,7 +5412,7 @@ func TestSwapper(t *testing.T)
 
 ```
 searchKey: reflect_test.TestTagGet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5423,7 +5423,7 @@ func TestTagGet(t *testing.T)
 
 ```
 searchKey: reflect_test.TestTypeFieldOutOfRangePanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5436,7 +5436,7 @@ Issue 15046.
 
 ```
 searchKey: reflect_test.TestTypeOf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5447,7 +5447,7 @@ func TestTypeOf(t *testing.T)
 
 ```
 searchKey: reflect_test.TestTypeOfTypeOf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5458,7 +5458,7 @@ func TestTypeOfTypeOf(t *testing.T)
 
 ```
 searchKey: reflect_test.TestTypeStrings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5469,7 +5469,7 @@ func TestTypeStrings(t *testing.T)
 
 ```
 searchKey: reflect_test.TestTypelinksSorted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5480,7 +5480,7 @@ func TestTypelinksSorted(t *testing.T)
 
 ```
 searchKey: reflect_test.TestTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5491,7 +5491,7 @@ func TestTypes(t *testing.T)
 
 ```
 searchKey: reflect_test.TestUnaddressableField
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5506,7 +5506,7 @@ This ensures that unexported fields cannot be modified by other packages.
 
 ```
 searchKey: reflect_test.TestUnexported
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5517,7 +5517,7 @@ func TestUnexported(t *testing.T)
 
 ```
 searchKey: reflect_test.TestUnexportedMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5528,7 +5528,7 @@ func TestUnexportedMethods(t *testing.T)
 
 ```
 searchKey: reflect_test.TestValueString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5539,7 +5539,7 @@ func TestValueString(t *testing.T)
 
 ```
 searchKey: reflect_test.TestValueToString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5550,7 +5550,7 @@ func TestValueToString(t *testing.T)
 
 ```
 searchKey: reflect_test.TestVariadic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5561,7 +5561,7 @@ func TestVariadic(t *testing.T)
 
 ```
 searchKey: reflect_test.TestVariadicMethodValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5572,7 +5572,7 @@ func TestVariadicMethodValue(t *testing.T)
 
 ```
 searchKey: reflect_test.TestVariadicType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5583,7 +5583,7 @@ func TestVariadicType(t *testing.T)
 
 ```
 searchKey: reflect_test.TestZeroSet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5594,7 +5594,7 @@ func TestZeroSet(t *testing.T)
 
 ```
 searchKey: reflect_test.assert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5605,7 +5605,7 @@ func assert(t *testing.T, s, want string)
 
 ```
 searchKey: reflect_test.check2ndField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5616,7 +5616,7 @@ func check2ndField(x interface{}, offs uintptr, t *testing.T)
 
 ```
 searchKey: reflect_test.checkSameType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5640,7 +5640,7 @@ clobber tries to clobber unreachable memory.
 
 ```
 searchKey: reflect_test.fieldIndexRecover
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5651,7 +5651,7 @@ func fieldIndexRecover(t Type, i int) (recovered interface{})
 
 ```
 searchKey: reflect_test.fmtSelect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5675,7 +5675,7 @@ func init()
 
 ```
 searchKey: reflect_test.isNonNil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5686,7 +5686,7 @@ func isNonNil(x interface{})
 
 ```
 searchKey: reflect_test.isValid
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5697,7 +5697,7 @@ func isValid(v Value)
 
 ```
 searchKey: reflect_test.iterateToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5710,7 +5710,7 @@ iterateToString returns the set of elements returned by an iterator in readable 
 
 ```
 searchKey: reflect_test.join
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5721,7 +5721,7 @@ func join(b ...[]byte) []byte
 
 ```
 searchKey: reflect_test.lit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5732,7 +5732,7 @@ func lit(x ...byte) []byte
 
 ```
 searchKey: reflect_test.noAlloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5743,7 +5743,7 @@ func noAlloc(t *testing.T, n int, f func(int))
 
 ```
 searchKey: reflect_test.rep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5754,7 +5754,7 @@ func rep(n int, b []byte) []byte
 
 ```
 searchKey: reflect_test.runSelect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5767,7 +5767,7 @@ runSelect runs a single select test. It returns the values returned by Select bu
 
 ```
 searchKey: reflect_test.sameInts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5789,7 +5789,7 @@ func selectWatcher()
 
 ```
 searchKey: reflect_test.shouldPanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5800,7 +5800,7 @@ func shouldPanic(expect string, f func())
 
 ```
 searchKey: reflect_test.takesEmpty
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5811,7 +5811,7 @@ func takesEmpty(e emptyStruct)
 
 ```
 searchKey: reflect_test.takesNonEmpty
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5822,7 +5822,7 @@ func takesNonEmpty(n nonEmptyStruct) int
 
 ```
 searchKey: reflect_test.testType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5833,7 +5833,7 @@ func testType(t *testing.T, i int, typ Type, want string)
 
 ```
 searchKey: reflect_test.useStack
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5846,7 +5846,7 @@ use about n KB of stack
 
 ```
 searchKey: reflect_test.valueToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5859,7 +5859,7 @@ valueToString returns a textual representation of the reflection value val. For 
 
 ```
 searchKey: reflect_test.verifyGCBits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5870,7 +5870,7 @@ func verifyGCBits(t *testing.T, typ Type, bits []byte)
 
 ```
 searchKey: reflect_test.verifyGCBitsSlice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

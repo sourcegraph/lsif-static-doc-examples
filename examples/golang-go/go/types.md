@@ -887,7 +887,7 @@ For a tutorial, see [https://golang.org/s/types-tutorial](https://golang.org/s/t
     * [func hasNil(typ Type) bool](#hasNil)
     * [func includes(list []Type, typ Type) bool](#includes)
     * [func init()](#init.expr.go)
-    * [func init()](#init.expr.go.0xc035e77db0)
+    * [func init()](#init.expr.go.0xc059243bb0)
     * [func init()](#init.type.go)
     * [func init()](#init.universe.go)
     * [func instantiatedHash(typ *Named, targs []Type) string](#instantiatedHash)
@@ -956,10 +956,6 @@ For a tutorial, see [https://golang.org/s/types-tutorial](https://golang.org/s/t
 
 
 ## <a id="const" href="#const">Constants</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Bool" href="#Bool">const Bool</a>
 
@@ -4956,10 +4952,6 @@ func ReturnOne() int {
 ```
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Typ" href="#Typ">var Typ</a>
 
 ```
@@ -5366,10 +5358,6 @@ var universeRune *Basic // int32 alias, but has name "rune"
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Array" href="#Array">type Array struct</a>
 
 ```
@@ -5390,7 +5378,7 @@ An Array represents an array type.
 
 ```
 searchKey: types.NewArray
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5403,7 +5391,7 @@ NewArray returns a new array type for the given element type and length. A negat
 
 ```
 searchKey: types.asArray
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5414,7 +5402,7 @@ func asArray(t Type) *Array
 
 ```
 searchKey: types.Array.Elem
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5427,7 +5415,7 @@ Elem returns element type of array a.
 
 ```
 searchKey: types.Array.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5440,7 +5428,7 @@ Len returns the length of array a. A negative result indicates an unknown length
 
 ```
 searchKey: types.Array.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5451,7 +5439,7 @@ func (t *Array) String() string
 
 ```
 searchKey: types.Array.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5479,7 +5467,7 @@ A Basic represents a basic type.
 
 ```
 searchKey: types.asBasic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5490,7 +5478,7 @@ func asBasic(t Type) *Basic
 
 ```
 searchKey: types.Basic.Info
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5503,7 +5491,7 @@ Info returns information about properties of basic type b.
 
 ```
 searchKey: types.Basic.Kind
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5516,7 +5504,7 @@ Kind returns the kind of basic type b.
 
 ```
 searchKey: types.Basic.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5529,7 +5517,7 @@ Name returns the name of basic type b.
 
 ```
 searchKey: types.Basic.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5542,7 +5530,7 @@ Type-specific implementations of String.
 
 ```
 searchKey: types.Basic.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5597,7 +5585,7 @@ A Builtin represents a built-in function. Builtins don't have a valid type.
 
 ```
 searchKey: types.newBuiltin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5608,7 +5596,7 @@ func newBuiltin(id builtinId) *Builtin
 
 ```
 searchKey: types.Builtin.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5635,7 +5623,7 @@ A Chan represents a channel type.
 
 ```
 searchKey: types.NewChan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5648,7 +5636,7 @@ NewChan returns a new channel type for the given direction and element type.
 
 ```
 searchKey: types.asChan
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5659,7 +5647,7 @@ func asChan(t Type) *Chan
 
 ```
 searchKey: types.Chan.Dir
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5672,7 +5660,7 @@ Dir returns the direction of channel c.
 
 ```
 searchKey: types.Chan.Elem
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5685,7 +5673,7 @@ Elem returns the element type of channel c.
 
 ```
 searchKey: types.Chan.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5696,7 +5684,7 @@ func (t *Chan) String() string
 
 ```
 searchKey: types.Chan.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5775,7 +5763,7 @@ A Checker maintains the state of the type checker. It must be created with NewCh
 
 ```
 searchKey: types.NewChecker
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6021,7 +6009,7 @@ func (check *Checker) checkFiles(files []*ast.File) (err error)
 
 ```
 searchKey: types.Checker.closeScope
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6043,7 +6031,7 @@ func (check *Checker) collectMethods(obj *TypeName)
 
 ```
 searchKey: types.Checker.collectObjects
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6665,7 +6653,7 @@ initFiles initializes the files-specific portion of checker. The provided files 
 
 ```
 searchKey: types.Checker.initOrder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7060,7 +7048,7 @@ overflow checks that the constant x is representable by its type. For untyped co
 
 ```
 searchKey: types.Checker.packageObjects
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7073,7 +7061,7 @@ packageObjects typechecks all package objects, but not function bodies.
 
 ```
 searchKey: types.Checker.pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7248,7 +7236,7 @@ func (check *Checker) recordTypeAndValue(x ast.Expr, mode operandMode, typ Type,
 
 ```
 searchKey: types.Checker.recordUntyped
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7647,7 +7635,7 @@ unpackRecv unpacks a receiver type and returns its components: ptr indicates whe
 
 ```
 searchKey: types.Checker.unusedImports
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7928,7 +7916,7 @@ A Const represents a declared constant.
 
 ```
 searchKey: types.NewConst
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7941,7 +7929,7 @@ NewConst returns a new constant with value val. The remaining arguments set the 
 
 ```
 searchKey: types.Const.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7952,7 +7940,7 @@ func (obj *Const) String() string
 
 ```
 searchKey: types.Const.Val
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7965,7 +7953,7 @@ Val returns the constant's value.
 
 ```
 searchKey: types.Const.isDependency
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8003,7 +7991,7 @@ An Error describes a type-checking error; it implements the error interface. A "
 
 ```
 searchKey: types.Error.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8032,7 +8020,7 @@ A Func represents a declared function, concrete method, or abstract (interface) 
 
 ```
 searchKey: types.MissingMethod
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8047,7 +8035,7 @@ For non-interface types V, or if static is set, V implements T if all methods of
 
 ```
 searchKey: types.NewFunc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8060,7 +8048,7 @@ NewFunc returns a new function with the given signature, representing the functi
 
 ```
 searchKey: types.lookupMethod
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -8073,7 +8061,7 @@ lookupMethod returns the index of and method with matching package and name, or 
 
 ```
 searchKey: types.Func.FullName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8086,7 +8074,7 @@ FullName returns the package- or receiver-type-qualified name of function or met
 
 ```
 searchKey: types.Func.Scope
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8099,7 +8087,7 @@ Scope returns the scope of the function's body block.
 
 ```
 searchKey: types.Func.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8110,7 +8098,7 @@ func (obj *Func) String() string
 
 ```
 searchKey: types.Func.isDependency
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8328,7 +8316,7 @@ An Initializer describes a package-level variable, or a list of variables in cas
 
 ```
 searchKey: types.Initializer.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8361,7 +8349,7 @@ An Interface represents an interface type.
 
 ```
 searchKey: types.NewInterface
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -8376,7 +8364,7 @@ Deprecated: Use NewInterfaceType instead which allows any (even non-defined) int
 
 ```
 searchKey: types.NewInterfaceType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8389,7 +8377,7 @@ NewInterfaceType returns a new (incomplete) interface for the given methods and 
 
 ```
 searchKey: types.asInterface
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -8400,7 +8388,7 @@ func asInterface(t Type) *Interface
 
 ```
 searchKey: types.Interface.Complete
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8441,7 +8429,7 @@ EmbeddedType returns the i'th embedded type of interface t for 0 <= i < t.NumEmb
 
 ```
 searchKey: types.Interface.Empty
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8480,7 +8468,7 @@ Method returns the i'th method of interface t for 0 <= i < t.NumMethods(). The m
 
 ```
 searchKey: types.Interface.NumEmbeddeds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8493,7 +8481,7 @@ NumEmbeddeds returns the number of embedded types in interface t.
 
 ```
 searchKey: types.Interface.NumExplicitMethods
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8506,7 +8494,7 @@ NumExplicitMethods returns the number of explicitly declared methods of interfac
 
 ```
 searchKey: types.Interface.NumMethods
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8519,7 +8507,7 @@ NumMethods returns the total number of methods of interface t. The interface mus
 
 ```
 searchKey: types.Interface.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8530,7 +8518,7 @@ func (t *Interface) String() string
 
 ```
 searchKey: types.Interface.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8541,7 +8529,7 @@ func (t *Interface) Underlying() Type
 
 ```
 searchKey: types.Interface.assertCompleteness
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8595,7 +8583,7 @@ iterate calls f with t and then with any embedded interface of t, recursively, u
 
 ```
 searchKey: types.Interface._HasTypeList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8608,7 +8596,7 @@ _HasTypeList reports whether interface t has a type list, possibly from an embed
 
 ```
 searchKey: types.Interface._IsComparable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8621,7 +8609,7 @@ _IsComparable reports whether interface t is or embeds the predeclared interface
 
 ```
 searchKey: types.Interface._IsConstraint
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8650,7 +8638,7 @@ A Label represents a declared label. Labels don't have a type.
 
 ```
 searchKey: types.NewLabel
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8663,7 +8651,7 @@ NewLabel returns a new label.
 
 ```
 searchKey: types.Label.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8689,7 +8677,7 @@ A Map represents a map type.
 
 ```
 searchKey: types.NewMap
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8702,7 +8690,7 @@ NewMap returns a new map for the given key and element types.
 
 ```
 searchKey: types.asMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -8713,7 +8701,7 @@ func asMap(t Type) *Map
 
 ```
 searchKey: types.Map.Elem
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8726,7 +8714,7 @@ Elem returns the element type of map m.
 
 ```
 searchKey: types.Map.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8739,7 +8727,7 @@ Key returns the key type of map m.
 
 ```
 searchKey: types.Map.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8750,7 +8738,7 @@ func (t *Map) String() string
 
 ```
 searchKey: types.Map.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8776,7 +8764,7 @@ A MethodSet is an ordered set of concrete or abstract (interface) methods; a met
 
 ```
 searchKey: types.NewMethodSet
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8802,7 +8790,7 @@ At returns the i'th method in s for 0 <= i < s.Len().
 
 ```
 searchKey: types.MethodSet.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8828,7 +8816,7 @@ Lookup returns the method with matching package and name, or nil if not found.
 
 ```
 searchKey: types.MethodSet.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8861,7 +8849,7 @@ A Named represents a named (defined) type.
 
 ```
 searchKey: types.NewNamed
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8874,7 +8862,7 @@ NewNamed returns a new named type for the given type name, underlying type, and 
 
 ```
 searchKey: types.asNamed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -8911,7 +8899,7 @@ Method returns the i'th method of named type t for 0 <= i < t.NumMethods().
 
 ```
 searchKey: types.Named.NumMethods
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8924,7 +8912,7 @@ NumMethods returns the number of explicit methods whose receiver is named type t
 
 ```
 searchKey: types.Named.Obj
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8950,7 +8938,7 @@ SetUnderlying sets the underlying type and marks t as complete.
 
 ```
 searchKey: types.Named.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8961,7 +8949,7 @@ func (t *Named) String() string
 
 ```
 searchKey: types.Named.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8983,7 +8971,7 @@ func (n *Named) setUnderlying(typ Type)
 
 ```
 searchKey: types.Named.under
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9009,7 +8997,7 @@ _SetTArgs sets the type arguments of Named.
 
 ```
 searchKey: types.Named._TArgs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9022,7 +9010,7 @@ _TArgs returns the type arguments after instantiation of the named type t, or ni
 
 ```
 searchKey: types.Named._TParams
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9050,7 +9038,7 @@ Nil represents the predeclared value nil.
 
 ```
 searchKey: types.Nil.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9115,7 +9103,7 @@ An Object describes a named language entity such as a package, constant, type, v
 
 ```
 searchKey: types.LookupFieldOrMethod
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9170,7 +9158,7 @@ A Package describes a Go package.
 
 ```
 searchKey: types.NewPackage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9183,7 +9171,7 @@ NewPackage returns a new Package for the given package path and name. The packag
 
 ```
 searchKey: types.Package.Complete
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9196,7 +9184,7 @@ A package is complete if its scope contains (at least) all exported objects; oth
 
 ```
 searchKey: types.Package.Imports
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9211,7 +9199,7 @@ If pkg was loaded from export data, Imports includes packages that provide packa
 
 ```
 searchKey: types.Package.MarkComplete
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9224,7 +9212,7 @@ MarkComplete marks a package as complete.
 
 ```
 searchKey: types.Package.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9237,7 +9225,7 @@ Name returns the package name.
 
 ```
 searchKey: types.Package.Path
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9250,7 +9238,7 @@ Path returns the package path.
 
 ```
 searchKey: types.Package.Scope
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9289,7 +9277,7 @@ SetName sets the package name.
 
 ```
 searchKey: types.Package.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9317,7 +9305,7 @@ A PkgName represents an imported Go package. PkgNames don't have a type.
 
 ```
 searchKey: types.NewPkgName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9330,7 +9318,7 @@ NewPkgName returns a new PkgName object representing an imported package. The re
 
 ```
 searchKey: types.PkgName.Imported
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9343,7 +9331,7 @@ Imported returns the package that was imported. It is distinct from Pkg(), which
 
 ```
 searchKey: types.PkgName.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9369,7 +9357,7 @@ A Pointer represents a pointer type.
 
 ```
 searchKey: types.NewPointer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9382,7 +9370,7 @@ NewPointer returns a new pointer type for the given element (base) type.
 
 ```
 searchKey: types.asPointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9393,7 +9381,7 @@ func asPointer(t Type) *Pointer
 
 ```
 searchKey: types.Pointer.Elem
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9406,7 +9394,7 @@ Elem returns the element type for the given pointer p.
 
 ```
 searchKey: types.Pointer.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9417,7 +9405,7 @@ func (t *Pointer) String() string
 
 ```
 searchKey: types.Pointer.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9445,7 +9433,7 @@ Using a nil Qualifier is equivalent to using (*Package).Path: the object is qual
 
 ```
 searchKey: types.RelativeTo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9478,7 +9466,7 @@ A Scope maintains a set of objects and links to its containing (parent) and cont
 
 ```
 searchKey: types.NewScope
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9517,7 +9505,7 @@ Contains reports whether pos is within the scope's extent. The result is guarant
 
 ```
 searchKey: types.Scope.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9554,7 +9542,7 @@ Insert attempts to insert an object obj into scope s. If s already contains an a
 
 ```
 searchKey: types.Scope.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9595,7 +9583,7 @@ Note that obj.Parent() may be different from the returned scope if the object wa
 
 ```
 searchKey: types.Scope.Names
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9608,7 +9596,7 @@ Names returns the scope's element names in sorted order.
 
 ```
 searchKey: types.Scope.NumChildren
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9621,7 +9609,7 @@ NumChildren returns the number of scopes nested in s.
 
 ```
 searchKey: types.Scope.Parent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9634,7 +9622,7 @@ Parent returns the scope's containing (parent) scope.
 
 ```
 searchKey: types.Scope.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9647,7 +9635,7 @@ Pos and End describe the scope's source code extent [pos, end). The results are 
 
 ```
 searchKey: types.Scope.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9722,7 +9710,7 @@ T.m         MethodExpr    T       m      func(T)    {1, 0}    false
 
 ```
 searchKey: types.Selection.Index
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9743,7 +9731,7 @@ The earlier index entries are the indices of the embedded fields implicitly trav
 
 ```
 searchKey: types.Selection.Indirect
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9756,7 +9744,7 @@ Indirect reports whether any pointer indirection was required to get from x to f
 
 ```
 searchKey: types.Selection.Kind
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9769,7 +9757,7 @@ Kind returns the selection kind.
 
 ```
 searchKey: types.Selection.Obj
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9782,7 +9770,7 @@ Obj returns the object denoted by x.f; a *Var for a field selection, and a *Func
 
 ```
 searchKey: types.Selection.Recv
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9795,7 +9783,7 @@ Recv returns the type of x in x.f.
 
 ```
 searchKey: types.Selection.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9806,7 +9794,7 @@ func (s *Selection) String() string
 
 ```
 searchKey: types.Selection.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9857,7 +9845,7 @@ A Signature represents a (non-builtin) function or method type. The receiver is 
 
 ```
 searchKey: types.NewSignature
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9870,7 +9858,7 @@ NewSignature returns a new function type for the given receiver, parameters, and
 
 ```
 searchKey: types.asSignature
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9881,7 +9869,7 @@ func asSignature(t Type) *Signature
 
 ```
 searchKey: types.makeSig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9894,7 +9882,7 @@ makeSig makes a signature for the given argument and result types. Default types
 
 ```
 searchKey: types.Signature.Params
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9907,7 +9895,7 @@ Params returns the parameters of signature s, or nil.
 
 ```
 searchKey: types.Signature.Recv
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9922,7 +9910,7 @@ For an abstract method, Recv returns the enclosing interface either as a *Named 
 
 ```
 searchKey: types.Signature.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9935,7 +9923,7 @@ Results returns the results of signature s, or nil.
 
 ```
 searchKey: types.Signature.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9946,7 +9934,7 @@ func (t *Signature) String() string
 
 ```
 searchKey: types.Signature.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9957,7 +9945,7 @@ func (t *Signature) Underlying() Type
 
 ```
 searchKey: types.Signature.Variadic
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9983,7 +9971,7 @@ _SetTParams sets the type parameters of signature s.
 
 ```
 searchKey: types.Signature._TParams
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10021,7 +10009,7 @@ Sizes defines the sizing functions for package unsafe.
 
 ```
 searchKey: types.SizesFor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10051,7 +10039,7 @@ A Slice represents a slice type.
 
 ```
 searchKey: types.NewSlice
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10064,7 +10052,7 @@ NewSlice returns a new slice type for the given element type.
 
 ```
 searchKey: types.asSlice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10075,7 +10063,7 @@ func asSlice(t Type) *Slice
 
 ```
 searchKey: types.Slice.Elem
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10088,7 +10076,7 @@ Elem returns the element type of slice s.
 
 ```
 searchKey: types.Slice.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10099,7 +10087,7 @@ func (t *Slice) String() string
 
 ```
 searchKey: types.Slice.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10193,7 +10181,7 @@ A Struct represents a struct type.
 
 ```
 searchKey: types.NewStruct
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10206,7 +10194,7 @@ NewStruct returns a new struct with the given fields and corresponding field tag
 
 ```
 searchKey: types.asStruct
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10230,7 +10218,7 @@ Field returns the i'th field for 0 <= i < NumFields().
 
 ```
 searchKey: types.Struct.NumFields
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10243,7 +10231,7 @@ NumFields returns the number of fields in the struct (including blank and embedd
 
 ```
 searchKey: types.Struct.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10267,7 +10255,7 @@ Tag returns the i'th field tag for 0 <= i < NumFields().
 
 ```
 searchKey: types.Struct.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10293,7 +10281,7 @@ A Tuple represents an ordered list of variables; a nil *Tuple is a valid (empty)
 
 ```
 searchKey: types.NewTuple
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10306,7 +10294,7 @@ NewTuple returns a new tuple for the given variables.
 
 ```
 searchKey: types.asTuple
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10330,7 +10318,7 @@ At returns the i'th variable of tuple t.
 
 ```
 searchKey: types.Tuple.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10343,7 +10331,7 @@ Len returns the number variables of tuple t.
 
 ```
 searchKey: types.Tuple.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10354,7 +10342,7 @@ func (t *Tuple) String() string
 
 ```
 searchKey: types.Tuple.Underlying
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10386,7 +10374,7 @@ A Type represents a type of Go. All types implement the Type interface.
 
 ```
 searchKey: types.Default
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10399,7 +10387,7 @@ Default returns the default "typed" type for an "untyped" type; it returns the i
 
 ```
 searchKey: types.deref
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10412,7 +10400,7 @@ deref dereferences typ if it is a *Pointer and returns its base and true. Otherw
 
 ```
 searchKey: types.derefStructPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10425,7 +10413,7 @@ derefStructPtr dereferences typ if it is a (named or unnamed) pointer to a (name
 
 ```
 searchKey: types.expand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10438,7 +10426,7 @@ expand expands a type instance into its instantiated type and leaves all other t
 
 ```
 searchKey: types.implicitArrayDeref
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10451,7 +10439,7 @@ implicitArrayDeref returns A if typ is of the form *A and A is an array; otherwi
 
 ```
 searchKey: types.intersect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10464,7 +10452,7 @@ intersect computes the intersection of the types x and y. Note: A incomming nil 
 
 ```
 searchKey: types.optype
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10477,7 +10465,7 @@ optype returns a type's operational type. Except for type parameters, the operat
 
 ```
 searchKey: types.under
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10490,7 +10478,7 @@ under returns the true expanded underlying type. If it doesn't exist, the result
 
 ```
 searchKey: types._NewSum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10520,7 +10508,7 @@ TypeAndValue reports the type and value (for constants) of the corresponding exp
 
 ```
 searchKey: types.Eval
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10535,7 +10523,7 @@ The meaning of the parameters fset, pkg, and pos is the same as in CheckExpr. An
 
 ```
 searchKey: types.TypeAndValue.Addressable
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10548,7 +10536,7 @@ Addressable reports whether the corresponding expression is addressable ([https:
 
 ```
 searchKey: types.TypeAndValue.Assignable
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10561,7 +10549,7 @@ Assignable reports whether the corresponding expression is assignable to (provid
 
 ```
 searchKey: types.TypeAndValue.HasOk
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10574,7 +10562,7 @@ HasOk reports whether the corresponding expression may be used on the rhs of a c
 
 ```
 searchKey: types.TypeAndValue.IsBuiltin
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10587,7 +10575,7 @@ IsBuiltin reports whether the corresponding expression denotes a (possibly paren
 
 ```
 searchKey: types.TypeAndValue.IsNil
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10600,7 +10588,7 @@ IsNil reports whether the corresponding expression denotes the predeclared value
 
 ```
 searchKey: types.TypeAndValue.IsType
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10613,7 +10601,7 @@ IsType reports whether the corresponding expression specifies a type.
 
 ```
 searchKey: types.TypeAndValue.IsValue
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10626,7 +10614,7 @@ IsValue reports whether the corresponding expression is a value. Builtins are no
 
 ```
 searchKey: types.TypeAndValue.IsVoid
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10654,7 +10642,7 @@ A TypeName represents a name for a (defined or alias) type.
 
 ```
 searchKey: types.NewTypeName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10669,7 +10657,7 @@ The typ argument may be a defined (Named) type or an alias type. It may also be 
 
 ```
 searchKey: types.TypeName.IsAlias
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10682,7 +10670,7 @@ IsAlias reports whether obj is an alias name for a type.
 
 ```
 searchKey: types.TypeName.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10711,7 +10699,7 @@ A Variable represents a declared variable (including function parameters and res
 
 ```
 searchKey: types.NewField
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10724,7 +10712,7 @@ NewField returns a new variable representing a struct field. For embedded fields
 
 ```
 searchKey: types.NewParam
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10737,7 +10725,7 @@ NewParam returns a new variable representing a function parameter.
 
 ```
 searchKey: types.NewVar
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10750,7 +10738,7 @@ NewVar returns a new variable. The arguments set the attributes found with all O
 
 ```
 searchKey: types.Var.Anonymous
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10763,7 +10751,7 @@ Anonymous reports whether the variable is an embedded field. Same as Embedded; o
 
 ```
 searchKey: types.Var.Embedded
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10776,7 +10764,7 @@ Embedded reports whether the variable is an embedded field.
 
 ```
 searchKey: types.Var.IsField
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10789,7 +10777,7 @@ IsField reports whether the variable is a struct field.
 
 ```
 searchKey: types.Var.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10800,7 +10788,7 @@ func (obj *Var) String() string
 
 ```
 searchKey: types.Var.isDependency
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10824,7 +10812,7 @@ atPos wraps a token.Pos to implement the positioner interface.
 
 ```
 searchKey: types.atPos.Pos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10917,7 +10905,7 @@ bottom represents the bottom of the type lattice. It is the underlying type of a
 
 ```
 searchKey: types.bottom.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10928,7 +10916,7 @@ func (t *bottom) String() string
 
 ```
 searchKey: types.bottom.Underlying
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10965,7 +10953,7 @@ byUniqueMethodName method lists can be sorted by their unique method names.
 
 ```
 searchKey: types.byUniqueMethodName.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11011,7 +10999,7 @@ byUniqueTypeName named type lists can be sorted by their unique type names.
 
 ```
 searchKey: types.byUniqueTypeName.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11057,7 +11045,7 @@ color encodes the color of an object (see Checker.objDecl for details).
 
 ```
 searchKey: types.colorFor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11070,7 +11058,7 @@ colorFor returns the (initial) color for an object depending on whether its type
 
 ```
 searchKey: types.color.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11098,7 +11086,7 @@ type constDecl struct {
 
 ```
 searchKey: types.constDecl.node
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11195,7 +11183,7 @@ addDep adds obj to the set of objects d's init expression depends on.
 
 ```
 searchKey: types.declInfo.hasInitializer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11311,7 +11299,7 @@ type funcDecl struct{ decl *ast.FuncDecl }
 
 ```
 searchKey: types.funcDecl.node
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11378,7 +11366,7 @@ type importDecl struct{ spec *ast.ImportSpec }
 
 ```
 searchKey: types.importDecl.node
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11417,7 +11405,7 @@ inSourceOrder implements the sort.Sort interface.
 
 ```
 searchKey: types.inSourceOrder.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11470,7 +11458,7 @@ An instance represents an instantiated generic type syntactically (without expan
 
 ```
 searchKey: types.instance.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11481,7 +11469,7 @@ func (t *instance) String() string
 
 ```
 searchKey: types.instance.Underlying
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11492,7 +11480,7 @@ func (t *instance) Underlying() Type
 
 ```
 searchKey: types.instance.expand
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11545,7 +11533,7 @@ nodeQueue implements the container/heap interface; a nodeQueue may be used as a 
 
 ```
 searchKey: types.nodeQueue.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11567,7 +11555,7 @@ func (a nodeQueue) Less(i, j int) bool
 
 ```
 searchKey: types.nodeQueue.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11644,7 +11632,7 @@ An object implements the common parts of an Object.
 
 ```
 searchKey: types.object.Exported
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11657,7 +11645,7 @@ Exported reports whether the object is exported (starts with a capital letter). 
 
 ```
 searchKey: types.object.Id
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11670,7 +11658,7 @@ Id is a wrapper for Id(obj.Pkg(), obj.Name()).
 
 ```
 searchKey: types.object.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11683,7 +11671,7 @@ Name returns the object's (package-local, unqualified) name.
 
 ```
 searchKey: types.object.Parent
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11696,7 +11684,7 @@ Parent returns the scope in which the object is declared. The result is nil for 
 
 ```
 searchKey: types.object.Pkg
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11709,7 +11697,7 @@ Pkg returns the package to which the object belongs. The result is nil for label
 
 ```
 searchKey: types.object.Pos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11722,7 +11710,7 @@ Pos returns the declaration position of the object's identifier.
 
 ```
 searchKey: types.object.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11733,7 +11721,7 @@ func (obj *object) String() string
 
 ```
 searchKey: types.object.Type
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11746,7 +11734,7 @@ Type returns the object's type.
 
 ```
 searchKey: types.object.color
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11757,7 +11745,7 @@ func (obj *object) color() color
 
 ```
 searchKey: types.object.order
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11779,7 +11767,7 @@ func (obj *object) sameId(pkg *Package, name string) bool
 
 ```
 searchKey: types.object.scopePos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11902,7 +11890,7 @@ An operand represents an intermediate value during type checking. Operands have 
 
 ```
 searchKey: types.operand.Pos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11915,7 +11903,7 @@ Pos returns the position of the expression corresponding to x. If x is invalid t
 
 ```
 searchKey: types.operand.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11952,7 +11940,7 @@ convertibleTo reports whether T(x) is valid. The check parameter may be nil if c
 
 ```
 searchKey: types.operand.isNil
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12006,7 +11994,7 @@ posSpan holds a position range along with a highlighted position within that ran
 
 ```
 searchKey: types.inNode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12019,7 +12007,7 @@ inNode creates a posSpan for the given node. Invariant: node.Pos() <= pos < node
 
 ```
 searchKey: types.spanOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12032,7 +12020,7 @@ spanOf extracts an error span from the given positioner. By default this is the 
 
 ```
 searchKey: types.posSpan.Pos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12176,7 +12164,7 @@ type substMap struct {
 
 ```
 searchKey: types.makeSubstMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12189,7 +12177,7 @@ makeSubstMap creates a new substitution map mapping tpars[i] to targs[i]. If tar
 
 ```
 searchKey: types.substMap.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12200,7 +12188,7 @@ func (m *substMap) String() string
 
 ```
 searchKey: types.substMap.empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12341,7 +12329,7 @@ top represents the top of the type lattice. It is the underlying type of a type 
 
 ```
 searchKey: types.top.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12352,7 +12340,7 @@ func (t *top) String() string
 
 ```
 searchKey: types.top.Underlying
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12423,7 +12411,7 @@ A tparamsList describes a list of type parameters and the types inferred for the
 
 ```
 searchKey: types.tparamsList.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12501,7 +12489,7 @@ setIndex sets the type slot index for the i'th type parameter (and all its joine
 
 ```
 searchKey: types.tparamsList.types
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12525,7 +12513,7 @@ type typeDecl struct{ spec *ast.TypeSpec }
 
 ```
 searchKey: types.typeDecl.node
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12565,7 +12553,7 @@ A unifier maintains the current type parameters for x and y and the respective t
 
 ```
 searchKey: types.newUnifier
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12669,7 +12657,7 @@ type varDecl struct{ spec *ast.ValueSpec }
 
 ```
 searchKey: types.varDecl.node
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12693,7 +12681,7 @@ type version struct {
 
 ```
 searchKey: types.parseGoVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12737,7 +12725,7 @@ A _Sum represents a set of possible types. Sums are currently used to represent 
 
 ```
 searchKey: types.asSum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12748,7 +12736,7 @@ func asSum(t Type) *_Sum
 
 ```
 searchKey: types._Sum.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12759,7 +12747,7 @@ func (t *_Sum) String() string
 
 ```
 searchKey: types._Sum.Underlying
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12802,7 +12790,7 @@ A _TypeParam represents a type parameter type.
 
 ```
 searchKey: types.asTypeParam
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12813,7 +12801,7 @@ func asTypeParam(t Type) *_TypeParam
 
 ```
 searchKey: types._TypeParam.Bound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12824,7 +12812,7 @@ func (t *_TypeParam) Bound() *Interface
 
 ```
 searchKey: types._TypeParam.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12835,7 +12823,7 @@ func (t *_TypeParam) String() string
 
 ```
 searchKey: types._TypeParam.Underlying
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12844,15 +12832,11 @@ func (t *_TypeParam) Underlying() Type
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AssertableTo" href="#AssertableTo">func AssertableTo(V *Interface, T Type) bool</a>
 
 ```
 searchKey: types.AssertableTo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12865,7 +12849,7 @@ AssertableTo reports whether a value of type V can be asserted to have type T.
 
 ```
 searchKey: types.AssignableTo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12878,7 +12862,7 @@ AssignableTo reports whether a value of type V is assignable to a variable of ty
 
 ```
 searchKey: types.CheckExpr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12897,7 +12881,7 @@ Note: Eval and CheckExpr should not be used instead of running Check to compute 
 
 ```
 searchKey: types.Comparable
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12910,7 +12894,7 @@ Comparable reports whether values of type T are comparable.
 
 ```
 searchKey: types.ConvertibleTo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12936,7 +12920,7 @@ DefPredeclaredTestFuncs defines the assert and trace built-ins. These built-ins 
 
 ```
 searchKey: types.ExprString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12949,7 +12933,7 @@ ExprString returns the (possibly shortened) string representation for x. Shorten
 
 ```
 searchKey: types.Id
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12962,7 +12946,7 @@ Id returns name if it is exported, otherwise it returns the name qualified with 
 
 ```
 searchKey: types.Identical
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12975,7 +12959,7 @@ Identical reports whether x and y are identical types. Receivers of Signature ty
 
 ```
 searchKey: types.IdenticalIgnoreTags
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12988,7 +12972,7 @@ IdenticalIgnoreTags reports whether x and y are identical types if tags are igno
 
 ```
 searchKey: types.Implements
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -13001,7 +12985,7 @@ Implements reports whether type V implements interface T.
 
 ```
 searchKey: types.IsInterface
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -13014,7 +12998,7 @@ IsInterface reports whether typ is an interface type.
 
 ```
 searchKey: types.ObjectString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -13040,7 +13024,7 @@ Upon calling ResetId, nextId starts with 1 again. It may be called concurrently.
 
 ```
 searchKey: types.SelectionString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -13061,7 +13045,7 @@ Examples:
 
 ```
 searchKey: types.SetGoVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13074,7 +13058,7 @@ SetGoVersion sets the unexported goVersion field on config, so that tests which 
 
 ```
 searchKey: types.TestAssignOp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13085,7 +13069,7 @@ func TestAssignOp(t *testing.T)
 
 ```
 searchKey: types.TestEmbeddedMethod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13098,7 +13082,7 @@ TestEmbeddedMethod checks that an embedded method is represented by the same Fun
 
 ```
 searchKey: types.TestIsAlias
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13109,7 +13093,7 @@ func TestIsAlias(t *testing.T)
 
 ```
 searchKey: types.TestSizeof
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13122,7 +13106,7 @@ Signal size changes of important structures.
 
 ```
 searchKey: types.TestStripAnnotations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13133,7 +13117,7 @@ func TestStripAnnotations(t *testing.T)
 
 ```
 searchKey: types.TestZeroTok
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -13144,7 +13128,7 @@ func TestZeroTok(t *testing.T)
 
 ```
 searchKey: types.TypeString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -13157,7 +13141,7 @@ TypeString returns the string representation of typ. The Qualifier controls the 
 
 ```
 searchKey: types.WriteExpr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -13170,7 +13154,7 @@ WriteExpr writes the (possibly shortened) string representation for x to buf. Sh
 
 ```
 searchKey: types.WriteSignature
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -13183,7 +13167,7 @@ WriteSignature writes the representation of the signature sig to buf, without a 
 
 ```
 searchKey: types.WriteType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -13196,7 +13180,7 @@ WriteType writes the string representation of typ to buf. The Qualifier controls
 
 ```
 searchKey: types.align
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13209,7 +13193,7 @@ align returns the smallest y >= x such that y % a == 0.
 
 ```
 searchKey: types.assert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13220,7 +13204,7 @@ func assert(p bool)
 
 ```
 searchKey: types.assertSortedMethods
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13231,7 +13215,7 @@ func assertSortedMethods(list []*Func)
 
 ```
 searchKey: types.assignOp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13242,7 +13226,7 @@ func assignOp(op token.Token) token.Token
 
 ```
 searchKey: types.comparable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13253,7 +13237,7 @@ func comparable(T Type, seen map[Type]bool) bool
 
 ```
 searchKey: types.concat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13266,7 +13250,7 @@ concat returns the result of concatenating list and i. The result does not share
 
 ```
 searchKey: types.def
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13334,7 +13318,7 @@ func defPredeclaredTypes()
 
 ```
 searchKey: types.dependencyGraph
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13347,7 +13331,7 @@ dependencyGraph computes the object dependency graph from the given objMap, with
 
 ```
 searchKey: types.dir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13360,7 +13344,7 @@ dir makes a good-faith attempt to return the directory portion of path. If path 
 
 ```
 searchKey: types.embeddedFieldIdent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13371,7 +13355,7 @@ func embeddedFieldIdent(e ast.Expr) *ast.Ident
 
 ```
 searchKey: types.fieldIndex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13384,7 +13368,7 @@ fieldIndex returns the index for the field with matching package and name, or a 
 
 ```
 searchKey: types.findPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13397,7 +13381,7 @@ findPath returns the (reversed) list of objects []Object{to, ... from} such that
 
 ```
 searchKey: types.firstInSrc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13410,7 +13394,7 @@ firstInSrc reports the index of the object with the "smallest" source position i
 
 ```
 searchKey: types.fitsFloat32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13421,7 +13405,7 @@ func fitsFloat32(x constant.Value) bool
 
 ```
 searchKey: types.fitsFloat64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13432,7 +13416,7 @@ func fitsFloat64(x constant.Value) bool
 
 ```
 searchKey: types.getInferred
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13443,7 +13427,7 @@ func getInferred(info *Info) map[ast.Expr]_Inferred
 
 ```
 searchKey: types.goTypeName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13456,7 +13440,7 @@ goTypeName returns the Go type name for typ and removes any occurrences of "type
 
 ```
 searchKey: types.goVal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13469,7 +13453,7 @@ goVal returns the Go value for val, or nil.
 
 ```
 searchKey: types.hasBreak
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13482,7 +13466,7 @@ hasBreak reports if s is or contains a break statement referring to the label-ed
 
 ```
 searchKey: types.hasBreakList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13493,7 +13477,7 @@ func hasBreakList(list []ast.Stmt, label string, implicit bool) bool
 
 ```
 searchKey: types.hasNil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13506,7 +13490,7 @@ hasNil reports whether a type includes the nil value.
 
 ```
 searchKey: types.includes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13526,7 +13510,7 @@ tags: [function private]
 func init()
 ```
 
-### <a id="init.expr.go.0xc035e77db0" href="#init.expr.go.0xc035e77db0">func init()</a>
+### <a id="init.expr.go.0xc059243bb0" href="#init.expr.go.0xc059243bb0">func init()</a>
 
 ```
 searchKey: types.init
@@ -13563,7 +13547,7 @@ func init()
 
 ```
 searchKey: types.instantiatedHash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13580,7 +13564,7 @@ It won't work correctly for locally declared types.
 
 ```
 searchKey: types.is
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13591,7 +13575,7 @@ func is(typ Type, what BasicInfo) bool
 
 ```
 searchKey: types.isBoolean
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13602,7 +13586,7 @@ func isBoolean(typ Type) bool
 
 ```
 searchKey: types.isBytesOrRunes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13613,7 +13597,7 @@ func isBytesOrRunes(typ Type) bool
 
 ```
 searchKey: types.isComparison
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13624,7 +13608,7 @@ func isComparison(op token.Token) bool
 
 ```
 searchKey: types.isComplex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13635,7 +13619,7 @@ func isComplex(typ Type) bool
 
 ```
 searchKey: types.isConstType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13646,7 +13630,7 @@ func isConstType(typ Type) bool
 
 ```
 searchKey: types.isFloat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13657,7 +13641,7 @@ func isFloat(typ Type) bool
 
 ```
 searchKey: types.isGeneric
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13670,7 +13654,7 @@ isGeneric reports whether a type is a generic, uninstantiated type (generic sign
 
 ```
 searchKey: types.isInteger
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13681,7 +13665,7 @@ func isInteger(typ Type) bool
 
 ```
 searchKey: types.isIntegerOrFloat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13694,7 +13678,7 @@ Note that if typ is a type parameter, isInteger(typ) || isFloat(typ) does not pr
 
 ```
 searchKey: types.isNamed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13707,7 +13691,7 @@ isNamed reports whether typ has a name. isNamed may be called with types that ar
 
 ```
 searchKey: types.isNumeric
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13718,7 +13702,7 @@ func isNumeric(typ Type) bool
 
 ```
 searchKey: types.isNumericOrString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13731,7 +13715,7 @@ isNumericOrString is the equivalent of isIntegerOrFloat for isNumeric(typ) || is
 
 ```
 searchKey: types.isOrdered
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13742,7 +13726,7 @@ func isOrdered(typ Type) bool
 
 ```
 searchKey: types.isParameterized
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13755,7 +13739,7 @@ IsParameterized reports whether typ contains any of the type parameters of tpara
 
 ```
 searchKey: types.isPointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13766,7 +13750,7 @@ func isPointer(typ Type) bool
 
 ```
 searchKey: types.isShift
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13777,7 +13761,7 @@ func isShift(op token.Token) bool
 
 ```
 searchKey: types.isString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13788,7 +13772,7 @@ func isString(typ Type) bool
 
 ```
 searchKey: types.isTyped
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13801,7 +13785,7 @@ isTyped reports whether typ is typed; i.e., not an untyped constant or boolean. 
 
 ```
 searchKey: types.isUintptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13812,7 +13796,7 @@ func isUintptr(typ Type) bool
 
 ```
 searchKey: types.isUnsafePointer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13823,7 +13807,7 @@ func isUnsafePointer(typ Type) bool
 
 ```
 searchKey: types.isUnsigned
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13834,7 +13818,7 @@ func isUnsigned(typ Type) bool
 
 ```
 searchKey: types.isUntyped
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13847,7 +13831,7 @@ isUntyped(typ) is the same as !isTyped(typ).
 
 ```
 searchKey: types.isVarName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13860,7 +13844,7 @@ isVarName reports whether x is a non-nil, non-blank (_) expression.
 
 ```
 searchKey: types.isubst
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13873,7 +13857,7 @@ isubst returns an x with identifiers substituted per the substitution map smap. 
 
 ```
 searchKey: types.keyVal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13897,7 +13881,7 @@ nextId returns a value increasing monotonically by 1 with each call, starting wi
 
 ```
 searchKey: types.opName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13914,7 +13898,7 @@ nodes?
 
 ```
 searchKey: types.operandString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13945,7 +13929,7 @@ cgofunc    <expr> (<untyped kind> <mode>                    ) cgofunc    <expr> 
 
 ```
 searchKey: types.pathString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13958,7 +13942,7 @@ pathString returns a string of the form a->b-> ... ->g for a path [a, b, ... g].
 
 ```
 searchKey: types.ptrRecv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13971,7 +13955,7 @@ ptrRecv reports whether the receiver is of the form *T.
 
 ```
 searchKey: types.rangeKeyVal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13984,7 +13968,7 @@ rangeKeyVal returns the key and value type produced by a range clause over an ex
 
 ```
 searchKey: types.representableConst
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14001,7 +13985,7 @@ The check parameter may be nil if representableConst is invoked (indirectly) thr
 
 ```
 searchKey: types.roundFloat32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14012,7 +13996,7 @@ func roundFloat32(x constant.Value) constant.Value
 
 ```
 searchKey: types.roundFloat64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14023,7 +14007,7 @@ func roundFloat64(x constant.Value) constant.Value
 
 ```
 searchKey: types.sanitizeInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14038,7 +14022,7 @@ This includes some objects that may be shared across concurrent type-checking pa
 
 ```
 searchKey: types.sortMethods
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14049,7 +14033,7 @@ func sortMethods(list []*Func)
 
 ```
 searchKey: types.sortName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14060,7 +14044,7 @@ func sortName(t Type) string
 
 ```
 searchKey: types.sortTypes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14071,7 +14055,7 @@ func sortTypes(list []Type)
 
 ```
 searchKey: types.srcimporter_setUsesCgo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14082,7 +14066,7 @@ func srcimporter_setUsesCgo(conf *Config)
 
 ```
 searchKey: types.stripAnnotations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14095,7 +14079,7 @@ stripAnnotations removes internal (type) annotations from s.
 
 ```
 searchKey: types.subscript
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14108,7 +14092,7 @@ subscript returns the decimal (utf8) representation of x using subscript digits.
 
 ```
 searchKey: types.trimTrailingEmptyStmts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14119,7 +14103,7 @@ func trimTrailingEmptyStmts(list []ast.Stmt) []ast.Stmt
 
 ```
 searchKey: types.typeListString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14130,7 +14114,7 @@ func typeListString(list []Type) string
 
 ```
 searchKey: types.typeNamesString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14143,7 +14127,7 @@ typeNamesString produces a string containing all the type names in list suitable
 
 ```
 searchKey: types.unpackType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14156,7 +14140,7 @@ unpack unpacks a type into a list of types. TODO(gri) Try to eliminate the need 
 
 ```
 searchKey: types.unparen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14180,7 +14164,7 @@ func unreachable()
 
 ```
 searchKey: types.validatedImportPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14191,7 +14175,7 @@ func validatedImportPath(path string) (string, error)
 
 ```
 searchKey: types.writeExprList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14202,7 +14186,7 @@ func writeExprList(buf *bytes.Buffer, list []ast.Expr)
 
 ```
 searchKey: types.writeFieldList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14213,7 +14197,7 @@ func writeFieldList(buf *bytes.Buffer, list []*ast.Field, sep string, iface bool
 
 ```
 searchKey: types.writeFuncName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14224,7 +14208,7 @@ func writeFuncName(buf *bytes.Buffer, f *Func, qf Qualifier)
 
 ```
 searchKey: types.writeIdentList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14235,7 +14219,7 @@ func writeIdentList(buf *bytes.Buffer, list []*ast.Ident)
 
 ```
 searchKey: types.writeObject
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14246,7 +14230,7 @@ func writeObject(buf *bytes.Buffer, obj Object, qf Qualifier)
 
 ```
 searchKey: types.writePackage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14257,7 +14241,7 @@ func writePackage(buf *bytes.Buffer, pkg *Package, qf Qualifier)
 
 ```
 searchKey: types.writeSigExpr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14268,7 +14252,7 @@ func writeSigExpr(buf *bytes.Buffer, sig *ast.FuncType)
 
 ```
 searchKey: types.writeSignature
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14279,7 +14263,7 @@ func writeSignature(buf *bytes.Buffer, sig *Signature, qf Qualifier, visited []T
 
 ```
 searchKey: types.writeTParamList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14290,7 +14274,7 @@ func writeTParamList(buf *bytes.Buffer, list []*TypeName, qf Qualifier, visited 
 
 ```
 searchKey: types.writeTuple
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14301,7 +14285,7 @@ func writeTuple(buf *bytes.Buffer, tup *Tuple, variadic bool, qf Qualifier, visi
 
 ```
 searchKey: types.writeType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14312,7 +14296,7 @@ func writeType(buf *bytes.Buffer, typ Type, qf Qualifier, visited []Type)
 
 ```
 searchKey: types.writeTypeList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14323,7 +14307,7 @@ func writeTypeList(buf *bytes.Buffer, list []Type, qf Qualifier, visited []Type)
 
 ```
 searchKey: types.writeTypeName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

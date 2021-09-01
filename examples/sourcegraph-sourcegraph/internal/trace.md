@@ -82,7 +82,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GraphQLQueryKey" href="#GraphQLQueryKey">const GraphQLQueryKey</a>
@@ -202,7 +202,7 @@ const userKey
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="UserLatencyBuckets" href="#UserLatencyBuckets">var UserLatencyBuckets</a>
@@ -278,7 +278,7 @@ trackOrigin specifies a URL value. When an incoming request has the request head
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SourceType" href="#SourceType">type SourceType string</a>
@@ -298,7 +298,7 @@ SourceType indicates the type of source that likely created the request.
 
 ```
 searchKey: trace.RequestSource
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -344,7 +344,7 @@ Trace is a combined version of golang.org/x/net/trace.Trace and opentracing.Span
 
 ```
 searchKey: trace.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -357,7 +357,7 @@ New returns a new Trace with the specified family and title.
 
 ```
 searchKey: trace.TraceFromContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -370,7 +370,7 @@ TraceFromContext returns the Trace previously associated with ctx, or nil if no 
 
 ```
 searchKey: trace.Trace.Finish
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -613,7 +613,7 @@ fieldsStringer lazily marshals a slice of log.Field into a string for printing i
 
 ```
 searchKey: trace.fieldsStringer.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -639,7 +639,7 @@ type httpErr struct {
 
 ```
 searchKey: trace.httpErr.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -700,14 +700,14 @@ type traceContextKey string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CopyContext" href="#CopyContext">func CopyContext(ctx context.Context, from context.Context) context.Context</a>
 
 ```
 searchKey: trace.CopyContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -720,7 +720,7 @@ CopyContext copies the tracing-related context items from one context to another
 
 ```
 searchKey: trace.GraphQLRequestName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -733,7 +733,7 @@ GraphQLRequestName returns the GraphQL request name for a request context. For e
 
 ```
 searchKey: trace.HTTPTraceMiddleware
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -748,7 +748,7 @@ HTTPTraceMiddleware captures and exports metrics to Prometheus, etc.
 
 ```
 searchKey: trace.Init
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -759,7 +759,7 @@ func Init(shouldInitSentry bool)
 
 ```
 searchKey: trace.Printf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -772,7 +772,7 @@ Printf is an opentracing log.Field which is a LazyLogger. So the format string w
 
 ```
 searchKey: trace.RequestOrigin
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -785,7 +785,7 @@ RequestOrigin returns the request origin (the value of the request header "Origi
 
 ```
 searchKey: trace.Route
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -796,7 +796,7 @@ func Route(next http.Handler) http.Handler
 
 ```
 searchKey: trace.SQL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -809,7 +809,7 @@ SQL is an opentracing log.Field which is a LazyLogger. It will log the query as 
 
 ```
 searchKey: trace.SetRequestErrorCause
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -822,7 +822,7 @@ SetRequestErrorCause will set the error for the request to err. This is used in 
 
 ```
 searchKey: trace.SetRouteName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -835,7 +835,7 @@ SetRouteName manually sets the name for the route. This should only be used for 
 
 ```
 searchKey: trace.SetSpanURLFunc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -848,7 +848,7 @@ SetSpanURLFunc sets the function that SpanURL sets.
 
 ```
 searchKey: trace.SpanURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -861,7 +861,7 @@ SpanURL returns the URL to the tracing UI for the given span. The span must be n
 
 ```
 searchKey: trace.SpanURLFromContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -874,7 +874,7 @@ SpanURLFromContext returns the URL to the tracing UI for the span attached to th
 
 ```
 searchKey: trace.Stringer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -887,7 +887,7 @@ Stringer is an opentracing log.Field which is a LazyLogger. So the String() will
 
 ```
 searchKey: trace.TestSpanURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -898,7 +898,7 @@ func TestSpanURL(t *testing.T)
 
 ```
 searchKey: trace.User
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -909,7 +909,7 @@ func User(ctx context.Context, userID int32)
 
 ```
 searchKey: trace.WithGraphQLRequestName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -922,7 +922,7 @@ WithGraphQLRequestName sets the GraphQL request name in the context.
 
 ```
 searchKey: trace.WithRequestOrigin
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -935,7 +935,7 @@ WithRequestOrigin sets the request origin in the context.
 
 ```
 searchKey: trace.WithRequestSource
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -948,7 +948,7 @@ WithRequestSource sets the request source type in the context.
 
 ```
 searchKey: trace.contextWithTrace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

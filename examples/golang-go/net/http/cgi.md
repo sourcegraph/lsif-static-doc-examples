@@ -82,10 +82,6 @@ Note that using CGI means starting a new process to handle each request, which i
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="cgiTested" href="#cgiTested">var cgiTested</a>
 
 ```
@@ -143,10 +139,6 @@ var trailingPort = regexp.MustCompile(`:([0-9]+)$`)
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Handler" href="#Handler">type Handler struct</a>
 
@@ -223,7 +215,7 @@ func (h *Handler) printf(format string, v ...interface{})
 
 ```
 searchKey: cgi.Handler.stderr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -324,7 +316,7 @@ type response struct {
 
 ```
 searchKey: cgi.response.Flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -335,7 +327,7 @@ func (r *response) Flush()
 
 ```
 searchKey: cgi.response.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -379,10 +371,6 @@ writeCGIHeader finalizes the header sent to the client and writes it to the outp
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Request" href="#Request">func Request() (*http.Request, error)</a>
 
 ```
@@ -400,7 +388,7 @@ Request returns the HTTP request as represented in the current environment. This
 
 ```
 searchKey: cgi.RequestFromMap
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -413,7 +401,7 @@ RequestFromMap creates an http.Request from CGI variables. The returned Request'
 
 ```
 searchKey: cgi.Serve
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -426,7 +414,7 @@ Serve executes the provided Handler on the currently active CGI request, if any.
 
 ```
 searchKey: cgi.Test500WithEmptyHeaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -437,7 +425,7 @@ func Test500WithEmptyHeaders(t *testing.T)
 
 ```
 searchKey: cgi.Test500WithNoContentType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -448,7 +436,7 @@ func Test500WithNoContentType(t *testing.T)
 
 ```
 searchKey: cgi.Test500WithNoHeaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -461,7 +449,7 @@ golang.org/issue/7198
 
 ```
 searchKey: cgi.TestBeChildCGIProcess
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -474,7 +462,7 @@ Note: not actually a test.
 
 ```
 searchKey: cgi.TestCGIBasicGet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -485,7 +473,7 @@ func TestCGIBasicGet(t *testing.T)
 
 ```
 searchKey: cgi.TestCGIBasicGetAbsPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -496,7 +484,7 @@ func TestCGIBasicGetAbsPath(t *testing.T)
 
 ```
 searchKey: cgi.TestCGIBasicPost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -507,7 +495,7 @@ func TestCGIBasicPost(t *testing.T)
 
 ```
 searchKey: cgi.TestCGIEnvIPv6
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -518,7 +506,7 @@ func TestCGIEnvIPv6(t *testing.T)
 
 ```
 searchKey: cgi.TestCGIPostChunked
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -531,7 +519,7 @@ The CGI spec doesn't allow chunked requests.
 
 ```
 searchKey: cgi.TestChildContentType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -542,7 +530,7 @@ func TestChildContentType(t *testing.T)
 
 ```
 searchKey: cgi.TestChildOnlyHeaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -555,7 +543,7 @@ Test that a child handler writing only headers works. golang.org/issue/7196
 
 ```
 searchKey: cgi.TestCopyError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -568,7 +556,7 @@ TestCopyError tests that we kill the process if there's an error copying its out
 
 ```
 searchKey: cgi.TestDirUnix
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -579,7 +567,7 @@ func TestDirUnix(t *testing.T)
 
 ```
 searchKey: cgi.TestDirWindows
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -590,7 +578,7 @@ func TestDirWindows(t *testing.T)
 
 ```
 searchKey: cgi.TestDropProxyHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -603,7 +591,7 @@ Issue 16405: CGI+http.Transport differing uses of HTTP_PROXY. Verify we don't se
 
 ```
 searchKey: cgi.TestDupHeaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -614,7 +602,7 @@ func TestDupHeaders(t *testing.T)
 
 ```
 searchKey: cgi.TestEnvOverride
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -625,7 +613,7 @@ func TestEnvOverride(t *testing.T)
 
 ```
 searchKey: cgi.TestHandlerStderr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -636,7 +624,7 @@ func TestHandlerStderr(t *testing.T)
 
 ```
 searchKey: cgi.TestHostingOurselves
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -649,7 +637,7 @@ This test is a CGI host (testing host.go) that runs its own binary as a child pr
 
 ```
 searchKey: cgi.TestInternalRedirect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -660,7 +648,7 @@ func TestInternalRedirect(t *testing.T)
 
 ```
 searchKey: cgi.TestKillChildAfterCopyError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -673,7 +661,7 @@ If there's an error copying the child's output to the parent, test that we kill 
 
 ```
 searchKey: cgi.TestNilRequestBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -686,7 +674,7 @@ Test that a child handler does not receive a nil Request Body. golang.org/issue/
 
 ```
 searchKey: cgi.TestPathInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -697,7 +685,7 @@ func TestPathInfo(t *testing.T)
 
 ```
 searchKey: cgi.TestPathInfoDirRoot
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -708,7 +696,7 @@ func TestPathInfoDirRoot(t *testing.T)
 
 ```
 searchKey: cgi.TestPathInfoNoRoot
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -719,7 +707,7 @@ func TestPathInfoNoRoot(t *testing.T)
 
 ```
 searchKey: cgi.TestRedirect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -730,7 +718,7 @@ func TestRedirect(t *testing.T)
 
 ```
 searchKey: cgi.TestRemoveLeadingDuplicates
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -741,7 +729,7 @@ func TestRemoveLeadingDuplicates(t *testing.T)
 
 ```
 searchKey: cgi.TestRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -752,7 +740,7 @@ func TestRequest(t *testing.T)
 
 ```
 searchKey: cgi.TestRequestWithTLS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -763,7 +751,7 @@ func TestRequestWithTLS(t *testing.T)
 
 ```
 searchKey: cgi.TestRequestWithoutHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -774,7 +762,7 @@ func TestRequestWithoutHost(t *testing.T)
 
 ```
 searchKey: cgi.TestRequestWithoutRemotePort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -785,7 +773,7 @@ func TestRequestWithoutRemotePort(t *testing.T)
 
 ```
 searchKey: cgi.TestRequestWithoutRequestURI
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -796,7 +784,7 @@ func TestRequestWithoutRequestURI(t *testing.T)
 
 ```
 searchKey: cgi.TestResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -807,7 +795,7 @@ func TestResponse(t *testing.T)
 
 ```
 searchKey: cgi.check
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -818,7 +806,7 @@ func check(t *testing.T)
 
 ```
 searchKey: cgi.chunk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -829,7 +817,7 @@ func chunk(s string) string
 
 ```
 searchKey: cgi.envMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -840,7 +828,7 @@ func envMap(env []string) map[string]string
 
 ```
 searchKey: cgi.findPerl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -851,7 +839,7 @@ func findPerl(t *testing.T) string
 
 ```
 searchKey: cgi.isProcessRunning
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -862,7 +850,7 @@ func isProcessRunning(pid int) bool
 
 ```
 searchKey: cgi.newRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -873,7 +861,7 @@ func newRequest(httpreq string) *http.Request
 
 ```
 searchKey: cgi.removeLeadingDuplicates
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -893,7 +881,7 @@ cgi.Handler{
 
 ```
 searchKey: cgi.runCgiTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -906,7 +894,7 @@ func runCgiTest(t *testing.T, h *Handler,
 
 ```
 searchKey: cgi.runResponseChecks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -918,7 +906,7 @@ func runResponseChecks(t *testing.T, rw *httptest.ResponseRecorder,
 
 ```
 searchKey: cgi.upperCaseAndUnderscore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -929,7 +917,7 @@ func upperCaseAndUnderscore(r rune) rune
 
 ```
 searchKey: cgi.want500Test
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

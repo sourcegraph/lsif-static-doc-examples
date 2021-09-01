@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -141,9 +139,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -259,9 +255,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -300,7 +294,7 @@
                       "newPage": false,
                       "searchKey": "base32.CorruptInputError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -345,7 +339,7 @@
                       "newPage": false,
                       "searchKey": "base32.NewEncoding",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -662,7 +656,7 @@
                       "newPage": false,
                       "searchKey": "base32.encoder.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -783,9 +777,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -804,7 +796,7 @@
                 "newPage": false,
                 "searchKey": "base32.BenchmarkDecode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -828,7 +820,7 @@
                 "newPage": false,
                 "searchKey": "base32.BenchmarkDecodeString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -852,7 +844,7 @@
                 "newPage": false,
                 "searchKey": "base32.BenchmarkEncode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -876,7 +868,7 @@
                 "newPage": false,
                 "searchKey": "base32.BenchmarkEncodeToString",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -900,7 +892,7 @@
                 "newPage": false,
                 "searchKey": "base32.NewDecoder",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -922,7 +914,7 @@
                 "newPage": false,
                 "searchKey": "base32.NewEncoder",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -944,7 +936,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestBig",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -968,7 +960,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestBufferedDecodingSameError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -992,7 +984,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestDecode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1016,7 +1008,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestDecodeCorrupt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1040,7 +1032,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestDecodeReadAll",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1064,7 +1056,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestDecodeSmallBuffer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1088,7 +1080,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestDecodeWithPadding",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1112,7 +1104,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestDecodeWithWrongPadding",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1136,7 +1128,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestDecoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1160,7 +1152,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestDecoderBuffering",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1184,7 +1176,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestDecoderError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1208,7 +1200,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestDecoderIssue4779",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1232,7 +1224,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestEncode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1256,7 +1248,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestEncodedDecodedLen",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1280,7 +1272,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestEncoder",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1304,7 +1296,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestEncoderBuffering",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1328,7 +1320,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestIssue20044",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1352,7 +1344,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestNewLineCharacters",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1376,7 +1368,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestReaderEOF",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1400,7 +1392,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestWithCustomPadding",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1424,7 +1416,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestWithoutPadding",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1448,7 +1440,7 @@
                 "newPage": false,
                 "searchKey": "base32.TestWithoutPaddingClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1472,7 +1464,7 @@
                 "newPage": false,
                 "searchKey": "base32.readEncodedData",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1495,7 +1487,7 @@
                 "newPage": false,
                 "searchKey": "base32.stripNewlines",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1518,7 +1510,7 @@
                 "newPage": false,
                 "searchKey": "base32.testEqual",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1541,7 +1533,7 @@
                 "newPage": false,
                 "searchKey": "base32.testStringEncoding",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

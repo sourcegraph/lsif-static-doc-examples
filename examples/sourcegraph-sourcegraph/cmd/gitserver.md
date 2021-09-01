@@ -26,10 +26,6 @@ gitserver is the gitserver server.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="envHostname" href="#envHostname">var envHostname</a>
 
 ```
@@ -109,15 +105,11 @@ var wantPctFree = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestParsePercent" href="#TestParsePercent">func TestParsePercent(t *testing.T)</a>
 
 ```
 searchKey: main.TestParsePercent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -141,7 +133,7 @@ getStores initializes a connection to the database and returns RepoStore and Ext
 
 ```
 searchKey: main.getPercent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

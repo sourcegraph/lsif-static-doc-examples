@@ -151,10 +151,6 @@ On Plan 9, signals have type syscall.Note, which is a string. Calling Notify wit
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="numSig" href="#numSig">const numSig</a>
 
 ```
@@ -168,10 +164,6 @@ const numSig = 65 // max across all systems
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="checkNotifyContext" href="#checkNotifyContext">var checkNotifyContext</a>
 
@@ -292,10 +284,6 @@ watchSignalLoopOnce guards calling the conditionally initialized watchSignalLoop
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="handler" href="#handler">type handler struct</a>
 
 ```
@@ -363,7 +351,7 @@ type signalCtx struct {
 
 ```
 searchKey: signal.signalCtx.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -374,7 +362,7 @@ func (c *signalCtx) String() string
 
 ```
 searchKey: signal.signalCtx.stop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -410,15 +398,11 @@ type stringer interface {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Ignore" href="#Ignore">func Ignore(sig ...os.Signal)</a>
 
 ```
 searchKey: signal.Ignore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -431,7 +415,7 @@ Ignore causes the provided signals to be ignored. If they are received by the pr
 
 ```
 searchKey: signal.Ignored
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -444,7 +428,7 @@ Ignored reports whether sig is currently ignored.
 
 ```
 searchKey: signal.Notify
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -463,7 +447,7 @@ It is allowed to call Notify multiple times with different channels and the same
 
 ```
 searchKey: signal.NotifyContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -480,7 +464,7 @@ The stop function releases resources associated with it, so code should call sto
 
 ```
 searchKey: signal.Reset
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -493,7 +477,7 @@ Reset undoes the effect of any prior calls to Notify for the provided signals. I
 
 ```
 searchKey: signal.Stop
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -506,7 +490,7 @@ Stop causes package signal to stop relaying incoming signals to c. It undoes the
 
 ```
 searchKey: signal.TestAtomicStop
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -519,7 +503,7 @@ Test race between stopping and receiving a signal (issue 14571).
 
 ```
 searchKey: signal.TestDetectNohup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -532,7 +516,7 @@ Test that Ignored(SIGHUP) correctly detects whether it is being run under nohup.
 
 ```
 searchKey: signal.TestIgnore
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -545,7 +529,7 @@ Test that Ignore cancels registration for listed signals on all channels.
 
 ```
 searchKey: signal.TestIgnored
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -558,7 +542,7 @@ Test that Ignored correctly detects changes to the ignored status of a signal.
 
 ```
 searchKey: signal.TestNohup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -571,7 +555,7 @@ Test that when run under nohup, an uncaught SIGHUP does not kill the program.
 
 ```
 searchKey: signal.TestNotifyContextCancelParent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -582,7 +566,7 @@ func TestNotifyContextCancelParent(t *testing.T)
 
 ```
 searchKey: signal.TestNotifyContextNotifications
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -593,7 +577,7 @@ func TestNotifyContextNotifications(t *testing.T)
 
 ```
 searchKey: signal.TestNotifyContextPrematureCancelParent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -604,7 +588,7 @@ func TestNotifyContextPrematureCancelParent(t *testing.T)
 
 ```
 searchKey: signal.TestNotifyContextSimultaneousStop
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -615,7 +599,7 @@ func TestNotifyContextSimultaneousStop(t *testing.T)
 
 ```
 searchKey: signal.TestNotifyContextStop
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -626,7 +610,7 @@ func TestNotifyContextStop(t *testing.T)
 
 ```
 searchKey: signal.TestNotifyContextStringer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -637,7 +621,7 @@ func TestNotifyContextStringer(t *testing.T)
 
 ```
 searchKey: signal.TestReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -650,7 +634,7 @@ Test that Reset cancels registration for listed signals on all channels.
 
 ```
 searchKey: signal.TestSIGCONT
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -663,7 +647,7 @@ Test that SIGCONT works (issue 8953).
 
 ```
 searchKey: signal.TestSignal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -676,7 +660,7 @@ Test that basic signal handling works.
 
 ```
 searchKey: signal.TestSignalTrace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -689,7 +673,7 @@ func TestSignalTrace(t *testing.T)
 
 ```
 searchKey: signal.TestStop
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -702,7 +686,7 @@ Test that Stop cancels the channel's registrations.
 
 ```
 searchKey: signal.TestStress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -713,7 +697,7 @@ func TestStress(t *testing.T)
 
 ```
 searchKey: signal.TestTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -724,7 +708,7 @@ func TestTime(t *testing.T)
 
 ```
 searchKey: signal.atomicStopTestProgram
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -737,7 +721,7 @@ atomicStopTestProgram is run in a subprocess by TestAtomicStop. It tries to trig
 
 ```
 searchKey: signal.cancel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -750,7 +734,7 @@ Stop relaying the signals, sigs, to any channels previously registered to receiv
 
 ```
 searchKey: signal.disableSignal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -761,7 +745,7 @@ func disableSignal(sig int)
 
 ```
 searchKey: signal.enableSignal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -772,7 +756,7 @@ func enableSignal(sig int)
 
 ```
 searchKey: signal.ignoreSignal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -816,7 +800,7 @@ func loop()
 
 ```
 searchKey: signal.process
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -840,7 +824,7 @@ quiesce waits until we can be reasonably confident that all pending signals have
 
 ```
 searchKey: signal.signalIgnored
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -864,7 +848,7 @@ Wait until there are no more signals waiting to be delivered. Defined by the run
 
 ```
 searchKey: signal.signal_disable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -877,7 +861,7 @@ Defined by the runtime package.
 
 ```
 searchKey: signal.signal_enable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -888,7 +872,7 @@ func signal_enable(uint32)
 
 ```
 searchKey: signal.signal_ignore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -899,7 +883,7 @@ func signal_ignore(uint32)
 
 ```
 searchKey: signal.signal_ignored
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -921,7 +905,7 @@ func signal_recv() uint32
 
 ```
 searchKey: signal.signum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -932,7 +916,7 @@ func signum(sig os.Signal) int
 
 ```
 searchKey: signal.testCancel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -943,7 +927,7 @@ func testCancel(t *testing.T, ignore bool)
 
 ```
 searchKey: signal.waitSig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -954,7 +938,7 @@ func waitSig(t *testing.T, c <-chan os.Signal, sig os.Signal)
 
 ```
 searchKey: signal.waitSig1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -965,7 +949,7 @@ func waitSig1(t *testing.T, c <-chan os.Signal, sig os.Signal, all bool)
 
 ```
 searchKey: signal.waitSigAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

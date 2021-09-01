@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/executor-queue/internal/server",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -120,7 +119,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -183,7 +181,7 @@
                       "newPage": false,
                       "searchKey": "server.newQueueMetrics",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -298,7 +296,7 @@
                       "newPage": false,
                       "searchKey": "server.newHandler",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -321,7 +319,7 @@
                       "newPage": false,
                       "searchKey": "server.newHandlerWithMetrics",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -689,7 +687,7 @@
                       "newPage": false,
                       "searchKey": "server.handler.pruneExecutors",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -804,7 +802,7 @@
                       "newPage": false,
                       "searchKey": "server.handler.shutdown",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -850,7 +848,7 @@
                       "newPage": false,
                       "searchKey": "server.handler.updateMetrics",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -966,7 +964,7 @@
                       "newPage": false,
                       "searchKey": "server.handlerWrapper.OnShutdown",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1036,7 +1034,7 @@
                       "newPage": false,
                       "searchKey": "server.testRecord.RecordID",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1065,7 +1063,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1086,7 +1083,7 @@
                 "newPage": false,
                 "searchKey": "server.NewServer",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1108,7 +1105,7 @@
                 "newPage": false,
                 "searchKey": "server.TestAddExecutionLogEntry",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1132,7 +1129,7 @@
                 "newPage": false,
                 "searchKey": "server.TestAddExecutionLogEntryUnknownJob",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1156,7 +1153,7 @@
                 "newPage": false,
                 "searchKey": "server.TestAddExecutionLogEntryUnknownQueue",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1180,7 +1177,7 @@
                 "newPage": false,
                 "searchKey": "server.TestCleanup",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1204,7 +1201,7 @@
                 "newPage": false,
                 "searchKey": "server.TestDequeue",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1228,7 +1225,7 @@
                 "newPage": false,
                 "searchKey": "server.TestDequeueMaxTransactions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1252,7 +1249,7 @@
                 "newPage": false,
                 "searchKey": "server.TestDequeueNoRecord",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1276,7 +1273,7 @@
                 "newPage": false,
                 "searchKey": "server.TestDequeueUnknownQueue",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1300,7 +1297,7 @@
                 "newPage": false,
                 "searchKey": "server.TestHeartbeat",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1324,7 +1321,7 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkComplete",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1348,7 +1345,7 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkCompleteUnknownJob",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1372,7 +1369,7 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkCompleteUnknownQueue",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1396,7 +1393,7 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkErrored",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1420,7 +1417,7 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkErroredUnknownJob",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1444,7 +1441,7 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkErroredUnknownQueue",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1468,7 +1465,7 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkFailed",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]

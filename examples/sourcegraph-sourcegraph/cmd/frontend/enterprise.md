@@ -15,10 +15,6 @@
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="NewCodeIntelUploadHandler" href="#NewCodeIntelUploadHandler">type NewCodeIntelUploadHandler func(internal bool) net/http.Handler</a>
 
 ```
@@ -108,15 +104,11 @@ func (fn registerFunc) Register(w *webhooks.GitHubWebhook)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="makeNotFoundHandler" href="#makeNotFoundHandler">func makeNotFoundHandler(handlerName string) http.Handler</a>
 
 ```
 searchKey: enterprise.makeNotFoundHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

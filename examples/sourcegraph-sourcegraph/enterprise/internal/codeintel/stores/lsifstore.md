@@ -132,7 +132,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CurrentDefinitionsSchemaVersion" href="#CurrentDefinitionsSchemaVersion">const CurrentDefinitionsSchemaVersion</a>
@@ -458,7 +458,7 @@ const writeResultChunksTemporaryTableQuery = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrNoMetadata" href="#ErrNoMetadata">var ErrNoMetadata</a>
@@ -488,7 +488,7 @@ var tableNames = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CodeIntelligenceRange" href="#CodeIntelligenceRange">type CodeIntelligenceRange struct</a>
@@ -658,7 +658,7 @@ Range is an inclusive bounds within a file.
 
 ```
 searchKey: lsifstore.newRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -865,7 +865,7 @@ type Store struct {
 
 ```
 searchKey: lsifstore.NewStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -876,7 +876,7 @@ func NewStore(db dbutil.DB, observationContext *observation.Context) *Store
 
 ```
 searchKey: lsifstore.populateTestStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1365,7 +1365,7 @@ type operations struct {
 
 ```
 searchKey: lsifstore.newOperations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1375,14 +1375,14 @@ func newOperations(observationContext *observation.Context) *operations
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestClear" href="#TestClear">func TestClear(t *testing.T)</a>
 
 ```
 searchKey: lsifstore.TestClear
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1393,7 +1393,7 @@ func TestClear(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseBulkMonikerResults
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1404,7 +1404,7 @@ func TestDatabaseBulkMonikerResults(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseDefinitions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1415,7 +1415,7 @@ func TestDatabaseDefinitions(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseExists
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1426,7 +1426,7 @@ func TestDatabaseExists(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseHover
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1437,7 +1437,7 @@ func TestDatabaseHover(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseMonikersByPosition
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1448,7 +1448,7 @@ func TestDatabaseMonikersByPosition(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabasePackageInformation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1459,7 +1459,7 @@ func TestDatabasePackageInformation(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseRanges
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1470,7 +1470,7 @@ func TestDatabaseRanges(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDatabaseReferences
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1481,7 +1481,7 @@ func TestDatabaseReferences(t *testing.T)
 
 ```
 searchKey: lsifstore.TestDocumentData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1492,7 +1492,7 @@ func TestDocumentData(t *testing.T)
 
 ```
 searchKey: lsifstore.TestLocations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1503,7 +1503,7 @@ func TestLocations(t *testing.T)
 
 ```
 searchKey: lsifstore.TestResultChunkData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1514,7 +1514,7 @@ func TestResultChunkData(t *testing.T)
 
 ```
 searchKey: lsifstore.compareBundleRanges
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1527,7 +1527,7 @@ compareBundleRanges returns true if r1's start position occurs before r2's start
 
 ```
 searchKey: lsifstore.extractResultIDs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1540,7 +1540,7 @@ extractResultIDs extracts result identifiers from each range in the given list. 
 
 ```
 searchKey: lsifstore.idsToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1584,7 +1584,7 @@ func init()
 
 ```
 searchKey: lsifstore.intsToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1595,7 +1595,7 @@ func intsToString(vs []int) string
 
 ```
 searchKey: lsifstore.limitResultMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1608,7 +1608,7 @@ limitResultMap returns a map symmetric to the given rangeIDsByResultID that incl
 
 ```
 searchKey: lsifstore.monikersToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1619,7 +1619,7 @@ func monikersToString(vs []semantic.MonikerData) string
 
 ```
 searchKey: lsifstore.pathsFromResultMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1632,7 +1632,7 @@ pathsFromResultMap returns a deduplicated and sorted set of document paths prese
 
 ```
 searchKey: lsifstore.sortLocations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1645,7 +1645,7 @@ sortLocations sorts locations by document, then by offset within a document.
 
 ```
 searchKey: lsifstore.withBatchInserter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -20,7 +20,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="UintptrSize" href="#UintptrSize">const UintptrSize</a>
@@ -37,7 +37,7 @@ const UintptrSize = 32 << (^uintptr(0) >> 63)
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SinkBool" href="#SinkBool">var SinkBool</a>
@@ -98,7 +98,7 @@ var x, y uintptr
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="mulUintptrTest" href="#mulUintptrTest">type mulUintptrTest struct</a>
@@ -119,14 +119,14 @@ type mulUintptrTest struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkMulUintptr" href="#BenchmarkMulUintptr">func BenchmarkMulUintptr(b *testing.B)</a>
 
 ```
 searchKey: math_test.BenchmarkMulUintptr
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -137,7 +137,7 @@ func BenchmarkMulUintptr(b *testing.B)
 
 ```
 searchKey: math_test.TestMulUintptr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

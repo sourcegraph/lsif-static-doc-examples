@@ -31,7 +31,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ChangesetSyncRequest" href="#ChangesetSyncRequest">type ChangesetSyncRequest struct</a>
@@ -193,7 +193,7 @@ RepoInfo is information about a repository that lives on an external service (su
 
 ```
 searchKey: protocol.RepoInfo.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -240,7 +240,7 @@ Exactly one of Repo and ExternalRepo should be set.
 
 ```
 searchKey: protocol.RepoLookupArgs.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -271,7 +271,7 @@ RepoLookupResult is the response to a repository information request (RepoLookup
 
 ```
 searchKey: protocol.RepoLookupResult.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -328,7 +328,7 @@ RepoUpdateRequest is a request to update the contents of a given repo, or clone 
 
 ```
 searchKey: protocol.RepoUpdateRequest.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go

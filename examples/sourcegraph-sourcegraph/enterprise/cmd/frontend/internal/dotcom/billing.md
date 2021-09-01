@@ -58,7 +58,7 @@ Package billing handles subscription billing on Sourcegraph.com (via Stripe).
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="dummyCustomerID" href="#dummyCustomerID">var dummyCustomerID</a>
@@ -97,7 +97,7 @@ var mockCreateCustomerID func(userID int32) (string, error)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BillingResolver" href="#BillingResolver">type BillingResolver struct</a>
@@ -216,7 +216,7 @@ planTier implements the GraphQL type PlanTier.
 
 ```
 searchKey: billing.planTier.FlatAmount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -227,7 +227,7 @@ func (r *planTier) FlatAmount() int32
 
 ```
 searchKey: billing.planTier.UnitAmount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -238,7 +238,7 @@ func (r *planTier) UnitAmount() int32
 
 ```
 searchKey: billing.planTier.UpTo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -271,7 +271,7 @@ productPlan implements the GraphQL type ProductPlan.
 
 ```
 searchKey: billing.productPlan.BillingPlanID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -282,7 +282,7 @@ func (r *productPlan) BillingPlanID() string
 
 ```
 searchKey: billing.productPlan.MaxQuantity
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -293,7 +293,7 @@ func (r *productPlan) MaxQuantity() *int32
 
 ```
 searchKey: billing.productPlan.MinQuantity
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -304,7 +304,7 @@ func (r *productPlan) MinQuantity() *int32
 
 ```
 searchKey: billing.productPlan.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -315,7 +315,7 @@ func (r *productPlan) Name() string
 
 ```
 searchKey: billing.productPlan.NameWithBrand
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -326,7 +326,7 @@ func (r *productPlan) NameWithBrand() string
 
 ```
 searchKey: billing.productPlan.PlanTiers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -337,7 +337,7 @@ func (r *productPlan) PlanTiers() []graphqlbackend.PlanTier
 
 ```
 searchKey: billing.productPlan.PricePerUserPerYear
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -348,7 +348,7 @@ func (r *productPlan) PricePerUserPerYear() int32
 
 ```
 searchKey: billing.productPlan.ProductPlanID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -359,7 +359,7 @@ func (r *productPlan) ProductPlanID() string
 
 ```
 searchKey: billing.productPlan.TiersMode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -385,7 +385,7 @@ productSubscriptionEvent implements the GraphQL type ProductSubscriptionEvent.
 
 ```
 searchKey: billing.productSubscriptionEvent.Date
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -396,7 +396,7 @@ func (r *productSubscriptionEvent) Date() string
 
 ```
 searchKey: billing.productSubscriptionEvent.Description
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -407,7 +407,7 @@ func (r *productSubscriptionEvent) Description() *string
 
 ```
 searchKey: billing.productSubscriptionEvent.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -418,7 +418,7 @@ func (r *productSubscriptionEvent) ID() string
 
 ```
 searchKey: billing.productSubscriptionEvent.Title
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -429,7 +429,7 @@ func (r *productSubscriptionEvent) Title() string
 
 ```
 searchKey: billing.productSubscriptionEvent.URL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -439,14 +439,14 @@ func (r *productSubscriptionEvent) URL() *string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GetDummyCustomerID" href="#GetDummyCustomerID">func GetDummyCustomerID(ctx context.Context) (string, error)</a>
 
 ```
 searchKey: billing.GetDummyCustomerID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -461,7 +461,7 @@ The first time this func is called, it looks up the ID of the existing dummy cus
 
 ```
 searchKey: billing.GetOrAssignUserCustomerID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -474,7 +474,7 @@ GetOrAssignUserCustomerID returns the billing customer ID associated with the us
 
 ```
 searchKey: billing.GetSubscriptionItemIDToReplace
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -487,7 +487,7 @@ GetSubscriptionItemIDToReplace returns the ID of the billing subscription item (
 
 ```
 searchKey: billing.InfoForProductPlan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -502,7 +502,7 @@ License key tags indicate which product plan the license is for, so they are sto
 
 ```
 searchKey: billing.ProductPlanMinMaxQuantity
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -515,7 +515,7 @@ ProductPlanMinMaxQuantity returns the plan's product's minQuantity and maxQuanti
 
 ```
 searchKey: billing.TestDBUsersBillingCustomerID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -526,7 +526,7 @@ func TestDBUsersBillingCustomerID(t *testing.T)
 
 ```
 searchKey: billing.TestGetOrAssignUserCustomerID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -537,7 +537,7 @@ func TestGetOrAssignUserCustomerID(t *testing.T)
 
 ```
 searchKey: billing.ToProductPlan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -550,7 +550,7 @@ ToProductPlan returns a resolver for the GraphQL type ProductPlan from the given
 
 ```
 searchKey: billing.ToProductSubscriptionEvent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -565,7 +565,7 @@ The okToShowUser return value reports whether the event should be shown to the u
 
 ```
 searchKey: billing.ToSubscriptionItemsParams
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -578,7 +578,7 @@ ToSubscriptionItemsParams converts a value of GraphQL type ProductSubscriptionIn
 
 ```
 searchKey: billing.createCustomerID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -591,7 +591,7 @@ createCustomerID creates a customer record on the billing system and returns the
 
 ```
 searchKey: billing.deleteCustomerID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -604,7 +604,7 @@ deleteCustomerID deletes the customer record on the billing system.
 
 ```
 searchKey: billing.getProductSubscriptionEventInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -628,7 +628,7 @@ func init()
 
 ```
 searchKey: billing.strptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -639,7 +639,7 @@ func strptr(s string) *string
 
 ```
 searchKey: billing.usdCentsToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

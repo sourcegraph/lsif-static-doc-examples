@@ -17,7 +17,7 @@ Package lazytemplate is a thin wrapper over text/template, allowing the use of g
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="inTest" href="#inTest">var inTest</a>
@@ -34,7 +34,7 @@ var inTest = len(os.Args) > 0 && strings.HasSuffix(strings.TrimSuffix(os.Args[0]
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Template" href="#Template">type Template struct</a>
@@ -59,7 +59,7 @@ Template is a wrapper around text/template.Template, where the underlying templa
 
 ```
 searchKey: lazytemplate.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -83,7 +83,7 @@ func (r *Template) Execute(w io.Writer, data interface{}) error
 
 ```
 searchKey: lazytemplate.Template.build
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -94,7 +94,7 @@ func (r *Template) build()
 
 ```
 searchKey: lazytemplate.Template.tp
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go

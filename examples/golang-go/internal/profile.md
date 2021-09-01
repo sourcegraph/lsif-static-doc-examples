@@ -195,7 +195,7 @@ Package profile provides a representation of github.com/google/pprof/proto/profi
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="memoryMapSection" href="#memoryMapSection">const memoryMapSection</a>
@@ -223,7 +223,7 @@ const unrecognizedSection sectionType = iota
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="LegacyHeapAllocated" href="#LegacyHeapAllocated">var LegacyHeapAllocated</a>
@@ -614,7 +614,7 @@ var valueTypeDecoder = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Demangler" href="#Demangler">type Demangler func(name []string) (map[string]string, error)</a>
@@ -657,7 +657,7 @@ Function corresponds to Profile.Function
 
 ```
 searchKey: profile.Function.decoder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -679,7 +679,7 @@ func (p *Function) encode(b *buffer)
 
 ```
 searchKey: profile.Function.key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -710,7 +710,7 @@ Label corresponds to Profile.Label
 
 ```
 searchKey: profile.Label.decoder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -750,7 +750,7 @@ Line corresponds to Profile.Line
 
 ```
 searchKey: profile.Line.decoder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -793,7 +793,7 @@ Location corresponds to Profile.Location
 
 ```
 searchKey: profile.Location.decoder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -815,7 +815,7 @@ func (p *Location) encode(b *buffer)
 
 ```
 searchKey: profile.Location.key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -881,7 +881,7 @@ Mapping corresponds to Profile.Mapping
 
 ```
 searchKey: profile.parseMappingEntry
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -892,7 +892,7 @@ func parseMappingEntry(l string) (*Mapping, error)
 
 ```
 searchKey: profile.Mapping.decoder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -914,7 +914,7 @@ func (p *Mapping) encode(b *buffer)
 
 ```
 searchKey: profile.Mapping.key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -962,7 +962,7 @@ Profile is an in-memory representation of profile.proto.
 
 ```
 searchKey: profile.Merge
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -975,7 +975,7 @@ Merge merges all the profiles in profs into a single Profile. Returns a new prof
 
 ```
 searchKey: profile.Parse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -988,7 +988,7 @@ Parse parses a profile and checks for its validity. The input may be a gzip-comp
 
 ```
 searchKey: profile.ParseTracebacks
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1001,7 +1001,7 @@ ParseTracebacks parses a set of tracebacks and returns a newly populated profile
 
 ```
 searchKey: profile.combineHeaders
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1014,7 +1014,7 @@ combineHeaders checks that all profiles can be merged and returns their combined
 
 ```
 searchKey: profile.cpuProfile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1027,7 +1027,7 @@ cpuProfile returns a new Profile from C++ profilez data. b is the profile bytes 
 
 ```
 searchKey: profile.parseCPU
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1050,7 +1050,7 @@ The general format for profilez samples is a sequence of words in binary format.
 
 ```
 searchKey: profile.parseContention
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1063,7 +1063,7 @@ parseContention parses a mutex or contention profile. There are 2 cases: "--- co
 
 ```
 searchKey: profile.parseCppContention
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1076,7 +1076,7 @@ parseCppContention parses the output from synchronization_profiling.cc for backw
 
 ```
 searchKey: profile.parseGoCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1089,7 +1089,7 @@ parseGoCount parses a Go count profile (e.g., threadcreate or goroutine) and ret
 
 ```
 searchKey: profile.parseHeap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1102,7 +1102,7 @@ parseHeap parses a heapz legacy or a growthz profile and returns a newly populat
 
 ```
 searchKey: profile.parseLegacy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1113,7 +1113,7 @@ func parseLegacy(data []byte) (*Profile, error)
 
 ```
 searchKey: profile.parseThread
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1126,7 +1126,7 @@ parseThread parses a Threadz profile and returns a new Profile.
 
 ```
 searchKey: profile.parseUncompressed
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1150,7 +1150,7 @@ Aggregate merges the locations in the profile into equivalence classes preservin
 
 ```
 searchKey: profile.Profile.CheckValid
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1181,7 +1181,7 @@ Compatible determines if two profiles can be compared/merged. returns nil if the
 
 ```
 searchKey: profile.Profile.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1207,7 +1207,7 @@ Demangle attempts to demangle and optionally simplify any function names referen
 
 ```
 searchKey: profile.Profile.Empty
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1246,7 +1246,7 @@ FilterSamplesByTag removes all samples from the profile, except those that match
 
 ```
 searchKey: profile.Profile.HasFileLines
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1259,7 +1259,7 @@ HasFileLines determines if all locations in this profile have symbolized file an
 
 ```
 searchKey: profile.Profile.HasFunctions
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1324,7 +1324,7 @@ Prune removes all nodes beneath a node matching dropRx, and not matching keepRx.
 
 ```
 searchKey: profile.Profile.RemoveUninteresting
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1363,7 +1363,7 @@ ScaleN multiplies each sample values in a sample by a different amount.
 
 ```
 searchKey: profile.Profile.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1389,7 +1389,7 @@ Write writes the profile as a gzip-compressed marshaled protobuf.
 
 ```
 searchKey: profile.Profile.addLegacyFrameInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1413,7 +1413,7 @@ compatible determines if two profiles can be compared/merged. returns nil if the
 
 ```
 searchKey: profile.Profile.decoder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1435,7 +1435,7 @@ func (p *Profile) encode(b *buffer)
 
 ```
 searchKey: profile.Profile.postDecode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1448,7 +1448,7 @@ postDecode takes the unexported fields populated by decode (with suffix X) and p
 
 ```
 searchKey: profile.Profile.preEncode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1461,7 +1461,7 @@ preEncode populates the unexported fields to be used by encode (with suffix X) f
 
 ```
 searchKey: profile.Profile.remapFunctionIDs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1472,7 +1472,7 @@ func (p *Profile) remapFunctionIDs()
 
 ```
 searchKey: profile.Profile.remapLocationIDs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1485,7 +1485,7 @@ remapLocationIDs ensures there is a location for each address referenced by a sa
 
 ```
 searchKey: profile.Profile.remapMappingIDs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1498,7 +1498,7 @@ remapMappingIDs matches location addresses with existing mappings and updates th
 
 ```
 searchKey: profile.Profile.setMain
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1533,7 +1533,7 @@ Sample corresponds to Profile.Sample
 
 ```
 searchKey: profile.Sample.decoder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1555,7 +1555,7 @@ func (p *Sample) encode(b *buffer)
 
 ```
 searchKey: profile.Sample.key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1600,7 +1600,7 @@ ValueType corresponds to Profile.ValueType
 
 ```
 searchKey: profile.ValueType.decoder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1735,7 +1735,7 @@ type packedInts struct {
 
 ```
 searchKey: profile.packedInts.decoder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1862,7 +1862,7 @@ type sectionType int
 
 ```
 searchKey: profile.sectionTrigger
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1872,14 +1872,14 @@ func sectionTrigger(line string) sectionType
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestEmptyProfile" href="#TestEmptyProfile">func TestEmptyProfile(t *testing.T)</a>
 
 ```
 searchKey: profile.TestEmptyProfile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1890,7 +1890,7 @@ func TestEmptyProfile(t *testing.T)
 
 ```
 searchKey: profile.TestPackedEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1901,7 +1901,7 @@ func TestPackedEncoding(t *testing.T)
 
 ```
 searchKey: profile.TestParseContention
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1912,7 +1912,7 @@ func TestParseContention(t *testing.T)
 
 ```
 searchKey: profile.addString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1923,7 +1923,7 @@ func addString(strings map[string]int, s string) int64
 
 ```
 searchKey: profile.addTracebackSample
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1934,7 +1934,7 @@ func addTracebackSample(l []*Location, s []string, p *Profile)
 
 ```
 searchKey: profile.checkType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1945,7 +1945,7 @@ func checkType(b *buffer, typ int) error
 
 ```
 searchKey: profile.compatibleValueTypes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1956,7 +1956,7 @@ func compatibleValueTypes(v1, v2 *ValueType) bool
 
 ```
 searchKey: profile.decodeBool
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1967,7 +1967,7 @@ func decodeBool(b *buffer, x *bool) error
 
 ```
 searchKey: profile.decodeField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1978,7 +1978,7 @@ func decodeField(b *buffer, data []byte) ([]byte, error)
 
 ```
 searchKey: profile.decodeInt64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1989,7 +1989,7 @@ func decodeInt64(b *buffer, x *int64) error
 
 ```
 searchKey: profile.decodeInt64s
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2000,7 +2000,7 @@ func decodeInt64s(b *buffer, x *[]int64) error
 
 ```
 searchKey: profile.decodeMessage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2011,7 +2011,7 @@ func decodeMessage(b *buffer, m message) error
 
 ```
 searchKey: profile.decodeString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2022,7 +2022,7 @@ func decodeString(b *buffer, x *string) error
 
 ```
 searchKey: profile.decodeStrings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2033,7 +2033,7 @@ func decodeStrings(b *buffer, x *[]string) error
 
 ```
 searchKey: profile.decodeUint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2044,7 +2044,7 @@ func decodeUint64(b *buffer, x *uint64) error
 
 ```
 searchKey: profile.decodeUint64s
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2055,7 +2055,7 @@ func decodeUint64s(b *buffer, x *[]uint64) error
 
 ```
 searchKey: profile.decodeVarint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2066,7 +2066,7 @@ func decodeVarint(data []byte) (uint64, []byte, error)
 
 ```
 searchKey: profile.encodeBool
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2077,7 +2077,7 @@ func encodeBool(b *buffer, tag int, x bool)
 
 ```
 searchKey: profile.encodeBoolOpt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2088,7 +2088,7 @@ func encodeBoolOpt(b *buffer, tag int, x bool)
 
 ```
 searchKey: profile.encodeInt64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2099,7 +2099,7 @@ func encodeInt64(b *buffer, tag int, x int64)
 
 ```
 searchKey: profile.encodeInt64Opt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2110,7 +2110,7 @@ func encodeInt64Opt(b *buffer, tag int, x int64)
 
 ```
 searchKey: profile.encodeInt64s
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2121,7 +2121,7 @@ func encodeInt64s(b *buffer, tag int, x []int64)
 
 ```
 searchKey: profile.encodeLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2132,7 +2132,7 @@ func encodeLength(b *buffer, tag int, len int)
 
 ```
 searchKey: profile.encodeMessage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2143,7 +2143,7 @@ func encodeMessage(b *buffer, tag int, m message)
 
 ```
 searchKey: profile.encodeString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2154,7 +2154,7 @@ func encodeString(b *buffer, tag int, x string)
 
 ```
 searchKey: profile.encodeStringOpt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2165,7 +2165,7 @@ func encodeStringOpt(b *buffer, tag int, x string)
 
 ```
 searchKey: profile.encodeStrings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2176,7 +2176,7 @@ func encodeStrings(b *buffer, tag int, x []string)
 
 ```
 searchKey: profile.encodeUint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2187,7 +2187,7 @@ func encodeUint64(b *buffer, tag int, x uint64)
 
 ```
 searchKey: profile.encodeUint64Opt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2198,7 +2198,7 @@ func encodeUint64Opt(b *buffer, tag int, x uint64)
 
 ```
 searchKey: profile.encodeUint64s
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2209,7 +2209,7 @@ func encodeUint64s(b *buffer, tag int, x []uint64)
 
 ```
 searchKey: profile.encodeVarint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2220,7 +2220,7 @@ func encodeVarint(b *buffer, x uint64)
 
 ```
 searchKey: profile.equalValueType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2233,7 +2233,7 @@ equalValueType returns true if the two value types are semantically equal. It ig
 
 ```
 searchKey: profile.extractHexAddresses
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2246,7 +2246,7 @@ extractHexAddresses extracts hex numbers from a string and returns them, togethe
 
 ```
 searchKey: profile.focusedAndNotIgnored
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2259,7 +2259,7 @@ focusedAndNotIgnored looks up a slice of ids against a map of focused/ignored lo
 
 ```
 searchKey: profile.focusedSample
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2272,7 +2272,7 @@ focusedTag checks a sample against focus and ignore regexps. Returns whether the
 
 ```
 searchKey: profile.get32b
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2283,7 +2283,7 @@ func get32b(b []byte) (uint64, []byte)
 
 ```
 searchKey: profile.get32l
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2294,7 +2294,7 @@ func get32l(b []byte) (uint64, []byte)
 
 ```
 searchKey: profile.get64b
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2305,7 +2305,7 @@ func get64b(b []byte) (uint64, []byte)
 
 ```
 searchKey: profile.get64l
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2316,7 +2316,7 @@ func get64l(b []byte) (uint64, []byte)
 
 ```
 searchKey: profile.getString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2327,7 +2327,7 @@ func getString(strings []string, strng *int64, err error) (string, error)
 
 ```
 searchKey: profile.isProfileType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2338,7 +2338,7 @@ func isProfileType(p *Profile, t []string) bool
 
 ```
 searchKey: profile.isSpaceOrComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2349,7 +2349,7 @@ func isSpaceOrComment(line string) bool
 
 ```
 searchKey: profile.isZeroSample
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2360,7 +2360,7 @@ func isZeroSample(s *Sample) bool
 
 ```
 searchKey: profile.le32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2371,7 +2371,7 @@ func le32(p []byte) uint32
 
 ```
 searchKey: profile.le64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2382,7 +2382,7 @@ func le64(p []byte) uint64
 
 ```
 searchKey: profile.marshal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2393,7 +2393,7 @@ func marshal(m message) []byte
 
 ```
 searchKey: profile.parseAdditionalSections
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2406,7 +2406,7 @@ parseAdditionalSections parses any additional sections in the profile, ignoring 
 
 ```
 searchKey: profile.parseCPUSamples
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2439,7 +2439,7 @@ Addresses from stack traces may point to the next instruction after each call. O
 
 ```
 searchKey: profile.parseContentionSample
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2452,7 +2452,7 @@ parseContentionSample parses a single row from a contention profile into a new S
 
 ```
 searchKey: profile.parseHeapSample
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2465,7 +2465,7 @@ parseHeapSample parses a single row from a heap profile into a new Sample.
 
 ```
 searchKey: profile.parseHexAddresses
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2478,7 +2478,7 @@ parseHexAddresses parses hex numbers from a string and returns them in a slice.
 
 ```
 searchKey: profile.parseThreadSample
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2491,7 +2491,7 @@ parseThreadSample parses a symbolized or unsymbolized stack trace. Returns the f
 
 ```
 searchKey: profile.scaleHeapSample
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2504,7 +2504,7 @@ scaleHeapSample adjusts the data from a heapz Sample to account for its probabil
 
 ```
 searchKey: profile.unmarshal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

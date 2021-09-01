@@ -30,7 +30,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Provider" href="#Provider">type Provider struct</a>
@@ -62,7 +62,7 @@ Provider implements authz.Provider for Perforce depot permissions.
 
 ```
 searchKey: perforce.NewProvider
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -114,7 +114,7 @@ FetchUserPerms returns a list of depot prefixes that the given user has access t
 
 ```
 searchKey: perforce.Provider.ServiceID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -125,7 +125,7 @@ func (p *Provider) ServiceID() string
 
 ```
 searchKey: perforce.Provider.ServiceType
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -136,7 +136,7 @@ func (p *Provider) ServiceType() string
 
 ```
 searchKey: perforce.Provider.URN
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -147,7 +147,7 @@ func (p *Provider) URN() string
 
 ```
 searchKey: perforce.Provider.Validate
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -222,14 +222,14 @@ getGroupMembers returns all members of the given group in the Perforce server.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewAuthzProviders" href="#NewAuthzProviders">func NewAuthzProviders(conns []*types.PerforceConnection) (ps []authz.Provider, problems []string, warnings []string)</a>
 
 ```
 searchKey: perforce.NewAuthzProviders
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -242,7 +242,7 @@ NewAuthzProviders returns the set of Perforce authz providers derived from the c
 
 ```
 searchKey: perforce.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -253,7 +253,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: perforce.TestProvider_FetchAccount
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -264,7 +264,7 @@ func TestProvider_FetchAccount(t *testing.T)
 
 ```
 searchKey: perforce.TestProvider_FetchRepoPerms
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -275,7 +275,7 @@ func TestProvider_FetchRepoPerms(t *testing.T)
 
 ```
 searchKey: perforce.TestProvider_FetchUserPerms
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -286,7 +286,7 @@ func TestProvider_FetchUserPerms(t *testing.T)
 
 ```
 searchKey: perforce.ValidateAuthz
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -299,7 +299,7 @@ ValidateAuthz validates the authorization fields of the given Perforce external 
 
 ```
 searchKey: perforce.newAuthzProvider
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

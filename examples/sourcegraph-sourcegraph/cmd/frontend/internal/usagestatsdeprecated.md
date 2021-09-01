@@ -85,7 +85,7 @@ nolint
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="defaultDays" href="#defaultDays">const defaultDays</a>
@@ -234,7 +234,7 @@ const maxStorageDays = 93
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockGetByUserID" href="#MockGetByUserID">var MockGetByUserID</a>
@@ -433,7 +433,7 @@ var timeNow = time.Now
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ActiveUsers" href="#ActiveUsers">type ActiveUsers struct</a>
@@ -458,7 +458,7 @@ ActiveUsers contains sets of unique user IDs.
 
 ```
 searchKey: usagestatsdeprecated.uniques
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -516,14 +516,14 @@ Custom event handlers
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GetByUserID" href="#GetByUserID">func GetByUserID(userID int32) (*types.UserUsageStatistics, error)</a>
 
 ```
 searchKey: usagestatsdeprecated.GetByUserID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -536,7 +536,7 @@ GetByUserID returns a single user's UserUsageStatistics.
 
 ```
 searchKey: usagestatsdeprecated.GetSiteUsageStatistics
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -549,7 +549,7 @@ GetSiteUsageStatistics returns the current site's SiteActivity.
 
 ```
 searchKey: usagestatsdeprecated.GetUsersActiveTodayCount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -562,7 +562,7 @@ GetUsersActiveTodayCount returns a count of users that have been active today.
 
 ```
 searchKey: usagestatsdeprecated.LogActivity
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -575,7 +575,7 @@ LogActivity logs any user activity (page view, integration usage, etc) to their 
 
 ```
 searchKey: usagestatsdeprecated.LogEvent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -588,7 +588,7 @@ LogEvent logs users events.
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_DAUs_WAUs_MAUs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -599,7 +599,7 @@ func TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_LogCodeHostIntegrationUsage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -610,7 +610,7 @@ func TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_LogCodeIntelAction
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -621,7 +621,7 @@ func TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_LogPageView
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -632,7 +632,7 @@ func TestUserUsageStatistics_LogPageView(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_LogSearchQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -643,7 +643,7 @@ func TestUserUsageStatistics_LogSearchQuery(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_None
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -654,7 +654,7 @@ func TestUserUsageStatistics_None(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.TestUserUsageStatistics_getUsersActiveToday
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -665,7 +665,7 @@ func TestUserUsageStatistics_getUsersActiveToday(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.daus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -691,7 +691,7 @@ gc expires active user sets after the max of daysOfHistory, weeksOfHistory, and 
 
 ```
 searchKey: usagestatsdeprecated.incrementUserCounter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -713,7 +713,7 @@ func init()
 
 ```
 searchKey: usagestatsdeprecated.keyFromDate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -724,7 +724,7 @@ func keyFromDate(activity string, date time.Time) string
 
 ```
 searchKey: usagestatsdeprecated.keyFromStage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -735,7 +735,7 @@ func keyFromStage(stage string) string
 
 ```
 searchKey: usagestatsdeprecated.keys
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -746,7 +746,7 @@ func keys(m map[string]bool) []string
 
 ```
 searchKey: usagestatsdeprecated.maus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -759,7 +759,7 @@ maus returns a count of daily active users for the last monthsCount calendar mon
 
 ```
 searchKey: usagestatsdeprecated.minIntOrZero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -770,7 +770,7 @@ func minIntOrZero(a, b int) int
 
 ```
 searchKey: usagestatsdeprecated.mockTimeNow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -781,7 +781,7 @@ func mockTimeNow(t time.Time)
 
 ```
 searchKey: usagestatsdeprecated.setupForTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -792,7 +792,7 @@ func setupForTest(t *testing.T)
 
 ```
 searchKey: usagestatsdeprecated.siteActivityCompare
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -803,7 +803,7 @@ func siteActivityCompare(a, b *types.SiteUsageStatistics) error
 
 ```
 searchKey: usagestatsdeprecated.siteActivityPeriodCompare
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -814,7 +814,7 @@ func siteActivityPeriodCompare(label string, a, b *types.SiteActivityPeriod) err
 
 ```
 searchKey: usagestatsdeprecated.siteActivityPeriodSliceCompare
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -825,7 +825,7 @@ func siteActivityPeriodSliceCompare(label string, a, b []*types.SiteActivityPeri
 
 ```
 searchKey: usagestatsdeprecated.startOfMonth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -836,7 +836,7 @@ func startOfMonth(monthsAgo int) time.Time
 
 ```
 searchKey: usagestatsdeprecated.startOfWeek
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -847,7 +847,7 @@ func startOfWeek(weeksAgo int) time.Time
 
 ```
 searchKey: usagestatsdeprecated.uniquesCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -860,7 +860,7 @@ uniquesCount calculates the number of unique users starting at 00:00:00 on a giv
 
 ```
 searchKey: usagestatsdeprecated.usersActiveKeyFromDate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -871,7 +871,7 @@ func usersActiveKeyFromDate(date time.Time) string
 
 ```
 searchKey: usagestatsdeprecated.usersActiveKeyFromDaysAgo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -882,7 +882,7 @@ func usersActiveKeyFromDaysAgo(daysAgo int) string
 
 ```
 searchKey: usagestatsdeprecated.waus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

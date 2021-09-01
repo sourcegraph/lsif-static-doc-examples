@@ -97,7 +97,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultSymbolLimit" href="#DefaultSymbolLimit">const DefaultSymbolLimit</a>
@@ -125,7 +125,7 @@ const defaultMaxSearchResults = 30
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockSearchFilesInRepos" href="#MockSearchFilesInRepos">var MockSearchFilesInRepos</a>
@@ -188,7 +188,7 @@ A global limiter on number of concurrent searcher searches.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Aggregator" href="#Aggregator">type Aggregator struct</a>
@@ -214,7 +214,7 @@ type Aggregator struct {
 
 ```
 searchKey: run.NewAggregator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -291,7 +291,7 @@ func (a *Aggregator) Error(err error)
 
 ```
 searchKey: run.Aggregator.Get
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -340,7 +340,7 @@ type RepoLimitError DiffCommitError
 
 ```
 searchKey: run.RepoLimitError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -421,7 +421,7 @@ SearchInputs contains fields we set before kicking off search.
 
 ```
 searchKey: run.SearchInputs.MaxResults
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -465,7 +465,7 @@ type TimeLimitError DiffCommitError
 
 ```
 searchKey: run.TimeLimitError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -475,14 +475,14 @@ func (*TimeLimitError) Error() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkSearchRepositories" href="#BenchmarkSearchRepositories">func BenchmarkSearchRepositories(b *testing.B)</a>
 
 ```
 searchKey: run.BenchmarkSearchRepositories
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -493,7 +493,7 @@ func BenchmarkSearchRepositories(b *testing.B)
 
 ```
 searchKey: run.Benchmark_highlightMatches
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -504,7 +504,7 @@ func Benchmark_highlightMatches(b *testing.B)
 
 ```
 searchKey: run.ComputeSymbols
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -515,7 +515,7 @@ func ComputeSymbols(ctx context.Context, repoName types.RepoName, commitID api.C
 
 ```
 searchKey: run.ResolveCommitParameters
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -528,7 +528,7 @@ ResolveCommitParameters creates parameters for commit search from tp. It will wa
 
 ```
 searchKey: run.SearchCommitDiffsInRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -541,7 +541,7 @@ SearchCommitDiffsInRepos searches a set of repos for matching commit diffs.
 
 ```
 searchKey: run.SearchCommitLogInRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -554,7 +554,7 @@ SearchCommitLogInRepos searches a set of repos for matching commits.
 
 ```
 searchKey: run.SearchCommitsInRepoStream
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -567,7 +567,7 @@ SearchCommitsInRepoStream searches for commits based on op.
 
 ```
 searchKey: run.SearchCommitsInRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -578,7 +578,7 @@ func SearchCommitsInRepos(ctx context.Context, db dbutil.DB, args *search.TextPa
 
 ```
 searchKey: run.SearchFilesInRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -589,7 +589,7 @@ func SearchFilesInRepo(ctx context.Context, searcherURLs *endpoint.Map, repo typ
 
 ```
 searchKey: run.SearchFilesInRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -602,7 +602,7 @@ SearchFilesInRepos searches a set of repos for a pattern.
 
 ```
 searchKey: run.SearchFilesInReposBatch
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -615,7 +615,7 @@ SearchFilesInRepoBatch is a convenience function around searchFilesInRepos which
 
 ```
 searchKey: run.SearchRepositories
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -630,7 +630,7 @@ For a repository to match a query, the repository's name must match all of the r
 
 ```
 searchKey: run.SearchSymbols
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -645,7 +645,7 @@ May return partial results and an error
 
 ```
 searchKey: run.TestCheckDiffCommitSearchLimits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -656,7 +656,7 @@ func TestCheckDiffCommitSearchLimits(t *testing.T)
 
 ```
 searchKey: run.TestCommitSearchResult_Limit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -667,7 +667,7 @@ func TestCommitSearchResult_Limit(t *testing.T)
 
 ```
 searchKey: run.TestExpandUsernamesToEmails
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -678,7 +678,7 @@ func TestExpandUsernamesToEmails(t *testing.T)
 
 ```
 searchKey: run.TestFileMatch_Limit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -689,7 +689,7 @@ func TestFileMatch_Limit(t *testing.T)
 
 ```
 searchKey: run.TestHighlightMatches
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -700,7 +700,7 @@ func TestHighlightMatches(t *testing.T)
 
 ```
 searchKey: run.TestMatchRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -711,7 +711,7 @@ func TestMatchRepos(t *testing.T)
 
 ```
 searchKey: run.TestOrderedFuzzyRegexp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -722,7 +722,7 @@ func TestOrderedFuzzyRegexp(t *testing.T)
 
 ```
 searchKey: run.TestRepoShouldBeAdded
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -733,7 +733,7 @@ func TestRepoShouldBeAdded(t *testing.T)
 
 ```
 searchKey: run.TestRepoShouldBeSearched
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -744,7 +744,7 @@ func TestRepoShouldBeSearched(t *testing.T)
 
 ```
 searchKey: run.TestSearchCommitsInRepo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -755,7 +755,7 @@ func TestSearchCommitsInRepo(t *testing.T)
 
 ```
 searchKey: run.TestSearchFilesInRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -766,7 +766,7 @@ func TestSearchFilesInRepos(t *testing.T)
 
 ```
 searchKey: run.TestSearchFilesInReposStream
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -777,7 +777,7 @@ func TestSearchFilesInReposStream(t *testing.T)
 
 ```
 searchKey: run.TestSearchFilesInRepos_multipleRevsPerRepo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -788,7 +788,7 @@ func TestSearchFilesInRepos_multipleRevsPerRepo(t *testing.T)
 
 ```
 searchKey: run.TestSearchRepositories
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -799,7 +799,7 @@ func TestSearchRepositories(t *testing.T)
 
 ```
 searchKey: run.assertReposStatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -810,7 +810,7 @@ func assertReposStatus(t *testing.T, repoNames map[api.RepoID]string, got search
 
 ```
 searchKey: run.callSearcherOverRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -829,7 +829,7 @@ callSearcherOverRepos calls searcher on searcherRepos.
 
 ```
 searchKey: run.checkDiffCommitSearchLimits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -840,7 +840,7 @@ func checkDiffCommitSearchLimits(ctx context.Context, args *search.TextParameter
 
 ```
 searchKey: run.cleanDiffPreview
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -851,7 +851,7 @@ func cleanDiffPreview(highlights []result.HighlightedRange, rawDiffResult string
 
 ```
 searchKey: run.commitMatchesToMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -862,7 +862,7 @@ func commitMatchesToMatches(commitMatches []*result.CommitMatch) []result.Match
 
 ```
 searchKey: run.commitParametersToDiffParameters
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -873,7 +873,7 @@ func commitParametersToDiffParameters(ctx context.Context, db dbutil.DB, op *sea
 
 ```
 searchKey: run.errorName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -884,7 +884,7 @@ func errorName(diff bool) string
 
 ```
 searchKey: run.expandUsernamesToEmails
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -899,7 +899,7 @@ For example, given a list ["foo", "@alice"] where the user "alice" has 2 email a
 
 ```
 searchKey: run.fileMatchesToMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -910,7 +910,7 @@ func fileMatchesToMatches(fms []*result.FileMatch) []result.Match
 
 ```
 searchKey: run.fromVCSHighlights
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -921,7 +921,7 @@ func fromVCSHighlights(vcsHighlights []git.Highlight) []result.HighlightedRange
 
 ```
 searchKey: run.getRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -934,7 +934,7 @@ getRepos is a wrapper around p.Get. It returns an error if the promise contains 
 
 ```
 searchKey: run.handleRepoSearchResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -947,7 +947,7 @@ handleRepoSearchResult handles the limitHit and searchErr returned by a search f
 
 ```
 searchKey: run.highlightMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -958,7 +958,7 @@ func highlightMatches(pattern *regexp.Regexp, data []byte) *result.HighlightedSt
 
 ```
 searchKey: run.indexedSymbolsBranch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -971,7 +971,7 @@ indexedSymbols checks to see if Zoekt has indexed symbols information for a repo
 
 ```
 searchKey: run.limitOrDefault
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -982,7 +982,7 @@ func limitOrDefault(first *int32) int
 
 ```
 searchKey: run.logCommitSearchResultsToMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -993,7 +993,7 @@ func logCommitSearchResultsToMatches(op *search.CommitParameters, repoName types
 
 ```
 searchKey: run.makeRepositoryRevisions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1004,7 +1004,7 @@ func makeRepositoryRevisions(repos ...string) []*search.RepositoryRevisions
 
 ```
 searchKey: run.matchRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1015,7 +1015,7 @@ func matchRepos(pattern *regexp.Regexp, resolved []*search.RepositoryRevisions, 
 
 ```
 searchKey: run.matchesToFileMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1026,7 +1026,7 @@ func matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)
 
 ```
 searchKey: run.mkRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1037,7 +1037,7 @@ func mkRepos(names ...string) []types.RepoName
 
 ```
 searchKey: run.orderedFuzzyRegexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1050,7 +1050,7 @@ orderedFuzzyRegexp interpolate a lazy 'match everything' regexp pattern to achie
 
 ```
 searchKey: run.repoHasFilesWithNamesMatching
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1063,7 +1063,7 @@ repoHasFilesWithNamesMatching searches in a repository for matches for the patte
 
 ```
 searchKey: run.repoRevsToRepoMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1074,7 +1074,7 @@ func repoRevsToRepoMatches(ctx context.Context, repos []*search.RepositoryRevisi
 
 ```
 searchKey: run.repoShouldBeAdded
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1087,7 +1087,7 @@ repoShouldBeAdded determines whether a repository should be included in the resu
 
 ```
 searchKey: run.repoShouldBeSearched
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1100,7 +1100,7 @@ repoShouldBeSearched determines whether a repository should be searched in, base
 
 ```
 searchKey: run.reposToAdd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1124,7 +1124,7 @@ func resetMocks()
 
 ```
 searchKey: run.searchCommitsInRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1137,7 +1137,7 @@ searchCommitsInRepo is a blocking version of searchCommitsInRepoStream.
 
 ```
 searchKey: run.searchRepositoriesBatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1148,7 +1148,7 @@ func searchRepositoriesBatch(ctx context.Context, args *search.TextParameters, l
 
 ```
 searchKey: run.searchSymbolsInRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1159,7 +1159,7 @@ func searchSymbolsInRepo(ctx context.Context, repoRevs *search.RepositoryRevisio
 
 ```
 searchKey: run.searchZoektSymbols
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1170,7 +1170,7 @@ func searchZoektSymbols(ctx context.Context, repoName types.RepoName, commitID a
 
 ```
 searchKey: run.statsDeref
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

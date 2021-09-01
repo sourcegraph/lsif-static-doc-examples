@@ -55,10 +55,6 @@ Package auth contains auth related code for the frontend.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AuthURLPrefix" href="#AuthURLPrefix">const AuthURLPrefix</a>
 
 ```
@@ -73,10 +69,6 @@ const AuthURLPrefix = "/.auth"
 AuthURLPrefix is the URL path prefix under which to attach authentication handlers 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="MockGetAndSaveUser" href="#MockGetAndSaveUser">var MockGetAndSaveUser</a>
 
@@ -181,10 +173,6 @@ var extraAuthMiddlewares []*Middleware
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="GetAndSaveUserOp" href="#GetAndSaveUserOp">type GetAndSaveUserOp struct</a>
 
 ```
@@ -238,7 +226,7 @@ AuthMiddleware returns the authentication middleware that combines all authentic
 
 ```
 searchKey: auth.composeMiddleware
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -302,7 +290,7 @@ mocks provide mocking. It should only be used for one call of auth.GetAndSaveUse
 
 ```
 searchKey: auth.newMocks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -417,7 +405,7 @@ Update mocks database.Users.Update
 
 ```
 searchKey: auth.mocks.apply
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -428,7 +416,7 @@ func (m *mocks) apply()
 
 ```
 searchKey: auth.mocks.reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -452,15 +440,11 @@ type userInfo struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AllowAnonymousRequest" href="#AllowAnonymousRequest">func AllowAnonymousRequest(req *http.Request) bool</a>
 
 ```
 searchKey: auth.AllowAnonymousRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -475,7 +459,7 @@ AllowAnonymousRequest reports whether handling of the HTTP request (which is fro
 
 ```
 searchKey: auth.GetAndSaveUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -514,7 +498,7 @@ already does.
 
 ```
 searchKey: auth.NormalizeUsername
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -533,7 +517,7 @@ Note: Do not forget to change database constraints on "users" and "orgs" tables.
 
 ```
 searchKey: auth.RegisterMiddlewares
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -546,7 +530,7 @@ RegisterMiddlewares registers additional authentication middlewares. Currently t
 
 ```
 searchKey: auth.SafeRedirectURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -561,7 +545,7 @@ SafeRedirectURL returns a safe redirect URL based on the input, to protect again
 
 ```
 searchKey: auth.TestGetAndSaveUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -576,7 +560,7 @@ TestGetAndSaveUser ensures the correctness of the GetAndSaveUser function.
 
 ```
 searchKey: auth.TestMetadataOnlyAutomaticallySetOnFirstOccurrence
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -587,7 +571,7 @@ func TestMetadataOnlyAutomaticallySetOnFirstOccurrence(t *testing.T)
 
 ```
 searchKey: auth.TestNormalizeUsername
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -598,7 +582,7 @@ func TestNormalizeUsername(t *testing.T)
 
 ```
 searchKey: auth.TestSafeRedirectURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -609,7 +593,7 @@ func TestSafeRedirectURL(t *testing.T)
 
 ```
 searchKey: auth.anonymousStatusCode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -620,7 +604,7 @@ func anonymousStatusCode(req *http.Request, defaultCode int) int
 
 ```
 searchKey: auth.ext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -642,7 +626,7 @@ func init()
 
 ```
 searchKey: auth.matchedRouteName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -653,7 +637,7 @@ func matchedRouteName(req *http.Request, router *mux.Router) string
 
 ```
 searchKey: auth.userProps
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

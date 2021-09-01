@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -141,9 +139,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -498,9 +494,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -887,7 +881,7 @@
                       "newPage": false,
                       "searchKey": "rpc.Call.done",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -933,7 +927,7 @@
                       "newPage": false,
                       "searchKey": "rpc.Dial",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -955,7 +949,7 @@
                       "newPage": false,
                       "searchKey": "rpc.DialHTTP",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -977,7 +971,7 @@
                       "newPage": false,
                       "searchKey": "rpc.DialHTTPPath",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -999,7 +993,7 @@
                       "newPage": false,
                       "searchKey": "rpc.NewClient",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1021,7 +1015,7 @@
                       "newPage": false,
                       "searchKey": "rpc.NewClientWithCodec",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1111,7 +1105,7 @@
                       "newPage": false,
                       "searchKey": "rpc.Client.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1155,7 +1149,7 @@
                       "newPage": false,
                       "searchKey": "rpc.Client.input",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1270,7 +1264,7 @@
                       "newPage": false,
                       "searchKey": "rpc.CodecEmulator.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1930,7 +1924,7 @@
                       "newPage": false,
                       "searchKey": "rpc.Server.getRequest",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1953,7 +1947,7 @@
                       "newPage": false,
                       "searchKey": "rpc.Server.getResponse",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2113,7 +2107,7 @@
                       "newPage": false,
                       "searchKey": "rpc.ServerError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2159,7 +2153,7 @@
                       "newPage": false,
                       "searchKey": "rpc.WriteFailCodec.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2368,7 +2362,7 @@
                       "newPage": false,
                       "searchKey": "rpc.gobClientCodec.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2484,7 +2478,7 @@
                       "newPage": false,
                       "searchKey": "rpc.gobServerCodec.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2671,7 +2665,7 @@
                       "newPage": false,
                       "searchKey": "rpc.methodArray.Len",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2764,7 +2758,7 @@
                       "newPage": false,
                       "searchKey": "rpc.methodType.NumCalls",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2859,7 +2853,7 @@
                       "newPage": false,
                       "searchKey": "rpc.serviceArray.Len",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2952,7 +2946,7 @@
                       "newPage": false,
                       "searchKey": "rpc.shutdownCodec.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3068,7 +3062,7 @@
                       "newPage": false,
                       "searchKey": "rpc.writeCrasher.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3142,9 +3136,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -3163,7 +3155,7 @@
                 "newPage": false,
                 "searchKey": "rpc.Accept",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3185,7 +3177,7 @@
                 "newPage": false,
                 "searchKey": "rpc.BenchmarkEndToEnd",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -3209,7 +3201,7 @@
                 "newPage": false,
                 "searchKey": "rpc.BenchmarkEndToEndAsync",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -3233,7 +3225,7 @@
                 "newPage": false,
                 "searchKey": "rpc.BenchmarkEndToEndAsyncHTTP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -3257,7 +3249,7 @@
                 "newPage": false,
                 "searchKey": "rpc.BenchmarkEndToEndHTTP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -3303,7 +3295,7 @@
                 "newPage": false,
                 "searchKey": "rpc.Register",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3325,7 +3317,7 @@
                 "newPage": false,
                 "searchKey": "rpc.RegisterName",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3347,7 +3339,7 @@
                 "newPage": false,
                 "searchKey": "rpc.ServeCodec",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3369,7 +3361,7 @@
                 "newPage": false,
                 "searchKey": "rpc.ServeConn",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3391,7 +3383,7 @@
                 "newPage": false,
                 "searchKey": "rpc.ServeRequest",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3413,7 +3405,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestAcceptExitAfterListenerClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3437,7 +3429,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestBuiltinTypes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3461,7 +3453,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestClientWriteError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3485,7 +3477,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestCloseCodec",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3509,7 +3501,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestCountMallocs",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3533,7 +3525,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestCountMallocsOverHTTP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3557,7 +3549,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestErrorAfterClientClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3581,7 +3573,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestGobError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3605,7 +3597,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestHTTP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3629,7 +3621,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestRPC",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3653,7 +3645,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestRegistrationError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3677,7 +3669,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestSendDeadlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3701,7 +3693,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestServeRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3725,7 +3717,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestShutdown",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3749,7 +3741,7 @@
                 "newPage": false,
                 "searchKey": "rpc.TestTCPClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -3773,7 +3765,7 @@
                 "newPage": false,
                 "searchKey": "rpc.benchmarkEndToEnd",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3796,7 +3788,7 @@
                 "newPage": false,
                 "searchKey": "rpc.benchmarkEndToEndAsync",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3819,7 +3811,7 @@
                 "newPage": false,
                 "searchKey": "rpc.countMallocs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3842,7 +3834,7 @@
                 "newPage": false,
                 "searchKey": "rpc.isExportedOrBuiltinType",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3957,7 +3949,7 @@
                 "newPage": false,
                 "searchKey": "rpc.suitableMethods",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3980,7 +3972,7 @@
                 "newPage": false,
                 "searchKey": "rpc.testHTTPRPC",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4003,7 +3995,7 @@
                 "newPage": false,
                 "searchKey": "rpc.testNewServerRPC",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4026,7 +4018,7 @@
                 "newPage": false,
                 "searchKey": "rpc.testRPC",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4049,7 +4041,7 @@
                 "newPage": false,
                 "searchKey": "rpc.testSendDeadlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -4072,7 +4064,7 @@
                 "newPage": false,
                 "searchKey": "rpc.testServeRequest",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

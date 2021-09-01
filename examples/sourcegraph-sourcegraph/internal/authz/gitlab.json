@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "internal/authz/gitlab",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -96,7 +95,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -137,7 +135,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.newOAuthProvider",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -226,7 +224,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.ServiceID",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -248,7 +246,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.ServiceType",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -270,7 +268,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.URN",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -292,7 +290,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.OAuthProvider.Validate",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -359,7 +357,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.newSudoProvider",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -448,7 +446,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.ServiceID",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -470,7 +468,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.ServiceType",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -492,7 +490,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.URN",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -514,7 +512,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.SudoProvider.Validate",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -628,7 +626,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.mockAuthnProvider.CachedInfo",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -651,7 +649,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.mockAuthnProvider.Config",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -674,7 +672,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.mockAuthnProvider.ConfigID",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -791,7 +789,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.newMockGitLab",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1000,7 +998,7 @@
                       "newPage": false,
                       "searchKey": "gitlab.projSort.Len",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1075,7 +1073,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1096,7 +1093,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.NewAuthzProviders",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1118,7 +1115,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestMain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1142,7 +1139,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestOAuthProvider_FetchRepoPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1166,7 +1163,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestOAuthProvider_FetchUserPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1190,7 +1187,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestSudoProvider_FetchRepoPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1214,7 +1211,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.TestSudoProvider_FetchUserPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1238,7 +1235,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.Test_GitLab_FetchAccount",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1262,7 +1259,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.ValidateAuthz",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1284,7 +1281,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.acct",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1307,7 +1304,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.getIntOrDefault",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1353,7 +1350,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.listMembers",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1376,7 +1373,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.listProjects",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1399,7 +1396,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.mustURL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1422,7 +1419,7 @@
                 "newPage": false,
                 "searchKey": "gitlab.newAuthzProvider",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

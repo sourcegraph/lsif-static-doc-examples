@@ -10,7 +10,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultReconcilerEnqueueState" href="#DefaultReconcilerEnqueueState">func DefaultReconcilerEnqueueState() btypes.ReconcilerState</a>
@@ -30,7 +30,7 @@ DefaultReconcilerEnqueueState returns the reconciler state that should be used w
 
 ```
 searchKey: global.TestDefaultReconcilerEnqueueState
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

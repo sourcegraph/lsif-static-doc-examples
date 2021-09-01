@@ -29,10 +29,6 @@ Package globals contains global variables that should be set by the frontend's m
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ConfigurationServerFrontendOnly" href="#ConfigurationServerFrontendOnly">var ConfigurationServerFrontendOnly</a>
 
 ```
@@ -162,10 +158,6 @@ var permissionsUserMappingWatchers uint32
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Branding" href="#Branding">func Branding() *schema.Branding</a>
 
 ```
@@ -209,7 +201,7 @@ PermissionsUserMapping returns the last valid value of permissions user mapping 
 
 ```
 searchKey: globals.SetBranding
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -222,7 +214,7 @@ SetBranding sets a valid value for the branding.
 
 ```
 searchKey: globals.SetExternalURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -235,7 +227,7 @@ SetExternalURL sets the fully-resolved, externally accessible frontend URL.
 
 ```
 searchKey: globals.SetPermissionsUserMapping
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -248,7 +240,7 @@ SetPermissionsUserMapping sets a valid value for the permissions user mapping.
 
 ```
 searchKey: globals.WatchBranding
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -261,7 +253,7 @@ WatchBranding watches for changes in the `branding` site configuration so that c
 
 ```
 searchKey: globals.WatchExternalURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go

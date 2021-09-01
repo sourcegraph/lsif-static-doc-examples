@@ -22,7 +22,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AT_REMOVEDIR" href="#AT_REMOVEDIR">const AT_REMOVEDIR</a>
@@ -50,14 +50,14 @@ const AT_SYMLINK_NOFOLLOW = 0x0020
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Fstatat" href="#Fstatat">func Fstatat(dirfd int, path string, stat *syscall.Stat_t, flags int) error</a>
 
 ```
 searchKey: unix.Fstatat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -68,7 +68,7 @@ func Fstatat(dirfd int, path string, stat *syscall.Stat_t, flags int) error
 
 ```
 searchKey: unix.GetEntropy
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -81,7 +81,7 @@ GetEntropy calls the macOS getentropy system call.
 
 ```
 searchKey: unix.IsNonblock
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -92,7 +92,7 @@ func IsNonblock(fd int) (nonblocking bool, err error)
 
 ```
 searchKey: unix.Openat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -103,7 +103,7 @@ func Openat(dirfd int, path string, flags int, perm uint32) (int, error)
 
 ```
 searchKey: unix.Unlinkat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -114,7 +114,7 @@ func Unlinkat(dirfd int, path string, flags int) error
 
 ```
 searchKey: unix.fcntl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -127,7 +127,7 @@ Implemented in the syscall package.
 
 ```
 searchKey: unix.fstatat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -149,7 +149,7 @@ func libc_getentropy_trampoline()
 
 ```
 searchKey: unix.openat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -160,7 +160,7 @@ func openat(dirfd int, path string, flags int, perm uint32) (int, error)
 
 ```
 searchKey: unix.syscall_syscall
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -171,7 +171,7 @@ func syscall_syscall(fn, a1, a2, a3 uintptr) (r1, r2 uintptr, err syscall.Errno)
 
 ```
 searchKey: unix.unlinkat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

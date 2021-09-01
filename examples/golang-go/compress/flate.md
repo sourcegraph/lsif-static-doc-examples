@@ -288,10 +288,6 @@ Package flate implements the DEFLATE compressed data format, described in RFC 19
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BestCompression" href="#BestCompression">const BestCompression</a>
 
 ```
@@ -887,10 +883,6 @@ const windowSize = 1 << logWindowSize
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="codeOrder" href="#codeOrder">var codeOrder</a>
 
 ```
@@ -1178,10 +1170,6 @@ var writeBlockTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CorruptInputError" href="#CorruptInputError">type CorruptInputError int64</a>
 
 ```
@@ -1199,7 +1187,7 @@ A CorruptInputError reports the presence of corrupt input at a given offset.
 
 ```
 searchKey: flate.CorruptInputError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1223,7 +1211,7 @@ An InternalError reports an error in the flate code itself.
 
 ```
 searchKey: flate.InternalError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1252,7 +1240,7 @@ Deprecated: No longer returned.
 
 ```
 searchKey: flate.ReadError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1279,7 +1267,7 @@ The actual read interface needed by NewReader. If the passed in io.Reader does n
 
 ```
 searchKey: flate.makeReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1325,7 +1313,7 @@ Deprecated: No longer returned.
 
 ```
 searchKey: flate.WriteError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1352,7 +1340,7 @@ A Writer takes data written to it and writes the compressed form of that data to
 
 ```
 searchKey: flate.NewWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1367,7 +1355,7 @@ If level is in the range [-2, 9] then the error returned will be nil. Otherwise 
 
 ```
 searchKey: flate.NewWriterDict
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1380,7 +1368,7 @@ NewWriterDict is like NewWriter but initializes the new Writer with a preset dic
 
 ```
 searchKey: flate.Writer.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1393,7 +1381,7 @@ Close flushes and closes the writer.
 
 ```
 searchKey: flate.Writer.Flush
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1445,7 +1433,7 @@ type byFreq []literalNode
 
 ```
 searchKey: flate.byFreq.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1500,7 +1488,7 @@ type byLiteral []literalNode
 
 ```
 searchKey: flate.byLiteral.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1609,7 +1597,7 @@ type compressor struct {
 
 ```
 searchKey: flate.compressor.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1620,7 +1608,7 @@ func (d *compressor) close() error
 
 ```
 searchKey: flate.compressor.deflate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1631,7 +1619,7 @@ func (d *compressor) deflate()
 
 ```
 searchKey: flate.compressor.encSpeed
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1703,7 +1691,7 @@ func (d *compressor) init(w io.Writer, level int) (err error)
 
 ```
 searchKey: flate.compressor.initDeflate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1725,7 +1713,7 @@ func (d *compressor) reset(w io.Writer)
 
 ```
 searchKey: flate.compressor.store
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1736,7 +1724,7 @@ func (d *compressor) store()
 
 ```
 searchKey: flate.compressor.storeHuff
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1749,7 +1737,7 @@ storeHuff compresses and stores the currently added data when the d.window is fu
 
 ```
 searchKey: flate.compressor.syncFlush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1838,7 +1826,7 @@ Decompress state.
 
 ```
 searchKey: flate.decompressor.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1871,7 +1859,7 @@ func (f *decompressor) Reset(r io.Reader, dict []byte) error
 
 ```
 searchKey: flate.decompressor.copyData
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1884,7 +1872,7 @@ copyData copies f.copyLen bytes from the underlying reader into f.hist. It pause
 
 ```
 searchKey: flate.decompressor.dataBlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1897,7 +1885,7 @@ Copy a single uncompressed data block from input to output.
 
 ```
 searchKey: flate.decompressor.finishBlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1921,7 +1909,7 @@ Read the next Huffman-encoded symbol from f according to h.
 
 ```
 searchKey: flate.decompressor.huffmanBlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1934,7 +1922,7 @@ Decode a single Huffman block from f. hl and hd are the Huffman states for the l
 
 ```
 searchKey: flate.decompressor.moreBits
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1945,7 +1933,7 @@ func (f *decompressor) moreBits() error
 
 ```
 searchKey: flate.decompressor.nextBlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1956,7 +1944,7 @@ func (f *decompressor) nextBlock()
 
 ```
 searchKey: flate.decompressor.readHuffman
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2021,7 +2009,7 @@ matchLen returns the match length between src[s:] and src[t:]. t can be negative
 
 ```
 searchKey: flate.deflateFast.reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2034,7 +2022,7 @@ Reset resets the encoding history. This ensures that no matches are made to the 
 
 ```
 searchKey: flate.deflateFast.shiftOffsets
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2130,7 +2118,7 @@ For performance reasons, this implementation performs little to no sanity checks
 
 ```
 searchKey: flate.dictDecoder.availRead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2143,7 +2131,7 @@ availRead reports the number of bytes that can be flushed by readFlush.
 
 ```
 searchKey: flate.dictDecoder.availWrite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2156,7 +2144,7 @@ availWrite reports the available amount of output buffer space.
 
 ```
 searchKey: flate.dictDecoder.histSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2182,7 +2170,7 @@ init initializes dictDecoder to have a sliding window dictionary of the given si
 
 ```
 searchKey: flate.dictDecoder.readFlush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2257,7 +2245,7 @@ This invariant must be kept: 0 <= cnt <= availWrite()
 
 ```
 searchKey: flate.dictDecoder.writeSlice
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2422,7 +2410,7 @@ type huffmanBitWriter struct {
 
 ```
 searchKey: flate.newHuffmanBitWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2459,7 +2447,7 @@ fixedSize returns the size of dynamically encoded data in bits.
 
 ```
 searchKey: flate.huffmanBitWriter.flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2735,7 +2723,7 @@ func generateFixedOffsetEncoding() *huffmanEncoder
 
 ```
 searchKey: flate.newHuffmanEncoder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2944,7 +2932,7 @@ func newSyncBuffer() *syncBuffer
 
 ```
 searchKey: flate.syncBuffer.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2966,7 +2954,7 @@ func (b *syncBuffer) Read(p []byte) (n int, err error)
 
 ```
 searchKey: flate.syncBuffer.ReadMode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2988,7 +2976,7 @@ func (b *syncBuffer) Write(p []byte) (n int, err error)
 
 ```
 searchKey: flate.syncBuffer.WriteMode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2999,7 +2987,7 @@ func (b *syncBuffer) WriteMode()
 
 ```
 searchKey: flate.syncBuffer.signal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3035,7 +3023,7 @@ type token uint32
 
 ```
 searchKey: flate.literalToken
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3048,7 +3036,7 @@ Convert a literal into a literal token.
 
 ```
 searchKey: flate.matchToken
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3061,7 +3049,7 @@ Convert a < xlength, xoffset > pair into a match token.
 
 ```
 searchKey: flate.token.length
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3072,7 +3060,7 @@ func (t token) length() uint32
 
 ```
 searchKey: flate.token.literal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3085,7 +3073,7 @@ Returns the literal of a literal token
 
 ```
 searchKey: flate.token.offset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3096,15 +3084,11 @@ Returns the extra offset of a match token
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDecode" href="#BenchmarkDecode">func BenchmarkDecode(b *testing.B)</a>
 
 ```
 searchKey: flate.BenchmarkDecode
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3115,7 +3099,7 @@ func BenchmarkDecode(b *testing.B)
 
 ```
 searchKey: flate.BenchmarkEncode
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3126,7 +3110,7 @@ func BenchmarkEncode(b *testing.B)
 
 ```
 searchKey: flate.NewReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3141,7 +3125,7 @@ The ReadCloser returned by NewReader also implements Resetter.
 
 ```
 searchKey: flate.NewReaderDict
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3156,7 +3140,7 @@ The ReadCloser returned by NewReader also implements Resetter.
 
 ```
 searchKey: flate.TestBestSpeed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3169,7 +3153,7 @@ TestBestSpeed tests that round-tripping through deflate and then inflate recover
 
 ```
 searchKey: flate.TestBestSpeedMatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3180,7 +3164,7 @@ func TestBestSpeedMatch(t *testing.T)
 
 ```
 searchKey: flate.TestBestSpeedMaxMatchOffset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3191,7 +3175,7 @@ func TestBestSpeedMaxMatchOffset(t *testing.T)
 
 ```
 searchKey: flate.TestBestSpeedShiftOffsets
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3202,7 +3186,7 @@ func TestBestSpeedShiftOffsets(t *testing.T)
 
 ```
 searchKey: flate.TestBlockHuff
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3215,7 +3199,7 @@ TestBlockHuff tests huffman encoding against reference files to detect possible 
 
 ```
 searchKey: flate.TestBulkHash4
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3226,7 +3210,7 @@ func TestBulkHash4(t *testing.T)
 
 ```
 searchKey: flate.TestDeflate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3237,7 +3221,7 @@ func TestDeflate(t *testing.T)
 
 ```
 searchKey: flate.TestDeflateFast_Reset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3250,7 +3234,7 @@ TestDeflateFast_Reset will test that encoding is consistent across a warparound 
 
 ```
 searchKey: flate.TestDeflateInflate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3261,7 +3245,7 @@ func TestDeflateInflate(t *testing.T)
 
 ```
 searchKey: flate.TestDeflateInflateString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3272,7 +3256,7 @@ func TestDeflateInflateString(t *testing.T)
 
 ```
 searchKey: flate.TestDeterministic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3285,7 +3269,7 @@ Test if two runs produce identical results even when writing different sizes to 
 
 ```
 searchKey: flate.TestDictDecoder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3296,7 +3280,7 @@ func TestDictDecoder(t *testing.T)
 
 ```
 searchKey: flate.TestInvalidBits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3307,7 +3291,7 @@ func TestInvalidBits(t *testing.T)
 
 ```
 searchKey: flate.TestInvalidEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3318,7 +3302,7 @@ func TestInvalidEncoding(t *testing.T)
 
 ```
 searchKey: flate.TestIssue5915
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3331,7 +3315,7 @@ The following test should not panic.
 
 ```
 searchKey: flate.TestIssue5962
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3344,7 +3328,7 @@ The following test should not panic.
 
 ```
 searchKey: flate.TestIssue6255
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3357,7 +3341,7 @@ The following test should not panic.
 
 ```
 searchKey: flate.TestMaxStackSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3368,7 +3352,7 @@ func TestMaxStackSize(t *testing.T)
 
 ```
 searchKey: flate.TestNlitOutOfRange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3379,7 +3363,7 @@ func TestNlitOutOfRange(t *testing.T)
 
 ```
 searchKey: flate.TestReaderDict
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3390,7 +3374,7 @@ func TestReaderDict(t *testing.T)
 
 ```
 searchKey: flate.TestReaderEarlyEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3407,7 +3391,7 @@ See [https://github.com/google/go-github/pull/317](https://github.com/google/go-
 
 ```
 searchKey: flate.TestReaderTruncated
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3418,7 +3402,7 @@ func TestReaderTruncated(t *testing.T)
 
 ```
 searchKey: flate.TestRegression2508
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3431,7 +3415,7 @@ See [https://golang.org/issue/2508](https://golang.org/issue/2508)
 
 ```
 searchKey: flate.TestReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3442,7 +3426,7 @@ func TestReset(t *testing.T)
 
 ```
 searchKey: flate.TestResetDict
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3453,7 +3437,7 @@ func TestResetDict(t *testing.T)
 
 ```
 searchKey: flate.TestReverseBits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3464,7 +3448,7 @@ func TestReverseBits(t *testing.T)
 
 ```
 searchKey: flate.TestStreams
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3475,7 +3459,7 @@ func TestStreams(t *testing.T)
 
 ```
 searchKey: flate.TestTruncatedStreams
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3486,7 +3470,7 @@ func TestTruncatedStreams(t *testing.T)
 
 ```
 searchKey: flate.TestVeryLongSparseChunk
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3497,7 +3481,7 @@ func TestVeryLongSparseChunk(t *testing.T)
 
 ```
 searchKey: flate.TestWriteBlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3510,7 +3494,7 @@ TestWriteBlock tests if the writeBlock encoding has changed. To update the refer
 
 ```
 searchKey: flate.TestWriteBlockDynamic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3523,7 +3507,7 @@ TestWriteBlockDynamic tests if the writeBlockDynamic encoding has changed. To up
 
 ```
 searchKey: flate.TestWriteError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3536,7 +3520,7 @@ Test if errors from the underlying writer is passed upwards.
 
 ```
 searchKey: flate.TestWriterDict
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3547,7 +3531,7 @@ func TestWriterDict(t *testing.T)
 
 ```
 searchKey: flate.TestWriterPersistentError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3558,7 +3542,7 @@ func TestWriterPersistentError(t *testing.T)
 
 ```
 searchKey: flate.TestWriterReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3569,7 +3553,7 @@ func TestWriterReset(t *testing.T)
 
 ```
 searchKey: flate.bulkHash4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3582,7 +3566,7 @@ bulkHash4 will compute hashes using the same algorithm as hash4
 
 ```
 searchKey: flate.doBench
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3593,7 +3577,7 @@ func doBench(b *testing.B, f func(b *testing.B, buf []byte, level, n int))
 
 ```
 searchKey: flate.emitLiteral
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3615,7 +3599,7 @@ func fixedHuffmanDecoderInit()
 
 ```
 searchKey: flate.hash
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3626,7 +3610,7 @@ func hash(u uint32) uint32
 
 ```
 searchKey: flate.hash4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3639,7 +3623,7 @@ hash4 returns a hash representation of the first 4 bytes of the supplied slice. 
 
 ```
 searchKey: flate.histogram
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3676,7 +3660,7 @@ func largeDataChunk() []byte
 
 ```
 searchKey: flate.lengthCode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3687,7 +3671,7 @@ func lengthCode(len uint32) uint32
 
 ```
 searchKey: flate.load32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3698,7 +3682,7 @@ func load32(b []byte, i int32) uint32
 
 ```
 searchKey: flate.load64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3709,7 +3693,7 @@ func load64(b []byte, i int32) uint64
 
 ```
 searchKey: flate.matchLen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3722,7 +3706,7 @@ matchLen returns the number of matching bytes in a and b up to length 'max'. Bot
 
 ```
 searchKey: flate.noEOF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3735,7 +3719,7 @@ noEOF returns err, unless err == io.EOF, in which case it returns io.ErrUnexpect
 
 ```
 searchKey: flate.offsetCode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3748,7 +3732,7 @@ Returns the offset code corresponding to a specific offset
 
 ```
 searchKey: flate.reverseBits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3759,7 +3743,7 @@ func reverseBits(number uint16, bitLength byte) uint16
 
 ```
 searchKey: flate.testBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3772,7 +3756,7 @@ testBlock tests a block against its references, or regenerate the references, if
 
 ```
 searchKey: flate.testBlockHuff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3783,7 +3767,7 @@ func testBlockHuff(t *testing.T, in, out string)
 
 ```
 searchKey: flate.testDeterministic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3794,7 +3778,7 @@ func testDeterministic(i int, t *testing.T)
 
 ```
 searchKey: flate.testResetOutput
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3805,7 +3789,7 @@ func testResetOutput(t *testing.T, level int, dict []byte)
 
 ```
 searchKey: flate.testSync
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3816,7 +3800,7 @@ func testSync(t *testing.T, level int, input []byte, name string)
 
 ```
 searchKey: flate.testToFromWithLevelAndLimit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3827,7 +3811,7 @@ func testToFromWithLevelAndLimit(t *testing.T, level int, input []byte, name str
 
 ```
 searchKey: flate.testToFromWithLimit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3838,7 +3822,7 @@ func testToFromWithLimit(t *testing.T, input []byte, name string, limit [11]int)
 
 ```
 searchKey: flate.testWriterEOF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3851,7 +3835,7 @@ testWriterEOF tests if the written block contains an EOF marker.
 
 ```
 searchKey: flate.writeToType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

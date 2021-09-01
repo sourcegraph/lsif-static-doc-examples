@@ -199,10 +199,6 @@ Package macho implements access to Mach-O object files.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ARM64_RELOC_ADDEND" href="#ARM64_RELOC_ADDEND">const ARM64_RELOC_ADDEND</a>
 
 ```
@@ -1231,10 +1227,6 @@ const _RelocTypeX86_64_name = ...
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrNotFat" href="#ErrNotFat">var ErrNotFat</a>
 
 ```
@@ -1338,10 +1330,6 @@ var _RelocTypeX86_64_index = [...]uint8{0, 21, 40, 59, 80, 96, 119, 140, 161, 18
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Cpu" href="#Cpu">type Cpu uint32</a>
 
 ```
@@ -1359,7 +1347,7 @@ A Cpu is a Mach-O cpu type.
 
 ```
 searchKey: macho.Cpu.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1370,7 +1358,7 @@ func (i Cpu) GoString() string
 
 ```
 searchKey: macho.Cpu.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1523,7 +1511,7 @@ A FatFile is a Mach-O universal binary that contains at least one architecture.
 
 ```
 searchKey: macho.NewFatFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1536,7 +1524,7 @@ NewFatFile creates a new FatFile for accessing all the Mach-O images in a univer
 
 ```
 searchKey: macho.OpenFat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1549,7 +1537,7 @@ OpenFat opens the named file using os.Open and prepares it for use as a Mach-O u
 
 ```
 searchKey: macho.openFatObscured
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1560,7 +1548,7 @@ func openFatObscured(name string) (*FatFile, error)
 
 ```
 searchKey: macho.FatFile.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1594,7 +1582,7 @@ A File represents an open Mach-O file.
 
 ```
 searchKey: macho.NewFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1607,7 +1595,7 @@ NewFile creates a new File for accessing a Mach-O binary in an underlying reader
 
 ```
 searchKey: macho.Open
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1620,7 +1608,7 @@ Open opens the named file using os.Open and prepares it for use as a Mach-O bina
 
 ```
 searchKey: macho.openObscured
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1631,7 +1619,7 @@ func openObscured(name string) (*File, error)
 
 ```
 searchKey: macho.File.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1644,7 +1632,7 @@ Close closes the File. If the File was created using NewFile directly instead of
 
 ```
 searchKey: macho.File.DWARF
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1657,7 +1645,7 @@ DWARF returns the DWARF debug information for the Mach-O file.
 
 ```
 searchKey: macho.File.ImportedLibraries
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1670,7 +1658,7 @@ ImportedLibraries returns the paths of all libraries referred to by the binary f
 
 ```
 searchKey: macho.File.ImportedSymbols
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1769,7 +1757,7 @@ FormatError is returned by some operations if the data does not have the correct
 
 ```
 searchKey: macho.FormatError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1808,7 +1796,7 @@ A LoadBytes is the uninterpreted bytes of a Mach-O load command.
 
 ```
 searchKey: macho.LoadBytes.Raw
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1832,7 +1820,7 @@ A LoadCmd is a Mach-O load command.
 
 ```
 searchKey: macho.LoadCmd.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1843,7 +1831,7 @@ func (i LoadCmd) GoString() string
 
 ```
 searchKey: macho.LoadCmd.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1992,7 +1980,7 @@ type RelocTypeARM int
 
 ```
 searchKey: macho.RelocTypeARM.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2003,7 +1991,7 @@ func (r RelocTypeARM) GoString() string
 
 ```
 searchKey: macho.RelocTypeARM.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2025,7 +2013,7 @@ type RelocTypeARM64 int
 
 ```
 searchKey: macho.RelocTypeARM64.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2036,7 +2024,7 @@ func (r RelocTypeARM64) GoString() string
 
 ```
 searchKey: macho.RelocTypeARM64.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2058,7 +2046,7 @@ type RelocTypeGeneric int
 
 ```
 searchKey: macho.RelocTypeGeneric.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2069,7 +2057,7 @@ func (r RelocTypeGeneric) GoString() string
 
 ```
 searchKey: macho.RelocTypeGeneric.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2091,7 +2079,7 @@ type RelocTypeX86_64 int
 
 ```
 searchKey: macho.RelocTypeX86_64.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2102,7 +2090,7 @@ func (r RelocTypeX86_64) GoString() string
 
 ```
 searchKey: macho.RelocTypeX86_64.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2169,7 +2157,7 @@ type Section struct {
 
 ```
 searchKey: macho.Section.Data
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2182,7 +2170,7 @@ Data reads and returns the contents of the Mach-O section.
 
 ```
 searchKey: macho.Section.Open
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2292,7 +2280,7 @@ A Segment represents a Mach-O 32-bit or 64-bit load segment command.
 
 ```
 searchKey: macho.Segment.Data
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2305,7 +2293,7 @@ Data reads and returns the contents of the segment.
 
 ```
 searchKey: macho.Segment.Open
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2480,7 +2468,7 @@ A Type is the Mach-O file type, e.g. an object file, executable, or dynamic libr
 
 ```
 searchKey: macho.Type.GoString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2491,7 +2479,7 @@ func (t Type) GoString() string
 
 ```
 searchKey: macho.Type.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2545,15 +2533,11 @@ type relocInfo struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestOpen" href="#TestOpen">func TestOpen(t *testing.T)</a>
 
 ```
 searchKey: macho.TestOpen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2564,7 +2548,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: macho.TestOpenFailure
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2575,7 +2559,7 @@ func TestOpenFailure(t *testing.T)
 
 ```
 searchKey: macho.TestOpenFat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2586,7 +2570,7 @@ func TestOpenFat(t *testing.T)
 
 ```
 searchKey: macho.TestOpenFatFailure
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2597,7 +2581,7 @@ func TestOpenFatFailure(t *testing.T)
 
 ```
 searchKey: macho.TestRelocTypeString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2608,7 +2592,7 @@ func TestRelocTypeString(t *testing.T)
 
 ```
 searchKey: macho.TestTypeString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2619,7 +2603,7 @@ func TestTypeString(t *testing.T)
 
 ```
 searchKey: macho.cstring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2630,7 +2614,7 @@ func cstring(b []byte) string
 
 ```
 searchKey: macho.readerAtFromObscured
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2641,7 +2625,7 @@ func readerAtFromObscured(name string) (io.ReaderAt, error)
 
 ```
 searchKey: macho.stringName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

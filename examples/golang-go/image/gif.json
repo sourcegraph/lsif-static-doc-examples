@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -524,9 +522,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -744,9 +740,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -785,7 +779,7 @@
                       "newPage": false,
                       "searchKey": "gif.DecodeAll",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -807,7 +801,7 @@
                       "newPage": false,
                       "searchKey": "gif.readGIF",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -899,7 +893,7 @@
                       "newPage": false,
                       "searchKey": "gif.blockReader.ReadByte",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -922,7 +916,7 @@
                       "newPage": false,
                       "searchKey": "gif.blockReader.close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -945,7 +939,7 @@
                       "newPage": false,
                       "searchKey": "gif.blockReader.fill",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -992,7 +986,7 @@
                       "newPage": false,
                       "searchKey": "gif.blockWriter.Flush",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1061,7 +1055,7 @@
                       "newPage": false,
                       "searchKey": "gif.blockWriter.close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1084,7 +1078,7 @@
                       "newPage": false,
                       "searchKey": "gif.blockWriter.setup",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1154,7 +1148,7 @@
                       "newPage": false,
                       "searchKey": "gif.decoder.newImageFromDescriptor",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1177,7 +1171,7 @@
                       "newPage": false,
                       "searchKey": "gif.decoder.readBlock",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1223,7 +1217,7 @@
                       "newPage": false,
                       "searchKey": "gif.decoder.readExtension",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1246,7 +1240,7 @@
                       "newPage": false,
                       "searchKey": "gif.decoder.readGraphicControl",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1269,7 +1263,7 @@
                       "newPage": false,
                       "searchKey": "gif.decoder.readHeaderAndScreenDescriptor",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1362,7 +1356,7 @@
                       "newPage": false,
                       "searchKey": "gif.encoder.flush",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1431,7 +1425,7 @@
                       "newPage": false,
                       "searchKey": "gif.encoder.writeHeader",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1524,7 +1518,7 @@
                       "newPage": false,
                       "searchKey": "gif.offsetImage.Bounds",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1598,9 +1592,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1619,7 +1611,7 @@
                 "newPage": false,
                 "searchKey": "gif.BenchmarkDecode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1643,7 +1635,7 @@
                 "newPage": false,
                 "searchKey": "gif.BenchmarkEncodeRandomPaletted",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1667,7 +1659,7 @@
                 "newPage": false,
                 "searchKey": "gif.BenchmarkEncodeRandomRGBA",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1691,7 +1683,7 @@
                 "newPage": false,
                 "searchKey": "gif.BenchmarkEncodeRealisticPaletted",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1715,7 +1707,7 @@
                 "newPage": false,
                 "searchKey": "gif.BenchmarkEncodeRealisticRGBA",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1739,7 +1731,7 @@
                 "newPage": false,
                 "searchKey": "gif.Decode",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1761,7 +1753,7 @@
                 "newPage": false,
                 "searchKey": "gif.DecodeConfig",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1783,7 +1775,7 @@
                 "newPage": false,
                 "searchKey": "gif.Encode",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1805,7 +1797,7 @@
                 "newPage": false,
                 "searchKey": "gif.EncodeAll",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1827,7 +1819,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestBounds",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1851,7 +1843,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestColorTablesMatch",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1875,7 +1867,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestDecode",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1899,7 +1891,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestDecodeMemoryConsumption",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1923,7 +1915,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeAllFramesOutOfBounds",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1947,7 +1939,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeAllGo1Dot4",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1971,7 +1963,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeAllGo1Dot5",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1995,7 +1987,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeAllGo1Dot5GlobalColorModel",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2019,7 +2011,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeBadPalettes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2043,7 +2035,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeCroppedSubImages",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2067,7 +2059,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeImplicitConfigSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2091,7 +2083,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeMismatchDelay",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2115,7 +2107,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeNonZeroMinPoint",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2139,7 +2131,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodePalettes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2163,7 +2155,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeWrappedImage",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2187,7 +2179,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestEncodeZeroGIF",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2211,7 +2203,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestLoopCount",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2235,7 +2227,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestNoPalette",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2259,7 +2251,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestPixelOutsidePaletteRange",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2283,7 +2275,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestSubImage",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2307,7 +2299,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestTransparentIndex",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2331,7 +2323,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestTransparentPixelOutsidePaletteRange",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2355,7 +2347,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestUnexpectedEOF",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2379,7 +2371,7 @@
                 "newPage": false,
                 "searchKey": "gif.TestWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2403,7 +2395,7 @@
                 "newPage": false,
                 "searchKey": "gif.averageDelta",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2426,7 +2418,7 @@
                 "newPage": false,
                 "searchKey": "gif.averageDeltaBound",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2449,7 +2441,7 @@
                 "newPage": false,
                 "searchKey": "gif.delta",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2472,7 +2464,7 @@
                 "newPage": false,
                 "searchKey": "gif.encodeColorTable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2518,7 +2510,7 @@
                 "newPage": false,
                 "searchKey": "gif.log2",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2541,7 +2533,7 @@
                 "newPage": false,
                 "searchKey": "gif.lzwEncode",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2564,7 +2556,7 @@
                 "newPage": false,
                 "searchKey": "gif.palettesEqual",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2587,7 +2579,7 @@
                 "newPage": false,
                 "searchKey": "gif.readByte",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2610,7 +2602,7 @@
                 "newPage": false,
                 "searchKey": "gif.readFull",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2633,7 +2625,7 @@
                 "newPage": false,
                 "searchKey": "gif.readImg",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2656,7 +2648,7 @@
                 "newPage": false,
                 "searchKey": "gif.testEncodeAll",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2679,7 +2671,7 @@
                 "newPage": false,
                 "searchKey": "gif.try",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2702,7 +2694,7 @@
                 "newPage": false,
                 "searchKey": "gif.uninterlace",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2725,7 +2717,7 @@
                 "newPage": false,
                 "searchKey": "gif.writeUint16",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

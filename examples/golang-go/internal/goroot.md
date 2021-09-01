@@ -15,7 +15,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="gccgoSearch" href="#gccgoSearch">var gccgoSearch</a>
@@ -34,7 +34,7 @@ gccgoSearch is used to check whether a gccgo package exists in the standard libr
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="gccgoDirs" href="#gccgoDirs">type gccgoDirs struct</a>
@@ -57,7 +57,7 @@ gccgoSearch holds the gccgo search directories.
 
 ```
 searchKey: goroot.gccgoDirs.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -82,14 +82,14 @@ isStandard reports whether path is a standard library for gccgo.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="IsStandardPackage" href="#IsStandardPackage">func IsStandardPackage(goroot, compiler, path string) bool</a>
 
 ```
 searchKey: goroot.IsStandardPackage
-tags: [method]
+tags: [function]
 ```
 
 ```Go

@@ -27,7 +27,7 @@ Package tracer initializes distributed tracing and log15 behavior. It also updat
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="tracingNotEnabledURL" href="#tracingNotEnabledURL">const tracingNotEnabledURL</a>
@@ -44,7 +44,7 @@ const tracingNotEnabledURL = "#tracing_not_enabled_for_this_request_add_?trace=1
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Option" href="#Option">type Option func(*github.com/sourcegraph/sourcegraph/internal/tracer.Options)</a>
@@ -64,7 +64,7 @@ If this idiom seems strange: [https://github.com/tmrts/go-patterns/blob/master/i
 
 ```
 searchKey: tracer.ServiceName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -178,14 +178,14 @@ func (t *switchableTracer) set(tracer opentracing.Tracer, tracerCloser io.Closer
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Init" href="#Init">func Init(options ...Option)</a>
 
 ```
 searchKey: tracer.Init
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -207,7 +207,7 @@ func init()
 
 ```
 searchKey: tracer.initTracer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -220,7 +220,7 @@ initTracer is a helper that should be called exactly once (from Init).
 
 ```
 searchKey: tracer.newTracer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -63,10 +63,6 @@ Note that the examples in this package assume a Unix system. They may not run on
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrNotFound" href="#ErrNotFound">var ErrNotFound</a>
 
 ```
@@ -108,10 +104,6 @@ var skipStdinCopyError func(error) bool
 skipStdinCopyError optionally specifies a function which reports whether the provided stdin copy error should be ignored. 
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Cmd" href="#Cmd">type Cmd struct</a>
 
@@ -220,7 +212,7 @@ A Cmd cannot be reused after calling its Run, Output or CombinedOutput methods.
 
 ```
 searchKey: exec.Command
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -241,7 +233,7 @@ On Windows, processes receive the whole command line as a single string and do t
 
 ```
 searchKey: exec.CommandContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -256,7 +248,7 @@ The provided context is used to kill the process (by calling os.Process.Kill) if
 
 ```
 searchKey: exec.Cmd.CombinedOutput
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -269,7 +261,7 @@ CombinedOutput runs the command and returns its combined standard output and sta
 
 ```
 searchKey: exec.Cmd.Output
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -282,7 +274,7 @@ Output runs the command and returns its standard output. Any returned error will
 
 ```
 searchKey: exec.Cmd.Run
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -301,7 +293,7 @@ If the calling goroutine has locked the operating system thread with runtime.Loc
 
 ```
 searchKey: exec.Cmd.Start
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -318,7 +310,7 @@ The Wait method will return the exit code and release associated resources once 
 
 ```
 searchKey: exec.Cmd.StderrPipe
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -333,7 +325,7 @@ Wait will close the pipe after seeing the command exit, so most callers need not
 
 ```
 searchKey: exec.Cmd.StdinPipe
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -346,7 +338,7 @@ StdinPipe returns a pipe that will be connected to the command's standard input 
 
 ```
 searchKey: exec.Cmd.StdoutPipe
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -361,7 +353,7 @@ Wait will close the pipe after seeing the command exit, so most callers need not
 
 ```
 searchKey: exec.Cmd.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -374,7 +366,7 @@ String returns a human-readable description of c. It is intended only for debugg
 
 ```
 searchKey: exec.Cmd.Wait
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -397,7 +389,7 @@ Wait releases any resources associated with the Cmd.
 
 ```
 searchKey: exec.Cmd.argv
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -419,7 +411,7 @@ func (c *Cmd) closeDescriptors(closers []io.Closer)
 
 ```
 searchKey: exec.Cmd.envv
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -430,7 +422,7 @@ func (c *Cmd) envv() ([]string, error)
 
 ```
 searchKey: exec.Cmd.stderr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -441,7 +433,7 @@ func (c *Cmd) stderr() (f *os.File, err error)
 
 ```
 searchKey: exec.Cmd.stdin
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -452,7 +444,7 @@ func (c *Cmd) stdin() (f *os.File, err error)
 
 ```
 searchKey: exec.Cmd.stdout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -492,7 +484,7 @@ Error is returned by LookPath when it fails to classify a file as an executable.
 
 ```
 searchKey: exec.Error.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -503,7 +495,7 @@ func (e *Error) Error() string
 
 ```
 searchKey: exec.Error.Unwrap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -541,7 +533,7 @@ An ExitError reports an unsuccessful exit by a command.
 
 ```
 searchKey: exec.ExitError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -568,7 +560,7 @@ type closeOnce struct {
 
 ```
 searchKey: exec.closeOnce.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -579,7 +571,7 @@ func (c *closeOnce) Close() error
 
 ```
 searchKey: exec.closeOnce.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -609,7 +601,7 @@ prefixSuffixSaver is an io.Writer which retains the first N bytes and the last N
 
 ```
 searchKey: exec.prefixSuffixSaver.Bytes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -642,15 +634,11 @@ fill appends up to len(p) bytes of p to *dst, such that *dst does not grow large
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkExecHostname" href="#BenchmarkExecHostname">func BenchmarkExecHostname(b *testing.B)</a>
 
 ```
 searchKey: exec.BenchmarkExecHostname
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -661,7 +649,7 @@ func BenchmarkExecHostname(b *testing.B)
 
 ```
 searchKey: exec.LookPath
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -674,7 +662,7 @@ LookPath searches for an executable named file in the directories named by the P
 
 ```
 searchKey: exec.TestDedupEnv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -685,7 +673,7 @@ func TestDedupEnv(t *testing.T)
 
 ```
 searchKey: exec.TestLookPathNotFound
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -696,7 +684,7 @@ func TestLookPathNotFound(t *testing.T)
 
 ```
 searchKey: exec.TestLookPathUnixEmptyPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -707,7 +695,7 @@ func TestLookPathUnixEmptyPath(t *testing.T)
 
 ```
 searchKey: exec.TestPrefixSuffixSaver
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -718,7 +706,7 @@ func TestPrefixSuffixSaver(t *testing.T)
 
 ```
 searchKey: exec.addCriticalEnv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -731,7 +719,7 @@ addCriticalEnv adds any critical environment variables that are required (or at 
 
 ```
 searchKey: exec.dedupEnv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -744,7 +732,7 @@ dedupEnv returns a copy of env with any duplicates removed, in favor of later va
 
 ```
 searchKey: exec.dedupEnvCase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -757,7 +745,7 @@ dedupEnvCase is dedupEnv with a case option for testing. If caseInsensitive is t
 
 ```
 searchKey: exec.findExecutable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -779,7 +767,7 @@ func init()
 
 ```
 searchKey: exec.interfaceEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -792,7 +780,7 @@ interfaceEqual protects against panics from doing equality tests on two interfac
 
 ```
 searchKey: exec.lookExtensions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -805,7 +793,7 @@ lookExtensions finds windows executable by its dir and path. It uses LookPath to
 
 ```
 searchKey: exec.minInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

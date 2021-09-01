@@ -71,10 +71,6 @@ When cgo is available, cgo-based (libc-backed) code is used by default. This can
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="groupBuffer" href="#groupBuffer">const groupBuffer</a>
 
 ```
@@ -121,10 +117,6 @@ const userBuffer = bufferKind((_Ciconst__SC_GETPW_R_SIZE_MAX))
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="cache" href="#cache">var cache</a>
 
 ```
@@ -168,10 +160,6 @@ var userImplemented = true // set to false by lookup_stubs.go's init
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Group" href="#Group">type Group struct</a>
 
 ```
@@ -194,7 +182,7 @@ On POSIX systems Gid contains a decimal number representing the group ID.
 
 ```
 searchKey: user.LookupGroup
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -207,7 +195,7 @@ LookupGroup looks up a group by name. If the group cannot be found, the returned
 
 ```
 searchKey: user.LookupGroupId
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -220,7 +208,7 @@ LookupGroupId looks up a group by groupid. If the group cannot be found, the ret
 
 ```
 searchKey: user.buildGroup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -231,7 +219,7 @@ func buildGroup(grp *_Ctype_struct_group) *Group
 
 ```
 searchKey: user.lookupGroup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -242,7 +230,7 @@ func lookupGroup(groupname string) (*Group, error)
 
 ```
 searchKey: user.lookupGroupId
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -253,7 +241,7 @@ func lookupGroupId(gid string) (*Group, error)
 
 ```
 searchKey: user.lookupUnixGid
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -277,7 +265,7 @@ UnknownGroupError is returned by LookupGroup when a group cannot be found.
 
 ```
 searchKey: user.UnknownGroupError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -301,7 +289,7 @@ UnknownGroupIdError is returned by LookupGroupId when a group cannot be found.
 
 ```
 searchKey: user.UnknownGroupIdError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -325,7 +313,7 @@ UnknownUserError is returned by Lookup when a user cannot be found.
 
 ```
 searchKey: user.UnknownUserError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -349,7 +337,7 @@ UnknownUserIdError is returned by LookupId when a user cannot be found.
 
 ```
 searchKey: user.UnknownUserIdError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -410,7 +398,7 @@ The first call will cache the current user information. Subsequent calls will re
 
 ```
 searchKey: user.Lookup
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -423,7 +411,7 @@ Lookup looks up a user by username. If the user cannot be found, the returned er
 
 ```
 searchKey: user.LookupId
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -436,7 +424,7 @@ LookupId looks up a user by userid. If the user cannot be found, the returned er
 
 ```
 searchKey: user.buildUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -458,7 +446,7 @@ func current() (*User, error)
 
 ```
 searchKey: user.lookupUnixUid
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -469,7 +457,7 @@ func lookupUnixUid(uid int) (*User, error)
 
 ```
 searchKey: user.lookupUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -480,7 +468,7 @@ func lookupUser(username string) (*User, error)
 
 ```
 searchKey: user.lookupUserId
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -491,7 +479,7 @@ func lookupUserId(uid string) (*User, error)
 
 ```
 searchKey: user.User.GroupIds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -516,7 +504,7 @@ type bufferKind _Ctype_int /*line :200:22*/
 
 ```
 searchKey: user.bufferKind.initialSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -541,7 +529,7 @@ type memBuffer struct {
 
 ```
 searchKey: user.alloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -552,7 +540,7 @@ func alloc(kind bufferKind) *memBuffer
 
 ```
 searchKey: user.memBuffer.free
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -572,15 +560,11 @@ func (mb *memBuffer) resize(newSize _Ctype_size_t)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkCurrent" href="#BenchmarkCurrent">func BenchmarkCurrent(b *testing.B)</a>
 
 ```
 searchKey: user.BenchmarkCurrent
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -591,7 +575,7 @@ func BenchmarkCurrent(b *testing.B)
 
 ```
 searchKey: user.TestCurrent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -602,7 +586,7 @@ func TestCurrent(t *testing.T)
 
 ```
 searchKey: user.TestGroupIds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -613,7 +597,7 @@ func TestGroupIds(t *testing.T)
 
 ```
 searchKey: user.TestLookup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -624,7 +608,7 @@ func TestLookup(t *testing.T)
 
 ```
 searchKey: user.TestLookupGroup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -635,7 +619,7 @@ func TestLookupGroup(t *testing.T)
 
 ```
 searchKey: user.TestLookupId
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -646,7 +630,7 @@ func TestLookupId(t *testing.T)
 
 ```
 searchKey: user.TestNegativeUid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -659,7 +643,7 @@ Issue 22739
 
 ```
 searchKey: user.checkGroup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -670,7 +654,7 @@ func checkGroup(t *testing.T)
 
 ```
 searchKey: user.checkUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -681,7 +665,7 @@ func checkUser(t *testing.T)
 
 ```
 searchKey: user.compare
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -692,7 +676,7 @@ func compare(t *testing.T, want, got *User)
 
 ```
 searchKey: user.containsID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -703,7 +687,7 @@ func containsID(ids []string, id string) bool
 
 ```
 searchKey: user.getGroupList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -714,7 +698,7 @@ func getGroupList(name *_Ctype_char, userGID _Ctype_gid_t, gids *_Ctype_gid_t, n
 
 ```
 searchKey: user.groupRetry
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -727,7 +711,7 @@ groupRetry retries getGroupList with an increasingly large size for n. The resul
 
 ```
 searchKey: user.isSizeReasonable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -738,7 +722,7 @@ func isSizeReasonable(sz int64) bool
 
 ```
 searchKey: user.listGroups
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -749,7 +733,7 @@ func listGroups(u *User) ([]string, error)
 
 ```
 searchKey: user.retryWithBuffer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

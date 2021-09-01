@@ -11,7 +11,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleFprint" href="#ExampleFprint">func ExampleFprint()</a>
@@ -29,7 +29,7 @@ func ExampleFprint()
 
 ```
 searchKey: printer_test.Test
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -42,7 +42,7 @@ Dummy test function so that godoc does not use the entire file as example.
 
 ```
 searchKey: printer_test.parseFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

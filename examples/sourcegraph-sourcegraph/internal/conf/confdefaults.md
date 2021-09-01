@@ -16,7 +16,7 @@ It is a separate package so that users of pkg/conf do not indirectly import pkg/
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Default" href="#Default">var Default</a>

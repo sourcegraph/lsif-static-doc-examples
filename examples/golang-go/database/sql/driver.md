@@ -104,10 +104,6 @@ Before a connection is returned to the connection pool after use, IsValid is cal
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Bool" href="#Bool">var Bool</a>
 
 ```
@@ -273,10 +269,6 @@ var valuerReflectType = reflect.TypeOf((*Valuer)(nil)).Elem()
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ColumnConverter" href="#ColumnConverter">type ColumnConverter interface</a>
 
@@ -751,7 +743,7 @@ RowsAffected implements Result for an INSERT or UPDATE operation which mutates a
 
 ```
 searchKey: driver.RowsAffected.LastInsertId
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -762,7 +754,7 @@ func (RowsAffected) LastInsertId() (int64, error)
 
 ```
 searchKey: driver.RowsAffected.RowsAffected
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1071,7 +1063,7 @@ If the driver supports cursors, a returned Value may also implement the Rows int
 
 ```
 searchKey: driver.callValuerValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1171,7 +1163,7 @@ func (boolType) ConvertValue(src interface{}) (Value, error)
 
 ```
 searchKey: driver.boolType.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1324,7 +1316,7 @@ type noRows struct{}
 
 ```
 searchKey: driver.noRows.LastInsertId
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1335,7 +1327,7 @@ func (noRows) LastInsertId() (int64, error)
 
 ```
 searchKey: driver.noRows.RowsAffected
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1404,15 +1396,11 @@ type valueConverterTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="IsScanValue" href="#IsScanValue">func IsScanValue(v interface{}) bool</a>
 
 ```
 searchKey: driver.IsScanValue
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1425,7 +1413,7 @@ IsScanValue is equivalent to IsValue. It exists for compatibility.
 
 ```
 searchKey: driver.IsValue
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1438,7 +1426,7 @@ IsValue reports whether v is a valid Value parameter type.
 
 ```
 searchKey: driver.TestValueConverters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

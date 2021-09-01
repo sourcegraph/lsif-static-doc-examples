@@ -90,10 +90,6 @@ Package fs defines basic interfaces to a file system. A file system can be provi
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ModeAppend" href="#ModeAppend">const ModeAppend</a>
 
 ```
@@ -309,10 +305,6 @@ Mask for the type bits. For regular files, none will be set.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrClosed" href="#ErrClosed">var ErrClosed</a>
 
 ```
@@ -398,10 +390,6 @@ SkipDir is used as a return value from WalkDirFuncs to indicate that the directo
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DirEntry" href="#DirEntry">type DirEntry interface</a>
 
 ```
@@ -439,7 +427,7 @@ A DirEntry is an entry read from a directory (using the ReadDir function or a Re
 
 ```
 searchKey: fs.FileInfoToDirEntry
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -478,7 +466,7 @@ The FS interface is the minimum implementation required of the file system. A fi
 
 ```
 searchKey: fs.Sub
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -532,7 +520,7 @@ A FileInfo describes a file and is returned by Stat.
 
 ```
 searchKey: fs.Stat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -560,7 +548,7 @@ A FileMode represents a file's mode and permission bits. The bits have the same 
 
 ```
 searchKey: fs.FileMode.IsDir
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -573,7 +561,7 @@ IsDir reports whether m describes a directory. That is, it tests for the ModeDir
 
 ```
 searchKey: fs.FileMode.IsRegular
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -586,7 +574,7 @@ IsRegular reports whether m describes a regular file. That is, it tests that no 
 
 ```
 searchKey: fs.FileMode.Perm
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -599,7 +587,7 @@ Perm returns the Unix permission bits in m (m & ModePerm).
 
 ```
 searchKey: fs.FileMode.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -610,7 +598,7 @@ func (m FileMode) String() string
 
 ```
 searchKey: fs.FileMode.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -660,7 +648,7 @@ PathError records an error and the operation and file path that caused it.
 
 ```
 searchKey: fs.PathError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -671,7 +659,7 @@ func (e *PathError) Error() string
 
 ```
 searchKey: fs.PathError.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -684,7 +672,7 @@ Timeout reports whether this error represents a timeout.
 
 ```
 searchKey: fs.PathError.Unwrap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -858,7 +846,7 @@ dirInfo is a DirEntry based on a FileInfo.
 
 ```
 searchKey: fs.dirInfo.Info
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -869,7 +857,7 @@ func (di dirInfo) Info() (FileInfo, error)
 
 ```
 searchKey: fs.dirInfo.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -880,7 +868,7 @@ func (di dirInfo) IsDir() bool
 
 ```
 searchKey: fs.dirInfo.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -891,7 +879,7 @@ func (di dirInfo) Name() string
 
 ```
 searchKey: fs.dirInfo.Type
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -915,7 +903,7 @@ type statDirEntry struct {
 
 ```
 searchKey: fs.statDirEntry.Info
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -926,7 +914,7 @@ func (d *statDirEntry) Info() (FileInfo, error)
 
 ```
 searchKey: fs.statDirEntry.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -937,7 +925,7 @@ func (d *statDirEntry) IsDir() bool
 
 ```
 searchKey: fs.statDirEntry.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -948,7 +936,7 @@ func (d *statDirEntry) Name() string
 
 ```
 searchKey: fs.statDirEntry.Type
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1065,15 +1053,11 @@ shorten maps name, which should start with f.dir, back to the suffix after f.dir
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Glob" href="#Glob">func Glob(fsys FS, pattern string) (matches []string, err error)</a>
 
 ```
 searchKey: fs.Glob
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1090,7 +1074,7 @@ If fs implements GlobFS, Glob calls fs.Glob. Otherwise, Glob uses ReadDir to tra
 
 ```
 searchKey: fs.ReadDir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1105,7 +1089,7 @@ If fs implements ReadDirFS, ReadDir calls fs.ReadDir. Otherwise ReadDir calls fs
 
 ```
 searchKey: fs.ReadFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1120,7 +1104,7 @@ If fs implements ReadFileFS, ReadFile calls fs.ReadFile. Otherwise ReadFile call
 
 ```
 searchKey: fs.ValidPath
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1137,7 +1121,7 @@ Note that paths are slash-separated on all systems, even Windows. Paths containi
 
 ```
 searchKey: fs.WalkDir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1156,7 +1140,7 @@ WalkDir does not follow symbolic links found in directories, but if root itself 
 
 ```
 searchKey: fs.cleanGlobPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1224,7 +1208,7 @@ func errPermission() error
 
 ```
 searchKey: fs.glob
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1237,7 +1221,7 @@ glob searches for files matching pattern in the directory dir and appends them t
 
 ```
 searchKey: fs.hasMeta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1250,7 +1234,7 @@ hasMeta reports whether path contains any of the magic characters recognized by 
 
 ```
 searchKey: fs.walkDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

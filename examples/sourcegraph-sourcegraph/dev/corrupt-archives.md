@@ -10,15 +10,11 @@
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="corruptArchive" href="#corruptArchive">func corruptArchive(path string, size int64) error</a>
 
 ```
 searchKey: main.corruptArchive
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29,7 +25,7 @@ func corruptArchive(path string, size int64) error
 
 ```
 searchKey: main.corruptArchives
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

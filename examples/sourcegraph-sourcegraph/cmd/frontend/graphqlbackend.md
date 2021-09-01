@@ -1899,10 +1899,6 @@ Package graphqlbackend implements the GraphQL API.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AlertTypeError" href="#AlertTypeError">const AlertTypeError</a>
 
 ```
@@ -2257,10 +2253,6 @@ const testDiffFirstHunk = ...
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ActualUserCount" href="#ActualUserCount">var ActualUserCount</a>
 
@@ -3091,10 +3083,6 @@ var timeNow = time.Now
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Alert" href="#Alert">type Alert struct</a>
 
 ```
@@ -3116,7 +3104,7 @@ Alert implements the GraphQL type Alert.
 
 ```
 searchKey: graphqlbackend.determineOutOfDateAlert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3127,7 +3115,7 @@ func determineOutOfDateAlert(isAdmin bool, months int, offline bool) *Alert
 
 ```
 searchKey: graphqlbackend.Alert.IsDismissibleWithKey
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3138,7 +3126,7 @@ func (r *Alert) IsDismissibleWithKey() *string
 
 ```
 searchKey: graphqlbackend.Alert.Message
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3149,7 +3137,7 @@ func (r *Alert) Message() string
 
 ```
 searchKey: graphqlbackend.Alert.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3287,7 +3275,7 @@ type BasicLimitWatcher RateLimitWatcher
 
 ```
 searchKey: graphqlbackend.NewBasicLimitWatcher
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3298,7 +3286,7 @@ func NewBasicLimitWatcher(store throttled.GCRAStore) *BasicLimitWatcher
 
 ```
 searchKey: graphqlbackend.BasicLimitWatcher.Get
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3591,7 +3579,7 @@ BigInt implements the BigInt GraphQL scalar type.
 
 ```
 searchKey: graphqlbackend.BigIntOrNil
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3615,7 +3603,7 @@ func (BigInt) ImplementsGraphQLType(name string) bool
 
 ```
 searchKey: graphqlbackend.BigInt.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4229,7 +4217,7 @@ CommitSearchResultResolver is a resolver for the GraphQL type `CommitSearchResul
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.Commit
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4240,7 +4228,7 @@ func (r *CommitSearchResultResolver) Commit() *GitCommitResolver
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.Detail
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4251,7 +4239,7 @@ func (r *CommitSearchResultResolver) Detail() Markdown
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.DiffPreview
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4262,7 +4250,7 @@ func (r *CommitSearchResultResolver) DiffPreview() *highlightedStringResolver
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.Label
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4273,7 +4261,7 @@ func (r *CommitSearchResultResolver) Label() Markdown
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.Matches
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4284,7 +4272,7 @@ func (r *CommitSearchResultResolver) Matches() []*searchResultMatchResolver
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.MessagePreview
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4295,7 +4283,7 @@ func (r *CommitSearchResultResolver) MessagePreview() *highlightedStringResolver
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.Refs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4306,7 +4294,7 @@ func (r *CommitSearchResultResolver) Refs() []*GitRefResolver
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.ResultCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4317,7 +4305,7 @@ func (r *CommitSearchResultResolver) ResultCount() int32
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.SourceRefs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4328,7 +4316,7 @@ func (r *CommitSearchResultResolver) SourceRefs() []*GitRefResolver
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.ToCommitSearchResult
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4339,7 +4327,7 @@ func (r *CommitSearchResultResolver) ToCommitSearchResult() (*CommitSearchResult
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.ToFileMatch
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4350,7 +4338,7 @@ func (r *CommitSearchResultResolver) ToFileMatch() (*FileMatchResolver, bool)
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.ToRepository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4361,7 +4349,7 @@ func (r *CommitSearchResultResolver) ToRepository() (*RepositoryResolver, bool)
 
 ```
 searchKey: graphqlbackend.CommitSearchResultResolver.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4385,7 +4373,7 @@ ComputeDiffFunc is a function that computes FileDiffs for the given args. It ret
 
 ```
 searchKey: graphqlbackend.computeRepositoryComparisonDiff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4610,7 +4598,7 @@ CreatePaidProductSubscriptionResult implements the GraphQL type CreatePaidProduc
 
 ```
 searchKey: graphqlbackend.CreatePaidProductSubscriptionResult.ProductSubscription
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4660,7 +4648,7 @@ DateTime implements the DateTime GraphQL scalar type.
 
 ```
 searchKey: graphqlbackend.DateTimeOrNil
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4684,7 +4672,7 @@ func (DateTime) ImplementsGraphQLType(name string) bool
 
 ```
 searchKey: graphqlbackend.DateTime.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4834,7 +4822,7 @@ type DiffHunk struct {
 
 ```
 searchKey: graphqlbackend.NewDiffHunk
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4845,7 +4833,7 @@ func NewDiffHunk(hunk *diff.Hunk, highlighter FileDiffHighlighter) *DiffHunk
 
 ```
 searchKey: graphqlbackend.DiffHunk.Body
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4867,7 +4855,7 @@ func (r *DiffHunk) Highlight(ctx context.Context, args *HighlightArgs) (*highlig
 
 ```
 searchKey: graphqlbackend.DiffHunk.NewRange
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4878,7 +4866,7 @@ func (r *DiffHunk) NewRange() *DiffHunkRange
 
 ```
 searchKey: graphqlbackend.DiffHunk.OldNoNewlineAt
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4889,7 +4877,7 @@ func (r *DiffHunk) OldNoNewlineAt() bool
 
 ```
 searchKey: graphqlbackend.DiffHunk.OldRange
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4900,7 +4888,7 @@ func (r *DiffHunk) OldRange() *DiffHunkRange
 
 ```
 searchKey: graphqlbackend.DiffHunk.Section
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4925,7 +4913,7 @@ type DiffHunkRange struct {
 
 ```
 searchKey: graphqlbackend.NewDiffHunkRange
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4936,7 +4924,7 @@ func NewDiffHunkRange(startLine, lines int32) *DiffHunkRange
 
 ```
 searchKey: graphqlbackend.DiffHunkRange.Lines
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4947,7 +4935,7 @@ func (r *DiffHunkRange) Lines() int32
 
 ```
 searchKey: graphqlbackend.DiffHunkRange.StartLine
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4969,7 +4957,7 @@ type DiffStat struct{ added, changed, deleted int32 }
 
 ```
 searchKey: graphqlbackend.NewDiffStat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5002,7 +4990,7 @@ func (r *DiffStat) AddStat(s diff.Stat)
 
 ```
 searchKey: graphqlbackend.DiffStat.Added
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5013,7 +5001,7 @@ func (r *DiffStat) Added() int32
 
 ```
 searchKey: graphqlbackend.DiffStat.Changed
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5024,7 +5012,7 @@ func (r *DiffStat) Changed() int32
 
 ```
 searchKey: graphqlbackend.DiffStat.Deleted
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5163,7 +5151,7 @@ EmptyResponse is a type that can be used in the return signature for graphql que
 
 ```
 searchKey: graphqlbackend.EmptyResponse.AlwaysNil
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5203,7 +5191,7 @@ type EvaluatedFeatureFlagResolver struct {
 
 ```
 searchKey: graphqlbackend.EvaluatedFeatureFlagResolver.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5214,7 +5202,7 @@ func (e *EvaluatedFeatureFlagResolver) Name() string
 
 ```
 searchKey: graphqlbackend.EvaluatedFeatureFlagResolver.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5460,7 +5448,7 @@ type FeatureFlagBooleanResolver struct {
 
 ```
 searchKey: graphqlbackend.FeatureFlagBooleanResolver.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5482,7 +5470,7 @@ func (f *FeatureFlagBooleanResolver) Overrides(ctx context.Context) ([]*FeatureF
 
 ```
 searchKey: graphqlbackend.FeatureFlagBooleanResolver.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5507,7 +5495,7 @@ type FeatureFlagOverrideResolver struct {
 
 ```
 searchKey: graphqlbackend.FeatureFlagOverrideResolver.ID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5540,7 +5528,7 @@ func (f *FeatureFlagOverrideResolver) TargetFlag(ctx context.Context) (*FeatureF
 
 ```
 searchKey: graphqlbackend.FeatureFlagOverrideResolver.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5565,7 +5553,7 @@ type FeatureFlagResolver struct {
 
 ```
 searchKey: graphqlbackend.FeatureFlagResolver.ToFeatureFlagBoolean
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5576,7 +5564,7 @@ func (f *FeatureFlagResolver) ToFeatureFlagBoolean() (*FeatureFlagBooleanResolve
 
 ```
 searchKey: graphqlbackend.FeatureFlagResolver.ToFeatureFlagRollout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5602,7 +5590,7 @@ type FeatureFlagRolloutResolver struct {
 
 ```
 searchKey: graphqlbackend.FeatureFlagRolloutResolver.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5624,7 +5612,7 @@ func (f *FeatureFlagRolloutResolver) Overrides(ctx context.Context) ([]*FeatureF
 
 ```
 searchKey: graphqlbackend.FeatureFlagRolloutResolver.RolloutBasisPoints
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5664,7 +5652,7 @@ FileContentFunc is a closure that returns the contents of a file and is used by 
 
 ```
 searchKey: graphqlbackend.fileDiffVirtualFileContent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5743,7 +5731,7 @@ type FileDiffResolver struct {
 
 ```
 searchKey: graphqlbackend.FileDiffResolver.Hunks
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5754,7 +5742,7 @@ func (r *FileDiffResolver) Hunks() []*DiffHunk
 
 ```
 searchKey: graphqlbackend.FileDiffResolver.InternalID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5765,7 +5753,7 @@ func (r *FileDiffResolver) InternalID() string
 
 ```
 searchKey: graphqlbackend.FileDiffResolver.MostRelevantFile
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5776,7 +5764,7 @@ func (r *FileDiffResolver) MostRelevantFile() FileResolver
 
 ```
 searchKey: graphqlbackend.FileDiffResolver.NewFile
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5787,7 +5775,7 @@ func (r *FileDiffResolver) NewFile() FileResolver
 
 ```
 searchKey: graphqlbackend.FileDiffResolver.NewPath
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5798,7 +5786,7 @@ func (r *FileDiffResolver) NewPath() *string
 
 ```
 searchKey: graphqlbackend.FileDiffResolver.OldFile
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5809,7 +5797,7 @@ func (r *FileDiffResolver) OldFile() FileResolver
 
 ```
 searchKey: graphqlbackend.FileDiffResolver.OldPath
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5820,7 +5808,7 @@ func (r *FileDiffResolver) OldPath() *string
 
 ```
 searchKey: graphqlbackend.FileDiffResolver.Stat
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5863,7 +5851,7 @@ FileMatchResolver is a resolver for the GraphQL type `FileMatch`
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.Commit
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5887,7 +5875,7 @@ Equal provides custom comparison which is used by go-cmp
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.File
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5898,7 +5886,7 @@ func (fm *FileMatchResolver) File() *GitTreeEntryResolver
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5909,7 +5897,7 @@ func (fm *FileMatchResolver) Key() string
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.LimitHit
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5920,7 +5908,7 @@ func (fm *FileMatchResolver) LimitHit() bool
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.LineMatches
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5931,7 +5919,7 @@ func (fm *FileMatchResolver) LineMatches() []lineMatchResolver
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.Repository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5942,7 +5930,7 @@ func (fm *FileMatchResolver) Repository() *RepositoryResolver
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.ResultCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5953,7 +5941,7 @@ func (fm *FileMatchResolver) ResultCount() int32
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.RevSpec
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5964,7 +5952,7 @@ func (fm *FileMatchResolver) RevSpec() *gitRevSpec
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.Symbols
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5975,7 +5963,7 @@ func (fm *FileMatchResolver) Symbols() []symbolResolver
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.ToCommitSearchResult
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5986,7 +5974,7 @@ func (fm *FileMatchResolver) ToCommitSearchResult() (*CommitSearchResultResolver
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.ToFileMatch
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5997,7 +5985,7 @@ func (fm *FileMatchResolver) ToFileMatch() (*FileMatchResolver, bool)
 
 ```
 searchKey: graphqlbackend.FileMatchResolver.ToRepository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6034,7 +6022,7 @@ type FileResolver interface {
 
 ```
 searchKey: graphqlbackend.previewNewFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6045,7 +6033,7 @@ func previewNewFile(db dbutil.DB, r *FileDiffResolver) FileResolver
 
 ```
 searchKey: graphqlbackend.repositoryComparisonNewFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6186,7 +6174,7 @@ type GitCommitResolver struct {
 
 ```
 searchKey: graphqlbackend.toGitCommitResolver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6199,7 +6187,7 @@ When set to nil, commit will be loaded lazily as needed by the resolver. Pass in
 
 ```
 searchKey: graphqlbackend.GitCommitResolver.AbbreviatedOID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6274,7 +6262,7 @@ func (r *GitCommitResolver) Body(ctx context.Context) (*string, error)
 
 ```
 searchKey: graphqlbackend.GitCommitResolver.CanonicalURL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6331,7 +6319,7 @@ func (r *GitCommitResolver) FileNames(ctx context.Context) ([]string, error)
 
 ```
 searchKey: graphqlbackend.GitCommitResolver.ID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6342,7 +6330,7 @@ func (r *GitCommitResolver) ID() graphql.ID
 
 ```
 searchKey: graphqlbackend.GitCommitResolver.InputRev
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6386,7 +6374,7 @@ func (r *GitCommitResolver) Message(ctx context.Context) (string, error)
 
 ```
 searchKey: graphqlbackend.GitCommitResolver.OID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6408,7 +6396,7 @@ func (r *GitCommitResolver) Parents(ctx context.Context) ([]*GitCommitResolver, 
 
 ```
 searchKey: graphqlbackend.GitCommitResolver.Repository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6455,7 +6443,7 @@ func (r *GitCommitResolver) Tree(ctx context.Context, args *struct {
 
 ```
 searchKey: graphqlbackend.GitCommitResolver.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6466,7 +6454,7 @@ func (r *GitCommitResolver) URL() string
 
 ```
 searchKey: graphqlbackend.GitCommitResolver.canonicalRepoRevURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6477,7 +6465,7 @@ func (r *GitCommitResolver) canonicalRepoRevURL() *url.URL
 
 ```
 searchKey: graphqlbackend.GitCommitResolver.inputRevOrImmutableRev
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6490,7 +6478,7 @@ inputRevOrImmutableRev returns the input revspec, if it is provided and nonempty
 
 ```
 searchKey: graphqlbackend.GitCommitResolver.repoRevURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6525,7 +6513,7 @@ type GitObjectID string
 
 ```
 searchKey: graphqlbackend.unmarshalGitCommitID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6577,7 +6565,7 @@ type GitRefResolver struct {
 
 ```
 searchKey: graphqlbackend.NewGitRefResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6588,7 +6576,7 @@ func NewGitRefResolver(repo *RepositoryResolver, name string, target GitObjectID
 
 ```
 searchKey: graphqlbackend.GitRefResolver.AbbrevName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6599,7 +6587,7 @@ func (r *GitRefResolver) AbbrevName() string
 
 ```
 searchKey: graphqlbackend.GitRefResolver.DisplayName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6610,7 +6598,7 @@ func (r *GitRefResolver) DisplayName() string
 
 ```
 searchKey: graphqlbackend.GitRefResolver.ID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6621,7 +6609,7 @@ func (r *GitRefResolver) ID() graphql.ID
 
 ```
 searchKey: graphqlbackend.GitRefResolver.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6632,7 +6620,7 @@ func (r *GitRefResolver) Name() string
 
 ```
 searchKey: graphqlbackend.GitRefResolver.Prefix
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6643,7 +6631,7 @@ func (r *GitRefResolver) Prefix() string
 
 ```
 searchKey: graphqlbackend.GitRefResolver.Repository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6654,7 +6642,7 @@ func (r *GitRefResolver) Repository() *RepositoryResolver
 
 ```
 searchKey: graphqlbackend.GitRefResolver.Target
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6673,7 +6661,7 @@ func (r *GitRefResolver) Target() interface {
 
 ```
 searchKey: graphqlbackend.GitRefResolver.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6684,7 +6672,7 @@ func (r *GitRefResolver) Type() string
 
 ```
 searchKey: graphqlbackend.GitRefResolver.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6722,7 +6710,7 @@ GitTreeEntryResolver resolves an entry in a Git tree in a repository. The entry 
 
 ```
 searchKey: graphqlbackend.NewGitTreeEntryResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6770,7 +6758,7 @@ func (r *GitTreeEntryResolver) ByteSize(ctx context.Context) (int32, error)
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.CanonicalURL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6781,7 +6769,7 @@ func (r *GitTreeEntryResolver) CanonicalURL() string
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.Commit
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6858,7 +6846,7 @@ func (r *GitTreeEntryResolver) Highlight(ctx context.Context, args *HighlightArg
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.IsDirectory
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6869,7 +6857,7 @@ func (r *GitTreeEntryResolver) IsDirectory() bool
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.IsRecursive
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6880,7 +6868,7 @@ func (r *GitTreeEntryResolver) IsRecursive() bool
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.IsRoot
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6913,7 +6901,7 @@ func (r *GitTreeEntryResolver) LSIF(ctx context.Context, args *struct{ ToolName 
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6924,7 +6912,7 @@ func (r *GitTreeEntryResolver) Name() string
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.Path
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6935,7 +6923,7 @@ func (r *GitTreeEntryResolver) Path() string
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.RawZipArchiveURL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6946,7 +6934,7 @@ func (r *GitTreeEntryResolver) RawZipArchiveURL() string
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.Repository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6968,7 +6956,7 @@ func (r *GitTreeEntryResolver) RichHTML(ctx context.Context) (string, error)
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.Submodule
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -6990,7 +6978,7 @@ func (r *GitTreeEntryResolver) Symbols(ctx context.Context, args *symbolsArgs) (
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.ToGitBlob
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7001,7 +6989,7 @@ func (r *GitTreeEntryResolver) ToGitBlob() (*GitTreeEntryResolver, bool)
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.ToGitTree
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7012,7 +7000,7 @@ func (r *GitTreeEntryResolver) ToGitTree() (*GitTreeEntryResolver, bool)
 
 ```
 searchKey: graphqlbackend.GitTreeEntryResolver.ToVirtualFile
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7382,7 +7370,7 @@ type InvalidNamespaceIDErr struct {
 
 ```
 searchKey: graphqlbackend.InvalidNamespaceIDErr.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7417,7 +7405,7 @@ func (JSONCString) ImplementsGraphQLType(name string) bool
 
 ```
 searchKey: graphqlbackend.JSONCString.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7463,7 +7451,7 @@ func (JSONValue) ImplementsGraphQLType(name string) bool
 
 ```
 searchKey: graphqlbackend.JSONValue.MarshalJSON
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7999,7 +7987,7 @@ type LocationResolver interface {
 
 ```
 searchKey: graphqlbackend.NewLocationResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8021,7 +8009,7 @@ type Markdown string
 
 ```
 searchKey: graphqlbackend.Markdown.HTML
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8032,7 +8020,7 @@ func (m Markdown) HTML() string
 
 ```
 searchKey: graphqlbackend.Markdown.Text
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8270,7 +8258,7 @@ MonitoringAlert implements GraphQL getters on top of srcprometheus.MonitoringAle
 
 ```
 searchKey: graphqlbackend.MonitoringAlert.Average
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8281,7 +8269,7 @@ func (r *MonitoringAlert) Average() float64
 
 ```
 searchKey: graphqlbackend.MonitoringAlert.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8292,7 +8280,7 @@ func (r *MonitoringAlert) Name() string
 
 ```
 searchKey: graphqlbackend.MonitoringAlert.Owner
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8303,7 +8291,7 @@ func (r *MonitoringAlert) Owner() string
 
 ```
 searchKey: graphqlbackend.MonitoringAlert.ServiceName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8314,7 +8302,7 @@ func (r *MonitoringAlert) ServiceName() string
 
 ```
 searchKey: graphqlbackend.MonitoringAlert.Timestamp
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8374,7 +8362,7 @@ Namespace is the interface for the GraphQL Namespace interface.
 
 ```
 searchKey: graphqlbackend.NamespaceByID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8402,7 +8390,7 @@ NamespaceResolver resolves the GraphQL Namespace interface to a type.
 
 ```
 searchKey: graphqlbackend.NamespaceResolver.ToOrg
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8413,7 +8401,7 @@ func (r NamespaceResolver) ToOrg() (*OrgResolver, bool)
 
 ```
 searchKey: graphqlbackend.NamespaceResolver.ToUser
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8476,7 +8464,7 @@ type NodeResolver struct {
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToAccessToken
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8487,7 +8475,7 @@ func (r *NodeResolver) ToAccessToken() (*accessTokenResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToBatchChange
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8498,7 +8486,7 @@ func (r *NodeResolver) ToBatchChange() (BatchChangeResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToBatchChangesCredential
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8509,7 +8497,7 @@ func (r *NodeResolver) ToBatchChangesCredential() (BatchChangesCredentialResolve
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToBatchSpec
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8520,7 +8508,7 @@ func (r *NodeResolver) ToBatchSpec() (BatchSpecResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToBulkOperation
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8531,7 +8519,7 @@ func (r *NodeResolver) ToBulkOperation() (BulkOperationResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToCampaign
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8544,7 +8532,7 @@ TODO(campaigns-deprecation): This should be removed once we remove campaigns com
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToCampaignSpec
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8557,7 +8545,7 @@ TODO(campaigns-deprecation): This should be removed once we remove campaigns com
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToCampaignsCredential
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8570,7 +8558,7 @@ TODO(campaigns-deprecation): This should be removed once we remove campaigns com
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToChangesetEvent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8581,7 +8569,7 @@ func (r *NodeResolver) ToChangesetEvent() (ChangesetEventResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToExternalAccount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8592,7 +8580,7 @@ func (r *NodeResolver) ToExternalAccount() (*externalAccountResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToExternalChangeset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8603,7 +8591,7 @@ func (r *NodeResolver) ToExternalChangeset() (ExternalChangesetResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToExternalService
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8614,7 +8602,7 @@ func (r *NodeResolver) ToExternalService() (*externalServiceResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToGitCommit
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8625,7 +8613,7 @@ func (r *NodeResolver) ToGitCommit() (*GitCommitResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToGitRef
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8636,7 +8624,7 @@ func (r *NodeResolver) ToGitRef() (*GitRefResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToHiddenChangesetSpec
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8647,7 +8635,7 @@ func (r *NodeResolver) ToHiddenChangesetSpec() (HiddenChangesetSpecResolver, boo
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToHiddenExternalChangeset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8658,7 +8646,7 @@ func (r *NodeResolver) ToHiddenExternalChangeset() (HiddenExternalChangesetResol
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToLSIFIndex
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8669,7 +8657,7 @@ func (r *NodeResolver) ToLSIFIndex() (LSIFIndexResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToLSIFUpload
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8680,7 +8668,7 @@ func (r *NodeResolver) ToLSIFUpload() (LSIFUploadResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToMonitor
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8691,7 +8679,7 @@ func (r *NodeResolver) ToMonitor() (MonitorResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToMonitorActionEvent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8702,7 +8690,7 @@ func (r *NodeResolver) ToMonitorActionEvent() (MonitorActionEventResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToMonitorEmail
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8713,7 +8701,7 @@ func (r *NodeResolver) ToMonitorEmail() (MonitorEmailResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToMonitorQuery
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8724,7 +8712,7 @@ func (r *NodeResolver) ToMonitorQuery() (MonitorQueryResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToMonitorTriggerEvent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8735,7 +8723,7 @@ func (r *NodeResolver) ToMonitorTriggerEvent() (MonitorTriggerEventResolver, boo
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToOrg
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8746,7 +8734,7 @@ func (r *NodeResolver) ToOrg() (*OrgResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToOrganizationInvitation
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8757,7 +8745,7 @@ func (r *NodeResolver) ToOrganizationInvitation() (*organizationInvitationResolv
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToOutOfBandMigration
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8768,7 +8756,7 @@ func (r *NodeResolver) ToOutOfBandMigration() (*outOfBandMigrationResolver, bool
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToProductLicense
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8779,7 +8767,7 @@ func (r *NodeResolver) ToProductLicense() (ProductLicense, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToProductSubscription
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8790,7 +8778,7 @@ func (r *NodeResolver) ToProductSubscription() (ProductSubscription, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToRegistryExtension
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8801,7 +8789,7 @@ func (r *NodeResolver) ToRegistryExtension() (RegistryExtension, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToRepository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8812,7 +8800,7 @@ func (r *NodeResolver) ToRepository() (*RepositoryResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToSavedSearch
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8823,7 +8811,7 @@ func (r *NodeResolver) ToSavedSearch() (*savedSearchResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToSearchContext
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8834,7 +8822,7 @@ func (r *NodeResolver) ToSearchContext() (*searchContextResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToSite
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8845,7 +8833,7 @@ func (r *NodeResolver) ToSite() (*siteResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToUser
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8856,7 +8844,7 @@ func (r *NodeResolver) ToUser() (*UserResolver, bool)
 
 ```
 searchKey: graphqlbackend.NodeResolver.ToVisibleChangesetSpec
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8881,7 +8869,7 @@ type OrgResolver struct {
 
 ```
 searchKey: graphqlbackend.NewOrg
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8892,7 +8880,7 @@ func NewOrg(db dbutil.DB, org *types.Org) *OrgResolver
 
 ```
 searchKey: graphqlbackend.OrgByID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8903,7 +8891,7 @@ func OrgByID(ctx context.Context, db dbutil.DB, id graphql.ID) (*OrgResolver, er
 
 ```
 searchKey: graphqlbackend.OrgByIDInt32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8938,7 +8926,7 @@ TODO(campaigns-deprecation):
 
 ```
 searchKey: graphqlbackend.OrgResolver.ConfigurationCascade
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8949,7 +8937,7 @@ func (o *OrgResolver) ConfigurationCascade() *settingsCascade
 
 ```
 searchKey: graphqlbackend.OrgResolver.CreatedAt
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8960,7 +8948,7 @@ func (o *OrgResolver) CreatedAt() DateTime
 
 ```
 searchKey: graphqlbackend.OrgResolver.DisplayName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -8971,7 +8959,7 @@ func (o *OrgResolver) DisplayName() *string
 
 ```
 searchKey: graphqlbackend.OrgResolver.ID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9004,7 +8992,7 @@ func (o *OrgResolver) Members(ctx context.Context) (*staticUserConnectionResolve
 
 ```
 searchKey: graphqlbackend.OrgResolver.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9015,7 +9003,7 @@ func (o *OrgResolver) Name() string
 
 ```
 searchKey: graphqlbackend.OrgResolver.NamespaceName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9026,7 +9014,7 @@ func (o *OrgResolver) NamespaceName() string
 
 ```
 searchKey: graphqlbackend.OrgResolver.OrgID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9037,7 +9025,7 @@ func (o *OrgResolver) OrgID() int32
 
 ```
 searchKey: graphqlbackend.OrgResolver.SettingsCascade
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9048,7 +9036,7 @@ func (o *OrgResolver) SettingsCascade() *settingsCascade
 
 ```
 searchKey: graphqlbackend.OrgResolver.SettingsURL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9059,7 +9047,7 @@ func (o *OrgResolver) SettingsURL() *string
 
 ```
 searchKey: graphqlbackend.OrgResolver.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9103,7 +9091,7 @@ func (o *OrgResolver) ViewerPendingInvitation(ctx context.Context) (*organizatio
 
 ```
 searchKey: graphqlbackend.OrgResolver.settingsSubject
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9152,7 +9140,7 @@ type PersonResolver struct {
 
 ```
 searchKey: graphqlbackend.NewPersonResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9185,7 +9173,7 @@ func (r *PersonResolver) DisplayName(ctx context.Context) (string, error)
 
 ```
 searchKey: graphqlbackend.PersonResolver.Email
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9359,7 +9347,7 @@ ProductLicenseInfo implements the GraphQL type ProductLicenseInfo.
 
 ```
 searchKey: graphqlbackend.ProductLicenseInfo.ExpiresAt
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9370,7 +9358,7 @@ func (r ProductLicenseInfo) ExpiresAt() DateTime
 
 ```
 searchKey: graphqlbackend.ProductLicenseInfo.ProductNameWithBrand
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9381,7 +9369,7 @@ func (r ProductLicenseInfo) ProductNameWithBrand() string
 
 ```
 searchKey: graphqlbackend.ProductLicenseInfo.Tags
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9392,7 +9380,7 @@ func (r ProductLicenseInfo) Tags() []string
 
 ```
 searchKey: graphqlbackend.ProductLicenseInfo.UserCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9616,7 +9604,7 @@ type QueryCost struct {
 
 ```
 searchKey: graphqlbackend.EstimateQueryCost
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9629,7 +9617,7 @@ EstimateQueryCost estimates the cost of the query before it is actually executed
 
 ```
 searchKey: graphqlbackend.calcNodeCost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9667,7 +9655,7 @@ type RangeResolver interface {
 
 ```
 searchKey: graphqlbackend.NewRangeResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9694,7 +9682,7 @@ RateLimitWatcher stores the currently configured rate limiter and whether or not
 
 ```
 searchKey: graphqlbackend.NewRateLimiteWatcher
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9707,7 +9695,7 @@ NewRateLimiteWatcher creates a new limiter with the provided store and starts wa
 
 ```
 searchKey: graphqlbackend.RateLimitWatcher.Get
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -9771,7 +9759,7 @@ type RedirectResolver struct {
 
 ```
 searchKey: graphqlbackend.RedirectResolver.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10004,7 +9992,7 @@ type RepositoryComparisonResolver struct {
 
 ```
 searchKey: graphqlbackend.NewRepositoryComparison
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10015,7 +10003,7 @@ func NewRepositoryComparison(ctx context.Context, db dbutil.DB, r *RepositoryRes
 
 ```
 searchKey: graphqlbackend.RepositoryComparisonResolver.BaseRepository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10050,7 +10038,7 @@ func (r *RepositoryComparisonResolver) FileDiffs(ctx context.Context, args *File
 
 ```
 searchKey: graphqlbackend.RepositoryComparisonResolver.HeadRepository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10061,7 +10049,7 @@ func (r *RepositoryComparisonResolver) HeadRepository() *RepositoryResolver
 
 ```
 searchKey: graphqlbackend.RepositoryComparisonResolver.Range
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10072,7 +10060,7 @@ func (r *RepositoryComparisonResolver) Range() *gitRevisionRange
 
 ```
 searchKey: graphqlbackend.RepositoryComparisonResolver.ToPreviewRepositoryComparison
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10083,7 +10071,7 @@ func (r *RepositoryComparisonResolver) ToPreviewRepositoryComparison() (PreviewR
 
 ```
 searchKey: graphqlbackend.RepositoryComparisonResolver.ToRepositoryComparison
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10152,7 +10140,7 @@ type RepositoryResolver struct {
 
 ```
 searchKey: graphqlbackend.NewRepositoryResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10254,7 +10242,7 @@ func (r *RepositoryResolver) Contributors(args *struct {
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.CreatedAt
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10289,7 +10277,7 @@ func (r *RepositoryResolver) Description(ctx context.Context) (string, error)
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.Detail
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10300,7 +10288,7 @@ func (r *RepositoryResolver) Detail() Markdown
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.Enabled
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10322,7 +10310,7 @@ func (r *RepositoryResolver) ExternalRepo(ctx context.Context) (*api.ExternalRep
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.ExternalRepository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10368,7 +10356,7 @@ func (r *RepositoryResolver) GitRefs(ctx context.Context, args *refsArgs) (*gitR
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.ID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10379,7 +10367,7 @@ func (r *RepositoryResolver) ID() graphql.ID
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.IDInt32
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10456,7 +10444,7 @@ func (r *RepositoryResolver) LSIFUploads(ctx context.Context, args *LSIFUploadsQ
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.Label
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10478,7 +10466,7 @@ func (r *RepositoryResolver) Language(ctx context.Context) (string, error)
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.Matches
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10489,7 +10477,7 @@ func (r *RepositoryResolver) Matches() []*searchResultMatchResolver
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.MirrorInfo
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10500,7 +10488,7 @@ func (r *RepositoryResolver) MirrorInfo() *repositoryMirrorInfoResolver
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10522,7 +10510,7 @@ func (r *RepositoryResolver) PermissionsInfo(ctx context.Context) (PermissionsIn
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.RepoName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10533,7 +10521,7 @@ func (r *RepositoryResolver) RepoName() api.RepoName
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.ResultCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10544,7 +10532,7 @@ func (r *RepositoryResolver) ResultCount() int32
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.Rev
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10577,7 +10565,7 @@ func (r *RepositoryResolver) Tags(ctx context.Context, args *refsArgs) (*gitRefC
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.TextSearchIndex
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10588,7 +10576,7 @@ func (r *RepositoryResolver) TextSearchIndex() *repositoryTextSearchIndexResolve
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.ToCommitSearchResult
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10599,7 +10587,7 @@ func (r *RepositoryResolver) ToCommitSearchResult() (*CommitSearchResultResolver
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.ToFileMatch
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10610,7 +10598,7 @@ func (r *RepositoryResolver) ToFileMatch() (*FileMatchResolver, bool)
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.ToRepository
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10643,7 +10631,7 @@ func (r *RepositoryResolver) URI(ctx context.Context) (string, error)
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10654,7 +10642,7 @@ func (r *RepositoryResolver) URL() string
 
 ```
 searchKey: graphqlbackend.RepositoryResolver.UpdatedAt
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10763,7 +10751,7 @@ type SearchImplementer interface {
 
 ```
 searchKey: graphqlbackend.NewSearchImplementer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -10821,7 +10809,7 @@ type SearchResults struct {
 
 ```
 searchKey: graphqlbackend.intersect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10834,7 +10822,7 @@ intersect returns the intersection of two sets of search result content matches,
 
 ```
 searchKey: graphqlbackend.intersectMerge
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10847,7 +10835,7 @@ intersectMerge performs a merge of file match results, merging line matches for 
 
 ```
 searchKey: graphqlbackend.union
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10860,7 +10848,7 @@ union returns the union of two sets of search results and merges common search d
 
 ```
 searchKey: graphqlbackend.unionMerge
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -10899,7 +10887,7 @@ SearchResultsResolver is a resolver for the GraphQL type `SearchResults`
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.Alert
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10910,7 +10898,7 @@ func (sr *SearchResultsResolver) Alert() *searchAlert
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.ApproximateResultCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10921,7 +10909,7 @@ func (sr *SearchResultsResolver) ApproximateResultCount() string
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.Cloning
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10943,7 +10931,7 @@ func (sr *SearchResultsResolver) DynamicFilters(ctx context.Context) []*searchFi
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.ElapsedMilliseconds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10954,7 +10942,7 @@ func (sr *SearchResultsResolver) ElapsedMilliseconds() int32
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.IndexUnavailable
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10965,7 +10953,7 @@ func (c *SearchResultsResolver) IndexUnavailable() bool
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.LimitHit
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10976,7 +10964,7 @@ func (c *SearchResultsResolver) LimitHit() bool
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.MatchCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10987,7 +10975,7 @@ func (sr *SearchResultsResolver) MatchCount() int32
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.Missing
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10998,7 +10986,7 @@ func (c *SearchResultsResolver) Missing() []*RepositoryResolver
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.PageInfo
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11009,7 +10997,7 @@ func (r *SearchResultsResolver) PageInfo() *graphqlutil.PageInfo
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.Repositories
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11020,7 +11008,7 @@ func (c *SearchResultsResolver) Repositories() []*RepositoryResolver
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.RepositoriesCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11031,7 +11019,7 @@ func (c *SearchResultsResolver) RepositoriesCount() int32
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.ResultCount
-tags: [function deprecated]
+tags: [method deprecated]
 ```
 
 ```Go
@@ -11044,7 +11032,7 @@ Deprecated. Prefer MatchCount.
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11068,7 +11056,7 @@ func (sr *SearchResultsResolver) Sparkline(ctx context.Context) (sparkline []int
 
 ```
 searchKey: graphqlbackend.SearchResultsResolver.Timedout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11308,7 +11296,7 @@ UpdatePaidProductSubscriptionResult implements the GraphQL type UpdatePaidProduc
 
 ```
 searchKey: graphqlbackend.UpdatePaidProductSubscriptionResult.ProductSubscription
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11377,7 +11365,7 @@ UserResolver implements the GraphQL User type.
 
 ```
 searchKey: graphqlbackend.CurrentUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11390,7 +11378,7 @@ CurrentUser returns the authenticated user if any. If there is no authenticated 
 
 ```
 searchKey: graphqlbackend.NewUserResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11403,7 +11391,7 @@ NewUserResolver returns a new UserResolver with given user object.
 
 ```
 searchKey: graphqlbackend.UserByID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11416,7 +11404,7 @@ UserByID looks up and returns the user with the given GraphQL ID. If no such use
 
 ```
 searchKey: graphqlbackend.UserByIDInt32
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11442,7 +11430,7 @@ func (r *UserResolver) AccessTokens(ctx context.Context, args *struct {
 
 ```
 searchKey: graphqlbackend.UserResolver.AvatarURL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11475,7 +11463,7 @@ func (r *UserResolver) BatchChangesCodeHosts(ctx context.Context, args *ListBatc
 
 ```
 searchKey: graphqlbackend.UserResolver.BuiltinAuth
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11510,7 +11498,7 @@ func (r *UserResolver) CampaignsCodeHosts(ctx context.Context, args *ListCampaig
 
 ```
 searchKey: graphqlbackend.UserResolver.ConfigurationCascade
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11521,7 +11509,7 @@ func (r *UserResolver) ConfigurationCascade() *settingsCascade
 
 ```
 searchKey: graphqlbackend.UserResolver.CreatedAt
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11532,7 +11520,7 @@ func (r *UserResolver) CreatedAt() DateTime
 
 ```
 searchKey: graphqlbackend.UserResolver.DatabaseID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11545,7 +11533,7 @@ DatabaseID returns the numeric ID for the user in the database.
 
 ```
 searchKey: graphqlbackend.UserResolver.DisplayName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11607,7 +11595,7 @@ func (r *UserResolver) ExternalAccounts(ctx context.Context, args *struct {
 
 ```
 searchKey: graphqlbackend.UserResolver.ID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11640,7 +11628,7 @@ func (r *UserResolver) Monitors(ctx context.Context, args *ListMonitorsArgs) (Mo
 
 ```
 searchKey: graphqlbackend.UserResolver.NamespaceName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11717,7 +11705,7 @@ func (r *UserResolver) Session(ctx context.Context) (*sessionResolver, error)
 
 ```
 searchKey: graphqlbackend.UserResolver.SettingsCascade
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11728,7 +11716,7 @@ func (r *UserResolver) SettingsCascade() *settingsCascade
 
 ```
 searchKey: graphqlbackend.UserResolver.SettingsURL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11772,7 +11760,7 @@ func (r *UserResolver) Tags(ctx context.Context) ([]string, error)
 
 ```
 searchKey: graphqlbackend.UserResolver.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11794,7 +11782,7 @@ func (r *UserResolver) URLForSiteAdminBilling(ctx context.Context) (*string, err
 
 ```
 searchKey: graphqlbackend.UserResolver.UpdatedAt
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11816,7 +11804,7 @@ func (r *UserResolver) UsageStatistics(ctx context.Context) (*userUsageStatistic
 
 ```
 searchKey: graphqlbackend.UserResolver.Username
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11851,7 +11839,7 @@ ViewerCanChangeUsername returns if the current user can change the username of t
 
 ```
 searchKey: graphqlbackend.UserResolver.settingsSubject
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12033,7 +12021,7 @@ Access tokens provide scoped access to a user account (not just the API). This i
 
 ```
 searchKey: graphqlbackend.accessTokenByID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12044,7 +12032,7 @@ func accessTokenByID(ctx context.Context, db dbutil.DB, id graphql.ID) (*accessT
 
 ```
 searchKey: graphqlbackend.accessTokenResolver.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12066,7 +12054,7 @@ func (r *accessTokenResolver) Creator(ctx context.Context) (*UserResolver, error
 
 ```
 searchKey: graphqlbackend.accessTokenResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12077,7 +12065,7 @@ func (r *accessTokenResolver) ID() graphql.ID
 
 ```
 searchKey: graphqlbackend.accessTokenResolver.LastUsedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12088,7 +12076,7 @@ func (r *accessTokenResolver) LastUsedAt() *DateTime
 
 ```
 searchKey: graphqlbackend.accessTokenResolver.Note
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12099,7 +12087,7 @@ func (r *accessTokenResolver) Note() string
 
 ```
 searchKey: graphqlbackend.accessTokenResolver.Scopes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12256,7 +12244,7 @@ alertSearchImplementer is a light wrapper type around an alert that implements S
 
 ```
 searchKey: graphqlbackend.alertSearchImplementer.Inputs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12326,7 +12314,7 @@ func (r *authProviderConnectionResolver) Nodes(ctx context.Context) ([]*authProv
 
 ```
 searchKey: graphqlbackend.authProviderConnectionResolver.PageInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12337,7 +12325,7 @@ func (r *authProviderConnectionResolver) PageInfo() *graphqlutil.PageInfo
 
 ```
 searchKey: graphqlbackend.authProviderConnectionResolver.TotalCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12365,7 +12353,7 @@ authProviderResolver resolves an auth provider.
 
 ```
 searchKey: graphqlbackend.authProviderResolver.AuthenticationURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12376,7 +12364,7 @@ func (r *authProviderResolver) AuthenticationURL() *string
 
 ```
 searchKey: graphqlbackend.authProviderResolver.ClientID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12387,7 +12375,7 @@ func (r *authProviderResolver) ClientID() string
 
 ```
 searchKey: graphqlbackend.authProviderResolver.DisplayName
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12398,7 +12386,7 @@ func (r *authProviderResolver) DisplayName() string
 
 ```
 searchKey: graphqlbackend.authProviderResolver.IsBuiltin
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12409,7 +12397,7 @@ func (r *authProviderResolver) IsBuiltin() bool
 
 ```
 searchKey: graphqlbackend.authProviderResolver.ServiceID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12420,7 +12408,7 @@ func (r *authProviderResolver) ServiceID() string
 
 ```
 searchKey: graphqlbackend.authProviderResolver.ServiceType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12444,7 +12432,7 @@ type badRequestError struct {
 
 ```
 searchKey: graphqlbackend.badRequestError.BadRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12455,7 +12443,7 @@ func (e *badRequestError) BadRequest() bool
 
 ```
 searchKey: graphqlbackend.badRequestError.Cause
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12466,7 +12454,7 @@ func (e *badRequestError) Cause() error
 
 ```
 searchKey: graphqlbackend.badRequestError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12490,7 +12478,7 @@ baseSuggestionResolver implements all the To* methods, returning false for all o
 
 ```
 searchKey: graphqlbackend.baseSuggestionResolver.ToFile
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12501,7 +12489,7 @@ func (baseSuggestionResolver) ToFile() (*GitTreeEntryResolver, bool)
 
 ```
 searchKey: graphqlbackend.baseSuggestionResolver.ToGitBlob
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12512,7 +12500,7 @@ func (baseSuggestionResolver) ToGitBlob() (*GitTreeEntryResolver, bool)
 
 ```
 searchKey: graphqlbackend.baseSuggestionResolver.ToGitTree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12523,7 +12511,7 @@ func (baseSuggestionResolver) ToGitTree() (*GitTreeEntryResolver, bool)
 
 ```
 searchKey: graphqlbackend.baseSuggestionResolver.ToLanguage
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12534,7 +12522,7 @@ func (baseSuggestionResolver) ToLanguage() (*languageResolver, bool)
 
 ```
 searchKey: graphqlbackend.baseSuggestionResolver.ToRepository
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12545,7 +12533,7 @@ func (baseSuggestionResolver) ToRepository() (*RepositoryResolver, bool)
 
 ```
 searchKey: graphqlbackend.baseSuggestionResolver.ToSearchContext
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12556,7 +12544,7 @@ func (baseSuggestionResolver) ToSearchContext() (*searchContextResolver, bool)
 
 ```
 searchKey: graphqlbackend.baseSuggestionResolver.ToSymbol
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12578,7 +12566,7 @@ type behindAheadCountsResolver struct{ behind, ahead int32 }
 
 ```
 searchKey: graphqlbackend.behindAheadCountsResolver.Ahead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12589,7 +12577,7 @@ func (r *behindAheadCountsResolver) Ahead() int32
 
 ```
 searchKey: graphqlbackend.behindAheadCountsResolver.Behind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12611,7 +12599,7 @@ type byDirectory []fs.FileInfo
 
 ```
 searchKey: graphqlbackend.byDirectory.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12657,7 +12645,7 @@ type checkMirrorRepositoryConnectionResult struct {
 
 ```
 searchKey: graphqlbackend.checkMirrorRepositoryConnectionResult.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12682,7 +12670,7 @@ type clientConfigurationResolver struct {
 
 ```
 searchKey: graphqlbackend.clientConfigurationResolver.ContentScriptURLs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12693,7 +12681,7 @@ func (r *clientConfigurationResolver) ContentScriptURLs() []string
 
 ```
 searchKey: graphqlbackend.clientConfigurationResolver.ParentSourcegraph
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12730,7 +12718,7 @@ func (r *codeHostRepositoryResolver) CodeHost(ctx context.Context) *externalServ
 
 ```
 searchKey: graphqlbackend.codeHostRepositoryResolver.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12741,7 +12729,7 @@ func (r *codeHostRepositoryResolver) Name() string
 
 ```
 searchKey: graphqlbackend.codeHostRepositoryResolver.Private
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12816,7 +12804,7 @@ Deprecated: The GraphQL type Configuration is deprecated.
 
 ```
 searchKey: graphqlbackend.viewerFinalSettings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12829,7 +12817,7 @@ viewerFinalSettings returns the final (merged) settings for the viewer.
 
 ```
 searchKey: graphqlbackend.configurationResolver.Contents
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12840,7 +12828,7 @@ func (r *configurationResolver) Contents() JSONCString
 
 ```
 searchKey: graphqlbackend.configurationResolver.Messages
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12880,7 +12868,7 @@ type createAccessTokenResult struct {
 
 ```
 searchKey: graphqlbackend.createAccessTokenResult.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12891,7 +12879,7 @@ func (r *createAccessTokenResult) ID() graphql.ID
 
 ```
 searchKey: graphqlbackend.createAccessTokenResult.Token
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12945,7 +12933,7 @@ func (r *createUserResult) ResetPasswordURL(ctx context.Context) (*string, error
 
 ```
 searchKey: graphqlbackend.createUserResult.User
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12970,7 +12958,7 @@ type defaultSettingsResolver struct {
 
 ```
 searchKey: graphqlbackend.defaultSettingsResolver.ConfigurationCascade
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12981,7 +12969,7 @@ func (r *defaultSettingsResolver) ConfigurationCascade() *settingsCascade
 
 ```
 searchKey: graphqlbackend.defaultSettingsResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13003,7 +12991,7 @@ func (r *defaultSettingsResolver) LatestSettings(ctx context.Context) (*settings
 
 ```
 searchKey: graphqlbackend.defaultSettingsResolver.SettingsCascade
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13014,7 +13002,7 @@ func (r *defaultSettingsResolver) SettingsCascade() *settingsCascade
 
 ```
 searchKey: graphqlbackend.defaultSettingsResolver.SettingsURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13128,7 +13116,7 @@ func (d *dummyFileResolver) ByteSize(ctx context.Context) (int32, error)
 
 ```
 searchKey: graphqlbackend.dummyFileResolver.CanonicalURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13172,7 +13160,7 @@ func (d *dummyFileResolver) Highlight(ctx context.Context, args *HighlightArgs) 
 
 ```
 searchKey: graphqlbackend.dummyFileResolver.IsDirectory
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13183,7 +13171,7 @@ func (d *dummyFileResolver) IsDirectory() bool
 
 ```
 searchKey: graphqlbackend.dummyFileResolver.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13194,7 +13182,7 @@ func (d *dummyFileResolver) Name() string
 
 ```
 searchKey: graphqlbackend.dummyFileResolver.Path
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13216,7 +13204,7 @@ func (d *dummyFileResolver) RichHTML(ctx context.Context) (string, error)
 
 ```
 searchKey: graphqlbackend.dummyFileResolver.ToGitBlob
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13227,7 +13215,7 @@ func (d *dummyFileResolver) ToGitBlob() (*GitTreeEntryResolver, bool)
 
 ```
 searchKey: graphqlbackend.dummyFileResolver.ToVirtualFile
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13265,7 +13253,7 @@ type errNoResolvedRepos struct {
 
 ```
 searchKey: graphqlbackend.errNoResolvedRepos.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13290,7 +13278,7 @@ type errOverRepoLimit struct {
 
 ```
 searchKey: graphqlbackend.errOverRepoLimit.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13397,7 +13385,7 @@ type externalAccountResolver struct {
 
 ```
 searchKey: graphqlbackend.externalAccountByID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13419,7 +13407,7 @@ func (r *externalAccountResolver) AccountData(ctx context.Context) (*JSONValue, 
 
 ```
 searchKey: graphqlbackend.externalAccountResolver.AccountID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13430,7 +13418,7 @@ func (r *externalAccountResolver) AccountID() string
 
 ```
 searchKey: graphqlbackend.externalAccountResolver.ClientID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13441,7 +13429,7 @@ func (r *externalAccountResolver) ClientID() string
 
 ```
 searchKey: graphqlbackend.externalAccountResolver.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13452,7 +13440,7 @@ func (r *externalAccountResolver) CreatedAt() DateTime
 
 ```
 searchKey: graphqlbackend.externalAccountResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13463,7 +13451,7 @@ func (r *externalAccountResolver) ID() graphql.ID
 
 ```
 searchKey: graphqlbackend.externalAccountResolver.RefreshURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13474,7 +13462,7 @@ func (r *externalAccountResolver) RefreshURL() *string
 
 ```
 searchKey: graphqlbackend.externalAccountResolver.ServiceID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13485,7 +13473,7 @@ func (r *externalAccountResolver) ServiceID() string
 
 ```
 searchKey: graphqlbackend.externalAccountResolver.ServiceType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13496,7 +13484,7 @@ func (r *externalAccountResolver) ServiceType() string
 
 ```
 searchKey: graphqlbackend.externalAccountResolver.UpdatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13646,7 +13634,7 @@ type externalServiceResolver struct {
 
 ```
 searchKey: graphqlbackend.externalServiceByID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -13657,7 +13645,7 @@ func externalServiceByID(ctx context.Context, db dbutil.DB, gqlID graphql.ID) (*
 
 ```
 searchKey: graphqlbackend.externalServiceResolver.Config
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13668,7 +13656,7 @@ func (r *externalServiceResolver) Config() (JSONCString, error)
 
 ```
 searchKey: graphqlbackend.externalServiceResolver.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13679,7 +13667,7 @@ func (r *externalServiceResolver) CreatedAt() DateTime
 
 ```
 searchKey: graphqlbackend.externalServiceResolver.DisplayName
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13701,7 +13689,7 @@ func (r *externalServiceResolver) GrantedScopes(ctx context.Context) (*[]string,
 
 ```
 searchKey: graphqlbackend.externalServiceResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13712,7 +13700,7 @@ func (r *externalServiceResolver) ID() graphql.ID
 
 ```
 searchKey: graphqlbackend.externalServiceResolver.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13723,7 +13711,7 @@ func (r *externalServiceResolver) Kind() string
 
 ```
 searchKey: graphqlbackend.externalServiceResolver.LastSyncAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13756,7 +13744,7 @@ func (r *externalServiceResolver) Namespace(ctx context.Context) (*NamespaceReso
 
 ```
 searchKey: graphqlbackend.externalServiceResolver.NextSyncAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13778,7 +13766,7 @@ func (r *externalServiceResolver) RepoCount(ctx context.Context) (int32, error)
 
 ```
 searchKey: graphqlbackend.externalServiceResolver.UpdatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13789,7 +13777,7 @@ func (r *externalServiceResolver) UpdatedAt() DateTime
 
 ```
 searchKey: graphqlbackend.externalServiceResolver.Warning
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13800,7 +13788,7 @@ func (r *externalServiceResolver) Warning() *string
 
 ```
 searchKey: graphqlbackend.externalServiceResolver.WebhookURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13830,7 +13818,7 @@ type fileDiffConnectionResolver struct {
 
 ```
 searchKey: graphqlbackend.NewFileDiffConnectionResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -13947,7 +13935,7 @@ type fileInfo struct {
 
 ```
 searchKey: graphqlbackend.fileInfo.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13958,7 +13946,7 @@ func (f fileInfo) IsDir() bool
 
 ```
 searchKey: graphqlbackend.fileInfo.ModTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13969,7 +13957,7 @@ func (f fileInfo) ModTime() time.Time
 
 ```
 searchKey: graphqlbackend.fileInfo.Mode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13980,7 +13968,7 @@ func (f fileInfo) Mode() os.FileMode
 
 ```
 searchKey: graphqlbackend.fileInfo.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13991,7 +13979,7 @@ func (f fileInfo) Name() string
 
 ```
 searchKey: graphqlbackend.fileInfo.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14002,7 +13990,7 @@ func (f fileInfo) Size() int64
 
 ```
 searchKey: graphqlbackend.fileInfo.Sys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14271,7 +14259,7 @@ type gitObjectType string
 
 ```
 searchKey: graphqlbackend.toGitObjectType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14309,7 +14297,7 @@ type gitRefConnectionResolver struct {
 
 ```
 searchKey: graphqlbackend.gitRefConnectionResolver.Nodes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14320,7 +14308,7 @@ func (r *gitRefConnectionResolver) Nodes() []*GitRefResolver
 
 ```
 searchKey: graphqlbackend.gitRefConnectionResolver.PageInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14331,7 +14319,7 @@ func (r *gitRefConnectionResolver) PageInfo() *graphqlutil.PageInfo
 
 ```
 searchKey: graphqlbackend.gitRefConnectionResolver.TotalCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14373,7 +14361,7 @@ type gitRevSpec struct {
 
 ```
 searchKey: graphqlbackend.gitRevSpec.ToGitObject
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14384,7 +14372,7 @@ func (r *gitRevSpec) ToGitObject() (*gitObject, bool)
 
 ```
 searchKey: graphqlbackend.gitRevSpec.ToGitRef
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14395,7 +14383,7 @@ func (r *gitRevSpec) ToGitRef() (*GitRefResolver, bool)
 
 ```
 searchKey: graphqlbackend.gitRevSpec.ToGitRevSpecExpr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14420,7 +14408,7 @@ type gitRevSpecExpr struct {
 
 ```
 searchKey: graphqlbackend.gitRevSpecExpr.Expr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14457,7 +14445,7 @@ type gitRevisionRange struct {
 
 ```
 searchKey: graphqlbackend.gitRevisionRange.Base
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14468,7 +14456,7 @@ func (r *gitRevisionRange) Base() *gitRevSpec
 
 ```
 searchKey: graphqlbackend.gitRevisionRange.BaseRevSpec
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14479,7 +14467,7 @@ func (r *gitRevisionRange) BaseRevSpec() *gitRevSpecExpr
 
 ```
 searchKey: graphqlbackend.gitRevisionRange.Expr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14490,7 +14478,7 @@ func (r *gitRevisionRange) Expr() string
 
 ```
 searchKey: graphqlbackend.gitRevisionRange.Head
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14501,7 +14489,7 @@ func (r *gitRevisionRange) Head() *gitRevSpec
 
 ```
 searchKey: graphqlbackend.gitRevisionRange.HeadRevSpec
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14512,7 +14500,7 @@ func (r *gitRevisionRange) HeadRevSpec() *gitRevSpecExpr
 
 ```
 searchKey: graphqlbackend.gitRevisionRange.MergeBase
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14536,7 +14524,7 @@ type gitSubmoduleResolver struct {
 
 ```
 searchKey: graphqlbackend.gitSubmoduleResolver.Commit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14547,7 +14535,7 @@ func (r *gitSubmoduleResolver) Commit() string
 
 ```
 searchKey: graphqlbackend.gitSubmoduleResolver.Path
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14558,7 +14546,7 @@ func (r *gitSubmoduleResolver) Path() string
 
 ```
 searchKey: graphqlbackend.gitSubmoduleResolver.URL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14603,7 +14591,7 @@ gitTreeSuggestionResolver implements searchSuggestionResolver for GitTreeEntryRe
 
 ```
 searchKey: graphqlbackend.gitTreeSuggestionResolver.Key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14614,7 +14602,7 @@ func (g gitTreeSuggestionResolver) Key() suggestionKey
 
 ```
 searchKey: graphqlbackend.gitTreeSuggestionResolver.Label
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14625,7 +14613,7 @@ func (g gitTreeSuggestionResolver) Label() string
 
 ```
 searchKey: graphqlbackend.gitTreeSuggestionResolver.Length
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14636,7 +14624,7 @@ func (g gitTreeSuggestionResolver) Length() int
 
 ```
 searchKey: graphqlbackend.gitTreeSuggestionResolver.Score
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14647,7 +14635,7 @@ func (g gitTreeSuggestionResolver) Score() int
 
 ```
 searchKey: graphqlbackend.gitTreeSuggestionResolver.ToFile
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14658,7 +14646,7 @@ func (g gitTreeSuggestionResolver) ToFile() (*GitTreeEntryResolver, bool)
 
 ```
 searchKey: graphqlbackend.gitTreeSuggestionResolver.ToGitBlob
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14669,7 +14657,7 @@ func (g gitTreeSuggestionResolver) ToGitBlob() (*GitTreeEntryResolver, bool)
 
 ```
 searchKey: graphqlbackend.gitTreeSuggestionResolver.ToGitTree
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14743,7 +14731,7 @@ type highlightedDiffHunkBodyResolver struct {
 
 ```
 searchKey: graphqlbackend.highlightedDiffHunkBodyResolver.Aborted
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14754,7 +14742,7 @@ func (r *highlightedDiffHunkBodyResolver) Aborted() bool
 
 ```
 searchKey: graphqlbackend.highlightedDiffHunkBodyResolver.Lines
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14779,7 +14767,7 @@ type highlightedDiffHunkLineResolver struct {
 
 ```
 searchKey: graphqlbackend.highlightedDiffHunkLineResolver.HTML
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14790,7 +14778,7 @@ func (r *highlightedDiffHunkLineResolver) HTML() string
 
 ```
 searchKey: graphqlbackend.highlightedDiffHunkLineResolver.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14815,7 +14803,7 @@ type highlightedFileResolver struct {
 
 ```
 searchKey: graphqlbackend.highlightContent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14826,7 +14814,7 @@ func highlightContent(ctx context.Context, args *HighlightArgs, content, path st
 
 ```
 searchKey: graphqlbackend.highlightedFileResolver.Aborted
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14837,7 +14825,7 @@ func (h *highlightedFileResolver) Aborted() bool
 
 ```
 searchKey: graphqlbackend.highlightedFileResolver.HTML
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14872,7 +14860,7 @@ type highlightedRangeResolver struct {
 
 ```
 searchKey: graphqlbackend.highlightedRangeResolver.Character
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14883,7 +14871,7 @@ func (h highlightedRangeResolver) Character() int32
 
 ```
 searchKey: graphqlbackend.highlightedRangeResolver.Length
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14894,7 +14882,7 @@ func (h highlightedRangeResolver) Length() int32
 
 ```
 searchKey: graphqlbackend.highlightedRangeResolver.Line
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14918,7 +14906,7 @@ type highlightedStringResolver struct {
 
 ```
 searchKey: graphqlbackend.highlightedStringResolver.Highlights
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14929,7 +14917,7 @@ func (s *highlightedStringResolver) Highlights() []highlightedRangeResolver
 
 ```
 searchKey: graphqlbackend.highlightedStringResolver.Value
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14955,7 +14943,7 @@ type hunkResolver struct {
 
 ```
 searchKey: graphqlbackend.hunkResolver.Author
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14977,7 +14965,7 @@ func (r *hunkResolver) Commit(ctx context.Context) (*GitCommitResolver, error)
 
 ```
 searchKey: graphqlbackend.hunkResolver.EndByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14988,7 +14976,7 @@ func (r *hunkResolver) EndByte() int32
 
 ```
 searchKey: graphqlbackend.hunkResolver.EndLine
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14999,7 +14987,7 @@ func (r *hunkResolver) EndLine() int32
 
 ```
 searchKey: graphqlbackend.hunkResolver.Message
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15010,7 +14998,7 @@ func (r *hunkResolver) Message() string
 
 ```
 searchKey: graphqlbackend.hunkResolver.Rev
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15021,7 +15009,7 @@ func (r *hunkResolver) Rev() string
 
 ```
 searchKey: graphqlbackend.hunkResolver.StartByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15032,7 +15020,7 @@ func (r *hunkResolver) StartByte() int32
 
 ```
 searchKey: graphqlbackend.hunkResolver.StartLine
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15057,7 +15045,7 @@ type inviteUserToOrganizationResult struct {
 
 ```
 searchKey: graphqlbackend.inviteUserToOrganizationResult.InvitationURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15068,7 +15056,7 @@ func (r *inviteUserToOrganizationResult) InvitationURL() string
 
 ```
 searchKey: graphqlbackend.inviteUserToOrganizationResult.SentInvitationEmail
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15106,7 +15094,7 @@ type languageResolver struct {
 
 ```
 searchKey: graphqlbackend.languageResolver.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15130,7 +15118,7 @@ type languageStatisticsResolver struct {
 
 ```
 searchKey: graphqlbackend.languageStatisticsResolver.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15141,7 +15129,7 @@ func (l *languageStatisticsResolver) Name() string
 
 ```
 searchKey: graphqlbackend.languageStatisticsResolver.TotalBytes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15152,7 +15140,7 @@ func (l *languageStatisticsResolver) TotalBytes() float64
 
 ```
 searchKey: graphqlbackend.languageStatisticsResolver.TotalLines
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15180,7 +15168,7 @@ languageSuggestionResolver implements searchSuggestionResolver for languageResol
 
 ```
 searchKey: graphqlbackend.languageSuggestionResolver.Key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15191,7 +15179,7 @@ func (l languageSuggestionResolver) Key() suggestionKey
 
 ```
 searchKey: graphqlbackend.languageSuggestionResolver.Label
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15202,7 +15190,7 @@ func (l languageSuggestionResolver) Label() string
 
 ```
 searchKey: graphqlbackend.languageSuggestionResolver.Length
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15213,7 +15201,7 @@ func (l languageSuggestionResolver) Length() int
 
 ```
 searchKey: graphqlbackend.languageSuggestionResolver.Score
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15224,7 +15212,7 @@ func (l languageSuggestionResolver) Score() int
 
 ```
 searchKey: graphqlbackend.languageSuggestionResolver.ToLanguage
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15261,7 +15249,7 @@ type lineMatchResolver struct {
 
 ```
 searchKey: graphqlbackend.lineMatchResolver.LimitHit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15272,7 +15260,7 @@ func (lm lineMatchResolver) LimitHit() bool
 
 ```
 searchKey: graphqlbackend.lineMatchResolver.LineNumber
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15283,7 +15271,7 @@ func (lm lineMatchResolver) LineNumber() int32
 
 ```
 searchKey: graphqlbackend.lineMatchResolver.OffsetAndLengths
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15294,7 +15282,7 @@ func (lm lineMatchResolver) OffsetAndLengths() [][]int32
 
 ```
 searchKey: graphqlbackend.lineMatchResolver.Preview
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15337,7 +15325,7 @@ type locationResolver struct {
 
 ```
 searchKey: graphqlbackend.locationResolver.CanonicalURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15348,7 +15336,7 @@ func (r *locationResolver) CanonicalURL() string
 
 ```
 searchKey: graphqlbackend.locationResolver.Range
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15359,7 +15347,7 @@ func (r *locationResolver) Range() *rangeResolver
 
 ```
 searchKey: graphqlbackend.locationResolver.Resource
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15418,7 +15406,7 @@ type missingRepoRevsError struct {
 
 ```
 searchKey: graphqlbackend.missingRepoRevsError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15506,7 +15494,7 @@ type orgConnectionStaticResolver struct {
 
 ```
 searchKey: graphqlbackend.orgConnectionStaticResolver.Nodes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15517,7 +15505,7 @@ func (r *orgConnectionStaticResolver) Nodes() []*OrgResolver
 
 ```
 searchKey: graphqlbackend.orgConnectionStaticResolver.PageInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15528,7 +15516,7 @@ func (r *orgConnectionStaticResolver) PageInfo() *graphqlutil.PageInfo
 
 ```
 searchKey: graphqlbackend.orgConnectionStaticResolver.TotalCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15555,7 +15543,7 @@ organizationInvitationResolver implements the GraphQL type OrganizationInvitatio
 
 ```
 searchKey: graphqlbackend.orgInvitationByID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15566,7 +15554,7 @@ func orgInvitationByID(ctx context.Context, db dbutil.DB, id graphql.ID) (*organ
 
 ```
 searchKey: graphqlbackend.orgInvitationByIDInt64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15577,7 +15565,7 @@ func orgInvitationByIDInt64(ctx context.Context, db dbutil.DB, id int64) (*organ
 
 ```
 searchKey: graphqlbackend.organizationInvitationResolver.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15588,7 +15576,7 @@ func (r *organizationInvitationResolver) CreatedAt() DateTime
 
 ```
 searchKey: graphqlbackend.organizationInvitationResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15599,7 +15587,7 @@ func (r *organizationInvitationResolver) ID() graphql.ID
 
 ```
 searchKey: graphqlbackend.organizationInvitationResolver.NotifiedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15643,7 +15631,7 @@ func (r *organizationInvitationResolver) RespondURL(ctx context.Context) (*strin
 
 ```
 searchKey: graphqlbackend.organizationInvitationResolver.RespondedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15654,7 +15642,7 @@ func (r *organizationInvitationResolver) RespondedAt() *DateTime
 
 ```
 searchKey: graphqlbackend.organizationInvitationResolver.ResponseType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15665,7 +15653,7 @@ func (r *organizationInvitationResolver) ResponseType() *string
 
 ```
 searchKey: graphqlbackend.organizationInvitationResolver.RevokedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15700,7 +15688,7 @@ type organizationMembershipConnectionResolver struct {
 
 ```
 searchKey: graphqlbackend.organizationMembershipConnectionResolver.Nodes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15711,7 +15699,7 @@ func (r *organizationMembershipConnectionResolver) Nodes() []*organizationMember
 
 ```
 searchKey: graphqlbackend.organizationMembershipConnectionResolver.PageInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15722,7 +15710,7 @@ func (r *organizationMembershipConnectionResolver) PageInfo() *graphqlutil.PageI
 
 ```
 searchKey: graphqlbackend.organizationMembershipConnectionResolver.TotalCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15747,7 +15735,7 @@ type organizationMembershipResolver struct {
 
 ```
 searchKey: graphqlbackend.organizationMembershipResolver.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15769,7 +15757,7 @@ func (r *organizationMembershipResolver) Organization(ctx context.Context) (*Org
 
 ```
 searchKey: graphqlbackend.organizationMembershipResolver.UpdatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15806,7 +15794,7 @@ outOfBandMigrationErrorResolver implements the GraphQL type OutOfBandMigrationEr
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationErrorResolver.Created
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15817,7 +15805,7 @@ func (r *outOfBandMigrationErrorResolver) Created() DateTime
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationErrorResolver.Message
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15843,7 +15831,7 @@ outOfBandMigrationResolver implements the GraphQL type OutOfBandMigration.
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.ApplyReverse
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15854,7 +15842,7 @@ func (r *outOfBandMigrationResolver) ApplyReverse() bool
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.Component
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15865,7 +15853,7 @@ func (r *outOfBandMigrationResolver) Component() string
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.Created
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15876,7 +15864,7 @@ func (r *outOfBandMigrationResolver) Created() DateTime
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.Deprecated
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15887,7 +15875,7 @@ func (r *outOfBandMigrationResolver) Deprecated() *string
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.Description
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15898,7 +15886,7 @@ func (r *outOfBandMigrationResolver) Description() string
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.Errors
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15909,7 +15897,7 @@ func (r *outOfBandMigrationResolver) Errors() []*outOfBandMigrationErrorResolver
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15920,7 +15908,7 @@ func (r *outOfBandMigrationResolver) ID() graphql.ID
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.Introduced
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15931,7 +15919,7 @@ func (r *outOfBandMigrationResolver) Introduced() string
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.LastUpdated
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15942,7 +15930,7 @@ func (r *outOfBandMigrationResolver) LastUpdated() *DateTime
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.NonDestructive
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15953,7 +15941,7 @@ func (r *outOfBandMigrationResolver) NonDestructive() bool
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.Progress
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15964,7 +15952,7 @@ func (r *outOfBandMigrationResolver) Progress() float64
 
 ```
 searchKey: graphqlbackend.outOfBandMigrationResolver.Team
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15989,7 +15977,7 @@ type overrideSpec struct {
 
 ```
 searchKey: graphqlbackend.unmarshalOverrideID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16013,7 +16001,7 @@ type parentSourcegraphResolver struct {
 
 ```
 searchKey: graphqlbackend.parentSourcegraphResolver.URL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16037,7 +16025,7 @@ type phabricatorRepoResolver struct {
 
 ```
 searchKey: graphqlbackend.phabricatorRepoResolver.Callsign
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16048,7 +16036,7 @@ func (p *phabricatorRepoResolver) Callsign() string
 
 ```
 searchKey: graphqlbackend.phabricatorRepoResolver.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16059,7 +16047,7 @@ func (p *phabricatorRepoResolver) Name() string
 
 ```
 searchKey: graphqlbackend.phabricatorRepoResolver.URI
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16072,7 +16060,7 @@ TODO(chris): Remove URI in favor of Name.
 
 ```
 searchKey: graphqlbackend.phabricatorRepoResolver.URL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16094,7 +16082,7 @@ type positionResolver struct{ pos lsp.Position }
 
 ```
 searchKey: graphqlbackend.positionResolver.Character
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16105,7 +16093,7 @@ func (r *positionResolver) Character() int32
 
 ```
 searchKey: graphqlbackend.positionResolver.Line
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16143,7 +16131,7 @@ type previewRepositoryComparisonResolver struct {
 
 ```
 searchKey: graphqlbackend.NewPreviewRepositoryComparisonResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -16156,7 +16144,7 @@ NewPreviewRepositoryComparisonResolver is a convenience function to get a previe
 
 ```
 searchKey: graphqlbackend.previewRepositoryComparisonResolver.BaseRepository
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16178,7 +16166,7 @@ func (r *previewRepositoryComparisonResolver) FileDiffs(ctx context.Context, arg
 
 ```
 searchKey: graphqlbackend.previewRepositoryComparisonResolver.ToPreviewRepositoryComparison
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16189,7 +16177,7 @@ func (r *previewRepositoryComparisonResolver) ToPreviewRepositoryComparison() (P
 
 ```
 searchKey: graphqlbackend.previewRepositoryComparisonResolver.ToRepositoryComparison
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16235,7 +16223,7 @@ func (productSubscriptionStatus) ActualUserCountDate(ctx context.Context) (strin
 
 ```
 searchKey: graphqlbackend.productSubscriptionStatus.License
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16268,7 +16256,7 @@ func (productSubscriptionStatus) NoLicenseWarningUserCount(ctx context.Context) 
 
 ```
 searchKey: graphqlbackend.productSubscriptionStatus.ProductNameWithBrand
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16350,7 +16338,7 @@ type rangeResolver struct{ lspRange lsp.Range }
 
 ```
 searchKey: graphqlbackend.rangeResolver.End
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16361,7 +16349,7 @@ func (r *rangeResolver) End() PositionResolver
 
 ```
 searchKey: graphqlbackend.rangeResolver.Start
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16372,7 +16360,7 @@ func (r *rangeResolver) Start() PositionResolver
 
 ```
 searchKey: graphqlbackend.rangeResolver.end
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16383,7 +16371,7 @@ func (r *rangeResolver) end() *positionResolver
 
 ```
 searchKey: graphqlbackend.rangeResolver.start
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16394,7 +16382,7 @@ func (r *rangeResolver) start() *positionResolver
 
 ```
 searchKey: graphqlbackend.rangeResolver.urlFragment
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16436,7 +16424,7 @@ type repoGroup struct {
 
 ```
 searchKey: graphqlbackend.repoGroup.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16447,7 +16435,7 @@ func (g repoGroup) Name() string
 
 ```
 searchKey: graphqlbackend.repoGroup.Repositories
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16744,7 +16732,7 @@ func (r *repositoryContributorResolver) Commits(args *struct {
 
 ```
 searchKey: graphqlbackend.repositoryContributorResolver.Count
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16755,7 +16743,7 @@ func (r *repositoryContributorResolver) Count() int32
 
 ```
 searchKey: graphqlbackend.repositoryContributorResolver.Person
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16766,7 +16754,7 @@ func (r *repositoryContributorResolver) Person() *PersonResolver
 
 ```
 searchKey: graphqlbackend.repositoryContributorResolver.Repository
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16809,7 +16797,7 @@ A repositoryCursor can be provided to a `repositories` query for efficient curso
 
 ```
 searchKey: graphqlbackend.unmarshalRepositoryCursor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16959,7 +16947,7 @@ type repositoryRedirect struct {
 
 ```
 searchKey: graphqlbackend.repositoryRedirect.ToRedirect
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16970,7 +16958,7 @@ func (r *repositoryRedirect) ToRedirect() (*RedirectResolver, bool)
 
 ```
 searchKey: graphqlbackend.repositoryRedirect.ToRepository
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16995,7 +16983,7 @@ type repositoryStatsResolver struct {
 
 ```
 searchKey: graphqlbackend.repositoryStatsResolver.GitDirBytes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17006,7 +16994,7 @@ func (r *repositoryStatsResolver) GitDirBytes() BigInt
 
 ```
 searchKey: graphqlbackend.repositoryStatsResolver.IndexedLinesCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17034,7 +17022,7 @@ repositorySuggestionResolver implements searchSuggestionResolver for RepositoryR
 
 ```
 searchKey: graphqlbackend.repositorySuggestionResolver.Key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17045,7 +17033,7 @@ func (r repositorySuggestionResolver) Key() suggestionKey
 
 ```
 searchKey: graphqlbackend.repositorySuggestionResolver.Label
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17056,7 +17044,7 @@ func (r repositorySuggestionResolver) Label() string
 
 ```
 searchKey: graphqlbackend.repositorySuggestionResolver.Length
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17067,7 +17055,7 @@ func (r repositorySuggestionResolver) Length() int
 
 ```
 searchKey: graphqlbackend.repositorySuggestionResolver.Score
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17078,7 +17066,7 @@ func (r repositorySuggestionResolver) Score() int
 
 ```
 searchKey: graphqlbackend.repositorySuggestionResolver.ToRepository
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17118,7 +17106,7 @@ func (r *repositoryTextSearchIndexResolver) Refs(ctx context.Context) ([]*reposi
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexResolver.Repository
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17164,7 +17152,7 @@ type repositoryTextSearchIndexStatus struct {
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexStatus.ContentByteSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17175,7 +17163,7 @@ func (r *repositoryTextSearchIndexStatus) ContentByteSize() int32
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexStatus.ContentFilesCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17186,7 +17174,7 @@ func (r *repositoryTextSearchIndexStatus) ContentFilesCount() int32
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexStatus.DefaultBranchNewLinesCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17197,7 +17185,7 @@ func (r *repositoryTextSearchIndexStatus) DefaultBranchNewLinesCount() int32
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexStatus.IndexByteSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17208,7 +17196,7 @@ func (r *repositoryTextSearchIndexStatus) IndexByteSize() int32
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexStatus.IndexShardsCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17219,7 +17207,7 @@ func (r *repositoryTextSearchIndexStatus) IndexShardsCount() int32
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexStatus.NewLinesCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17230,7 +17218,7 @@ func (r *repositoryTextSearchIndexStatus) NewLinesCount() int32
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexStatus.OtherBranchesNewLinesCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17241,7 +17229,7 @@ func (r *repositoryTextSearchIndexStatus) OtherBranchesNewLinesCount() int32
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexStatus.UpdatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17277,7 +17265,7 @@ func (r *repositoryTextSearchIndexedRef) Current(ctx context.Context) (bool, err
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexedRef.Indexed
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17288,7 +17276,7 @@ func (r *repositoryTextSearchIndexedRef) Indexed() bool
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexedRef.IndexedCommit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17299,7 +17287,7 @@ func (r *repositoryTextSearchIndexedRef) IndexedCommit() *gitObject
 
 ```
 searchKey: graphqlbackend.repositoryTextSearchIndexedRef.Ref
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17376,7 +17364,7 @@ type savedSearchResolver struct {
 
 ```
 searchKey: graphqlbackend.savedSearchResolver.Description
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17387,7 +17375,7 @@ func (r savedSearchResolver) Description() string
 
 ```
 searchKey: graphqlbackend.savedSearchResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17409,7 +17397,7 @@ func (r savedSearchResolver) Namespace(ctx context.Context) (*NamespaceResolver,
 
 ```
 searchKey: graphqlbackend.savedSearchResolver.Notify
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17420,7 +17408,7 @@ func (r savedSearchResolver) Notify() bool
 
 ```
 searchKey: graphqlbackend.savedSearchResolver.NotifySlack
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17431,7 +17419,7 @@ func (r savedSearchResolver) NotifySlack() bool
 
 ```
 searchKey: graphqlbackend.savedSearchResolver.Query
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17442,7 +17430,7 @@ func (r savedSearchResolver) Query() string
 
 ```
 searchKey: graphqlbackend.savedSearchResolver.SlackWebhookURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17478,7 +17466,7 @@ schemaResolver handles all GraphQL queries for Sourcegraph. To do this, it uses 
 
 ```
 searchKey: graphqlbackend.newSchemaResolver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18346,7 +18334,7 @@ func (r *schemaResolver) RevokeOrganizationInvitation(ctx context.Context, args 
 
 ```
 searchKey: graphqlbackend.schemaResolver.Root
-tags: [function private deprecated]
+tags: [method private deprecated]
 ```
 
 ```Go
@@ -18558,7 +18546,7 @@ func (r *schemaResolver) SettingsSubject(ctx context.Context, args *struct{ ID g
 
 ```
 searchKey: graphqlbackend.schemaResolver.Site
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18965,7 +18953,7 @@ func alertForCappedAndExpression() *searchAlert
 
 ```
 searchKey: graphqlbackend.alertForError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18976,7 +18964,7 @@ func alertForError(err error) *searchAlert
 
 ```
 searchKey: graphqlbackend.alertForInvalidRevision
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18987,7 +18975,7 @@ func alertForInvalidRevision(revision string) *searchAlert
 
 ```
 searchKey: graphqlbackend.alertForMissingRepoRevs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18998,7 +18986,7 @@ func alertForMissingRepoRevs(missingRepoRevs []*search.RepositoryRevisions) *sea
 
 ```
 searchKey: graphqlbackend.alertForQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19022,7 +19010,7 @@ func alertForStalePermissions() *searchAlert
 
 ```
 searchKey: graphqlbackend.alertForStructuralSearchNotSet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19033,7 +19021,7 @@ func alertForStructuralSearchNotSet(queryString string) *searchAlert
 
 ```
 searchKey: graphqlbackend.alertForTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19044,7 +19032,7 @@ func alertForTimeout(usedTime time.Duration, suggestTime time.Duration, r *searc
 
 ```
 searchKey: graphqlbackend.errorToAlert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19057,7 +19045,7 @@ errorToAlert is intended to be a catch-all function for converting all errors in
 
 ```
 searchKey: graphqlbackend.maxAlertByPriority
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19068,7 +19056,7 @@ func maxAlertByPriority(a, b *searchAlert) *searchAlert
 
 ```
 searchKey: graphqlbackend.multierrorToAlert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19081,7 +19069,7 @@ multierrorToAlert converts a multierror.Error into the highest priority alert fo
 
 ```
 searchKey: graphqlbackend.searchAlert.Description
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19092,7 +19080,7 @@ func (a searchAlert) Description() *string
 
 ```
 searchKey: graphqlbackend.searchAlert.PrometheusType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19103,7 +19091,7 @@ func (a searchAlert) PrometheusType() string
 
 ```
 searchKey: graphqlbackend.searchAlert.ProposedQueries
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19114,7 +19102,7 @@ func (a searchAlert) ProposedQueries() *[]*searchQueryDescription
 
 ```
 searchKey: graphqlbackend.searchAlert.Title
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19125,7 +19113,7 @@ func (a searchAlert) Title() string
 
 ```
 searchKey: graphqlbackend.searchAlert.wrapResults
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19313,7 +19301,7 @@ func (r *searchContextResolver) Description(ctx context.Context) string
 
 ```
 searchKey: graphqlbackend.searchContextResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19368,7 +19356,7 @@ func (r *searchContextResolver) Repositories(ctx context.Context) ([]*searchCont
 
 ```
 searchKey: graphqlbackend.searchContextResolver.Spec
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19416,7 +19404,7 @@ type searchContextSuggestionResolver struct {
 
 ```
 searchKey: graphqlbackend.searchContextSuggestionResolver.Key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19427,7 +19415,7 @@ func (s searchContextSuggestionResolver) Key() suggestionKey
 
 ```
 searchKey: graphqlbackend.searchContextSuggestionResolver.Label
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19438,7 +19426,7 @@ func (s searchContextSuggestionResolver) Label() string
 
 ```
 searchKey: graphqlbackend.searchContextSuggestionResolver.Length
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19449,7 +19437,7 @@ func (s searchContextSuggestionResolver) Length() int
 
 ```
 searchKey: graphqlbackend.searchContextSuggestionResolver.Score
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19460,7 +19448,7 @@ func (s searchContextSuggestionResolver) Score() int
 
 ```
 searchKey: graphqlbackend.searchContextSuggestionResolver.ToSearchContext
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19495,7 +19483,7 @@ type searchFilterResolver struct {
 
 ```
 searchKey: graphqlbackend.searchFilterResolver.Count
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19506,7 +19494,7 @@ func (sf *searchFilterResolver) Count() int32
 
 ```
 searchKey: graphqlbackend.searchFilterResolver.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19517,7 +19505,7 @@ func (sf *searchFilterResolver) Kind() string
 
 ```
 searchKey: graphqlbackend.searchFilterResolver.Label
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19528,7 +19516,7 @@ func (sf *searchFilterResolver) Label() string
 
 ```
 searchKey: graphqlbackend.searchFilterResolver.LimitHit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19539,7 +19527,7 @@ func (sf *searchFilterResolver) LimitHit() bool
 
 ```
 searchKey: graphqlbackend.searchFilterResolver.Value
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19566,7 +19554,7 @@ searchFilterSuggestions holds suggestions of search filters and their default va
 
 ```
 searchKey: graphqlbackend.searchFilterSuggestions.Repo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19579,7 +19567,7 @@ Repo returns a list of repositories as the default value for suggestion.
 
 ```
 searchKey: graphqlbackend.searchFilterSuggestions.Repogroup
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19609,7 +19597,7 @@ searchQueryDescription is a type for the SearchQueryDescription resolver used by
 
 ```
 searchKey: graphqlbackend.searchQueryDescription.Description
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19620,7 +19608,7 @@ func (q searchQueryDescription) Description() *string
 
 ```
 searchKey: graphqlbackend.searchQueryDescription.Query
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19661,7 +19649,7 @@ searchResolver is a resolver for the GraphQL type `Search`
 
 ```
 searchKey: graphqlbackend.searchResolver.Inputs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19705,7 +19693,7 @@ func (r *searchResolver) Suggestions(ctx context.Context, args *searchSuggestion
 
 ```
 searchKey: graphqlbackend.searchResolver.countIsSet
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19844,7 +19832,7 @@ evaluatePatternExpression evaluates a search pattern containing and/or expressio
 
 ```
 searchKey: graphqlbackend.searchResolver.getExactFilePatterns
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19857,7 +19845,7 @@ getExactFilePatterns returns the set of file patterns without glob syntax.
 
 ```
 searchKey: graphqlbackend.searchResolver.isGlobalSearch
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19913,7 +19901,7 @@ with the absolute ordering we do here for pagination.
 
 ```
 searchKey: graphqlbackend.searchResolver.protocol
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19926,7 +19914,7 @@ protocol returns what type of search we are doing (batch, stream, paginated).
 
 ```
 searchKey: graphqlbackend.searchResolver.rawQuery
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20022,7 +20010,7 @@ resultsWithTimeoutSuggestion calls doResults, and in case of deadline exceeded r
 
 ```
 searchKey: graphqlbackend.searchResolver.searchTimeoutFieldSet
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20096,7 +20084,7 @@ A resolver for the GraphQL type GenericSearchMatch
 
 ```
 searchKey: graphqlbackend.searchResultMatchResolver.Body
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20107,7 +20095,7 @@ func (m *searchResultMatchResolver) Body() Markdown
 
 ```
 searchKey: graphqlbackend.searchResultMatchResolver.Highlights
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20118,7 +20106,7 @@ func (m *searchResultMatchResolver) Highlights() []highlightedRangeResolver
 
 ```
 searchKey: graphqlbackend.searchResultMatchResolver.URL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20149,7 +20137,7 @@ type searchResultsStats struct {
 
 ```
 searchKey: graphqlbackend.searchResultsStats.ApproximateResultCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20171,7 +20159,7 @@ func (srs *searchResultsStats) Languages(ctx context.Context) ([]*languageStatis
 
 ```
 searchKey: graphqlbackend.searchResultsStats.Sparkline
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20206,7 +20194,7 @@ type searchSuggestionsArgs struct {
 
 ```
 searchKey: graphqlbackend.searchSuggestionsArgs.applyDefaultsAndConstraints
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20230,7 +20218,7 @@ type sessionResolver struct {
 
 ```
 searchKey: graphqlbackend.sessionResolver.CanSignOut
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20443,7 +20431,7 @@ func (o *settingsResolver) Author(ctx context.Context) (*UserResolver, error)
 
 ```
 searchKey: graphqlbackend.settingsResolver.Configuration
-tags: [function private deprecated]
+tags: [method private deprecated]
 ```
 
 ```Go
@@ -20456,7 +20444,7 @@ Deprecated: Use the Contents field instead.
 
 ```
 searchKey: graphqlbackend.settingsResolver.Contents
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20467,7 +20455,7 @@ func (o *settingsResolver) Contents() JSONCString
 
 ```
 searchKey: graphqlbackend.settingsResolver.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20478,7 +20466,7 @@ func (o *settingsResolver) CreatedAt() DateTime
 
 ```
 searchKey: graphqlbackend.settingsResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20489,7 +20477,7 @@ func (o *settingsResolver) ID() int32
 
 ```
 searchKey: graphqlbackend.settingsResolver.Subject
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20517,7 +20505,7 @@ type settingsSubject struct {
 
 ```
 searchKey: graphqlbackend.settingsSubjectForNode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -20530,7 +20518,7 @@ settingsSubjectForNode fetches the settings subject for the given Node. If the n
 
 ```
 searchKey: graphqlbackend.settingsSubject.ConfigurationCascade
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20541,7 +20529,7 @@ func (s *settingsSubject) ConfigurationCascade() (*settingsCascade, error)
 
 ```
 searchKey: graphqlbackend.settingsSubject.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20563,7 +20551,7 @@ func (s *settingsSubject) LatestSettings(ctx context.Context) (*settingsResolver
 
 ```
 searchKey: graphqlbackend.settingsSubject.SettingsCascade
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20574,7 +20562,7 @@ func (s *settingsSubject) SettingsCascade() (*settingsCascade, error)
 
 ```
 searchKey: graphqlbackend.settingsSubject.SettingsURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20585,7 +20573,7 @@ func (s *settingsSubject) SettingsURL() (*string, error)
 
 ```
 searchKey: graphqlbackend.settingsSubject.ToDefaultSettings
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20596,7 +20584,7 @@ func (s *settingsSubject) ToDefaultSettings() (*defaultSettingsResolver, bool)
 
 ```
 searchKey: graphqlbackend.settingsSubject.ToOrg
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20607,7 +20595,7 @@ func (s *settingsSubject) ToOrg() (*OrgResolver, bool)
 
 ```
 searchKey: graphqlbackend.settingsSubject.ToSite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20618,7 +20606,7 @@ func (s *settingsSubject) ToSite() (*siteResolver, bool)
 
 ```
 searchKey: graphqlbackend.settingsSubject.ToUser
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20653,7 +20641,7 @@ readSettings unmarshals s's latest settings into v.
 
 ```
 searchKey: graphqlbackend.settingsSubject.toSubject
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20689,7 +20677,7 @@ type signatureResolver struct {
 
 ```
 searchKey: graphqlbackend.toSignatureResolver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -20700,7 +20688,7 @@ func toSignatureResolver(db dbutil.DB, sig *git.Signature, includeUserInfo bool)
 
 ```
 searchKey: graphqlbackend.signatureResolver.Date
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20711,7 +20699,7 @@ func (r signatureResolver) Date() string
 
 ```
 searchKey: graphqlbackend.signatureResolver.Person
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20831,7 +20819,7 @@ func (r *siteResolver) Alerts(ctx context.Context) ([]*Alert, error)
 
 ```
 searchKey: graphqlbackend.siteResolver.AllowSiteSettingsEdits
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20853,7 +20841,7 @@ func (r *siteResolver) AuthProviders(ctx context.Context) (*authProviderConnecti
 
 ```
 searchKey: graphqlbackend.siteResolver.BuildVersion
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20886,7 +20874,7 @@ func (r *siteResolver) Configuration(ctx context.Context) (*siteConfigurationRes
 
 ```
 searchKey: graphqlbackend.siteResolver.ConfigurationCascade
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20897,7 +20885,7 @@ func (r *siteResolver) ConfigurationCascade() *settingsCascade
 
 ```
 searchKey: graphqlbackend.siteResolver.DisableBuiltInSearches
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20936,7 +20924,7 @@ func (r *siteResolver) FreeUsersExceeded(ctx context.Context) (bool, error)
 
 ```
 searchKey: graphqlbackend.siteResolver.HasCodeIntelligence
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20947,7 +20935,7 @@ func (r *siteResolver) HasCodeIntelligence() bool
 
 ```
 searchKey: graphqlbackend.siteResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20993,7 +20981,7 @@ func (r *siteResolver) NeedsRepositoryConfiguration(ctx context.Context) (bool, 
 
 ```
 searchKey: graphqlbackend.siteResolver.ProductSubscription
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21004,7 +20992,7 @@ func (r *siteResolver) ProductSubscription() *productSubscriptionStatus
 
 ```
 searchKey: graphqlbackend.siteResolver.ProductVersion
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21015,7 +21003,7 @@ func (r *siteResolver) ProductVersion() string
 
 ```
 searchKey: graphqlbackend.siteResolver.SendsEmailVerificationEmails
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21026,7 +21014,7 @@ func (*siteResolver) SendsEmailVerificationEmails() bool
 
 ```
 searchKey: graphqlbackend.siteResolver.SettingsCascade
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21037,7 +21025,7 @@ func (r *siteResolver) SettingsCascade() *settingsCascade
 
 ```
 searchKey: graphqlbackend.siteResolver.SettingsURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21048,7 +21036,7 @@ func (r *siteResolver) SettingsURL() *string
 
 ```
 searchKey: graphqlbackend.siteResolver.SiteID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21096,7 +21084,7 @@ func (r *siteResolver) ViewerCanAdminister(ctx context.Context) (bool, error)
 
 ```
 searchKey: graphqlbackend.siteResolver.settingsSubject
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21120,7 +21108,7 @@ type siteUsagePeriodResolver struct {
 
 ```
 searchKey: graphqlbackend.siteUsagePeriodResolver.AnonymousUserCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21131,7 +21119,7 @@ func (s *siteUsagePeriodResolver) AnonymousUserCount() int32
 
 ```
 searchKey: graphqlbackend.siteUsagePeriodResolver.IntegrationUserCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21142,7 +21130,7 @@ func (s *siteUsagePeriodResolver) IntegrationUserCount() int32
 
 ```
 searchKey: graphqlbackend.siteUsagePeriodResolver.RegisteredUserCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21153,7 +21141,7 @@ func (s *siteUsagePeriodResolver) RegisteredUserCount() int32
 
 ```
 searchKey: graphqlbackend.siteUsagePeriodResolver.StartTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21164,7 +21152,7 @@ func (s *siteUsagePeriodResolver) StartTime() string
 
 ```
 searchKey: graphqlbackend.siteUsagePeriodResolver.UserCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21188,7 +21176,7 @@ type siteUsageStatisticsResolver struct {
 
 ```
 searchKey: graphqlbackend.siteUsageStatisticsResolver.DAUs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21199,7 +21187,7 @@ func (s *siteUsageStatisticsResolver) DAUs() []*siteUsagePeriodResolver
 
 ```
 searchKey: graphqlbackend.siteUsageStatisticsResolver.MAUs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21210,7 +21198,7 @@ func (s *siteUsageStatisticsResolver) MAUs() []*siteUsagePeriodResolver
 
 ```
 searchKey: graphqlbackend.siteUsageStatisticsResolver.WAUs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21261,7 +21249,7 @@ type slicedSearchResults struct {
 
 ```
 searchKey: graphqlbackend.sliceSearchResults
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21290,7 +21278,7 @@ staticUserConnectionResolver implements the GraphQL type UserConnection based on
 
 ```
 searchKey: graphqlbackend.staticUserConnectionResolver.Nodes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21301,7 +21289,7 @@ func (r *staticUserConnectionResolver) Nodes() []*UserResolver
 
 ```
 searchKey: graphqlbackend.staticUserConnectionResolver.PageInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21312,7 +21300,7 @@ func (r *staticUserConnectionResolver) PageInfo() *graphqlutil.PageInfo
 
 ```
 searchKey: graphqlbackend.staticUserConnectionResolver.TotalCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21348,7 +21336,7 @@ func (r *statusMessageResolver) ExternalService(ctx context.Context) (*externalS
 
 ```
 searchKey: graphqlbackend.statusMessageResolver.Message
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21359,7 +21347,7 @@ func (r *statusMessageResolver) Message() (string, error)
 
 ```
 searchKey: graphqlbackend.statusMessageResolver.ToCloningProgress
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21370,7 +21358,7 @@ func (r *statusMessageResolver) ToCloningProgress() (*statusMessageResolver, boo
 
 ```
 searchKey: graphqlbackend.statusMessageResolver.ToExternalServiceSyncError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21381,7 +21369,7 @@ func (r *statusMessageResolver) ToExternalServiceSyncError() (*statusMessageReso
 
 ```
 searchKey: graphqlbackend.statusMessageResolver.ToIndexingProgress
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21392,7 +21380,7 @@ func (r *statusMessageResolver) ToIndexingProgress() (*statusMessageResolver, bo
 
 ```
 searchKey: graphqlbackend.statusMessageResolver.ToSyncError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21505,7 +21493,7 @@ type surveyResponseResolver struct {
 
 ```
 searchKey: graphqlbackend.surveyResponseResolver.Better
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21516,7 +21504,7 @@ func (s *surveyResponseResolver) Better() *string
 
 ```
 searchKey: graphqlbackend.surveyResponseResolver.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21527,7 +21515,7 @@ func (s *surveyResponseResolver) CreatedAt() DateTime
 
 ```
 searchKey: graphqlbackend.surveyResponseResolver.Email
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21538,7 +21526,7 @@ func (s *surveyResponseResolver) Email() *string
 
 ```
 searchKey: graphqlbackend.surveyResponseResolver.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21549,7 +21537,7 @@ func (s *surveyResponseResolver) ID() graphql.ID
 
 ```
 searchKey: graphqlbackend.surveyResponseResolver.Reason
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21560,7 +21548,7 @@ func (s *surveyResponseResolver) Reason() *string
 
 ```
 searchKey: graphqlbackend.surveyResponseResolver.Score
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21651,7 +21639,7 @@ type symbolResolver struct {
 
 ```
 searchKey: graphqlbackend.toSymbolResolver
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -21662,7 +21650,7 @@ func toSymbolResolver(db dbutil.DB, commit *GitCommitResolver, sr *result.Symbol
 
 ```
 searchKey: graphqlbackend.symbolResolver.CanonicalURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21673,7 +21661,7 @@ func (r symbolResolver) CanonicalURL() string
 
 ```
 searchKey: graphqlbackend.symbolResolver.ContainerName
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21684,7 +21672,7 @@ func (r symbolResolver) ContainerName() *string
 
 ```
 searchKey: graphqlbackend.symbolResolver.FileLocal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21695,7 +21683,7 @@ func (r symbolResolver) FileLocal() bool
 
 ```
 searchKey: graphqlbackend.symbolResolver.Kind
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21706,7 +21694,7 @@ func (r symbolResolver) Kind() string
 
 ```
 searchKey: graphqlbackend.symbolResolver.Language
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21717,7 +21705,7 @@ func (r symbolResolver) Language() string
 
 ```
 searchKey: graphqlbackend.symbolResolver.Location
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21728,7 +21716,7 @@ func (r symbolResolver) Location() *locationResolver
 
 ```
 searchKey: graphqlbackend.symbolResolver.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21767,7 +21755,7 @@ symbolSuggestionResolver implements searchSuggestionResolver for symbolResolver
 
 ```
 searchKey: graphqlbackend.symbolSuggestionResolver.Key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21778,7 +21766,7 @@ func (s symbolSuggestionResolver) Key() suggestionKey
 
 ```
 searchKey: graphqlbackend.symbolSuggestionResolver.Label
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21789,7 +21777,7 @@ func (s symbolSuggestionResolver) Label() string
 
 ```
 searchKey: graphqlbackend.symbolSuggestionResolver.Length
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21800,7 +21788,7 @@ func (s symbolSuggestionResolver) Length() int
 
 ```
 searchKey: graphqlbackend.symbolSuggestionResolver.Score
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21811,7 +21799,7 @@ func (s symbolSuggestionResolver) Score() int
 
 ```
 searchKey: graphqlbackend.symbolSuggestionResolver.ToSymbol
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21865,7 +21853,7 @@ type updateCheckResolver struct {
 
 ```
 searchKey: graphqlbackend.updateCheckResolver.CheckedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21876,7 +21864,7 @@ func (r *updateCheckResolver) CheckedAt() *DateTime
 
 ```
 searchKey: graphqlbackend.updateCheckResolver.ErrorMessage
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21887,7 +21875,7 @@ func (r *updateCheckResolver) ErrorMessage() *string
 
 ```
 searchKey: graphqlbackend.updateCheckResolver.Pending
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21898,7 +21886,7 @@ func (r *updateCheckResolver) Pending() bool
 
 ```
 searchKey: graphqlbackend.updateCheckResolver.UpdateVersionAvailable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21950,7 +21938,7 @@ type updateQueueResolver struct {
 
 ```
 searchKey: graphqlbackend.updateQueueResolver.Index
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21961,7 +21949,7 @@ func (r *updateQueueResolver) Index() int32
 
 ```
 searchKey: graphqlbackend.updateQueueResolver.Total
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21972,7 +21960,7 @@ func (r *updateQueueResolver) Total() int32
 
 ```
 searchKey: graphqlbackend.updateQueueResolver.Updating
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21996,7 +21984,7 @@ type updateScheduleResolver struct {
 
 ```
 searchKey: graphqlbackend.updateScheduleResolver.Due
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22007,7 +21995,7 @@ func (r *updateScheduleResolver) Due() DateTime
 
 ```
 searchKey: graphqlbackend.updateScheduleResolver.Index
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22018,7 +22006,7 @@ func (r *updateScheduleResolver) Index() int32
 
 ```
 searchKey: graphqlbackend.updateScheduleResolver.IntervalSeconds
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22029,7 +22017,7 @@ func (r *updateScheduleResolver) IntervalSeconds() int32
 
 ```
 searchKey: graphqlbackend.updateScheduleResolver.Total
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22066,7 +22054,7 @@ type updateSettingsPayload struct{}
 
 ```
 searchKey: graphqlbackend.updateSettingsPayload.Empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22160,7 +22148,7 @@ compute caches results from the more expensive user list creation that occurs wh
 
 ```
 searchKey: graphqlbackend.userConnectionResolver.useCache
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22186,7 +22174,7 @@ type userEmailResolver struct {
 
 ```
 searchKey: graphqlbackend.userEmailResolver.Email
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22208,7 +22196,7 @@ func (r *userEmailResolver) IsPrimary(ctx context.Context) (bool, error)
 
 ```
 searchKey: graphqlbackend.userEmailResolver.User
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22219,7 +22207,7 @@ func (r *userEmailResolver) User() *UserResolver
 
 ```
 searchKey: graphqlbackend.userEmailResolver.VerificationPending
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22230,7 +22218,7 @@ func (r *userEmailResolver) VerificationPending() bool
 
 ```
 searchKey: graphqlbackend.userEmailResolver.Verified
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22266,7 +22254,7 @@ type userEventLogResolver struct {
 
 ```
 searchKey: graphqlbackend.userEventLogResolver.AnonymousUserID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22277,7 +22265,7 @@ func (s *userEventLogResolver) AnonymousUserID() string
 
 ```
 searchKey: graphqlbackend.userEventLogResolver.Argument
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22288,7 +22276,7 @@ func (s *userEventLogResolver) Argument() *string
 
 ```
 searchKey: graphqlbackend.userEventLogResolver.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22299,7 +22287,7 @@ func (s *userEventLogResolver) Name() string
 
 ```
 searchKey: graphqlbackend.userEventLogResolver.Source
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22310,7 +22298,7 @@ func (s *userEventLogResolver) Source() string
 
 ```
 searchKey: graphqlbackend.userEventLogResolver.Timestamp
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22321,7 +22309,7 @@ func (s *userEventLogResolver) Timestamp() DateTime
 
 ```
 searchKey: graphqlbackend.userEventLogResolver.URL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22343,7 +22331,7 @@ func (s *userEventLogResolver) User(ctx context.Context) (*UserResolver, error)
 
 ```
 searchKey: graphqlbackend.userEventLogResolver.Version
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22414,7 +22402,7 @@ type userUsageStatisticsResolver struct {
 
 ```
 searchKey: graphqlbackend.userUsageStatisticsResolver.CodeIntelligenceActions
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22425,7 +22413,7 @@ func (s *userUsageStatisticsResolver) CodeIntelligenceActions() int32
 
 ```
 searchKey: graphqlbackend.userUsageStatisticsResolver.FindReferencesActions
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22436,7 +22424,7 @@ func (s *userUsageStatisticsResolver) FindReferencesActions() int32
 
 ```
 searchKey: graphqlbackend.userUsageStatisticsResolver.LastActiveCodeHostIntegrationTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22447,7 +22435,7 @@ func (s *userUsageStatisticsResolver) LastActiveCodeHostIntegrationTime() *strin
 
 ```
 searchKey: graphqlbackend.userUsageStatisticsResolver.LastActiveTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22458,7 +22446,7 @@ func (s *userUsageStatisticsResolver) LastActiveTime() *string
 
 ```
 searchKey: graphqlbackend.userUsageStatisticsResolver.PageViews
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22469,7 +22457,7 @@ func (s *userUsageStatisticsResolver) PageViews() int32
 
 ```
 searchKey: graphqlbackend.userUsageStatisticsResolver.SearchQueries
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22493,7 +22481,7 @@ type versionContextResolver struct {
 
 ```
 searchKey: graphqlbackend.NewVersionContextResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22504,7 +22492,7 @@ func NewVersionContextResolver(vc *schema.VersionContext) *versionContextResolve
 
 ```
 searchKey: graphqlbackend.versionContextResolver.Description
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22515,7 +22503,7 @@ func (v *versionContextResolver) Description() string
 
 ```
 searchKey: graphqlbackend.versionContextResolver.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22542,7 +22530,7 @@ type virtualFileResolver struct {
 
 ```
 searchKey: graphqlbackend.NewVirtualFileResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22575,7 +22563,7 @@ func (r *virtualFileResolver) ByteSize(ctx context.Context) (int32, error)
 
 ```
 searchKey: graphqlbackend.virtualFileResolver.CanonicalURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22619,7 +22607,7 @@ func (r *virtualFileResolver) Highlight(ctx context.Context, args *HighlightArgs
 
 ```
 searchKey: graphqlbackend.virtualFileResolver.IsDirectory
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22630,7 +22618,7 @@ func (r *virtualFileResolver) IsDirectory() bool
 
 ```
 searchKey: graphqlbackend.virtualFileResolver.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22641,7 +22629,7 @@ func (r *virtualFileResolver) Name() string
 
 ```
 searchKey: graphqlbackend.virtualFileResolver.Path
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22663,7 +22651,7 @@ func (r *virtualFileResolver) RichHTML(ctx context.Context) (string, error)
 
 ```
 searchKey: graphqlbackend.virtualFileResolver.ToGitBlob
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22674,7 +22662,7 @@ func (r *virtualFileResolver) ToGitBlob() (*GitTreeEntryResolver, bool)
 
 ```
 searchKey: graphqlbackend.virtualFileResolver.ToVirtualFile
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22694,15 +22682,11 @@ func (r *virtualFileResolver) URL(ctx context.Context) (string, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkIntegrationSearchResults" href="#BenchmarkIntegrationSearchResults">func BenchmarkIntegrationSearchResults(b *testing.B)</a>
 
 ```
 searchKey: graphqlbackend.BenchmarkIntegrationSearchResults
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -22713,7 +22697,7 @@ func BenchmarkIntegrationSearchResults(b *testing.B)
 
 ```
 searchKey: graphqlbackend.BenchmarkPrometheusFieldName
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -22724,7 +22708,7 @@ func BenchmarkPrometheusFieldName(b *testing.B)
 
 ```
 searchKey: graphqlbackend.BenchmarkSearchResults
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -22735,7 +22719,7 @@ func BenchmarkSearchResults(b *testing.B)
 
 ```
 searchKey: graphqlbackend.CreateFileInfo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22746,7 +22730,7 @@ func CreateFileInfo(path string, isDir bool) fs.FileInfo
 
 ```
 searchKey: graphqlbackend.DetermineStatusForLogs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22759,7 +22743,7 @@ DetermineStatusForLogs determines the final status of a search for logging purpo
 
 ```
 searchKey: graphqlbackend.LogSearchLatency
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22772,7 +22756,7 @@ LogSearchLatency records search durations in the event database. This function m
 
 ```
 searchKey: graphqlbackend.MarshalOrgID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22783,7 +22767,7 @@ func MarshalOrgID(id int32) graphql.ID
 
 ```
 searchKey: graphqlbackend.MarshalOutOfBandMigrationID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22796,7 +22780,7 @@ MarshalOutOfBandMigrationID converts an internal out of band migration id into a
 
 ```
 searchKey: graphqlbackend.MarshalRepositoryID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22807,7 +22791,7 @@ func MarshalRepositoryID(repo api.RepoID) graphql.ID
 
 ```
 searchKey: graphqlbackend.MarshalUserID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22818,7 +22802,7 @@ func MarshalUserID(id int32) graphql.ID
 
 ```
 searchKey: graphqlbackend.NewSchema
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22829,7 +22813,7 @@ func NewSchema(db dbutil.DB, batchChanges BatchChangesResolver, codeIntel CodeIn
 
 ```
 searchKey: graphqlbackend.RunTest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22842,7 +22826,7 @@ RunTest runs a single GraphQL test case.
 
 ```
 searchKey: graphqlbackend.RunTests
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -22868,7 +22852,7 @@ SiteGQLID is the GraphQL ID of the Sourcegraph site. It is a constant across all
 
 ```
 searchKey: graphqlbackend.TestAddExternalService
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22879,7 +22863,7 @@ func TestAddExternalService(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestAddQueryRegexpField
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22890,7 +22874,7 @@ func TestAddQueryRegexpField(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestAffiliatedRepositories
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22901,7 +22885,7 @@ func TestAffiliatedRepositories(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestAlertForDiffCommitSearchLimits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22912,7 +22896,7 @@ func TestAlertForDiffCommitSearchLimits(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestAlertForNoResolvedReposWithNonGlobalSearchContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22923,7 +22907,7 @@ func TestAlertForNoResolvedReposWithNonGlobalSearchContext(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestAlertForOverRepoLimit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22934,7 +22918,7 @@ func TestAlertForOverRepoLimit(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestApplyPatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22945,7 +22929,7 @@ func TestApplyPatch(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestAutoDefinedSearchContexts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22956,7 +22940,7 @@ func TestAutoDefinedSearchContexts(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestBasicLimiter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22967,7 +22951,7 @@ func TestBasicLimiter(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestBasicLimiterEnabled
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22978,7 +22962,7 @@ func TestBasicLimiterEnabled(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestCapFirst
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -22989,7 +22973,7 @@ func TestCapFirst(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestCheckMirrorRepositoryConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23000,7 +22984,7 @@ func TestCheckMirrorRepositoryConnection(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestCheckMirrorRepositoryRemoteURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23011,7 +22995,7 @@ func TestCheckMirrorRepositoryRemoteURL(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestCompareSearchResults
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23022,7 +23006,7 @@ func TestCompareSearchResults(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestCreateSavedSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23033,7 +23017,7 @@ func TestCreateSavedSearch(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestCreateUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23044,7 +23028,7 @@ func TestCreateUser(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestDateTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23055,7 +23039,7 @@ func TestDateTime(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestDeleteExternalService
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23066,7 +23050,7 @@ func TestDeleteExternalService(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestDeleteSavedSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23077,7 +23061,7 @@ func TestDeleteSavedSearch(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestDeleteUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23088,7 +23072,7 @@ func TestDeleteUser(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestDetectSearchType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23099,7 +23083,7 @@ func TestDetectSearchType(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestDiffHunk
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23110,7 +23094,7 @@ func TestDiffHunk(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestDiffHunk2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23121,7 +23105,7 @@ func TestDiffHunk2(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestErrorToAlertStructuralSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23132,7 +23116,7 @@ func TestErrorToAlertStructuralSearch(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestEscapePathForURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23143,7 +23127,7 @@ func TestEscapePathForURL(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestEstimateQueryCost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23154,7 +23138,7 @@ func TestEstimateQueryCost(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestEvaluateAnd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23165,7 +23149,7 @@ func TestEvaluateAnd(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestExactlyOneRepo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23176,7 +23160,7 @@ func TestExactlyOneRepo(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestExternalAccountResolver_AccountData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23187,7 +23171,7 @@ func TestExternalAccountResolver_AccountData(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestExternalServices
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23198,7 +23182,7 @@ func TestExternalServices(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestExternalServices_PageInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23209,7 +23193,7 @@ func TestExternalServices_PageInfo(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestFileDiffHighlighter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23220,7 +23204,7 @@ func TestFileDiffHighlighter(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestGetExactFilePatterns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23231,7 +23215,7 @@ func TestGetExactFilePatterns(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestGetRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23242,7 +23226,7 @@ func TestGetRepos(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestGetReposWrongUnderlyingType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23253,7 +23237,7 @@ func TestGetReposWrongUnderlyingType(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestGitCommitFileNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23264,7 +23248,7 @@ func TestGitCommitFileNames(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestGitCommitResolver
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23275,7 +23259,7 @@ func TestGitCommitResolver(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestGitTree
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23286,7 +23270,7 @@ func TestGitTree(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestGitTreeEntry_Content
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23297,7 +23281,7 @@ func TestGitTreeEntry_Content(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestGitTreeEntry_RawZipArchiveURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23308,7 +23292,7 @@ func TestGitTreeEntry_RawZipArchiveURL(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestIsBinary
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23319,7 +23303,7 @@ func TestIsBinary(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestIsGlobalSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23330,7 +23314,7 @@ func TestIsGlobalSearch(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestLonger
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23341,7 +23325,7 @@ func TestLonger(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23352,7 +23336,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: graphqlbackend.TestMarshalRepositoryCursor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23363,7 +23347,7 @@ func TestMarshalRepositoryCursor(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestMergeSettings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23374,7 +23358,7 @@ func TestMergeSettings(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestMutation_CreateAccessToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23387,7 +23371,7 @@ func TestMutation_CreateAccessToken(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestMutation_DeleteAccessToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23400,7 +23384,7 @@ func TestMutation_DeleteAccessToken(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestNamespace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23411,7 +23395,7 @@ func TestNamespace(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestNamespaceByName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23422,7 +23406,7 @@ func TestNamespaceByName(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestNode_Org
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23433,7 +23417,7 @@ func TestNode_Org(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestNode_User
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23444,7 +23428,7 @@ func TestNode_User(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestObservabilityActiveAlertsAlert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23455,7 +23439,7 @@ func TestObservabilityActiveAlertsAlert(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestOrganization
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23466,7 +23450,7 @@ func TestOrganization(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestOrgs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23477,7 +23461,7 @@ func TestOrgs(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestPreviewRepositoryComparisonResolver
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23488,7 +23472,7 @@ func TestPreviewRepositoryComparisonResolver(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestQuoteSuggestions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23499,7 +23483,7 @@ func TestQuoteSuggestions(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestRatelimitFromConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23510,7 +23494,7 @@ func TestRatelimitFromConfig(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestRepositories
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23521,7 +23505,7 @@ func TestRepositories(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestRepositories_CursorPagination
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23532,7 +23516,7 @@ func TestRepositories_CursorPagination(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestRepository
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23543,7 +23527,7 @@ func TestRepository(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestRepositoryComparison
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23554,7 +23538,7 @@ func TestRepositoryComparison(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestRepositoryHydration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23565,7 +23549,7 @@ func TestRepositoryHydration(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestRepositoryLabel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23576,7 +23560,7 @@ func TestRepositoryLabel(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestRepository_Commit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23587,7 +23571,7 @@ func TestRepository_Commit(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestRepository_DefaultBranch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23598,7 +23582,7 @@ func TestRepository_DefaultBranch(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestResendUserEmailVerification
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23609,7 +23593,7 @@ func TestResendUserEmailVerification(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestResolverTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23620,7 +23604,7 @@ func TestResolverTo(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestRetrievingAndDeduplicatingIndexedRefs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23631,7 +23615,7 @@ func TestRetrievingAndDeduplicatingIndexedRefs(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSavedSearchByIDNonOwner
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23642,7 +23626,7 @@ func TestSavedSearchByIDNonOwner(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSavedSearchByIDOwner
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23653,7 +23637,7 @@ func TestSavedSearchByIDOwner(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSavedSearches
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23664,7 +23648,7 @@ func TestSavedSearches(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23675,7 +23659,7 @@ func TestSearch(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23686,7 +23670,7 @@ func TestSearchContext(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchContexts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23697,7 +23681,7 @@ func TestSearchContexts(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchFilterSuggestions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23708,7 +23692,7 @@ func TestSearchFilterSuggestions(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchPagination_cloning_missing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23721,7 +23705,7 @@ TestSearchPagination_cloning_missing is a joint test for both repoPaginationPlan
 
 ```
 searchKey: graphqlbackend.TestSearchPagination_issue_6287
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23732,7 +23716,7 @@ func TestSearchPagination_issue_6287(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchPagination_repoPaginationPlan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23743,7 +23727,7 @@ func TestSearchPagination_repoPaginationPlan(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchPagination_sliceSearchResults
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23754,7 +23738,7 @@ func TestSearchPagination_sliceSearchResults(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchPagination_unmarshalSearchCursor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23765,7 +23749,7 @@ func TestSearchPagination_unmarshalSearchCursor(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchPatternForSuggestion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23776,7 +23760,7 @@ func TestSearchPatternForSuggestion(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchResolver_DynamicFilters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23787,7 +23771,7 @@ func TestSearchResolver_DynamicFilters(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchResults
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23798,7 +23782,7 @@ func TestSearchResults(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchResultsHydration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23809,7 +23793,7 @@ func TestSearchResultsHydration(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchResultsStatsLanguages
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23820,7 +23804,7 @@ func TestSearchResultsStatsLanguages(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSearchSuggestions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23831,7 +23815,7 @@ func TestSearchSuggestions(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSetExternalServiceRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23842,7 +23826,7 @@ func TestSetExternalServiceRepos(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSetUserEmailVerified
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23853,7 +23837,7 @@ func TestSetUserEmailVerified(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSettingsMutation_EditSettings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23864,7 +23848,7 @@ func TestSettingsMutation_EditSettings(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSettingsMutation_OverwriteSettings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23875,7 +23859,7 @@ func TestSettingsMutation_OverwriteSettings(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestStatusMessages
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23886,7 +23870,7 @@ func TestStatusMessages(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestStripPassword
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23897,7 +23881,7 @@ func TestStripPassword(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSubjects
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23908,7 +23892,7 @@ func TestSubjects(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestSyncExternalService_ContextTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23919,7 +23903,7 @@ func TestSyncExternalService_ContextTimeout(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestUnionMerge
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23930,7 +23914,7 @@ func TestUnionMerge(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestUnmarshalRepositoryCursor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23941,7 +23925,7 @@ func TestUnmarshalRepositoryCursor(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestUpdateExternalService
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23952,7 +23936,7 @@ func TestUpdateExternalService(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestUpdateSavedSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23963,7 +23947,7 @@ func TestUpdateSavedSearch(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestUpdateUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23974,7 +23958,7 @@ func TestUpdateUser(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23985,7 +23969,7 @@ func TestUser(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestUser_UsageStatistics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -23996,7 +23980,7 @@ func TestUser_UsageStatistics(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestUsers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -24007,7 +23991,7 @@ func TestUsers(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestVersionContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -24018,7 +24002,7 @@ func TestVersionContext(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestVirtualFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -24029,7 +24013,7 @@ func TestVirtualFile(t *testing.T)
 
 ```
 searchKey: graphqlbackend.TestZeroElapsedMilliseconds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -24040,7 +24024,7 @@ func TestZeroElapsedMilliseconds(t *testing.T)
 
 ```
 searchKey: graphqlbackend.Test_SearchResultsResolver_ApproximateResultCount
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -24051,7 +24035,7 @@ func Test_SearchResultsResolver_ApproximateResultCount(t *testing.T)
 
 ```
 searchKey: graphqlbackend.Test_determineOutOfDateAlert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -24062,7 +24046,7 @@ func Test_determineOutOfDateAlert(t *testing.T)
 
 ```
 searchKey: graphqlbackend.UnmarshalNamespaceID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24073,7 +24057,7 @@ func UnmarshalNamespaceID(id graphql.ID, userID *int32, orgID *int32) (err error
 
 ```
 searchKey: graphqlbackend.UnmarshalOrgID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24084,7 +24068,7 @@ func UnmarshalOrgID(id graphql.ID) (orgID int32, err error)
 
 ```
 searchKey: graphqlbackend.UnmarshalOutOfBandMigrationID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24097,7 +24081,7 @@ UnmarshalOutOfBandMigrationID converts a GraphQL id into an internal out of band
 
 ```
 searchKey: graphqlbackend.UnmarshalRepositoryID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24108,7 +24092,7 @@ func UnmarshalRepositoryID(id graphql.ID) (repo api.RepoID, err error)
 
 ```
 searchKey: graphqlbackend.UnmarshalUserID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -24119,7 +24103,7 @@ func UnmarshalUserID(id graphql.ID) (userID int32, err error)
 
 ```
 searchKey: graphqlbackend.allEmptyStrings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24130,7 +24114,7 @@ func allEmptyStrings(ss1, ss2 []string) bool
 
 ```
 searchKey: graphqlbackend.allowPrivate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24141,7 +24125,7 @@ func allowPrivate(ctx context.Context, db dbutil.DB, userID int32) (bool, error)
 
 ```
 searchKey: graphqlbackend.applyPatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24152,7 +24136,7 @@ func applyPatch(fileContent string, fileDiff *diff.FileDiff) string
 
 ```
 searchKey: graphqlbackend.assertEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24163,7 +24147,7 @@ func assertEqual(t *testing.T, got, want interface{})
 
 ```
 searchKey: graphqlbackend.assertRepoResolverHydrated
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24185,7 +24169,7 @@ func canUpdateSiteConfiguration() bool
 
 ```
 searchKey: graphqlbackend.capFirst
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24198,7 +24182,7 @@ capFirst capitalizes the first rune in the given string. It can be safely used w
 
 ```
 searchKey: graphqlbackend.checkErrors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24209,7 +24193,7 @@ func checkErrors(t *testing.T, want, got []*errors.QueryError)
 
 ```
 searchKey: graphqlbackend.checkExternalServiceAccess
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24224,7 +24208,7 @@ checkExternalServiceAccess checks whether the current user is allowed to access 
 
 ```
 searchKey: graphqlbackend.clamp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24237,7 +24221,7 @@ clamp clamps x into the range of [min, max].
 
 ```
 searchKey: graphqlbackend.cloneURLToRepoName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24248,7 +24232,7 @@ func cloneURLToRepoName(ctx context.Context, cloneURL string) (string, error)
 
 ```
 searchKey: graphqlbackend.commitResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24259,7 +24243,7 @@ func commitResult(repo, commit string) *result.CommitMatch
 
 ```
 searchKey: graphqlbackend.compareDates
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24270,7 +24254,7 @@ func compareDates(left, right *time.Time) bool
 
 ```
 searchKey: graphqlbackend.compareFileLengths
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24283,7 +24267,7 @@ compareFileLengths sorts file paths such that they appear earlier if they match 
 
 ```
 searchKey: graphqlbackend.compareSearchResults
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24298,7 +24282,7 @@ Commits are sorted by date. Commits are not associated with searchrepos, and wil
 
 ```
 searchKey: graphqlbackend.decodedViewerFinalSettings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24309,7 +24293,7 @@ func decodedViewerFinalSettings(ctx context.Context, db dbutil.DB) (_ *schema.Se
 
 ```
 searchKey: graphqlbackend.defaultSettings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24320,7 +24304,7 @@ func defaultSettings(db dbutil.DB) map[string]interface{}
 
 ```
 searchKey: graphqlbackend.deprecationAlert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24333,7 +24317,7 @@ This should be removed from 3.27
 
 ```
 searchKey: graphqlbackend.detectSearchType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24346,7 +24330,7 @@ detectSearchType returns the search type to perfrom ("regexp", or "literal"). Th
 
 ```
 searchKey: graphqlbackend.diffPathOrNull
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24357,7 +24341,7 @@ func diffPathOrNull(path string) *string
 
 ```
 searchKey: graphqlbackend.diffResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24368,7 +24352,7 @@ func diffResult(repo, commit string) *result.CommitMatch
 
 ```
 searchKey: graphqlbackend.escapePathForURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24381,7 +24365,7 @@ escapePathForURL escapes path (e.g. repository name, revspec) for use in a Sourc
 
 ```
 searchKey: graphqlbackend.evaluatedFlagsToResolvers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24392,7 +24376,7 @@ func evaluatedFlagsToResolvers(input map[string]bool) []*EvaluatedFeatureFlagRes
 
 ```
 searchKey: graphqlbackend.exportPrometheusSearchLatencies
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24405,7 +24389,7 @@ exportPrometheusSearchLatencies exports Prometheus search latency metrics given 
 
 ```
 searchKey: graphqlbackend.extractInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24416,7 +24400,7 @@ func extractInt(i interface{}) (int, error)
 
 ```
 searchKey: graphqlbackend.fileDiffConnectionCompute
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24427,7 +24411,7 @@ func fileDiffConnectionCompute(patch string) func(ctx context.Context, args *Fil
 
 ```
 searchKey: graphqlbackend.fileMatchesToMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24438,7 +24422,7 @@ func fileMatchesToMatches(fms []*result.FileMatch) []result.Match
 
 ```
 searchKey: graphqlbackend.fileResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24449,7 +24433,7 @@ func fileResult(repo string, lineMatches []*result.LineMatch, symbolMatches []*r
 
 ```
 searchKey: graphqlbackend.flagsToResolvers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24460,7 +24444,7 @@ func flagsToResolvers(db dbutil.DB, flags []*featureflag.FeatureFlag) []*Feature
 
 ```
 searchKey: graphqlbackend.formatJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24471,7 +24455,7 @@ func formatJSON(data []byte) ([]byte, error)
 
 ```
 searchKey: graphqlbackend.generateRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24482,7 +24466,7 @@ func generateRepos(count int) ([]*types.Repo, []*types.Repo, []*zoekt.RepoListEn
 
 ```
 searchKey: graphqlbackend.generateZoektMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24493,7 +24477,7 @@ func generateZoektMatches(count int) []zoekt.FileMatch
 
 ```
 searchKey: graphqlbackend.getBoolPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24504,7 +24488,7 @@ func getBoolPtr(b *bool, def bool) bool
 
 ```
 searchKey: graphqlbackend.getDefaultBranchForRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24515,7 +24499,7 @@ func getDefaultBranchForRepo(ctx context.Context, repoName api.RepoName) (string
 
 ```
 searchKey: graphqlbackend.getFragmentDependencies
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24528,7 +24512,7 @@ getFragmentDependencies returns all the fragments this node depend on.
 
 ```
 searchKey: graphqlbackend.getRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24541,7 +24525,7 @@ getRepo attempts to find a repo in the database by URI, returning the ID if it's
 
 ```
 searchKey: graphqlbackend.getRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24554,7 +24538,7 @@ getRepos is a wrapper around p.Get. It returns an error if the promise contains 
 
 ```
 searchKey: graphqlbackend.getUserToInviteToOrganization
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24565,7 +24549,7 @@ func getUserToInviteToOrganization(ctx context.Context, db dbutil.DB, username s
 
 ```
 searchKey: graphqlbackend.gitRefDisplayName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24576,7 +24560,7 @@ func gitRefDisplayName(ref string) string
 
 ```
 searchKey: graphqlbackend.gitRefPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24587,7 +24571,7 @@ func gitRefPrefix(ref string) string
 
 ```
 searchKey: graphqlbackend.gitRefType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24598,7 +24582,7 @@ func gitRefType(ref string) string
 
 ```
 searchKey: graphqlbackend.hydrateBranchCommits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24631,7 +24615,7 @@ func init()
 
 ```
 searchKey: graphqlbackend.invalidateRepoCache
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24644,7 +24628,7 @@ invalidateRepoCache returns whether resolved repos should be invalidated when ev
 
 ```
 searchKey: graphqlbackend.isContextError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24657,7 +24641,7 @@ isContextError returns true if ctx.Err() is not nil or if err is an error caused
 
 ```
 searchKey: graphqlbackend.isMinorUpdateAvailable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24670,7 +24654,7 @@ isMinorUpdateAvailable tells if upgrading from the current version to the specif
 
 ```
 searchKey: graphqlbackend.jsonDeepEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24681,7 +24665,7 @@ func jsonDeepEqual(a, b string) bool
 
 ```
 searchKey: graphqlbackend.limitOrDefault
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24692,7 +24676,7 @@ func limitOrDefault(first *int32) int
 
 ```
 searchKey: graphqlbackend.logHoneyBatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24703,7 +24687,7 @@ func logHoneyBatch(ctx context.Context, status, alertType, requestSource, reques
 
 ```
 searchKey: graphqlbackend.logPrometheusBatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24714,7 +24698,7 @@ func logPrometheusBatch(status, alertType, requestSource, requestName string, el
 
 ```
 searchKey: graphqlbackend.longer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24727,7 +24711,7 @@ longer returns a suggested longer time to wait if the given duration wasn't long
 
 ```
 searchKey: graphqlbackend.makePhabClientForOrigin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24738,7 +24722,7 @@ func makePhabClientForOrigin(ctx context.Context, db dbutil.DB, origin string) (
 
 ```
 searchKey: graphqlbackend.marshalAccessTokenID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24749,7 +24733,7 @@ func marshalAccessTokenID(id int64) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalDefaultSettingsGQLID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24760,7 +24744,7 @@ func marshalDefaultSettingsGQLID(defaultSettingsID string) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalExternalAccountID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24771,7 +24755,7 @@ func marshalExternalAccountID(repo int32) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalExternalServiceID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24782,7 +24766,7 @@ func marshalExternalServiceID(id int64) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalGitCommitID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24793,7 +24777,7 @@ func marshalGitCommitID(repo graphql.ID, commitID GitObjectID) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalGitRefID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24804,7 +24788,7 @@ func marshalGitRefID(repo graphql.ID, rev string) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalOrgInvitationID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24815,7 +24799,7 @@ func marshalOrgInvitationID(id int64) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalOverrideID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24826,7 +24810,7 @@ func marshalOverrideID(spec overrideSpec) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalRepositoryCursor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24839,7 +24823,7 @@ marshalRepositoryCursor marshals a repository pagination cursor.
 
 ```
 searchKey: graphqlbackend.marshalSavedSearchID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24850,7 +24834,7 @@ func marshalSavedSearchID(savedSearchID int32) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalSearchContextCursor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24861,7 +24845,7 @@ func marshalSearchContextCursor(cursor int32) string
 
 ```
 searchKey: graphqlbackend.marshalSearchContextID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24872,7 +24856,7 @@ func marshalSearchContextID(searchContextSpec string) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalSearchCursor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24885,7 +24869,7 @@ marshalSearchCursor marshals a search pagination cursor.
 
 ```
 searchKey: graphqlbackend.marshalSiteGQLID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24896,7 +24880,7 @@ func marshalSiteGQLID(siteID string) graphql.ID
 
 ```
 searchKey: graphqlbackend.marshalSurveyResponseID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24907,7 +24891,7 @@ func marshalSurveyResponseID(id int32) graphql.ID
 
 ```
 searchKey: graphqlbackend.matchesToResolvers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24918,7 +24902,7 @@ func matchesToResolvers(db dbutil.DB, matches []result.Match) []SearchResultReso
 
 ```
 searchKey: graphqlbackend.mergeSettings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24931,7 +24915,7 @@ mergeSettings merges the specified JSON settings documents together to produce a
 
 ```
 searchKey: graphqlbackend.mergeSettingsValues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24942,7 +24926,7 @@ func mergeSettingsValues(dst map[string]interface{}, field string, value interfa
 
 ```
 searchKey: graphqlbackend.mkFileMatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24953,7 +24937,7 @@ func mkFileMatch(repo types.RepoName, path string, lineNumbers ...int32) *result
 
 ```
 searchKey: graphqlbackend.mockBackendCommits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24964,7 +24948,7 @@ func mockBackendCommits(t *testing.T, revs ...api.CommitID)
 
 ```
 searchKey: graphqlbackend.mustParseGraphQLSchema
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24975,7 +24959,7 @@ func mustParseGraphQLSchema(t *testing.T) *graphql.Schema
 
 ```
 searchKey: graphqlbackend.needsRepositoryConfiguration
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24986,7 +24970,7 @@ func needsRepositoryConfiguration(ctx context.Context, db dbutil.DB) (bool, erro
 
 ```
 searchKey: graphqlbackend.newHoneyEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24997,7 +24981,7 @@ func newHoneyEvent(ctx context.Context, status, alertType, requestSource, reques
 
 ```
 searchKey: graphqlbackend.observabilityActiveAlertsAlert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25010,7 +24994,7 @@ observabilityActiveAlertsAlert directs admins to check Grafana if critical alert
 
 ```
 searchKey: graphqlbackend.orgInvitationURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25021,7 +25005,7 @@ func orgInvitationURL(org *types.Org) *url.URL
 
 ```
 searchKey: graphqlbackend.outOfDateAlert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25032,7 +25016,7 @@ func outOfDateAlert(args AlertFuncArgs) []*Alert
 
 ```
 searchKey: graphqlbackend.overrideSearchType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25043,7 +25027,7 @@ func overrideSearchType(input string, searchType query.SearchType) query.SearchT
 
 ```
 searchKey: graphqlbackend.overridesToResolvers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25054,7 +25038,7 @@ func overridesToResolvers(db dbutil.DB, input []*featureflag.Override) []*Featur
 
 ```
 searchKey: graphqlbackend.paginatedSearchFilesInRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25091,7 +25075,7 @@ top of the penalty we incur from the larger `count:` mentioned in point
 
 ```
 searchKey: graphqlbackend.pathParentsByFrequency
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25104,7 +25088,7 @@ pathParentsByFrequency returns the most common path parents of the given paths. 
 
 ```
 searchKey: graphqlbackend.pluralize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25115,7 +25099,7 @@ func pluralize(v int, singular, plural string) string
 
 ```
 searchKey: graphqlbackend.processPaginationRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25126,7 +25110,7 @@ func processPaginationRequest(args *SearchArgs, q query.Q) (*run.SearchPaginatio
 
 ```
 searchKey: graphqlbackend.prometheusFieldName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25141,7 +25125,7 @@ See [https://github.com/sourcegraph/sourcegraph/issues/9895](https://github.com/
 
 ```
 searchKey: graphqlbackend.prometheusGraphQLRequestName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25154,7 +25138,7 @@ prometheusGraphQLRequestName is a allowlist of GraphQL request names (e.g. /.api
 
 ```
 searchKey: graphqlbackend.prometheusTypeName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25171,7 +25155,7 @@ sum by (type)(src_graphql_field_seconds_count)
 
 ```
 searchKey: graphqlbackend.queryHasPatternType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25182,7 +25166,7 @@ func queryHasPatternType(query string) bool
 
 ```
 searchKey: graphqlbackend.repoIsLess
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25195,7 +25179,7 @@ repoIsLess sorts repositories first by name then by ID, suitable for use with so
 
 ```
 searchKey: graphqlbackend.repoNamesToStrings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25206,7 +25190,7 @@ func repoNamesToStrings(repoNames []api.RepoName) []string
 
 ```
 searchKey: graphqlbackend.repoOfMatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25219,7 +25203,7 @@ repoOfMatch is a helper function to resolve the repo associated with a result ty
 
 ```
 searchKey: graphqlbackend.repoResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25230,7 +25214,7 @@ func repoResult(name string) *result.RepoMatch
 
 ```
 searchKey: graphqlbackend.repoRev
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25241,7 +25225,7 @@ func repoRev(revSpec string) *search.RepositoryRevisions
 
 ```
 searchKey: graphqlbackend.reposMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25263,7 +25247,7 @@ func resetMocks()
 
 ```
 searchKey: graphqlbackend.resolveVersionContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25274,7 +25258,7 @@ func resolveVersionContext(versionContext string) (*schema.VersionContext, error
 
 ```
 searchKey: graphqlbackend.richHTML
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25285,7 +25269,7 @@ func richHTML(content, ext string) (string, error)
 
 ```
 searchKey: graphqlbackend.searchContextsToResolvers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25296,7 +25280,7 @@ func searchContextsToResolvers(searchContexts []*types.SearchContext, db dbutil.
 
 ```
 searchKey: graphqlbackend.searchResultResolversToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25307,7 +25291,7 @@ func searchResultResolversToString(matches []result.Match) string
 
 ```
 searchKey: graphqlbackend.searchResultsStatsLanguages
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25318,7 +25302,7 @@ func searchResultsStatsLanguages(ctx context.Context, matches []result.Match) ([
 
 ```
 searchKey: graphqlbackend.searchResultsToRepoNodes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25331,7 +25315,7 @@ searchResultsToRepoNodes converts a set of search results into repository nodes 
 
 ```
 searchKey: graphqlbackend.selectResults
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25342,7 +25326,7 @@ func selectResults(results []result.Match, q query.Basic) []result.Match
 
 ```
 searchKey: graphqlbackend.sendOrgInvitationNotification
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25355,7 +25339,7 @@ sendOrgInvitationNotification sends an email to the recipient of an org invitati
 
 ```
 searchKey: graphqlbackend.settingsCreateIfUpToDate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25368,7 +25352,7 @@ like database.Settings.CreateIfUpToDate, except it handles notifying the query-r
 
 ```
 searchKey: graphqlbackend.shouldCheckParam
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25379,7 +25363,7 @@ func shouldCheckParam(p visitor.VisitFuncParams) bool
 
 ```
 searchKey: graphqlbackend.sliceSearchResultsCommon
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25390,7 +25374,7 @@ func sliceSearchResultsCommon(common *streaming.Stats, firstResultRepo, lastResu
 
 ```
 searchKey: graphqlbackend.sortErrors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25401,7 +25385,7 @@ func sortErrors(errors []*errors.QueryError)
 
 ```
 searchKey: graphqlbackend.sortSearchSuggestions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25412,7 +25396,7 @@ func sortSearchSuggestions(s []SearchSuggestionResolver)
 
 ```
 searchKey: graphqlbackend.stripPassword
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25425,7 +25409,7 @@ stripPassword strips the password from u if it can be parsed as a URL. If not, i
 
 ```
 searchKey: graphqlbackend.strptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25436,7 +25420,7 @@ func strptr(s string) *string
 
 ```
 searchKey: graphqlbackend.substitutePredicates
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25449,7 +25433,7 @@ substitutePredicates replaces all the predicates in a query with their expanded 
 
 ```
 searchKey: graphqlbackend.symbolResultsToResolvers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25460,7 +25444,7 @@ func symbolResultsToResolvers(db dbutil.DB, commit *GitCommitResolver, symbols [
 
 ```
 searchKey: graphqlbackend.syncExternalService
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25473,7 +25457,7 @@ syncExternalService will eagerly trigger a repo-updater sync. It accepts a timeo
 
 ```
 searchKey: graphqlbackend.testStringResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25484,7 +25468,7 @@ func testStringResult(result SearchSuggestionResolver) string
 
 ```
 searchKey: graphqlbackend.toDBRepoListColumn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25495,7 +25479,7 @@ func toDBRepoListColumn(ob string) database.RepoListColumn
 
 ```
 searchKey: graphqlbackend.toJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25506,7 +25490,7 @@ func toJSON(node query.Node) interface{}
 
 ```
 searchKey: graphqlbackend.toKeyPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25517,7 +25501,7 @@ func toKeyPath(gqlKeyPath []*keyPathSegment) (jsonx.Path, error)
 
 ```
 searchKey: graphqlbackend.unmarshalAccessTokenID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25528,7 +25512,7 @@ func unmarshalAccessTokenID(id graphql.ID) (accessTokenID int64, err error)
 
 ```
 searchKey: graphqlbackend.unmarshalExternalAccountID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25539,7 +25523,7 @@ func unmarshalExternalAccountID(id graphql.ID) (externalAccountID int32, err err
 
 ```
 searchKey: graphqlbackend.unmarshalExternalServiceID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25550,7 +25534,7 @@ func unmarshalExternalServiceID(id graphql.ID) (externalServiceID int64, err err
 
 ```
 searchKey: graphqlbackend.unmarshalGitRefID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25561,7 +25545,7 @@ func unmarshalGitRefID(id graphql.ID) (repoID graphql.ID, rev string, err error)
 
 ```
 searchKey: graphqlbackend.unmarshalOrgInvitationID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25572,7 +25556,7 @@ func unmarshalOrgInvitationID(id graphql.ID) (orgInvitationID int64, err error)
 
 ```
 searchKey: graphqlbackend.unmarshalSavedSearchID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25583,7 +25567,7 @@ func unmarshalSavedSearchID(id graphql.ID) (savedSearchID int32, err error)
 
 ```
 searchKey: graphqlbackend.unmarshalSearchContextCursor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25594,7 +25578,7 @@ func unmarshalSearchContextCursor(cursor *string) (int32, error)
 
 ```
 searchKey: graphqlbackend.unmarshalSearchContextID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25605,7 +25589,7 @@ func unmarshalSearchContextID(id graphql.ID) (spec string, err error)
 
 ```
 searchKey: graphqlbackend.unmarshalSearchCursor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25618,7 +25602,7 @@ unmarshalSearchCursor unmarshals a search pagination cursor.
 
 ```
 searchKey: graphqlbackend.unmarshalSiteGQLID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25629,7 +25613,7 @@ func unmarshalSiteGQLID(id graphql.ID) (siteID string, err error)
 
 ```
 searchKey: graphqlbackend.updateAvailableAlert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25640,7 +25624,7 @@ func updateAvailableAlert(args AlertFuncArgs) []*Alert
 
 ```
 searchKey: graphqlbackend.viewerCanChangeUsername
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25651,7 +25635,7 @@ func viewerCanChangeUsername(ctx context.Context, db dbutil.DB, userID int32) bo
 
 ```
 searchKey: graphqlbackend.viewerIsChangingUsername
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25668,7 +25652,7 @@ If that subject's username is different from the proposed one, then a change is 
 
 ```
 searchKey: graphqlbackend.zoektRPC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

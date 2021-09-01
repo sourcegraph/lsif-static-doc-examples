@@ -22,7 +22,7 @@ Package redispool exports pools to specific redis instances.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Cache" href="#Cache">var Cache</a>
@@ -106,14 +106,14 @@ var timeout, _ = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestSchemeMatcher" href="#TestSchemeMatcher">func TestSchemeMatcher(t *testing.T)</a>
 
 ```
 searchKey: redispool.TestSchemeMatcher
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -124,7 +124,7 @@ func TestSchemeMatcher(t *testing.T)
 
 ```
 searchKey: redispool.dialRedis
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -165,7 +165,7 @@ func init()
 
 ```
 searchKey: redispool.redisCheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

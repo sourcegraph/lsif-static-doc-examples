@@ -19,7 +19,7 @@ Package middleware contains HTTP middlewares.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="goImportMetaTagTemplate" href="#goImportMetaTagTemplate">var goImportMetaTagTemplate</a>
@@ -49,7 +49,7 @@ var httpTrace, _ = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="goImportMetaTag" href="#goImportMetaTag">type goImportMetaTag struct</a>
@@ -81,14 +81,14 @@ goImportMetaTag represents a go-import meta tag.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BlackHole" href="#BlackHole">func BlackHole(next http.Handler) http.Handler</a>
 
 ```
 searchKey: middleware.BlackHole
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -103,7 +103,7 @@ BlackHole is a middleware which returns StatusGone on removed URLs that external
 
 ```
 searchKey: middleware.SourcegraphComGoGetHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -128,7 +128,7 @@ import path pointing to github.com/sourcegraph/<repo> as the clone URL.
 
 ```
 searchKey: middleware.Trace
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -141,7 +141,7 @@ Trace is an HTTP middleware that dumps the HTTP request body (to stderr) if the 
 
 ```
 searchKey: middleware.isBlackhole
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

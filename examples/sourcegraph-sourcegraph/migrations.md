@@ -15,10 +15,6 @@ package migrations contains embedded migrate sources for our DB migrations.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CodeInsights" href="#CodeInsights">var CodeInsights</a>
 
 ```
@@ -65,15 +61,11 @@ var content embed.FS
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="mustSub" href="#mustSub">func mustSub(dir string) fs.FS</a>
 
 ```
 searchKey: migrations.mustSub
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -22,7 +22,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="concurrency" href="#concurrency">var concurrency</a>
@@ -94,14 +94,14 @@ var testHiddenStar embed.FS
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestDir" href="#TestDir">func TestDir(t *testing.T)</a>
 
 ```
 searchKey: embedtest.TestDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -112,7 +112,7 @@ func TestDir(t *testing.T)
 
 ```
 searchKey: embedtest.TestGlobal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -123,7 +123,7 @@ func TestGlobal(t *testing.T)
 
 ```
 searchKey: embedtest.TestHidden
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -134,7 +134,7 @@ func TestHidden(t *testing.T)
 
 ```
 searchKey: embedtest.TestUninitialized
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -145,7 +145,7 @@ func TestUninitialized(t *testing.T)
 
 ```
 searchKey: embedtest.testDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -156,7 +156,7 @@ func testDir(t *testing.T, f embed.FS, name string, expect ...string)
 
 ```
 searchKey: embedtest.testFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -167,7 +167,7 @@ func testFiles(t *testing.T, f embed.FS, name, data string)
 
 ```
 searchKey: embedtest.testString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

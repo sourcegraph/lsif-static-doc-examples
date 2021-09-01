@@ -47,7 +47,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="file1C" href="#file1C">var file1C</a>
@@ -132,7 +132,7 @@ var unsupportedTypeTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="joinTest" href="#joinTest">type joinTest struct</a>
@@ -168,14 +168,14 @@ wantRange maps from a PC to the ranges of the compilation unit containing that P
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Test64Bit" href="#Test64Bit">func Test64Bit(t *testing.T)</a>
 
 ```
 searchKey: dwarf_test.Test64Bit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -186,7 +186,7 @@ func Test64Bit(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestLineELFClang
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -197,7 +197,7 @@ func TestLineELFClang(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestLineELFGCC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -208,7 +208,7 @@ func TestLineELFGCC(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestLineGCCWindows
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -219,7 +219,7 @@ func TestLineGCCWindows(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestLineRnglists
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -230,7 +230,7 @@ func TestLineRnglists(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestLineSeek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -241,7 +241,7 @@ func TestLineSeek(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestPathJoin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -252,7 +252,7 @@ func TestPathJoin(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestRangesRnglistx
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -263,7 +263,7 @@ func TestRangesRnglistx(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestRangesSection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -274,7 +274,7 @@ func TestRangesSection(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestReaderRanges
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -285,7 +285,7 @@ func TestReaderRanges(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestReaderSeek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -296,7 +296,7 @@ func TestReaderSeek(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestSplit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -307,7 +307,7 @@ func TestSplit(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestTypedefCycle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -318,7 +318,7 @@ func TestTypedefCycle(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestTypedefsELF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -329,7 +329,7 @@ func TestTypedefsELF(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestTypedefsELFDwarf4
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -340,7 +340,7 @@ func TestTypedefsELFDwarf4(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestTypedefsMachO
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -351,7 +351,7 @@ func TestTypedefsMachO(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestUnitIteration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -362,7 +362,7 @@ func TestUnitIteration(t *testing.T)
 
 ```
 searchKey: dwarf_test.TestUnsupportedTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -373,7 +373,7 @@ func TestUnsupportedTypes(t *testing.T)
 
 ```
 searchKey: dwarf_test.compareFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -384,7 +384,7 @@ func compareFiles(a, b []*LineFile) bool
 
 ```
 searchKey: dwarf_test.compareLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -395,7 +395,7 @@ func compareLines(a, b []LineEntry) bool
 
 ```
 searchKey: dwarf_test.dumpFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -406,7 +406,7 @@ func dumpFiles(t *testing.T, files []*LineFile)
 
 ```
 searchKey: dwarf_test.dumpLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -417,7 +417,7 @@ func dumpLines(t *testing.T, lines []LineEntry)
 
 ```
 searchKey: dwarf_test.elfData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -428,7 +428,7 @@ func elfData(t *testing.T, name string) *Data
 
 ```
 searchKey: dwarf_test.machoData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -439,7 +439,7 @@ func machoData(t *testing.T, name string) *Data
 
 ```
 searchKey: dwarf_test.peData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -450,7 +450,7 @@ func peData(t *testing.T, name string) *Data
 
 ```
 searchKey: dwarf_test.testLineTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -461,7 +461,7 @@ func testLineTable(t *testing.T, want []LineEntry, files [][]*LineFile, d *Data)
 
 ```
 searchKey: dwarf_test.testRanges
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -472,7 +472,7 @@ func testRanges(t *testing.T, name string, want []wantRange)
 
 ```
 searchKey: dwarf_test.testTypedefs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

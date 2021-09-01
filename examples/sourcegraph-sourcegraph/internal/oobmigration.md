@@ -177,7 +177,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MaxMigrationErrors" href="#MaxMigrationErrors">const MaxMigrationErrors</a>
@@ -306,7 +306,7 @@ const updateProgressQuery = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrMigratorConflict" href="#ErrMigratorConflict">var ErrMigratorConflict</a>
@@ -371,7 +371,7 @@ var testTime = time.Unix(1613414740, 0)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Migration" href="#Migration">type Migration struct</a>
@@ -404,7 +404,7 @@ Migration stores metadata and tracks progress of an out-of-band migration routin
 
 ```
 searchKey: oobmigration.Migration.Complete
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -481,7 +481,7 @@ MigratorDownFunc describes the behavior when the Down method of the parent MockM
 
 ```
 searchKey: oobmigration.MigratorDownFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -557,7 +557,7 @@ func (f *MigratorDownFunc) appendCall(r0 MigratorDownFuncCall)
 
 ```
 searchKey: oobmigration.MigratorDownFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -588,7 +588,7 @@ MigratorDownFuncCall is an object that describes an invocation of method Down on
 
 ```
 searchKey: oobmigration.MigratorDownFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -601,7 +601,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: oobmigration.MigratorDownFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -651,7 +651,7 @@ MigratorProgressFunc describes the behavior when the Progress method of the pare
 
 ```
 searchKey: oobmigration.MigratorProgressFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -727,7 +727,7 @@ func (f *MigratorProgressFunc) appendCall(r0 MigratorProgressFuncCall)
 
 ```
 searchKey: oobmigration.MigratorProgressFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -761,7 +761,7 @@ MigratorProgressFuncCall is an object that describes an invocation of method Pro
 
 ```
 searchKey: oobmigration.MigratorProgressFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -774,7 +774,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: oobmigration.MigratorProgressFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -805,7 +805,7 @@ MigratorUpFunc describes the behavior when the Up method of the parent MockMigra
 
 ```
 searchKey: oobmigration.MigratorUpFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -881,7 +881,7 @@ func (f *MigratorUpFunc) appendCall(r0 MigratorUpFuncCall)
 
 ```
 searchKey: oobmigration.MigratorUpFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -912,7 +912,7 @@ MigratorUpFuncCall is an object that describes an invocation of method Up on an 
 
 ```
 searchKey: oobmigration.MigratorUpFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -925,7 +925,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: oobmigration.MigratorUpFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -974,7 +974,7 @@ NewMockMigrator creates a new mock of the Migrator interface. All methods return
 
 ```
 searchKey: oobmigration.NewMockMigratorFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1062,7 +1062,7 @@ NewMockStoreIface creates a new mock of the storeIface interface. All methods re
 
 ```
 searchKey: oobmigration.NewMockStoreIfaceFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1135,7 +1135,7 @@ Runner correlates out-of-band migration records in the database with a migrator 
 
 ```
 searchKey: oobmigration.NewRunnerWithDB
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1146,7 +1146,7 @@ func NewRunnerWithDB(db dbutil.DB, refreshInterval time.Duration, observationCon
 
 ```
 searchKey: oobmigration.newRunner
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1170,7 +1170,7 @@ Register correlates the given migrator with the given migration identifier. An e
 
 ```
 searchKey: oobmigration.Runner.Start
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1183,7 +1183,7 @@ Start runs registered migrators on a loop until they complete. This method will 
 
 ```
 searchKey: oobmigration.Runner.Stop
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1256,7 +1256,7 @@ Store is the interface over the out-of-band migrations tables.
 
 ```
 searchKey: oobmigration.NewStoreWithDB
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1269,7 +1269,7 @@ NewStoreWithDB creates a new Store with the given database connection.
 
 ```
 searchKey: oobmigration.testStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1415,7 +1415,7 @@ StoreIfaceAddErrorFunc describes the behavior when the AddError method of the pa
 
 ```
 searchKey: oobmigration.StoreIfaceAddErrorFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1491,7 +1491,7 @@ func (f *StoreIfaceAddErrorFunc) appendCall(r0 StoreIfaceAddErrorFuncCall)
 
 ```
 searchKey: oobmigration.StoreIfaceAddErrorFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1528,7 +1528,7 @@ StoreIfaceAddErrorFuncCall is an object that describes an invocation of method A
 
 ```
 searchKey: oobmigration.StoreIfaceAddErrorFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1541,7 +1541,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: oobmigration.StoreIfaceAddErrorFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1572,7 +1572,7 @@ StoreIfaceListFunc describes the behavior when the List method of the parent Moc
 
 ```
 searchKey: oobmigration.StoreIfaceListFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1648,7 +1648,7 @@ func (f *StoreIfaceListFunc) appendCall(r0 StoreIfaceListFuncCall)
 
 ```
 searchKey: oobmigration.StoreIfaceListFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1682,7 +1682,7 @@ StoreIfaceListFuncCall is an object that describes an invocation of method List 
 
 ```
 searchKey: oobmigration.StoreIfaceListFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1695,7 +1695,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: oobmigration.StoreIfaceListFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1726,7 +1726,7 @@ StoreIfaceUpdateProgressFunc describes the behavior when the UpdateProgress meth
 
 ```
 searchKey: oobmigration.StoreIfaceUpdateProgressFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1802,7 +1802,7 @@ func (f *StoreIfaceUpdateProgressFunc) appendCall(r0 StoreIfaceUpdateProgressFun
 
 ```
 searchKey: oobmigration.StoreIfaceUpdateProgressFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1839,7 +1839,7 @@ StoreIfaceUpdateProgressFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: oobmigration.StoreIfaceUpdateProgressFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1852,7 +1852,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: oobmigration.StoreIfaceUpdateProgressFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1879,7 +1879,7 @@ type Version struct {
 
 ```
 searchKey: oobmigration.NewVersion
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1890,7 +1890,7 @@ func NewVersion(major, minor int) Version
 
 ```
 searchKey: oobmigration.newVersionPtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1901,7 +1901,7 @@ func newVersionPtr(major, minor int) *Version
 
 ```
 searchKey: oobmigration.Version.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1923,7 +1923,7 @@ type VersionOrder int
 
 ```
 searchKey: oobmigration.compareVersions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1951,7 +1951,7 @@ type migrationStatusError struct {
 
 ```
 searchKey: oobmigration.migrationStatusError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2003,7 +2003,7 @@ type operations struct {
 
 ```
 searchKey: oobmigration.newOperations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2047,14 +2047,14 @@ surrogateMockStoreIface is a copy of the storeIface interface (from the package 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestAddError" href="#TestAddError">func TestAddError(t *testing.T)</a>
 
 ```
 searchKey: oobmigration.TestAddError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2065,7 +2065,7 @@ func TestAddError(t *testing.T)
 
 ```
 searchKey: oobmigration.TestAddErrorBounded
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2076,7 +2076,7 @@ func TestAddErrorBounded(t *testing.T)
 
 ```
 searchKey: oobmigration.TestCompareVersions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2087,7 +2087,7 @@ func TestCompareVersions(t *testing.T)
 
 ```
 searchKey: oobmigration.TestList
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2098,7 +2098,7 @@ func TestList(t *testing.T)
 
 ```
 searchKey: oobmigration.TestListEnterprise
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2109,7 +2109,7 @@ func TestListEnterprise(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunMigrator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2120,7 +2120,7 @@ func TestRunMigrator(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunMigratorMigrationChangesDirection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2131,7 +2131,7 @@ func TestRunMigratorMigrationChangesDirection(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunMigratorMigrationDesyncedFromData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2142,7 +2142,7 @@ func TestRunMigratorMigrationDesyncedFromData(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunMigratorMigrationErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2153,7 +2153,7 @@ func TestRunMigratorMigrationErrors(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunMigratorMigrationFinishesDown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2164,7 +2164,7 @@ func TestRunMigratorMigrationFinishesDown(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunMigratorMigrationFinishesUp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2175,7 +2175,7 @@ func TestRunMigratorMigrationFinishesUp(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunner
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2186,7 +2186,7 @@ func TestRunner(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunnerError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2197,7 +2197,7 @@ func TestRunnerError(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunnerRemovesCompleted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2208,7 +2208,7 @@ func TestRunnerRemovesCompleted(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunnerValidate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2219,7 +2219,7 @@ func TestRunnerValidate(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunnerValidateUnfinishedDown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2230,7 +2230,7 @@ func TestRunnerValidateUnfinishedDown(t *testing.T)
 
 ```
 searchKey: oobmigration.TestRunnerValidateUnfinishedUp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2241,7 +2241,7 @@ func TestRunnerValidateUnfinishedUp(t *testing.T)
 
 ```
 searchKey: oobmigration.TestUpdateDirection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2252,7 +2252,7 @@ func TestUpdateDirection(t *testing.T)
 
 ```
 searchKey: oobmigration.TestUpdateProgress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2274,7 +2274,7 @@ func init()
 
 ```
 searchKey: oobmigration.insertMigration
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2285,7 +2285,7 @@ func insertMigration(store *Store, migration Migration, enterpriseOnly bool) err
 
 ```
 searchKey: oobmigration.newMigrationStatusError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2296,7 +2296,7 @@ func newMigrationStatusError(id int, expectedProgress, actualProgress float64) e
 
 ```
 searchKey: oobmigration.runMigrationDown
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2307,7 +2307,7 @@ func runMigrationDown(ctx context.Context, migration *Migration, migrator Migrat
 
 ```
 searchKey: oobmigration.runMigrationFunction
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2320,7 +2320,7 @@ runMigrationFunction invokes the Up or Down method on the given migrator dependi
 
 ```
 searchKey: oobmigration.runMigrationUp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2331,7 +2331,7 @@ func runMigrationUp(ctx context.Context, migration *Migration, migrator Migrator
 
 ```
 searchKey: oobmigration.runMigrator
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2344,7 +2344,7 @@ runMigrator runs the given migrator function periodically (on each read from tic
 
 ```
 searchKey: oobmigration.runMigratorWrapped
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2359,7 +2359,7 @@ This method blocks until both functions return. The return of the interact funct
 
 ```
 searchKey: oobmigration.scanMigrations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2372,7 +2372,7 @@ scanMigrations scans a slice of migrations from the return value of `*Store.quer
 
 ```
 searchKey: oobmigration.tickN
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2385,7 +2385,7 @@ tickN advances the given ticker by one second n times with a guaranteed reader.
 
 ```
 searchKey: oobmigration.timePtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2396,7 +2396,7 @@ func timePtr(t time.Time) *time.Time
 
 ```
 searchKey: oobmigration.updateProgress
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2409,7 +2409,7 @@ updateProgress invokes the Progress method on the given migrator, updates the Pr
 
 ```
 searchKey: oobmigration.wrapMigrationErrors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

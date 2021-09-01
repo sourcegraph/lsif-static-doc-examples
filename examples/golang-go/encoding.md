@@ -34,10 +34,6 @@ Package encoding defines interfaces shared by other packages that convert data t
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BinaryMarshaler" href="#BinaryMarshaler">type BinaryMarshaler interface</a>
 
 ```

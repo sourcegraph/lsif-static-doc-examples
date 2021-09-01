@@ -154,7 +154,7 @@ However, developers who do need to interact with low-level edwards25519 operatio
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="B" href="#B">var B</a>
@@ -367,7 +367,7 @@ var testAllocationsSink byte
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Point" href="#Point">type Point struct</a>
@@ -438,7 +438,7 @@ Add sets v = p + q, and returns v.
 
 ```
 searchKey: edwards25519.Point.Bytes
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -649,7 +649,7 @@ Add sets s = x + y mod l, and returns s.
 
 ```
 searchKey: edwards25519.Scalar.Bytes
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -809,7 +809,7 @@ w must be between 2 and 8, or nonAdjacentForm will panic.
 
 ```
 searchKey: edwards25519.Scalar.signedRadix16
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -870,7 +870,7 @@ Select sets v to a if cond == 1 and to b if cond == 0.
 
 ```
 searchKey: edwards25519.affineCached.Zero
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1100,7 +1100,7 @@ Select sets v to a if cond == 1 and to b if cond == 0.
 
 ```
 searchKey: edwards25519.projCached.Zero
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1255,7 +1255,7 @@ func (v *projP2) FromP3(p *Point) *projP2
 
 ```
 searchKey: edwards25519.projP2.Zero
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1265,14 +1265,14 @@ func (v *projP2) Zero() *projP2
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkScalarBaseMult" href="#BenchmarkScalarBaseMult">func BenchmarkScalarBaseMult(t *testing.B)</a>
 
 ```
 searchKey: edwards25519.BenchmarkScalarBaseMult
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1283,7 +1283,7 @@ func BenchmarkScalarBaseMult(t *testing.B)
 
 ```
 searchKey: edwards25519.BenchmarkScalarMult
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1294,7 +1294,7 @@ func BenchmarkScalarMult(t *testing.B)
 
 ```
 searchKey: edwards25519.BenchmarkVarTimeDoubleScalarBaseMult
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1305,7 +1305,7 @@ func BenchmarkVarTimeDoubleScalarBaseMult(t *testing.B)
 
 ```
 searchKey: edwards25519.TestAddSubNegOnBasePoint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1316,7 +1316,7 @@ func TestAddSubNegOnBasePoint(t *testing.T)
 
 ```
 searchKey: edwards25519.TestAffineLookupTable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1327,7 +1327,7 @@ func TestAffineLookupTable(t *testing.T)
 
 ```
 searchKey: edwards25519.TestAllocations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1338,7 +1338,7 @@ func TestAllocations(t *testing.T)
 
 ```
 searchKey: edwards25519.TestBaseMultVsDalek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1349,7 +1349,7 @@ func TestBaseMultVsDalek(t *testing.T)
 
 ```
 searchKey: edwards25519.TestBasepointNafTableGeneration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1360,7 +1360,7 @@ func TestBasepointNafTableGeneration(t *testing.T)
 
 ```
 searchKey: edwards25519.TestBasepointTableGeneration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1371,7 +1371,7 @@ func TestBasepointTableGeneration(t *testing.T)
 
 ```
 searchKey: edwards25519.TestComparable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1382,7 +1382,7 @@ func TestComparable(t *testing.T)
 
 ```
 searchKey: edwards25519.TestGenerator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1393,7 +1393,7 @@ func TestGenerator(t *testing.T)
 
 ```
 searchKey: edwards25519.TestInvalidEncodings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1404,7 +1404,7 @@ func TestInvalidEncodings(t *testing.T)
 
 ```
 searchKey: edwards25519.TestNafLookupTable5
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1415,7 +1415,7 @@ func TestNafLookupTable5(t *testing.T)
 
 ```
 searchKey: edwards25519.TestNafLookupTable8
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1426,7 +1426,7 @@ func TestNafLookupTable8(t *testing.T)
 
 ```
 searchKey: edwards25519.TestNonCanonicalPoints
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1437,7 +1437,7 @@ func TestNonCanonicalPoints(t *testing.T)
 
 ```
 searchKey: edwards25519.TestProjLookupTable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1448,7 +1448,7 @@ func TestProjLookupTable(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarAddLikeSubNeg
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1459,7 +1459,7 @@ func TestScalarAddLikeSubNeg(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarAliasing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1470,7 +1470,7 @@ func TestScalarAliasing(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarEqual
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1481,7 +1481,7 @@ func TestScalarEqual(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarGenerate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1492,7 +1492,7 @@ func TestScalarGenerate(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultDistributesOverAdd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1503,7 +1503,7 @@ func TestScalarMultDistributesOverAdd(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultMatchesBaseMult
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1514,7 +1514,7 @@ func TestScalarMultMatchesBaseMult(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultNonIdentityPoint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1525,7 +1525,7 @@ func TestScalarMultNonIdentityPoint(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultSmallScalars
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1536,7 +1536,7 @@ func TestScalarMultSmallScalars(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultVsDalek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1547,7 +1547,7 @@ func TestScalarMultVsDalek(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarMultiplyDistributesOverAdd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1558,7 +1558,7 @@ func TestScalarMultiplyDistributesOverAdd(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarNonAdjacentForm
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1569,7 +1569,7 @@ func TestScalarNonAdjacentForm(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarSetBytesWithClamping
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1580,7 +1580,7 @@ func TestScalarSetBytesWithClamping(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarSetCanonicalBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1591,7 +1591,7 @@ func TestScalarSetCanonicalBytes(t *testing.T)
 
 ```
 searchKey: edwards25519.TestScalarSetUniformBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1602,7 +1602,7 @@ func TestScalarSetUniformBytes(t *testing.T)
 
 ```
 searchKey: edwards25519.TestVarTimeDoubleBaseMultMatchesBaseMult
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1613,7 +1613,7 @@ func TestVarTimeDoubleBaseMultMatchesBaseMult(t *testing.T)
 
 ```
 searchKey: edwards25519.TestVarTimeDoubleBaseMultVsDalek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1637,7 +1637,7 @@ basepointTable is a set of 32 affineLookupTables, where table i is generated fro
 
 ```
 searchKey: edwards25519.bigIntFromLittleEndianBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1648,7 +1648,7 @@ func bigIntFromLittleEndianBytes(b []byte) *big.Int
 
 ```
 searchKey: edwards25519.checkInitialized
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1659,7 +1659,7 @@ func checkInitialized(points ...*Point)
 
 ```
 searchKey: edwards25519.checkOnCurve
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1670,7 +1670,7 @@ func checkOnCurve(t *testing.T, points ...*Point)
 
 ```
 searchKey: edwards25519.copyFieldElement
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1681,7 +1681,7 @@ func copyFieldElement(buf *[32]byte, v *field.Element) []byte
 
 ```
 searchKey: edwards25519.decodeHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1692,7 +1692,7 @@ func decodeHex(s string) []byte
 
 ```
 searchKey: edwards25519.isReduced
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1705,7 +1705,7 @@ isReduced returns whether the given scalar is reduced modulo l.
 
 ```
 searchKey: edwards25519.load3
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1716,7 +1716,7 @@ func load3(in []byte) int64
 
 ```
 searchKey: edwards25519.load4
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1727,7 +1727,7 @@ func load4(in []byte) int64
 
 ```
 searchKey: edwards25519.scMulAdd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1753,7 +1753,7 @@ where l = 2^252 + 27742317777372353535851937790883648493.
 
 ```
 searchKey: edwards25519.scReduce
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

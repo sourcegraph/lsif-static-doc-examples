@@ -27,7 +27,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="devVersion" href="#devVersion">const devVersion</a>
@@ -45,7 +45,7 @@ const devVersion = "0.0.0+dev" // version string for unreleased development buil
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="devTimestamp" href="#devTimestamp">var devTimestamp</a>
@@ -91,14 +91,14 @@ The version may not be semver-compatible, e.g. `insiders` or `65769_2020-06-05_9
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="HowLongOutOfDate" href="#HowLongOutOfDate">func HowLongOutOfDate(now time.Time) (int, error)</a>
 
 ```
 searchKey: version.HowLongOutOfDate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -111,7 +111,7 @@ HowLongOutOfDate returns a time in months since this build of Sourcegraph was cr
 
 ```
 searchKey: version.IsDev
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -124,7 +124,7 @@ IsDev reports whether the version string is an unreleased development build.
 
 ```
 searchKey: version.Mock
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -137,7 +137,7 @@ Mock is used by tests to mock the result of Version and IsDev.
 
 ```
 searchKey: version.MockTimestamp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -150,7 +150,7 @@ MockTimeStamp is used by tests to mock the current build timestamp
 
 ```
 searchKey: version.TestHowLongOutOfDate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -161,7 +161,7 @@ func TestHowLongOutOfDate(t *testing.T)
 
 ```
 searchKey: version.TestIsDev
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ func TestIsDev(t *testing.T)
 
 ```
 searchKey: version.TestVersion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -183,7 +183,7 @@ func TestVersion(t *testing.T)
 
 ```
 searchKey: version.Test_monthsFromDays
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -218,7 +218,7 @@ func init()
 
 ```
 searchKey: version.monthsFromDays
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -118,10 +118,6 @@ Architecture Notes: * Archive is fetched from gitserver * Simple HTTP API expose
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="defaultMaxSearchResults" href="#defaultMaxSearchResults">const defaultMaxSearchResults</a>
 
 ```
@@ -195,10 +191,6 @@ const numWorkers = 8
 numWorkers is how many concurrent readerGreps run in the case of regexSearch, and the number of parallel workers in the case of structuralSearch. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="All" href="#All">var All</a>
 
@@ -360,10 +352,6 @@ var zoektOnce sync.Once
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Service" href="#Service">type Service struct</a>
 
 ```
@@ -419,7 +407,7 @@ type Subset []string
 
 ```
 searchKey: search.Subset.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -441,7 +429,7 @@ type UniversalSet struct{}
 
 ```
 searchKey: search.UniversalSet.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -467,7 +455,7 @@ atomicEndpoints allows us to update the endpoints used by our zoekt client.
 
 ```
 searchKey: search.atomicEndpoints.Endpoints
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -511,7 +499,7 @@ type badRequestError struct{ msg string }
 
 ```
 searchKey: search.badRequestError.BadRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -522,7 +510,7 @@ func (e badRequestError) BadRequest() bool
 
 ```
 searchKey: search.badRequestError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -591,7 +579,7 @@ TODO(keegan) return search statistics
 
 ```
 searchKey: search.compile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -604,7 +592,7 @@ compile returns a readerGrep for matching p.
 
 ```
 searchKey: search.readerGrep.Copy
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -670,15 +658,11 @@ type zoektSearchStreamEvent struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkBytesToLowerASCII" href="#BenchmarkBytesToLowerASCII">func BenchmarkBytesToLowerASCII(b *testing.B)</a>
 
 ```
 searchKey: search.BenchmarkBytesToLowerASCII
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -689,7 +673,7 @@ func BenchmarkBytesToLowerASCII(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_fixed
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -700,7 +684,7 @@ func BenchmarkSearchRegex_large_fixed(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_fixed_casesensitive
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -711,7 +695,7 @@ func BenchmarkSearchRegex_large_fixed_casesensitive(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_path
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -722,7 +706,7 @@ func BenchmarkSearchRegex_large_path(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_re_anchor
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -733,7 +717,7 @@ func BenchmarkSearchRegex_large_re_anchor(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_re_common
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -744,7 +728,7 @@ func BenchmarkSearchRegex_large_re_common(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_large_re_dotstar
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -755,7 +739,7 @@ func BenchmarkSearchRegex_large_re_dotstar(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_small_fixed
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -766,7 +750,7 @@ func BenchmarkSearchRegex_small_fixed(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_small_fixed_casesensitive
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -777,7 +761,7 @@ func BenchmarkSearchRegex_small_fixed_casesensitive(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_small_re_anchor
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -788,7 +772,7 @@ func BenchmarkSearchRegex_small_re_anchor(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_small_re_common
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -799,7 +783,7 @@ func BenchmarkSearchRegex_small_re_common(b *testing.B)
 
 ```
 searchKey: search.BenchmarkSearchRegex_small_re_dotstar
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -810,7 +794,7 @@ func BenchmarkSearchRegex_small_re_dotstar(b *testing.B)
 
 ```
 searchKey: search.HandleFilePathPatterns
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -821,7 +805,7 @@ func HandleFilePathPatterns(query *search.TextPatternInfo) (zoektquery.Q, error)
 
 ```
 searchKey: search.NewFilter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -834,7 +818,7 @@ NewFilter is a wrapper around newIgnoreMatcher.
 
 ```
 searchKey: search.TestBuildQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -845,7 +829,7 @@ func TestBuildQuery(t *testing.T)
 
 ```
 searchKey: search.TestBytesToLowerASCII
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -856,7 +840,7 @@ func TestBytesToLowerASCII(t *testing.T)
 
 ```
 searchKey: search.TestHighlightMultipleLines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -867,7 +851,7 @@ func TestHighlightMultipleLines(t *testing.T)
 
 ```
 searchKey: search.TestIncludePatterns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -880,7 +864,7 @@ Tests that includePatterns works. includePatterns serve a similar role in struct
 
 ```
 searchKey: search.TestInferredMatcher
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -893,7 +877,7 @@ Tests that structural search correctly infers the Go matcher from the .go file e
 
 ```
 searchKey: search.TestLongestLiteral
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -904,7 +888,7 @@ func TestLongestLiteral(t *testing.T)
 
 ```
 searchKey: search.TestLowerRegexp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -915,7 +899,7 @@ func TestLowerRegexp(t *testing.T)
 
 ```
 searchKey: search.TestMatchCountForMultilineMatches
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -926,7 +910,7 @@ func TestMatchCountForMultilineMatches(t *testing.T)
 
 ```
 searchKey: search.TestMatcherLookupByExtension
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -937,7 +921,7 @@ func TestMatcherLookupByExtension(t *testing.T)
 
 ```
 searchKey: search.TestMatcherLookupByLanguage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -948,7 +932,7 @@ func TestMatcherLookupByLanguage(t *testing.T)
 
 ```
 searchKey: search.TestMaxMatches
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -959,7 +943,7 @@ func TestMaxMatches(t *testing.T)
 
 ```
 searchKey: search.TestMissingIgnoreFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -970,7 +954,7 @@ func TestMissingIgnoreFile(t *testing.T)
 
 ```
 searchKey: search.TestNewIgnoreMatcher
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -981,7 +965,7 @@ func TestNewIgnoreMatcher(t *testing.T)
 
 ```
 searchKey: search.TestPathMatches
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -996,7 +980,7 @@ Tests that:
 
 ```
 searchKey: search.TestReadAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1007,7 +991,7 @@ func TestReadAll(t *testing.T)
 
 ```
 searchKey: search.TestRecordMetrics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1018,7 +1002,7 @@ func TestRecordMetrics(t *testing.T)
 
 ```
 searchKey: search.TestRegexSearch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1029,7 +1013,7 @@ func TestRegexSearch(t *testing.T)
 
 ```
 searchKey: search.TestRule
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1040,7 +1024,7 @@ func TestRule(t *testing.T)
 
 ```
 searchKey: search.ToFileMatch
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1051,7 +1035,7 @@ func ToFileMatch(combyMatches []comby.FileMatch) (matches []protocol.FileMatch)
 
 ```
 searchKey: search.appendMatches
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1064,7 +1048,7 @@ matchLineBuf is a byte slice that contains the full line(s) that the match appea
 
 ```
 searchKey: search.benchBytesToLower
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1075,7 +1059,7 @@ func benchBytesToLower(b *testing.B, src []byte)
 
 ```
 searchKey: search.benchSearchRegex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1086,7 +1070,7 @@ func benchSearchRegex(b *testing.B, p *protocol.Request)
 
 ```
 searchKey: search.buildQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1097,7 +1081,7 @@ func buildQuery(args *search.TextPatternInfo, repoBranches map[string][]string, 
 
 ```
 searchKey: search.bytesToLowerASCII
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1110,7 +1094,7 @@ implemented in assembly, see lower_amd64.s
 
 ```
 searchKey: search.bytesToLowerASCIIgeneric
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1121,7 +1105,7 @@ func bytesToLowerASCIIgeneric(dst, src []byte)
 
 ```
 searchKey: search.checkBytesToLower
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1132,7 +1116,7 @@ func checkBytesToLower(t *testing.T, b []byte)
 
 ```
 searchKey: search.contextWithoutDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1145,7 +1129,7 @@ contextWithoutDeadline returns a context which will cancel if the cOld is cancel
 
 ```
 searchKey: search.extensionToMatcher
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1156,7 +1140,7 @@ func extensionToMatcher(extension string) string
 
 ```
 searchKey: search.filteredStructuralSearch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1169,7 +1153,7 @@ filteredStructuralSearch filters the list of files with a regex search before pa
 
 ```
 searchKey: search.getZoektClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1180,7 +1164,7 @@ func getZoektClient(indexerEndpoints []string) zoekt.Streamer
 
 ```
 searchKey: search.highlightMultipleLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1193,7 +1177,7 @@ The Sourcegraph frontend and interface only allow LineMatches (matches on a sing
 
 ```
 searchKey: search.hydrateLineNumbers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1226,7 +1210,7 @@ func init()
 
 ```
 searchKey: search.isBadRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1237,7 +1221,7 @@ func isBadRequest(err error) bool
 
 ```
 searchKey: search.isTemporary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1248,7 +1232,7 @@ func isTemporary(err error) bool
 
 ```
 searchKey: search.longestLiteral
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1263,7 +1247,7 @@ Note: There may be a longer substring that is guaranteed to appear. For example 
 
 ```
 searchKey: search.lookupMatcher
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1276,7 +1260,7 @@ lookupMatcher looks up a key for specifying -matcher in comby. Comby accepts a r
 
 ```
 searchKey: search.lowerRegexpASCII
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1289,7 +1273,7 @@ lowerRegexpASCII lowers rune literals and expands char classes to include lowerc
 
 ```
 searchKey: search.newIgnoreMatcher
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1302,7 +1286,7 @@ newIgnoreMatcher calls gitserver to retrieve the ignore-file. If the file doesn'
 
 ```
 searchKey: search.readAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1315,7 +1299,7 @@ readAll will read r until EOF into b. It returns the number of bytes read. If we
 
 ```
 searchKey: search.regexSearch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1328,7 +1312,7 @@ regexSearch concurrently searches files in zr looking for matches using rg.
 
 ```
 searchKey: search.structuralSearch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1339,7 +1323,7 @@ func structuralSearch(ctx context.Context, zipPath string, paths filePatterns, e
 
 ```
 searchKey: search.structuralSearchWithZoekt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1350,7 +1334,7 @@ func structuralSearchWithZoekt(ctx context.Context, p *protocol.Request) (matche
 
 ```
 searchKey: search.toMatcher
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1363,7 +1347,7 @@ toMatcher returns the matcher that parameterizes structural search. It derives e
 
 ```
 searchKey: search.validateParams
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1374,7 +1358,7 @@ func validateParams(p *protocol.Request) error
 
 ```
 searchKey: search.writeZip
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1385,7 +1369,7 @@ func writeZip(ctx context.Context, w io.Writer, fileMatches []zoekt.FileMatch) (
 
 ```
 searchKey: search.zoektSearch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

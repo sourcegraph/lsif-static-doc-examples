@@ -107,7 +107,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="appendTests" href="#appendTests">var appendTests</a>
@@ -309,7 +309,7 @@ var _i = 7
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Basic" href="#Basic">type Basic struct</a>
@@ -488,7 +488,7 @@ This will be index 2.
 
 ```
 searchKey: reflectlite_test.Point.NoArgs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -643,7 +643,7 @@ type mapError map[string]string
 
 ```
 searchKey: reflectlite_test.mapError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -694,7 +694,7 @@ type notAnExpr struct{}
 
 ```
 searchKey: reflectlite_test.notAnExpr.End
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -705,7 +705,7 @@ func (notAnExpr) End() token.Pos
 
 ```
 searchKey: reflectlite_test.notAnExpr.Pos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -716,7 +716,7 @@ func (notAnExpr) Pos() token.Pos
 
 ```
 searchKey: reflectlite_test.notAnExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -797,14 +797,14 @@ func (v visitor) filter(name string) bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Indirect" href="#Indirect">func Indirect(v Value) Value</a>
 
 ```
 searchKey: reflectlite_test.Indirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -817,7 +817,7 @@ Indirect returns the value that v points to. If v is a nil pointer, Indirect ret
 
 ```
 searchKey: reflectlite_test.Nil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -828,7 +828,7 @@ func Nil(a interface{}, t *testing.T)
 
 ```
 searchKey: reflectlite_test.NotNil
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -839,7 +839,7 @@ func NotNil(a interface{}, t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestAliasNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -850,7 +850,7 @@ func TestAliasNames(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -861,7 +861,7 @@ func TestAll(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestAllocations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -872,7 +872,7 @@ func TestAllocations(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestAssignableTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -883,7 +883,7 @@ func TestAssignableTo(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestBigStruct
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -894,7 +894,7 @@ func TestBigStruct(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestBigUnnamedStruct
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -905,7 +905,7 @@ func TestBigUnnamedStruct(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestBigZero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -916,7 +916,7 @@ func TestBigZero(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestCanSetField
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -927,7 +927,7 @@ func TestCanSetField(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestFunctionValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -938,7 +938,7 @@ func TestFunctionValue(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestImplements
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -949,7 +949,7 @@ func TestImplements(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestImplicitSetConversion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -960,7 +960,7 @@ func TestImplicitSetConversion(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestImportPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -971,7 +971,7 @@ func TestImportPath(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestInterfaceValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -982,7 +982,7 @@ func TestInterfaceValue(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestInvalid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -993,7 +993,7 @@ func TestInvalid(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestIsNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1004,7 +1004,7 @@ func TestIsNil(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestMapSetNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1015,7 +1015,7 @@ func TestMapSetNil(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestMirrorWithReflect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1026,7 +1026,7 @@ func TestMirrorWithReflect(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1037,7 +1037,7 @@ func TestNames(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestNilPtrValueSub
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1048,7 +1048,7 @@ func TestNilPtrValueSub(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestPtrSetNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1059,7 +1059,7 @@ func TestPtrSetNil(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestSetPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1070,7 +1070,7 @@ func TestSetPanic(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestSetValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1081,7 +1081,7 @@ func TestSetValue(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestTypeOf
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1092,7 +1092,7 @@ func TestTypeOf(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1103,7 +1103,7 @@ func TestTypes(t *testing.T)
 
 ```
 searchKey: reflectlite_test.TestUnaddressableField
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1118,7 +1118,7 @@ This ensures that unexported fields cannot be modified by other packages.
 
 ```
 searchKey: reflectlite_test.TestValueToString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1129,7 +1129,7 @@ func TestValueToString(t *testing.T)
 
 ```
 searchKey: reflectlite_test.ToValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1140,7 +1140,7 @@ func ToValue(v Value) reflect.Value
 
 ```
 searchKey: reflectlite_test.TypeString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1151,7 +1151,7 @@ func TypeString(t Type) string
 
 ```
 searchKey: reflectlite_test.assert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1173,7 +1173,7 @@ func init()
 
 ```
 searchKey: reflectlite_test.loadTypes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1184,7 +1184,7 @@ func loadTypes(path, pkgName string, v visitor)
 
 ```
 searchKey: reflectlite_test.noAlloc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1195,7 +1195,7 @@ func noAlloc(t *testing.T, n int, f func(int))
 
 ```
 searchKey: reflectlite_test.sameInts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1206,7 +1206,7 @@ func sameInts(x, y []int) bool
 
 ```
 searchKey: reflectlite_test.shouldPanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1217,7 +1217,7 @@ func shouldPanic(f func())
 
 ```
 searchKey: reflectlite_test.testReflectType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1228,7 +1228,7 @@ func testReflectType(t *testing.T, i int, typ Type, want string)
 
 ```
 searchKey: reflectlite_test.testType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1239,7 +1239,7 @@ func testType(t *testing.T, i int, typ Type, want string)
 
 ```
 searchKey: reflectlite_test.valueToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1252,7 +1252,7 @@ valueToString returns a textual representation of the reflection value val. For 
 
 ```
 searchKey: reflectlite_test.valueToStringImpl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

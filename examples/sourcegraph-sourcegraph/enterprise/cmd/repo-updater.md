@@ -12,15 +12,11 @@
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="enterpriseInit" href="#enterpriseInit">func enterpriseInit(db *sql.DB,...</a>
 
 ```
 searchKey: main.enterpriseInit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -48,7 +44,7 @@ func main()
 
 ```
 searchKey: main.startBackgroundPermsSync
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

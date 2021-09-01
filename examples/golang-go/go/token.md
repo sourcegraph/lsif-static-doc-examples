@@ -177,10 +177,6 @@ Package token defines constants representing the lexical tokens of the Go progra
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ADD" href="#ADD">const ADD</a>
 
 ```
@@ -1428,10 +1424,6 @@ The list of tokens.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="keywords" href="#keywords">var keywords</a>
 
 ```
@@ -1466,10 +1458,6 @@ var tokens = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="File" href="#File">type File struct</a>
 
@@ -1539,7 +1527,7 @@ AddLineInfo is like AddLineColumnInfo with a column = 1 argument. It is here for
 
 ```
 searchKey: token.File.Base
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1565,7 +1553,7 @@ Line returns the line number for the given file position p; p must be a Pos valu
 
 ```
 searchKey: token.File.LineCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1604,7 +1592,7 @@ MergeLine merges a line with the following line. It is akin to replacing the new
 
 ```
 searchKey: token.File.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1695,7 +1683,7 @@ SetLinesForContent sets the line offsets for the given file content. It ignores 
 
 ```
 searchKey: token.File.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1788,7 +1776,7 @@ with offs in the range [0, size] and thus p in the range [base, base+size]. For 
 
 ```
 searchKey: token.FileSet.Base
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1909,7 +1897,7 @@ Pos values can be compared directly with the usual comparison operators: If two 
 
 ```
 searchKey: token.Pos.IsValid
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1940,7 +1928,7 @@ Position describes an arbitrary source position including the file, line, and co
 
 ```
 searchKey: token.Position.IsValid
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1953,7 +1941,7 @@ IsValid reports whether the position is valid.
 
 ```
 searchKey: token.Position.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1988,7 +1976,7 @@ Token is the set of lexical tokens of the Go programming language.
 
 ```
 searchKey: token.Lookup
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2001,7 +1989,7 @@ Lookup maps an identifier to its keyword token or IDENT (if not a keyword).
 
 ```
 searchKey: token.Token.IsKeyword
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2014,7 +2002,7 @@ IsKeyword returns true for tokens corresponding to keywords; it returns false ot
 
 ```
 searchKey: token.Token.IsLiteral
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2027,7 +2015,7 @@ IsLiteral returns true for tokens corresponding to identifiers and basic type li
 
 ```
 searchKey: token.Token.IsOperator
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2040,7 +2028,7 @@ IsOperator returns true for tokens corresponding to operators and delimiters; it
 
 ```
 searchKey: token.Token.Precedence
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2053,7 +2041,7 @@ Precedence returns the operator precedence of the binary operator op. If op is n
 
 ```
 searchKey: token.Token.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2114,15 +2102,11 @@ type serializedFileSet struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkSearchInts" href="#BenchmarkSearchInts">func BenchmarkSearchInts(b *testing.B)</a>
 
 ```
 searchKey: token.BenchmarkSearchInts
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2133,7 +2117,7 @@ func BenchmarkSearchInts(b *testing.B)
 
 ```
 searchKey: token.IsExported
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2146,7 +2130,7 @@ IsExported reports whether name starts with an upper-case letter.
 
 ```
 searchKey: token.IsIdentifier
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2159,7 +2143,7 @@ IsIdentifier reports whether name is a Go identifier, that is, a non-empty strin
 
 ```
 searchKey: token.IsKeyword
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2172,7 +2156,7 @@ IsKeyword reports whether name is a Go keyword, such as "func" or "return".
 
 ```
 searchKey: token.TestFileSetCacheUnlikely
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2183,7 +2167,7 @@ func TestFileSetCacheUnlikely(t *testing.T)
 
 ```
 searchKey: token.TestFileSetPastEnd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2196,7 +2180,7 @@ FileSet.File should return nil if Pos is past the end of the FileSet.
 
 ```
 searchKey: token.TestFileSetRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2209,7 +2193,7 @@ issue 4345. Test that concurrent use of FileSet.Pos does not trigger a race in t
 
 ```
 searchKey: token.TestFileSetRace2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2222,7 +2206,7 @@ issue 16548. Test that concurrent use of File.AddLine and FileSet.PositionFor do
 
 ```
 searchKey: token.TestFiles
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2233,7 +2217,7 @@ func TestFiles(t *testing.T)
 
 ```
 searchKey: token.TestIsIdentifier
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2244,7 +2228,7 @@ func TestIsIdentifier(t *testing.T)
 
 ```
 searchKey: token.TestLineInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2255,7 +2239,7 @@ func TestLineInfo(t *testing.T)
 
 ```
 searchKey: token.TestLineStart
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2266,7 +2250,7 @@ func TestLineStart(t *testing.T)
 
 ```
 searchKey: token.TestNoPos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2277,7 +2261,7 @@ func TestNoPos(t *testing.T)
 
 ```
 searchKey: token.TestPositionFor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2288,7 +2272,7 @@ func TestPositionFor(t *testing.T)
 
 ```
 searchKey: token.TestPositions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2299,7 +2283,7 @@ func TestPositions(t *testing.T)
 
 ```
 searchKey: token.TestSerialization
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2310,7 +2294,7 @@ func TestSerialization(t *testing.T)
 
 ```
 searchKey: token.checkPos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2321,7 +2305,7 @@ func checkPos(t *testing.T, msg string, got, want Position)
 
 ```
 searchKey: token.checkSerialize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2332,7 +2316,7 @@ func checkSerialize(t *testing.T, p *FileSet)
 
 ```
 searchKey: token.equal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2356,7 +2340,7 @@ func init()
 
 ```
 searchKey: token.linecol
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2367,7 +2351,7 @@ func linecol(lines []int, offs int) (int, int)
 
 ```
 searchKey: token.makeTestSource
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2378,7 +2362,7 @@ func makeTestSource(size int, lines []int) []byte
 
 ```
 searchKey: token.searchFiles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2389,7 +2373,7 @@ func searchFiles(a []*File, x int) int
 
 ```
 searchKey: token.searchInts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2400,7 +2384,7 @@ func searchInts(a []int, x int) int
 
 ```
 searchKey: token.searchLineInfos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2411,7 +2395,7 @@ func searchLineInfos(a []lineInfo, x int) int
 
 ```
 searchKey: token.verifyPositions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

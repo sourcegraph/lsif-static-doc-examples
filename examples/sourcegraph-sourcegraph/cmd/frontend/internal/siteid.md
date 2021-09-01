@@ -22,7 +22,7 @@ The "site ID" was formerly known as the "app ID".
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="fatalln" href="#fatalln">var fatalln</a>
@@ -62,7 +62,7 @@ var siteID string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Get" href="#Get">func Get() string</a>
@@ -97,7 +97,7 @@ Init reads (or generates) the site ID. This func must be called exactly once bef
 
 ```
 searchKey: siteid.TestGet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -108,7 +108,7 @@ func TestGet(t *testing.T)
 
 ```
 searchKey: siteid.TestNotInited
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

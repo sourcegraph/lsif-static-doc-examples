@@ -37,7 +37,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="allocsPerRunTests" href="#allocsPerRunTests">var allocsPerRunTests</a>
@@ -120,7 +120,7 @@ var testPanicTest = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleB_ReportMetric" href="#ExampleB_ReportMetric">func ExampleB_ReportMetric()</a>
@@ -149,7 +149,7 @@ func ExampleB_RunParallel()
 
 ```
 searchKey: testing_test.TestAllocsPerRun
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -160,7 +160,7 @@ func TestAllocsPerRun(t *testing.T)
 
 ```
 searchKey: testing_test.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -171,7 +171,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: testing_test.TestPanic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -182,7 +182,7 @@ func TestPanic(t *testing.T)
 
 ```
 searchKey: testing_test.TestPanicHelper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -193,7 +193,7 @@ func TestPanicHelper(t *testing.T)
 
 ```
 searchKey: testing_test.TestPrettyPrint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -204,7 +204,7 @@ func TestPrettyPrint(t *testing.T)
 
 ```
 searchKey: testing_test.TestReportMetric
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -215,7 +215,7 @@ func TestReportMetric(t *testing.T)
 
 ```
 searchKey: testing_test.TestResultString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -226,7 +226,7 @@ func TestResultString(t *testing.T)
 
 ```
 searchKey: testing_test.TestRunParallel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -237,7 +237,7 @@ func TestRunParallel(t *testing.T)
 
 ```
 searchKey: testing_test.TestRunParallelFail
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -248,7 +248,7 @@ func TestRunParallelFail(t *testing.T)
 
 ```
 searchKey: testing_test.TestRunParallelFatal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -259,7 +259,7 @@ func TestRunParallelFatal(t *testing.T)
 
 ```
 searchKey: testing_test.TestRunParallelSkipNow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -270,7 +270,7 @@ func TestRunParallelSkipNow(t *testing.T)
 
 ```
 searchKey: testing_test.TestSetenv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -281,7 +281,7 @@ func TestSetenv(t *testing.T)
 
 ```
 searchKey: testing_test.TestSetenvWithParallelAfterSetenv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -292,7 +292,7 @@ func TestSetenvWithParallelAfterSetenv(t *testing.T)
 
 ```
 searchKey: testing_test.TestSetenvWithParallelBeforeSetenv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -303,7 +303,7 @@ func TestSetenvWithParallelBeforeSetenv(t *testing.T)
 
 ```
 searchKey: testing_test.TestTempDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -314,7 +314,7 @@ func TestTempDir(t *testing.T)
 
 ```
 searchKey: testing_test.TestTempDirInBenchmark
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -325,7 +325,7 @@ func TestTempDirInBenchmark(t *testing.T)
 
 ```
 searchKey: testing_test.TestTempDirInCleanup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -336,7 +336,7 @@ func TestTempDirInCleanup(t *testing.T)
 
 ```
 searchKey: testing_test.makeRegexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -347,7 +347,7 @@ func makeRegexp(s string) string
 
 ```
 searchKey: testing_test.testTempDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

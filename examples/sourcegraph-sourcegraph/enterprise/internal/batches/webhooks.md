@@ -90,7 +90,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="errExternalServiceNotFound" href="#errExternalServiceNotFound">var errExternalServiceNotFound</a>
@@ -153,7 +153,7 @@ var update = flag.Bool("update", false, "update testdata")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BitbucketServerWebhook" href="#BitbucketServerWebhook">type BitbucketServerWebhook struct</a>
@@ -173,7 +173,7 @@ type BitbucketServerWebhook struct {
 
 ```
 searchKey: webhooks.NewBitbucketServerWebhook
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -232,7 +232,7 @@ GitHubWebhook receives GitHub organization webhook events that are relevant to B
 
 ```
 searchKey: webhooks.NewGitHubWebhook
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -471,7 +471,7 @@ type GitLabWebhook struct {
 
 ```
 searchKey: webhooks.NewGitLabWebhook
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -570,7 +570,7 @@ type PR struct {
 
 ```
 searchKey: webhooks.gitlabToPR
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -691,7 +691,7 @@ brokenReader implements an io.ReadCloser that always returns an error when read.
 
 ```
 searchKey: webhooks.brokenReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -727,7 +727,7 @@ type httpError struct {
 
 ```
 searchKey: webhooks.httpError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -777,7 +777,7 @@ func (ntx *nestedTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error
 
 ```
 searchKey: webhooks.nestedTx.Commit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -788,7 +788,7 @@ func (ntx *nestedTx) Commit() error
 
 ```
 searchKey: webhooks.nestedTx.Rollback
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -840,7 +840,7 @@ type webhookTestCase struct {
 
 ```
 searchKey: webhooks.loadWebhookTestCase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -850,14 +850,14 @@ func loadWebhookTestCase(t testing.TB, path string) webhookTestCase
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestValidateGitLabSecret" href="#TestValidateGitLabSecret">func TestValidateGitLabSecret(t *testing.T)</a>
 
 ```
 searchKey: webhooks.TestValidateGitLabSecret
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -868,7 +868,7 @@ func TestValidateGitLabSecret(t *testing.T)
 
 ```
 searchKey: webhooks.TestWebhooksIntegration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -879,7 +879,7 @@ func TestWebhooksIntegration(t *testing.T)
 
 ```
 searchKey: webhooks.assertBodyIncludes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -892,7 +892,7 @@ assertBodyIncludes checks for a specific substring within the given response bod
 
 ```
 searchKey: webhooks.assertChangesetEventForChangeset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -905,7 +905,7 @@ assertChangesetEventForChangeset checks that one (and only one) changeset event 
 
 ```
 searchKey: webhooks.createGitLabChangeset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -918,7 +918,7 @@ createGitLabChangeset creates a mock GitLab changeset.
 
 ```
 searchKey: webhooks.createGitLabExternalService
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -931,7 +931,7 @@ createGitLabExternalService creates a mock GitLab service with a valid configura
 
 ```
 searchKey: webhooks.createGitLabRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -944,7 +944,7 @@ createGitLabRepo creates a mock GitLab repo attached to the given external servi
 
 ```
 searchKey: webhooks.createMergeRequestPayload
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -957,7 +957,7 @@ createMergeRequestPayload creates a mock GitLab webhook payload of the merge req
 
 ```
 searchKey: webhooks.createPipelinePayload
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -970,7 +970,7 @@ createPipelinePayload creates a mock GitLab webhook payload of the pipeline obje
 
 ```
 searchKey: webhooks.extractExternalServiceID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -981,7 +981,7 @@ func extractExternalServiceID(extSvc *types.ExternalService) (string, error)
 
 ```
 searchKey: webhooks.getSingleRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -992,7 +992,7 @@ func getSingleRepo(ctx context.Context, bitbucketSource *repos.BitbucketServerSo
 
 ```
 searchKey: webhooks.gitLabTestSetup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1005,7 +1005,7 @@ gitLabTestSetup instantiates the stores and a clock for use within tests. Any ch
 
 ```
 searchKey: webhooks.respond
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1016,7 +1016,7 @@ func respond(w http.ResponseWriter, code int, v interface{})
 
 ```
 searchKey: webhooks.sign
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1027,7 +1027,7 @@ func sign(t *testing.T, message, secret []byte) string
 
 ```
 searchKey: webhooks.testBitbucketWebhook
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1040,7 +1040,7 @@ Run from integration_test.go
 
 ```
 searchKey: webhooks.testGitHubWebhook
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1053,7 +1053,7 @@ Run from integration_test.go
 
 ```
 searchKey: webhooks.testGitLabWebhook
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1064,7 +1064,7 @@ func testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)
 
 ```
 searchKey: webhooks.validateGitLabSecret
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

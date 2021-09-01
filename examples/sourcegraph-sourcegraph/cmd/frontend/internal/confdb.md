@@ -30,7 +30,7 @@ All other users should go through the conf package and NOT interact with the dat
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrNewerEdit" href="#ErrNewerEdit">var ErrNewerEdit</a>
@@ -49,7 +49,7 @@ ErrNewerEdit is returned by SiteCreateIfUpToDate when a newer edit has already b
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SiteConfig" href="#SiteConfig">type SiteConfig struct</a>
@@ -74,7 +74,7 @@ SiteConfig contains the contents of a site config along with associated metadata
 
 ```
 searchKey: confdb.SiteCreateIfUpToDate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -91,7 +91,7 @@ The site config that was most recently saved to the database is returned. An err
 
 ```
 searchKey: confdb.SiteGetLatest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -106,7 +106,7 @@ SiteGetLatest returns the site config that was most recently saved to the databa
 
 ```
 searchKey: confdb.createIfUpToDate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -117,7 +117,7 @@ func createIfUpToDate(ctx context.Context, tx queryable, lastID *int32, contents
 
 ```
 searchKey: confdb.getLatest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -144,7 +144,7 @@ queryable allows us to reuse the same logic for certain operations both inside a
 
 ```
 searchKey: confdb.newTransaction
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -154,14 +154,14 @@ func newTransaction(ctx context.Context) (tx queryable, done func(), err error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestSiteCreateIfUpToDate" href="#TestSiteCreateIfUpToDate">func TestSiteCreateIfUpToDate(t *testing.T)</a>
 
 ```
 searchKey: confdb.TestSiteCreateIfUpToDate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ func TestSiteCreateIfUpToDate(t *testing.T)
 
 ```
 searchKey: confdb.TestSiteCreate_RejectInvalidJSON
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -183,7 +183,7 @@ func TestSiteCreate_RejectInvalidJSON(t *testing.T)
 
 ```
 searchKey: confdb.TestSiteGetLatestDefault
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -194,7 +194,7 @@ func TestSiteGetLatestDefault(t *testing.T)
 
 ```
 searchKey: confdb.addDefault
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -216,7 +216,7 @@ func init()
 
 ```
 searchKey: confdb.parseQueryRows
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

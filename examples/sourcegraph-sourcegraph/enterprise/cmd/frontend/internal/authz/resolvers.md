@@ -52,7 +52,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="errDisabledSourcegraphDotCom" href="#errDisabledSourcegraphDotCom">var errDisabledSourcegraphDotCom</a>
@@ -113,7 +113,7 @@ var parsedSchema *graphql.Schema
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Resolver" href="#Resolver">type Resolver struct</a>
@@ -224,7 +224,7 @@ func (r *Resolver) UsersWithPendingPermissions(ctx context.Context) ([]string, e
 
 ```
 searchKey: resolvers.Resolver.checkLicense
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -276,7 +276,7 @@ type permissionsInfoResolver struct {
 
 ```
 searchKey: resolvers.permissionsInfoResolver.Permissions
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -287,7 +287,7 @@ func (r *permissionsInfoResolver) Permissions() []string
 
 ```
 searchKey: resolvers.permissionsInfoResolver.SyncedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -298,7 +298,7 @@ func (r *permissionsInfoResolver) SyncedAt() *graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.permissionsInfoResolver.UpdatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -450,14 +450,14 @@ func (r *userConnectionResolver) compute(ctx context.Context) ([]*types.User, *g
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewResolver" href="#NewResolver">func NewResolver(db dbutil.DB, clock func() time.Time) graphqlbackend.AuthzResolver</a>
 
 ```
 searchKey: resolvers.NewResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -468,7 +468,7 @@ func NewResolver(db dbutil.DB, clock func() time.Time) graphqlbackend.AuthzResol
 
 ```
 searchKey: resolvers.TestResolver_AuthorizedUserRepositories
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -479,7 +479,7 @@ func TestResolver_AuthorizedUserRepositories(t *testing.T)
 
 ```
 searchKey: resolvers.TestResolver_AuthorizedUsers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -490,7 +490,7 @@ func TestResolver_AuthorizedUsers(t *testing.T)
 
 ```
 searchKey: resolvers.TestResolver_RepositoryPermissionsInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -501,7 +501,7 @@ func TestResolver_RepositoryPermissionsInfo(t *testing.T)
 
 ```
 searchKey: resolvers.TestResolver_ScheduleRepositoryPermissionsSync
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -512,7 +512,7 @@ func TestResolver_ScheduleRepositoryPermissionsSync(t *testing.T)
 
 ```
 searchKey: resolvers.TestResolver_ScheduleUserPermissionsSync
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -523,7 +523,7 @@ func TestResolver_ScheduleUserPermissionsSync(t *testing.T)
 
 ```
 searchKey: resolvers.TestResolver_SetRepositoryPermissionsForUsers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -534,7 +534,7 @@ func TestResolver_SetRepositoryPermissionsForUsers(t *testing.T)
 
 ```
 searchKey: resolvers.TestResolver_UserPermissionsInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -545,7 +545,7 @@ func TestResolver_UserPermissionsInfo(t *testing.T)
 
 ```
 searchKey: resolvers.TestResolver_UsersWithPendingPermissions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -567,7 +567,7 @@ func clock() time.Time
 
 ```
 searchKey: resolvers.mustParseGraphQLSchema
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

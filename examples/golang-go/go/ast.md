@@ -357,10 +357,6 @@ Package ast declares the types used to represent syntax trees for Go packages.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Bad" href="#Bad">const Bad</a>
 
 ```
@@ -522,10 +518,6 @@ The list of possible Object kinds.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="comments" href="#comments">var comments</a>
 
 ```
@@ -596,10 +588,6 @@ var tests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ArrayType" href="#ArrayType">type ArrayType struct</a>
 
 ```
@@ -623,7 +611,7 @@ An ArrayType node represents an array or slice type.
 
 ```
 searchKey: ast.ArrayType.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -634,7 +622,7 @@ func (x *ArrayType) End() token.Pos
 
 ```
 searchKey: ast.ArrayType.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -645,7 +633,7 @@ func (x *ArrayType) Pos() token.Pos
 
 ```
 searchKey: ast.ArrayType.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -676,7 +664,7 @@ An AssignStmt node represents an assignment or a short variable declaration.
 
 ```
 searchKey: ast.AssignStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -687,7 +675,7 @@ func (s *AssignStmt) End() token.Pos
 
 ```
 searchKey: ast.AssignStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -698,7 +686,7 @@ func (s *AssignStmt) Pos() token.Pos
 
 ```
 searchKey: ast.AssignStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -726,7 +714,7 @@ A BadDecl node is a placeholder for a declaration containing syntax errors for w
 
 ```
 searchKey: ast.BadDecl.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -737,7 +725,7 @@ func (d *BadDecl) End() token.Pos
 
 ```
 searchKey: ast.BadDecl.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -748,7 +736,7 @@ func (d *BadDecl) Pos() token.Pos
 
 ```
 searchKey: ast.BadDecl.declNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -778,7 +766,7 @@ A BadExpr node is a placeholder for an expression containing syntax errors for w
 
 ```
 searchKey: ast.BadExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -789,7 +777,7 @@ func (x *BadExpr) End() token.Pos
 
 ```
 searchKey: ast.BadExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -800,7 +788,7 @@ func (x *BadExpr) Pos() token.Pos
 
 ```
 searchKey: ast.BadExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -830,7 +818,7 @@ A BadStmt node is a placeholder for statements containing syntax errors for whic
 
 ```
 searchKey: ast.BadStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -841,7 +829,7 @@ func (s *BadStmt) End() token.Pos
 
 ```
 searchKey: ast.BadStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -852,7 +840,7 @@ func (s *BadStmt) Pos() token.Pos
 
 ```
 searchKey: ast.BadStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -884,7 +872,7 @@ A BasicLit node represents a literal of basic type.
 
 ```
 searchKey: ast.BasicLit.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -895,7 +883,7 @@ func (x *BasicLit) End() token.Pos
 
 ```
 searchKey: ast.BasicLit.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -906,7 +894,7 @@ func (x *BasicLit) Pos() token.Pos
 
 ```
 searchKey: ast.BasicLit.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -937,7 +925,7 @@ A BinaryExpr node represents a binary expression.
 
 ```
 searchKey: ast.BinaryExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -948,7 +936,7 @@ func (x *BinaryExpr) End() token.Pos
 
 ```
 searchKey: ast.BinaryExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -959,7 +947,7 @@ func (x *BinaryExpr) Pos() token.Pos
 
 ```
 searchKey: ast.BinaryExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -989,7 +977,7 @@ A BlockStmt node represents a braced statement list.
 
 ```
 searchKey: ast.BlockStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1000,7 +988,7 @@ func (s *BlockStmt) End() token.Pos
 
 ```
 searchKey: ast.BlockStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1011,7 +999,7 @@ func (s *BlockStmt) Pos() token.Pos
 
 ```
 searchKey: ast.BlockStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1041,7 +1029,7 @@ A BranchStmt node represents a break, continue, goto, or fallthrough statement.
 
 ```
 searchKey: ast.BranchStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1052,7 +1040,7 @@ func (s *BranchStmt) End() token.Pos
 
 ```
 searchKey: ast.BranchStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1063,7 +1051,7 @@ func (s *BranchStmt) Pos() token.Pos
 
 ```
 searchKey: ast.BranchStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1095,7 +1083,7 @@ A CallExpr node represents an expression followed by an argument list.
 
 ```
 searchKey: ast.CallExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1106,7 +1094,7 @@ func (x *CallExpr) End() token.Pos
 
 ```
 searchKey: ast.CallExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1117,7 +1105,7 @@ func (x *CallExpr) Pos() token.Pos
 
 ```
 searchKey: ast.CallExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1148,7 +1136,7 @@ A CaseClause represents a case of an expression or type switch statement.
 
 ```
 searchKey: ast.CaseClause.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1159,7 +1147,7 @@ func (s *CaseClause) End() token.Pos
 
 ```
 searchKey: ast.CaseClause.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1170,7 +1158,7 @@ func (s *CaseClause) Pos() token.Pos
 
 ```
 searchKey: ast.CaseClause.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1214,7 +1202,7 @@ A ChanType node represents a channel type.
 
 ```
 searchKey: ast.ChanType.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1225,7 +1213,7 @@ func (x *ChanType) End() token.Pos
 
 ```
 searchKey: ast.ChanType.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1236,7 +1224,7 @@ func (x *ChanType) Pos() token.Pos
 
 ```
 searchKey: ast.ChanType.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1267,7 +1255,7 @@ A CommClause node represents a case of a select statement.
 
 ```
 searchKey: ast.CommClause.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1278,7 +1266,7 @@ func (s *CommClause) End() token.Pos
 
 ```
 searchKey: ast.CommClause.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1289,7 +1277,7 @@ func (s *CommClause) Pos() token.Pos
 
 ```
 searchKey: ast.CommClause.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1318,7 +1306,7 @@ The Text field contains the comment text without carriage returns (\r) that may 
 
 ```
 searchKey: ast.Comment.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1329,7 +1317,7 @@ func (c *Comment) End() token.Pos
 
 ```
 searchKey: ast.Comment.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1355,7 +1343,7 @@ A CommentGroup represents a sequence of comments with no other tokens and no emp
 
 ```
 searchKey: ast.CommentGroup.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1366,7 +1354,7 @@ func (g *CommentGroup) End() token.Pos
 
 ```
 searchKey: ast.CommentGroup.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1377,7 +1365,7 @@ func (g *CommentGroup) Pos() token.Pos
 
 ```
 searchKey: ast.CommentGroup.Text
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1403,7 +1391,7 @@ A CommentMap maps an AST node to a list of comment groups associated with it. Se
 
 ```
 searchKey: ast.NewCommentMap
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1428,7 +1416,7 @@ NewCommentMap tries to associate a comment group to the "largest" node possible:
 
 ```
 searchKey: ast.CommentMap.Comments
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1454,7 +1442,7 @@ Filter returns a new comment map consisting of only those entries of cmap for wh
 
 ```
 searchKey: ast.CommentMap.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1510,7 +1498,7 @@ A CompositeLit node represents a composite literal.
 
 ```
 searchKey: ast.CompositeLit.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1521,7 +1509,7 @@ func (x *CompositeLit) End() token.Pos
 
 ```
 searchKey: ast.CompositeLit.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1532,7 +1520,7 @@ func (x *CompositeLit) Pos() token.Pos
 
 ```
 searchKey: ast.CompositeLit.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1576,7 +1564,7 @@ A DeclStmt node represents a declaration in a statement list.
 
 ```
 searchKey: ast.DeclStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1587,7 +1575,7 @@ func (s *DeclStmt) End() token.Pos
 
 ```
 searchKey: ast.DeclStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1598,7 +1586,7 @@ func (s *DeclStmt) Pos() token.Pos
 
 ```
 searchKey: ast.DeclStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1627,7 +1615,7 @@ A DeferStmt node represents a defer statement.
 
 ```
 searchKey: ast.DeferStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1638,7 +1626,7 @@ func (s *DeferStmt) End() token.Pos
 
 ```
 searchKey: ast.DeferStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1649,7 +1637,7 @@ func (s *DeferStmt) Pos() token.Pos
 
 ```
 searchKey: ast.DeferStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1678,7 +1666,7 @@ An Ellipsis node stands for the "..." type in a parameter list or the "..." leng
 
 ```
 searchKey: ast.Ellipsis.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1689,7 +1677,7 @@ func (x *Ellipsis) End() token.Pos
 
 ```
 searchKey: ast.Ellipsis.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1700,7 +1688,7 @@ func (x *Ellipsis) Pos() token.Pos
 
 ```
 searchKey: ast.Ellipsis.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1729,7 +1717,7 @@ An EmptyStmt node represents an empty statement. The "position" of the empty sta
 
 ```
 searchKey: ast.EmptyStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1740,7 +1728,7 @@ func (s *EmptyStmt) End() token.Pos
 
 ```
 searchKey: ast.EmptyStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1751,7 +1739,7 @@ func (s *EmptyStmt) Pos() token.Pos
 
 ```
 searchKey: ast.EmptyStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1795,7 +1783,7 @@ An ExprStmt node represents a (stand-alone) expression in a statement list.
 
 ```
 searchKey: ast.ExprStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1806,7 +1794,7 @@ func (s *ExprStmt) End() token.Pos
 
 ```
 searchKey: ast.ExprStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1817,7 +1805,7 @@ func (s *ExprStmt) Pos() token.Pos
 
 ```
 searchKey: ast.ExprStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1847,7 +1835,7 @@ A Field represents a Field declaration list in a struct type, a method list in a
 
 ```
 searchKey: ast.Field.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1858,7 +1846,7 @@ func (f *Field) End() token.Pos
 
 ```
 searchKey: ast.Field.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1899,7 +1887,7 @@ A FieldList represents a list of Fields, enclosed by parentheses or braces.
 
 ```
 searchKey: ast.FieldList.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1910,7 +1898,7 @@ func (f *FieldList) End() token.Pos
 
 ```
 searchKey: ast.FieldList.NumFields
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1923,7 +1911,7 @@ NumFields returns the number of parameters or struct fields represented by a Fie
 
 ```
 searchKey: ast.FieldList.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1962,7 +1950,7 @@ Whether and how a comment is associated with a node depends on the interpretatio
 
 ```
 searchKey: ast.MergePackageFiles
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1975,7 +1963,7 @@ MergePackageFiles creates a file AST by merging the ASTs of the files belonging 
 
 ```
 searchKey: ast.File.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1986,7 +1974,7 @@ func (f *File) End() token.Pos
 
 ```
 searchKey: ast.File.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2029,7 +2017,7 @@ A ForStmt represents a for statement.
 
 ```
 searchKey: ast.ForStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2040,7 +2028,7 @@ func (s *ForStmt) End() token.Pos
 
 ```
 searchKey: ast.ForStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2051,7 +2039,7 @@ func (s *ForStmt) Pos() token.Pos
 
 ```
 searchKey: ast.ForStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2084,7 +2072,7 @@ A FuncDecl node represents a function declaration.
 
 ```
 searchKey: ast.FuncDecl.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2095,7 +2083,7 @@ func (d *FuncDecl) End() token.Pos
 
 ```
 searchKey: ast.FuncDecl.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2106,7 +2094,7 @@ func (d *FuncDecl) Pos() token.Pos
 
 ```
 searchKey: ast.FuncDecl.declNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2135,7 +2123,7 @@ A FuncLit node represents a function literal.
 
 ```
 searchKey: ast.FuncLit.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2146,7 +2134,7 @@ func (x *FuncLit) End() token.Pos
 
 ```
 searchKey: ast.FuncLit.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2157,7 +2145,7 @@ func (x *FuncLit) Pos() token.Pos
 
 ```
 searchKey: ast.FuncLit.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2185,7 +2173,7 @@ A FuncType node represents a function type.
 
 ```
 searchKey: ast.FuncType.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2196,7 +2184,7 @@ func (x *FuncType) End() token.Pos
 
 ```
 searchKey: ast.FuncType.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2207,7 +2195,7 @@ func (x *FuncType) Pos() token.Pos
 
 ```
 searchKey: ast.FuncType.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2249,7 +2237,7 @@ token.VAR     *ValueSpec
 
 ```
 searchKey: ast.GenDecl.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2260,7 +2248,7 @@ func (d *GenDecl) End() token.Pos
 
 ```
 searchKey: ast.GenDecl.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2271,7 +2259,7 @@ func (d *GenDecl) Pos() token.Pos
 
 ```
 searchKey: ast.GenDecl.declNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2300,7 +2288,7 @@ A GoStmt node represents a go statement.
 
 ```
 searchKey: ast.GoStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2311,7 +2299,7 @@ func (s *GoStmt) End() token.Pos
 
 ```
 searchKey: ast.GoStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2322,7 +2310,7 @@ func (s *GoStmt) Pos() token.Pos
 
 ```
 searchKey: ast.GoStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2352,7 +2340,7 @@ An Ident node represents an identifier.
 
 ```
 searchKey: ast.NewIdent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2365,7 +2353,7 @@ NewIdent creates a new Ident without position. Useful for ASTs generated by code
 
 ```
 searchKey: ast.fieldName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2378,7 +2366,7 @@ fieldName assumes that x is the type of an anonymous field and returns the corre
 
 ```
 searchKey: ast.Ident.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2389,7 +2377,7 @@ func (x *Ident) End() token.Pos
 
 ```
 searchKey: ast.Ident.IsExported
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2402,7 +2390,7 @@ IsExported reports whether id starts with an upper-case letter.
 
 ```
 searchKey: ast.Ident.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2413,7 +2401,7 @@ func (x *Ident) Pos() token.Pos
 
 ```
 searchKey: ast.Ident.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2424,7 +2412,7 @@ func (id *Ident) String() string
 
 ```
 searchKey: ast.Ident.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2456,7 +2444,7 @@ An IfStmt node represents an if statement.
 
 ```
 searchKey: ast.IfStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2467,7 +2455,7 @@ func (s *IfStmt) End() token.Pos
 
 ```
 searchKey: ast.IfStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2478,7 +2466,7 @@ func (s *IfStmt) Pos() token.Pos
 
 ```
 searchKey: ast.IfStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2510,7 +2498,7 @@ An ImportSpec node represents a single package import.
 
 ```
 searchKey: ast.ImportSpec.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2521,7 +2509,7 @@ func (s *ImportSpec) End() token.Pos
 
 ```
 searchKey: ast.ImportSpec.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2532,7 +2520,7 @@ func (s *ImportSpec) Pos() token.Pos
 
 ```
 searchKey: ast.ImportSpec.specNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2577,7 +2565,7 @@ An IncDecStmt node represents an increment or decrement statement.
 
 ```
 searchKey: ast.IncDecStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2588,7 +2576,7 @@ func (s *IncDecStmt) End() token.Pos
 
 ```
 searchKey: ast.IncDecStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2599,7 +2587,7 @@ func (s *IncDecStmt) Pos() token.Pos
 
 ```
 searchKey: ast.IncDecStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2630,7 +2618,7 @@ An IndexExpr node represents an expression followed by an index.
 
 ```
 searchKey: ast.IndexExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2641,7 +2629,7 @@ func (x *IndexExpr) End() token.Pos
 
 ```
 searchKey: ast.IndexExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2652,7 +2640,7 @@ func (x *IndexExpr) Pos() token.Pos
 
 ```
 searchKey: ast.IndexExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2682,7 +2670,7 @@ An InterfaceType node represents an interface type.
 
 ```
 searchKey: ast.InterfaceType.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2693,7 +2681,7 @@ func (x *InterfaceType) End() token.Pos
 
 ```
 searchKey: ast.InterfaceType.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2704,7 +2692,7 @@ func (x *InterfaceType) Pos() token.Pos
 
 ```
 searchKey: ast.InterfaceType.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2734,7 +2722,7 @@ A KeyValueExpr node represents (key : value) pairs in composite literals.
 
 ```
 searchKey: ast.KeyValueExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2745,7 +2733,7 @@ func (x *KeyValueExpr) End() token.Pos
 
 ```
 searchKey: ast.KeyValueExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2756,7 +2744,7 @@ func (x *KeyValueExpr) Pos() token.Pos
 
 ```
 searchKey: ast.KeyValueExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2786,7 +2774,7 @@ A LabeledStmt node represents a labeled statement.
 
 ```
 searchKey: ast.LabeledStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2797,7 +2785,7 @@ func (s *LabeledStmt) End() token.Pos
 
 ```
 searchKey: ast.LabeledStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2808,7 +2796,7 @@ func (s *LabeledStmt) Pos() token.Pos
 
 ```
 searchKey: ast.LabeledStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2838,7 +2826,7 @@ A MapType node represents a map type.
 
 ```
 searchKey: ast.MapType.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2849,7 +2837,7 @@ func (x *MapType) End() token.Pos
 
 ```
 searchKey: ast.MapType.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2860,7 +2848,7 @@ func (x *MapType) Pos() token.Pos
 
 ```
 searchKey: ast.MapType.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2913,7 +2901,7 @@ ObjKind describes what an object represents.
 
 ```
 searchKey: ast.ObjKind.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2951,7 +2939,7 @@ Con     int               iota for the respective declaration
 
 ```
 searchKey: ast.NewObj
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2964,7 +2952,7 @@ NewObj creates a new object of a given kind and name.
 
 ```
 searchKey: ast.Object.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2995,7 +2983,7 @@ A Package node represents a set of source files collectively building a Go packa
 
 ```
 searchKey: ast.NewPackage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3008,7 +2996,7 @@ NewPackage creates a new Package node from a set of File nodes. It resolves unre
 
 ```
 searchKey: ast.Package.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3019,7 +3007,7 @@ func (p *Package) End() token.Pos
 
 ```
 searchKey: ast.Package.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3049,7 +3037,7 @@ A ParenExpr node represents a parenthesized expression.
 
 ```
 searchKey: ast.ParenExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3060,7 +3048,7 @@ func (x *ParenExpr) End() token.Pos
 
 ```
 searchKey: ast.ParenExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3071,7 +3059,7 @@ func (x *ParenExpr) Pos() token.Pos
 
 ```
 searchKey: ast.ParenExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3104,7 +3092,7 @@ A RangeStmt represents a for statement with a range clause.
 
 ```
 searchKey: ast.RangeStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3115,7 +3103,7 @@ func (s *RangeStmt) End() token.Pos
 
 ```
 searchKey: ast.RangeStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3126,7 +3114,7 @@ func (s *RangeStmt) Pos() token.Pos
 
 ```
 searchKey: ast.RangeStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3155,7 +3143,7 @@ A ReturnStmt node represents a return statement.
 
 ```
 searchKey: ast.ReturnStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3166,7 +3154,7 @@ func (s *ReturnStmt) End() token.Pos
 
 ```
 searchKey: ast.ReturnStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3177,7 +3165,7 @@ func (s *ReturnStmt) Pos() token.Pos
 
 ```
 searchKey: ast.ReturnStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3204,7 +3192,7 @@ A Scope maintains the set of named language entities declared in the scope and a
 
 ```
 searchKey: ast.NewScope
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3243,7 +3231,7 @@ Lookup returns the object with the given name if it is found in scope s, otherwi
 
 ```
 searchKey: ast.Scope.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3274,7 +3262,7 @@ A SelectStmt node represents a select statement.
 
 ```
 searchKey: ast.SelectStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3285,7 +3273,7 @@ func (s *SelectStmt) End() token.Pos
 
 ```
 searchKey: ast.SelectStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3296,7 +3284,7 @@ func (s *SelectStmt) Pos() token.Pos
 
 ```
 searchKey: ast.SelectStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3325,7 +3313,7 @@ A SelectorExpr node represents an expression followed by a selector.
 
 ```
 searchKey: ast.SelectorExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3336,7 +3324,7 @@ func (x *SelectorExpr) End() token.Pos
 
 ```
 searchKey: ast.SelectorExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3347,7 +3335,7 @@ func (x *SelectorExpr) Pos() token.Pos
 
 ```
 searchKey: ast.SelectorExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3377,7 +3365,7 @@ A SendStmt node represents a send statement.
 
 ```
 searchKey: ast.SendStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3388,7 +3376,7 @@ func (s *SendStmt) End() token.Pos
 
 ```
 searchKey: ast.SendStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3399,7 +3387,7 @@ func (s *SendStmt) Pos() token.Pos
 
 ```
 searchKey: ast.SendStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3433,7 +3421,7 @@ A SliceExpr node represents an expression followed by slice indices.
 
 ```
 searchKey: ast.SliceExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3444,7 +3432,7 @@ func (x *SliceExpr) End() token.Pos
 
 ```
 searchKey: ast.SliceExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3455,7 +3443,7 @@ func (x *SliceExpr) Pos() token.Pos
 
 ```
 searchKey: ast.SliceExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3502,7 +3490,7 @@ A StarExpr node represents an expression of the form "*" Expression. Semanticall
 
 ```
 searchKey: ast.StarExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3513,7 +3501,7 @@ func (x *StarExpr) End() token.Pos
 
 ```
 searchKey: ast.StarExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3524,7 +3512,7 @@ func (x *StarExpr) Pos() token.Pos
 
 ```
 searchKey: ast.StarExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3570,7 +3558,7 @@ A StructType node represents a struct type.
 
 ```
 searchKey: ast.StructType.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3581,7 +3569,7 @@ func (x *StructType) End() token.Pos
 
 ```
 searchKey: ast.StructType.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3592,7 +3580,7 @@ func (x *StructType) Pos() token.Pos
 
 ```
 searchKey: ast.StructType.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3623,7 +3611,7 @@ A SwitchStmt node represents an expression switch statement.
 
 ```
 searchKey: ast.SwitchStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3634,7 +3622,7 @@ func (s *SwitchStmt) End() token.Pos
 
 ```
 searchKey: ast.SwitchStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3645,7 +3633,7 @@ func (s *SwitchStmt) Pos() token.Pos
 
 ```
 searchKey: ast.SwitchStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3676,7 +3664,7 @@ A TypeAssertExpr node represents an expression followed by a type assertion.
 
 ```
 searchKey: ast.TypeAssertExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3687,7 +3675,7 @@ func (x *TypeAssertExpr) End() token.Pos
 
 ```
 searchKey: ast.TypeAssertExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3698,7 +3686,7 @@ func (x *TypeAssertExpr) Pos() token.Pos
 
 ```
 searchKey: ast.TypeAssertExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3728,7 +3716,7 @@ A TypeSpec node represents a type declaration (TypeSpec production).
 
 ```
 searchKey: ast.TypeSpec.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3739,7 +3727,7 @@ func (s *TypeSpec) End() token.Pos
 
 ```
 searchKey: ast.TypeSpec.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3750,7 +3738,7 @@ func (s *TypeSpec) Pos() token.Pos
 
 ```
 searchKey: ast.TypeSpec.specNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3781,7 +3769,7 @@ A TypeSwitchStmt node represents a type switch statement.
 
 ```
 searchKey: ast.TypeSwitchStmt.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3792,7 +3780,7 @@ func (s *TypeSwitchStmt) End() token.Pos
 
 ```
 searchKey: ast.TypeSwitchStmt.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3803,7 +3791,7 @@ func (s *TypeSwitchStmt) Pos() token.Pos
 
 ```
 searchKey: ast.TypeSwitchStmt.stmtNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3833,7 +3821,7 @@ A UnaryExpr node represents a unary expression. Unary "*" expressions are repres
 
 ```
 searchKey: ast.UnaryExpr.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3844,7 +3832,7 @@ func (x *UnaryExpr) End() token.Pos
 
 ```
 searchKey: ast.UnaryExpr.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3855,7 +3843,7 @@ func (x *UnaryExpr) Pos() token.Pos
 
 ```
 searchKey: ast.UnaryExpr.exprNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3887,7 +3875,7 @@ A ValueSpec node represents a constant or variable declaration (ConstSpec or Var
 
 ```
 searchKey: ast.ValueSpec.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3898,7 +3886,7 @@ func (s *ValueSpec) End() token.Pos
 
 ```
 searchKey: ast.ValueSpec.Pos
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3909,7 +3897,7 @@ func (s *ValueSpec) Pos() token.Pos
 
 ```
 searchKey: ast.ValueSpec.specNode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3946,7 +3934,7 @@ type byInterval []Node
 
 ```
 searchKey: ast.byInterval.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3990,7 +3978,7 @@ type byPos []*CommentGroup
 
 ```
 searchKey: ast.byPos.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4056,7 +4044,7 @@ A commentListReader helps iterating through a list of comment groups.
 
 ```
 searchKey: ast.commentListReader.eol
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4067,7 +4055,7 @@ func (r *commentListReader) eol() bool
 
 ```
 searchKey: ast.commentListReader.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4267,15 +4255,11 @@ printf is a convenience wrapper that takes care of print errors.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="FileExports" href="#FileExports">func FileExports(src *File) bool</a>
 
 ```
 searchKey: ast.FileExports
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4290,7 +4274,7 @@ FileExports reports whether there are exported declarations.
 
 ```
 searchKey: ast.FilterDecl
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4305,7 +4289,7 @@ FilterDecl reports whether there are any declared names left after filtering.
 
 ```
 searchKey: ast.FilterFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4320,7 +4304,7 @@ FilterFile reports whether there are any top-level declarations left after filte
 
 ```
 searchKey: ast.FilterPackage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4335,7 +4319,7 @@ FilterPackage reports whether there are any top-level declarations left after fi
 
 ```
 searchKey: ast.Fprint
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4350,7 +4334,7 @@ A non-nil FieldFilter f may be provided to control the output: struct fields for
 
 ```
 searchKey: ast.Inspect
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4363,7 +4347,7 @@ Inspect traverses an AST in depth-first order: It starts by calling f(node); nod
 
 ```
 searchKey: ast.IsExported
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4376,7 +4360,7 @@ IsExported reports whether name starts with an upper-case letter.
 
 ```
 searchKey: ast.NotNilFilter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4389,7 +4373,7 @@ NotNilFilter returns true for field values that are not nil; it returns false ot
 
 ```
 searchKey: ast.PackageExports
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4404,7 +4388,7 @@ PackageExports reports whether there are exported declarations; it returns false
 
 ```
 searchKey: ast.Print
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4417,7 +4401,7 @@ Print prints x to standard output, skipping nil fields. Print(fset, x) is the sa
 
 ```
 searchKey: ast.SortImports
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4430,7 +4414,7 @@ SortImports sorts runs of consecutive import lines in import blocks in f. It als
 
 ```
 searchKey: ast.TestCommentText
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4441,7 +4425,7 @@ func TestCommentText(t *testing.T)
 
 ```
 searchKey: ast.TestIsDirective
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4452,7 +4436,7 @@ func TestIsDirective(t *testing.T)
 
 ```
 searchKey: ast.TestPrint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4463,7 +4447,7 @@ func TestPrint(t *testing.T)
 
 ```
 searchKey: ast.Walk
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4476,7 +4460,7 @@ Walk traverses an AST in depth-first order: It starts by calling v.Visit(node); 
 
 ```
 searchKey: ast.collapse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4489,7 +4473,7 @@ collapse indicates whether prev may be removed, leaving only next.
 
 ```
 searchKey: ast.exportFilter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4502,7 +4486,7 @@ exportFilter is a special filter function to extract exported nodes.
 
 ```
 searchKey: ast.filterCompositeLit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4513,7 +4497,7 @@ func filterCompositeLit(lit *CompositeLit, filter Filter, export bool)
 
 ```
 searchKey: ast.filterDecl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4524,7 +4508,7 @@ func filterDecl(decl Decl, f Filter, export bool) bool
 
 ```
 searchKey: ast.filterExprList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4535,7 +4519,7 @@ func filterExprList(list []Expr, filter Filter, export bool) []Expr
 
 ```
 searchKey: ast.filterFieldList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4546,7 +4530,7 @@ func filterFieldList(fields *FieldList, filter Filter, export bool) (removedFiel
 
 ```
 searchKey: ast.filterFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4557,7 +4541,7 @@ func filterFile(src *File, f Filter, export bool) bool
 
 ```
 searchKey: ast.filterIdentList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4568,7 +4552,7 @@ func filterIdentList(list []*Ident, f Filter) []*Ident
 
 ```
 searchKey: ast.filterPackage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4579,7 +4563,7 @@ func filterPackage(pkg *Package, f Filter, export bool) bool
 
 ```
 searchKey: ast.filterParamList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4590,7 +4574,7 @@ func filterParamList(fields *FieldList, filter Filter, export bool) bool
 
 ```
 searchKey: ast.filterSpec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4601,7 +4585,7 @@ func filterSpec(spec Spec, f Filter, export bool) bool
 
 ```
 searchKey: ast.filterSpecList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4612,7 +4596,7 @@ func filterSpecList(list []Spec, f Filter, export bool) []Spec
 
 ```
 searchKey: ast.filterType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4623,7 +4607,7 @@ func filterType(typ Expr, f Filter, export bool) bool
 
 ```
 searchKey: ast.fprint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4634,7 +4618,7 @@ func fprint(w io.Writer, fset *token.FileSet, x interface{}, f FieldFilter) (err
 
 ```
 searchKey: ast.importComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4645,7 +4629,7 @@ func importComment(s Spec) string
 
 ```
 searchKey: ast.importName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4656,7 +4640,7 @@ func importName(s Spec) string
 
 ```
 searchKey: ast.importPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4667,7 +4651,7 @@ func importPath(s Spec) string
 
 ```
 searchKey: ast.isDirective
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4680,7 +4664,7 @@ isDirective reports whether c is a comment directive.
 
 ```
 searchKey: ast.isWhitespace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4691,7 +4675,7 @@ func isWhitespace(ch byte) bool
 
 ```
 searchKey: ast.lineAt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4702,7 +4686,7 @@ func lineAt(fset *token.FileSet, pos token.Pos) int
 
 ```
 searchKey: ast.nameOf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4715,7 +4699,7 @@ nameOf returns the function (foo) or method name (foo.bar) for the given functio
 
 ```
 searchKey: ast.nodeList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4728,7 +4712,7 @@ nodeList returns the list of nodes of the AST n in source order.
 
 ```
 searchKey: ast.resolve
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4739,7 +4723,7 @@ func resolve(scope *Scope, ident *Ident) bool
 
 ```
 searchKey: ast.sortComments
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4752,7 +4736,7 @@ sortComments sorts the list of comment groups in source order.
 
 ```
 searchKey: ast.sortSpecs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4763,7 +4747,7 @@ func sortSpecs(fset *token.FileSet, f *File, specs []Spec) []Spec
 
 ```
 searchKey: ast.stripTrailingWhitespace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4774,7 +4758,7 @@ func stripTrailingWhitespace(s string) string
 
 ```
 searchKey: ast.summary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4785,7 +4769,7 @@ func summary(list []*CommentGroup) string
 
 ```
 searchKey: ast.trim
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4798,7 +4782,7 @@ Split s into lines, trim whitespace from all lines, and return the concatenated 
 
 ```
 searchKey: ast.walkDeclList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4809,7 +4793,7 @@ func walkDeclList(v Visitor, list []Decl)
 
 ```
 searchKey: ast.walkExprList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4820,7 +4804,7 @@ func walkExprList(v Visitor, list []Expr)
 
 ```
 searchKey: ast.walkFuncTypeParams
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4831,7 +4815,7 @@ func walkFuncTypeParams(v Visitor, n *FuncType)
 
 ```
 searchKey: ast.walkIdentList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4842,7 +4826,7 @@ func walkIdentList(v Visitor, list []*Ident)
 
 ```
 searchKey: ast.walkOtherNodes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4853,7 +4837,7 @@ func walkOtherNodes(v Visitor, n Node)
 
 ```
 searchKey: ast.walkStmtList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4864,7 +4848,7 @@ func walkStmtList(v Visitor, list []Stmt)
 
 ```
 searchKey: ast.walkTypeSpecParams
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

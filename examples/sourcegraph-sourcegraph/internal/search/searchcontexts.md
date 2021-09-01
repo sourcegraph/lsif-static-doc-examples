@@ -53,7 +53,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GlobalSearchContextName" href="#GlobalSearchContextName">const GlobalSearchContextName</a>
@@ -114,7 +114,7 @@ const searchContextSpecPrefix = "@"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="namespacedSearchContextSpecRegexp" href="#namespacedSearchContextSpecRegexp">var namespacedSearchContextSpecRegexp</a>
@@ -142,7 +142,7 @@ var validateSearchContextNameRegexp = lazyregexp.New(`^[a-zA-Z0-9_\-\/\.]+$`)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ParsedSearchContextSpec" href="#ParsedSearchContextSpec">type ParsedSearchContextSpec struct</a>
@@ -163,7 +163,7 @@ type ParsedSearchContextSpec struct {
 
 ```
 searchKey: searchcontexts.ParseSearchContextSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -173,14 +173,14 @@ func ParseSearchContextSpec(searchContextSpec string) ParsedSearchContextSpec
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ConvertVersionContextToSearchContext" href="#ConvertVersionContextToSearchContext">func ConvertVersionContextToSearchContext(ctx context.Context, db dbutil.DB, versionContext *schema.VersionContext) (*types.SearchContext, error)</a>
 
 ```
 searchKey: searchcontexts.ConvertVersionContextToSearchContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -191,7 +191,7 @@ func ConvertVersionContextToSearchContext(ctx context.Context, db dbutil.DB, ver
 
 ```
 searchKey: searchcontexts.CreateSearchContextWithRepositoryRevisions
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -202,7 +202,7 @@ func CreateSearchContextWithRepositoryRevisions(ctx context.Context, db dbutil.D
 
 ```
 searchKey: searchcontexts.DeleteSearchContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -213,7 +213,7 @@ func DeleteSearchContext(ctx context.Context, db dbutil.DB, searchContext *types
 
 ```
 searchKey: searchcontexts.GetAutoDefinedSearchContexts
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -235,7 +235,7 @@ func GetGlobalSearchContext() *types.SearchContext
 
 ```
 searchKey: searchcontexts.GetRepositoryRevisions
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -246,7 +246,7 @@ func GetRepositoryRevisions(ctx context.Context, db dbutil.DB, searchContextID i
 
 ```
 searchKey: searchcontexts.GetSearchContextSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -257,7 +257,7 @@ func GetSearchContextSpec(searchContext *types.SearchContext) string
 
 ```
 searchKey: searchcontexts.GetUserSearchContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -268,7 +268,7 @@ func GetUserSearchContext(name string, userID int32) *types.SearchContext
 
 ```
 searchKey: searchcontexts.IsAutoDefinedSearchContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -279,7 +279,7 @@ func IsAutoDefinedSearchContext(searchContext *types.SearchContext) bool
 
 ```
 searchKey: searchcontexts.IsGlobalSearchContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -290,7 +290,7 @@ func IsGlobalSearchContext(searchContext *types.SearchContext) bool
 
 ```
 searchKey: searchcontexts.IsGlobalSearchContextSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -301,7 +301,7 @@ func IsGlobalSearchContextSpec(searchContextSpec string) bool
 
 ```
 searchKey: searchcontexts.IsInstanceLevelSearchContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -312,7 +312,7 @@ func IsInstanceLevelSearchContext(searchContext *types.SearchContext) bool
 
 ```
 searchKey: searchcontexts.ResolveSearchContextSpec
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -323,7 +323,7 @@ func ResolveSearchContextSpec(ctx context.Context, db dbutil.DB, searchContextSp
 
 ```
 searchKey: searchcontexts.TestConstructingSearchContextSpecs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -334,7 +334,7 @@ func TestConstructingSearchContextSpecs(t *testing.T)
 
 ```
 searchKey: searchcontexts.TestConvertingVersionContextToSearchContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -345,7 +345,7 @@ func TestConvertingVersionContextToSearchContext(t *testing.T)
 
 ```
 searchKey: searchcontexts.TestCreatingSearchContexts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -356,7 +356,7 @@ func TestCreatingSearchContexts(t *testing.T)
 
 ```
 searchKey: searchcontexts.TestDeletingAutoDefinedSearchContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -367,7 +367,7 @@ func TestDeletingAutoDefinedSearchContext(t *testing.T)
 
 ```
 searchKey: searchcontexts.TestGettingSearchContextFromVersionContext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -378,7 +378,7 @@ func TestGettingSearchContextFromVersionContext(t *testing.T)
 
 ```
 searchKey: searchcontexts.TestResolvingInvalidSearchContextSpecs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -389,7 +389,7 @@ func TestResolvingInvalidSearchContextSpecs(t *testing.T)
 
 ```
 searchKey: searchcontexts.TestResolvingSearchContextRepoNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -400,7 +400,7 @@ func TestResolvingSearchContextRepoNames(t *testing.T)
 
 ```
 searchKey: searchcontexts.TestResolvingValidSearchContextSpecs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -411,7 +411,7 @@ func TestResolvingValidSearchContextSpecs(t *testing.T)
 
 ```
 searchKey: searchcontexts.TestSearchContextWriteAccessValidation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -422,7 +422,7 @@ func TestSearchContextWriteAccessValidation(t *testing.T)
 
 ```
 searchKey: searchcontexts.TestUpdatingSearchContexts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -433,7 +433,7 @@ func TestUpdatingSearchContexts(t *testing.T)
 
 ```
 searchKey: searchcontexts.UpdateSearchContextWithRepositoryRevisions
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -444,7 +444,7 @@ func UpdateSearchContextWithRepositoryRevisions(ctx context.Context, db dbutil.D
 
 ```
 searchKey: searchcontexts.ValidateSearchContextWriteAccessForCurrentUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -455,7 +455,7 @@ func ValidateSearchContextWriteAccessForCurrentUser(ctx context.Context, db dbut
 
 ```
 searchKey: searchcontexts.createRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -466,7 +466,7 @@ func createRepos(ctx context.Context, repoStore *database.RepoStore) ([]types.Re
 
 ```
 searchKey: searchcontexts.getSearchContextFromVersionContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -477,7 +477,7 @@ func getSearchContextFromVersionContext(versionContext *schema.VersionContext) *
 
 ```
 searchKey: searchcontexts.getVersionContextRepositoryRevisions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -499,7 +499,7 @@ func init()
 
 ```
 searchKey: searchcontexts.validateSearchContextDescription
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -510,7 +510,7 @@ func validateSearchContextDescription(description string) error
 
 ```
 searchKey: searchcontexts.validateSearchContextDoesNotExist
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -521,7 +521,7 @@ func validateSearchContextDoesNotExist(ctx context.Context, db dbutil.DB, search
 
 ```
 searchKey: searchcontexts.validateSearchContextName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -532,7 +532,7 @@ func validateSearchContextName(name string) error
 
 ```
 searchKey: searchcontexts.validateSearchContextRepositoryRevisions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

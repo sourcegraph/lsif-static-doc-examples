@@ -57,10 +57,6 @@ Package iotest implements Readers and Writers useful mainly for testing.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrTimeout" href="#ErrTimeout">var ErrTimeout</a>
 
 ```
@@ -86,10 +82,6 @@ var truncateWriterTests = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="dataErrReader" href="#dataErrReader">type dataErrReader struct</a>
 
@@ -341,15 +333,11 @@ func (l *writeLogger) Write(p []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DataErrReader" href="#DataErrReader">func DataErrReader(r io.Reader) io.Reader</a>
 
 ```
 searchKey: iotest.DataErrReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -362,7 +350,7 @@ DataErrReader changes the way errors are handled by a Reader. Normally, a Reader
 
 ```
 searchKey: iotest.ErrReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -375,7 +363,7 @@ ErrReader returns an io.Reader that returns 0, err from all Read calls.
 
 ```
 searchKey: iotest.HalfReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -388,7 +376,7 @@ HalfReader returns a Reader that implements Read by reading half as many request
 
 ```
 searchKey: iotest.NewReadLogger
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -401,7 +389,7 @@ NewReadLogger returns a reader that behaves like r except that it logs (using lo
 
 ```
 searchKey: iotest.NewWriteLogger
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -414,7 +402,7 @@ NewWriteLogger returns a writer that behaves like w except that it logs (using l
 
 ```
 searchKey: iotest.OneByteReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -427,7 +415,7 @@ OneByteReader returns a Reader that implements each non-empty Read by reading on
 
 ```
 searchKey: iotest.TestDataErrReader_emptyReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -438,7 +426,7 @@ func TestDataErrReader_emptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestDataErrReader_nonEmptyReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -449,7 +437,7 @@ func TestDataErrReader_nonEmptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestErrReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -460,7 +448,7 @@ func TestErrReader(t *testing.T)
 
 ```
 searchKey: iotest.TestHalfReader_emptyReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -471,7 +459,7 @@ func TestHalfReader_emptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestHalfReader_nonEmptyReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -482,7 +470,7 @@ func TestHalfReader_nonEmptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestOneByteReader_emptyReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -493,7 +481,7 @@ func TestOneByteReader_emptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestOneByteReader_nonEmptyReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -504,7 +492,7 @@ func TestOneByteReader_nonEmptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestReadLogger
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -515,7 +503,7 @@ func TestReadLogger(t *testing.T)
 
 ```
 searchKey: iotest.TestReadLogger_errorOnRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -526,7 +514,7 @@ func TestReadLogger_errorOnRead(t *testing.T)
 
 ```
 searchKey: iotest.TestReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -541,7 +529,7 @@ If TestReader finds any misbehaviors, it returns an error reporting them. The er
 
 ```
 searchKey: iotest.TestStringsReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -552,7 +540,7 @@ func TestStringsReader(t *testing.T)
 
 ```
 searchKey: iotest.TestTimeOutReader_emptyReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -563,7 +551,7 @@ func TestTimeOutReader_emptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestTimeOutReader_nonEmptyReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -574,7 +562,7 @@ func TestTimeOutReader_nonEmptyReader(t *testing.T)
 
 ```
 searchKey: iotest.TestTruncateWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -585,7 +573,7 @@ func TestTruncateWriter(t *testing.T)
 
 ```
 searchKey: iotest.TestWriteLogger
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -596,7 +584,7 @@ func TestWriteLogger(t *testing.T)
 
 ```
 searchKey: iotest.TestWriteLogger_errorOnWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -607,7 +595,7 @@ func TestWriteLogger_errorOnWrite(t *testing.T)
 
 ```
 searchKey: iotest.TimeoutReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -620,7 +608,7 @@ TimeoutReader returns ErrTimeout on the second read with no data. Subsequent cal
 
 ```
 searchKey: iotest.TruncateWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go

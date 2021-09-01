@@ -46,10 +46,6 @@ significant-byte first (network) order.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Size" href="#Size">const Size</a>
 
 ```
@@ -113,10 +109,6 @@ nmax is the largest n such that 255 * n * (n+1) / 2 + (n+1) * (mod-1) <= 2^32-1.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="golden" href="#golden">var golden</a>
 
 ```
@@ -129,10 +121,6 @@ var golden = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="digest" href="#digest">type digest uint32</a>
 
@@ -151,7 +139,7 @@ digest represents the partial evaluation of a checksum. The low 16 bits are s1, 
 
 ```
 searchKey: adler32.update
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -164,7 +152,7 @@ Add p to the running checksum d.
 
 ```
 searchKey: adler32.digest.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -175,7 +163,7 @@ func (d *digest) BlockSize() int
 
 ```
 searchKey: adler32.digest.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -186,7 +174,7 @@ func (d *digest) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: adler32.digest.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -197,7 +185,7 @@ func (d *digest) Reset()
 
 ```
 searchKey: adler32.digest.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -219,7 +207,7 @@ func (d *digest) Sum(in []byte) []byte
 
 ```
 searchKey: adler32.digest.Sum32
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -250,15 +238,11 @@ func (d *digest) Write(p []byte) (nn int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkAdler32KB" href="#BenchmarkAdler32KB">func BenchmarkAdler32KB(b *testing.B)</a>
 
 ```
 searchKey: adler32.BenchmarkAdler32KB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -269,7 +253,7 @@ func BenchmarkAdler32KB(b *testing.B)
 
 ```
 searchKey: adler32.Checksum
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -295,7 +279,7 @@ New returns a new hash.Hash32 computing the Adler-32 checksum. Its Sum method wi
 
 ```
 searchKey: adler32.TestGolden
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -306,7 +290,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: adler32.TestGoldenMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -317,7 +301,7 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: adler32.appendUint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -328,7 +312,7 @@ func appendUint32(b []byte, x uint32) []byte
 
 ```
 searchKey: adler32.checksum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -341,7 +325,7 @@ checksum is a slow but simple implementation of the Adler-32 checksum. It is a s
 
 ```
 searchKey: adler32.readUint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

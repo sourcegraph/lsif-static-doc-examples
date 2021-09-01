@@ -74,10 +74,6 @@ References:
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="aesIV" href="#aesIV">const aesIV</a>
 
 ```
@@ -90,10 +86,6 @@ const aesIV = "IV for ECDSA CTR"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="errZeroParam" href="#errZeroParam">var errZeroParam</a>
 
@@ -130,10 +122,6 @@ var zeroReader = &zr{}
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="PrivateKey" href="#PrivateKey">type PrivateKey struct</a>
 
 ```
@@ -154,7 +142,7 @@ PrivateKey represents an ECDSA private key.
 
 ```
 searchKey: ecdsa.GenerateKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -182,7 +170,7 @@ See PublicKey.Equal for details on how Curve is compared.
 
 ```
 searchKey: ecdsa.PrivateKey.Public
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -296,15 +284,11 @@ Read replaces the contents of dst with zeros.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkGenerateKey" href="#BenchmarkGenerateKey">func BenchmarkGenerateKey(b *testing.B)</a>
 
 ```
 searchKey: ecdsa.BenchmarkGenerateKey
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -315,7 +299,7 @@ func BenchmarkGenerateKey(b *testing.B)
 
 ```
 searchKey: ecdsa.BenchmarkSign
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -326,7 +310,7 @@ func BenchmarkSign(b *testing.B)
 
 ```
 searchKey: ecdsa.BenchmarkVerify
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -337,7 +321,7 @@ func BenchmarkVerify(b *testing.B)
 
 ```
 searchKey: ecdsa.Sign
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -350,7 +334,7 @@ Sign signs a hash (which should be the result of hashing a larger message) using
 
 ```
 searchKey: ecdsa.SignASN1
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -363,7 +347,7 @@ SignASN1 signs a hash (which should be the result of hashing a larger message) u
 
 ```
 searchKey: ecdsa.TestINDCCA
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -374,7 +358,7 @@ func TestINDCCA(t *testing.T)
 
 ```
 searchKey: ecdsa.TestKeyGeneration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -385,7 +369,7 @@ func TestKeyGeneration(t *testing.T)
 
 ```
 searchKey: ecdsa.TestNegativeInputs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -396,7 +380,7 @@ func TestNegativeInputs(t *testing.T)
 
 ```
 searchKey: ecdsa.TestNonceSafety
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -407,7 +391,7 @@ func TestNonceSafety(t *testing.T)
 
 ```
 searchKey: ecdsa.TestSignAndVerify
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -418,7 +402,7 @@ func TestSignAndVerify(t *testing.T)
 
 ```
 searchKey: ecdsa.TestSignAndVerifyASN1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -429,7 +413,7 @@ func TestSignAndVerifyASN1(t *testing.T)
 
 ```
 searchKey: ecdsa.TestVectors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -440,7 +424,7 @@ func TestVectors(t *testing.T)
 
 ```
 searchKey: ecdsa.TestZeroHashSignature
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -451,7 +435,7 @@ func TestZeroHashSignature(t *testing.T)
 
 ```
 searchKey: ecdsa.Verify
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -464,7 +448,7 @@ Verify verifies the signature in r, s of hash using the public key, pub. Its ret
 
 ```
 searchKey: ecdsa.VerifyASN1
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -477,7 +461,7 @@ VerifyASN1 verifies the ASN.1 encoded signature, sig, of hash using the public k
 
 ```
 searchKey: ecdsa.benchmarkAllCurves
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -488,7 +472,7 @@ func benchmarkAllCurves(t *testing.B, f func(*testing.B, elliptic.Curve))
 
 ```
 searchKey: ecdsa.fermatInverse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -501,7 +485,7 @@ fermatInverse calculates the inverse of k in GF(P) using Fermat's method. This h
 
 ```
 searchKey: ecdsa.fromHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -512,7 +496,7 @@ func fromHex(s string) *big.Int
 
 ```
 searchKey: ecdsa.hashToInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -525,7 +509,7 @@ hashToInt converts a hash value to an integer. There is some disagreement about 
 
 ```
 searchKey: ecdsa.randFieldElement
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -538,7 +522,7 @@ randFieldElement returns a random element of the field underlying the given curv
 
 ```
 searchKey: ecdsa.sign
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -549,7 +533,7 @@ func sign(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve, hash 
 
 ```
 searchKey: ecdsa.signGeneric
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -560,7 +544,7 @@ func signGeneric(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve
 
 ```
 searchKey: ecdsa.testAllCurves
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -571,7 +555,7 @@ func testAllCurves(t *testing.T, f func(*testing.T, elliptic.Curve))
 
 ```
 searchKey: ecdsa.testINDCCA
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -582,7 +566,7 @@ func testINDCCA(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa.testKeyGeneration
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -593,7 +577,7 @@ func testKeyGeneration(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa.testNegativeInputs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -604,7 +588,7 @@ func testNegativeInputs(t *testing.T, curve elliptic.Curve)
 
 ```
 searchKey: ecdsa.testNonceSafety
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -615,7 +599,7 @@ func testNonceSafety(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa.testSignAndVerify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -626,7 +610,7 @@ func testSignAndVerify(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa.testSignAndVerifyASN1
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -637,7 +621,7 @@ func testSignAndVerifyASN1(t *testing.T, c elliptic.Curve)
 
 ```
 searchKey: ecdsa.testZeroHashSignature
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -648,7 +632,7 @@ func testZeroHashSignature(t *testing.T, curve elliptic.Curve)
 
 ```
 searchKey: ecdsa.verify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -659,7 +643,7 @@ func verify(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int) bool
 
 ```
 searchKey: ecdsa.verifyGeneric
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

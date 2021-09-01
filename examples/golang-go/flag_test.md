@@ -52,7 +52,7 @@ These examples demonstrate more intricate uses of the flag package.
     * [func TestUserDefinedFunc(t *testing.T)](#TestUserDefinedFunc)
     * [func boolString(s string) string](#boolString)
     * [func init()](#init.example_test.go)
-    * [func init()](#init.example_test.go.0xc0297a6eb8)
+    * [func init()](#init.example_test.go.0xc03b6e9df8)
     * [func mustPanic(t *testing.T, testName string, expected string, f func())](#mustPanic)
     * [func testParse(f *FlagSet, t *testing.T)](#testParse)
 
@@ -60,7 +60,7 @@ These examples demonstrate more intricate uses of the flag package.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="defaultOutput" href="#defaultOutput">const defaultOutput</a>
@@ -77,7 +77,7 @@ const defaultOutput = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="gopherType" href="#gopherType">var gopherType</a>
@@ -131,7 +131,7 @@ var u = &url.URL{}
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="URLValue" href="#URLValue">type URLValue struct</a>
@@ -162,7 +162,7 @@ func (v URLValue) Set(s string) error
 
 ```
 searchKey: flag_test.URLValue.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -188,7 +188,7 @@ Declare a user-defined boolean flag type.
 
 ```
 searchKey: flag_test.boolFlagVar.IsBoolFlag
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -210,7 +210,7 @@ func (b *boolFlagVar) Set(value string) error
 
 ```
 searchKey: flag_test.boolFlagVar.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -245,7 +245,7 @@ func (f *flagVar) Set(value string) error
 
 ```
 searchKey: flag_test.flagVar.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -282,7 +282,7 @@ Set is the method to set the flag value, part of the flag.Value interface. Set's
 
 ```
 searchKey: flag_test.interval.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -294,7 +294,7 @@ String is the method to format the flag's value, part of the flag.Value interfac
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Example" href="#Example">func Example()</a>
@@ -334,7 +334,7 @@ func ExampleValue()
 
 ```
 searchKey: flag_test.TestChangingArgs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -347,7 +347,7 @@ This tests that one can reset the flags. This still works but not well, and is s
 
 ```
 searchKey: flag_test.TestEverything
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -358,7 +358,7 @@ func TestEverything(t *testing.T)
 
 ```
 searchKey: flag_test.TestExitCode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -369,7 +369,7 @@ func TestExitCode(t *testing.T)
 
 ```
 searchKey: flag_test.TestFlagSetParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -380,7 +380,7 @@ func TestFlagSetParse(t *testing.T)
 
 ```
 searchKey: flag_test.TestGet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -391,7 +391,7 @@ func TestGet(t *testing.T)
 
 ```
 searchKey: flag_test.TestGetters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -402,7 +402,7 @@ func TestGetters(t *testing.T)
 
 ```
 searchKey: flag_test.TestHelp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -415,7 +415,7 @@ Test that -help invokes the usage message and returns ErrHelp.
 
 ```
 searchKey: flag_test.TestIntFlagOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -428,7 +428,7 @@ Issue 19230: validate range of Int and Uint flag values.
 
 ```
 searchKey: flag_test.TestInvalidFlags
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -439,7 +439,7 @@ func TestInvalidFlags(t *testing.T)
 
 ```
 searchKey: flag_test.TestParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -450,7 +450,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: flag_test.TestParseError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -461,7 +461,7 @@ func TestParseError(t *testing.T)
 
 ```
 searchKey: flag_test.TestPrintDefaults
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -472,7 +472,7 @@ func TestPrintDefaults(t *testing.T)
 
 ```
 searchKey: flag_test.TestRangeError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -483,7 +483,7 @@ func TestRangeError(t *testing.T)
 
 ```
 searchKey: flag_test.TestRedefinedFlags
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -494,7 +494,7 @@ func TestRedefinedFlags(t *testing.T)
 
 ```
 searchKey: flag_test.TestSetOutput
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -505,7 +505,7 @@ func TestSetOutput(t *testing.T)
 
 ```
 searchKey: flag_test.TestUsage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -516,7 +516,7 @@ func TestUsage(t *testing.T)
 
 ```
 searchKey: flag_test.TestUsageOutput
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -529,7 +529,7 @@ Issue 20998: Usage should respect CommandLine.output.
 
 ```
 searchKey: flag_test.TestUserDefined
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -540,7 +540,7 @@ func TestUserDefined(t *testing.T)
 
 ```
 searchKey: flag_test.TestUserDefinedBool
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -551,7 +551,7 @@ func TestUserDefinedBool(t *testing.T)
 
 ```
 searchKey: flag_test.TestUserDefinedForCommandLine
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -562,7 +562,7 @@ func TestUserDefinedForCommandLine(t *testing.T)
 
 ```
 searchKey: flag_test.TestUserDefinedFunc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -573,7 +573,7 @@ func TestUserDefinedFunc(t *testing.T)
 
 ```
 searchKey: flag_test.boolString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -591,7 +591,7 @@ tags: [function private]
 func init()
 ```
 
-### <a id="init.example_test.go.0xc0297a6eb8" href="#init.example_test.go.0xc0297a6eb8">func init()</a>
+### <a id="init.example_test.go.0xc03b6e9df8" href="#init.example_test.go.0xc03b6e9df8">func init()</a>
 
 ```
 searchKey: flag_test.init
@@ -606,7 +606,7 @@ func init()
 
 ```
 searchKey: flag_test.mustPanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -617,7 +617,7 @@ func mustPanic(t *testing.T, testName string, expected string, f func())
 
 ```
 searchKey: flag_test.testParse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

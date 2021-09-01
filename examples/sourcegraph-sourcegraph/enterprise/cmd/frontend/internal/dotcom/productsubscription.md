@@ -125,7 +125,7 @@ Package productsubscription handles product subscriptions and licensing.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ProductLicenseIDKind" href="#ProductLicenseIDKind">const ProductLicenseIDKind</a>
@@ -164,7 +164,7 @@ const lastLicenseExpirationCheckKey = "last_license_expiration_check"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="emailQueries" href="#emailQueries">var emailQueries</a>
@@ -229,7 +229,7 @@ var mocks dbMocks
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ProductSubscriptionLicensingResolver" href="#ProductSubscriptionLicensingResolver">type ProductSubscriptionLicensingResolver struct</a>
@@ -515,7 +515,7 @@ dbLicensesListOptions contains options for listing product licenses.
 
 ```
 searchKey: productsubscription.dbLicensesListOptions.sqlConditions
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -700,7 +700,7 @@ dbSubscriptionsListOptions contains options for listing product subscriptions.
 
 ```
 searchKey: productsubscription.dbSubscriptionsListOptions.sqlConditions
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -783,7 +783,7 @@ productLicense implements the GraphQL type ProductLicense.
 
 ```
 searchKey: productsubscription.productLicenseByDBID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -796,7 +796,7 @@ productLicenseByDBID looks up and returns the ProductLicense with the given data
 
 ```
 searchKey: productsubscription.productLicenseByID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -809,7 +809,7 @@ productLicenseByID looks up and returns the ProductLicense with the given GraphQ
 
 ```
 searchKey: productsubscription.productLicense.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -820,7 +820,7 @@ func (r *productLicense) CreatedAt() graphqlbackend.DateTime
 
 ```
 searchKey: productsubscription.productLicense.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -831,7 +831,7 @@ func (r *productLicense) ID() graphql.ID
 
 ```
 searchKey: productsubscription.productLicense.Info
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -842,7 +842,7 @@ func (r *productLicense) Info() (*graphqlbackend.ProductLicenseInfo, error)
 
 ```
 searchKey: productsubscription.productLicense.LicenseKey
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -947,7 +947,7 @@ productSubscription implements the GraphQL type ProductSubscription.
 
 ```
 searchKey: productsubscription.productSubscriptionByDBID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -960,7 +960,7 @@ productSubscriptionByDBID looks up and returns the ProductSubscription with the 
 
 ```
 searchKey: productsubscription.productSubscriptionByID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -995,7 +995,7 @@ func (r *productSubscription) ActiveLicense(ctx context.Context) (graphqlbackend
 
 ```
 searchKey: productsubscription.productSubscription.CreatedAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1017,7 +1017,7 @@ func (r *productSubscription) Events(ctx context.Context) ([]graphqlbackend.Prod
 
 ```
 searchKey: productsubscription.productSubscription.ID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1039,7 +1039,7 @@ func (r *productSubscription) InvoiceItem(ctx context.Context) (graphqlbackend.P
 
 ```
 searchKey: productsubscription.productSubscription.IsArchived
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1050,7 +1050,7 @@ func (r *productSubscription) IsArchived() bool
 
 ```
 searchKey: productsubscription.productSubscription.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1105,7 +1105,7 @@ func (r *productSubscription) URLForSiteAdminBilling(ctx context.Context) (*stri
 
 ```
 searchKey: productsubscription.productSubscription.UUID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1198,7 +1198,7 @@ type productSubscriptionInvoiceItem struct {
 
 ```
 searchKey: productsubscription.productSubscriptionInvoiceItem.ExpiresAt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1209,7 +1209,7 @@ func (r *productSubscriptionInvoiceItem) ExpiresAt() graphqlbackend.DateTime
 
 ```
 searchKey: productsubscription.productSubscriptionInvoiceItem.Plan
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1220,7 +1220,7 @@ func (r *productSubscriptionInvoiceItem) Plan() (graphqlbackend.ProductPlan, err
 
 ```
 searchKey: productsubscription.productSubscriptionInvoiceItem.UserCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1247,7 +1247,7 @@ type productSubscriptionPreviewInvoice struct {
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.AfterInvoiceItem
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1258,7 +1258,7 @@ func (r *productSubscriptionPreviewInvoice) AfterInvoiceItem() graphqlbackend.Pr
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.AmountDue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1269,7 +1269,7 @@ func (r *productSubscriptionPreviewInvoice) AmountDue() int32
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.BeforeInvoiceItem
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1280,7 +1280,7 @@ func (r *productSubscriptionPreviewInvoice) BeforeInvoiceItem() graphqlbackend.P
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.IsDowngradeRequiringManualIntervention
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1291,7 +1291,7 @@ func (r *productSubscriptionPreviewInvoice) IsDowngradeRequiringManualInterventi
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.Price
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1302,7 +1302,7 @@ func (r *productSubscriptionPreviewInvoice) Price() int32
 
 ```
 searchKey: productsubscription.productSubscriptionPreviewInvoice.ProrationDate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1325,14 +1325,14 @@ type slackClient interface {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="StartCheckForUpcomingLicenseExpirations" href="#StartCheckForUpcomingLicenseExpirations">func StartCheckForUpcomingLicenseExpirations(db dbutil.DB)</a>
 
 ```
 searchKey: productsubscription.StartCheckForUpcomingLicenseExpirations
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1345,7 +1345,7 @@ StartCheckForUpcomingLicenseExpirations checks for upcoming license expirations 
 
 ```
 searchKey: productsubscription.TestCheckForUpcomingLicenseExpirations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1356,7 +1356,7 @@ func TestCheckForUpcomingLicenseExpirations(t *testing.T)
 
 ```
 searchKey: productsubscription.TestProductLicenses_Create
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1367,7 +1367,7 @@ func TestProductLicenses_Create(t *testing.T)
 
 ```
 searchKey: productsubscription.TestProductLicenses_List
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1378,7 +1378,7 @@ func TestProductLicenses_List(t *testing.T)
 
 ```
 searchKey: productsubscription.TestProductSubscriptions_Create
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1389,7 +1389,7 @@ func TestProductSubscriptions_Create(t *testing.T)
 
 ```
 searchKey: productsubscription.TestProductSubscriptions_List
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1400,7 +1400,7 @@ func TestProductSubscriptions_List(t *testing.T)
 
 ```
 searchKey: productsubscription.TestProductSubscriptions_Update
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1411,7 +1411,7 @@ func TestProductSubscriptions_Update(t *testing.T)
 
 ```
 searchKey: productsubscription.checkForUpcomingLicenseExpirations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1422,7 +1422,7 @@ func checkForUpcomingLicenseExpirations(db dbutil.DB, clock glock.Clock, client 
 
 ```
 searchKey: productsubscription.checkLastSubscriptionLicense
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1433,7 +1433,7 @@ func checkLastSubscriptionLicense(ctx context.Context, db dbutil.DB, s *dbSubscr
 
 ```
 searchKey: productsubscription.checkLicensesIfNeeded
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1446,7 +1446,7 @@ checkLicensesIfNeeded checks whether a day has passed since the last license che
 
 ```
 searchKey: productsubscription.generateProductLicenseForSubscription
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1468,7 +1468,7 @@ func init()
 
 ```
 searchKey: productsubscription.isDowngradeRequiringManualIntervention
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1479,7 +1479,7 @@ func isDowngradeRequiringManualIntervention(beforeUserCount int32, beforePlanPri
 
 ```
 searchKey: productsubscription.marshalProductLicenseID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1490,7 +1490,7 @@ func marshalProductLicenseID(id string) graphql.ID
 
 ```
 searchKey: productsubscription.marshalProductSubscriptionID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1501,7 +1501,7 @@ func marshalProductSubscriptionID(id string) graphql.ID
 
 ```
 searchKey: productsubscription.unmarshalProductLicenseID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1512,7 +1512,7 @@ func unmarshalProductLicenseID(id graphql.ID) (productLicenseID string, err erro
 
 ```
 searchKey: productsubscription.unmarshalProductSubscriptionID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1523,7 +1523,7 @@ func unmarshalProductSubscriptionID(id graphql.ID) (productSubscriptionID string
 
 ```
 searchKey: productsubscription.userCountExceedsPlanMaxError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

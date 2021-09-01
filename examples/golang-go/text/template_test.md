@@ -18,7 +18,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="templateFile" href="#templateFile">type templateFile struct</a>
@@ -40,7 +40,7 @@ templateFile defines the contents of a template to be stored in a file, for test
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleTemplate" href="#ExampleTemplate">func ExampleTemplate()</a>
@@ -121,7 +121,7 @@ This example demonstrates how to use one group of driver templates with distinct
 
 ```
 searchKey: template_test.TestLinkerGC
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -134,7 +134,7 @@ Issue 36021: verify that text/template doesn't prevent the linker from removing 
 
 ```
 searchKey: template_test.createTestDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

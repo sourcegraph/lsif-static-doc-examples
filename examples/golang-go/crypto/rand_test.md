@@ -21,7 +21,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="countingReader" href="#countingReader">type countingReader struct</a>
@@ -52,14 +52,14 @@ func (r *countingReader) Read(p []byte) (n int, err error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkPrime" href="#BenchmarkPrime">func BenchmarkPrime(b *testing.B)</a>
 
 ```
 searchKey: rand_test.BenchmarkPrime
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -83,7 +83,7 @@ This example reads 10 cryptographically secure pseudorandom numbers from rand.Re
 
 ```
 searchKey: rand_test.TestInt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -94,7 +94,7 @@ func TestInt(t *testing.T)
 
 ```
 searchKey: rand_test.TestIntEmptyMaxPanics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -107,7 +107,7 @@ Test that passing a new big.Int as max causes Int to panic
 
 ```
 searchKey: rand_test.TestIntMask
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -120,7 +120,7 @@ Test that Int does not mask out valid return values
 
 ```
 searchKey: rand_test.TestIntNegativeMaxPanics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -133,7 +133,7 @@ Test that passing a negative value as max causes Int to panic
 
 ```
 searchKey: rand_test.TestIntReads
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -146,7 +146,7 @@ Test that Int reads only the necessary number of bytes from the reader for max a
 
 ```
 searchKey: rand_test.TestPrimeBitsLt2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -159,7 +159,7 @@ Test that passing bits < 2 causes Prime to return nil, error
 
 ```
 searchKey: rand_test.TestPrimeSmall
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ func TestPrimeSmall(t *testing.T)
 
 ```
 searchKey: rand_test.testIntPanics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

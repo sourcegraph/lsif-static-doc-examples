@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "io_test",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -75,7 +74,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -421,7 +419,7 @@
                       "newPage": false,
                       "searchKey": "io_test.pipeTest.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -755,7 +753,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -776,7 +773,7 @@
                 "newPage": false,
                 "searchKey": "io_test.BenchmarkCopyNLarge",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -800,7 +797,7 @@
                 "newPage": false,
                 "searchKey": "io_test.BenchmarkCopyNSmall",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1192,7 +1189,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopy",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1216,7 +1213,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyBuffer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1240,7 +1237,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyBufferNil",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1264,7 +1261,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyLargeWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1288,7 +1285,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyN",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1312,7 +1309,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyNEOF",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1336,7 +1333,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyNReadFrom",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1360,7 +1357,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyNWriteTo",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1384,7 +1381,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyNegative",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1408,7 +1405,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyPriority",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1432,7 +1429,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyReadErrWriteErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1456,7 +1453,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyReadFrom",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1480,7 +1477,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyWriteTo",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1504,7 +1501,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestInterleavedMultiReader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1528,7 +1525,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiReader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1552,7 +1549,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiReaderCopy",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1576,7 +1573,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiReaderFinalEOF",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1600,7 +1597,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiReaderFlatten",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1624,7 +1621,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiReaderFreesExhaustedReaders",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1648,7 +1645,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiReaderSingleByteWithEOF",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1672,7 +1669,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1696,7 +1693,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiWriterCopy",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1720,7 +1717,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiWriterError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1744,7 +1741,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiWriterSingleChainFlatten",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1768,7 +1765,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiWriter_String",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1792,7 +1789,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiWriter_StringCheckCall",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1816,7 +1813,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestMultiWriter_WriteStringSingleAlloc",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1840,7 +1837,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipe1",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1864,7 +1861,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipe2",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1888,7 +1885,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipe3",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1912,7 +1909,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipeCloseError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1936,7 +1933,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipeConcurrent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1960,7 +1957,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipeReadClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1984,7 +1981,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipeReadClose2",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2008,7 +2005,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipeWriteClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2032,7 +2029,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipeWriteClose2",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2056,7 +2053,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestReadAtLeast",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2080,7 +2077,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestReadAtLeastWithDataAndEOF",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2104,7 +2101,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestReadAtLeastWithDataAndError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2128,7 +2125,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestSectionReader_ReadAt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2152,7 +2149,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestSectionReader_Seek",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2176,7 +2173,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestSectionReader_Size",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2200,7 +2197,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestTeeReader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2224,7 +2221,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestWriteAfterWriterClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2248,7 +2245,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestWriteEmpty",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2272,7 +2269,7 @@
                 "newPage": false,
                 "searchKey": "io_test.TestWriteNil",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2296,7 +2293,7 @@
                 "newPage": false,
                 "searchKey": "io_test.callDepth",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2319,7 +2316,7 @@
                 "newPage": false,
                 "searchKey": "io_test.checkWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2342,7 +2339,7 @@
                 "newPage": false,
                 "searchKey": "io_test.delayClose",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2365,7 +2362,7 @@
                 "newPage": false,
                 "searchKey": "io_test.reader",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2388,7 +2385,7 @@
                 "newPage": false,
                 "searchKey": "io_test.sortBytesInGroups",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2411,7 +2408,7 @@
                 "newPage": false,
                 "searchKey": "io_test.testMultiWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2434,7 +2431,7 @@
                 "newPage": false,
                 "searchKey": "io_test.testReadAtLeast",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2457,7 +2454,7 @@
                 "newPage": false,
                 "searchKey": "io_test.writer",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

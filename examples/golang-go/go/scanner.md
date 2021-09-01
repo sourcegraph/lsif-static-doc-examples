@@ -100,10 +100,6 @@ Package scanner implements a scanner for Go source text. It takes a []byte as so
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ScanComments" href="#ScanComments">const ScanComments</a>
 
 ```
@@ -209,10 +205,6 @@ const whitespace = "  \t  \n\n\n" // to separate tokens
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="dirUnixSegments" href="#dirUnixSegments">var dirUnixSegments</a>
 
@@ -343,10 +335,6 @@ var tokens = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Error" href="#Error">type Error struct</a>
 
 ```
@@ -367,7 +355,7 @@ In an ErrorList, an error is represented by an *Error. The position Pos, if vali
 
 ```
 searchKey: scanner.Error.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -419,7 +407,7 @@ Add adds an Error with given position and error message to an ErrorList.
 
 ```
 searchKey: scanner.ErrorList.Err
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -432,7 +420,7 @@ Err returns an error equivalent to this error list. If the list is empty, Err re
 
 ```
 searchKey: scanner.ErrorList.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -445,7 +433,7 @@ An ErrorList implements the error interface.
 
 ```
 searchKey: scanner.ErrorList.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -469,7 +457,7 @@ func (p ErrorList) Less(i, j int) bool
 
 ```
 searchKey: scanner.ErrorList.RemoveMultiples
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -482,7 +470,7 @@ RemoveMultiples sorts an ErrorList and removes all but the first error per line.
 
 ```
 searchKey: scanner.ErrorList.Reset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -495,7 +483,7 @@ Reset resets an ErrorList to no errors.
 
 ```
 searchKey: scanner.ErrorList.Sort
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -579,7 +567,7 @@ Note that Init may call err if there is an error in the first character of the f
 
 ```
 searchKey: scanner.Scanner.Scan
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -641,7 +629,7 @@ func (s *Scanner) errorf(offs int, format string, args ...interface{})
 
 ```
 searchKey: scanner.Scanner.findLineEnd
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -652,7 +640,7 @@ func (s *Scanner) findLineEnd() bool
 
 ```
 searchKey: scanner.Scanner.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -667,7 +655,7 @@ For optimization, there is some overlap between this method and s.scanIdentifier
 
 ```
 searchKey: scanner.Scanner.peek
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -680,7 +668,7 @@ peek returns the byte following the most recently read character without advanci
 
 ```
 searchKey: scanner.Scanner.scanComment
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -704,7 +692,7 @@ scanEscape parses an escape sequence where rune is the accepted escaped quote. I
 
 ```
 searchKey: scanner.Scanner.scanIdentifier
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -719,7 +707,7 @@ Be careful when making changes to this function: it is optimized and affects sca
 
 ```
 searchKey: scanner.Scanner.scanNumber
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -730,7 +718,7 @@ func (s *Scanner) scanNumber() (token.Token, string)
 
 ```
 searchKey: scanner.Scanner.scanRawString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -741,7 +729,7 @@ func (s *Scanner) scanRawString() string
 
 ```
 searchKey: scanner.Scanner.scanRune
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -752,7 +740,7 @@ func (s *Scanner) scanRune() string
 
 ```
 searchKey: scanner.Scanner.scanString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -763,7 +751,7 @@ func (s *Scanner) scanString() string
 
 ```
 searchKey: scanner.Scanner.skipWhitespace
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -863,15 +851,11 @@ type segment struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkScan" href="#BenchmarkScan">func BenchmarkScan(b *testing.B)</a>
 
 ```
 searchKey: scanner.BenchmarkScan
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -882,7 +866,7 @@ func BenchmarkScan(b *testing.B)
 
 ```
 searchKey: scanner.BenchmarkScanFiles
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -893,7 +877,7 @@ func BenchmarkScanFiles(b *testing.B)
 
 ```
 searchKey: scanner.PrintError
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -906,7 +890,7 @@ PrintError is a utility function that prints a list of errors to w, one error pe
 
 ```
 searchKey: scanner.TestInit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -919,7 +903,7 @@ Verify that initializing the same scanner more than once works correctly.
 
 ```
 searchKey: scanner.TestInvalidLineDirectives
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -932,7 +916,7 @@ Verify that invalid line directives get the correct error message.
 
 ```
 searchKey: scanner.TestIssue10213
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -945,7 +929,7 @@ Verify that no comments show up as literal values when skipping comments.
 
 ```
 searchKey: scanner.TestIssue28112
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -956,7 +940,7 @@ func TestIssue28112(t *testing.T)
 
 ```
 searchKey: scanner.TestLineDirectives
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -969,7 +953,7 @@ Verify that line directives are interpreted correctly.
 
 ```
 searchKey: scanner.TestNumbers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -980,7 +964,7 @@ func TestNumbers(t *testing.T)
 
 ```
 searchKey: scanner.TestScan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -993,7 +977,7 @@ Verify that calling Scan() provides the correct results.
 
 ```
 searchKey: scanner.TestScanErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1004,7 +988,7 @@ func TestScanErrors(t *testing.T)
 
 ```
 searchKey: scanner.TestSemis
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1015,7 +999,7 @@ func TestSemis(t *testing.T)
 
 ```
 searchKey: scanner.TestStdErrorHander
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1026,7 +1010,7 @@ func TestStdErrorHander(t *testing.T)
 
 ```
 searchKey: scanner.TestStripCR
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1037,7 +1021,7 @@ func TestStripCR(t *testing.T)
 
 ```
 searchKey: scanner.checkError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1048,7 +1032,7 @@ func checkError(t *testing.T, src string, tok token.Token, pos int, lit, err str
 
 ```
 searchKey: scanner.checkPos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1059,7 +1043,7 @@ func checkPos(t *testing.T, lit string, p token.Pos, expected token.Position)
 
 ```
 searchKey: scanner.checkSemi
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1070,7 +1054,7 @@ func checkSemi(t *testing.T, line string, mode Mode)
 
 ```
 searchKey: scanner.digitVal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1081,7 +1065,7 @@ func digitVal(ch rune) int
 
 ```
 searchKey: scanner.invalidSep
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1094,7 +1078,7 @@ invalidSep returns the index of the first invalid separator in x, or -1.
 
 ```
 searchKey: scanner.isDecimal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1105,7 +1089,7 @@ func isDecimal(ch rune) bool
 
 ```
 searchKey: scanner.isDigit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1116,7 +1100,7 @@ func isDigit(ch rune) bool
 
 ```
 searchKey: scanner.isHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1127,7 +1111,7 @@ func isHex(ch rune) bool
 
 ```
 searchKey: scanner.isLetter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1138,7 +1122,7 @@ func isLetter(ch rune) bool
 
 ```
 searchKey: scanner.litname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1149,7 +1133,7 @@ func litname(prefix rune) string
 
 ```
 searchKey: scanner.lower
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1160,7 +1144,7 @@ func lower(ch rune) rune
 
 ```
 searchKey: scanner.newlineCount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1171,7 +1155,7 @@ func newlineCount(s string) int
 
 ```
 searchKey: scanner.stripCR
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1182,7 +1166,7 @@ func stripCR(b []byte, comment bool) []byte
 
 ```
 searchKey: scanner.testSegments
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1193,7 +1177,7 @@ func testSegments(t *testing.T, segments []segment, filename string)
 
 ```
 searchKey: scanner.tokenclass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1204,7 +1188,7 @@ func tokenclass(tok token.Token) int
 
 ```
 searchKey: scanner.trailingDigits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

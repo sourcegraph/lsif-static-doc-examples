@@ -22,7 +22,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleFloat_Add" href="#ExampleFloat_Add">func ExampleFloat_Add()</a>
@@ -178,7 +178,7 @@ This example shows how to use big.Float to compute the square root of 2 with a p
 
 ```
 searchKey: big_test.recur
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

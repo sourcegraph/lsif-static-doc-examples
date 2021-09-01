@@ -43,7 +43,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="commitGraphConfigInst" href="#commitGraphConfigInst">var commitGraphConfigInst</a>
@@ -126,7 +126,7 @@ var janitorConfigInst = &janitorConfig{}
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="commitGraphConfig" href="#commitGraphConfig">type commitGraphConfig struct</a>
@@ -148,7 +148,7 @@ type commitGraphConfig struct {
 
 ```
 searchKey: codeintel.commitGraphConfig.Load
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -170,7 +170,7 @@ type commitGraphJob struct{}
 
 ```
 searchKey: codeintel.commitGraphJob.Config
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -209,7 +209,7 @@ type indexingConfig struct {
 
 ```
 searchKey: codeintel.indexingConfig.Load
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -231,7 +231,7 @@ type indexingJob struct{}
 
 ```
 searchKey: codeintel.indexingJob.Config
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -273,7 +273,7 @@ type janitorConfig struct {
 
 ```
 searchKey: codeintel.janitorConfig.Load
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -295,7 +295,7 @@ type janitorJob struct{}
 
 ```
 searchKey: codeintel.janitorJob.Config
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -316,7 +316,7 @@ func (j *janitorJob) Routines(ctx context.Context) ([]goroutine.BackgroundRoutin
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="InitCodeIntelDatabase" href="#InitCodeIntelDatabase">func InitCodeIntelDatabase() (*sql.DB, error)</a>

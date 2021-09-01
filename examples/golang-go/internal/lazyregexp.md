@@ -24,7 +24,7 @@ Package lazyregexp is a thin wrapper over regexp, allowing the use of global reg
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="inTest" href="#inTest">var inTest</a>
@@ -41,7 +41,7 @@ var inTest = len(os.Args) > 0 && strings.HasSuffix(strings.TrimSuffix(os.Args[0]
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Regexp" href="#Regexp">type Regexp struct</a>
@@ -65,7 +65,7 @@ Regexp is a wrapper around regexp.Regexp, where the underlying regexp will be co
 
 ```
 searchKey: lazyregexp.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -155,7 +155,7 @@ func (r *Regexp) ReplaceAllString(src, repl string) string
 
 ```
 searchKey: lazyregexp.Regexp.SubexpNames
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -166,7 +166,7 @@ func (r *Regexp) SubexpNames() []string
 
 ```
 searchKey: lazyregexp.Regexp.build
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -177,7 +177,7 @@ func (r *Regexp) build()
 
 ```
 searchKey: lazyregexp.Regexp.re
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go

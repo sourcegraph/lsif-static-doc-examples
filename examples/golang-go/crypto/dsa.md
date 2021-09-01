@@ -39,7 +39,7 @@ Deprecated: DSA is a legacy algorithm, and modern alternatives such as Ed25519 (
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="L1024N160" href="#L1024N160">const L1024N160</a>
@@ -102,7 +102,7 @@ numMRTests is the number of Miller-Rabin primality tests that we perform. We pic
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="ErrInvalidPublicKey" href="#ErrInvalidPublicKey">var ErrInvalidPublicKey</a>
@@ -121,7 +121,7 @@ ErrInvalidPublicKey results when a public key is not usable by this code. FIPS i
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="ParameterSizes" href="#ParameterSizes">type ParameterSizes int</a>
@@ -187,14 +187,14 @@ PublicKey represents a DSA public key.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package deprecated]
+tags: [deprecated]
 ```
 
 ### <a id="GenerateKey" href="#GenerateKey">func GenerateKey(priv *PrivateKey, rand io.Reader) error</a>
 
 ```
 searchKey: dsa.GenerateKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -207,7 +207,7 @@ GenerateKey generates a public&private key pair. The Parameters of the PrivateKe
 
 ```
 searchKey: dsa.GenerateParameters
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -220,7 +220,7 @@ GenerateParameters puts a random, valid set of DSA parameters into params. This 
 
 ```
 searchKey: dsa.Sign
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -237,7 +237,7 @@ Be aware that calling Sign with an attacker-controlled PrivateKey may require an
 
 ```
 searchKey: dsa.TestParameterGeneration
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -248,7 +248,7 @@ func TestParameterGeneration(t *testing.T)
 
 ```
 searchKey: dsa.TestSignAndVerify
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -259,7 +259,7 @@ func TestSignAndVerify(t *testing.T)
 
 ```
 searchKey: dsa.TestSignAndVerifyWithBadPublicKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -270,7 +270,7 @@ func TestSignAndVerifyWithBadPublicKey(t *testing.T)
 
 ```
 searchKey: dsa.TestSigningWithDegenerateKeys
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -281,7 +281,7 @@ func TestSigningWithDegenerateKeys(t *testing.T)
 
 ```
 searchKey: dsa.Verify
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -296,7 +296,7 @@ Note that FIPS 186-3 section 4.6 specifies that the hash should be truncated to 
 
 ```
 searchKey: dsa.fermatInverse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -309,7 +309,7 @@ fermatInverse calculates the inverse of k in GF(P) using Fermat's method. This h
 
 ```
 searchKey: dsa.fromHex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -320,7 +320,7 @@ func fromHex(s string) *big.Int
 
 ```
 searchKey: dsa.testParameterGeneration
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -331,7 +331,7 @@ func testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)
 
 ```
 searchKey: dsa.testSignAndVerify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

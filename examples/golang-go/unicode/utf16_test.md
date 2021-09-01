@@ -28,7 +28,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="decodeRuneTests" href="#decodeRuneTests">var decodeRuneTests</a>
@@ -78,7 +78,7 @@ var surrogateTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="decodeTest" href="#decodeTest">type decodeTest struct</a>
@@ -112,14 +112,14 @@ type encodeTest struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkDecodeRune" href="#BenchmarkDecodeRune">func BenchmarkDecodeRune(b *testing.B)</a>
 
 ```
 searchKey: utf16_test.BenchmarkDecodeRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -130,7 +130,7 @@ func BenchmarkDecodeRune(b *testing.B)
 
 ```
 searchKey: utf16_test.BenchmarkDecodeValidASCII
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -141,7 +141,7 @@ func BenchmarkDecodeValidASCII(b *testing.B)
 
 ```
 searchKey: utf16_test.BenchmarkDecodeValidJapaneseChars
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -152,7 +152,7 @@ func BenchmarkDecodeValidJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf16_test.BenchmarkEncodeRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -163,7 +163,7 @@ func BenchmarkEncodeRune(b *testing.B)
 
 ```
 searchKey: utf16_test.BenchmarkEncodeValidASCII
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -174,7 +174,7 @@ func BenchmarkEncodeValidASCII(b *testing.B)
 
 ```
 searchKey: utf16_test.BenchmarkEncodeValidJapaneseChars
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -185,7 +185,7 @@ func BenchmarkEncodeValidJapaneseChars(b *testing.B)
 
 ```
 searchKey: utf16_test.TestConstants
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -198,7 +198,7 @@ Validate the constants redefined from unicode.
 
 ```
 searchKey: utf16_test.TestDecode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -209,7 +209,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: utf16_test.TestDecodeRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -220,7 +220,7 @@ func TestDecodeRune(t *testing.T)
 
 ```
 searchKey: utf16_test.TestEncode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -231,7 +231,7 @@ func TestEncode(t *testing.T)
 
 ```
 searchKey: utf16_test.TestEncodeRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -242,7 +242,7 @@ func TestEncodeRune(t *testing.T)
 
 ```
 searchKey: utf16_test.TestIsSurrogate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

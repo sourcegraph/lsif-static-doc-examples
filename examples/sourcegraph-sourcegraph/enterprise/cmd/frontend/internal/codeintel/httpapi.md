@@ -138,7 +138,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="testCommit" href="#testCommit">const testCommit</a>
@@ -155,7 +155,7 @@ const testCommit = "deadbeef01deadbeef02deadbeef03deadbeef04"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="githubURL" href="#githubURL">var githubURL</a>
@@ -183,7 +183,7 @@ var revhashPattern = lazyregexp.New(`^[a-z0-9]{40}$`)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ClientError" href="#ClientError">type ClientError struct</a>
@@ -203,7 +203,7 @@ type ClientError struct {
 
 ```
 searchKey: httpapi.ClientError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -252,7 +252,7 @@ DBStoreAddUploadPartFunc describes the behavior when the AddUploadPart method of
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -328,7 +328,7 @@ func (f *DBStoreAddUploadPartFunc) appendCall(r0 DBStoreAddUploadPartFuncCall)
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -365,7 +365,7 @@ DBStoreAddUploadPartFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -378,7 +378,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreAddUploadPartFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -409,7 +409,7 @@ DBStoreDoneFunc describes the behavior when the Done method of the parent MockDB
 
 ```
 searchKey: httpapi.DBStoreDoneFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -485,7 +485,7 @@ func (f *DBStoreDoneFunc) appendCall(r0 DBStoreDoneFuncCall)
 
 ```
 searchKey: httpapi.DBStoreDoneFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -516,7 +516,7 @@ DBStoreDoneFuncCall is an object that describes an invocation of method Done on 
 
 ```
 searchKey: httpapi.DBStoreDoneFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -529,7 +529,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreDoneFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -560,7 +560,7 @@ DBStoreGetUploadByIDFunc describes the behavior when the GetUploadByID method of
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -636,7 +636,7 @@ func (f *DBStoreGetUploadByIDFunc) appendCall(r0 DBStoreGetUploadByIDFuncCall)
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -676,7 +676,7 @@ DBStoreGetUploadByIDFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -689,7 +689,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreGetUploadByIDFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -720,7 +720,7 @@ DBStoreInsertUploadFunc describes the behavior when the InsertUpload method of t
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -796,7 +796,7 @@ func (f *DBStoreInsertUploadFunc) appendCall(r0 DBStoreInsertUploadFuncCall)
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -833,7 +833,7 @@ DBStoreInsertUploadFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -846,7 +846,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreInsertUploadFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -877,7 +877,7 @@ DBStoreMarkFailedFunc describes the behavior when the MarkFailed method of the p
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -953,7 +953,7 @@ func (f *DBStoreMarkFailedFunc) appendCall(r0 DBStoreMarkFailedFuncCall)
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -990,7 +990,7 @@ DBStoreMarkFailedFuncCall is an object that describes an invocation of method Ma
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1003,7 +1003,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreMarkFailedFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1034,7 +1034,7 @@ DBStoreMarkQueuedFunc describes the behavior when the MarkQueued method of the p
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1110,7 +1110,7 @@ func (f *DBStoreMarkQueuedFunc) appendCall(r0 DBStoreMarkQueuedFuncCall)
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1147,7 +1147,7 @@ DBStoreMarkQueuedFuncCall is an object that describes an invocation of method Ma
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1160,7 +1160,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreMarkQueuedFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1215,7 +1215,7 @@ DBStoreTransactFunc describes the behavior when the Transact method of the paren
 
 ```
 searchKey: httpapi.DBStoreTransactFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1291,7 +1291,7 @@ func (f *DBStoreTransactFunc) appendCall(r0 DBStoreTransactFuncCall)
 
 ```
 searchKey: httpapi.DBStoreTransactFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1325,7 +1325,7 @@ DBStoreTransactFuncCall is an object that describes an invocation of method Tran
 
 ```
 searchKey: httpapi.DBStoreTransactFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1338,7 +1338,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: httpapi.DBStoreTransactFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1399,7 +1399,7 @@ NewMockDBStore creates a new mock of the DBStore interface. All methods return z
 
 ```
 searchKey: httpapi.NewMockDBStoreFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1663,14 +1663,14 @@ type enqueuePayload struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewUploadHandler" href="#NewUploadHandler">func NewUploadHandler(dbStore DBStore, uploadStore uploadstore.Store, internal bool) http.Handler</a>
 
 ```
 searchKey: httpapi.NewUploadHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1681,7 +1681,7 @@ func NewUploadHandler(dbStore DBStore, uploadStore uploadstore.Store, internal b
 
 ```
 searchKey: httpapi.TestHandleEnqueueMultipartFinalize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1692,7 +1692,7 @@ func TestHandleEnqueueMultipartFinalize(t *testing.T)
 
 ```
 searchKey: httpapi.TestHandleEnqueueMultipartFinalizeIncompleteUpload
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1703,7 +1703,7 @@ func TestHandleEnqueueMultipartFinalizeIncompleteUpload(t *testing.T)
 
 ```
 searchKey: httpapi.TestHandleEnqueueMultipartSetup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1714,7 +1714,7 @@ func TestHandleEnqueueMultipartSetup(t *testing.T)
 
 ```
 searchKey: httpapi.TestHandleEnqueueMultipartUpload
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1725,7 +1725,7 @@ func TestHandleEnqueueMultipartUpload(t *testing.T)
 
 ```
 searchKey: httpapi.TestHandleEnqueueSinglePayload
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1736,7 +1736,7 @@ func TestHandleEnqueueSinglePayload(t *testing.T)
 
 ```
 searchKey: httpapi.TestHandleEnqueueSinglePayloadNoIndexerName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1747,7 +1747,7 @@ func TestHandleEnqueueSinglePayloadNoIndexerName(t *testing.T)
 
 ```
 searchKey: httpapi.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1758,7 +1758,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: httpapi.clientError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1769,7 +1769,7 @@ func clientError(message string, vals ...interface{}) error
 
 ```
 searchKey: httpapi.copyAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1782,7 +1782,7 @@ copyAll writes the contents of r to w and logs on write failure.
 
 ```
 searchKey: httpapi.enforceAuth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1793,7 +1793,7 @@ func enforceAuth(ctx context.Context, w http.ResponseWriter, r *http.Request, re
 
 ```
 searchKey: httpapi.enforceAuthGithub
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1804,7 +1804,7 @@ func enforceAuthGithub(ctx context.Context, w http.ResponseWriter, r *http.Reque
 
 ```
 searchKey: httpapi.ensureRepoAndCommitExist
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1817,7 +1817,7 @@ func ensureRepoAndCommitExist(ctx context.Context, w http.ResponseWriter, repoNa
 
 ```
 searchKey: httpapi.formatAWSError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1830,7 +1830,7 @@ formatAWSError returns the unwrapped, root AWS/S3 error. This method returns an 
 
 ```
 searchKey: httpapi.getQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1841,7 +1841,7 @@ func getQuery(r *http.Request, name string) string
 
 ```
 searchKey: httpapi.getQueryInt
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1852,7 +1852,7 @@ func getQueryInt(r *http.Request, name string) int
 
 ```
 searchKey: httpapi.hasQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1863,7 +1863,7 @@ func hasQuery(r *http.Request, name string) bool
 
 ```
 searchKey: httpapi.inferIndexer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1878,7 +1878,7 @@ Newer versions of src-cli will do this same check before uploading the file. How
 
 ```
 searchKey: httpapi.isSiteAdmin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1889,7 +1889,7 @@ func isSiteAdmin(ctx context.Context) bool
 
 ```
 searchKey: httpapi.sanitizeRoot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1900,7 +1900,7 @@ func sanitizeRoot(s string) string
 
 ```
 searchKey: httpapi.setupRepoMocks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1911,7 +1911,7 @@ func setupRepoMocks(t testing.TB)
 
 ```
 searchKey: httpapi.writeJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

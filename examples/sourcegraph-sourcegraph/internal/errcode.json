@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "internal/errcode",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -67,7 +66,7 @@
                       "newPage": false,
                       "searchKey": "errcode.HTTPErr.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -89,7 +88,7 @@
                       "newPage": false,
                       "searchKey": "errcode.HTTPErr.HTTPStatusCode",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -134,7 +133,7 @@
                       "newPage": false,
                       "searchKey": "errcode.Mock.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -156,7 +155,7 @@
                       "newPage": false,
                       "searchKey": "errcode.Mock.NotFound",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -224,7 +223,7 @@
                       "newPage": false,
                       "searchKey": "errcode.nonRetryableError.NonRetryable",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -271,7 +270,7 @@
                       "newPage": false,
                       "searchKey": "errcode.presentationError.Error",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -294,7 +293,7 @@
                       "newPage": false,
                       "searchKey": "errcode.presentationError.PresentationError",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -323,7 +322,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -344,7 +342,7 @@
                 "newPage": false,
                 "searchKey": "errcode.HTTP",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -366,7 +364,7 @@
                 "newPage": false,
                 "searchKey": "errcode.IsAccountSuspended",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -388,7 +386,7 @@
                 "newPage": false,
                 "searchKey": "errcode.IsBadRequest",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -410,7 +408,7 @@
                 "newPage": false,
                 "searchKey": "errcode.IsForbidden",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -432,7 +430,7 @@
                 "newPage": false,
                 "searchKey": "errcode.IsHTTPErrorCode",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -454,7 +452,7 @@
                 "newPage": false,
                 "searchKey": "errcode.IsNonRetryable",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -476,7 +474,7 @@
                 "newPage": false,
                 "searchKey": "errcode.IsNotFound",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -498,7 +496,7 @@
                 "newPage": false,
                 "searchKey": "errcode.IsTemporary",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -520,7 +518,7 @@
                 "newPage": false,
                 "searchKey": "errcode.IsTimeout",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -542,7 +540,7 @@
                 "newPage": false,
                 "searchKey": "errcode.IsUnauthorized",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -564,7 +562,7 @@
                 "newPage": false,
                 "searchKey": "errcode.MakeNonRetryable",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -586,7 +584,7 @@
                 "newPage": false,
                 "searchKey": "errcode.NewPresentationError",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -608,7 +606,7 @@
                 "newPage": false,
                 "searchKey": "errcode.PresentationMessage",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -630,7 +628,7 @@
                 "newPage": false,
                 "searchKey": "errcode.TestPresentationError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -654,7 +652,7 @@
                 "newPage": false,
                 "searchKey": "errcode.WithPresentationMessage",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -676,7 +674,7 @@
                 "newPage": false,
                 "searchKey": "errcode.isErrorPredicate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

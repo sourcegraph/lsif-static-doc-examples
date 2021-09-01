@@ -22,7 +22,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="killClientConnsQuery" href="#killClientConnsQuery">const killClientConnsQuery</a>
@@ -39,7 +39,7 @@ const killClientConnsQuery = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="rng" href="#rng">var rng</a>
@@ -80,14 +80,14 @@ var templateOnce sync.Once
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewDB" href="#NewDB">func NewDB(t testing.TB, dsn string) *sql.DB</a>
 
 ```
 searchKey: dbtest.NewDB
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -100,7 +100,7 @@ NewDB returns a connection to a clean, new temporary testing database with the s
 
 ```
 searchKey: dbtest.NewTx
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -121,7 +121,7 @@ which aids in testing.
 
 ```
 searchKey: dbtest.dbConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -132,7 +132,7 @@ func dbConn(t testing.TB, cfg *url.URL) *sql.DB
 
 ```
 searchKey: dbtest.dbExec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -143,7 +143,7 @@ func dbExec(t testing.TB, db *sql.DB, q string, args ...interface{})
 
 ```
 searchKey: dbtest.initTemplateDB
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -169,7 +169,7 @@ templateDBName returns the name of the template database for the currently runni
 
 ```
 searchKey: dbtest.updateDSNFromEnv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

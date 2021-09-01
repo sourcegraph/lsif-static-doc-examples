@@ -28,7 +28,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="RuntimeVersion" href="#RuntimeVersion">var RuntimeVersion</a>
@@ -97,7 +97,7 @@ go list std | awk '{ print "\"" $1 "\": struct{}{}," }'
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Directory" href="#Directory">type Directory struct</a>
@@ -122,7 +122,7 @@ type Directory struct {
 
 ```
 searchKey: gosrc.ResolveImportPath
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -133,7 +133,7 @@ func ResolveImportPath(client httpcli.Doer, importPath string) (*Directory, erro
 
 ```
 searchKey: gosrc.resolveDynamicImportPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -144,7 +144,7 @@ func resolveDynamicImportPath(client httpcli.Doer, importPath string) (*Director
 
 ```
 searchKey: gosrc.resolveStaticImportPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -174,7 +174,7 @@ See [https://golang.org/cmd/go/#hdr-Remote_import_paths](https://golang.org/cmd/
 
 ```
 searchKey: gosrc.fetchMeta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -185,7 +185,7 @@ func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *impor
 
 ```
 searchKey: gosrc.parseMeta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -235,14 +235,14 @@ func (t testTransport) RoundTrip(req *http.Request) (*http.Response, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="IsStdlibPkg" href="#IsStdlibPkg">func IsStdlibPkg(importPath string) bool</a>
 
 ```
 searchKey: gosrc.IsStdlibPkg
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -255,7 +255,7 @@ IsStdlibPkg returns true if the package path is part of the stdlib. This uses a 
 
 ```
 searchKey: gosrc.TestResolveImportPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -266,7 +266,7 @@ func TestResolveImportPath(t *testing.T)
 
 ```
 searchKey: gosrc.attrValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

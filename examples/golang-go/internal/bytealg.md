@@ -40,7 +40,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MaxBruteForce" href="#MaxBruteForce">const MaxBruteForce</a>
@@ -148,7 +148,7 @@ Offsets into internal/cpu records for use in assembly.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MaxLen" href="#MaxLen">var MaxLen</a>
@@ -167,14 +167,14 @@ MaxLen is the maximum length of the string to be searched for (argument b) in In
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Compare" href="#Compare">func Compare(a, b []byte) int</a>
 
 ```
 searchKey: bytealg.Compare
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -185,7 +185,7 @@ func Compare(a, b []byte) int
 
 ```
 searchKey: bytealg.Count
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -196,7 +196,7 @@ func Count(b []byte, c byte) int
 
 ```
 searchKey: bytealg.CountString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -207,7 +207,7 @@ func CountString(s string, c byte) int
 
 ```
 searchKey: bytealg.Cutover
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -220,7 +220,7 @@ Cutover reports the number of failures of IndexByte we should tolerate before sw
 
 ```
 searchKey: bytealg.Equal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -235,7 +235,7 @@ Equal is equivalent to bytes.Equal. It is provided here for convenience, because
 
 ```
 searchKey: bytealg.HashStr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -248,7 +248,7 @@ HashStr returns the hash and the appropriate multiplicative factor for use in Ra
 
 ```
 searchKey: bytealg.HashStrBytes
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -261,7 +261,7 @@ HashStrBytes returns the hash and the appropriate multiplicative factor for use 
 
 ```
 searchKey: bytealg.HashStrRev
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -274,7 +274,7 @@ HashStrRev returns the hash of the reverse of sep and the appropriate multiplica
 
 ```
 searchKey: bytealg.HashStrRevBytes
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -287,7 +287,7 @@ HashStrRevBytes returns the hash of the reverse of sep and the appropriate multi
 
 ```
 searchKey: bytealg.Index
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -300,7 +300,7 @@ Index returns the index of the first instance of b in a, or -1 if b is not prese
 
 ```
 searchKey: bytealg.IndexByte
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -311,7 +311,7 @@ func IndexByte(b []byte, c byte) int
 
 ```
 searchKey: bytealg.IndexByteString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -322,7 +322,7 @@ func IndexByteString(s string, c byte) int
 
 ```
 searchKey: bytealg.IndexRabinKarp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -335,7 +335,7 @@ IndexRabinKarp uses the Rabin-Karp search algorithm to return the index of the f
 
 ```
 searchKey: bytealg.IndexRabinKarpBytes
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -348,7 +348,7 @@ IndexRabinKarpBytes uses the Rabin-Karp search algorithm to return the index of 
 
 ```
 searchKey: bytealg.IndexString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -361,7 +361,7 @@ IndexString returns the index of the first instance of b in a, or -1 if b is not
 
 ```
 searchKey: bytealg.abigen_runtime_cmpstring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -372,7 +372,7 @@ func abigen_runtime_cmpstring(a, b string) int
 
 ```
 searchKey: bytealg.abigen_runtime_memequal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -383,7 +383,7 @@ func abigen_runtime_memequal(a, b unsafe.Pointer, size uintptr) bool
 
 ```
 searchKey: bytealg.abigen_runtime_memequal_varlen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -394,7 +394,7 @@ func abigen_runtime_memequal_varlen(a, b unsafe.Pointer) bool
 
 ```
 searchKey: bytealg.countGeneric
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -407,7 +407,7 @@ A backup implementation to use by assembly.
 
 ```
 searchKey: bytealg.countGenericString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

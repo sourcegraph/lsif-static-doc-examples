@@ -25,7 +25,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FileInfo" href="#FileInfo">type FileInfo struct</a>
@@ -51,7 +51,7 @@ FileInfo implements fs.FileInfo.
 
 ```
 searchKey: util.FileInfo.IsDir
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -62,7 +62,7 @@ func (fi *FileInfo) IsDir() bool
 
 ```
 searchKey: util.FileInfo.ModTime
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -73,7 +73,7 @@ func (fi *FileInfo) ModTime() time.Time
 
 ```
 searchKey: util.FileInfo.Mode
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -84,7 +84,7 @@ func (fi *FileInfo) Mode() os.FileMode
 
 ```
 searchKey: util.FileInfo.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -95,7 +95,7 @@ func (fi *FileInfo) Name() string
 
 ```
 searchKey: util.FileInfo.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -106,7 +106,7 @@ func (fi *FileInfo) Size() int64
 
 ```
 searchKey: util.FileInfo.Sys
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -128,7 +128,7 @@ type fileInfosByName []fs.FileInfo
 
 ```
 searchKey: util.fileInfosByName.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -160,14 +160,14 @@ func (v fileInfosByName) Swap(i, j int)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Rel" href="#Rel">func Rel(path string) string</a>
 
 ```
 searchKey: util.Rel
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -182,7 +182,7 @@ The elements in a file path are separated by slash ('/', U+002F) characters, reg
 
 ```
 searchKey: util.ScriptFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -195,7 +195,7 @@ Constructs platform-specific temporary script file with a given prefix On Window
 
 ```
 searchKey: util.SortFileInfosByName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -208,7 +208,7 @@ SortFileInfosByName sorts fis by name, alphabetically.
 
 ```
 searchKey: util.TestScriptFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -219,7 +219,7 @@ func TestScriptFile(t *testing.T)
 
 ```
 searchKey: util.WriteFileWithPermissions
-tags: [method]
+tags: [function]
 ```
 
 ```Go

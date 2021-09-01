@@ -37,7 +37,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrBinary" href="#ErrBinary">var ErrBinary</a>
@@ -149,7 +149,7 @@ var syntectServer = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="LineRange" href="#LineRange">type LineRange struct</a>
@@ -235,14 +235,14 @@ Params defines mandatory and optional parameters to use when highlighting code.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Code" href="#Code">func Code(ctx context.Context, p Params) (h template.HTML, aborted bool, err error)</a>
 
 ```
 searchKey: highlight.Code
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -259,7 +259,7 @@ In the event the input content is binary, ErrBinary is returned.
 
 ```
 searchKey: highlight.CodeAsLines
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -274,7 +274,7 @@ In the event the input content is binary, ErrBinary is returned.
 
 ```
 searchKey: highlight.IsBinary
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -300,7 +300,7 @@ ResetMocks clears the mock functions set on Mocks (so that subsequent tests don'
 
 ```
 searchKey: highlight.SplitLineRanges
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -315,7 +315,7 @@ Input line ranges will automatically be clamped within the bounds of the file.
 
 ```
 searchKey: highlight.TestCodeAsLines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -326,7 +326,7 @@ func TestCodeAsLines(t *testing.T)
 
 ```
 searchKey: highlight.TestGeneratePlainTable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -337,7 +337,7 @@ func TestGeneratePlainTable(t *testing.T)
 
 ```
 searchKey: highlight.TestGeneratePlainTableSecurity
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -348,7 +348,7 @@ func TestGeneratePlainTableSecurity(t *testing.T)
 
 ```
 searchKey: highlight.TestSplitHighlightedLines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -359,7 +359,7 @@ func TestSplitHighlightedLines(t *testing.T)
 
 ```
 searchKey: highlight.TestSplitLineRanges
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -370,7 +370,7 @@ func TestSplitLineRanges(t *testing.T)
 
 ```
 searchKey: highlight.Test_normalizeFilepath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -381,7 +381,7 @@ func Test_normalizeFilepath(t *testing.T)
 
 ```
 searchKey: highlight.firstCharacters
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -392,7 +392,7 @@ func firstCharacters(s string, n int) string
 
 ```
 searchKey: highlight.generatePlainTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -414,7 +414,7 @@ func init()
 
 ```
 searchKey: highlight.normalizeFilepath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -443,7 +443,7 @@ It expects the filepath uses forward slashes always.
 
 ```
 searchKey: highlight.splitHighlightedLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

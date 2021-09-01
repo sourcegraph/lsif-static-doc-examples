@@ -51,7 +51,7 @@ Package socktest provides utilities for socket testing.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FilterAccept" href="#FilterAccept">const FilterAccept</a>
@@ -129,7 +129,7 @@ const FilterSocket FilterType = iota // for Socket
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AfterFilter" href="#AfterFilter">type AfterFilter func(*std/net/internal/socktest.Status) error</a>
@@ -175,7 +175,7 @@ A Cookie represents a 3-tuple of a socket; address family, socket type and proto
 
 ```
 searchKey: socktest.cookie
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -186,7 +186,7 @@ func cookie(family, sotype, proto int) Cookie
 
 ```
 searchKey: socktest.Cookie.Family
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -199,7 +199,7 @@ Family returns an address family.
 
 ```
 searchKey: socktest.Cookie.Protocol
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -212,7 +212,7 @@ Protocol returns a protocol number.
 
 ```
 searchKey: socktest.Cookie.Type
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ A Stat represents a per-cookie socket statistics.
 
 ```
 searchKey: socktest.Stat.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -334,7 +334,7 @@ A Status represents the status of a socket.
 
 ```
 searchKey: socktest.Status.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -458,7 +458,7 @@ Socket wraps syscall.Socket.
 
 ```
 searchKey: socktest.Switch.Sockets
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -471,7 +471,7 @@ Sockets returns mappings of socket descriptor to socket status.
 
 ```
 searchKey: socktest.Switch.Stats
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -497,7 +497,7 @@ addLocked returns a new Status without locking. sw.smu must be held before call.
 
 ```
 searchKey: socktest.Switch.init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -540,14 +540,14 @@ func (st stats) getLocked(c Cookie) *Stat
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="familyString" href="#familyString">func familyString(family int) string</a>
 
 ```
 searchKey: socktest.familyString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -558,7 +558,7 @@ func familyString(family int) string
 
 ```
 searchKey: socktest.protocolString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -569,7 +569,7 @@ func protocolString(proto int) string
 
 ```
 searchKey: socktest.typeString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -284,7 +284,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="N" href="#N">const N</a>
@@ -313,7 +313,7 @@ const space = "\t\v\r\f\n\u0085\u00a0\u2000\u3000"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ContainsAnyTests" href="#ContainsAnyTests">var ContainsAnyTests</a>
@@ -799,7 +799,7 @@ var upperTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BinOpTest" href="#BinOpTest">type BinOpTest struct</a>
@@ -1029,7 +1029,7 @@ type predicate struct {
 
 ```
 searchKey: bytes_test.not
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1039,14 +1039,14 @@ func not(p predicate) predicate
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkBufferFullSmallReads" href="#BenchmarkBufferFullSmallReads">func BenchmarkBufferFullSmallReads(b *testing.B)</a>
 
 ```
 searchKey: bytes_test.BenchmarkBufferFullSmallReads
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1059,7 +1059,7 @@ Check that we don't compact too often. From Issue 5154.
 
 ```
 searchKey: bytes_test.BenchmarkBufferNotEmptyWriteRead
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1072,7 +1072,7 @@ From Issue 5154.
 
 ```
 searchKey: bytes_test.BenchmarkBytesCompare
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1083,7 +1083,7 @@ func BenchmarkBytesCompare(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesBig
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1094,7 +1094,7 @@ func BenchmarkCompareBytesBig(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesBigIdentical
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1105,7 +1105,7 @@ func BenchmarkCompareBytesBigIdentical(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesBigUnaligned
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1116,7 +1116,7 @@ func BenchmarkCompareBytesBigUnaligned(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesDifferentLength
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1127,7 +1127,7 @@ func BenchmarkCompareBytesDifferentLength(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesEmpty
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1138,7 +1138,7 @@ func BenchmarkCompareBytesEmpty(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesEqual
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1149,7 +1149,7 @@ func BenchmarkCompareBytesEqual(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesIdentical
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1160,7 +1160,7 @@ func BenchmarkCompareBytesIdentical(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesSameLength
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1171,7 +1171,7 @@ func BenchmarkCompareBytesSameLength(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCompareBytesToNil
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1182,7 +1182,7 @@ func BenchmarkCompareBytesToNil(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCount
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1193,7 +1193,7 @@ func BenchmarkCount(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCountEasy
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1204,7 +1204,7 @@ func BenchmarkCountEasy(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCountHard1
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1215,7 +1215,7 @@ func BenchmarkCountHard1(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCountHard2
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1226,7 +1226,7 @@ func BenchmarkCountHard2(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCountHard3
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1237,7 +1237,7 @@ func BenchmarkCountHard3(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkCountSingle
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1248,7 +1248,7 @@ func BenchmarkCountSingle(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkEqual
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1259,7 +1259,7 @@ func BenchmarkEqual(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkFields
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1270,7 +1270,7 @@ func BenchmarkFields(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkFieldsFunc
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1281,7 +1281,7 @@ func BenchmarkFieldsFunc(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndex
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1292,7 +1292,7 @@ func BenchmarkIndex(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexAnyASCII
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1303,7 +1303,7 @@ func BenchmarkIndexAnyASCII(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexAnyUTF8
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1314,7 +1314,7 @@ func BenchmarkIndexAnyUTF8(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexByte
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1325,7 +1325,7 @@ func BenchmarkIndexByte(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexBytePortable
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1336,7 +1336,7 @@ func BenchmarkIndexBytePortable(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexEasy
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1347,7 +1347,7 @@ func BenchmarkIndexEasy(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexHard1
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1358,7 +1358,7 @@ func BenchmarkIndexHard1(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexHard2
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1369,7 +1369,7 @@ func BenchmarkIndexHard2(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexHard3
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1380,7 +1380,7 @@ func BenchmarkIndexHard3(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexHard4
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1391,7 +1391,7 @@ func BenchmarkIndexHard4(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexPeriodic
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1402,7 +1402,7 @@ func BenchmarkIndexPeriodic(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1413,7 +1413,7 @@ func BenchmarkIndexRune(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkIndexRuneASCII
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1424,7 +1424,7 @@ func BenchmarkIndexRuneASCII(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkLastIndexAnyASCII
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1435,7 +1435,7 @@ func BenchmarkLastIndexAnyASCII(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkLastIndexAnyUTF8
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1446,7 +1446,7 @@ func BenchmarkLastIndexAnyUTF8(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkLastIndexHard1
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1457,7 +1457,7 @@ func BenchmarkLastIndexHard1(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkLastIndexHard2
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1468,7 +1468,7 @@ func BenchmarkLastIndexHard2(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkLastIndexHard3
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1479,7 +1479,7 @@ func BenchmarkLastIndexHard3(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkReadString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1490,7 +1490,7 @@ func BenchmarkReadString(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkRepeat
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1501,7 +1501,7 @@ func BenchmarkRepeat(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkSplitEmptySeparator
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1512,7 +1512,7 @@ func BenchmarkSplitEmptySeparator(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkSplitMultiByteSeparator
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1523,7 +1523,7 @@ func BenchmarkSplitMultiByteSeparator(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkSplitNMultiByteSeparator
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1534,7 +1534,7 @@ func BenchmarkSplitNMultiByteSeparator(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkSplitNSingleByteSeparator
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1545,7 +1545,7 @@ func BenchmarkSplitNSingleByteSeparator(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkSplitSingleByteSeparator
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1556,7 +1556,7 @@ func BenchmarkSplitSingleByteSeparator(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkToLower
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1567,7 +1567,7 @@ func BenchmarkToLower(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkToUpper
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1578,7 +1578,7 @@ func BenchmarkToUpper(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkToValidUTF8
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1589,7 +1589,7 @@ func BenchmarkToValidUTF8(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkTrimASCII
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1600,7 +1600,7 @@ func BenchmarkTrimASCII(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkTrimSpace
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1611,7 +1611,7 @@ func BenchmarkTrimSpace(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkWriteByte
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1622,7 +1622,7 @@ func BenchmarkWriteByte(b *testing.B)
 
 ```
 searchKey: bytes_test.BenchmarkWriteRune
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -2216,7 +2216,7 @@ func ExampleTrimSuffix()
 
 ```
 searchKey: bytes_test.TestBasicOperations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2227,7 +2227,7 @@ func TestBasicOperations(t *testing.T)
 
 ```
 searchKey: bytes_test.TestBufferGrowNegative
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2238,7 +2238,7 @@ func TestBufferGrowNegative(t *testing.T)
 
 ```
 searchKey: bytes_test.TestBufferGrowth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2251,7 +2251,7 @@ Tests that we occasionally compact. Issue 5154.
 
 ```
 searchKey: bytes_test.TestBufferTruncateNegative
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2262,7 +2262,7 @@ func TestBufferTruncateNegative(t *testing.T)
 
 ```
 searchKey: bytes_test.TestBufferTruncateOutOfRange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2273,7 +2273,7 @@ func TestBufferTruncateOutOfRange(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCapWithPreallocatedSlice
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2284,7 +2284,7 @@ func TestCapWithPreallocatedSlice(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCapWithSliceAndWrittenData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2295,7 +2295,7 @@ func TestCapWithSliceAndWrittenData(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCompare
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2306,7 +2306,7 @@ func TestCompare(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCompareBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2317,7 +2317,7 @@ func TestCompareBytes(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCompareIdenticalSlice
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2328,7 +2328,7 @@ func TestCompareIdenticalSlice(t *testing.T)
 
 ```
 searchKey: bytes_test.TestContains
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2339,7 +2339,7 @@ func TestContains(t *testing.T)
 
 ```
 searchKey: bytes_test.TestContainsAny
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2350,7 +2350,7 @@ func TestContainsAny(t *testing.T)
 
 ```
 searchKey: bytes_test.TestContainsRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2361,7 +2361,7 @@ func TestContainsRune(t *testing.T)
 
 ```
 searchKey: bytes_test.TestCountByte
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2374,7 +2374,7 @@ test count of a single byte across page offsets
 
 ```
 searchKey: bytes_test.TestCountByteNoMatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2387,7 +2387,7 @@ Make sure we don't count bytes outside our window
 
 ```
 searchKey: bytes_test.TestEmptyReaderConcurrent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2398,7 +2398,7 @@ func TestEmptyReaderConcurrent(t *testing.T)
 
 ```
 searchKey: bytes_test.TestEndianBaseCompare
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2409,7 +2409,7 @@ func TestEndianBaseCompare(t *testing.T)
 
 ```
 searchKey: bytes_test.TestEqual
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2420,7 +2420,7 @@ func TestEqual(t *testing.T)
 
 ```
 searchKey: bytes_test.TestEqualExhaustive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2431,7 +2431,7 @@ func TestEqualExhaustive(t *testing.T)
 
 ```
 searchKey: bytes_test.TestEqualFold
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2442,7 +2442,7 @@ func TestEqualFold(t *testing.T)
 
 ```
 searchKey: bytes_test.TestFields
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2453,7 +2453,7 @@ func TestFields(t *testing.T)
 
 ```
 searchKey: bytes_test.TestFieldsFunc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2464,7 +2464,7 @@ func TestFieldsFunc(t *testing.T)
 
 ```
 searchKey: bytes_test.TestGrow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2475,7 +2475,7 @@ func TestGrow(t *testing.T)
 
 ```
 searchKey: bytes_test.TestGrowOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2486,7 +2486,7 @@ func TestGrowOverflow(t *testing.T)
 
 ```
 searchKey: bytes_test.TestIndex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2497,7 +2497,7 @@ func TestIndex(t *testing.T)
 
 ```
 searchKey: bytes_test.TestIndexAny
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2508,7 +2508,7 @@ func TestIndexAny(t *testing.T)
 
 ```
 searchKey: bytes_test.TestIndexByte
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2519,7 +2519,7 @@ func TestIndexByte(t *testing.T)
 
 ```
 searchKey: bytes_test.TestIndexByteBig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2532,7 +2532,7 @@ test a larger buffer with different sizes and alignments
 
 ```
 searchKey: bytes_test.TestIndexByteSmall
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2545,7 +2545,7 @@ test a small index across all page offsets
 
 ```
 searchKey: bytes_test.TestIndexFunc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2556,7 +2556,7 @@ func TestIndexFunc(t *testing.T)
 
 ```
 searchKey: bytes_test.TestIndexRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2567,7 +2567,7 @@ func TestIndexRune(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLargeByteReads
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2578,7 +2578,7 @@ func TestLargeByteReads(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLargeByteWrites
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2589,7 +2589,7 @@ func TestLargeByteWrites(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLargeStringReads
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2600,7 +2600,7 @@ func TestLargeStringReads(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLargeStringWrites
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2611,7 +2611,7 @@ func TestLargeStringWrites(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLastIndex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2622,7 +2622,7 @@ func TestLastIndex(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLastIndexAny
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2633,7 +2633,7 @@ func TestLastIndexAny(t *testing.T)
 
 ```
 searchKey: bytes_test.TestLastIndexByte
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2644,7 +2644,7 @@ func TestLastIndexByte(t *testing.T)
 
 ```
 searchKey: bytes_test.TestMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2655,7 +2655,7 @@ func TestMap(t *testing.T)
 
 ```
 searchKey: bytes_test.TestMixedReadsAndWrites
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2666,7 +2666,7 @@ func TestMixedReadsAndWrites(t *testing.T)
 
 ```
 searchKey: bytes_test.TestNewBuffer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2677,7 +2677,7 @@ func TestNewBuffer(t *testing.T)
 
 ```
 searchKey: bytes_test.TestNewBufferString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2688,7 +2688,7 @@ func TestNewBufferString(t *testing.T)
 
 ```
 searchKey: bytes_test.TestNext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2699,7 +2699,7 @@ func TestNext(t *testing.T)
 
 ```
 searchKey: bytes_test.TestNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2710,7 +2710,7 @@ func TestNil(t *testing.T)
 
 ```
 searchKey: bytes_test.TestNotEqual
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2723,7 +2723,7 @@ make sure Equal returns false for minimally different strings. The data is all z
 
 ```
 searchKey: bytes_test.TestReadAfterBigSeek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2734,7 +2734,7 @@ func TestReadAfterBigSeek(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReadBytes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2745,7 +2745,7 @@ func TestReadBytes(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReadEmptyAtEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2758,7 +2758,7 @@ Was a bug: used to give EOF reading empty slice at EOF.
 
 ```
 searchKey: bytes_test.TestReadFrom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2769,7 +2769,7 @@ func TestReadFrom(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReadFromNegativeReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2780,7 +2780,7 @@ func TestReadFromNegativeReader(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReadFromPanicReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2793,7 +2793,7 @@ Make sure that an empty Buffer remains empty when it is "grown" before a Read th
 
 ```
 searchKey: bytes_test.TestReadString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2804,7 +2804,7 @@ func TestReadString(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2815,7 +2815,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderAt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2826,7 +2826,7 @@ func TestReaderAt(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderAtConcurrent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2837,7 +2837,7 @@ func TestReaderAtConcurrent(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderCopyNothing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2850,7 +2850,7 @@ verify that copying from an empty reader always has the same results, regardless
 
 ```
 searchKey: bytes_test.TestReaderDoubleUnreadRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2861,7 +2861,7 @@ func TestReaderDoubleUnreadRune(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderLen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2872,7 +2872,7 @@ func TestReaderLen(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderLenSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2885,7 +2885,7 @@ tests that Len is affected by reads, but Size is not.
 
 ```
 searchKey: bytes_test.TestReaderReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2896,7 +2896,7 @@ func TestReaderReset(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderWriteTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2907,7 +2907,7 @@ func TestReaderWriteTo(t *testing.T)
 
 ```
 searchKey: bytes_test.TestReaderZero
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2918,7 +2918,7 @@ func TestReaderZero(t *testing.T)
 
 ```
 searchKey: bytes_test.TestRepeat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2929,7 +2929,7 @@ func TestRepeat(t *testing.T)
 
 ```
 searchKey: bytes_test.TestRepeatCatchesOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2942,7 +2942,7 @@ See Issue golang.org/issue/16237
 
 ```
 searchKey: bytes_test.TestReplace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2953,7 +2953,7 @@ func TestReplace(t *testing.T)
 
 ```
 searchKey: bytes_test.TestRuneIO
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2964,7 +2964,7 @@ func TestRuneIO(t *testing.T)
 
 ```
 searchKey: bytes_test.TestRunes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2975,7 +2975,7 @@ func TestRunes(t *testing.T)
 
 ```
 searchKey: bytes_test.TestSplit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2986,7 +2986,7 @@ func TestSplit(t *testing.T)
 
 ```
 searchKey: bytes_test.TestSplitAfter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2997,7 +2997,7 @@ func TestSplitAfter(t *testing.T)
 
 ```
 searchKey: bytes_test.TestTitle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3008,7 +3008,7 @@ func TestTitle(t *testing.T)
 
 ```
 searchKey: bytes_test.TestToLower
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3019,7 +3019,7 @@ func TestToLower(t *testing.T)
 
 ```
 searchKey: bytes_test.TestToTitle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3030,7 +3030,7 @@ func TestToTitle(t *testing.T)
 
 ```
 searchKey: bytes_test.TestToUpper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3041,7 +3041,7 @@ func TestToUpper(t *testing.T)
 
 ```
 searchKey: bytes_test.TestToValidUTF8
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3052,7 +3052,7 @@ func TestToValidUTF8(t *testing.T)
 
 ```
 searchKey: bytes_test.TestTrim
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3063,7 +3063,7 @@ func TestTrim(t *testing.T)
 
 ```
 searchKey: bytes_test.TestTrimFunc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3074,7 +3074,7 @@ func TestTrimFunc(t *testing.T)
 
 ```
 searchKey: bytes_test.TestTrimSpace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3085,7 +3085,7 @@ func TestTrimSpace(t *testing.T)
 
 ```
 searchKey: bytes_test.TestUnreadByte
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3096,7 +3096,7 @@ func TestUnreadByte(t *testing.T)
 
 ```
 searchKey: bytes_test.TestUnreadRuneError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3107,7 +3107,7 @@ func TestUnreadRuneError(t *testing.T)
 
 ```
 searchKey: bytes_test.TestWriteInvalidRune
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3118,7 +3118,7 @@ func TestWriteInvalidRune(t *testing.T)
 
 ```
 searchKey: bytes_test.TestWriteTo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3129,7 +3129,7 @@ func TestWriteTo(t *testing.T)
 
 ```
 searchKey: bytes_test.benchBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3140,7 +3140,7 @@ func benchBytes(b *testing.B, sizes []int, f func(b *testing.B, n int))
 
 ```
 searchKey: bytes_test.benchmarkCountHard
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3151,7 +3151,7 @@ func benchmarkCountHard(b *testing.B, sep []byte)
 
 ```
 searchKey: bytes_test.benchmarkIndexHard
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3162,7 +3162,7 @@ func benchmarkIndexHard(b *testing.B, sep []byte)
 
 ```
 searchKey: bytes_test.benchmarkLastIndexHard
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3173,7 +3173,7 @@ func benchmarkLastIndexHard(b *testing.B, sep []byte)
 
 ```
 searchKey: bytes_test.bmEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3184,7 +3184,7 @@ func bmEqual(equal func([]byte, []byte) bool) func(b *testing.B, n int)
 
 ```
 searchKey: bytes_test.bmIndexByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3195,7 +3195,7 @@ func bmIndexByte(index func([]byte, byte) int) func(b *testing.B, n int)
 
 ```
 searchKey: bytes_test.bmIndexRune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3206,7 +3206,7 @@ func bmIndexRune(index func([]byte, rune) int) func(b *testing.B, n int)
 
 ```
 searchKey: bytes_test.bmIndexRuneASCII
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3217,7 +3217,7 @@ func bmIndexRuneASCII(index func([]byte, rune) int) func(b *testing.B, n int)
 
 ```
 searchKey: bytes_test.check
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3230,7 +3230,7 @@ Verify that contents of buf match the string s.
 
 ```
 searchKey: bytes_test.empty
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3243,7 +3243,7 @@ Empty buf through repeated reads into fub. The initial contents of buf correspon
 
 ```
 searchKey: bytes_test.eq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3254,7 +3254,7 @@ func eq(a, b []string) bool
 
 ```
 searchKey: bytes_test.fillBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3267,7 +3267,7 @@ Fill buf through n writes of byte slice fub. The initial contents of buf corresp
 
 ```
 searchKey: bytes_test.fillString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3302,7 +3302,7 @@ func makeBenchInputHard() []byte
 
 ```
 searchKey: bytes_test.repeat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3313,7 +3313,7 @@ func repeat(b []byte, count int) (err error)
 
 ```
 searchKey: bytes_test.rot13
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3326,7 +3326,7 @@ User-defined self-inverse mapping function
 
 ```
 searchKey: bytes_test.runIndexAnyTests
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3337,7 +3337,7 @@ func runIndexAnyTests(t *testing.T, f func(s []byte, chars string) int, funcName
 
 ```
 searchKey: bytes_test.runIndexTests
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3350,7 +3350,7 @@ Execute f on each test case.  funcName should be the name of f; it's used in fai
 
 ```
 searchKey: bytes_test.runStringTests
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3363,7 +3363,7 @@ Execute f on each test case.  funcName should be the name of f; it's used in fai
 
 ```
 searchKey: bytes_test.runesEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3374,7 +3374,7 @@ func runesEqual(a, b []rune) bool
 
 ```
 searchKey: bytes_test.sliceOfString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3385,7 +3385,7 @@ func sliceOfString(s [][]byte) []string
 
 ```
 searchKey: bytes_test.tenRunes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3396,7 +3396,7 @@ func tenRunes(r rune) string
 
 ```
 searchKey: bytes_test.valName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

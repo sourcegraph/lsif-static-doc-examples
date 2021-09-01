@@ -69,10 +69,6 @@ SHA-1 is cryptographically broken and should not be used for secure applications
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BlockSize" href="#BlockSize">const BlockSize</a>
 
 ```
@@ -233,10 +229,6 @@ const _K3 = 0xCA62C1D6
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="bench" href="#bench">var bench</a>
 
 ```
@@ -294,10 +286,6 @@ var useAVX2 = cpu.X86.HasAVX2 && cpu.X86.HasBMI1 && cpu.X86.HasBMI2
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="digest" href="#digest">type digest struct</a>
 
 ```
@@ -320,7 +308,7 @@ digest represents the partial evaluation of a checksum.
 
 ```
 searchKey: sha1.digest.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -344,7 +332,7 @@ ConstantTimeSum computes the same result of Sum() but in constant time
 
 ```
 searchKey: sha1.digest.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -355,7 +343,7 @@ func (d *digest) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: sha1.digest.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -366,7 +354,7 @@ func (d *digest) Reset()
 
 ```
 searchKey: sha1.digest.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -410,7 +398,7 @@ func (d *digest) Write(p []byte) (nn int, err error)
 
 ```
 searchKey: sha1.digest.checkSum
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -421,7 +409,7 @@ func (d *digest) checkSum() [Size]byte
 
 ```
 searchKey: sha1.digest.constSum
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -461,15 +449,11 @@ Tests for unmarshaling hashes that have hashed a large amount of data The initia
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkHash1K" href="#BenchmarkHash1K">func BenchmarkHash1K(b *testing.B)</a>
 
 ```
 searchKey: sha1.BenchmarkHash1K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -480,7 +464,7 @@ func BenchmarkHash1K(b *testing.B)
 
 ```
 searchKey: sha1.BenchmarkHash320Bytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -491,7 +475,7 @@ func BenchmarkHash320Bytes(b *testing.B)
 
 ```
 searchKey: sha1.BenchmarkHash8Bytes
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -502,7 +486,7 @@ func BenchmarkHash8Bytes(b *testing.B)
 
 ```
 searchKey: sha1.BenchmarkHash8K
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -526,7 +510,7 @@ New returns a new hash.Hash computing the SHA1 checksum. The Hash also implement
 
 ```
 searchKey: sha1.Sum
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -539,7 +523,7 @@ Sum returns the SHA-1 checksum of the data.
 
 ```
 searchKey: sha1.TestBlockGeneric
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -552,7 +536,7 @@ Tests that blockGeneric (pure Go) and block (in assembly for some architectures)
 
 ```
 searchKey: sha1.TestBlockSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -563,7 +547,7 @@ func TestBlockSize(t *testing.T)
 
 ```
 searchKey: sha1.TestGolden
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -574,7 +558,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: sha1.TestGoldenMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -585,7 +569,7 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: sha1.TestLargeHashes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -596,7 +580,7 @@ func TestLargeHashes(t *testing.T)
 
 ```
 searchKey: sha1.TestSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -607,7 +591,7 @@ func TestSize(t *testing.T)
 
 ```
 searchKey: sha1.appendUint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -618,7 +602,7 @@ func appendUint32(b []byte, x uint32) []byte
 
 ```
 searchKey: sha1.appendUint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -629,7 +613,7 @@ func appendUint64(b []byte, x uint64) []byte
 
 ```
 searchKey: sha1.benchmarkSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -640,7 +624,7 @@ func benchmarkSize(b *testing.B, size int)
 
 ```
 searchKey: sha1.block
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -651,7 +635,7 @@ func block(dig *digest, p []byte)
 
 ```
 searchKey: sha1.blockAMD64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -662,7 +646,7 @@ func blockAMD64(dig *digest, p []byte)
 
 ```
 searchKey: sha1.blockAVX2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -673,7 +657,7 @@ func blockAVX2(dig *digest, p []byte)
 
 ```
 searchKey: sha1.blockGeneric
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -686,7 +670,7 @@ blockGeneric is a portable, pure Go version of the SHA-1 block step. It's used b
 
 ```
 searchKey: sha1.consumeUint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -697,7 +681,7 @@ func consumeUint32(b []byte) ([]byte, uint32)
 
 ```
 searchKey: sha1.consumeUint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -719,7 +703,7 @@ func init()
 
 ```
 searchKey: sha1.safeSum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

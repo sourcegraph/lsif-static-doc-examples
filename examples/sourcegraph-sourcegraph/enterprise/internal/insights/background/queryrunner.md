@@ -51,7 +51,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="cleanJobsFmtStr" href="#cleanJobsFmtStr">const cleanJobsFmtStr</a>
@@ -112,7 +112,7 @@ const queryJobsStatusFmtStr = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="jobsColumns" href="#jobsColumns">var jobsColumns</a>
@@ -129,7 +129,7 @@ var jobsColumns = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Job" href="#Job">type Job struct</a>
@@ -169,7 +169,7 @@ See internal/workerutil/dbworker for more information about dbworkers.
 
 ```
 searchKey: queryrunner.dequeueJob
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -180,7 +180,7 @@ func dequeueJob(ctx context.Context, workerBaseStore *basestore.Store, recordID 
 
 ```
 searchKey: queryrunner.Job.RecordID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -208,7 +208,7 @@ type JobsStatus struct {
 
 ```
 searchKey: queryrunner.QueryJobsStatus
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -243,7 +243,7 @@ type commitSearchResult struct {
 
 ```
 searchKey: queryrunner.commitSearchResult.matchCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -254,7 +254,7 @@ func (r *commitSearchResult) matchCount() int
 
 ```
 searchKey: queryrunner.commitSearchResult.repoID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -286,7 +286,7 @@ type fileMatch struct {
 
 ```
 searchKey: queryrunner.fileMatch.matchCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -297,7 +297,7 @@ func (r *fileMatch) matchCount() int
 
 ```
 searchKey: queryrunner.fileMatch.repoID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -337,7 +337,7 @@ type gqlSearchResponse struct {
 
 ```
 searchKey: queryrunner.search
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -392,7 +392,7 @@ type repository struct {
 
 ```
 searchKey: queryrunner.repository.matchCount
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -403,7 +403,7 @@ func (r *repository) matchCount() int
 
 ```
 searchKey: queryrunner.repository.repoID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -428,7 +428,7 @@ type result interface {
 
 ```
 searchKey: queryrunner.decodeResult
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -466,14 +466,14 @@ func (r *workHandler) Handle(ctx context.Context, workerStore dbworkerstore.Stor
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EnqueueJob" href="#EnqueueJob">func EnqueueJob(ctx context.Context, workerBaseStore *basestore.Store, job *Job) (id int, err error)</a>
 
 ```
 searchKey: queryrunner.EnqueueJob
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -486,7 +486,7 @@ EnqueueJob enqueues a job for the query runner worker to execute later.
 
 ```
 searchKey: queryrunner.NewCleaner
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -501,7 +501,7 @@ This is particularly important because the historical enqueuer can produce e.g. 
 
 ```
 searchKey: queryrunner.NewResetter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -514,7 +514,7 @@ NewResetter returns a resetter that will reset pending query runner jobs if they
 
 ```
 searchKey: queryrunner.NewWorker
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -527,7 +527,7 @@ NewWorker returns a worker that will execute search queries and insert informati
 
 ```
 searchKey: queryrunner.TestJobQueue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -540,7 +540,7 @@ TestJobQueue tests that EnqueueJob and dequeueJob work mutually to transfer jobs
 
 ```
 searchKey: queryrunner.cleanJobs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -553,7 +553,7 @@ cleanJobs
 
 ```
 searchKey: queryrunner.createDBWorkerStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -568,7 +568,7 @@ See internal/workerutil/dbworker for more information about dbworkers.
 
 ```
 searchKey: queryrunner.doScanJobs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -579,7 +579,7 @@ func doScanJobs(rows *sql.Rows, err error) ([]*Job, error)
 
 ```
 searchKey: queryrunner.getRateLimit
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -590,7 +590,7 @@ func getRateLimit(defaultValue rate.Limit) func() rate.Limit
 
 ```
 searchKey: queryrunner.gqlURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -614,7 +614,7 @@ func init()
 
 ```
 searchKey: queryrunner.scanJobs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

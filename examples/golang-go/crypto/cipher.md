@@ -83,10 +83,6 @@ Package cipher implements standard block cipher modes that can be wrapped around
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="gcmBlockSize" href="#gcmBlockSize">const gcmBlockSize</a>
 
 ```
@@ -145,10 +141,6 @@ const streamBufferSize = 512
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="XorBytes" href="#XorBytes">var XorBytes</a>
 
 ```
@@ -185,10 +177,6 @@ var gcmReductionTable = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="AEAD" href="#AEAD">type AEAD interface</a>
 
@@ -241,7 +229,7 @@ AEAD is a cipher mode providing authenticated encryption with associated data. F
 
 ```
 searchKey: cipher.NewGCM
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -256,7 +244,7 @@ In general, the GHASH operation performed by this implementation of GCM is not c
 
 ```
 searchKey: cipher.NewGCMWithNonceSize
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -271,7 +259,7 @@ Only use this function if you require compatibility with an existing cryptosyste
 
 ```
 searchKey: cipher.NewGCMWithTagSize
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -288,7 +276,7 @@ Only use this function if you require compatibility with an existing cryptosyste
 
 ```
 searchKey: cipher.newGCMWithNonceAndTagSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -352,7 +340,7 @@ A BlockMode represents a block cipher running in a block-based mode (CBC, ECB et
 
 ```
 searchKey: cipher.NewCBCDecrypter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -365,7 +353,7 @@ NewCBCDecrypter returns a BlockMode which decrypts in cipher block chaining mode
 
 ```
 searchKey: cipher.NewCBCEncrypter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -403,7 +391,7 @@ A Stream represents a stream cipher.
 
 ```
 searchKey: cipher.NewCFBDecrypter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -416,7 +404,7 @@ NewCFBDecrypter returns a Stream which decrypts with cipher feedback mode, using
 
 ```
 searchKey: cipher.NewCFBEncrypter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -429,7 +417,7 @@ NewCFBEncrypter returns a Stream which encrypts with cipher feedback mode, using
 
 ```
 searchKey: cipher.NewCTR
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -442,7 +430,7 @@ NewCTR returns a Stream which encrypts/decrypts using the given Block in counter
 
 ```
 searchKey: cipher.NewOFB
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -455,7 +443,7 @@ NewOFB returns a Stream that encrypts or decrypts using the block cipher b in ou
 
 ```
 searchKey: cipher.newCFB
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -510,7 +498,7 @@ StreamWriter wraps a Stream into an io.Writer. It calls XORKeyStream to process 
 
 ```
 searchKey: cipher.StreamWriter.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -550,7 +538,7 @@ type cbc struct {
 
 ```
 searchKey: cipher.newCBC
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -587,7 +575,7 @@ type cbcDecrypter cbc
 
 ```
 searchKey: cipher.cbcDecrypter.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -646,7 +634,7 @@ type cbcEncrypter cbc
 
 ```
 searchKey: cipher.cbcEncrypter.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -735,7 +723,7 @@ func (x *ctr) XORKeyStream(dst, src []byte)
 
 ```
 searchKey: cipher.ctr.refill
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -781,7 +769,7 @@ gcm represents a Galois Counter Mode with a specific key. See [https://csrc.nist
 
 ```
 searchKey: cipher.gcm.NonceSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -803,7 +791,7 @@ func (g *gcm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)
 
 ```
 searchKey: cipher.gcm.Overhead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -940,7 +928,7 @@ the coefficient of x¹²⁷ can be obtained by v.high & 1.
 
 ```
 searchKey: cipher.gcmAdd
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -953,7 +941,7 @@ gcmAdd adds two elements of GF(2¹²⁸) and returns the sum.
 
 ```
 searchKey: cipher.gcmDouble
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -993,7 +981,7 @@ func (x *ofb) XORKeyStream(dst, src []byte)
 
 ```
 searchKey: cipher.ofb.refill
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1002,15 +990,11 @@ func (x *ofb) refill()
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="dup" href="#dup">func dup(p []byte) []byte</a>
 
 ```
 searchKey: cipher.dup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1021,7 +1005,7 @@ func dup(p []byte) []byte
 
 ```
 searchKey: cipher.gcmInc32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1034,7 +1018,7 @@ gcmInc32 treats the final four bytes of counterBlock as a big-endian value and i
 
 ```
 searchKey: cipher.reverseBits
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1047,7 +1031,7 @@ reverseBits reverses the order of the bits of 4-bit number in i.
 
 ```
 searchKey: cipher.sliceForAppend
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1060,7 +1044,7 @@ sliceForAppend takes a slice and a requested number of bytes. It returns a slice
 
 ```
 searchKey: cipher.xorBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1073,7 +1057,7 @@ xorBytes xors the bytes in a and b. The destination should have enough space, ot
 
 ```
 searchKey: cipher.xorBytesSSE2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1084,7 +1068,7 @@ func xorBytesSSE2(dst, a, b *byte, n int)
 
 ```
 searchKey: cipher.xorWords
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

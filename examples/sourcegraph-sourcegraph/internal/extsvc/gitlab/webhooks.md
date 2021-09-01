@@ -48,7 +48,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TokenHeaderName" href="#TokenHeaderName">const TokenHeaderName</a>
@@ -65,7 +65,7 @@ const TokenHeaderName = "X-Gitlab-Token"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrObjectKindUnknown" href="#ErrObjectKindUnknown">var ErrObjectKindUnknown</a>
@@ -82,7 +82,7 @@ var ErrObjectKindUnknown = errors.New("unknown object kind")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EventCommon" href="#EventCommon">type EventCommon struct</a>
@@ -117,7 +117,7 @@ type MergeRequestApprovedEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestApprovedEvent.ToEventCommon
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -139,7 +139,7 @@ type MergeRequestCloseEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestCloseEvent.ToEvent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -150,7 +150,7 @@ func (e *MergeRequestCloseEvent) ToEvent() keyer
 
 ```
 searchKey: webhooks.MergeRequestCloseEvent.ToEventCommon
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ type MergeRequestDraftEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestDraftEvent.ToEvent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -183,7 +183,7 @@ func (e *MergeRequestDraftEvent) ToEvent() keyer
 
 ```
 searchKey: webhooks.MergeRequestDraftEvent.ToEventCommon
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -240,7 +240,7 @@ type MergeRequestMergeEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestMergeEvent.ToEvent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -251,7 +251,7 @@ func (e *MergeRequestMergeEvent) ToEvent() keyer
 
 ```
 searchKey: webhooks.MergeRequestMergeEvent.ToEventCommon
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -273,7 +273,7 @@ type MergeRequestReopenEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestReopenEvent.ToEvent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -284,7 +284,7 @@ func (e *MergeRequestReopenEvent) ToEvent() keyer
 
 ```
 searchKey: webhooks.MergeRequestReopenEvent.ToEventCommon
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ type MergeRequestUnapprovedEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestUnapprovedEvent.ToEventCommon
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -328,7 +328,7 @@ type MergeRequestUndraftEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestUndraftEvent.ToEvent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -339,7 +339,7 @@ func (e *MergeRequestUndraftEvent) ToEvent() keyer
 
 ```
 searchKey: webhooks.MergeRequestUndraftEvent.ToEventCommon
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -361,7 +361,7 @@ type MergeRequestUpdateEvent struct{ MergeRequestEventCommon }
 
 ```
 searchKey: webhooks.MergeRequestUpdateEvent.ToEventCommon
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -452,7 +452,7 @@ mergeRequestEvent is an internal type used for initially unmarshalling the typed
 
 ```
 searchKey: webhooks.mergeRequestEvent.downcast
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -495,14 +495,14 @@ type mergeRequestEventObjectAttributes struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestMergeRequestDowncast" href="#TestMergeRequestDowncast">func TestMergeRequestDowncast(t *testing.T)</a>
 
 ```
 searchKey: webhooks.TestMergeRequestDowncast
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -513,7 +513,7 @@ func TestMergeRequestDowncast(t *testing.T)
 
 ```
 searchKey: webhooks.TestUnmarshalEvent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -524,7 +524,7 @@ func TestUnmarshalEvent(t *testing.T)
 
 ```
 searchKey: webhooks.UnmarshalEvent
-tags: [method]
+tags: [function]
 ```
 
 ```Go

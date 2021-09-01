@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "crypto/ed25519/internal/edwards25519/field",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -74,7 +73,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -244,7 +242,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -285,7 +282,7 @@
                       "newPage": false,
                       "searchKey": "field.generateFieldElement",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -308,7 +305,7 @@
                       "newPage": false,
                       "searchKey": "field.generateWeirdFieldElement",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -375,7 +372,7 @@
                       "newPage": false,
                       "searchKey": "field.Element.Bytes",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -464,7 +461,7 @@
                       "newPage": false,
                       "searchKey": "field.Element.IsNegative",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -552,7 +549,7 @@
                       "newPage": false,
                       "searchKey": "field.Element.One",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -706,7 +703,7 @@
                       "newPage": false,
                       "searchKey": "field.Element.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -773,7 +770,7 @@
                       "newPage": false,
                       "searchKey": "field.Element.Zero",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -818,7 +815,7 @@
                       "newPage": false,
                       "searchKey": "field.Element.carryPropagate",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -841,7 +838,7 @@
                       "newPage": false,
                       "searchKey": "field.Element.carryPropagateGeneric",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -910,7 +907,7 @@
                       "newPage": false,
                       "searchKey": "field.Element.reduce",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -933,7 +930,7 @@
                       "newPage": false,
                       "searchKey": "field.Element.toBig",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -980,7 +977,7 @@
                       "newPage": false,
                       "searchKey": "field.addMul64",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1003,7 +1000,7 @@
                       "newPage": false,
                       "searchKey": "field.mul64",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1032,7 +1029,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1053,7 +1049,7 @@
                 "newPage": false,
                 "searchKey": "field.BenchmarkAdd",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1077,7 +1073,7 @@
                 "newPage": false,
                 "searchKey": "field.BenchmarkMult32",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1101,7 +1097,7 @@
                 "newPage": false,
                 "searchKey": "field.BenchmarkMultiply",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1125,7 +1121,7 @@
                 "newPage": false,
                 "searchKey": "field.TestAliasing",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1149,7 +1145,7 @@
                 "newPage": false,
                 "searchKey": "field.TestBytesBigEquivalence",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1173,7 +1169,7 @@
                 "newPage": false,
                 "searchKey": "field.TestCarryPropagate",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1197,7 +1193,7 @@
                 "newPage": false,
                 "searchKey": "field.TestConsistency",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1221,7 +1217,7 @@
                 "newPage": false,
                 "searchKey": "field.TestDecimalConstants",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1245,7 +1241,7 @@
                 "newPage": false,
                 "searchKey": "field.TestEqual",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1269,7 +1265,7 @@
                 "newPage": false,
                 "searchKey": "field.TestFeMul",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1293,7 +1289,7 @@
                 "newPage": false,
                 "searchKey": "field.TestFeSquare",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1317,7 +1313,7 @@
                 "newPage": false,
                 "searchKey": "field.TestInvert",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1341,7 +1337,7 @@
                 "newPage": false,
                 "searchKey": "field.TestMul64to128",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1365,7 +1361,7 @@
                 "newPage": false,
                 "searchKey": "field.TestMult32",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1389,7 +1385,7 @@
                 "newPage": false,
                 "searchKey": "field.TestMultiplyDistributesOverAdd",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1413,7 +1409,7 @@
                 "newPage": false,
                 "searchKey": "field.TestSelectSwap",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1437,7 +1433,7 @@
                 "newPage": false,
                 "searchKey": "field.TestSetBytesRoundTrip",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1461,7 +1457,7 @@
                 "newPage": false,
                 "searchKey": "field.TestSetBytesRoundTripEdgeCases",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1485,7 +1481,7 @@
                 "newPage": false,
                 "searchKey": "field.TestSqrtRatio",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1509,7 +1505,7 @@
                 "newPage": false,
                 "searchKey": "field.checkAliasingOneArg",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1532,7 +1528,7 @@
                 "newPage": false,
                 "searchKey": "field.checkAliasingTwoArgs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1555,7 +1551,7 @@
                 "newPage": false,
                 "searchKey": "field.decodeHex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1578,7 +1574,7 @@
                 "newPage": false,
                 "searchKey": "field.feMul",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1601,7 +1597,7 @@
                 "newPage": false,
                 "searchKey": "field.feMulGeneric",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1624,7 +1620,7 @@
                 "newPage": false,
                 "searchKey": "field.feSquare",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1647,7 +1643,7 @@
                 "newPage": false,
                 "searchKey": "field.feSquareGeneric",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1670,7 +1666,7 @@
                 "newPage": false,
                 "searchKey": "field.isInBounds",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1693,7 +1689,7 @@
                 "newPage": false,
                 "searchKey": "field.mask64Bits",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1716,7 +1712,7 @@
                 "newPage": false,
                 "searchKey": "field.mul51",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1739,7 +1735,7 @@
                 "newPage": false,
                 "searchKey": "field.shiftRightBy51",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1762,7 +1758,7 @@
                 "newPage": false,
                 "searchKey": "field.swapEndianness",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

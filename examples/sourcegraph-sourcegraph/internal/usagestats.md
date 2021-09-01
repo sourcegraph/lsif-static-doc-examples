@@ -141,7 +141,7 @@ Package usagestats provides an interface to update and access information about 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="All" href="#All">const All</a>
@@ -389,7 +389,7 @@ const templatePingQueryStr = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockGetByUserID" href="#MockGetByUserID">var MockGetByUserID</a>
@@ -509,7 +509,7 @@ var timeNow = time.Now
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Event" href="#Event">type Event struct</a>
@@ -589,7 +589,7 @@ type PingQueryBuilder struct {
 
 ```
 searchKey: usagestats.NewPingBuilder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -600,7 +600,7 @@ func NewPingBuilder(timeWindow TimeWindow, timeSupplier func() time.Time) PingQu
 
 ```
 searchKey: usagestats.creationPagesPingBuilder
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -684,7 +684,7 @@ type Repositories struct {
 
 ```
 searchKey: usagestats.GetRepositories
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -787,14 +787,14 @@ type bigQueryEvent struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FilterSettingJson" href="#FilterSettingJson">func FilterSettingJson(settingJson string, prefix string) (map[string]json.RawMessage, error)</a>
 
 ```
 searchKey: usagestats.FilterSettingJson
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -807,7 +807,7 @@ FilterSettingJson will return a json map that only contains keys that match a pr
 
 ```
 searchKey: usagestats.GetAggregatedCodeIntelStats
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -820,7 +820,7 @@ GetAggregatedCodeIntelStats returns aggregated statistics for code intelligence 
 
 ```
 searchKey: usagestats.GetAggregatedSearchStats
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -833,7 +833,7 @@ GetAggregatedSearchStats queries the database for search usage and returns the a
 
 ```
 searchKey: usagestats.GetArchive
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -846,7 +846,7 @@ GetArchive generates and returns a usage statistics ZIP archive containing the C
 
 ```
 searchKey: usagestats.GetBatchChangesUsageStatistics
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -859,7 +859,7 @@ GetBatchChangesUsageStatistics returns the current site's batch changes usage.
 
 ```
 searchKey: usagestats.GetByUserID
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -872,7 +872,7 @@ GetByUserID returns a single user's UserUsageStatistics.
 
 ```
 searchKey: usagestats.GetCodeInsightsUsageStatistics
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -883,7 +883,7 @@ func GetCodeInsightsUsageStatistics(ctx context.Context, db dbutil.DB) (*types.C
 
 ```
 searchKey: usagestats.GetCodeMonitoringUsageStatistics
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -894,7 +894,7 @@ func GetCodeMonitoringUsageStatistics(ctx context.Context, db dbutil.DB) (*types
 
 ```
 searchKey: usagestats.GetCreationViewUsage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -905,7 +905,7 @@ func GetCreationViewUsage(ctx context.Context, db dbutil.DB, timeSupplier func()
 
 ```
 searchKey: usagestats.GetExtensionsUsageStatistics
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -916,7 +916,7 @@ func GetExtensionsUsageStatistics(ctx context.Context, db dbutil.DB) (*types.Ext
 
 ```
 searchKey: usagestats.GetGrowthStatistics
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -927,7 +927,7 @@ func GetGrowthStatistics(ctx context.Context, db dbutil.DB) (*types.GrowthStatis
 
 ```
 searchKey: usagestats.GetHomepagePanels
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -938,7 +938,7 @@ func GetHomepagePanels(ctx context.Context, db dbutil.DB) (*types.HomepagePanels
 
 ```
 searchKey: usagestats.GetLangStatsInsights
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -949,7 +949,7 @@ func GetLangStatsInsights(ctx context.Context, db dbutil.DB, filter SettingFilte
 
 ```
 searchKey: usagestats.GetOrgInsightCounts
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -960,7 +960,7 @@ func GetOrgInsightCounts(ctx context.Context, db dbutil.DB) ([]types.OrgVisibleI
 
 ```
 searchKey: usagestats.GetRetentionStatistics
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -971,7 +971,7 @@ func GetRetentionStatistics(ctx context.Context, db dbutil.DB) (*types.Retention
 
 ```
 searchKey: usagestats.GetSavedSearches
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -982,7 +982,7 @@ func GetSavedSearches(ctx context.Context, db dbutil.DB) (*types.SavedSearches, 
 
 ```
 searchKey: usagestats.GetSearchInsights
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -993,7 +993,7 @@ func GetSearchInsights(ctx context.Context, db dbutil.DB, filter SettingFilter) 
 
 ```
 searchKey: usagestats.GetSearchOnboarding
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1004,7 +1004,7 @@ func GetSearchOnboarding(ctx context.Context, db dbutil.DB) (*types.SearchOnboar
 
 ```
 searchKey: usagestats.GetSettings
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1017,7 +1017,7 @@ GetSettings returns all settings on the Sourcegraph installation that can be fil
 
 ```
 searchKey: usagestats.GetSiteUsageStatistics
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1030,7 +1030,7 @@ GetSiteUsageStatistics returns the current site's SiteActivity.
 
 ```
 searchKey: usagestats.GetSiteUsageStats
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1041,7 +1041,7 @@ func GetSiteUsageStats(ctx context.Context, db dbutil.DB, monthsOnly bool) (*typ
 
 ```
 searchKey: usagestats.GetTimeStepCounts
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1052,7 +1052,7 @@ func GetTimeStepCounts(ctx context.Context, db dbutil.DB) ([]types.InsightTimeIn
 
 ```
 searchKey: usagestats.GetUsersActiveTodayCount
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1065,7 +1065,7 @@ GetUsersActiveTodayCount returns a count of users that have been active today.
 
 ```
 searchKey: usagestats.HasFindRefsOccurred
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1078,7 +1078,7 @@ HasFindRefsOccurred indicates whether a find-refs has ever occurred on this inst
 
 ```
 searchKey: usagestats.HasSearchOccurred
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1091,7 +1091,7 @@ HasSearchOccurred indicates whether a search has ever occurred on this instance.
 
 ```
 searchKey: usagestats.ListRegisteredUsersThisMonth
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1104,7 +1104,7 @@ ListRegisteredUsersThisMonth returns a list of the registered users that were ac
 
 ```
 searchKey: usagestats.ListRegisteredUsersThisWeek
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1117,7 +1117,7 @@ ListRegisteredUsersThisWeek returns a list of the registered users that were act
 
 ```
 searchKey: usagestats.ListRegisteredUsersToday
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1130,7 +1130,7 @@ ListRegisteredUsersToday returns a list of the registered users that were active
 
 ```
 searchKey: usagestats.LogBackendEvent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1143,7 +1143,7 @@ LogBackendEvent is a convenience function for logging backend events.
 
 ```
 searchKey: usagestats.LogEvent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1156,7 +1156,7 @@ LogEvent logs an event.
 
 ```
 searchKey: usagestats.TestCodeInsightsUsageStatistics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1167,7 +1167,7 @@ func TestCodeInsightsUsageStatistics(t *testing.T)
 
 ```
 searchKey: usagestats.TestCodeMonitoringUsageStatistics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1178,7 +1178,7 @@ func TestCodeMonitoringUsageStatistics(t *testing.T)
 
 ```
 searchKey: usagestats.TestExtensionsUsageStatistics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1189,7 +1189,7 @@ func TestExtensionsUsageStatistics(t *testing.T)
 
 ```
 searchKey: usagestats.TestFilterSettingJson
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1200,7 +1200,7 @@ func TestFilterSettingJson(t *testing.T)
 
 ```
 searchKey: usagestats.TestGetArchive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1211,7 +1211,7 @@ func TestGetArchive(t *testing.T)
 
 ```
 searchKey: usagestats.TestGetBatchChangesUsageStatistics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1222,7 +1222,7 @@ func TestGetBatchChangesUsageStatistics(t *testing.T)
 
 ```
 searchKey: usagestats.TestGetLangStatsInsights
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1233,7 +1233,7 @@ func TestGetLangStatsInsights(t *testing.T)
 
 ```
 searchKey: usagestats.TestGetSearchInsights
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1244,7 +1244,7 @@ func TestGetSearchInsights(t *testing.T)
 
 ```
 searchKey: usagestats.TestGroupAggregateSearchStats
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1255,7 +1255,7 @@ func TestGroupAggregateSearchStats(t *testing.T)
 
 ```
 searchKey: usagestats.TestGroupAggregatedCodeIntelStats
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1266,7 +1266,7 @@ func TestGroupAggregatedCodeIntelStats(t *testing.T)
 
 ```
 searchKey: usagestats.TestGroupSiteUsageStats
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1277,7 +1277,7 @@ func TestGroupSiteUsageStats(t *testing.T)
 
 ```
 searchKey: usagestats.TestGroupSiteUsageStatsMonthsOnly
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1288,7 +1288,7 @@ func TestGroupSiteUsageStatsMonthsOnly(t *testing.T)
 
 ```
 searchKey: usagestats.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1299,7 +1299,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: usagestats.TestRetentionUsageStatistics
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1310,7 +1310,7 @@ func TestRetentionUsageStatistics(t *testing.T)
 
 ```
 searchKey: usagestats.TestUserUsageStatistics_DAUs_WAUs_MAUs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1321,7 +1321,7 @@ func TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)
 
 ```
 searchKey: usagestats.TestUserUsageStatistics_LogCodeHostIntegrationUsage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1332,7 +1332,7 @@ func TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)
 
 ```
 searchKey: usagestats.TestUserUsageStatistics_LogCodeIntelAction
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1343,7 +1343,7 @@ func TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)
 
 ```
 searchKey: usagestats.TestUserUsageStatistics_LogPageView
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1354,7 +1354,7 @@ func TestUserUsageStatistics_LogPageView(t *testing.T)
 
 ```
 searchKey: usagestats.TestUserUsageStatistics_LogSearchQuery
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1365,7 +1365,7 @@ func TestUserUsageStatistics_LogSearchQuery(t *testing.T)
 
 ```
 searchKey: usagestats.TestUserUsageStatistics_None
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1376,7 +1376,7 @@ func TestUserUsageStatistics_None(t *testing.T)
 
 ```
 searchKey: usagestats.TestUserUsageStatistics_getUsersActiveToday
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1387,7 +1387,7 @@ func TestUserUsageStatistics_getUsersActiveToday(t *testing.T)
 
 ```
 searchKey: usagestats.TestWithCreationPings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1398,7 +1398,7 @@ func TestWithCreationPings(t *testing.T)
 
 ```
 searchKey: usagestats.activeUsers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1411,7 +1411,7 @@ activeUsers returns counts of active users in the given number of days, weeks, o
 
 ```
 searchKey: usagestats.convertStepToDays
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1424,7 +1424,7 @@ convertStepToDays converts the step interval defined in the insight settings to 
 
 ```
 searchKey: usagestats.groupAggregatedCodeIntelStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1435,7 +1435,7 @@ func groupAggregatedCodeIntelStats(rawEvents []types.CodeIntelAggregatedEvent) *
 
 ```
 searchKey: usagestats.groupAggregatedSearchStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1448,7 +1448,7 @@ groupAggregatedSearchStats takes a set of input events (originating from Sourceg
 
 ```
 searchKey: usagestats.groupSiteUsageStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1470,7 +1470,7 @@ func init()
 
 ```
 searchKey: usagestats.int32Ptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1481,7 +1481,7 @@ func int32Ptr(v int) *int32
 
 ```
 searchKey: usagestats.logLocalEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1520,7 +1520,7 @@ logSiteSearchOccurred records that a search has occurred on the Sourcegraph inst
 
 ```
 searchKey: usagestats.minIntOrZero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1531,7 +1531,7 @@ func minIntOrZero(a, b int) int
 
 ```
 searchKey: usagestats.mockTimeNow
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1586,7 +1586,7 @@ func newSearchModeUsageStatistics() *types.SearchModeUsageStatistics
 
 ```
 searchKey: usagestats.newSearchTestEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1597,7 +1597,7 @@ func newSearchTestEvent(eventCount, userCount int32, p50, p90, p99 float64) *typ
 
 ```
 searchKey: usagestats.newSearchUsagePeriod
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1608,7 +1608,7 @@ func newSearchUsagePeriod(t time.Time, structuralEvent, commitEvent *types.Searc
 
 ```
 searchKey: usagestats.populateSearchEventStatistics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1629,7 +1629,7 @@ Overview how it works: (1) To populate the `statistics` object, we expect an eve
 
 ```
 searchKey: usagestats.populateSearchFilterCountStatistics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1640,7 +1640,7 @@ func populateSearchFilterCountStatistics(event types.SearchAggregatedEvent, stat
 
 ```
 searchKey: usagestats.publishSourcegraphDotComEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1653,7 +1653,7 @@ publishSourcegraphDotComEvent publishes Sourcegraph.com events to BigQuery.
 
 ```
 searchKey: usagestats.setupForTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1664,7 +1664,7 @@ func setupForTest(t *testing.T) dbutil.DB
 
 ```
 searchKey: usagestats.siteActivityCompare
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1675,7 +1675,7 @@ func siteActivityCompare(got, want *types.SiteUsageStatistics) error
 
 ```
 searchKey: usagestats.siteActivityPeriodCompare
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1686,7 +1686,7 @@ func siteActivityPeriodCompare(label string, got, want *types.SiteActivityPeriod
 
 ```
 searchKey: usagestats.siteActivityPeriodSliceCompare
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -74,10 +74,6 @@ Package base32 implements base32 encoding as specified by RFC 4648.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="NoPadding" href="#NoPadding">const NoPadding</a>
 
 ```
@@ -125,10 +121,6 @@ const encodeStd = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="HexEncoding" href="#HexEncoding">var HexEncoding</a>
 
@@ -180,10 +172,6 @@ var pairs = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CorruptInputError" href="#CorruptInputError">type CorruptInputError int64</a>
 
 ```
@@ -199,7 +187,7 @@ type CorruptInputError int64
 
 ```
 searchKey: base32.CorruptInputError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -227,7 +215,7 @@ An Encoding is a radix 32 encoding/decoding scheme, defined by a 32-character al
 
 ```
 searchKey: base32.NewEncoding
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -424,7 +412,7 @@ type encoder struct {
 
 ```
 searchKey: base32.encoder.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -483,15 +471,11 @@ type testpair struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDecode" href="#BenchmarkDecode">func BenchmarkDecode(b *testing.B)</a>
 
 ```
 searchKey: base32.BenchmarkDecode
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -502,7 +486,7 @@ func BenchmarkDecode(b *testing.B)
 
 ```
 searchKey: base32.BenchmarkDecodeString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -513,7 +497,7 @@ func BenchmarkDecodeString(b *testing.B)
 
 ```
 searchKey: base32.BenchmarkEncode
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -524,7 +508,7 @@ func BenchmarkEncode(b *testing.B)
 
 ```
 searchKey: base32.BenchmarkEncodeToString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -535,7 +519,7 @@ func BenchmarkEncodeToString(b *testing.B)
 
 ```
 searchKey: base32.NewDecoder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -548,7 +532,7 @@ NewDecoder constructs a new base32 stream decoder.
 
 ```
 searchKey: base32.NewEncoder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -561,7 +545,7 @@ NewEncoder returns a new base32 stream encoder. Data written to the returned wri
 
 ```
 searchKey: base32.TestBig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -572,7 +556,7 @@ func TestBig(t *testing.T)
 
 ```
 searchKey: base32.TestBufferedDecodingSameError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -583,7 +567,7 @@ func TestBufferedDecodingSameError(t *testing.T)
 
 ```
 searchKey: base32.TestDecode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -594,7 +578,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: base32.TestDecodeCorrupt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -605,7 +589,7 @@ func TestDecodeCorrupt(t *testing.T)
 
 ```
 searchKey: base32.TestDecodeReadAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -616,7 +600,7 @@ func TestDecodeReadAll(t *testing.T)
 
 ```
 searchKey: base32.TestDecodeSmallBuffer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -627,7 +611,7 @@ func TestDecodeSmallBuffer(t *testing.T)
 
 ```
 searchKey: base32.TestDecodeWithPadding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -638,7 +622,7 @@ func TestDecodeWithPadding(t *testing.T)
 
 ```
 searchKey: base32.TestDecodeWithWrongPadding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -649,7 +633,7 @@ func TestDecodeWithWrongPadding(t *testing.T)
 
 ```
 searchKey: base32.TestDecoder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -660,7 +644,7 @@ func TestDecoder(t *testing.T)
 
 ```
 searchKey: base32.TestDecoderBuffering
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -671,7 +655,7 @@ func TestDecoderBuffering(t *testing.T)
 
 ```
 searchKey: base32.TestDecoderError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -684,7 +668,7 @@ TestDecoderError verifies decode errors are propagated when there are no read er
 
 ```
 searchKey: base32.TestDecoderIssue4779
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -695,7 +679,7 @@ func TestDecoderIssue4779(t *testing.T)
 
 ```
 searchKey: base32.TestEncode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -706,7 +690,7 @@ func TestEncode(t *testing.T)
 
 ```
 searchKey: base32.TestEncodedDecodedLen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -717,7 +701,7 @@ func TestEncodedDecodedLen(t *testing.T)
 
 ```
 searchKey: base32.TestEncoder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -728,7 +712,7 @@ func TestEncoder(t *testing.T)
 
 ```
 searchKey: base32.TestEncoderBuffering
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -739,7 +723,7 @@ func TestEncoderBuffering(t *testing.T)
 
 ```
 searchKey: base32.TestIssue20044
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -752,7 +736,7 @@ TestIssue20044 tests that decoder.Read behaves correctly when the caller supplie
 
 ```
 searchKey: base32.TestNewLineCharacters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -763,7 +747,7 @@ func TestNewLineCharacters(t *testing.T)
 
 ```
 searchKey: base32.TestReaderEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -776,7 +760,7 @@ TestReaderEOF ensures decoder.Read behaves correctly when input data is exhauste
 
 ```
 searchKey: base32.TestWithCustomPadding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -787,7 +771,7 @@ func TestWithCustomPadding(t *testing.T)
 
 ```
 searchKey: base32.TestWithoutPadding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -798,7 +782,7 @@ func TestWithoutPadding(t *testing.T)
 
 ```
 searchKey: base32.TestWithoutPaddingClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -809,7 +793,7 @@ func TestWithoutPaddingClose(t *testing.T)
 
 ```
 searchKey: base32.readEncodedData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -820,7 +804,7 @@ func readEncodedData(r io.Reader, buf []byte, min int, expectsPadding bool) (n i
 
 ```
 searchKey: base32.stripNewlines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -833,7 +817,7 @@ stripNewlines removes newline characters and returns the number of non-newline c
 
 ```
 searchKey: base32.testEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -844,7 +828,7 @@ func testEqual(t *testing.T, msg string, args ...interface{}) bool
 
 ```
 searchKey: base32.testStringEncoding
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

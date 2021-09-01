@@ -169,7 +169,7 @@ status=500 -- controls the status code
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="aboutRedirectHost" href="#aboutRedirectHost">const aboutRedirectHost</a>
@@ -749,7 +749,7 @@ const routeViews = "views"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="aboutRedirects" href="#aboutRedirects">var aboutRedirects</a>
@@ -978,7 +978,7 @@ var webpackDevServer, _ = strconv.ParseBool(os.Getenv("WEBPACK_DEV_SERVER"))
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Common" href="#Common">type Common struct</a>
@@ -1011,7 +1011,7 @@ type Common struct {
 
 ```
 searchKey: ui.newCommon
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1090,7 +1090,7 @@ type handlerFunc func(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: ui.serveBasicPage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1101,7 +1101,7 @@ func serveBasicPage(title func(c *Common, r *http.Request) string, description *
 
 ```
 searchKey: ui.serveBrandedPageString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1112,7 +1112,7 @@ func serveBrandedPageString(titles string, description *string) handlerFunc
 
 ```
 searchKey: ui.serveRepoOrBlob
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1123,7 +1123,7 @@ func serveRepoOrBlob(routeName string, title func(c *Common, r *http.Request) st
 
 ```
 searchKey: ui.serveTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1150,7 +1150,7 @@ type lineRange struct {
 
 ```
 searchKey: ui.findLineRangeInQueryParameters
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1161,7 +1161,7 @@ func findLineRangeInQueryParameters(queryParameters map[string][]string) *lineRa
 
 ```
 searchKey: ui.getLineRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1202,7 +1202,7 @@ type recoverError struct {
 
 ```
 searchKey: ui.recoverError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1225,14 +1225,14 @@ serveErrorHandler is a function signature used in newCommon and mockNewCommon. T
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="InitRouter" href="#InitRouter">func InitRouter(db dbutil.DB)</a>
 
 ```
 searchKey: ui.InitRouter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1258,7 +1258,7 @@ Router returns the router that serves pages for our web app.
 
 ```
 searchKey: ui.TestFindLineRangeInQueryParameters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1269,7 +1269,7 @@ func TestFindLineRangeInQueryParameters(t *testing.T)
 
 ```
 searchKey: ui.TestGetBlobPreviewImageURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1280,7 +1280,7 @@ func TestGetBlobPreviewImageURL(t *testing.T)
 
 ```
 searchKey: ui.TestGetBlobPreviewTitle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1291,7 +1291,7 @@ func TestGetBlobPreviewTitle(t *testing.T)
 
 ```
 searchKey: ui.TestLoadTemplate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1302,7 +1302,7 @@ func TestLoadTemplate(t *testing.T)
 
 ```
 searchKey: ui.TestNewCommon_repo_error
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1313,7 +1313,7 @@ func TestNewCommon_repo_error(t *testing.T)
 
 ```
 searchKey: ui.TestRedirectTreeOrBlob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1324,7 +1324,7 @@ func TestRedirectTreeOrBlob(t *testing.T)
 
 ```
 searchKey: ui.TestRedirects
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1335,7 +1335,7 @@ func TestRedirects(t *testing.T)
 
 ```
 searchKey: ui.TestRepoShortName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1346,7 +1346,7 @@ func TestRepoShortName(t *testing.T)
 
 ```
 searchKey: ui.TestRouter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1357,7 +1357,7 @@ func TestRouter(t *testing.T)
 
 ```
 searchKey: ui.TestRouter_RootPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1368,7 +1368,7 @@ func TestRouter_RootPath(t *testing.T)
 
 ```
 searchKey: ui.TestServeHelp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1379,7 +1379,7 @@ func TestServeHelp(t *testing.T)
 
 ```
 searchKey: ui.Test_serveRawWithContentArchive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1390,7 +1390,7 @@ func Test_serveRawWithContentArchive(t *testing.T)
 
 ```
 searchKey: ui.Test_serveRawWithContentTypePlain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1401,7 +1401,7 @@ func Test_serveRawWithContentTypePlain(t *testing.T)
 
 ```
 searchKey: ui.Test_serveRawWithHTTPRequestMethodHEAD
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1412,7 +1412,7 @@ func Test_serveRawWithHTTPRequestMethodHEAD(t *testing.T)
 
 ```
 searchKey: ui.brandNameSubtitle
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1425,7 +1425,7 @@ brandNameSubtitle returns a string with the specified title sequence and the bra
 
 ```
 searchKey: ui.dangerouslyServeError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1440,7 +1440,7 @@ See [https://github.com/sourcegraph/sourcegraph/issues/9453](https://github.com/
 
 ```
 searchKey: ui.doLoadTemplate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1453,7 +1453,7 @@ doLoadTemplate should only be called by loadTemplate.
 
 ```
 searchKey: ui.formatLineRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1464,7 +1464,7 @@ func formatLineRange(lineRange *lineRange) string
 
 ```
 searchKey: ui.getBlobPreviewImageURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1475,7 +1475,7 @@ func getBlobPreviewImageURL(previewServiceURL string, blobURLPath string, lineRa
 
 ```
 searchKey: ui.getBlobPreviewTitle
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1486,7 +1486,7 @@ func getBlobPreviewTitle(blobFilePath string, lineRange *lineRange) string
 
 ```
 searchKey: ui.handler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1528,7 +1528,7 @@ func init()
 
 ```
 searchKey: ui.initHTTPTestGitServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1545,7 +1545,7 @@ TL;DR: This function helps us to mock the gitserver without having to define moc
 
 ```
 searchKey: ui.initRouter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1556,7 +1556,7 @@ func initRouter(db dbutil.DB, router *mux.Router)
 
 ```
 searchKey: ui.limitString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1569,7 +1569,7 @@ limitString limits the given string to at most N characters, optionally adding a
 
 ```
 searchKey: ui.loadTemplate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1582,7 +1582,7 @@ loadTemplate loads the template with the given path. Also loaded along with that
 
 ```
 searchKey: ui.mapKeys
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1604,7 +1604,7 @@ func newRouter() *mux.Router
 
 ```
 searchKey: ui.openArchiveReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1617,7 +1617,7 @@ openArchiveReader runs git archive and streams the output. Note: we do not use v
 
 ```
 searchKey: ui.redirectTreeOrBlob
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1630,7 +1630,7 @@ redirectTreeOrBlob redirects a blob page to a tree page if the file is actually 
 
 ```
 searchKey: ui.renderTemplate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1645,7 +1645,7 @@ The given data is accessible in the template via $.Foobar
 
 ```
 searchKey: ui.repoShortName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1671,7 +1671,7 @@ searchBadgeHandler serves the search readme badges from the search-badger servic
 
 ```
 searchKey: ui.serveDefLanding
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1682,7 +1682,7 @@ func serveDefLanding(w http.ResponseWriter, r *http.Request) (err error)
 
 ```
 searchKey: ui.serveDefRedirectToDefLanding
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1695,7 +1695,7 @@ serveDefRedirectToDefLanding redirects from /REPO/refs/... and /REPO/def/... URL
 
 ```
 searchKey: ui.serveError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1708,7 +1708,7 @@ serveError serves the error template with the specified error message. It is ass
 
 ```
 searchKey: ui.serveErrorNoDebug
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1721,7 +1721,7 @@ serveErrorNoDebug should not be called by anyone except serveErrorTest.
 
 ```
 searchKey: ui.serveErrorTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1740,7 +1740,7 @@ The `nodebug=true` parameter hides error messages (which is ALWAYS the case in p
 
 ```
 searchKey: ui.serveHelp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1753,7 +1753,7 @@ serveHelp redirects to documentation pages on [https://docs.sourcegraph.com](htt
 
 ```
 searchKey: ui.serveHome
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1764,7 +1764,7 @@ func serveHome(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: ui.serveOldRouteDefLanding
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1777,7 +1777,7 @@ Redirect from old /land/ def landing URLs to new /info/ URLs
 
 ```
 searchKey: ui.servePingFromSelfHosted
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1788,7 +1788,7 @@ func servePingFromSelfHosted(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: ui.serveRaw
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1799,7 +1799,7 @@ func serveRaw(w http.ResponseWriter, r *http.Request) (err error)
 
 ```
 searchKey: ui.serveRepoLanding
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1812,7 +1812,7 @@ serveRepoLanding simply redirects the old (sourcegraph.com/<repo>/-/info) repo l
 
 ```
 searchKey: ui.serveSignIn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1823,7 +1823,7 @@ func serveSignIn(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: ui.staticRedirectHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

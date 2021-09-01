@@ -13,7 +13,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="trackedRepo" href="#trackedRepo">var trackedRepo</a>
@@ -41,14 +41,14 @@ var trackedRepoRe = lazyregexp.New(`\b(` + strings.Join(trackedRepo, "|") + `)\b
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GetTrackedRepo" href="#GetTrackedRepo">func GetTrackedRepo(repoPath api.RepoName) string</a>
 
 ```
 searchKey: repotrackutil.GetTrackedRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -61,7 +61,7 @@ GetTrackedRepo guesses which repo a request URL path is for. It only looks at a 
 
 ```
 searchKey: repotrackutil.TestGetTrackedRepo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

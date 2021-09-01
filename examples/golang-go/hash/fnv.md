@@ -122,10 +122,6 @@ All the hash.Hash implementations returned by this package also implement encodi
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="magic128" href="#magic128">const magic128</a>
 
 ```
@@ -315,10 +311,6 @@ const prime64 = 1099511628211
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="golden128" href="#golden128">var golden128</a>
 
 ```
@@ -387,10 +379,6 @@ var golden64a = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="golden" href="#golden">type golden struct</a>
 
 ```
@@ -421,7 +409,7 @@ type sum128 [2]uint64
 
 ```
 searchKey: fnv.sum128.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -432,7 +420,7 @@ func (s *sum128) BlockSize() int
 
 ```
 searchKey: fnv.sum128.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -443,7 +431,7 @@ func (s *sum128) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum128.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -454,7 +442,7 @@ func (s *sum128) Reset()
 
 ```
 searchKey: fnv.sum128.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -509,7 +497,7 @@ type sum128a [2]uint64
 
 ```
 searchKey: fnv.sum128a.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -520,7 +508,7 @@ func (s *sum128a) BlockSize() int
 
 ```
 searchKey: fnv.sum128a.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -531,7 +519,7 @@ func (s *sum128a) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum128a.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -542,7 +530,7 @@ func (s *sum128a) Reset()
 
 ```
 searchKey: fnv.sum128a.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -597,7 +585,7 @@ type sum32 uint32
 
 ```
 searchKey: fnv.sum32.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -608,7 +596,7 @@ func (s *sum32) BlockSize() int
 
 ```
 searchKey: fnv.sum32.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -619,7 +607,7 @@ func (s *sum32) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum32.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -630,7 +618,7 @@ func (s *sum32) Reset()
 
 ```
 searchKey: fnv.sum32.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -652,7 +640,7 @@ func (s *sum32) Sum(in []byte) []byte
 
 ```
 searchKey: fnv.sum32.Sum32
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -696,7 +684,7 @@ type sum32a uint32
 
 ```
 searchKey: fnv.sum32a.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -707,7 +695,7 @@ func (s *sum32a) BlockSize() int
 
 ```
 searchKey: fnv.sum32a.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -718,7 +706,7 @@ func (s *sum32a) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum32a.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -729,7 +717,7 @@ func (s *sum32a) Reset()
 
 ```
 searchKey: fnv.sum32a.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -751,7 +739,7 @@ func (s *sum32a) Sum(in []byte) []byte
 
 ```
 searchKey: fnv.sum32a.Sum32
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -795,7 +783,7 @@ type sum64 uint64
 
 ```
 searchKey: fnv.sum64.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -806,7 +794,7 @@ func (s *sum64) BlockSize() int
 
 ```
 searchKey: fnv.sum64.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -817,7 +805,7 @@ func (s *sum64) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum64.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -828,7 +816,7 @@ func (s *sum64) Reset()
 
 ```
 searchKey: fnv.sum64.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -850,7 +838,7 @@ func (s *sum64) Sum(in []byte) []byte
 
 ```
 searchKey: fnv.sum64.Sum64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -894,7 +882,7 @@ type sum64a uint64
 
 ```
 searchKey: fnv.sum64a.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -905,7 +893,7 @@ func (s *sum64a) BlockSize() int
 
 ```
 searchKey: fnv.sum64a.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -916,7 +904,7 @@ func (s *sum64a) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: fnv.sum64a.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -927,7 +915,7 @@ func (s *sum64a) Reset()
 
 ```
 searchKey: fnv.sum64a.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -949,7 +937,7 @@ func (s *sum64a) Sum(in []byte) []byte
 
 ```
 searchKey: fnv.sum64a.Sum64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -980,15 +968,11 @@ func (s *sum64a) Write(data []byte) (int, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkFnv128KB" href="#BenchmarkFnv128KB">func BenchmarkFnv128KB(b *testing.B)</a>
 
 ```
 searchKey: fnv.BenchmarkFnv128KB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -999,7 +983,7 @@ func BenchmarkFnv128KB(b *testing.B)
 
 ```
 searchKey: fnv.BenchmarkFnv128aKB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1010,7 +994,7 @@ func BenchmarkFnv128aKB(b *testing.B)
 
 ```
 searchKey: fnv.BenchmarkFnv32KB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1021,7 +1005,7 @@ func BenchmarkFnv32KB(b *testing.B)
 
 ```
 searchKey: fnv.BenchmarkFnv32aKB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1032,7 +1016,7 @@ func BenchmarkFnv32aKB(b *testing.B)
 
 ```
 searchKey: fnv.BenchmarkFnv64KB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1043,7 +1027,7 @@ func BenchmarkFnv64KB(b *testing.B)
 
 ```
 searchKey: fnv.BenchmarkFnv64aKB
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1132,7 +1116,7 @@ New64a returns a new 64-bit FNV-1a hash.Hash. Its Sum method will lay the value 
 
 ```
 searchKey: fnv.TestGolden128
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1143,7 +1127,7 @@ func TestGolden128(t *testing.T)
 
 ```
 searchKey: fnv.TestGolden128a
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1154,7 +1138,7 @@ func TestGolden128a(t *testing.T)
 
 ```
 searchKey: fnv.TestGolden32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1165,7 +1149,7 @@ func TestGolden32(t *testing.T)
 
 ```
 searchKey: fnv.TestGolden32a
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1176,7 +1160,7 @@ func TestGolden32a(t *testing.T)
 
 ```
 searchKey: fnv.TestGolden64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1187,7 +1171,7 @@ func TestGolden64(t *testing.T)
 
 ```
 searchKey: fnv.TestGolden64a
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1198,7 +1182,7 @@ func TestGolden64a(t *testing.T)
 
 ```
 searchKey: fnv.TestGoldenMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1209,7 +1193,7 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity128
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1220,7 +1204,7 @@ func TestIntegrity128(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity128a
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1231,7 +1215,7 @@ func TestIntegrity128a(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1242,7 +1226,7 @@ func TestIntegrity32(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity32a
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1253,7 +1237,7 @@ func TestIntegrity32a(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1264,7 +1248,7 @@ func TestIntegrity64(t *testing.T)
 
 ```
 searchKey: fnv.TestIntegrity64a
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1275,7 +1259,7 @@ func TestIntegrity64a(t *testing.T)
 
 ```
 searchKey: fnv.appendUint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1286,7 +1270,7 @@ func appendUint32(b []byte, x uint32) []byte
 
 ```
 searchKey: fnv.appendUint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1297,7 +1281,7 @@ func appendUint64(b []byte, x uint64) []byte
 
 ```
 searchKey: fnv.benchmarkKB
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1308,7 +1292,7 @@ func benchmarkKB(b *testing.B, h hash.Hash)
 
 ```
 searchKey: fnv.readUint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1319,7 +1303,7 @@ func readUint32(b []byte) uint32
 
 ```
 searchKey: fnv.readUint64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1330,7 +1314,7 @@ func readUint64(b []byte) uint64
 
 ```
 searchKey: fnv.testGolden
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1341,7 +1325,7 @@ func testGolden(t *testing.T, hash hash.Hash, gold []golden)
 
 ```
 searchKey: fnv.testIntegrity
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

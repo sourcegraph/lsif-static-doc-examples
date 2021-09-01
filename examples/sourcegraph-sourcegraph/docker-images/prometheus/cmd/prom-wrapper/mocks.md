@@ -226,10 +226,6 @@
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="APIAlertManagersFunc" href="#APIAlertManagersFunc">type APIAlertManagersFunc struct</a>
 
 ```
@@ -252,7 +248,7 @@ APIAlertManagersFunc describes the behavior when the AlertManagers method of the
 
 ```
 searchKey: mocks.APIAlertManagersFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -328,7 +324,7 @@ func (f *APIAlertManagersFunc) appendCall(r0 APIAlertManagersFuncCall)
 
 ```
 searchKey: mocks.APIAlertManagersFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -362,7 +358,7 @@ APIAlertManagersFuncCall is an object that describes an invocation of method Ale
 
 ```
 searchKey: mocks.APIAlertManagersFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -375,7 +371,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIAlertManagersFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -406,7 +402,7 @@ APIAlertsFunc describes the behavior when the Alerts method of the parent MockAP
 
 ```
 searchKey: mocks.APIAlertsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -482,7 +478,7 @@ func (f *APIAlertsFunc) appendCall(r0 APIAlertsFuncCall)
 
 ```
 searchKey: mocks.APIAlertsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -516,7 +512,7 @@ APIAlertsFuncCall is an object that describes an invocation of method Alerts on 
 
 ```
 searchKey: mocks.APIAlertsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -529,7 +525,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIAlertsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -560,7 +556,7 @@ APICleanTombstonesFunc describes the behavior when the CleanTombstones method of
 
 ```
 searchKey: mocks.APICleanTombstonesFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -636,7 +632,7 @@ func (f *APICleanTombstonesFunc) appendCall(r0 APICleanTombstonesFuncCall)
 
 ```
 searchKey: mocks.APICleanTombstonesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -667,7 +663,7 @@ APICleanTombstonesFuncCall is an object that describes an invocation of method C
 
 ```
 searchKey: mocks.APICleanTombstonesFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -680,7 +676,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APICleanTombstonesFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -711,7 +707,7 @@ APIConfigFunc describes the behavior when the Config method of the parent MockAP
 
 ```
 searchKey: mocks.APIConfigFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -787,7 +783,7 @@ func (f *APIConfigFunc) appendCall(r0 APIConfigFuncCall)
 
 ```
 searchKey: mocks.APIConfigFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -821,7 +817,7 @@ APIConfigFuncCall is an object that describes an invocation of method Config on 
 
 ```
 searchKey: mocks.APIConfigFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -834,7 +830,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIConfigFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -865,7 +861,7 @@ APIDeleteSeriesFunc describes the behavior when the DeleteSeries method of the p
 
 ```
 searchKey: mocks.APIDeleteSeriesFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -941,7 +937,7 @@ func (f *APIDeleteSeriesFunc) appendCall(r0 APIDeleteSeriesFuncCall)
 
 ```
 searchKey: mocks.APIDeleteSeriesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -981,7 +977,7 @@ APIDeleteSeriesFuncCall is an object that describes an invocation of method Dele
 
 ```
 searchKey: mocks.APIDeleteSeriesFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -994,7 +990,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIDeleteSeriesFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1025,7 +1021,7 @@ APIFlagsFunc describes the behavior when the Flags method of the parent MockAPI 
 
 ```
 searchKey: mocks.APIFlagsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1101,7 +1097,7 @@ func (f *APIFlagsFunc) appendCall(r0 APIFlagsFuncCall)
 
 ```
 searchKey: mocks.APIFlagsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1135,7 +1131,7 @@ APIFlagsFuncCall is an object that describes an invocation of method Flags on an
 
 ```
 searchKey: mocks.APIFlagsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1148,7 +1144,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIFlagsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1179,7 +1175,7 @@ APILabelNamesFunc describes the behavior when the LabelNames method of the paren
 
 ```
 searchKey: mocks.APILabelNamesFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1255,7 +1251,7 @@ func (f *APILabelNamesFunc) appendCall(r0 APILabelNamesFuncCall)
 
 ```
 searchKey: mocks.APILabelNamesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1298,7 +1294,7 @@ APILabelNamesFuncCall is an object that describes an invocation of method LabelN
 
 ```
 searchKey: mocks.APILabelNamesFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1311,7 +1307,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APILabelNamesFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1342,7 +1338,7 @@ APILabelValuesFunc describes the behavior when the LabelValues method of the par
 
 ```
 searchKey: mocks.APILabelValuesFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1418,7 +1414,7 @@ func (f *APILabelValuesFunc) appendCall(r0 APILabelValuesFuncCall)
 
 ```
 searchKey: mocks.APILabelValuesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1464,7 +1460,7 @@ APILabelValuesFuncCall is an object that describes an invocation of method Label
 
 ```
 searchKey: mocks.APILabelValuesFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1477,7 +1473,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APILabelValuesFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1508,7 +1504,7 @@ APIMetadataFunc describes the behavior when the Metadata method of the parent Mo
 
 ```
 searchKey: mocks.APIMetadataFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1584,7 +1580,7 @@ func (f *APIMetadataFunc) appendCall(r0 APIMetadataFuncCall)
 
 ```
 searchKey: mocks.APIMetadataFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1624,7 +1620,7 @@ APIMetadataFuncCall is an object that describes an invocation of method Metadata
 
 ```
 searchKey: mocks.APIMetadataFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1637,7 +1633,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIMetadataFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1668,7 +1664,7 @@ APIQueryFunc describes the behavior when the Query method of the parent MockAPI 
 
 ```
 searchKey: mocks.APIQueryFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1744,7 +1740,7 @@ func (f *APIQueryFunc) appendCall(r0 APIQueryFuncCall)
 
 ```
 searchKey: mocks.APIQueryFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1787,7 +1783,7 @@ APIQueryFuncCall is an object that describes an invocation of method Query on an
 
 ```
 searchKey: mocks.APIQueryFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1800,7 +1796,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIQueryFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1831,7 +1827,7 @@ APIQueryRangeFunc describes the behavior when the QueryRange method of the paren
 
 ```
 searchKey: mocks.APIQueryRangeFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1907,7 +1903,7 @@ func (f *APIQueryRangeFunc) appendCall(r0 APIQueryRangeFuncCall)
 
 ```
 searchKey: mocks.APIQueryRangeFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1950,7 +1946,7 @@ APIQueryRangeFuncCall is an object that describes an invocation of method QueryR
 
 ```
 searchKey: mocks.APIQueryRangeFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1963,7 +1959,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIQueryRangeFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1994,7 +1990,7 @@ APIRulesFunc describes the behavior when the Rules method of the parent MockAPI 
 
 ```
 searchKey: mocks.APIRulesFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2070,7 +2066,7 @@ func (f *APIRulesFunc) appendCall(r0 APIRulesFuncCall)
 
 ```
 searchKey: mocks.APIRulesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2104,7 +2100,7 @@ APIRulesFuncCall is an object that describes an invocation of method Rules on an
 
 ```
 searchKey: mocks.APIRulesFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2117,7 +2113,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIRulesFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2148,7 +2144,7 @@ APIRuntimeinfoFunc describes the behavior when the Runtimeinfo method of the par
 
 ```
 searchKey: mocks.APIRuntimeinfoFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2224,7 +2220,7 @@ func (f *APIRuntimeinfoFunc) appendCall(r0 APIRuntimeinfoFuncCall)
 
 ```
 searchKey: mocks.APIRuntimeinfoFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2258,7 +2254,7 @@ APIRuntimeinfoFuncCall is an object that describes an invocation of method Runti
 
 ```
 searchKey: mocks.APIRuntimeinfoFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2271,7 +2267,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APIRuntimeinfoFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2302,7 +2298,7 @@ APISeriesFunc describes the behavior when the Series method of the parent MockAP
 
 ```
 searchKey: mocks.APISeriesFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2378,7 +2374,7 @@ func (f *APISeriesFunc) appendCall(r0 APISeriesFuncCall)
 
 ```
 searchKey: mocks.APISeriesFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2424,7 +2420,7 @@ APISeriesFuncCall is an object that describes an invocation of method Series on 
 
 ```
 searchKey: mocks.APISeriesFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2437,7 +2433,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APISeriesFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2468,7 +2464,7 @@ APISnapshotFunc describes the behavior when the Snapshot method of the parent Mo
 
 ```
 searchKey: mocks.APISnapshotFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2544,7 +2540,7 @@ func (f *APISnapshotFunc) appendCall(r0 APISnapshotFuncCall)
 
 ```
 searchKey: mocks.APISnapshotFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2581,7 +2577,7 @@ APISnapshotFuncCall is an object that describes an invocation of method Snapshot
 
 ```
 searchKey: mocks.APISnapshotFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2594,7 +2590,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APISnapshotFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2625,7 +2621,7 @@ APITSDBFunc describes the behavior when the TSDB method of the parent MockAPI in
 
 ```
 searchKey: mocks.APITSDBFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2701,7 +2697,7 @@ func (f *APITSDBFunc) appendCall(r0 APITSDBFuncCall)
 
 ```
 searchKey: mocks.APITSDBFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2735,7 +2731,7 @@ APITSDBFuncCall is an object that describes an invocation of method TSDB on an i
 
 ```
 searchKey: mocks.APITSDBFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2748,7 +2744,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APITSDBFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2779,7 +2775,7 @@ APITargetsFunc describes the behavior when the Targets method of the parent Mock
 
 ```
 searchKey: mocks.APITargetsFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2855,7 +2851,7 @@ func (f *APITargetsFunc) appendCall(r0 APITargetsFuncCall)
 
 ```
 searchKey: mocks.APITargetsFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2889,7 +2885,7 @@ APITargetsFuncCall is an object that describes an invocation of method Targets o
 
 ```
 searchKey: mocks.APITargetsFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2902,7 +2898,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APITargetsFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2933,7 +2929,7 @@ APITargetsMetadataFunc describes the behavior when the TargetsMetadata method of
 
 ```
 searchKey: mocks.APITargetsMetadataFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3009,7 +3005,7 @@ func (f *APITargetsMetadataFunc) appendCall(r0 APITargetsMetadataFuncCall)
 
 ```
 searchKey: mocks.APITargetsMetadataFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3052,7 +3048,7 @@ APITargetsMetadataFuncCall is an object that describes an invocation of method T
 
 ```
 searchKey: mocks.APITargetsMetadataFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3065,7 +3061,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.APITargetsMetadataFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3159,7 +3155,7 @@ NewMockAPI creates a new mock of the API interface. All methods return zero valu
 
 ```
 searchKey: mocks.NewMockAPIFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go

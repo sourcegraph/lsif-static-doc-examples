@@ -13,7 +13,7 @@ Package nettrace contains internal hooks for tracing activity in the net package
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="LookupIPAltResolverKey" href="#LookupIPAltResolverKey">type LookupIPAltResolverKey struct{}</a>

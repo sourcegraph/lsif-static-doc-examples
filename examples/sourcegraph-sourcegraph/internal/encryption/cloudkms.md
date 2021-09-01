@@ -16,7 +16,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Key" href="#Key">type Key struct</a>
@@ -88,14 +88,14 @@ type encryptedValue struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewKey" href="#NewKey">func NewKey(ctx context.Context, config schema.CloudKMSEncryptionKey) (encryption.Key, error)</a>
 
 ```
 searchKey: cloudkms.NewKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -106,7 +106,7 @@ func NewKey(ctx context.Context, config schema.CloudKMSEncryptionKey) (encryptio
 
 ```
 searchKey: cloudkms.crc32Sum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

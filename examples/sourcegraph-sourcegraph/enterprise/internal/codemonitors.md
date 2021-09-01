@@ -155,7 +155,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="actionEmailByIDFmtStr" href="#actionEmailByIDFmtStr">const actionEmailByIDFmtStr</a>
@@ -620,7 +620,7 @@ const updateTriggerQueryFmtStr = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ActionJobsColumns" href="#ActionJobsColumns">var ActionJobsColumns</a>
@@ -681,7 +681,7 @@ var queryColumns = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ActionJob" href="#ActionJob">type ActionJob struct</a>
@@ -713,7 +713,7 @@ type ActionJob struct {
 
 ```
 searchKey: codemonitors.ActionJob.RecordID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -837,7 +837,7 @@ Store exposes methods to read and write codemonitors domain models from persiste
 
 ```
 searchKey: codemonitors.NewStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -850,7 +850,7 @@ NewStore returns a new Store backed by the given database.
 
 ```
 searchKey: codemonitors.NewStoreWithClock
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -863,7 +863,7 @@ NewStoreWithClock returns a new Store backed by the given database and clock for
 
 ```
 searchKey: codemonitors.newTestStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -907,7 +907,7 @@ func (s *Store) AllRecipientsForEmailIDInt64(ctx context.Context, emailID int64)
 
 ```
 searchKey: codemonitors.Store.Clock
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1133,7 +1133,7 @@ func (s *Store) Monitors(ctx context.Context, userID int32, args *graphqlbackend
 
 ```
 searchKey: codemonitors.Store.Now
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1531,7 +1531,7 @@ type TriggerJobs struct {
 
 ```
 searchKey: codemonitors.TriggerJobs.RecordID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1541,14 +1541,14 @@ func (r *TriggerJobs) RecordID() int
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ScanActionJobs" href="#ScanActionJobs">func ScanActionJobs(rows *sql.Rows, err error) (workerutil.Record, bool, error)</a>
 
 ```
 searchKey: codemonitors.ScanActionJobs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1559,7 +1559,7 @@ func ScanActionJobs(rows *sql.Rows, err error) (workerutil.Record, bool, error)
 
 ```
 searchKey: codemonitors.ScanEmails
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1570,7 +1570,7 @@ func ScanEmails(rows *sql.Rows) (ms []*MonitorEmail, err error)
 
 ```
 searchKey: codemonitors.ScanTriggerJobs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1581,7 +1581,7 @@ func ScanTriggerJobs(rows *sql.Rows, err error) (workerutil.Record, bool, error)
 
 ```
 searchKey: codemonitors.TestAllRecipientsForEmailIDInt64
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1592,7 +1592,7 @@ func TestAllRecipientsForEmailIDInt64(t *testing.T)
 
 ```
 searchKey: codemonitors.TestDeleteOldJobLogs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1603,7 +1603,7 @@ func TestDeleteOldJobLogs(t *testing.T)
 
 ```
 searchKey: codemonitors.TestEnqueueActionEmailsForQueryIDInt64QueryByRecordID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1614,7 +1614,7 @@ func TestEnqueueActionEmailsForQueryIDInt64QueryByRecordID(t *testing.T)
 
 ```
 searchKey: codemonitors.TestGetActionJobMetadata
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1625,7 +1625,7 @@ func TestGetActionJobMetadata(t *testing.T)
 
 ```
 searchKey: codemonitors.TestQueryByRecordID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1636,7 +1636,7 @@ func TestQueryByRecordID(t *testing.T)
 
 ```
 searchKey: codemonitors.TestResetTriggerQueryTimestamps
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1647,7 +1647,7 @@ func TestResetTriggerQueryTimestamps(t *testing.T)
 
 ```
 searchKey: codemonitors.TestScanActionJobs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1658,7 +1658,7 @@ func TestScanActionJobs(t *testing.T)
 
 ```
 searchKey: codemonitors.TestTriggerQueryNextRun
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1669,7 +1669,7 @@ func TestTriggerQueryNextRun(t *testing.T)
 
 ```
 searchKey: codemonitors.deleteActionsEmailQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1680,7 +1680,7 @@ func deleteActionsEmailQuery(ctx context.Context, actionIDs []int64, monitorID i
 
 ```
 searchKey: codemonitors.deleteRecipientsQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1702,7 +1702,7 @@ func init()
 
 ```
 searchKey: codemonitors.insertTestUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1713,7 +1713,7 @@ func insertTestUser(t *testing.T, db *sql.DB, name string, isAdmin bool) (userID
 
 ```
 searchKey: codemonitors.monitorsQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1724,7 +1724,7 @@ func monitorsQuery(userID int32, args *graphqlbackend.ListMonitorsArgs) (*sqlf.Q
 
 ```
 searchKey: codemonitors.newTestUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1735,7 +1735,7 @@ func newTestUser(ctx context.Context, t *testing.T) (name string, id int32, name
 
 ```
 searchKey: codemonitors.nilOrInt32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1746,7 +1746,7 @@ func nilOrInt32(n int32) *int32
 
 ```
 searchKey: codemonitors.readRecipientQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1757,7 +1757,7 @@ func readRecipientQuery(ctx context.Context, emailId int64, args *graphqlbackend
 
 ```
 searchKey: codemonitors.scanActionJobs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1768,7 +1768,7 @@ func scanActionJobs(rows *sql.Rows, err error) ([]*ActionJob, error)
 
 ```
 searchKey: codemonitors.scanMonitors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1779,7 +1779,7 @@ func scanMonitors(rows *sql.Rows) ([]*Monitor, error)
 
 ```
 searchKey: codemonitors.scanRecipients
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1790,7 +1790,7 @@ func scanRecipients(rows *sql.Rows) (ms []*Recipient, err error)
 
 ```
 searchKey: codemonitors.scanTriggerJobs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1801,7 +1801,7 @@ func scanTriggerJobs(rows *sql.Rows, err error) ([]*TriggerJobs, error)
 
 ```
 searchKey: codemonitors.scanTriggerQueries
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1812,7 +1812,7 @@ func scanTriggerQueries(rows *sql.Rows) (ms []*MonitorQuery, err error)
 
 ```
 searchKey: codemonitors.unmarshalAfter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

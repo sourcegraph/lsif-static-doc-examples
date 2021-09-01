@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "internal/extsvc/gitlab/webhooks",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -73,7 +72,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -120,7 +118,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -183,7 +180,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestApprovedEvent.ToEventCommon",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -228,7 +225,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestCloseEvent.ToEvent",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -250,7 +247,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestCloseEvent.ToEventCommon",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -295,7 +292,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestDraftEvent.ToEvent",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -317,7 +314,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestDraftEvent.ToEventCommon",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -406,7 +403,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestMergeEvent.ToEvent",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -428,7 +425,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestMergeEvent.ToEventCommon",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -473,7 +470,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestReopenEvent.ToEvent",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -495,7 +492,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestReopenEvent.ToEventCommon",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -540,7 +537,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestUnapprovedEvent.ToEventCommon",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -585,7 +582,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestUndraftEvent.ToEvent",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -607,7 +604,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestUndraftEvent.ToEventCommon",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -652,7 +649,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.MergeRequestUpdateEvent.ToEventCommon",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -788,7 +785,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.mergeRequestEvent.downcast",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -863,7 +860,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -884,7 +880,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.TestMergeRequestDowncast",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -908,7 +904,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.TestUnmarshalEvent",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -932,7 +928,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.UnmarshalEvent",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {

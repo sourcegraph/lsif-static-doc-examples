@@ -13,7 +13,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleFormatMediaType" href="#ExampleFormatMediaType">func ExampleFormatMediaType()</a>

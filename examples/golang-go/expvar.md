@@ -95,10 +95,6 @@ import _ "expvar"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="varKeys" href="#varKeys">var varKeys</a>
 
 ```
@@ -142,10 +138,6 @@ All published variables.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Float" href="#Float">type Float struct</a>
 
 ```
@@ -165,7 +157,7 @@ Float is a 64-bit float variable that satisfies the Var interface.
 
 ```
 searchKey: expvar.NewFloat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -202,7 +194,7 @@ Set sets v to value.
 
 ```
 searchKey: expvar.Float.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -213,7 +205,7 @@ func (v *Float) String() string
 
 ```
 searchKey: expvar.Float.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -237,7 +229,7 @@ Func implements Var by calling the function and formatting the returned value us
 
 ```
 searchKey: expvar.Func.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -248,7 +240,7 @@ func (f Func) String() string
 
 ```
 searchKey: expvar.Func.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -274,7 +266,7 @@ Int is a 64-bit integer variable that satisfies the Var interface.
 
 ```
 searchKey: expvar.NewInt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -307,7 +299,7 @@ func (v *Int) Set(value int64)
 
 ```
 searchKey: expvar.Int.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -318,7 +310,7 @@ func (v *Int) String() string
 
 ```
 searchKey: expvar.Int.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -362,7 +354,7 @@ Map is a string-to-Var map variable that satisfies the Var interface.
 
 ```
 searchKey: expvar.NewMap
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -436,7 +428,7 @@ func (v *Map) Get(key string) Var
 
 ```
 searchKey: expvar.Map.Init
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -460,7 +452,7 @@ func (v *Map) Set(key string, av Var)
 
 ```
 searchKey: expvar.Map.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -499,7 +491,7 @@ String is a string variable, and satisfies the Var interface.
 
 ```
 searchKey: expvar.NewString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -521,7 +513,7 @@ func (v *String) Set(value string)
 
 ```
 searchKey: expvar.String.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -534,7 +526,7 @@ String implements the Var interface. To get the unquoted string use Value.
 
 ```
 searchKey: expvar.String.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -563,7 +555,7 @@ Var is an abstract type for all exported variables.
 
 ```
 searchKey: expvar.Get
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -574,15 +566,11 @@ Get retrieves a named exported variable. It returns nil if the name has not been
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkFloatAdd" href="#BenchmarkFloatAdd">func BenchmarkFloatAdd(b *testing.B)</a>
 
 ```
 searchKey: expvar.BenchmarkFloatAdd
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -593,7 +581,7 @@ func BenchmarkFloatAdd(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkFloatSet
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -604,7 +592,7 @@ func BenchmarkFloatSet(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkIntAdd
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -615,7 +603,7 @@ func BenchmarkIntAdd(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkIntSet
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -626,7 +614,7 @@ func BenchmarkIntSet(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapAddDifferent
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -637,7 +625,7 @@ func BenchmarkMapAddDifferent(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapAddDifferentRandom
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -650,7 +638,7 @@ BenchmarkMapAddDifferentRandom simulates such a case where that the concerned ke
 
 ```
 searchKey: expvar.BenchmarkMapAddDifferentSteadyState
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -661,7 +649,7 @@ func BenchmarkMapAddDifferentSteadyState(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapAddSame
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -672,7 +660,7 @@ func BenchmarkMapAddSame(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapAddSameSteadyState
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -683,7 +671,7 @@ func BenchmarkMapAddSameSteadyState(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapSet
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -694,7 +682,7 @@ func BenchmarkMapSet(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapSetDifferent
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -705,7 +693,7 @@ func BenchmarkMapSetDifferent(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkMapSetDifferentRandom
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -718,7 +706,7 @@ BenchmarkMapSetDifferentRandom simulates such a case where the concerned keys of
 
 ```
 searchKey: expvar.BenchmarkMapSetString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -729,7 +717,7 @@ func BenchmarkMapSetString(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkRealworldExpvarUsage
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -740,7 +728,7 @@ func BenchmarkRealworldExpvarUsage(b *testing.B)
 
 ```
 searchKey: expvar.BenchmarkStringSet
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -751,7 +739,7 @@ func BenchmarkStringSet(b *testing.B)
 
 ```
 searchKey: expvar.Do
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -779,7 +767,7 @@ This is only needed to install the handler in a non-standard location.
 
 ```
 searchKey: expvar.Publish
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -805,7 +793,7 @@ RemoveAll removes all exported variables. This is for tests only.
 
 ```
 searchKey: expvar.TestFloat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -816,7 +804,7 @@ func TestFloat(t *testing.T)
 
 ```
 searchKey: expvar.TestFunc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -827,7 +815,7 @@ func TestFunc(t *testing.T)
 
 ```
 searchKey: expvar.TestHandler
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -838,7 +826,7 @@ func TestHandler(t *testing.T)
 
 ```
 searchKey: expvar.TestInt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -849,7 +837,7 @@ func TestInt(t *testing.T)
 
 ```
 searchKey: expvar.TestMapCounter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -860,7 +848,7 @@ func TestMapCounter(t *testing.T)
 
 ```
 searchKey: expvar.TestMapDelete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -871,7 +859,7 @@ func TestMapDelete(t *testing.T)
 
 ```
 searchKey: expvar.TestMapInit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -882,7 +870,7 @@ func TestMapInit(t *testing.T)
 
 ```
 searchKey: expvar.TestNil
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -893,7 +881,7 @@ func TestNil(t *testing.T)
 
 ```
 searchKey: expvar.TestString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -915,7 +903,7 @@ func cmdline() interface{}
 
 ```
 searchKey: expvar.expvarHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

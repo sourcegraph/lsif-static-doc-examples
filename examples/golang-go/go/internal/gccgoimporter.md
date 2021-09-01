@@ -142,7 +142,7 @@ Package gccgoimporter implements Import for gccgo-generated object files.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="aixbigafMagic" href="#aixbigafMagic">const aixbigafMagic</a>
@@ -683,7 +683,7 @@ const goimporterMagic = "\n$$ "
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="importablePackages" href="#importablePackages">var importablePackages</a>
@@ -739,7 +739,7 @@ var typeParserTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GccgoInstallation" href="#GccgoInstallation">type GccgoInstallation struct</a>
@@ -794,7 +794,7 @@ Ask the driver at the given path for information for this GccgoInstallation. The
 
 ```
 searchKey: gccgoimporter.GccgoInstallation.SearchPaths
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -820,7 +820,7 @@ An Importer resolves import paths to Packages. The imports map records packages 
 
 ```
 searchKey: gccgoimporter.GetImporter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -899,7 +899,7 @@ type importError struct {
 
 ```
 searchKey: gccgoimporter.importError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -983,7 +983,7 @@ func (p *parser) expect(tok rune) string
 
 ```
 searchKey: gccgoimporter.parser.expectEOL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1040,7 +1040,7 @@ func (p *parser) initScanner(filename string, src io.Reader)
 
 ```
 searchKey: gccgoimporter.parser.maybeCreatePackage
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1053,7 +1053,7 @@ Create the package if we have parsed both the package path and package name.
 
 ```
 searchKey: gccgoimporter.parser.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1129,7 +1129,7 @@ Conversion = "convert" "(" Type "," ConstValue ")" .
 
 ```
 searchKey: gccgoimporter.parser.parseDirective
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1154,7 +1154,7 @@ Directive = InitDataDirective |
 
 ```
 searchKey: gccgoimporter.parser.parseExportedName
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1208,7 +1208,7 @@ FunctionType = ParamList ResultList .
 
 ```
 searchKey: gccgoimporter.parser.parseInitDataDirective
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1227,7 +1227,7 @@ InitDataDirective = ( "v1" | "v2" | "v3" ) ";" |
 
 ```
 searchKey: gccgoimporter.parser.parseInt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1238,7 +1238,7 @@ func (p *parser) parseInt() int
 
 ```
 searchKey: gccgoimporter.parser.parseInt64
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1275,7 +1275,7 @@ MapType = "map" "[" Type "]" Type .
 
 ```
 searchKey: gccgoimporter.parser.parseName
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1301,7 +1301,7 @@ NamedType = TypeName [ "=" ] Type { Method } . TypeName  = ExportedName . Method
 
 ```
 searchKey: gccgoimporter.parser.parsePackage
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1314,7 +1314,7 @@ Package = { Directive } .
 
 ```
 searchKey: gccgoimporter.parser.parsePackageInit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1366,7 +1366,7 @@ PointerType = "*" ("any" | Type) .
 
 ```
 searchKey: gccgoimporter.parser.parseQualifiedName
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1418,7 +1418,7 @@ parseSavedType parses one saved type definition.
 
 ```
 searchKey: gccgoimporter.parser.parseString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1509,7 +1509,7 @@ Types = "types" maxp1 exportedp1 (offset length)* .
 
 ```
 searchKey: gccgoimporter.parser.parseUnquotedQualifiedName
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1520,7 +1520,7 @@ func (p *parser) parseUnquotedQualifiedName() (path, name string)
 
 ```
 searchKey: gccgoimporter.parser.parseUnquotedString
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1559,7 +1559,7 @@ reserve reserves the type map entry n for future use.
 
 ```
 searchKey: gccgoimporter.parser.skipInlineBody
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1608,14 +1608,14 @@ func (sra seekerReadAt) ReadAt(p []byte, off int64) (int, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestGoxImporter" href="#TestGoxImporter">func TestGoxImporter(t *testing.T)</a>
 
 ```
 searchKey: gccgoimporter.TestGoxImporter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1626,7 +1626,7 @@ func TestGoxImporter(t *testing.T)
 
 ```
 searchKey: gccgoimporter.TestInstallationImporter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1637,7 +1637,7 @@ func TestInstallationImporter(t *testing.T)
 
 ```
 searchKey: gccgoimporter.TestObjImporter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1648,7 +1648,7 @@ func TestObjImporter(t *testing.T)
 
 ```
 searchKey: gccgoimporter.TestTypeParser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1659,7 +1659,7 @@ func TestTypeParser(t *testing.T)
 
 ```
 searchKey: gccgoimporter.aixBigArExportData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1672,7 +1672,7 @@ aixBigArExportData returns export data from an AIX big archive.
 
 ```
 searchKey: gccgoimporter.arExportData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1685,7 +1685,7 @@ arExportData takes an archive file and returns a ReadSeeker for the export data 
 
 ```
 searchKey: gccgoimporter.deref
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1696,7 +1696,7 @@ func deref(typ types.Type) types.Type
 
 ```
 searchKey: gccgoimporter.elfFromAr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1709,7 +1709,7 @@ elfFromAr tries to get export data from an archive member as an ELF file. If the
 
 ```
 searchKey: gccgoimporter.findExportFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1735,7 +1735,7 @@ gccgoPath returns a path to gccgo if it is present (either in path or specified 
 
 ```
 searchKey: gccgoimporter.lookupBuiltinType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1746,7 +1746,7 @@ func lookupBuiltinType(typ int) types.Type
 
 ```
 searchKey: gccgoimporter.openExportFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1759,7 +1759,7 @@ Opens the export data file at the given path. If this is an ELF file, searches f
 
 ```
 searchKey: gccgoimporter.readMagic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1772,7 +1772,7 @@ readMagic reads the four bytes at the start of a ReadSeeker and returns them as 
 
 ```
 searchKey: gccgoimporter.readerAtFromSeeker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1785,7 +1785,7 @@ readerAtFromSeeker turns an io.ReadSeeker into an io.ReaderAt. This is only safe
 
 ```
 searchKey: gccgoimporter.runImporterTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1796,7 +1796,7 @@ func runImporterTest(t *testing.T, imp Importer, initmap map[*types.Package]Init
 
 ```
 searchKey: gccgoimporter.standardArExportData
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

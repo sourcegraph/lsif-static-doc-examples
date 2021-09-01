@@ -28,10 +28,6 @@
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
@@ -52,7 +48,7 @@ Client is a HubSpot API client
 
 ```
 searchKey: hubspot.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -125,7 +121,7 @@ func (c *Client) baseContactURL(email string) *url.URL
 
 ```
 searchKey: hubspot.Client.baseEventURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -136,7 +132,7 @@ func (c *Client) baseEventURL() *url.URL
 
 ```
 searchKey: hubspot.Client.baseFormURL
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -236,7 +232,7 @@ apiProperties represents a list of HubSpot API-compliant key-value pairs
 
 ```
 searchKey: hubspot.newAPIValues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -272,15 +268,11 @@ type apiProperty struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="wrapError" href="#wrapError">func wrapError(methodName string, err error) error</a>
 
 ```
 searchKey: hubspot.wrapError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

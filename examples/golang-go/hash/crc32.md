@@ -93,10 +93,6 @@ See [https://en.wikipedia.org/wiki/Mathematics_of_cyclic_redundancy_checks#Rever
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Castagnoli" href="#Castagnoli">const Castagnoli</a>
 
 ```
@@ -213,10 +209,6 @@ const slicing8Cutoff = 16
 Use slicing-by-8 when payload >= this value. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="IEEETable" href="#IEEETable">var IEEETable</a>
 
@@ -391,10 +383,6 @@ var updateIEEE func(crc uint32, p []byte) uint32
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Table" href="#Table">type Table [256]uint32</a>
 
 ```
@@ -412,7 +400,7 @@ Table is a 256-word table representing the polynomial for efficient processing.
 
 ```
 searchKey: crc32.MakeTable
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -425,7 +413,7 @@ MakeTable returns a Table constructed from the specified polynomial. The content
 
 ```
 searchKey: crc32.simpleMakeTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -454,7 +442,7 @@ digest represents the partial evaluation of a checksum.
 
 ```
 searchKey: crc32.digest.BlockSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -465,7 +453,7 @@ func (d *digest) BlockSize() int
 
 ```
 searchKey: crc32.digest.MarshalBinary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -476,7 +464,7 @@ func (d *digest) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: crc32.digest.Reset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -487,7 +475,7 @@ func (d *digest) Reset()
 
 ```
 searchKey: crc32.digest.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -509,7 +497,7 @@ func (d *digest) Sum(in []byte) []byte
 
 ```
 searchKey: crc32.digest.Sum32
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -555,7 +543,7 @@ slicing8Table is array of 8 Tables, used by the slicing-by-8 algorithm.
 
 ```
 searchKey: crc32.slicingMakeTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -593,15 +581,11 @@ type test struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkCRC32" href="#BenchmarkCRC32">func BenchmarkCRC32(b *testing.B)</a>
 
 ```
 searchKey: crc32.BenchmarkCRC32
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -612,7 +596,7 @@ func BenchmarkCRC32(b *testing.B)
 
 ```
 searchKey: crc32.Checksum
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -625,7 +609,7 @@ Checksum returns the CRC-32 checksum of data using the polynomial represented by
 
 ```
 searchKey: crc32.ChecksumIEEE
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -638,7 +622,7 @@ ChecksumIEEE returns the CRC-32 checksum of data using the IEEE polynomial.
 
 ```
 searchKey: crc32.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -664,7 +648,7 @@ NewIEEE creates a new hash.Hash32 computing the CRC-32 checksum using the IEEE p
 
 ```
 searchKey: crc32.TestArchCastagnoli
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -675,7 +659,7 @@ func TestArchCastagnoli(t *testing.T)
 
 ```
 searchKey: crc32.TestArchIEEE
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -686,7 +670,7 @@ func TestArchIEEE(t *testing.T)
 
 ```
 searchKey: crc32.TestCastagnoliRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -699,7 +683,7 @@ First test, so that it can be the one to initialize castagnoliTable.
 
 ```
 searchKey: crc32.TestGolden
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -710,7 +694,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: crc32.TestGoldenMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -721,7 +705,7 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: crc32.TestMarshalTableMismatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -732,7 +716,7 @@ func TestMarshalTableMismatch(t *testing.T)
 
 ```
 searchKey: crc32.TestSimple
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -745,7 +729,7 @@ TestSimple tests the simple generic algorithm.
 
 ```
 searchKey: crc32.TestSlicing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -758,7 +742,7 @@ TestSimple tests the slicing-by-8 algorithm.
 
 ```
 searchKey: crc32.Update
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -771,7 +755,7 @@ Update returns the result of adding the bytes in p to the crc.
 
 ```
 searchKey: crc32.appendUint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -826,7 +810,7 @@ func archInitIEEE()
 
 ```
 searchKey: crc32.archUpdateCastagnoli
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -837,7 +821,7 @@ func archUpdateCastagnoli(crc uint32, p []byte) uint32
 
 ```
 searchKey: crc32.archUpdateIEEE
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -848,7 +832,7 @@ func archUpdateIEEE(crc uint32, p []byte) uint32
 
 ```
 searchKey: crc32.benchmark
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -859,7 +843,7 @@ func benchmark(b *testing.B, h hash.Hash32, n, alignment int64)
 
 ```
 searchKey: crc32.benchmarkAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -881,7 +865,7 @@ func castagnoliInit()
 
 ```
 searchKey: crc32.castagnoliSSE42
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -894,7 +878,7 @@ castagnoliSSE42 is defined in crc32_amd64.s and uses the SSE 4.2 CRC32 instructi
 
 ```
 searchKey: crc32.castagnoliSSE42Triple
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -911,7 +895,7 @@ castagnoliSSE42Triple is defined in crc32_amd64.s and uses the SSE 4.2 CRC32 ins
 
 ```
 searchKey: crc32.castagnoliShift
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -924,7 +908,7 @@ castagnoliShift computes the CRC32-C of K1 or K2 zeroes (depending on the table 
 
 ```
 searchKey: crc32.ieeeCLMUL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -948,7 +932,7 @@ func ieeeInit()
 
 ```
 searchKey: crc32.readUint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -959,7 +943,7 @@ func readUint32(b []byte) uint32
 
 ```
 searchKey: crc32.simplePopulateTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -972,7 +956,7 @@ simplePopulateTable constructs a Table for the specified polynomial, suitable fo
 
 ```
 searchKey: crc32.simpleUpdate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -985,7 +969,7 @@ simpleUpdate uses the simple algorithm to update the CRC, given a table that was
 
 ```
 searchKey: crc32.slicingUpdate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -998,7 +982,7 @@ slicingUpdate uses the slicing-by-8 algorithm to update the CRC, given a table t
 
 ```
 searchKey: crc32.tableSum
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1011,7 +995,7 @@ tableSum returns the IEEE checksum of table t.
 
 ```
 searchKey: crc32.testCrossCheck
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1024,7 +1008,7 @@ testCrossCheck generates random buffers of various lengths and verifies that the
 
 ```
 searchKey: crc32.testGoldenCastagnoli
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1037,7 +1021,7 @@ testGoldenCastagnoli verifies that the given function returns correct IEEE check
 
 ```
 searchKey: crc32.testGoldenIEEE
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

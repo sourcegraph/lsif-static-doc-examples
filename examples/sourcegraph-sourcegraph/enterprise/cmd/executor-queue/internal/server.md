@@ -70,7 +70,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrUnknownJob" href="#ErrUnknownJob">var ErrUnknownJob</a>
@@ -109,7 +109,7 @@ var shutdownErr = errors.New("server shutting down")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Options" href="#Options">type Options struct</a>
@@ -169,7 +169,7 @@ type QueueMetrics struct {
 
 ```
 searchKey: server.newQueueMetrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -243,7 +243,7 @@ type handler struct {
 
 ```
 searchKey: server.newHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -254,7 +254,7 @@ func newHandler(options Options, clock glock.Clock) *handler
 
 ```
 searchKey: server.newHandlerWithMetrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -460,7 +460,7 @@ markFailed calls MarkFailed for the given job, then commits the job's transactio
 
 ```
 searchKey: server.handler.pruneExecutors
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -523,7 +523,7 @@ func (h *handler) setupRoutes(router *mux.Router)
 
 ```
 searchKey: server.handler.shutdown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -549,7 +549,7 @@ unknownJobs returns the set of job identifiers reported by the executor which do
 
 ```
 searchKey: server.handler.updateMetrics
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -606,7 +606,7 @@ func (hw *handlerWrapper) HandleError(err error)
 
 ```
 searchKey: server.handlerWrapper.OnShutdown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -647,7 +647,7 @@ type testRecord struct {
 
 ```
 searchKey: server.testRecord.RecordID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -657,14 +657,14 @@ func (r testRecord) RecordID() int
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewServer" href="#NewServer">func NewServer(options Options, observationContext *observation.Context) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: server.NewServer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -677,7 +677,7 @@ NewServer returns an HTTP job queue server.
 
 ```
 searchKey: server.TestAddExecutionLogEntry
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -688,7 +688,7 @@ func TestAddExecutionLogEntry(t *testing.T)
 
 ```
 searchKey: server.TestAddExecutionLogEntryUnknownJob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -699,7 +699,7 @@ func TestAddExecutionLogEntryUnknownJob(t *testing.T)
 
 ```
 searchKey: server.TestAddExecutionLogEntryUnknownQueue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -710,7 +710,7 @@ func TestAddExecutionLogEntryUnknownQueue(t *testing.T)
 
 ```
 searchKey: server.TestCleanup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -721,7 +721,7 @@ func TestCleanup(t *testing.T)
 
 ```
 searchKey: server.TestDequeue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -732,7 +732,7 @@ func TestDequeue(t *testing.T)
 
 ```
 searchKey: server.TestDequeueMaxTransactions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -743,7 +743,7 @@ func TestDequeueMaxTransactions(t *testing.T)
 
 ```
 searchKey: server.TestDequeueNoRecord
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -754,7 +754,7 @@ func TestDequeueNoRecord(t *testing.T)
 
 ```
 searchKey: server.TestDequeueUnknownQueue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -765,7 +765,7 @@ func TestDequeueUnknownQueue(t *testing.T)
 
 ```
 searchKey: server.TestHeartbeat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -776,7 +776,7 @@ func TestHeartbeat(t *testing.T)
 
 ```
 searchKey: server.TestMarkComplete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -787,7 +787,7 @@ func TestMarkComplete(t *testing.T)
 
 ```
 searchKey: server.TestMarkCompleteUnknownJob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -798,7 +798,7 @@ func TestMarkCompleteUnknownJob(t *testing.T)
 
 ```
 searchKey: server.TestMarkCompleteUnknownQueue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -809,7 +809,7 @@ func TestMarkCompleteUnknownQueue(t *testing.T)
 
 ```
 searchKey: server.TestMarkErrored
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -820,7 +820,7 @@ func TestMarkErrored(t *testing.T)
 
 ```
 searchKey: server.TestMarkErroredUnknownJob
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -831,7 +831,7 @@ func TestMarkErroredUnknownJob(t *testing.T)
 
 ```
 searchKey: server.TestMarkErroredUnknownQueue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -842,7 +842,7 @@ func TestMarkErroredUnknownQueue(t *testing.T)
 
 ```
 searchKey: server.TestMarkFailed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

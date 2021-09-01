@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestEqual" href="#TestEqual">func TestEqual(t *testing.T)</a>
 
 ```
 searchKey: rsa_test.TestEqual
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

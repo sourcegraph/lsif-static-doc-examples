@@ -14,15 +14,11 @@
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="getEnvBool" href="#getEnvBool">func getEnvBool(key string, defaultValue bool) bool</a>
 
 ```
 searchKey: main.getEnvBool
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -33,7 +29,7 @@ func getEnvBool(key string, defaultValue bool) bool
 
 ```
 searchKey: main.getEnvStr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

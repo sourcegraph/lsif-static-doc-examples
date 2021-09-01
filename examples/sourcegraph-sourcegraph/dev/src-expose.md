@@ -52,10 +52,6 @@ Command "src-expose" serves directories as git repositories over HTTP.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="testAddress" href="#testAddress">const testAddress</a>
 
 ```
@@ -68,10 +64,6 @@ const testAddress = "test.local:3939"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="discardLogger" href="#discardLogger">var discardLogger</a>
 
@@ -119,10 +111,6 @@ var postUpdateHook = []byte("#!/bin/sh\nexec git update-server-info\n")
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Repo" href="#Repo">type Repo struct</a>
 
 ```
@@ -161,7 +149,7 @@ type Serve struct {
 
 ```
 searchKey: main.Serve.Start
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -185,7 +173,7 @@ allUpdateServerInfo will run updateServerInfo on each gitDirs. To prevent too ma
 
 ```
 searchKey: main.Serve.configureRepos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -198,7 +186,7 @@ configureRepos finds all .git directories and configures them to be served. It r
 
 ```
 searchKey: main.Serve.handler
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -258,7 +246,7 @@ func (o *Snapshotter) Run(logger *log.Logger) error
 
 ```
 searchKey: main.Snapshotter.SetDefaults
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -341,7 +329,7 @@ type lineCountWriter struct {
 
 ```
 searchKey: main.lineCountWriter.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -400,7 +388,7 @@ type usageError struct {
 
 ```
 searchKey: main.usageError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -409,15 +397,11 @@ func (e *usageError) Error() string
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestExplain" href="#TestExplain">func TestExplain(t *testing.T)</a>
 
 ```
 searchKey: main.TestExplain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -428,7 +412,7 @@ func TestExplain(t *testing.T)
 
 ```
 searchKey: main.TestIgnoreGitSubmodules
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -439,7 +423,7 @@ func TestIgnoreGitSubmodules(t *testing.T)
 
 ```
 searchKey: main.TestReposHandler
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -450,7 +434,7 @@ func TestReposHandler(t *testing.T)
 
 ```
 searchKey: main.abs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -461,7 +445,7 @@ func abs(root, dir string) (string, error)
 
 ```
 searchKey: main.configurePostUpdateHook
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -474,7 +458,7 @@ configureOneRepos tweaks a .git repo such that it can be git cloned. See [https:
 
 ```
 searchKey: main.explainAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -485,7 +469,7 @@ func explainAddr(addr string) string
 
 ```
 searchKey: main.explainSnapshotter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -496,7 +480,7 @@ func explainSnapshotter(s *Snapshotter) string
 
 ```
 searchKey: main.gitInitRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -518,7 +502,7 @@ func main()
 
 ```
 searchKey: main.run
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -529,7 +513,7 @@ func run(logger *log.Logger, name string, cmd *exec.Cmd) (int, error)
 
 ```
 searchKey: main.shortenErrHelp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -540,7 +524,7 @@ func shortenErrHelp(cmd *ffcli.Command, cmdPath string)
 
 ```
 searchKey: main.snapshot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -551,7 +535,7 @@ func snapshot(logger *log.Logger, src, dst string) error
 
 ```
 searchKey: main.testLogger
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -562,7 +546,7 @@ func testLogger(t *testing.T) *log.Logger
 
 ```
 searchKey: main.testReposHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -573,7 +557,7 @@ func testReposHandler(t *testing.T, h http.Handler, repos []Repo)
 
 ```
 searchKey: main.updateServerInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -584,7 +568,7 @@ func updateServerInfo(gitDir string) error
 
 ```
 searchKey: main.usageErrorOutput
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

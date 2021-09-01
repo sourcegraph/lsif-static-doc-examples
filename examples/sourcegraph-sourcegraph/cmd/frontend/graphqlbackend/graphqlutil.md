@@ -17,10 +17,6 @@ Package graphqlutil contains utilities for working with GraphQL.
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ConnectionArgs" href="#ConnectionArgs">type ConnectionArgs struct</a>
 
 ```
@@ -40,7 +36,7 @@ ConnectionArgs is the common set of arguments to GraphQL fields that return conn
 
 ```
 searchKey: graphqlutil.ConnectionArgs.GetFirst
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -82,7 +78,7 @@ PageInfo implements the GraphQL type PageInfo.
 
 ```
 searchKey: graphqlutil.HasNextPage
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -95,7 +91,7 @@ HasNextPage returns a new PageInfo with the given hasNextPage value.
 
 ```
 searchKey: graphqlutil.NextPageCursor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -108,7 +104,7 @@ NextPageCursor returns a new PageInfo indicating there is a next page with the g
 
 ```
 searchKey: graphqlutil.PageInfo.EndCursor
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -119,7 +115,7 @@ func (r *PageInfo) EndCursor() *string
 
 ```
 searchKey: graphqlutil.PageInfo.HasNextPage
-tags: [function]
+tags: [method]
 ```
 
 ```Go

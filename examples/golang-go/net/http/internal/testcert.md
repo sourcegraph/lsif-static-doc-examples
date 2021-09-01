@@ -14,7 +14,7 @@ Package testcert contains a test-only localhost certificate.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="LocalhostCert" href="#LocalhostCert">var LocalhostCert</a>
@@ -46,14 +46,14 @@ LocalhostKey is the private key for LocalhostCert.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="testingKey" href="#testingKey">func testingKey(s string) string</a>
 
 ```
 searchKey: testcert.testingKey
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

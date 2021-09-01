@@ -22,7 +22,7 @@ Package actor provides the structures for representing an actor who has access t
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="actorKey" href="#actorKey">const actorKey</a>
@@ -39,7 +39,7 @@ const actorKey key = iota
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Actor" href="#Actor">type Actor struct</a>
@@ -71,7 +71,7 @@ Actor represents an agent that accesses resources. It can represent an anonymous
 
 ```
 searchKey: actor.FromContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -82,7 +82,7 @@ func FromContext(ctx context.Context) *Actor
 
 ```
 searchKey: actor.FromUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -95,7 +95,7 @@ FromUser returns an actor corresponding to a user
 
 ```
 searchKey: actor.Actor.IsAuthenticated
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -108,7 +108,7 @@ IsAuthenticated returns true if the Actor is derived from an authenticated user.
 
 ```
 searchKey: actor.Actor.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -119,7 +119,7 @@ func (a *Actor) String() string
 
 ```
 searchKey: actor.Actor.UIDString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -142,14 +142,14 @@ type key int
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="WithActor" href="#WithActor">func WithActor(ctx context.Context, a *Actor) context.Context</a>
 
 ```
 searchKey: actor.WithActor
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -160,7 +160,7 @@ func WithActor(ctx context.Context, a *Actor) context.Context
 
 ```
 searchKey: actor.WithInternalActor
-tags: [method]
+tags: [function]
 ```
 
 ```Go

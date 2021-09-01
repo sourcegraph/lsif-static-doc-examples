@@ -23,10 +23,6 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="addr" href="#addr">const addr</a>
 
 ```
@@ -39,10 +35,6 @@ const addr = ":3192"
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Config" href="#Config">type Config struct</a>
 
@@ -110,7 +102,7 @@ func (c *Config) ClientOptions(transport http.RoundTripper) apiclient.Options
 
 ```
 searchKey: main.Config.EndpointOptions
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -121,7 +113,7 @@ func (c *Config) EndpointOptions() apiclient.EndpointOptions
 
 ```
 searchKey: main.Config.FirecrackerOptions
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -132,7 +124,7 @@ func (c *Config) FirecrackerOptions() command.FirecrackerOptions
 
 ```
 searchKey: main.Config.Load
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -143,7 +135,7 @@ func (c *Config) Load()
 
 ```
 searchKey: main.Config.ResourceOptions
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -154,7 +146,7 @@ func (c *Config) ResourceOptions() command.ResourceOptions
 
 ```
 searchKey: main.Config.WorkerOptions
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -162,10 +154,6 @@ func (c *Config) WorkerOptions() workerutil.WorkerOptions
 ```
 
 ## <a id="func" href="#func">Functions</a>
-
-```
-tags: [package]
-```
 
 ### <a id="main" href="#main">func main()</a>
 
@@ -182,7 +170,7 @@ func main()
 
 ```
 searchKey: main.makeWorkerMetrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -24,9 +24,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -484,9 +482,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -525,7 +521,7 @@
                       "newPage": false,
                       "searchKey": "smtp.CRAMMD5Auth",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -547,7 +543,7 @@
                       "newPage": false,
                       "searchKey": "smtp.PlainAuth",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -592,7 +588,7 @@
                       "newPage": false,
                       "searchKey": "smtp.Dial",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -614,7 +610,7 @@
                       "newPage": false,
                       "searchKey": "smtp.NewClient",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -658,7 +654,7 @@
                       "newPage": false,
                       "searchKey": "smtp.Client.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -680,7 +676,7 @@
                       "newPage": false,
                       "searchKey": "smtp.Client.Data",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -768,7 +764,7 @@
                       "newPage": false,
                       "searchKey": "smtp.Client.Noop",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -790,7 +786,7 @@
                       "newPage": false,
                       "searchKey": "smtp.Client.Quit",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -834,7 +830,7 @@
                       "newPage": false,
                       "searchKey": "smtp.Client.Reset",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -878,7 +874,7 @@
                       "newPage": false,
                       "searchKey": "smtp.Client.TLSConnectionState",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -945,7 +941,7 @@
                       "newPage": false,
                       "searchKey": "smtp.Client.ehlo",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -968,7 +964,7 @@
                       "newPage": false,
                       "searchKey": "smtp.Client.hello",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -991,7 +987,7 @@
                       "newPage": false,
                       "searchKey": "smtp.Client.helo",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1153,7 +1149,7 @@
                       "newPage": false,
                       "searchKey": "smtp.dataCloser.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1200,7 +1196,7 @@
                       "newPage": false,
                       "searchKey": "smtp.faker.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1223,7 +1219,7 @@
                       "newPage": false,
                       "searchKey": "smtp.faker.LocalAddr",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1246,7 +1242,7 @@
                       "newPage": false,
                       "searchKey": "smtp.faker.RemoteAddr",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1530,9 +1526,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1551,7 +1545,7 @@
                 "newPage": false,
                 "searchKey": "smtp.SendMail",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1573,7 +1567,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestAuth",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1597,7 +1591,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestAuthFailed",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1621,7 +1615,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestAuthPlain",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1645,7 +1639,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestBasic",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1669,7 +1663,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestClientAuthTrimSpace",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1693,7 +1687,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestExtensions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1717,7 +1711,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestHello",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1741,7 +1735,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestNewClient",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1765,7 +1759,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestNewClient2",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1789,7 +1783,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestNewClientWithTLS",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1813,7 +1807,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestSendMail",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1837,7 +1831,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestSendMailWithAuth",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1861,7 +1855,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestTLSClient",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1885,7 +1879,7 @@
                 "newPage": false,
                 "searchKey": "smtp.TestTLSConnState",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1932,7 +1926,7 @@
                 "newPage": false,
                 "searchKey": "smtp.isLocalhost",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1955,7 +1949,7 @@
                 "newPage": false,
                 "searchKey": "smtp.newLocalListener",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1978,7 +1972,7 @@
                 "newPage": false,
                 "searchKey": "smtp.sendMail",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2001,7 +1995,7 @@
                 "newPage": false,
                 "searchKey": "smtp.serverHandle",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2024,7 +2018,7 @@
                 "newPage": false,
                 "searchKey": "smtp.serverHandleTLS",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2047,7 +2041,7 @@
                 "newPage": false,
                 "searchKey": "smtp.testingKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2070,7 +2064,7 @@
                 "newPage": false,
                 "searchKey": "smtp.validateLine",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

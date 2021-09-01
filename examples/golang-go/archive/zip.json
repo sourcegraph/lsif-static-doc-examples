@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1053,9 +1051,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1387,9 +1383,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1428,7 +1422,7 @@
                       "newPage": false,
                       "searchKey": "zip.compressor",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1474,7 +1468,7 @@
                       "newPage": false,
                       "searchKey": "zip.decompressor",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1520,7 +1514,7 @@
                       "newPage": false,
                       "searchKey": "zip.File.DataOffset",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1542,7 +1536,7 @@
                       "newPage": false,
                       "searchKey": "zip.File.Open",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1564,7 +1558,7 @@
                       "newPage": false,
                       "searchKey": "zip.File.OpenRaw",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1586,7 +1580,7 @@
                       "newPage": false,
                       "searchKey": "zip.File.findBodyOffset",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1609,7 +1603,7 @@
                       "newPage": false,
                       "searchKey": "zip.File.readDataDescriptor",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1655,7 +1649,7 @@
                       "newPage": false,
                       "searchKey": "zip.FileInfoHeader",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1677,7 +1671,7 @@
                       "newPage": false,
                       "searchKey": "zip.FileHeader.FileInfo",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1699,7 +1693,7 @@
                       "newPage": false,
                       "searchKey": "zip.FileHeader.ModTime",
                       "tags": [
-                        "function",
+                        "method",
                         "deprecated"
                       ]
                     },
@@ -1722,7 +1716,7 @@
                       "newPage": false,
                       "searchKey": "zip.FileHeader.Mode",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1789,7 +1783,7 @@
                       "newPage": false,
                       "searchKey": "zip.FileHeader.hasDataDescriptor",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1812,7 +1806,7 @@
                       "newPage": false,
                       "searchKey": "zip.FileHeader.isZip64",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1858,7 +1852,7 @@
                       "newPage": false,
                       "searchKey": "zip.OpenReader",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1880,7 +1874,7 @@
                       "newPage": false,
                       "searchKey": "zip.ReadCloser.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1925,7 +1919,7 @@
                       "newPage": false,
                       "searchKey": "zip.NewReader",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -2037,7 +2031,7 @@
                       "newPage": false,
                       "searchKey": "zip.Reader.initFileList",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2152,7 +2146,7 @@
                       "newPage": false,
                       "searchKey": "zip.NewWriter",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -2174,7 +2168,7 @@
                       "newPage": false,
                       "searchKey": "zip.Writer.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2284,7 +2278,7 @@
                       "newPage": false,
                       "searchKey": "zip.Writer.Flush",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -2488,7 +2482,7 @@
                       "newPage": false,
                       "searchKey": "zip.checksumReader.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2534,7 +2528,7 @@
                       "newPage": false,
                       "searchKey": "zip.checksumReader.Stat",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2628,7 +2622,7 @@
                       "newPage": false,
                       "searchKey": "zip.readDataDescriptor",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2722,7 +2716,7 @@
                       "newPage": false,
                       "searchKey": "zip.readDirectoryEnd",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2769,7 +2763,7 @@
                       "newPage": false,
                       "searchKey": "zip.fakeHash32.Sum32",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2862,7 +2856,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Info",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2885,7 +2879,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.IsDir",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2908,7 +2902,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.ModTime",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2931,7 +2925,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Mode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2954,7 +2948,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Name",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2977,7 +2971,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Size",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3000,7 +2994,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Sys",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3023,7 +3017,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.Type",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3046,7 +3040,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileListEntry.stat",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3116,7 +3110,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileWriter.close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3139,7 +3133,7 @@
                       "newPage": false,
                       "searchKey": "zip.fileWriter.writeDataDescriptor",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3209,7 +3203,7 @@
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Info",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3232,7 +3226,7 @@
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.IsDir",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3255,7 +3249,7 @@
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.ModTime",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3278,7 +3272,7 @@
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Mode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3301,7 +3295,7 @@
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Name",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3324,7 +3318,7 @@
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Size",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3347,7 +3341,7 @@
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Sys",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3370,7 +3364,7 @@
                       "newPage": false,
                       "searchKey": "zip.headerFileInfo.Type",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3417,7 +3411,7 @@
                       "newPage": false,
                       "searchKey": "zip.nopCloser.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3464,7 +3458,7 @@
                       "newPage": false,
                       "searchKey": "zip.openDir.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3533,7 +3527,7 @@
                       "newPage": false,
                       "searchKey": "zip.openDir.Stat",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3580,7 +3574,7 @@
                       "newPage": false,
                       "searchKey": "zip.pooledFlateReader.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3650,7 +3644,7 @@
                       "newPage": false,
                       "searchKey": "zip.pooledFlateWriter.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3744,7 +3738,7 @@
                       "newPage": false,
                       "searchKey": "zip.readBuf.uint16",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3767,7 +3761,7 @@
                       "newPage": false,
                       "searchKey": "zip.readBuf.uint32",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3790,7 +3784,7 @@
                       "newPage": false,
                       "searchKey": "zip.readBuf.uint64",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3813,7 +3807,7 @@
                       "newPage": false,
                       "searchKey": "zip.readBuf.uint8",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -3883,7 +3877,7 @@
                       "newPage": false,
                       "searchKey": "zip.testZip64",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -3929,7 +3923,7 @@
                       "newPage": false,
                       "searchKey": "zip.rleBuffer.Size",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4045,7 +4039,7 @@
                       "newPage": false,
                       "searchKey": "zip.suffixSaver.Size",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4068,7 +4062,7 @@
                       "newPage": false,
                       "searchKey": "zip.suffixSaver.Suffix",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -4283,9 +4277,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -4304,7 +4296,7 @@
                 "newPage": false,
                 "searchKey": "zip.BenchmarkCompressedZipGarbage",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -4328,7 +4320,7 @@
                 "newPage": false,
                 "searchKey": "zip.BenchmarkZip64Test",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -4352,7 +4344,7 @@
                 "newPage": false,
                 "searchKey": "zip.BenchmarkZip64TestSizes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -4376,7 +4368,7 @@
                 "newPage": false,
                 "searchKey": "zip.RegisterCompressor",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4398,7 +4390,7 @@
                 "newPage": false,
                 "searchKey": "zip.RegisterDecompressor",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -4420,7 +4412,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestCVE202127919",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4444,7 +4436,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestCVE202133196",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4468,7 +4460,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestFS",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4492,7 +4484,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestFSModTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4516,7 +4508,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestFileHeaderRoundTrip",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4540,7 +4532,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestFileHeaderRoundTrip64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4564,7 +4556,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestFileHeaderRoundTripModified",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4588,7 +4580,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestFileHeaderRoundTripWithoutModified",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4612,7 +4604,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestHeaderIgnoredSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4636,7 +4628,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestHeaderInvalidTagAndSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4660,7 +4652,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestHeaderTooLongErr",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4684,7 +4676,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestHeaderTooShort",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4708,7 +4700,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestInvalidFiles",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4732,7 +4724,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestIssue10956",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4756,7 +4748,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestIssue10957",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4780,7 +4772,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestIssue11146",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4804,7 +4796,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestIssue12449",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4828,7 +4820,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestIssue8186",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4852,7 +4844,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestModTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4876,7 +4868,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestOver65kFiles",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4900,7 +4892,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestRLEBuffer",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4924,7 +4916,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestReadDataDescriptor",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4948,7 +4940,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestReader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4972,7 +4964,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestSuffixSaver",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -4996,7 +4988,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5020,7 +5012,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestWriterComment",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5044,7 +5036,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestWriterCopy",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5068,7 +5060,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestWriterCreateRaw",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5092,7 +5084,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestWriterDir",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5116,7 +5108,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestWriterDirAttributes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5140,7 +5132,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestWriterFlush",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5164,7 +5156,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestWriterOffset",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5188,7 +5180,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestWriterTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5212,7 +5204,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestWriterUTF8",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5236,7 +5228,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestZeroLengthHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5260,7 +5252,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestZip64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5284,7 +5276,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestZip64DirectoryOffset",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5308,7 +5300,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestZip64EdgeCase",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5332,7 +5324,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestZip64LargeDirectory",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5356,7 +5348,7 @@
                 "newPage": false,
                 "searchKey": "zip.TestZip64ManyRecords",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -5403,7 +5395,7 @@
                 "newPage": false,
                 "searchKey": "zip.detectUTF8",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5426,7 +5418,7 @@
                 "newPage": false,
                 "searchKey": "zip.equalTimeAndZone",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5449,7 +5441,7 @@
                 "newPage": false,
                 "searchKey": "zip.fileEntryLess",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5472,7 +5464,7 @@
                 "newPage": false,
                 "searchKey": "zip.fileModeToUnixMode",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5495,7 +5487,7 @@
                 "newPage": false,
                 "searchKey": "zip.findDirectory64End",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5518,7 +5510,7 @@
                 "newPage": false,
                 "searchKey": "zip.findSignatureInBlock",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5541,7 +5533,7 @@
                 "newPage": false,
                 "searchKey": "zip.generatesZip64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5587,7 +5579,7 @@
                 "newPage": false,
                 "searchKey": "zip.memset",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5610,7 +5602,7 @@
                 "newPage": false,
                 "searchKey": "zip.messWith",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5633,7 +5625,7 @@
                 "newPage": false,
                 "searchKey": "zip.min",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5656,7 +5648,7 @@
                 "newPage": false,
                 "searchKey": "zip.min64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5679,7 +5671,7 @@
                 "newPage": false,
                 "searchKey": "zip.msDosTimeToTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5702,7 +5694,7 @@
                 "newPage": false,
                 "searchKey": "zip.msdosModeToFileMode",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5725,7 +5717,7 @@
                 "newPage": false,
                 "searchKey": "zip.newFlateReader",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5748,7 +5740,7 @@
                 "newPage": false,
                 "searchKey": "zip.newFlateWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5794,7 +5786,7 @@
                 "newPage": false,
                 "searchKey": "zip.readDirectory64End",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5817,7 +5809,7 @@
                 "newPage": false,
                 "searchKey": "zip.readDirectoryHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5840,7 +5832,7 @@
                 "newPage": false,
                 "searchKey": "zip.readTestFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5863,7 +5855,7 @@
                 "newPage": false,
                 "searchKey": "zip.readTestZip",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -5978,7 +5970,7 @@
                 "newPage": false,
                 "searchKey": "zip.split",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6001,7 +5993,7 @@
                 "newPage": false,
                 "searchKey": "zip.suffixIsZip64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6024,7 +6016,7 @@
                 "newPage": false,
                 "searchKey": "zip.testCreate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6047,7 +6039,7 @@
                 "newPage": false,
                 "searchKey": "zip.testFileMode",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6070,7 +6062,7 @@
                 "newPage": false,
                 "searchKey": "zip.testHeaderRoundTrip",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6093,7 +6085,7 @@
                 "newPage": false,
                 "searchKey": "zip.testReadFile",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6116,7 +6108,7 @@
                 "newPage": false,
                 "searchKey": "zip.testValidHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6139,7 +6131,7 @@
                 "newPage": false,
                 "searchKey": "zip.testZip64DirectoryRecordLength",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6162,7 +6154,7 @@
                 "newPage": false,
                 "searchKey": "zip.timeToMsDosTime",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6185,7 +6177,7 @@
                 "newPage": false,
                 "searchKey": "zip.timeZone",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6208,7 +6200,7 @@
                 "newPage": false,
                 "searchKey": "zip.toValidName",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6231,7 +6223,7 @@
                 "newPage": false,
                 "searchKey": "zip.unixModeToFileMode",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -6254,7 +6246,7 @@
                 "newPage": false,
                 "searchKey": "zip.writeHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

@@ -53,7 +53,7 @@ Package cpu implements processor feature detection used by the Go standard libra
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CacheLinePadSize" href="#CacheLinePadSize">const CacheLinePadSize</a>
@@ -263,7 +263,7 @@ const cpuid_SSSE3 = 1 << 9
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ARM" href="#ARM">var ARM</a>
@@ -475,7 +475,7 @@ options contains the cpu debug options that can be used in GODEBUG. Options are 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CacheLinePad" href="#CacheLinePad">type CacheLinePad struct</a>
@@ -513,14 +513,14 @@ Option names should be lower case. e.g. avx instead of AVX.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Initialize" href="#Initialize">func Initialize(env string)</a>
 
 ```
 searchKey: cpu.Initialize
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -546,7 +546,7 @@ Name returns the CPU name given by the vendor. If the CPU name can not be determ
 
 ```
 searchKey: cpu.appendBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -557,7 +557,7 @@ func appendBytes(b []byte, args ...uint32) []byte
 
 ```
 searchKey: cpu.cpuid
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -581,7 +581,7 @@ func doinit()
 
 ```
 searchKey: cpu.indexByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -594,7 +594,7 @@ indexByte returns the index of the first instance of c in s, or -1 if c is not p
 
 ```
 searchKey: cpu.isSet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -605,7 +605,7 @@ func isSet(hwc uint32, value uint32) bool
 
 ```
 searchKey: cpu.processOptions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

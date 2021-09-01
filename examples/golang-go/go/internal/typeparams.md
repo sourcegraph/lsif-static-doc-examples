@@ -18,7 +18,7 @@ Package typeparams provides functions to work with type parameter data stored in
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DisallowParsing" href="#DisallowParsing">const DisallowParsing</a>
@@ -48,14 +48,14 @@ const Enabled = false
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Get" href="#Get">func Get(ast.Node) *ast.FieldList</a>
 
 ```
 searchKey: typeparams.Get
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -66,7 +66,7 @@ func Get(ast.Node) *ast.FieldList
 
 ```
 searchKey: typeparams.IsListExpr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -77,7 +77,7 @@ func IsListExpr(n ast.Node) bool
 
 ```
 searchKey: typeparams.PackExpr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -88,7 +88,7 @@ func PackExpr(list []ast.Expr) ast.Expr
 
 ```
 searchKey: typeparams.Set
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -99,7 +99,7 @@ func Set(node ast.Node, params *ast.FieldList)
 
 ```
 searchKey: typeparams.UnpackExpr
-tags: [method]
+tags: [function]
 ```
 
 ```Go

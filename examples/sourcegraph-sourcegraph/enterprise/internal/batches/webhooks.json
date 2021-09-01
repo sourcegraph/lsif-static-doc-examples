@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/webhooks",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -171,7 +170,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -212,7 +210,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.NewBitbucketServerWebhook",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -325,7 +323,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.NewGitHubWebhook",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -806,7 +804,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.NewGitLabWebhook",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -988,7 +986,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.gitlabToPR",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1197,7 +1195,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.brokenReader.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1267,7 +1265,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.httpError.Error",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1360,7 +1358,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.nestedTx.Commit",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1383,7 +1381,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.nestedTx.Rollback",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1477,7 +1475,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.loadWebhookTestCase",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1506,7 +1504,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1527,7 +1524,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.TestValidateGitLabSecret",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1551,7 +1548,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.TestWebhooksIntegration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1575,7 +1572,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.assertBodyIncludes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1598,7 +1595,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.assertChangesetEventForChangeset",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1621,7 +1618,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.createGitLabChangeset",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1644,7 +1641,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.createGitLabExternalService",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1667,7 +1664,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.createGitLabRepo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1690,7 +1687,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.createMergeRequestPayload",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1713,7 +1710,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.createPipelinePayload",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1736,7 +1733,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.extractExternalServiceID",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1759,7 +1756,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.getSingleRepo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1782,7 +1779,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.gitLabTestSetup",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1805,7 +1802,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.respond",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1828,7 +1825,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.sign",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1851,7 +1848,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.testBitbucketWebhook",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1874,7 +1871,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.testGitHubWebhook",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1897,7 +1894,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.testGitLabWebhook",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1920,7 +1917,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.validateGitLabSecret",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

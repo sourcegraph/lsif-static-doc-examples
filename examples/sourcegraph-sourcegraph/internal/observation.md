@@ -87,7 +87,7 @@ Log fields and metric labels can be supplied at construction of an Operation, at
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestContext" href="#TestContext">var TestContext</a>
@@ -136,7 +136,7 @@ commonAcronyms includes acronyms that malform the expected output of kebabCase d
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Args" href="#Args">type Args struct</a>
@@ -161,7 +161,7 @@ Args configures the observation behavior of an invocation of an operation.
 
 ```
 searchKey: observation.Args.LogFieldMap
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -174,7 +174,7 @@ LogFieldMap returns a string-to-interface map containing the contents of this Ar
 
 ```
 searchKey: observation.Args.LogFieldPairs
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -386,14 +386,14 @@ TraceLogger is returned from WithAndLogger and can be used to add timestamped ke
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestKebabCase" href="#TestKebabCase">func TestKebabCase(t *testing.T)</a>
 
 ```
 searchKey: observation.TestKebabCase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -415,7 +415,7 @@ func init()
 
 ```
 searchKey: observation.kebabCase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -428,7 +428,7 @@ kebab transforms a string into lower-kebab-case.
 
 ```
 searchKey: observation.mergeLabels
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -441,7 +441,7 @@ mergeLabels flattens slices of slices of strings.
 
 ```
 searchKey: observation.mergeLogFields
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

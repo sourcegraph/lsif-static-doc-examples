@@ -2143,10 +2143,6 @@ The http package's Transport and Server both automatically enable HTTP/2 support
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DefaultMaxHeaderBytes" href="#DefaultMaxHeaderBytes">const DefaultMaxHeaderBytes</a>
 
 ```
@@ -8186,10 +8182,6 @@ Wire protocol constants.
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="DefaultClient" href="#DefaultClient">var DefaultClient</a>
 
 ```
@@ -10663,10 +10655,6 @@ var zeroDialer net.Dialer
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
@@ -10743,7 +10731,7 @@ When following redirects, the Client will forward all headers set on the initial
 
 ```
 searchKey: http.Client.CloseIdleConnections
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -10894,7 +10882,7 @@ checkRedirect calls either the user's configured CheckRedirect function, or the 
 
 ```
 searchKey: http.Client.deadline
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -10942,7 +10930,7 @@ didTimeout is non-nil only if err != nil.
 
 ```
 searchKey: http.Client.transport
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -11003,7 +10991,7 @@ A ConnState represents the state of a client connection to a server. It's used b
 
 ```
 searchKey: http.ConnState.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11047,7 +11035,7 @@ See [https://tools.ietf.org/html/rfc6265](https://tools.ietf.org/html/rfc6265) f
 
 ```
 searchKey: http.Cookie.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11157,7 +11145,7 @@ This interface predates the fs.FS interface, which can be used instead: the FS a
 
 ```
 searchKey: http.FS
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11213,7 +11201,7 @@ If ServeHTTP panics, the server (the caller of ServeHTTP) assumes that the effec
 
 ```
 searchKey: http.AllowQuerySemicolons
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11230,7 +11218,7 @@ AllowQuerySemicolons should be invoked before Request.ParseForm is called.
 
 ```
 searchKey: http.FileServer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11257,7 +11245,7 @@ http.Handle("/", http.FileServer(http.FS(fsys)))
 
 ```
 searchKey: http.NewTestTimeoutHandler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11281,7 +11269,7 @@ NotFoundHandler returns a simple request handler that replies to each request wi
 
 ```
 searchKey: http.RedirectHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11296,7 +11284,7 @@ The provided code should be in the 3xx range and is usually StatusMovedPermanent
 
 ```
 searchKey: http.StripPrefix
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11309,7 +11297,7 @@ StripPrefix returns a handler that serves HTTP requests by removing the given pr
 
 ```
 searchKey: http.TimeoutHandler
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11339,7 +11327,7 @@ The HandlerFunc type is an adapter to allow the use of ordinary functions as HTT
 
 ```
 searchKey: http.http2new400Handler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11378,7 +11366,7 @@ The keys should be in canonical form, as returned by CanonicalHeaderKey.
 
 ```
 searchKey: http.cloneOrMakeHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11391,7 +11379,7 @@ cloneOrMakeHeader invokes Header.Clone but if the result is nil, it'll instead m
 
 ```
 searchKey: http.fixTrailer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11404,7 +11392,7 @@ Parse the trailer header
 
 ```
 searchKey: http.http2cloneHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11428,7 +11416,7 @@ Add adds the key, value pair to the header. It appends to any existing values as
 
 ```
 searchKey: http.Header.Clone
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11633,7 +11621,7 @@ Deprecated: Not all errors in the http package related to protocol errors are of
 
 ```
 searchKey: http.ProtocolError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -11941,7 +11929,7 @@ The field semantics differ slightly between client and server usage. In addition
 
 ```
 searchKey: http.NewRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11954,7 +11942,7 @@ NewRequest wraps NewRequestWithContext using context.Background.
 
 ```
 searchKey: http.NewRequestWithContext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11973,7 +11961,7 @@ If body is of type *bytes.Buffer, *bytes.Reader, or *strings.Reader, the returne
 
 ```
 searchKey: http.ReadRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11988,7 +11976,7 @@ ReadRequest is a low-level function and should only be used for specialized appl
 
 ```
 searchKey: http.dummyReq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11999,7 +11987,7 @@ func dummyReq(method string) *Request
 
 ```
 searchKey: http.dummyReq11
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12010,7 +11998,7 @@ func dummyReq11(method string) *Request
 
 ```
 searchKey: http.dummyRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12021,7 +12009,7 @@ func dummyRequest(method string) *Request
 
 ```
 searchKey: http.dummyRequestWithBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12032,7 +12020,7 @@ func dummyRequestWithBody(method string) *Request
 
 ```
 searchKey: http.dummyRequestWithBodyNoGetBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12043,7 +12031,7 @@ func dummyRequestWithBodyNoGetBody(method string) *Request
 
 ```
 searchKey: http.http2shouldRetryRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12056,7 +12044,7 @@ shouldRetryRequest is called by RoundTrip when a request fails to get response h
 
 ```
 searchKey: http.readRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12067,7 +12055,7 @@ func readRequest(b *bufio.Reader) (req *Request, err error)
 
 ```
 searchKey: http.rewindBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12080,7 +12068,7 @@ rewindBody returns a new request with the body rewound. It returns req unmodifie
 
 ```
 searchKey: http.setupRewindBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12106,7 +12094,7 @@ AddCookie adds a cookie to the request. Per RFC 6265 section 5.4, AddCookie does
 
 ```
 searchKey: http.Request.BasicAuth
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -12134,7 +12122,7 @@ For an outgoing client request, the context controls the entire lifetime of a re
 
 ```
 searchKey: http.Request.Context
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -12166,7 +12154,7 @@ Cookie returns the named cookie provided in the request or ErrNoCookie if not fo
 
 ```
 searchKey: http.Request.Cookies
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -12179,7 +12167,7 @@ Cookies parses and returns the HTTP cookies sent with the request.
 
 ```
 searchKey: http.Request.ExportIsReplayable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12216,7 +12204,7 @@ FormValue returns the first value for the named component of the query. POST and
 
 ```
 searchKey: http.Request.MultipartReader
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -12229,7 +12217,7 @@ MultipartReader returns a MIME multipart reader if this is a multipart/form-data
 
 ```
 searchKey: http.Request.ParseForm
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -12291,7 +12279,7 @@ ProtoAtLeast reports whether the HTTP protocol used in the request is at least m
 
 ```
 searchKey: http.Request.Referer
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -12323,7 +12311,7 @@ Some protocols may impose additional requirements on pre-escaping the username a
 
 ```
 searchKey: http.Request.UserAgent
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -12402,7 +12390,7 @@ WriteProxy is like Write but writes the request in the form expected by an HTTP 
 
 ```
 searchKey: http.Request.closeBody
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12413,7 +12401,7 @@ func (r *Request) closeBody() error
 
 ```
 searchKey: http.Request.expectsContinue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12424,7 +12412,7 @@ func (r *Request) expectsContinue() bool
 
 ```
 searchKey: http.Request.isH2Upgrade
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12437,7 +12425,7 @@ isH2Upgrade reports whether r represents the http2 "client preface" magic string
 
 ```
 searchKey: http.Request.isReplayable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12459,7 +12447,7 @@ func (r *Request) multipartReader(allowMixed bool) (*multipart.Reader, error)
 
 ```
 searchKey: http.Request.outgoingLength
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12472,7 +12460,7 @@ outgoingLength reports the Content-Length of this outgoing (Client) request. It 
 
 ```
 searchKey: http.Request.requiresHTTP1
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12485,7 +12473,7 @@ requiresHTTP1 reports whether this request requires being sent on an HTTP/1 conn
 
 ```
 searchKey: http.Request.wantsClose
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12496,7 +12484,7 @@ func (r *Request) wantsClose() bool
 
 ```
 searchKey: http.Request.wantsHttp10KeepAlive
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12622,7 +12610,7 @@ The Client and Transport return Responses from servers once the response headers
 
 ```
 searchKey: http.Get
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12653,7 +12641,7 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.Head
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12678,7 +12666,7 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.Post
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12703,7 +12691,7 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.PostForm
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12726,7 +12714,7 @@ To make a request with a specified context.Context, use NewRequestWithContext an
 
 ```
 searchKey: http.ReadResponse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -12739,7 +12727,7 @@ ReadResponse reads and returns an HTTP response from r. The req parameter option
 
 ```
 searchKey: http.send
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12752,7 +12740,7 @@ send issues an HTTP request. Caller should close resp.Body when done reading fro
 
 ```
 searchKey: http.Response.Cookies
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -12765,7 +12753,7 @@ Cookies parses and returns the cookies set in the Set-Cookie headers.
 
 ```
 searchKey: http.Response.Location
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -12820,7 +12808,7 @@ The Response Body is closed after it is sent.
 
 ```
 searchKey: http.Response.bodyIsWritable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12833,7 +12821,7 @@ bodyIsWritable reports whether the Body supports writing. The Transport returns 
 
 ```
 searchKey: http.Response.closeBody
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12844,7 +12832,7 @@ func (r *Response) closeBody()
 
 ```
 searchKey: http.Response.isProtocolSwitch
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -12973,7 +12961,7 @@ A RoundTripper must be safe for concurrent use by multiple goroutines.
 
 ```
 searchKey: http.NewFileTransport
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -13278,7 +13266,7 @@ A Server defines parameters for running an HTTP server. The zero value for Serve
 
 ```
 searchKey: http.Server.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -13295,7 +13283,7 @@ Close returns any error returned from closing the Server's underlying Listener(s
 
 ```
 searchKey: http.Server.ExportAllConnsByState
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13306,7 +13294,7 @@ func (s *Server) ExportAllConnsByState() map[ConnState]int
 
 ```
 searchKey: http.Server.ExportAllConnsIdle
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13317,7 +13305,7 @@ func (s *Server) ExportAllConnsIdle() bool
 
 ```
 searchKey: http.Server.ListenAndServe
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -13432,7 +13420,7 @@ Once Shutdown has been called on a server, it may not be reused; future calls to
 
 ```
 searchKey: http.Server.closeDoneChanLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13443,7 +13431,7 @@ func (s *Server) closeDoneChanLocked()
 
 ```
 searchKey: http.Server.closeIdleConns
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13456,7 +13444,7 @@ closeIdleConns closes all idle connections and reports whether the server is qui
 
 ```
 searchKey: http.Server.closeListenersLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13467,7 +13455,7 @@ func (s *Server) closeListenersLocked() error
 
 ```
 searchKey: http.Server.doKeepAlives
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13478,7 +13466,7 @@ func (s *Server) doKeepAlives() bool
 
 ```
 searchKey: http.Server.getDoneChan
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13489,7 +13477,7 @@ func (s *Server) getDoneChan() <-chan struct{}
 
 ```
 searchKey: http.Server.getDoneChanLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13500,7 +13488,7 @@ func (s *Server) getDoneChanLocked() chan struct{}
 
 ```
 searchKey: http.Server.idleTimeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13511,7 +13499,7 @@ func (s *Server) idleTimeout() time.Duration
 
 ```
 searchKey: http.Server.initialReadLimitSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13533,7 +13521,7 @@ func (s *Server) logf(format string, args ...interface{})
 
 ```
 searchKey: http.Server.maxHeaderBytes
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13557,7 +13545,7 @@ Create new connection from rwc.
 
 ```
 searchKey: http.Server.numListeners
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13568,7 +13556,7 @@ func (s *Server) numListeners() int
 
 ```
 searchKey: http.Server.onceSetNextProtoDefaults
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13581,7 +13569,7 @@ onceSetNextProtoDefaults configures HTTP/2, if the user hasn't configured otherw
 
 ```
 searchKey: http.Server.onceSetNextProtoDefaults_Serve
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13592,7 +13580,7 @@ func (srv *Server) onceSetNextProtoDefaults_Serve()
 
 ```
 searchKey: http.Server.readHeaderTimeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13603,7 +13591,7 @@ func (s *Server) readHeaderTimeout() time.Duration
 
 ```
 searchKey: http.Server.setupHTTP2_Serve
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13618,7 +13606,7 @@ The tests named TestTransportAutomaticHTTP2* and TestConcurrentServerServe in se
 
 ```
 searchKey: http.Server.setupHTTP2_ServeTLS
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13631,7 +13619,7 @@ setupHTTP2_ServeTLS conditionally configures HTTP/2 on srv and reports whether t
 
 ```
 searchKey: http.Server.shouldConfigureHTTP2ForServe
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13644,7 +13632,7 @@ shouldDoServeHTTP2 reports whether Server.Serve should configure automatic HTTP/
 
 ```
 searchKey: http.Server.shuttingDown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13912,7 +13900,7 @@ Deprecated: Use Request.WithContext to create a request with a cancelable contex
 
 ```
 searchKey: http.Transport.Clone
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -13925,7 +13913,7 @@ Clone returns a deep copy of t's exported fields.
 
 ```
 searchKey: http.Transport.CloseIdleConnections
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -13949,7 +13937,7 @@ func (t *Transport) IdleConnCountForTesting(scheme, addr string) int
 
 ```
 searchKey: http.Transport.IdleConnKeyCountForTesting
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13960,7 +13948,7 @@ func (t *Transport) IdleConnKeyCountForTesting() int
 
 ```
 searchKey: http.Transport.IdleConnKeysForTesting
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13971,7 +13959,7 @@ func (t *Transport) IdleConnKeysForTesting() (keys []string)
 
 ```
 searchKey: http.Transport.IdleConnStrsForTesting
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13982,7 +13970,7 @@ func (t *Transport) IdleConnStrsForTesting() []string
 
 ```
 searchKey: http.Transport.IdleConnStrsForTesting_h2
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -13993,7 +13981,7 @@ func (t *Transport) IdleConnStrsForTesting_h2() []string
 
 ```
 searchKey: http.Transport.IdleConnWaitMapSizeForTesting
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14004,7 +13992,7 @@ func (t *Transport) IdleConnWaitMapSizeForTesting() int
 
 ```
 searchKey: http.Transport.IsIdleForTesting
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14015,7 +14003,7 @@ func (t *Transport) IsIdleForTesting() bool
 
 ```
 searchKey: http.Transport.NumPendingRequestsForTesting
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14052,7 +14040,7 @@ PutIdleTestConnH2 reports whether it was able to insert a fresh HTTP/2 persistCo
 
 ```
 searchKey: http.Transport.QueueForIdleConnForTesting
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14206,7 +14194,7 @@ getConn dials and creates a new persistConn to the target as specified in the co
 
 ```
 searchKey: http.Transport.hasCustomTLSDialer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14217,7 +14205,7 @@ func (t *Transport) hasCustomTLSDialer() bool
 
 ```
 searchKey: http.Transport.maxIdleConnsPerHost
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14228,7 +14216,7 @@ func (t *Transport) maxIdleConnsPerHost() int
 
 ```
 searchKey: http.Transport.onceSetNextProtoDefaults
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14278,7 +14266,7 @@ queueForIdleConn queues w to receive the next idle connection for w.cm. As an op
 
 ```
 searchKey: http.Transport.readBufferSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14378,7 +14366,7 @@ useRegisteredProtocol reports whether an alternate protocol (as registered with 
 
 ```
 searchKey: http.Transport.writeBufferSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14415,7 +14403,7 @@ type atomicBool int32
 
 ```
 searchKey: http.atomicBool.isSet
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14426,7 +14414,7 @@ func (b *atomicBool) isSet() bool
 
 ```
 searchKey: http.atomicBool.setFalse
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14437,7 +14425,7 @@ func (b *atomicBool) setFalse()
 
 ```
 searchKey: http.atomicBool.setTrue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14473,7 +14461,7 @@ body turns a Reader into a ReadCloser. Close ensures that the body has been full
 
 ```
 searchKey: http.body.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14495,7 +14483,7 @@ func (b *body) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.body.bodyRemains
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14508,7 +14496,7 @@ bodyRemains reports whether future Read calls might yield data.
 
 ```
 searchKey: http.body.didEarlyClose
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14532,7 +14520,7 @@ Must hold b.mu.
 
 ```
 searchKey: http.body.readTrailer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14554,7 +14542,7 @@ func (b *body) registerOnHitEOF(fn func())
 
 ```
 searchKey: http.body.unreadDataSizeLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14591,7 +14579,7 @@ If earlyCloseFn is non-nil and Close is called before io.EOF is seen, earlyClose
 
 ```
 searchKey: http.bodyEOFSignal.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14737,7 +14725,7 @@ marked as net.Error that hit its timeout.
 
 ```
 searchKey: http.cancelTimerBody.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14830,7 +14818,7 @@ func (cw *chunkWriter) Write(p []byte) (n int, err error)
 
 ```
 searchKey: http.chunkWriter.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14841,7 +14829,7 @@ func (cw *chunkWriter) close()
 
 ```
 searchKey: http.chunkWriter.flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14881,7 +14869,7 @@ type closeChecker struct {
 
 ```
 searchKey: http.closeChecker.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -14918,7 +14906,7 @@ condResult is the result of an HTTP request precondition check. See [https://too
 
 ```
 searchKey: http.checkIfMatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14929,7 +14917,7 @@ func checkIfMatch(w ResponseWriter, r *Request) condResult
 
 ```
 searchKey: http.checkIfModifiedSince
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14940,7 +14928,7 @@ func checkIfModifiedSince(r *Request, modtime time.Time) condResult
 
 ```
 searchKey: http.checkIfNoneMatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14951,7 +14939,7 @@ func checkIfNoneMatch(w ResponseWriter, r *Request) condResult
 
 ```
 searchKey: http.checkIfRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -14962,7 +14950,7 @@ func checkIfRange(w ResponseWriter, r *Request, modtime time.Time) condResult
 
 ```
 searchKey: http.checkIfUnmodifiedSince
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -15040,7 +15028,7 @@ A conn represents the server side of an HTTP connection.
 
 ```
 searchKey: http.conn.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15053,7 +15041,7 @@ Close the connection.
 
 ```
 searchKey: http.conn.closeWriteAndWait
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15068,7 +15056,7 @@ See [https://golang.org/issue/3595](https://golang.org/issue/3595)
 
 ```
 searchKey: http.conn.finalFlush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15079,7 +15067,7 @@ func (c *conn) finalFlush()
 
 ```
 searchKey: http.conn.getState
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15090,7 +15078,7 @@ func (c *conn) getState() (state ConnState, unixSec int64)
 
 ```
 searchKey: http.conn.hijackLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15103,7 +15091,7 @@ c.mu must be held.
 
 ```
 searchKey: http.conn.hijacked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15178,7 +15166,7 @@ add adds pc to the head of the linked list.
 
 ```
 searchKey: http.connLRU.len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15204,7 +15192,7 @@ remove removes pc from cl.
 
 ```
 searchKey: http.connLRU.removeOldest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15249,7 +15237,7 @@ func (cr *connReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: http.connReader.abortPendingRead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15260,7 +15248,7 @@ func (cr *connReader) abortPendingRead()
 
 ```
 searchKey: http.connReader.backgroundRead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15271,7 +15259,7 @@ func (cr *connReader) backgroundRead()
 
 ```
 searchKey: http.connReader.closeNotify
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15301,7 +15289,7 @@ It may be called from multiple goroutines.
 
 ```
 searchKey: http.connReader.hitReadLimit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15312,7 +15300,7 @@ func (cr *connReader) hitReadLimit() bool
 
 ```
 searchKey: http.connReader.lock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15323,7 +15311,7 @@ func (cr *connReader) lock()
 
 ```
 searchKey: http.connReader.setInfiniteReadLimit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15345,7 +15333,7 @@ func (cr *connReader) setReadLimit(remain int64)
 
 ```
 searchKey: http.connReader.startBackgroundRead
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15356,7 +15344,7 @@ func (cr *connReader) startBackgroundRead()
 
 ```
 searchKey: http.connReader.unlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15405,7 +15393,7 @@ socks5://proxy.com|https|foo.com  socks5 to proxy, then https to foo.com
 
 ```
 searchKey: http.connectMethod.addr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15418,7 +15406,7 @@ addr returns the first hop "host:port" to which we need to TCP connect.
 
 ```
 searchKey: http.connectMethod.key
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15429,7 +15417,7 @@ func (cm *connectMethod) key() connectMethodKey
 
 ```
 searchKey: http.connectMethod.proxyAuth
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15442,7 +15430,7 @@ proxyAuth returns the Proxy-Authorization header to set on requests, if applicab
 
 ```
 searchKey: http.connectMethod.scheme
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15455,7 +15443,7 @@ scheme returns the first hop scheme: http, https, or socks5
 
 ```
 searchKey: http.connectMethod.tlsHost
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15484,7 +15472,7 @@ connectMethodKey is the map key version of connectMethod, with a stringified pro
 
 ```
 searchKey: http.connectMethodKey.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15510,7 +15498,7 @@ contextKey is a value for use with context.WithValue. It's used as a pointer so 
 
 ```
 searchKey: http.contextKey.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15594,7 +15582,7 @@ func (d dirEntryDirs) isDir(i int) bool
 
 ```
 searchKey: http.dirEntryDirs.len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15632,7 +15620,7 @@ dumpConn is a net.Conn that writes to Writer and reads from Reader.
 
 ```
 searchKey: http.dumpConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15643,7 +15631,7 @@ func (c *dumpConn) Close() error
 
 ```
 searchKey: http.dumpConn.LocalAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15654,7 +15642,7 @@ func (c *dumpConn) LocalAddr() net.Addr
 
 ```
 searchKey: http.dumpConn.RemoteAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15778,7 +15766,7 @@ wrapper around io.ReadCloser which on first read, sends an HTTP/1.1 100 Continue
 
 ```
 searchKey: http.expectContinueReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15847,7 +15835,7 @@ fakeLocker is a sync.Locker which does nothing. It's used to guard test-only fie
 
 ```
 searchKey: http.fakeLocker.Lock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15858,7 +15846,7 @@ func (fakeLocker) Lock()
 
 ```
 searchKey: http.fakeLocker.Unlock
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -15915,7 +15903,7 @@ func (d fileInfoDirs) isDir(i int) bool
 
 ```
 searchKey: http.fileInfoDirs.len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16031,7 +16019,7 @@ gzipReader wraps a response body so it can lazily call gzip.NewReader on the fir
 
 ```
 searchKey: http.gzipReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16096,7 +16084,7 @@ type headerOnlyResponseWriter Header
 
 ```
 searchKey: http.headerOnlyResponseWriter.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16144,7 +16132,7 @@ A headerSorter implements sort.Interface by sorting a []keyValues by key. It's u
 
 ```
 searchKey: http.headerSorter.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16256,7 +16244,7 @@ ClientConn is the state of a single HTTP/2 client connection to an HTTP/2 server
 
 ```
 searchKey: http.http2ClientConn.CanTakeNewRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16269,7 +16257,7 @@ CanTakeNewRequest reports whether the connection can take a new request, meaning
 
 ```
 searchKey: http.http2ClientConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16334,7 +16322,7 @@ awaitOpenSlotForRequest waits until len(streams) < maxConcurrentStreams. Must ho
 
 ```
 searchKey: http.http2ClientConn.canTakeNewRequestLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16358,7 +16346,7 @@ closes the client connection immediately. In-flight requests are interrupted. er
 
 ```
 searchKey: http.http2ClientConn.closeForLostPing
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16371,7 +16359,7 @@ closes the client connection immediately. In-flight requests are interrupted.
 
 ```
 searchKey: http.http2ClientConn.closeIfIdle
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16419,7 +16407,7 @@ func (cc *http2ClientConn) forgetStreamID(id uint32)
 
 ```
 searchKey: http.http2ClientConn.frameScratchBuffer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16432,7 +16420,7 @@ frameBuffer returns a scratch buffer suitable for writing DATA frames. They're c
 
 ```
 searchKey: http.http2ClientConn.healthCheck
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16443,7 +16431,7 @@ func (cc *http2ClientConn) healthCheck()
 
 ```
 searchKey: http.http2ClientConn.idleState
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16454,7 +16442,7 @@ func (cc *http2ClientConn) idleState() http2clientConnIdleState
 
 ```
 searchKey: http.http2ClientConn.idleStateLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16476,7 +16464,7 @@ func (cc *http2ClientConn) logf(format string, args ...interface{})
 
 ```
 searchKey: http.http2ClientConn.newStream
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16489,7 +16477,7 @@ requires cc.mu be held.
 
 ```
 searchKey: http.http2ClientConn.onIdleTimeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16513,7 +16501,7 @@ func (cc *http2ClientConn) putFrameScratchBuffer(buf []byte)
 
 ```
 searchKey: http.http2ClientConn.readLoop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16526,7 +16514,7 @@ readLoop runs in its own goroutine and reads and dispatches frames.
 
 ```
 searchKey: http.http2ClientConn.responseHeaderTimeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16548,7 +16536,7 @@ func (cc *http2ClientConn) roundTrip(req *Request) (res *Response, gotErrAfterRe
 
 ```
 searchKey: http.http2ClientConn.sendGoAway
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16581,7 +16569,7 @@ func (cc *http2ClientConn) streamByID(id uint32, andRemove bool) *http2clientStr
 
 ```
 searchKey: http.http2ClientConn.tooIdleLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16669,7 +16657,7 @@ ConnectionError is an error that results in the termination of the entire connec
 
 ```
 searchKey: http.http2ConnectionError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16696,7 +16684,7 @@ A ContinuationFrame is used to continue a sequence of header block fragments. Se
 
 ```
 searchKey: http.http2ContinuationFrame.HeaderBlockFragment
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16707,7 +16695,7 @@ func (f *http2ContinuationFrame) HeaderBlockFragment() []byte
 
 ```
 searchKey: http.http2ContinuationFrame.HeadersEnded
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16734,7 +16722,7 @@ A DataFrame conveys arbitrary, variable-length sequences of octets associated wi
 
 ```
 searchKey: http.http2DataFrame.Data
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16747,7 +16735,7 @@ Data returns the frame's data octets, not including any padding size byte or pad
 
 ```
 searchKey: http.http2DataFrame.StreamEnded
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16771,7 +16759,7 @@ An ErrCode is an unsigned 32-bit error code as defined in the HTTP/2 spec.
 
 ```
 searchKey: http.http2ErrCode.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -16830,7 +16818,7 @@ Frames are only valid until the next call to Framer.ReadFrame.
 
 ```
 searchKey: http.http2parseContinuationFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16841,7 +16829,7 @@ func http2parseContinuationFrame(_ *http2frameCache, fh http2FrameHeader, p []by
 
 ```
 searchKey: http.http2parseDataFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16852,7 +16840,7 @@ func http2parseDataFrame(fc *http2frameCache, fh http2FrameHeader, payload []byt
 
 ```
 searchKey: http.http2parseGoAwayFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16863,7 +16851,7 @@ func http2parseGoAwayFrame(_ *http2frameCache, fh http2FrameHeader, p []byte) (h
 
 ```
 searchKey: http.http2parseHeadersFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16874,7 +16862,7 @@ func http2parseHeadersFrame(_ *http2frameCache, fh http2FrameHeader, p []byte) (
 
 ```
 searchKey: http.http2parsePingFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16885,7 +16873,7 @@ func http2parsePingFrame(_ *http2frameCache, fh http2FrameHeader, payload []byte
 
 ```
 searchKey: http.http2parsePriorityFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16896,7 +16884,7 @@ func http2parsePriorityFrame(_ *http2frameCache, fh http2FrameHeader, payload []
 
 ```
 searchKey: http.http2parsePushPromise
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16907,7 +16895,7 @@ func http2parsePushPromise(_ *http2frameCache, fh http2FrameHeader, p []byte) (_
 
 ```
 searchKey: http.http2parseRSTStreamFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16918,7 +16906,7 @@ func http2parseRSTStreamFrame(_ *http2frameCache, fh http2FrameHeader, p []byte)
 
 ```
 searchKey: http.http2parseSettingsFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16929,7 +16917,7 @@ func http2parseSettingsFrame(_ *http2frameCache, fh http2FrameHeader, p []byte) 
 
 ```
 searchKey: http.http2parseUnknownFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16940,7 +16928,7 @@ func http2parseUnknownFrame(_ *http2frameCache, fh http2FrameHeader, p []byte) (
 
 ```
 searchKey: http.http2parseWindowUpdateFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16986,7 +16974,7 @@ See [http://http2.github.io/http2-spec/#FrameHeader](http://http2.github.io/http
 
 ```
 searchKey: http.http2ReadFrameHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -16999,7 +16987,7 @@ ReadFrameHeader reads 9 bytes from r and returns a FrameHeader. Most users shoul
 
 ```
 searchKey: http.http2readFrameHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17010,7 +16998,7 @@ func http2readFrameHeader(buf []byte, r io.Reader) (http2FrameHeader, error)
 
 ```
 searchKey: http.http2FrameHeader.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17023,7 +17011,7 @@ Header returns h. It exists so FrameHeaders can be embedded in other specific fr
 
 ```
 searchKey: http.http2FrameHeader.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17034,7 +17022,7 @@ func (h http2FrameHeader) String() string
 
 ```
 searchKey: http.http2FrameHeader.checkValid
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17045,7 +17033,7 @@ func (h *http2FrameHeader) checkValid()
 
 ```
 searchKey: http.http2FrameHeader.invalidate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17080,7 +17068,7 @@ A FrameType is a registered frame type as defined in [http://http2.github.io/htt
 
 ```
 searchKey: http.http2FrameType.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17133,7 +17121,7 @@ If flow control prevents consuming any bytes, this returns (_, _, 0). If the ent
 
 ```
 searchKey: http.http2FrameWriteRequest.DataSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17146,7 +17134,7 @@ DataSize returns the number of flow control bytes that must be consumed to write
 
 ```
 searchKey: http.http2FrameWriteRequest.StreamID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17159,7 +17147,7 @@ StreamID returns the id of the stream this frame will be written to. 0 is used f
 
 ```
 searchKey: http.http2FrameWriteRequest.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17172,7 +17160,7 @@ String is for debugging only.
 
 ```
 searchKey: http.http2FrameWriteRequest.isControl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17268,7 +17256,7 @@ A Framer reads and writes Frames.
 
 ```
 searchKey: http.http2NewFramer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -17281,7 +17269,7 @@ NewFramer returns a Framer that writes frames to w and reads them from r.
 
 ```
 searchKey: http.http2Framer.ErrorDetail
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17294,7 +17282,7 @@ ErrorDetail returns a more detailed error of the last error returned by Framer.R
 
 ```
 searchKey: http.http2Framer.ReadFrame
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17322,7 +17310,7 @@ SetMaxReadFrameSize sets the maximum size of a frame that will be read by a subs
 
 ```
 searchKey: http.http2Framer.SetReuseFrames
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17496,7 +17484,7 @@ It will perform exactly one Write to the underlying Writer. It is the caller's r
 
 ```
 searchKey: http.http2Framer.WriteSettingsAck
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17550,7 +17538,7 @@ connError returns ConnectionError(code) but first stashes away a public reason t
 
 ```
 searchKey: http.http2Framer.endWrite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17561,7 +17549,7 @@ func (f *http2Framer) endWrite() error
 
 ```
 searchKey: http.http2Framer.logWrite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17572,7 +17560,7 @@ func (f *http2Framer) logWrite()
 
 ```
 searchKey: http.http2Framer.maxHeaderListSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17583,7 +17571,7 @@ func (fr *http2Framer) maxHeaderListSize() uint32
 
 ```
 searchKey: http.http2Framer.maxHeaderStringLen
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17679,7 +17667,7 @@ GoAwayError is returned by the Transport when the server closes the TCP connecti
 
 ```
 searchKey: http.http2GoAwayError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17708,7 +17696,7 @@ A GoAwayFrame informs the remote peer to stop creating streams on this connectio
 
 ```
 searchKey: http.http2GoAwayFrame.DebugData
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17741,7 +17729,7 @@ A HeadersFrame is used to open a stream and additionally carries a header block 
 
 ```
 searchKey: http.http2HeadersFrame.HasPriority
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17752,7 +17740,7 @@ func (f *http2HeadersFrame) HasPriority() bool
 
 ```
 searchKey: http.http2HeadersFrame.HeaderBlockFragment
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17763,7 +17751,7 @@ func (f *http2HeadersFrame) HeaderBlockFragment() []byte
 
 ```
 searchKey: http.http2HeadersFrame.HeadersEnded
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17774,7 +17762,7 @@ func (f *http2HeadersFrame) HeadersEnded() bool
 
 ```
 searchKey: http.http2HeadersFrame.StreamEnded
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17856,7 +17844,7 @@ This type of frame does not appear on the wire and is only returned by the Frame
 
 ```
 searchKey: http.http2MetaHeadersFrame.PseudoFields
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17882,7 +17870,7 @@ PseudoValue returns the given pseudo header field's value. The provided pseudo f
 
 ```
 searchKey: http.http2MetaHeadersFrame.RegularFields
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17895,7 +17883,7 @@ RegularFields returns the regular (non-pseudo) header fields of mh. The caller d
 
 ```
 searchKey: http.http2MetaHeadersFrame.checkPseudos
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17939,7 +17927,7 @@ A PingFrame is a mechanism for measuring a minimal round trip time from the send
 
 ```
 searchKey: http.http2PingFrame.IsAck
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -17993,7 +17981,7 @@ PriorityParam are the stream prioritzation parameters.
 
 ```
 searchKey: http.http2PriorityParam.IsZero
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18070,7 +18058,7 @@ A PushPromiseFrame is used to initiate a server stream. See [http://http2.github
 
 ```
 searchKey: http.http2PushPromiseFrame.HeaderBlockFragment
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18081,7 +18069,7 @@ func (f *http2PushPromiseFrame) HeaderBlockFragment() []byte
 
 ```
 searchKey: http.http2PushPromiseFrame.HeadersEnded
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18185,7 +18173,7 @@ ServeConnOpts are options for the Server.ServeConn method.
 
 ```
 searchKey: http.http2ServeConnOpts.baseConfig
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18196,7 +18184,7 @@ func (o *http2ServeConnOpts) baseConfig() *Server
 
 ```
 searchKey: http.http2ServeConnOpts.context
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18207,7 +18195,7 @@ func (o *http2ServeConnOpts) context() context.Context
 
 ```
 searchKey: http.http2ServeConnOpts.handler
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18301,7 +18289,7 @@ The opts parameter is optional. If nil, default values are used.
 
 ```
 searchKey: http.http2Server.initialConnRecvWindowSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18312,7 +18300,7 @@ func (s *http2Server) initialConnRecvWindowSize() int32
 
 ```
 searchKey: http.http2Server.initialStreamRecvWindowSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18323,7 +18311,7 @@ func (s *http2Server) initialStreamRecvWindowSize() int32
 
 ```
 searchKey: http.http2Server.maxConcurrentStreams
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18334,7 +18322,7 @@ func (s *http2Server) maxConcurrentStreams() uint32
 
 ```
 searchKey: http.http2Server.maxQueuedControlFrames
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18347,7 +18335,7 @@ maxQueuedControlFrames is the maximum number of control frames like SETTINGS, PI
 
 ```
 searchKey: http.http2Server.maxReadFrameSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18378,7 +18366,7 @@ Setting is a setting parameter: which setting it is, and its value.
 
 ```
 searchKey: http.http2Setting.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18389,7 +18377,7 @@ func (s http2Setting) String() string
 
 ```
 searchKey: http.http2Setting.Valid
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18415,7 +18403,7 @@ A SettingID is an HTTP/2 setting as defined in [http://http2.github.io/http2-spe
 
 ```
 searchKey: http.http2SettingID.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18457,7 +18445,7 @@ ForeachSetting runs fn for each setting. It stops and returns the first error.
 
 ```
 searchKey: http.http2SettingsFrame.HasDuplicates
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18470,7 +18458,7 @@ HasDuplicates reports whether f contains any duplicate setting IDs.
 
 ```
 searchKey: http.http2SettingsFrame.IsAck
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18481,7 +18469,7 @@ func (f *http2SettingsFrame) IsAck() bool
 
 ```
 searchKey: http.http2SettingsFrame.NumSettings
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18533,7 +18521,7 @@ StreamError is an error that only affects one stream within an HTTP/2 connection
 
 ```
 searchKey: http.http2streamError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18544,7 +18532,7 @@ func http2streamError(id uint32, code http2ErrCode) http2StreamError
 
 ```
 searchKey: http.http2StreamError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18663,7 +18651,7 @@ A Transport internally caches connections to servers. It is safe for concurrent 
 
 ```
 searchKey: http.http2ConfigureTransports
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18676,7 +18664,7 @@ ConfigureTransports configures a net/http HTTP/1 Transport to use HTTP/2. It ret
 
 ```
 searchKey: http.http2configureTransports
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -18687,7 +18675,7 @@ func http2configureTransports(t1 *Transport) (*http2Transport, error)
 
 ```
 searchKey: http.http2Transport.CloseIdleConnections
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18735,7 +18723,7 @@ RoundTripOpt is like RoundTrip, but takes options.
 
 ```
 searchKey: http.http2Transport.connPool
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18781,7 +18769,7 @@ dialTLSWithContext uses tls.Dialer, added in Go 1.15, to open a TLS connection.
 
 ```
 searchKey: http.http2Transport.disableCompression
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18792,7 +18780,7 @@ func (t *http2Transport) disableCompression() bool
 
 ```
 searchKey: http.http2Transport.disableKeepAlives
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18805,7 +18793,7 @@ disableKeepAlives reports whether connections should be closed as soon as possib
 
 ```
 searchKey: http.http2Transport.expectContinueTimeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18827,7 +18815,7 @@ func (t *http2Transport) getBodyWriterState(cs *http2clientStream, body io.Reade
 
 ```
 searchKey: http.http2Transport.idleConnTimeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18838,7 +18826,7 @@ func (t *http2Transport) idleConnTimeout() time.Duration
 
 ```
 searchKey: http.http2Transport.initConnPool
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18860,7 +18848,7 @@ func (t *http2Transport) logf(format string, args ...interface{})
 
 ```
 searchKey: http.http2Transport.maxHeaderListSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18893,7 +18881,7 @@ func (t *http2Transport) newTLSConfig(host string) *tls.Config
 
 ```
 searchKey: http.http2Transport.pingTimeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18931,7 +18919,7 @@ An UnknownFrame is the frame type returned when the frame type is unknown or no 
 
 ```
 searchKey: http.http2UnknownFrame.Payload
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -18999,7 +18987,7 @@ WriteScheduler is the interface implemented by HTTP/2 write schedulers. Methods 
 
 ```
 searchKey: http.http2NewPriorityWriteScheduler
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19088,7 +19076,7 @@ bodyWriterState encapsulates various state around the Transport's writing of the
 
 ```
 searchKey: http.http2bodyWriterState.cancel
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19099,7 +19087,7 @@ func (s http2bodyWriterState) cancel()
 
 ```
 searchKey: http.http2bodyWriterState.on100
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19110,7 +19098,7 @@ func (s http2bodyWriterState) on100()
 
 ```
 searchKey: http.http2bodyWriterState.scheduleBodyWrite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19140,7 +19128,7 @@ bufferedWriter is a buffered writer that writes to w. Its buffered writer is laz
 
 ```
 searchKey: http.http2newBufferedWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -19151,7 +19139,7 @@ func http2newBufferedWriter(w io.Writer) *http2bufferedWriter
 
 ```
 searchKey: http.http2bufferedWriter.Available
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19162,7 +19150,7 @@ func (w *http2bufferedWriter) Available() int
 
 ```
 searchKey: http.http2bufferedWriter.Flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19293,7 +19281,7 @@ p.mu must be held
 
 ```
 searchKey: http.http2clientConnPool.closeIdleConnections
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19376,7 +19364,7 @@ clientConnReadLoop is the state owned by the clientConn's frame-reading readLoop
 
 ```
 searchKey: http.http2clientConnReadLoop.cleanup
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19523,7 +19511,7 @@ func (rl *http2clientConnReadLoop) processWindowUpdate(f *http2WindowUpdateFrame
 
 ```
 searchKey: http.http2clientConnReadLoop.run
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19615,7 +19603,7 @@ awaitRequestCancel waits for the user to cancel a request, its context to expire
 
 ```
 searchKey: http.http2clientStream.cancelStream
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19626,7 +19614,7 @@ func (cs *http2clientStream) cancelStream()
 
 ```
 searchKey: http.http2clientStream.checkResetOrDone
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19639,7 +19627,7 @@ checkResetOrDone reports any error sent in a RST_STREAM frame by the server, or 
 
 ```
 searchKey: http.http2clientStream.copyTrailers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19650,7 +19638,7 @@ func (cs *http2clientStream) copyTrailers()
 
 ```
 searchKey: http.http2clientStream.get1xxTraceFunc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19663,7 +19651,7 @@ get1xxTraceFunc returns the value of request's httptrace.ClientTrace.Got1xxRespo
 
 ```
 searchKey: http.http2clientStream.getStartedWrite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19698,7 +19686,7 @@ A closeWaiter is like a sync.WaitGroup but only goes 1 to 0 (open to closed).
 
 ```
 searchKey: http.http2closeWaiter.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19711,7 +19699,7 @@ Close marks the closeWaiter as closed and unblocks any waiters.
 
 ```
 searchKey: http.http2closeWaiter.Init
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19724,7 +19712,7 @@ Init makes a closeWaiter usable. It exists because so a closeWaiter value can be
 
 ```
 searchKey: http.http2closeWaiter.Wait
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19755,7 +19743,7 @@ Errors of this type are only returned by the frame parser functions and converte
 
 ```
 searchKey: http.http2connError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19798,7 +19786,7 @@ dataBuffer is an io.ReadWriter backed by a list of data chunks. Each dataBuffer 
 
 ```
 searchKey: http.http2dataBuffer.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19837,7 +19825,7 @@ Write appends p to the buffer.
 
 ```
 searchKey: http.http2dataBuffer.bytesFromFirstChunk
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19905,7 +19893,7 @@ type http2duplicatePseudoHeaderError string
 
 ```
 searchKey: http.http2duplicatePseudoHeaderError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -19938,7 +19926,7 @@ func (rt http2erringRoundTripper) RoundTrip(*Request) (*Response, error)
 
 ```
 searchKey: http.http2erringRoundTripper.RoundTripErr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20008,7 +19996,7 @@ add adds n bytes (positive or negative) to the flow control window. It returns f
 
 ```
 searchKey: http.http2flow.available
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20087,7 +20075,7 @@ type http2frameCache struct {
 
 ```
 searchKey: http.http2frameCache.getDataFrame
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20111,7 +20099,7 @@ a frameParser parses a frame given its FrameHeader and payload bytes. The length
 
 ```
 searchKey: http.http2typeFrameParser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -20152,7 +20140,7 @@ A gate lets two goroutines coordinate their activities.
 
 ```
 searchKey: http.http2gate.Done
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20163,7 +20151,7 @@ func (g http2gate) Done()
 
 ```
 searchKey: http.http2gate.Wait
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20187,7 +20175,7 @@ type http2goAwayFlowError struct{}
 
 ```
 searchKey: http.http2goAwayFlowError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20220,7 +20208,7 @@ func http2newGoroutineLock() http2goroutineLock
 
 ```
 searchKey: http.http2goroutineLock.check
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20231,7 +20219,7 @@ func (g http2goroutineLock) check()
 
 ```
 searchKey: http.http2goroutineLock.checkNotOn
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20260,7 +20248,7 @@ gzipReader wraps a response body so it can lazily call gzip.NewReader on the fir
 
 ```
 searchKey: http.http2gzipReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20330,7 +20318,7 @@ type http2headerFieldNameError string
 
 ```
 searchKey: http.http2headerFieldNameError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20352,7 +20340,7 @@ type http2headerFieldValueError string
 
 ```
 searchKey: http.http2headerFieldValueError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20405,7 +20393,7 @@ type http2httpError struct {
 
 ```
 searchKey: http.http2httpError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20416,7 +20404,7 @@ func (e *http2httpError) Error() string
 
 ```
 searchKey: http.http2httpError.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20427,7 +20415,7 @@ func (e *http2httpError) Temporary() bool
 
 ```
 searchKey: http.http2httpError.Timeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20464,7 +20452,7 @@ noCachedConnError is the concrete type of ErrNoCachedConn, which needs to be det
 
 ```
 searchKey: http.http2noCachedConnError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20475,7 +20463,7 @@ func (http2noCachedConnError) Error() string
 
 ```
 searchKey: http.http2noCachedConnError.IsHTTP2NoCachedConnError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20584,7 +20572,7 @@ The error must be non-nil.
 
 ```
 searchKey: http.http2pipe.Done
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20597,7 +20585,7 @@ Done returns a channel which is closed if and when this pipe is closed with Clos
 
 ```
 searchKey: http.http2pipe.Err
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20610,7 +20598,7 @@ Err returns the error (if any) first set by BreakWithError or CloseWithError.
 
 ```
 searchKey: http.http2pipe.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20647,7 +20635,7 @@ Write copies bytes from p into the buffer and wakes a reader. It is an error to 
 
 ```
 searchKey: http.http2pipe.closeDoneLocked
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20843,7 +20831,7 @@ func (ws *http2priorityWriteScheduler) OpenStream(streamID uint32, options http2
 
 ```
 searchKey: http.http2priorityWriteScheduler.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20898,7 +20886,7 @@ type http2pseudoHeaderError string
 
 ```
 searchKey: http.http2pseudoHeaderError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -20964,7 +20952,7 @@ func (ws *http2randomWriteScheduler) OpenStream(streamID uint32, options http2Op
 
 ```
 searchKey: http.http2randomWriteScheduler.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21026,7 +21014,7 @@ requestBody is the Handler's Request.Body type. Read and Close may be called con
 
 ```
 searchKey: http.http2requestBody.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21093,7 +21081,7 @@ responseWriter is the http.ResponseWriter implementation. It's intentionally sma
 
 ```
 searchKey: http.http2responseWriter.CloseNotify
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21104,7 +21092,7 @@ func (w *http2responseWriter) CloseNotify() <-chan bool
 
 ```
 searchKey: http.http2responseWriter.Flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21115,7 +21103,7 @@ func (w *http2responseWriter) Flush()
 
 ```
 searchKey: http.http2responseWriter.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21174,7 +21162,7 @@ func (w *http2responseWriter) WriteString(s string) (n int, err error)
 
 ```
 searchKey: http.http2responseWriter.handlerDone
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21247,7 +21235,7 @@ declareTrailer is called for each Trailer header when the response header is wri
 
 ```
 searchKey: http.http2responseWriterState.hasNonemptyTrailers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21258,7 +21246,7 @@ func (rws *http2responseWriterState) hasNonemptyTrailers() bool
 
 ```
 searchKey: http.http2responseWriterState.hasTrailers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21269,7 +21257,7 @@ func (rws *http2responseWriterState) hasTrailers() bool
 
 ```
 searchKey: http.http2responseWriterState.promoteUndeclaredTrailers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21377,7 +21365,7 @@ type http2serverConn struct {
 
 ```
 searchKey: http.http2serverConn.CloseConn
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21388,7 +21376,7 @@ func (sc *http2serverConn) CloseConn() error
 
 ```
 searchKey: http.http2serverConn.Flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21399,7 +21387,7 @@ func (sc *http2serverConn) Flush() error
 
 ```
 searchKey: http.http2serverConn.Framer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21410,7 +21398,7 @@ func (sc *http2serverConn) Framer() *http2Framer
 
 ```
 searchKey: http.http2serverConn.HeaderEncoder
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21443,7 +21431,7 @@ func (sc *http2serverConn) canonicalHeader(v string) string
 
 ```
 searchKey: http.http2serverConn.closeAllStreamsOnConnClose
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21476,7 +21464,7 @@ func (sc *http2serverConn) condlogf(err error, format string, args ...interface{
 
 ```
 searchKey: http.http2serverConn.curOpenStreams
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21509,7 +21497,7 @@ func (sc *http2serverConn) logf(format string, args ...interface{})
 
 ```
 searchKey: http.http2serverConn.maxHeaderListSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21577,7 +21565,7 @@ called from handler goroutines. Notes that the handler for the given stream ID r
 
 ```
 searchKey: http.http2serverConn.notePanic
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21588,7 +21576,7 @@ func (sc *http2serverConn) notePanic()
 
 ```
 searchKey: http.http2serverConn.onIdleTimer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21599,7 +21587,7 @@ func (sc *http2serverConn) onIdleTimer()
 
 ```
 searchKey: http.http2serverConn.onSettingsTimer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21610,7 +21598,7 @@ func (sc *http2serverConn) onSettingsTimer()
 
 ```
 searchKey: http.http2serverConn.onShutdownTimer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21755,7 +21743,7 @@ func (sc *http2serverConn) processWindowUpdate(f *http2WindowUpdateFrame) error
 
 ```
 searchKey: http.http2serverConn.readFrames
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21768,7 +21756,7 @@ readFrames is the loop that reads incoming frames. It takes care to only read on
 
 ```
 searchKey: http.http2serverConn.readPreface
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21816,7 +21804,7 @@ Run on its own goroutine.
 
 ```
 searchKey: http.http2serverConn.scheduleFrameWrite
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21872,7 +21860,7 @@ st may be nil for conn-level
 
 ```
 searchKey: http.http2serverConn.serve
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21920,7 +21908,7 @@ startFrameWrite starts a goroutine to write wr (in a separate goroutine since th
 
 ```
 searchKey: http.http2serverConn.startGracefulShutdown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21935,7 +21923,7 @@ startGracefulShutdown returns immediately; it does not wait until the connection
 
 ```
 searchKey: http.http2serverConn.startGracefulShutdownInternal
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -21968,7 +21956,7 @@ func (sc *http2serverConn) state(streamID uint32) (http2streamState, *http2strea
 
 ```
 searchKey: http.http2serverConn.stopShutdownTimer
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22112,7 +22100,7 @@ func (s *http2serverInternalState) registerConn(sc *http2serverConn)
 
 ```
 searchKey: http.http2serverInternalState.startGracefulShutdown
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22156,7 +22144,7 @@ type http2sortPriorityNodeSiblings []*http2priorityNode
 
 ```
 searchKey: http.http2sortPriorityNodeSiblings.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22217,7 +22205,7 @@ The returned slice is only valid until s used again or returned to its pool.
 
 ```
 searchKey: http.http2sorter.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22338,7 +22326,7 @@ stream represents a stream. This is the minimal metadata needed by the serve gor
 
 ```
 searchKey: http.http2stream.copyTrailersToHandlerRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22351,7 +22339,7 @@ copyTrailersToHandlerRequest is run in the Handler's goroutine in its Request.Bo
 
 ```
 searchKey: http.http2stream.endStream
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22364,7 +22352,7 @@ endStream closes a Request.Body's pipe. It is called when a DATA frame says a re
 
 ```
 searchKey: http.http2stream.isPushed
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22377,7 +22365,7 @@ isPushed reports whether the stream is server-initiated.
 
 ```
 searchKey: http.http2stream.onWriteTimeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22425,7 +22413,7 @@ type http2streamState int
 
 ```
 searchKey: http.http2streamState.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22466,7 +22454,7 @@ transportResponseBody is the concrete type of Transport.RoundTrip's Response.Bod
 
 ```
 searchKey: http.http2transportResponseBody.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22562,7 +22550,7 @@ type http2writeData struct {
 
 ```
 searchKey: http.http2writeData.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22768,7 +22756,7 @@ consume consumes up to n bytes from q.s[0]. If the frame is entirely consumed, i
 
 ```
 searchKey: http.http2writeQueue.empty
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22790,7 +22778,7 @@ func (q *http2writeQueue) push(wr http2FrameWriteRequest)
 
 ```
 searchKey: http.http2writeQueue.shift
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -22812,7 +22800,7 @@ type http2writeQueuePool []*http2writeQueue
 
 ```
 searchKey: http.http2writeQueuePool.get
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23010,7 +22998,7 @@ type httpError struct {
 
 ```
 searchKey: http.httpError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23021,7 +23009,7 @@ func (e *httpError) Error() string
 
 ```
 searchKey: http.httpError.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23032,7 +23020,7 @@ func (e *httpError) Temporary() bool
 
 ```
 searchKey: http.httpError.Timeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23110,7 +23098,7 @@ initALPNRequest is an HTTP handler that initializes certain uninitialized fields
 
 ```
 searchKey: http.initALPNRequest.BaseContext
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23171,7 +23159,7 @@ type ioFile struct {
 
 ```
 searchKey: http.ioFile.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23226,7 +23214,7 @@ func (f ioFile) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: http.ioFile.Stat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23250,7 +23238,7 @@ issue22091Error acts like a golang.org/x/net/http2.ErrNoCachedConn.
 
 ```
 searchKey: http.issue22091Error.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23261,7 +23249,7 @@ func (issue22091Error) Error() string
 
 ```
 searchKey: http.issue22091Error.IsHTTP2NoCachedConnError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23302,7 +23290,7 @@ loggingConn is used for debugging.
 
 ```
 searchKey: http.loggingConn.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23377,7 +23365,7 @@ type maxBytesReader struct {
 
 ```
 searchKey: http.maxBytesReader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23482,7 +23470,7 @@ type noBody struct{}
 
 ```
 searchKey: http.noBody.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23547,7 +23535,7 @@ onceCloseListener wraps a net.Listener, protecting it from multiple Close calls.
 
 ```
 searchKey: http.onceCloseListener.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23558,7 +23546,7 @@ func (oc *onceCloseListener) Close() error
 
 ```
 searchKey: http.onceCloseListener.close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23658,7 +23646,7 @@ func (pc *persistConn) cancelRequest(err error)
 
 ```
 searchKey: http.persistConn.canceled
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23686,7 +23674,7 @@ The provided err is only for testing and debugging; in normal circumstances it s
 
 ```
 searchKey: http.persistConn.closeConnIfStillIdle
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23721,7 +23709,7 @@ func (pc *persistConn) gotIdleConnTrace(idleAt time.Time) (t httptrace.GotConnIn
 
 ```
 searchKey: http.persistConn.isBroken
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23734,7 +23722,7 @@ isBroken reports whether this connection is in a known broken state.
 
 ```
 searchKey: http.persistConn.isReused
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23764,7 +23752,7 @@ The startBytesWritten value should be the value of pc.nwrite before the roundTri
 
 ```
 searchKey: http.persistConn.markReused
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23777,7 +23765,7 @@ markReused marks this connection as having been successfully used for a request 
 
 ```
 searchKey: http.persistConn.maxHeaderResponseSize
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23788,7 +23776,7 @@ func (pc *persistConn) maxHeaderResponseSize() int64
 
 ```
 searchKey: http.persistConn.readLoop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23860,7 +23848,7 @@ waitForContinue returns the function to block until any response, timeout or con
 
 ```
 searchKey: http.persistConn.writeLoop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23871,7 +23859,7 @@ func (pc *persistConn) writeLoop()
 
 ```
 searchKey: http.persistConn.wroteRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23954,7 +23942,7 @@ func newPopulateResponseWriter() (*populateResponse, <-chan *Response)
 
 ```
 searchKey: http.populateResponse.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23987,7 +23975,7 @@ func (pr *populateResponse) WriteHeader(code int)
 
 ```
 searchKey: http.populateResponse.finish
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -23998,7 +23986,7 @@ func (pr *populateResponse) finish()
 
 ```
 searchKey: http.populateResponse.sendResponse
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24040,7 +24028,7 @@ type readTrackingBody struct {
 
 ```
 searchKey: http.readTrackingBody.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24319,7 +24307,7 @@ A response represents the server side of an HTTP response.
 
 ```
 searchKey: http.response.CloseNotify
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24330,7 +24318,7 @@ func (w *response) CloseNotify() <-chan bool
 
 ```
 searchKey: http.response.Flush
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24341,7 +24329,7 @@ func (w *response) Flush()
 
 ```
 searchKey: http.response.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24352,7 +24340,7 @@ func (w *response) Header() Header
 
 ```
 searchKey: http.response.Hijack
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24437,7 +24425,7 @@ func (w *response) WriteString(data string) (n int, err error)
 
 ```
 searchKey: http.response.bodyAllowed
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24450,7 +24438,7 @@ bodyAllowed reports whether a Write is allowed for this response type. It's ille
 
 ```
 searchKey: http.response.closedRequestBodyEarly
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24474,7 +24462,7 @@ declareTrailer is called for each Trailer header when the response header is wri
 
 ```
 searchKey: http.response.finalTrailers
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24487,7 +24475,7 @@ finalTrailers is called after the Handler exits and returns a non-nil value if t
 
 ```
 searchKey: http.response.finishRequest
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24498,7 +24486,7 @@ func (w *response) finishRequest()
 
 ```
 searchKey: http.response.needsSniff
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24511,7 +24499,7 @@ needsSniff reports whether a Content-Type still needs to be sniffed.
 
 ```
 searchKey: http.response.requestTooLarge
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24524,7 +24512,7 @@ requestTooLarge is called by maxBytesReader when too much input has been read fr
 
 ```
 searchKey: http.response.sendExpectationFailed
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24535,7 +24523,7 @@ func (w *response) sendExpectationFailed()
 
 ```
 searchKey: http.response.shouldReuseConnection
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24673,7 +24661,7 @@ An Addr represents a SOCKS-specific address. Either Name or IP is used exclusive
 
 ```
 searchKey: http.socksAddr.Network
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24684,7 +24672,7 @@ func (a *socksAddr) Network() string
 
 ```
 searchKey: http.socksAddr.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24721,7 +24709,7 @@ A Command represents a SOCKS command.
 
 ```
 searchKey: http.socksCommand.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24749,7 +24737,7 @@ A Conn represents a forward proxy connection.
 
 ```
 searchKey: http.socksConn.BoundAddr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24793,7 +24781,7 @@ A Dialer holds SOCKS-specific options.
 
 ```
 searchKey: http.socksNewDialer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -24901,7 +24889,7 @@ A Reply represents a SOCKS command reply code.
 
 ```
 searchKey: http.socksReply.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -24957,7 +24945,7 @@ statusError is an error used to respond to a request with an HTTP status. The te
 
 ```
 searchKey: http.statusError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25059,7 +25047,7 @@ func (h *timeoutHandler) ServeHTTP(w ResponseWriter, r *Request)
 
 ```
 searchKey: http.timeoutHandler.errorBody
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25091,7 +25079,7 @@ type timeoutWriter struct {
 
 ```
 searchKey: http.timeoutWriter.Header
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25159,7 +25147,7 @@ type tlsHandshakeTimeoutError struct{}
 
 ```
 searchKey: http.tlsHandshakeTimeoutError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25170,7 +25158,7 @@ func (tlsHandshakeTimeoutError) Error() string
 
 ```
 searchKey: http.tlsHandshakeTimeoutError.Temporary
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25181,7 +25169,7 @@ func (tlsHandshakeTimeoutError) Temporary() bool
 
 ```
 searchKey: http.tlsHandshakeTimeoutError.Timeout
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25216,7 +25204,7 @@ type transferReader struct {
 
 ```
 searchKey: http.transferReader.parseTransferEncoding
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25268,7 +25256,7 @@ transferWriter inspects the fields of a user-supplied Request or Response, sanit
 
 ```
 searchKey: http.newTransferWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25294,7 +25282,7 @@ This function is only intended for use in writeBody.
 
 ```
 searchKey: http.transferWriter.probeRequestBody
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25318,7 +25306,7 @@ In other words, this delay will not normally affect anybody, and there are worka
 
 ```
 searchKey: http.transferWriter.shouldSendChunkedRequestBody
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25335,7 +25323,7 @@ This code tries to read a byte from the Request.Body in such cases to see whethe
 
 ```
 searchKey: http.transferWriter.shouldSendContentLength
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25346,7 +25334,7 @@ func (t *transferWriter) shouldSendContentLength() bool
 
 ```
 searchKey: http.transferWriter.unwrapBody
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25400,7 +25388,7 @@ transportReadFromServerError is used by Transport.readLoop when the 1 byte peek 
 
 ```
 searchKey: http.transportReadFromServerError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25411,7 +25399,7 @@ func (e transportReadFromServerError) Error() string
 
 ```
 searchKey: http.transportReadFromServerError.Unwrap
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25443,7 +25431,7 @@ transportRequest is a wrapper around a *Request that adds optional extra headers
 
 ```
 searchKey: http.transportRequest.extraHeaders
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25491,7 +25479,7 @@ unsupportedTEError reports unsupported transfer-encodings.
 
 ```
 searchKey: http.unsupportedTEError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25556,7 +25544,7 @@ tryDeliver attempts to deliver pc, err to w and reports whether it succeeded.
 
 ```
 searchKey: http.wantConn.waiting
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25596,7 +25584,7 @@ A wantConnQueue is a queue of wantConns.
 
 ```
 searchKey: http.wantConnQueue.cleanFront
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25609,7 +25597,7 @@ cleanFront pops any wantConns that are no longer waiting from the head of the qu
 
 ```
 searchKey: http.wantConnQueue.len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25622,7 +25610,7 @@ len returns the number of items in the queue.
 
 ```
 searchKey: http.wantConnQueue.peekFront
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25635,7 +25623,7 @@ peekFront returns the wantConn at the front of the queue without removing it.
 
 ```
 searchKey: http.wantConnQueue.popFront
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -25717,15 +25705,11 @@ writerOnly hides an io.Writer value's optional ReadFrom method from io.Copy.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkCookieString" href="#BenchmarkCookieString">func BenchmarkCookieString(b *testing.B)</a>
 
 ```
 searchKey: http.BenchmarkCookieString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -25736,7 +25720,7 @@ func BenchmarkCookieString(b *testing.B)
 
 ```
 searchKey: http.BenchmarkCopyValues
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -25747,7 +25731,7 @@ func BenchmarkCopyValues(b *testing.B)
 
 ```
 searchKey: http.BenchmarkHeaderWriteSubset
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -25758,7 +25742,7 @@ func BenchmarkHeaderWriteSubset(b *testing.B)
 
 ```
 searchKey: http.BenchmarkReadCookies
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -25769,7 +25753,7 @@ func BenchmarkReadCookies(b *testing.B)
 
 ```
 searchKey: http.BenchmarkReadSetCookies
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -25780,7 +25764,7 @@ func BenchmarkReadSetCookies(b *testing.B)
 
 ```
 searchKey: http.BenchmarkServerMatch
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -25791,7 +25775,7 @@ func BenchmarkServerMatch(b *testing.B)
 
 ```
 searchKey: http.CanonicalHeaderKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25804,7 +25788,7 @@ CanonicalHeaderKey returns the canonical format of the header key s. The canonic
 
 ```
 searchKey: http.CondSkipHTTP2
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25815,7 +25799,7 @@ func CondSkipHTTP2(t *testing.T)
 
 ```
 searchKey: http.DetectContentType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25828,7 +25812,7 @@ DetectContentType implements the algorithm described at [https://mimesniff.spec.
 
 ```
 searchKey: http.Error
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25841,7 +25825,7 @@ Error replies to the request with the specified error message and HTTP code. It 
 
 ```
 searchKey: http.ExportCloseTransportConnsAbruptly
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25854,7 +25838,7 @@ ExportCloseTransportConnsAbruptly closes all idle connections from tr in an abru
 
 ```
 searchKey: http.ExportHttp2ConfigureTransport
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25865,7 +25849,7 @@ func ExportHttp2ConfigureTransport(t *Transport) error
 
 ```
 searchKey: http.ExportSetH2GoawayTimeout
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -25876,7 +25860,7 @@ func ExportSetH2GoawayTimeout(d time.Duration) (restore func())
 
 ```
 searchKey: http.Handle
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25889,7 +25873,7 @@ Handle registers the handler for the given pattern in the DefaultServeMux. The d
 
 ```
 searchKey: http.HandleFunc
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25902,7 +25886,7 @@ HandleFunc registers the handler function for the given pattern in the DefaultSe
 
 ```
 searchKey: http.ListenAndServe
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25919,7 +25903,7 @@ ListenAndServe always returns a non-nil error.
 
 ```
 searchKey: http.ListenAndServeTLS
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25932,7 +25916,7 @@ ListenAndServeTLS acts identically to ListenAndServe, except that it expects HTT
 
 ```
 searchKey: http.MaxBytesReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25947,7 +25931,7 @@ MaxBytesReader prevents clients from accidentally or maliciously sending a large
 
 ```
 searchKey: http.NotFound
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25960,7 +25944,7 @@ NotFound replies to the request with an HTTP 404 not found error.
 
 ```
 searchKey: http.ParseHTTPVersion
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25973,7 +25957,7 @@ ParseHTTPVersion parses an HTTP version string. "HTTP/1.0" returns (1, 0, true).
 
 ```
 searchKey: http.ParseTime
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -25986,7 +25970,7 @@ ParseTime parses a time header (such as the Date: header), trying each of the th
 
 ```
 searchKey: http.ProxyFromEnvironment
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -26005,7 +25989,7 @@ As a special case, if req.URL.Host is "localhost" (with or without a port number
 
 ```
 searchKey: http.ProxyURL
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -26018,7 +26002,7 @@ ProxyURL returns a proxy function (for use in a Transport) that always returns t
 
 ```
 searchKey: http.Redirect
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -26057,7 +26041,7 @@ func ResetProxyEnv()
 
 ```
 searchKey: http.Serve
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -26076,7 +26060,7 @@ Serve always returns a non-nil error.
 
 ```
 searchKey: http.ServeContent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -26099,7 +26083,7 @@ Note that *os.File implements the io.ReadSeeker interface.
 
 ```
 searchKey: http.ServeFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -26120,7 +26104,7 @@ Outside of those two special cases, ServeFile does not use r.URL.Path for select
 
 ```
 searchKey: http.ServeTLS
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -26139,7 +26123,7 @@ ServeTLS always returns a non-nil error.
 
 ```
 searchKey: http.SetCookie
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -26152,7 +26136,7 @@ SetCookie adds a Set-Cookie header to the provided ResponseWriter's headers. The
 
 ```
 searchKey: http.SetPendingDialHooks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26165,7 +26149,7 @@ SetPendingDialHooks sets the hooks that run before and after handling pending di
 
 ```
 searchKey: http.SetReadLoopBeforeNextReadHook
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26176,7 +26160,7 @@ func SetReadLoopBeforeNextReadHook(f func())
 
 ```
 searchKey: http.SetTestHookServerServe
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26187,7 +26171,7 @@ func SetTestHookServerServe(fn func(*Server, net.Listener))
 
 ```
 searchKey: http.StatusText
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -26200,7 +26184,7 @@ StatusText returns a text for the HTTP status code. It returns the empty string 
 
 ```
 searchKey: http.TestAddCookie
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26211,7 +26195,7 @@ func TestAddCookie(t *testing.T)
 
 ```
 searchKey: http.TestBodyReadBadTrailer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26222,7 +26206,7 @@ func TestBodyReadBadTrailer(t *testing.T)
 
 ```
 searchKey: http.TestCacheKeys
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26233,7 +26217,7 @@ func TestCacheKeys(t *testing.T)
 
 ```
 searchKey: http.TestCleanHost
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26244,7 +26228,7 @@ func TestCleanHost(t *testing.T)
 
 ```
 searchKey: http.TestCloneOrMakeHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26257,7 +26241,7 @@ Issue 34878: test that every call to cloneOrMakeHeader never returns a nil Heade
 
 ```
 searchKey: http.TestCmdGoNoHTTPServer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26272,7 +26256,7 @@ This catches accidental dependencies between the HTTP transport and server code.
 
 ```
 searchKey: http.TestCookieSanitizePath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26283,7 +26267,7 @@ func TestCookieSanitizePath(t *testing.T)
 
 ```
 searchKey: http.TestCookieSanitizeValue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26294,7 +26278,7 @@ func TestCookieSanitizeValue(t *testing.T)
 
 ```
 searchKey: http.TestDetectInMemoryReaders
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26305,7 +26289,7 @@ func TestDetectInMemoryReaders(t *testing.T)
 
 ```
 searchKey: http.TestFileTransport
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26316,7 +26300,7 @@ func TestFileTransport(t *testing.T)
 
 ```
 searchKey: http.TestFinalChunkedBodyReadEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26327,7 +26311,7 @@ func TestFinalChunkedBodyReadEOF(t *testing.T)
 
 ```
 searchKey: http.TestForeachHeaderElement
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26338,7 +26322,7 @@ func TestForeachHeaderElement(t *testing.T)
 
 ```
 searchKey: http.TestHasToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26349,7 +26333,7 @@ func TestHasToken(t *testing.T)
 
 ```
 searchKey: http.TestHeaderWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26360,7 +26344,7 @@ func TestHeaderWrite(t *testing.T)
 
 ```
 searchKey: http.TestHeaderWriteSubsetAllocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26371,7 +26355,7 @@ func TestHeaderWriteSubsetAllocs(t *testing.T)
 
 ```
 searchKey: http.TestLocationResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26382,7 +26366,7 @@ func TestLocationResponse(t *testing.T)
 
 ```
 searchKey: http.TestNeedsSniff
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26393,7 +26377,7 @@ func TestNeedsSniff(t *testing.T)
 
 ```
 searchKey: http.TestNilHeaderClone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26404,7 +26388,7 @@ func TestNilHeaderClone(t *testing.T)
 
 ```
 searchKey: http.TestNoUnicodeStrings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26417,7 +26401,7 @@ TestNoUnicodeStrings checks that nothing in net/http uses the Unicode-aware stri
 
 ```
 searchKey: http.TestOmitHTTP2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26430,7 +26414,7 @@ Tests that the nethttpomithttp2 build tag doesn't rot too much, even if there's 
 
 ```
 searchKey: http.TestOmitHTTP2Vet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26443,7 +26427,7 @@ Tests that the nethttpomithttp2 build tag at least type checks in short mode. Th
 
 ```
 searchKey: http.TestParseContentLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26456,7 +26440,7 @@ issue 39017 - disallow Content-Length values such as "+3"
 
 ```
 searchKey: http.TestParseRange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26467,7 +26451,7 @@ func TestParseRange(t *testing.T)
 
 ```
 searchKey: http.TestParseTime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26478,7 +26462,7 @@ func TestParseTime(t *testing.T)
 
 ```
 searchKey: http.TestParseTransferEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26489,7 +26473,7 @@ func TestParseTransferEncoding(t *testing.T)
 
 ```
 searchKey: http.TestReadCookies
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26500,7 +26484,7 @@ func TestReadCookies(t *testing.T)
 
 ```
 searchKey: http.TestReadRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26511,7 +26495,7 @@ func TestReadRequest(t *testing.T)
 
 ```
 searchKey: http.TestReadRequest_Bad
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26522,7 +26506,7 @@ func TestReadRequest_Bad(t *testing.T)
 
 ```
 searchKey: http.TestReadResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26535,7 +26519,7 @@ tests successful calls to ReadResponse, and inspects the returned Response. For 
 
 ```
 searchKey: http.TestReadResponseCloseInMiddle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26548,7 +26532,7 @@ TestReadResponseCloseInMiddle tests that closing a body after reading only part 
 
 ```
 searchKey: http.TestReadResponseErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26561,7 +26545,7 @@ Test various ReadResponse error cases. (also tests success cases, but mostly it'
 
 ```
 searchKey: http.TestReadSetCookies
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26572,7 +26556,7 @@ func TestReadSetCookies(t *testing.T)
 
 ```
 searchKey: http.TestRequestWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26583,7 +26567,7 @@ func TestRequestWrite(t *testing.T)
 
 ```
 searchKey: http.TestRequestWriteClosesBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26596,7 +26580,7 @@ TestRequestWriteClosesBody tests that Request.Write closes its request.Body. It 
 
 ```
 searchKey: http.TestRequestWriteError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26609,7 +26593,7 @@ TestRequestWriteError tests the Write err != nil checks in (*Request).write.
 
 ```
 searchKey: http.TestRequestWriteTransport
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26620,7 +26604,7 @@ func TestRequestWriteTransport(t *testing.T)
 
 ```
 searchKey: http.TestResponseContentLengthShortBody
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26631,7 +26615,7 @@ func TestResponseContentLengthShortBody(t *testing.T)
 
 ```
 searchKey: http.TestResponseStatusStutter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26642,7 +26626,7 @@ func TestResponseStatusStutter(t *testing.T)
 
 ```
 searchKey: http.TestResponseWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26653,7 +26637,7 @@ func TestResponseWrite(t *testing.T)
 
 ```
 searchKey: http.TestResponseWritesOnlySingleConnectionClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26666,7 +26650,7 @@ A response should only write out single Connection: close header. Tests #19499.
 
 ```
 searchKey: http.TestSetCookie
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26677,7 +26661,7 @@ func TestSetCookie(t *testing.T)
 
 ```
 searchKey: http.TestSetCookieDoubleQuotes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26688,7 +26672,7 @@ func TestSetCookieDoubleQuotes(t *testing.T)
 
 ```
 searchKey: http.TestTransferWriterWriteBodyReaderTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26699,7 +26683,7 @@ func TestTransferWriterWriteBodyReaderTypes(t *testing.T)
 
 ```
 searchKey: http.TestTransportBodyAltRewind
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26712,7 +26696,7 @@ Issue 25009
 
 ```
 searchKey: http.TestTransportPersistConnReadLoopEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26725,7 +26709,7 @@ Issue 15446: incorrect wrapping of errors when server closes an idle connection.
 
 ```
 searchKey: http.TestTransportShouldRetryRequest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26736,7 +26720,7 @@ func TestTransportShouldRetryRequest(t *testing.T)
 
 ```
 searchKey: http.TestWriteResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26747,7 +26731,7 @@ func TestWriteResponse(t *testing.T)
 
 ```
 searchKey: http.TestWriteSetCookies
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -26769,7 +26753,7 @@ func alwaysFalse() bool
 
 ```
 searchKey: http.appendSorted
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26780,7 +26764,7 @@ func appendSorted(es []muxEntry, e muxEntry) []muxEntry
 
 ```
 searchKey: http.appendTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26793,7 +26777,7 @@ appendTime is a non-allocating version of []byte(t.UTC().Format(TimeFormat))
 
 ```
 searchKey: http.badRequestError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26806,7 +26790,7 @@ badRequestError is a literal string (used by in the server in HTML, unescaped) t
 
 ```
 searchKey: http.badStringError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26817,7 +26801,7 @@ func badStringError(what, val string) error
 
 ```
 searchKey: http.basicAuth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26830,7 +26814,7 @@ See 2 (end of page 4) [https://www.ietf.org/rfc/rfc2617.txt](https://www.ietf.or
 
 ```
 searchKey: http.bodyAllowedForStatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26843,7 +26827,7 @@ bodyAllowedForStatus reports whether a given response status code permits a body
 
 ```
 searchKey: http.bufioWriterPool
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26854,7 +26838,7 @@ func bufioWriterPool(size int) *sync.Pool
 
 ```
 searchKey: http.canonicalAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26867,7 +26851,7 @@ canonicalAddr returns url.Host but always with a ":port" suffix
 
 ```
 searchKey: http.checkPreconditions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26880,7 +26864,7 @@ checkPreconditions evaluates request preconditions and reports whether a precond
 
 ```
 searchKey: http.checkWriteHeaderCode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26891,7 +26875,7 @@ func checkWriteHeaderCode(code int)
 
 ```
 searchKey: http.checker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26902,7 +26886,7 @@ func checker(t *testing.T) func(string, error)
 
 ```
 searchKey: http.chunk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26913,7 +26897,7 @@ func chunk(s string) string
 
 ```
 searchKey: http.chunked
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26926,7 +26910,7 @@ Checks whether chunked is part of the encodings stack
 
 ```
 searchKey: http.cleanHost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26951,7 +26935,7 @@ But practically, what we are trying to avoid is the situation in issue 11206, wh
 
 ```
 searchKey: http.cleanPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26964,7 +26948,7 @@ cleanPath returns the canonical path for p, eliminating . and .. elements.
 
 ```
 searchKey: http.cloneMultipartFileHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26975,7 +26959,7 @@ func cloneMultipartFileHeader(fh *multipart.FileHeader) *multipart.FileHeader
 
 ```
 searchKey: http.cloneMultipartForm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26986,7 +26970,7 @@ func cloneMultipartForm(f *multipart.Form) *multipart.Form
 
 ```
 searchKey: http.cloneTLSConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -26999,7 +26983,7 @@ cloneTLSConfig returns a shallow clone of cfg, or a new zero tls.Config if cfg i
 
 ```
 searchKey: http.cloneURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27010,7 +26994,7 @@ func cloneURL(u *url.URL) *url.URL
 
 ```
 searchKey: http.cloneURLValues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27021,7 +27005,7 @@ func cloneURLValues(v url.Values) url.Values
 
 ```
 searchKey: http.containsDotDot
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27032,7 +27016,7 @@ func containsDotDot(v string) bool
 
 ```
 searchKey: http.copyValues
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27043,7 +27027,7 @@ func copyValues(dst, src url.Values)
 
 ```
 searchKey: http.defaultCheckRedirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27054,7 +27038,7 @@ func defaultCheckRedirect(req *Request, via []*Request) error
 
 ```
 searchKey: http.diff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27065,7 +27049,7 @@ func diff(t *testing.T, prefix string, have, want interface{})
 
 ```
 searchKey: http.dirList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27076,7 +27060,7 @@ func dirList(w ResponseWriter, r *Request, f File)
 
 ```
 searchKey: http.dumpRequestOut
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27102,7 +27086,7 @@ defaultProxyConfig returns a ProxyConfig value looked up from the environment. T
 
 ```
 searchKey: http.etagStrongMatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27115,7 +27099,7 @@ etagStrongMatch reports whether a and b match using strong ETag comparison. Assu
 
 ```
 searchKey: http.etagWeakMatch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27128,7 +27112,7 @@ etagWeakMatch reports whether a and b match using weak ETag comparison. Assumes 
 
 ```
 searchKey: http.fixLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27141,7 +27125,7 @@ Determine the expected body length, using RFC 7230 Section 3.3. This function is
 
 ```
 searchKey: http.fixPragmaCacheControl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27164,7 +27148,7 @@ Cache-Control: no-cache
 
 ```
 searchKey: http.foreachHeaderElement
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27177,7 +27161,7 @@ foreachHeaderElement splits v according to the "#rule" construction in RFC 7230 
 
 ```
 searchKey: http.hasPort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27190,7 +27174,7 @@ Given a string of the form "host", "host:port", or "[ipv6::address]:port", retur
 
 ```
 searchKey: http.hasToken
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27203,7 +27187,7 @@ hasToken reports whether token appears with v, ASCII case-insensitive, with spac
 
 ```
 searchKey: http.hexEscapeNonASCII
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27214,7 +27198,7 @@ func hexEscapeNonASCII(s string) string
 
 ```
 searchKey: http.hookSetter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27225,7 +27209,7 @@ func hookSetter(dst *func()) func(func())
 
 ```
 searchKey: http.htmlEscape
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27236,7 +27220,7 @@ func htmlEscape(s string) string
 
 ```
 searchKey: http.http1ServerSupportsRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27249,7 +27233,7 @@ http1ServerSupportsRequest reports whether Go's HTTP/1.x server supports the giv
 
 ```
 searchKey: http.http2ConfigureServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27266,7 +27250,7 @@ ConfigureServer must be called before s begins serving.
 
 ```
 searchKey: http.http2ConfigureTransport
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27281,7 +27265,7 @@ Use ConfigureTransports instead to configure the HTTP/2 Transport.
 
 ```
 searchKey: http.http2actualContentLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27294,7 +27278,7 @@ actualContentLength returns a sanitized version of req.ContentLength, where 0 ac
 
 ```
 searchKey: http.http2asciiEqualFold
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27307,7 +27291,7 @@ asciiEqualFold is strings.EqualFold, ASCII only. It reports whether s and t are 
 
 ```
 searchKey: http.http2asciiToLower
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27320,7 +27304,7 @@ asciiToLower returns the lowercase version of s if s is ASCII and printable, and
 
 ```
 searchKey: http.http2authorityAddr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27333,7 +27317,7 @@ authorityAddr returns a given authority (a host/IP, or host:port / ip:port) and 
 
 ```
 searchKey: http.http2awaitRequestCancel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27346,7 +27330,7 @@ awaitRequestCancel waits for the user to cancel a request or for the done channe
 
 ```
 searchKey: http.http2bodyAllowedForStatus
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27381,7 +27365,7 @@ func http2buildCommonHeaderMapsOnce()
 
 ```
 searchKey: http.http2canRetryError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27392,7 +27376,7 @@ func http2canRetryError(err error) bool
 
 ```
 searchKey: http.http2checkConnHeaders
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27405,7 +27389,7 @@ checkConnHeaders checks whether req has any invalid connection-level headers. pe
 
 ```
 searchKey: http.http2checkPriority
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27416,7 +27400,7 @@ func http2checkPriority(streamID uint32, p http2PriorityParam) error
 
 ```
 searchKey: http.http2checkValidHTTP2RequestHeaders
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27429,7 +27413,7 @@ checkValidHTTP2RequestHeaders checks whether h is a valid HTTP/2 request, per RF
 
 ```
 searchKey: http.http2checkWriteHeaderCode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27442,7 +27426,7 @@ checkWriteHeaderCode is a copy of net/http's checkWriteHeaderCode.
 
 ```
 searchKey: http.http2commaSeparatedTrailers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27464,7 +27448,7 @@ func http2curGoroutineID() uint64
 
 ```
 searchKey: http.http2cutoff64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27477,7 +27461,7 @@ Return the first number n such that n*base >= 1<<64.
 
 ```
 searchKey: http.http2encKV
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27488,7 +27472,7 @@ func http2encKV(enc *hpack.Encoder, k, v string)
 
 ```
 searchKey: http.http2encodeHeaders
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27501,7 +27485,7 @@ encodeHeaders encodes an http.Header. If keys is not nil, then (k, h[k]) is enco
 
 ```
 searchKey: http.http2errno
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27516,7 +27500,7 @@ TODO: remove this helper function once http2 can use build tags. See comment in 
 
 ```
 searchKey: http.http2filterOutClientConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27527,7 +27511,7 @@ func http2filterOutClientConn(in []*http2ClientConn, exclude *http2ClientConn) [
 
 ```
 searchKey: http.http2foreachHeaderElement
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27540,7 +27524,7 @@ foreachHeaderElement splits v according to the "#rule" construction in RFC 7230 
 
 ```
 searchKey: http.http2getDataBufferChunk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27551,7 +27535,7 @@ func http2getDataBufferChunk(size int64) []byte
 
 ```
 searchKey: http.http2h1ServerKeepAlivesDisabled
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27564,7 +27548,7 @@ h1ServerKeepAlivesDisabled reports whether hs has its keep-alives disabled. See 
 
 ```
 searchKey: http.http2handleHeaderListTooLong
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27575,7 +27559,7 @@ func http2handleHeaderListTooLong(w ResponseWriter, r *Request)
 
 ```
 searchKey: http.http2httpCodeString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27586,7 +27570,7 @@ func http2httpCodeString(code int) string
 
 ```
 searchKey: http.http2isASCIIPrint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27599,7 +27583,7 @@ isASCIIPrint returns whether s is ASCII and printable according to [https://tool
 
 ```
 searchKey: http.http2isBadCipher
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27612,7 +27596,7 @@ isBadCipher reports whether the cipher is blacklisted by the HTTP/2 spec. Refere
 
 ```
 searchKey: http.http2isClosedConnError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27625,7 +27609,7 @@ isClosedConnError reports whether err is an error from use of a closed network c
 
 ```
 searchKey: http.http2isConnectionCloseRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27638,7 +27622,7 @@ isConnectionCloseRequest reports whether req should use its own connection for a
 
 ```
 searchKey: http.http2isEOFOrNetReadError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27649,7 +27633,7 @@ func http2isEOFOrNetReadError(err error) bool
 
 ```
 searchKey: http.http2isNoCachedConnError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27662,7 +27646,7 @@ isNoCachedConnError reports whether err is of type noCachedConnError or its equi
 
 ```
 searchKey: http.http2lower
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27675,7 +27659,7 @@ lower returns the ASCII lowercase version of b.
 
 ```
 searchKey: http.http2lowerHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27686,7 +27670,7 @@ func http2lowerHeader(v string) (lower string, ascii bool)
 
 ```
 searchKey: http.http2mustUint31
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27697,7 +27681,7 @@ func http2mustUint31(v int32) uint32
 
 ```
 searchKey: http.http2parseUintBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27710,7 +27694,7 @@ parseUintBytes is like strconv.ParseUint, but using a []byte.
 
 ```
 searchKey: http.http2putDataBufferChunk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27721,7 +27705,7 @@ func http2putDataBufferChunk(p []byte)
 
 ```
 searchKey: http.http2readByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27732,7 +27716,7 @@ func http2readByte(p []byte) (remain []byte, b byte, err error)
 
 ```
 searchKey: http.http2readUint32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27743,7 +27727,7 @@ func http2readUint32(p []byte) (remain []byte, v uint32, err error)
 
 ```
 searchKey: http.http2registerHTTPSProtocol
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27756,7 +27740,7 @@ registerHTTPSProtocol calls Transport.RegisterProtocol but converting panics int
 
 ```
 searchKey: http.http2serverConnBaseContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27767,7 +27751,7 @@ func http2serverConnBaseContext(c net.Conn, opts *http2ServeConnOpts) (ctx conte
 
 ```
 searchKey: http.http2shouldRetryDial
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27780,7 +27764,7 @@ shouldRetryDial reports whether the current request should retry dialing after t
 
 ```
 searchKey: http.http2shouldSendReqContentLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27793,7 +27777,7 @@ shouldSendReqContentLength reports whether the http2.Transport should send a "co
 
 ```
 searchKey: http.http2splitHeaderBlock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27806,7 +27790,7 @@ splitHeaderBlock splits headerBlock into fragments so that each fragment fits in
 
 ```
 searchKey: http.http2strSliceContains
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27817,7 +27801,7 @@ func http2strSliceContains(ss []string, s string) bool
 
 ```
 searchKey: http.http2summarizeFrame
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27828,7 +27812,7 @@ func http2summarizeFrame(f http2Frame) string
 
 ```
 searchKey: http.http2terminalReadFrameError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27841,7 +27825,7 @@ terminalReadFrameError reports whether err is an unrecoverable error from ReadFr
 
 ```
 searchKey: http.http2traceFirstResponseByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27852,7 +27836,7 @@ func http2traceFirstResponseByte(trace *httptrace.ClientTrace)
 
 ```
 searchKey: http.http2traceGetConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27863,7 +27847,7 @@ func http2traceGetConn(req *Request, hostPort string)
 
 ```
 searchKey: http.http2traceGot100Continue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27874,7 +27858,7 @@ func http2traceGot100Continue(trace *httptrace.ClientTrace)
 
 ```
 searchKey: http.http2traceGot1xxResponseFunc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27885,7 +27869,7 @@ func http2traceGot1xxResponseFunc(trace *httptrace.ClientTrace) func(int, textpr
 
 ```
 searchKey: http.http2traceGotConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27896,7 +27880,7 @@ func http2traceGotConn(req *Request, cc *http2ClientConn, reused bool)
 
 ```
 searchKey: http.http2traceHasWroteHeaderField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27907,7 +27891,7 @@ func http2traceHasWroteHeaderField(trace *httptrace.ClientTrace) bool
 
 ```
 searchKey: http.http2traceWait100Continue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27918,7 +27902,7 @@ func http2traceWait100Continue(trace *httptrace.ClientTrace)
 
 ```
 searchKey: http.http2traceWroteHeaderField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27929,7 +27913,7 @@ func http2traceWroteHeaderField(trace *httptrace.ClientTrace, k, v string)
 
 ```
 searchKey: http.http2traceWroteHeaders
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27940,7 +27924,7 @@ func http2traceWroteHeaders(trace *httptrace.ClientTrace)
 
 ```
 searchKey: http.http2traceWroteRequest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27951,7 +27935,7 @@ func http2traceWroteRequest(trace *httptrace.ClientTrace, err error)
 
 ```
 searchKey: http.http2validPseudoPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27973,7 +27957,7 @@ We used to enforce that the path also didn't start with "//", but Google's GFE a
 
 ```
 searchKey: http.http2validStreamID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27984,7 +27968,7 @@ func http2validStreamID(streamID uint32) bool
 
 ```
 searchKey: http.http2validStreamIDOrZero
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -27995,7 +27979,7 @@ func http2validStreamIDOrZero(streamID uint32) bool
 
 ```
 searchKey: http.http2validWireHeaderFieldName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28017,7 +28001,7 @@ lowercase prior to their encoding in HTTP/2. "
 
 ```
 searchKey: http.http2writeEndsStream
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28030,7 +28014,7 @@ writeEndsStream reports whether w writes a frame that will transition the stream
 
 ```
 searchKey: http.idnaASCII
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28063,7 +28047,7 @@ func init()
 
 ```
 searchKey: http.is408Message
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28076,7 +28060,7 @@ is408Message reports whether buf has the prefix of an HTTP 408 Request Timeout r
 
 ```
 searchKey: http.isCommonNetReadError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28089,7 +28073,7 @@ isCommonNetReadError reports whether err is a common error encountered during re
 
 ```
 searchKey: http.isCookieDomainName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28102,7 +28086,7 @@ isCookieDomainName reports whether s is a valid domain name or a valid domain na
 
 ```
 searchKey: http.isCookieNameValid
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28113,7 +28097,7 @@ func isCookieNameValid(raw string) bool
 
 ```
 searchKey: http.isDomainOrSubdomain
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28128,7 +28112,7 @@ Both domains must already be in canonical form.
 
 ```
 searchKey: http.isIdentity
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28141,7 +28125,7 @@ Checks whether the encoding is explicitly "identity".
 
 ```
 searchKey: http.isKnownInMemoryReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28154,7 +28138,7 @@ isKnownInMemoryReader reports whether r is a type known to not block on Read. It
 
 ```
 searchKey: http.isNotToken
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28165,7 +28149,7 @@ func isNotToken(r rune) bool
 
 ```
 searchKey: http.isProtocolSwitchHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28178,7 +28162,7 @@ isProtocolSwitchHeader reports whether the request or response header is for a p
 
 ```
 searchKey: http.isProtocolSwitchResponse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28191,7 +28175,7 @@ isProtocolSwitchResponse reports whether the response code and response header i
 
 ```
 searchKey: http.isSlashRune
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28202,7 +28186,7 @@ func isSlashRune(r rune) bool
 
 ```
 searchKey: http.isTT
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28215,7 +28199,7 @@ isTT reports whether the provided byte is a tag-terminating byte (0xTT) as defin
 
 ```
 searchKey: http.isTokenBoundary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28226,7 +28210,7 @@ func isTokenBoundary(b byte) bool
 
 ```
 searchKey: http.isTransportReadFromServerError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28237,7 +28221,7 @@ func isTransportReadFromServerError(err error) bool
 
 ```
 searchKey: http.isUnsupportedTEError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28250,7 +28234,7 @@ isUnsupportedTEError checks if the error is of type unsupportedTEError. It is us
 
 ```
 searchKey: http.isWS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28263,7 +28247,7 @@ isWS reports whether the provided byte is a whitespace byte (0xWS) as defined in
 
 ```
 searchKey: http.isZeroTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28276,7 +28260,7 @@ isZeroTime reports whether t is obviously unspecified (either zero or Unix()=0).
 
 ```
 searchKey: http.knownRoundTripperImpl
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28289,7 +28273,7 @@ knownRoundTripperImpl reports whether rt is a RoundTripper that's maintained by 
 
 ```
 searchKey: http.localRedirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28302,7 +28286,7 @@ localRedirect gives a Moved Permanently response. It does not convert relative p
 
 ```
 searchKey: http.logf
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28315,7 +28299,7 @@ logf prints to the ErrorLog of the *Server associated with request r via ServerC
 
 ```
 searchKey: http.mapDirOpenError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28328,7 +28312,7 @@ mapDirOpenError maps the provided non-nil error from opening name to a possibly 
 
 ```
 searchKey: http.matchErr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28341,7 +28325,7 @@ wantErr can be nil, an error value to match exactly, or type string to match a s
 
 ```
 searchKey: http.mergeSetHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28352,7 +28336,7 @@ func mergeSetHeader(dst *Header, src Header)
 
 ```
 searchKey: http.mustParseURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28363,7 +28347,7 @@ func mustParseURL(s string) *url.URL
 
 ```
 searchKey: http.newBufioReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28374,7 +28358,7 @@ func newBufioReader(r io.Reader) *bufio.Reader
 
 ```
 searchKey: http.newBufioWriterSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28385,7 +28369,7 @@ func newBufioWriterSize(w io.Writer, size int) *bufio.Writer
 
 ```
 searchKey: http.newLocalListener
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28396,7 +28380,7 @@ func newLocalListener(t *testing.T) net.Listener
 
 ```
 searchKey: http.newLoggingConn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28407,7 +28391,7 @@ func newLoggingConn(baseName string, c net.Conn) net.Conn
 
 ```
 searchKey: http.newReadWriteCloserBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28418,7 +28402,7 @@ func newReadWriteCloserBody(br *bufio.Reader, rwc io.ReadWriteCloser) io.ReadWri
 
 ```
 searchKey: http.newTextprotoReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28429,7 +28413,7 @@ func newTextprotoReader(br *bufio.Reader) *textproto.Reader
 
 ```
 searchKey: http.noResponseBodyExpected
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28451,7 +28435,7 @@ func nop()
 
 ```
 searchKey: http.numLeadingCRorLF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28462,7 +28446,7 @@ func numLeadingCRorLF(v []byte) (n int)
 
 ```
 searchKey: http.parseBasicAuth
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28475,7 +28459,7 @@ parseBasicAuth parses an HTTP Basic Authentication string. "Basic QWxhZGRpbjpvcG
 
 ```
 searchKey: http.parseContentLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28488,7 +28472,7 @@ parseContentLength trims whitespace from s and returns -1 if no value is set, or
 
 ```
 searchKey: http.parseCookieValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28499,7 +28483,7 @@ func parseCookieValue(raw string, allowDoubleQuote bool) (string, bool)
 
 ```
 searchKey: http.parsePostForm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28510,7 +28494,7 @@ func parsePostForm(r *Request) (vs url.Values, err error)
 
 ```
 searchKey: http.parseRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28523,7 +28507,7 @@ parseRange parses a Range header string as per RFC 7233. errNoOverlap is returne
 
 ```
 searchKey: http.parseRequestLine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28536,7 +28520,7 @@ parseRequestLine parses "GET /foo HTTP/1.1" into its three parts.
 
 ```
 searchKey: http.putBufioReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28547,7 +28531,7 @@ func putBufioReader(br *bufio.Reader)
 
 ```
 searchKey: http.putBufioWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28558,7 +28542,7 @@ func putBufioWriter(bw *bufio.Writer)
 
 ```
 searchKey: http.putTextprotoReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28569,7 +28553,7 @@ func putTextprotoReader(r *textproto.Reader)
 
 ```
 searchKey: http.rangesMIMESize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28582,7 +28566,7 @@ rangesMIMESize returns the number of bytes it takes to encode the provided range
 
 ```
 searchKey: http.readCookies
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28597,7 +28581,7 @@ if filter isn't empty, only cookies of that name are returned
 
 ```
 searchKey: http.readSetCookies
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28610,7 +28594,7 @@ readSetCookies parses all "Set-Cookie" values from the header h and returns the 
 
 ```
 searchKey: http.readTransfer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28623,7 +28607,7 @@ msg is *Request or *Response.
 
 ```
 searchKey: http.redirectBehavior
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28636,7 +28620,7 @@ redirectBehavior describes what should happen when the client encounters a 3xx s
 
 ```
 searchKey: http.refererForURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28649,7 +28633,7 @@ refererForURL returns a referer without any authentication info or an empty stri
 
 ```
 searchKey: http.registerOnHitEOF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28673,7 +28657,7 @@ relevantCaller searches the call stack for the first function outside of net/htt
 
 ```
 searchKey: http.removeEmptyPort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28686,7 +28670,7 @@ removeEmptyPort strips the empty port in ":port" to "" as mandated by RFC 3986 S
 
 ```
 searchKey: http.removeZone
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28699,7 +28683,7 @@ removeZone removes IPv6 zone identifier from host. E.g., "[fe80::1%en0]:8080" to
 
 ```
 searchKey: http.reqBytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28712,7 +28696,7 @@ reqBytes treats req as a request (with \n delimiters) and returns it with \r\n d
 
 ```
 searchKey: http.requestBodyRemains
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28725,7 +28709,7 @@ requestBodyRemains reports whether future calls to Read on rc might yield more d
 
 ```
 searchKey: http.requestMethodUsuallyLacksBody
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28751,7 +28735,7 @@ resetProxyConfig is used by tests.
 
 ```
 searchKey: http.sanitizeCookieName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28762,7 +28746,7 @@ func sanitizeCookieName(n string) string
 
 ```
 searchKey: http.sanitizeCookiePath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28775,7 +28759,7 @@ path-av           = "Path=" path-value path-value        = <any CHAR except CTLs
 
 ```
 searchKey: http.sanitizeCookieValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28796,7 +28780,7 @@ We loosen this as spaces and commas are common in cookie values but we produce a
 
 ```
 searchKey: http.sanitizeOrWarn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28807,7 +28791,7 @@ func sanitizeOrWarn(fieldName string, valid func(byte) bool, v string) string
 
 ```
 searchKey: http.scanETag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28820,7 +28804,7 @@ scanETag determines if a syntactically valid ETag is present at s. If so, the ET
 
 ```
 searchKey: http.seeUpcomingDoubleCRLF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28831,7 +28815,7 @@ func seeUpcomingDoubleCRLF(r *bufio.Reader) bool
 
 ```
 searchKey: http.serveContent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28844,7 +28828,7 @@ if name is empty, filename is unknown. (used for mime type, before sniffing) if 
 
 ```
 searchKey: http.serveFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28857,7 +28841,7 @@ name is '/'-separated, not filepath.Separator.
 
 ```
 searchKey: http.setLastModified
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28868,7 +28852,7 @@ func setLastModified(w ResponseWriter, modtime time.Time)
 
 ```
 searchKey: http.setRequestCancel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28883,7 +28867,7 @@ As background, there are three ways to cancel a request: First was Transport.Can
 
 ```
 searchKey: http.shouldClose
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28896,7 +28880,7 @@ Determine whether to hang up after sending a request and body, or receiving a re
 
 ```
 searchKey: http.shouldCopyHeaderOnRedirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28907,7 +28891,7 @@ func shouldCopyHeaderOnRedirect(headerKey string, initial, dest *url.URL) bool
 
 ```
 searchKey: http.sockssplitHostPort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28918,7 +28902,7 @@ func sockssplitHostPort(address string) (string, int, error)
 
 ```
 searchKey: http.strSliceContains
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28929,7 +28913,7 @@ func strSliceContains(ss []string, s string) bool
 
 ```
 searchKey: http.stringContainsCTLByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28942,7 +28926,7 @@ stringContainsCTLByte reports whether s contains any ASCII control character.
 
 ```
 searchKey: http.stripHostPort
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28955,7 +28939,7 @@ stripHostPort returns h without any trailing ":<port>".
 
 ```
 searchKey: http.stripPassword
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28966,7 +28950,7 @@ func stripPassword(u *url.URL) string
 
 ```
 searchKey: http.sumRangesSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28977,7 +28961,7 @@ func sumRangesSize(ranges []httpRange) (size int64)
 
 ```
 searchKey: http.suppressedHeaders
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -28988,7 +28972,7 @@ func suppressedHeaders(status int) []string
 
 ```
 searchKey: http.timeBeforeContextDeadline
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29001,7 +28985,7 @@ timeBeforeContextDeadline reports whether the non-zero Time t is before ctx's de
 
 ```
 searchKey: http.tlsRecordHeaderLooksLikeHTTP
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29014,7 +28998,7 @@ tlsRecordHeaderLooksLikeHTTP reports whether a TLS record header looks like it m
 
 ```
 searchKey: http.toHTTPError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29027,7 +29011,7 @@ toHTTPError returns a non-specific HTTP error message and status code for a give
 
 ```
 searchKey: http.toJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29038,7 +29022,7 @@ func toJSON(v interface{}) string
 
 ```
 searchKey: http.unnilTestHook
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29051,7 +29035,7 @@ All test hooks must be non-nil so they can be called directly, but the tests use
 
 ```
 searchKey: http.urlErrorOp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29064,7 +29048,7 @@ urlErrorOp returns the (*url.Error).Op value to use for the provided (*Request).
 
 ```
 searchKey: http.validCookieDomain
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29077,7 +29061,7 @@ validCookieDomain reports whether v is a valid cookie domain-value.
 
 ```
 searchKey: http.validCookieExpires
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29090,7 +29074,7 @@ validCookieExpires reports whether v is a valid cookie expires-value.
 
 ```
 searchKey: http.validCookiePathByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29101,7 +29085,7 @@ func validCookiePathByte(b byte) bool
 
 ```
 searchKey: http.validCookieValueByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29112,7 +29096,7 @@ func validCookieValueByte(b byte) bool
 
 ```
 searchKey: http.validMethod
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29123,7 +29107,7 @@ func validMethod(method string) bool
 
 ```
 searchKey: http.validNextProto
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29136,7 +29120,7 @@ validNextProto reports whether the proto is a valid ALPN protocol name. Everythi
 
 ```
 searchKey: http.valueOrDefault
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29149,7 +29133,7 @@ Return value if nonempty, def otherwise.
 
 ```
 searchKey: http.writeNotModified
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -29160,7 +29144,7 @@ func writeNotModified(w ResponseWriter)
 
 ```
 searchKey: http.writeStatusLine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

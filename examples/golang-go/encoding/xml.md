@@ -446,10 +446,6 @@ Package xml implements a simple XML 1.0 parser that understands XML name spaces.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Header" href="#Header">const Header</a>
 
 ```
@@ -809,10 +805,6 @@ const xmlnsPrefix = "xmlns"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="HTMLAutoClose" href="#HTMLAutoClose">var HTMLAutoClose</a>
 
@@ -1523,10 +1515,6 @@ var xmlInput = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AnyHolder" href="#AnyHolder">type AnyHolder struct</a>
 
 ```
@@ -1795,7 +1783,7 @@ A CharData represents XML character data (raw text), in which XML escape sequenc
 
 ```
 searchKey: xml.CharData.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1863,7 +1851,7 @@ A Comment represents an XML comment of the form <!--comment-->. The bytes do not
 
 ```
 searchKey: xml.Comment.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1971,7 +1959,7 @@ A Decoder represents an XML parser reading a particular input stream. The parser
 
 ```
 searchKey: xml.NewDecoder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1984,7 +1972,7 @@ NewDecoder creates a new XML parser reading from r. If r does not implement io.B
 
 ```
 searchKey: xml.NewTokenDecoder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2023,7 +2011,7 @@ DecodeElement works like Unmarshal except that it takes a pointer to the start X
 
 ```
 searchKey: xml.Decoder.InputOffset
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2036,7 +2024,7 @@ InputOffset returns the input stream byte offset of the current decoder position
 
 ```
 searchKey: xml.Decoder.RawToken
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2049,7 +2037,7 @@ RawToken is like Token but does not verify that start and end elements match and
 
 ```
 searchKey: xml.Decoder.Skip
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2062,7 +2050,7 @@ Skip reads tokens until it has consumed the end element matching the most recent
 
 ```
 searchKey: xml.Decoder.Token
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2083,7 +2071,7 @@ Token implements XML name spaces as described by [https://www.w3.org/TR/REC-xml-
 
 ```
 searchKey: xml.Decoder.attrval
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2107,7 +2095,7 @@ If the top element on the stack is autoclosing and t is not the end tag, invent 
 
 ```
 searchKey: xml.Decoder.getc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2120,7 +2108,7 @@ Read a single byte. If there is no byte to read, return ok==false and leave the 
 
 ```
 searchKey: xml.Decoder.mustgetc
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2133,7 +2121,7 @@ Must read a single byte. If there is no byte to read, set d.err to SyntaxError("
 
 ```
 searchKey: xml.Decoder.name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2146,7 +2134,7 @@ Get name: /first(first|second)*/ Do not set d.err if the name is missing (unless
 
 ```
 searchKey: xml.Decoder.nsname
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2159,7 +2147,7 @@ Get name space name: name with a : stuck in the middle. The part before the : is
 
 ```
 searchKey: xml.Decoder.pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2170,7 +2158,7 @@ func (d *Decoder) pop() *stack
 
 ```
 searchKey: xml.Decoder.popEOF
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2207,7 +2195,7 @@ func (d *Decoder) push(kind int) *stack
 
 ```
 searchKey: xml.Decoder.pushEOF
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2246,7 +2234,7 @@ Record that we are changing the value of ns[local]. The old value is url, ok.
 
 ```
 searchKey: xml.Decoder.rawToken
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2257,7 +2245,7 @@ func (d *Decoder) rawToken() (Token, error)
 
 ```
 searchKey: xml.Decoder.readName
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2270,7 +2258,7 @@ Read a name and append its bytes to d.buf. The name is delimited by any single-b
 
 ```
 searchKey: xml.Decoder.savedOffset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2283,7 +2271,7 @@ Return saved offset. If we did ungetc (nextByte >= 0), have to back up one.
 
 ```
 searchKey: xml.Decoder.space
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2556,7 +2544,7 @@ A Directive represents an XML directive of the form <!text>. The bytes do not in
 
 ```
 searchKey: xml.Directive.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2670,7 +2658,7 @@ An Encoder writes XML data to an output stream.
 
 ```
 searchKey: xml.NewEncoder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2734,7 +2722,7 @@ EncodeToken allows writing a ProcInst with Target set to "xml" only as the first
 
 ```
 searchKey: xml.Encoder.Flush
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3925,7 +3913,7 @@ A ProcInst represents an XML processing instruction of the form <?target inst?>
 
 ```
 searchKey: xml.ProcInst.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4035,7 +4023,7 @@ A StartElement represents an XML start element.
 
 ```
 searchKey: xml.defaultStart
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4048,7 +4036,7 @@ defaultStart returns the default start element to use, given the reflect type, f
 
 ```
 searchKey: xml.StartElement.Copy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4061,7 +4049,7 @@ Copy creates a new copy of StartElement.
 
 ```
 searchKey: xml.StartElement.End
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4103,7 +4091,7 @@ A SyntaxError represents a syntax error in the XML input stream.
 
 ```
 searchKey: xml.SyntaxError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4199,7 +4187,7 @@ A TagPathError represents an error in the unmarshaling process caused by the use
 
 ```
 searchKey: xml.TagPathError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4238,7 +4226,7 @@ type Text struct {
 
 ```
 searchKey: xml.NewText
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4262,7 +4250,7 @@ A Token is an interface holding one of the token types: StartElement, EndElement
 
 ```
 searchKey: xml.CopyToken
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4321,7 +4309,7 @@ An UnmarshalError represents an error in the unmarshaling process.
 
 ```
 searchKey: xml.UnmarshalError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4381,7 +4369,7 @@ UnsupportedTypeError is returned when Marshal encounters a type that cannot be c
 
 ```
 searchKey: xml.UnsupportedTypeError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4555,7 +4543,7 @@ func (d *downCaser) Read(p []byte) (int, error)
 
 ```
 searchKey: xml.downCaser.ReadByte
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4634,7 +4622,7 @@ fieldInfo holds details for the xml representation of a single field.
 
 ```
 searchKey: xml.lookupXMLName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4647,7 +4635,7 @@ lookupXMLName returns the fieldInfo for typ's XMLName field in case it exists an
 
 ```
 searchKey: xml.structFieldInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4725,7 +4713,7 @@ type mapper struct {
 
 ```
 searchKey: xml.mapper.Token
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4813,7 +4801,7 @@ EscapeString writes to p the properly escaped XML equivalent of the plain text d
 
 ```
 searchKey: xml.printer.cachedWriteError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4852,7 +4840,7 @@ deleteAttrPrefix removes an attribute name space prefix.
 
 ```
 searchKey: xml.printer.markPrefix
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -4937,7 +4925,7 @@ marshalValue writes one or more XML elements representing val. If val was obtain
 
 ```
 searchKey: xml.printer.popPrefix
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5012,7 +5000,7 @@ type tokReader struct{}
 
 ```
 searchKey: xml.tokReader.Token
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5037,7 +5025,7 @@ type toks struct {
 
 ```
 searchKey: xml.toks.Token
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5062,7 +5050,7 @@ type toksNil struct {
 
 ```
 searchKey: xml.toksNil.Token
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5089,7 +5077,7 @@ typeInfo holds details for the xml representation of a type.
 
 ```
 searchKey: xml.getTypeInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5100,15 +5088,11 @@ getTypeInfo returns the typeInfo structure with details necessary for marshaling
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkMarshal" href="#BenchmarkMarshal">func BenchmarkMarshal(b *testing.B)</a>
 
 ```
 searchKey: xml.BenchmarkMarshal
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5119,7 +5103,7 @@ func BenchmarkMarshal(b *testing.B)
 
 ```
 searchKey: xml.BenchmarkUnmarshal
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -5130,7 +5114,7 @@ func BenchmarkUnmarshal(b *testing.B)
 
 ```
 searchKey: xml.Escape
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5143,7 +5127,7 @@ Escape is like EscapeText but omits the error return value. It is provided for b
 
 ```
 searchKey: xml.EscapeText
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5156,7 +5140,7 @@ EscapeText writes to w the properly escaped XML equivalent of the plain text dat
 
 ```
 searchKey: xml.Marshal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5219,7 +5203,7 @@ Marshal will return an error if asked to marshal a channel, function, or map.
 
 ```
 searchKey: xml.MarshalIndent
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5232,7 +5216,7 @@ MarshalIndent works like Marshal, but each XML element begins on a new indented 
 
 ```
 searchKey: xml.ParseTime
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5243,7 +5227,7 @@ func ParseTime(str string) time.Time
 
 ```
 searchKey: xml.TestAllScalars
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5254,7 +5238,7 @@ func TestAllScalars(t *testing.T)
 
 ```
 searchKey: xml.TestCopyTokenCharData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5265,7 +5249,7 @@ func TestCopyTokenCharData(t *testing.T)
 
 ```
 searchKey: xml.TestCopyTokenStartElement
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5276,7 +5260,7 @@ func TestCopyTokenStartElement(t *testing.T)
 
 ```
 searchKey: xml.TestDecodeEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5287,7 +5271,7 @@ func TestDecodeEOF(t *testing.T)
 
 ```
 searchKey: xml.TestDecodeEncode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5298,7 +5282,7 @@ func TestDecodeEncode(t *testing.T)
 
 ```
 searchKey: xml.TestDecodeNilToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5309,7 +5293,7 @@ func TestDecodeNilToken(t *testing.T)
 
 ```
 searchKey: xml.TestDirectivesWithComments
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5320,7 +5304,7 @@ func TestDirectivesWithComments(t *testing.T)
 
 ```
 searchKey: xml.TestDisallowedCharacters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5331,7 +5315,7 @@ func TestDisallowedCharacters(t *testing.T)
 
 ```
 searchKey: xml.TestEncodeToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5342,7 +5326,7 @@ func TestEncodeToken(t *testing.T)
 
 ```
 searchKey: xml.TestEntityInsideCDATA
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5353,7 +5337,7 @@ func TestEntityInsideCDATA(t *testing.T)
 
 ```
 searchKey: xml.TestEscapeTextIOErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5364,7 +5348,7 @@ func TestEscapeTextIOErrors(t *testing.T)
 
 ```
 searchKey: xml.TestEscapeTextInvalidChar
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5375,7 +5359,7 @@ func TestEscapeTextInvalidChar(t *testing.T)
 
 ```
 searchKey: xml.TestInvalidInnerXMLType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5388,7 +5372,7 @@ Issue 15600. ",innerxml" on a field that can't hold it.
 
 ```
 searchKey: xml.TestInvalidXMLName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5399,7 +5383,7 @@ func TestInvalidXMLName(t *testing.T)
 
 ```
 searchKey: xml.TestIsInCharacterRange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5410,7 +5394,7 @@ func TestIsInCharacterRange(t *testing.T)
 
 ```
 searchKey: xml.TestIsValidDirective
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5421,7 +5405,7 @@ func TestIsValidDirective(t *testing.T)
 
 ```
 searchKey: xml.TestIssue11405
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5432,7 +5416,7 @@ func TestIssue11405(t *testing.T)
 
 ```
 searchKey: xml.TestIssue12417
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5443,7 +5427,7 @@ func TestIssue12417(t *testing.T)
 
 ```
 searchKey: xml.TestIssue16158
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5456,7 +5440,7 @@ Issue 16158. Decoder.unmarshalAttr ignores the return value of copyValue.
 
 ```
 searchKey: xml.TestIssue569
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5467,7 +5451,7 @@ func TestIssue569(t *testing.T)
 
 ```
 searchKey: xml.TestIssue5880
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5478,7 +5462,7 @@ func TestIssue5880(t *testing.T)
 
 ```
 searchKey: xml.TestMalformedComment
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5491,7 +5475,7 @@ Issue 11112. Unmarshal must reject invalid comments.
 
 ```
 searchKey: xml.TestMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5502,7 +5486,7 @@ func TestMarshal(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5513,7 +5497,7 @@ func TestMarshalErrors(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalFlush
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5524,7 +5508,7 @@ func TestMarshalFlush(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalIndent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5535,7 +5519,7 @@ func TestMarshalIndent(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalNS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5546,7 +5530,7 @@ func TestMarshalNS(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalNSAttr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5557,7 +5541,7 @@ func TestMarshalNSAttr(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalWriteErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5568,7 +5552,7 @@ func TestMarshalWriteErrors(t *testing.T)
 
 ```
 searchKey: xml.TestMarshalWriteIOErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5579,7 +5563,7 @@ func TestMarshalWriteIOErrors(t *testing.T)
 
 ```
 searchKey: xml.TestNestedDirectives
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5590,7 +5574,7 @@ func TestNestedDirectives(t *testing.T)
 
 ```
 searchKey: xml.TestNewTokenDecoderIdempotent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5601,7 +5585,7 @@ func TestNewTokenDecoderIdempotent(t *testing.T)
 
 ```
 searchKey: xml.TestNonStrictRawToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5612,7 +5596,7 @@ func TestNonStrictRawToken(t *testing.T)
 
 ```
 searchKey: xml.TestProcInstEncodeToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5623,7 +5607,7 @@ func TestProcInstEncodeToken(t *testing.T)
 
 ```
 searchKey: xml.TestProcInstEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5634,7 +5618,7 @@ func TestProcInstEncoding(t *testing.T)
 
 ```
 searchKey: xml.TestRace9796
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5647,7 +5631,7 @@ Issue 9796. Used to fail with GORACE="halt_on_error=1" -race.
 
 ```
 searchKey: xml.TestRawToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5658,7 +5642,7 @@ func TestRawToken(t *testing.T)
 
 ```
 searchKey: xml.TestRawTokenAltEncoding
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5669,7 +5653,7 @@ func TestRawTokenAltEncoding(t *testing.T)
 
 ```
 searchKey: xml.TestRawTokenAltEncodingNoConverter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5680,7 +5664,7 @@ func TestRawTokenAltEncodingNoConverter(t *testing.T)
 
 ```
 searchKey: xml.TestRoundTrip
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5691,7 +5675,7 @@ func TestRoundTrip(t *testing.T)
 
 ```
 searchKey: xml.TestSimpleUseOfEncodeToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5704,7 +5688,7 @@ Issue 11719. EncodeToken used to silently eat tokens with an invalid type.
 
 ```
 searchKey: xml.TestStructPointerMarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5717,7 +5701,7 @@ golang.org/issue/6556
 
 ```
 searchKey: xml.TestSyntax
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5728,7 +5712,7 @@ func TestSyntax(t *testing.T)
 
 ```
 searchKey: xml.TestSyntaxErrorLineNum
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5739,7 +5723,7 @@ func TestSyntaxErrorLineNum(t *testing.T)
 
 ```
 searchKey: xml.TestToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5750,7 +5734,7 @@ func TestToken(t *testing.T)
 
 ```
 searchKey: xml.TestTokenUnmarshaler
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5761,7 +5745,7 @@ func TestTokenUnmarshaler(t *testing.T)
 
 ```
 searchKey: xml.TestTrailingRawToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5772,7 +5756,7 @@ func TestTrailingRawToken(t *testing.T)
 
 ```
 searchKey: xml.TestTrailingToken
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5783,7 +5767,7 @@ func TestTrailingToken(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5796,7 +5780,7 @@ Do invertibility testing on the various structures that we test
 
 ```
 searchKey: xml.TestUnmarshalAttr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5807,7 +5791,7 @@ func TestUnmarshalAttr(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalBadPaths
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5818,7 +5802,7 @@ func TestUnmarshalBadPaths(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalEmptyValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5831,7 +5815,7 @@ golang.org/issues/13417
 
 ```
 searchKey: xml.TestUnmarshalFeed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5842,7 +5826,7 @@ func TestUnmarshalFeed(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalIntoInterface
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5855,7 +5839,7 @@ func TestUnmarshalIntoInterface(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalNS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5866,7 +5850,7 @@ func TestUnmarshalNS(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalNSAttr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5877,7 +5861,7 @@ func TestUnmarshalNSAttr(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalPaths
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5888,7 +5872,7 @@ func TestUnmarshalPaths(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshalWhitespaceAttrs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5901,7 +5885,7 @@ golang.org/issues/22146
 
 ```
 searchKey: xml.TestUnmarshalWhitespaceValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5914,7 +5898,7 @@ golang.org/issues/22146
 
 ```
 searchKey: xml.TestUnmarshalWithoutNameType
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5925,7 +5909,7 @@ func TestUnmarshalWithoutNameType(t *testing.T)
 
 ```
 searchKey: xml.TestUnmarshaler
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5936,7 +5920,7 @@ func TestUnmarshaler(t *testing.T)
 
 ```
 searchKey: xml.TestUnquotedAttrs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5947,7 +5931,7 @@ func TestUnquotedAttrs(t *testing.T)
 
 ```
 searchKey: xml.TestValuelessAttrs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5958,7 +5942,7 @@ func TestValuelessAttrs(t *testing.T)
 
 ```
 searchKey: xml.TestWrapDecoder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -5969,7 +5953,7 @@ func TestWrapDecoder(t *testing.T)
 
 ```
 searchKey: xml.Unmarshal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6065,7 +6049,7 @@ A missing element or empty attribute value will be unmarshaled as a zero value. 
 
 ```
 searchKey: xml.addFieldInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6078,7 +6062,7 @@ addFieldInfo adds finfo to tinfo.fields if there are no conflicts, or if conflic
 
 ```
 searchKey: xml.copyValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6089,7 +6073,7 @@ func copyValue(dst reflect.Value, src []byte) (err error)
 
 ```
 searchKey: xml.emitCDATA
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6102,7 +6086,7 @@ emitCDATA writes to w the CDATA-wrapped plain text data s. It escapes CDATA dire
 
 ```
 searchKey: xml.escapeText
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6115,7 +6099,7 @@ escapeText writes to w the properly escaped XML equivalent of the plain text dat
 
 ```
 searchKey: xml.ifaceptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6126,7 +6110,7 @@ func ifaceptr(x interface{}) interface{}
 
 ```
 searchKey: xml.indirect
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6139,7 +6123,7 @@ indirect drills into interfaces and pointers, returning the pointed-at value. If
 
 ```
 searchKey: xml.isEmptyValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6150,7 +6134,7 @@ func isEmptyValue(v reflect.Value) bool
 
 ```
 searchKey: xml.isInCharacterRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6163,7 +6147,7 @@ Decide whether the given rune is in the XML Character Range, per the Char produc
 
 ```
 searchKey: xml.isName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6174,7 +6158,7 @@ func isName(s []byte) bool
 
 ```
 searchKey: xml.isNameByte
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6185,7 +6169,7 @@ func isNameByte(c byte) bool
 
 ```
 searchKey: xml.isNameString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6196,7 +6180,7 @@ func isNameString(s string) bool
 
 ```
 searchKey: xml.isValidDirective
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6209,7 +6193,7 @@ isValidDirective reports whether dir is a valid directive text, meaning angle br
 
 ```
 searchKey: xml.makeCopy
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6220,7 +6204,7 @@ func makeCopy(b []byte) []byte
 
 ```
 searchKey: xml.min
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6231,7 +6215,7 @@ func min(a, b int) int
 
 ```
 searchKey: xml.procInst
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6244,7 +6228,7 @@ procInst parses the `param="..."` or `param='...'` value out of the provided str
 
 ```
 searchKey: xml.receiverType
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6257,7 +6241,7 @@ receiverType returns the receiver type to use in an expression like "%s.MethodNa
 
 ```
 searchKey: xml.stringptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6268,7 +6252,7 @@ func stringptr(x string) *string
 
 ```
 searchKey: xml.testRawToken
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6279,7 +6263,7 @@ func testRawToken(t *testing.T, d *Decoder, raw string, rawTokens []Token)
 
 ```
 searchKey: xml.testRoundTrip
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -6290,7 +6274,7 @@ func testRoundTrip(t *testing.T, input string)
 
 ```
 searchKey: xml.tokenMap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

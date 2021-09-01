@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -166,9 +164,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -214,9 +210,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -256,7 +250,7 @@
                       "newPage": false,
                       "searchKey": "adler32.update",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -279,7 +273,7 @@
                       "newPage": false,
                       "searchKey": "adler32.digest.BlockSize",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -302,7 +296,7 @@
                       "newPage": false,
                       "searchKey": "adler32.digest.MarshalBinary",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -325,7 +319,7 @@
                       "newPage": false,
                       "searchKey": "adler32.digest.Reset",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -348,7 +342,7 @@
                       "newPage": false,
                       "searchKey": "adler32.digest.Size",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -394,7 +388,7 @@
                       "newPage": false,
                       "searchKey": "adler32.digest.Sum32",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -468,9 +462,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -489,7 +481,7 @@
                 "newPage": false,
                 "searchKey": "adler32.BenchmarkAdler32KB",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -513,7 +505,7 @@
                 "newPage": false,
                 "searchKey": "adler32.Checksum",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -557,7 +549,7 @@
                 "newPage": false,
                 "searchKey": "adler32.TestGolden",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -581,7 +573,7 @@
                 "newPage": false,
                 "searchKey": "adler32.TestGoldenMarshal",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -605,7 +597,7 @@
                 "newPage": false,
                 "searchKey": "adler32.appendUint32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -628,7 +620,7 @@
                 "newPage": false,
                 "searchKey": "adler32.checksum",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -651,7 +643,7 @@
                 "newPage": false,
                 "searchKey": "adler32.readUint32",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

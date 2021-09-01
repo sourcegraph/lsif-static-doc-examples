@@ -20,10 +20,6 @@ Packages that import unsafe may be non-portable and are not protected by the Go 
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ArbitraryType" href="#ArbitraryType">type ArbitraryType int</a>
 
 ```
@@ -210,7 +206,7 @@ s := *(*string)(unsafe.Pointer(&hdr)) // p possibly already lost
 
 ```
 searchKey: unsafe.Add
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -221,15 +217,11 @@ The function Add adds len to ptr and returns the updated pointer Pointer(uintptr
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Alignof" href="#Alignof">func Alignof(x ArbitraryType) uintptr</a>
 
 ```
 searchKey: unsafe.Alignof
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -242,7 +234,7 @@ Alignof takes an expression x of any type and returns the required alignment of 
 
 ```
 searchKey: unsafe.Offsetof
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -255,7 +247,7 @@ Offsetof returns the offset within the struct of the field represented by x, whi
 
 ```
 searchKey: unsafe.Sizeof
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -268,7 +260,7 @@ Sizeof takes an expression x of any type and returns the size in bytes of a hypo
 
 ```
 searchKey: unsafe.Slice
-tags: [method]
+tags: [function]
 ```
 
 ```Go

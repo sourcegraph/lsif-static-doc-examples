@@ -10,10 +10,6 @@ Package globals exports symbols from frontend/globals. See the parent package go
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ExternalURL" href="#ExternalURL">func ExternalURL() *url.URL</a>
 
 ```

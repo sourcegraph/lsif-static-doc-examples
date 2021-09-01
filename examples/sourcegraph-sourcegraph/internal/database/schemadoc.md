@@ -32,7 +32,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="containerName" href="#containerName">const containerName</a>
@@ -60,7 +60,7 @@ const databaseNamePrefix = "schemadoc-gen-temp-"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="databases" href="#databases">var databases</a>
@@ -99,7 +99,7 @@ var versionRe = lazyregexp.New(fmt.Sprintf(`\b%s\b`, regexp.QuoteMeta(`12\.\d+`)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="runFunc" href="#runFunc">type runFunc func(quiet bool, cmd ...string) (string, error)</a>
@@ -117,7 +117,7 @@ type runFunc func(quiet bool, cmd ...string) (string, error)
 
 ```
 searchKey: main.runWithPrefix
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -141,14 +141,14 @@ type table struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="describeTable" href="#describeTable">func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)</a>
 
 ```
 searchKey: main.describeTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -159,7 +159,7 @@ func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (s
 
 ```
 searchKey: main.describeTypes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -170,7 +170,7 @@ func describeTypes(db *sql.DB) (map[string][]string, error)
 
 ```
 searchKey: main.generateAndWrite
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -181,7 +181,7 @@ func generateAndWrite(database *dbconn.Database, dataSource string, commandPrefi
 
 ```
 searchKey: main.generateInternal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -192,7 +192,7 @@ func generateInternal(database *dbconn.Database, dataSource string, run runFunc)
 
 ```
 searchKey: main.getColumnComments
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -203,7 +203,7 @@ func getColumnComments(db *sql.DB, table string) (map[string]string, error)
 
 ```
 searchKey: main.getTableComment
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -214,7 +214,7 @@ func getTableComment(db *sql.DB, table string) (comment string, _ error)
 
 ```
 searchKey: main.getTables
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -225,7 +225,7 @@ func getTables(db *sql.DB) (tables []table, _ error)
 
 ```
 searchKey: main.getViewQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

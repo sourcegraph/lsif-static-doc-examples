@@ -80,10 +80,6 @@ Package log implements a simple logging package. It defines a type, Logger, with
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="LUTC" href="#LUTC">const LUTC</a>
 
 ```
@@ -345,10 +341,6 @@ const Rtime = `[0-9][0-9]:[0-9][0-9]:[0-9][0-9]`
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="std" href="#std">var std</a>
 
 ```
@@ -372,10 +364,6 @@ var tests = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Logger" href="#Logger">type Logger struct</a>
 
@@ -413,7 +401,7 @@ Default returns the standard logger used by the package-level output functions.
 
 ```
 searchKey: log.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -465,7 +453,7 @@ Fatalln is equivalent to l.Println() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Logger.Flags
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -530,7 +518,7 @@ Panicln is equivalent to l.Println() followed by a call to panic().
 
 ```
 searchKey: log.Logger.Prefix
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -621,7 +609,7 @@ SetPrefix sets the output prefix for the logger.
 
 ```
 searchKey: log.Logger.Writer
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -667,15 +655,11 @@ type tester struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkItoa" href="#BenchmarkItoa">func BenchmarkItoa(b *testing.B)</a>
 
 ```
 searchKey: log.BenchmarkItoa
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -686,7 +670,7 @@ func BenchmarkItoa(b *testing.B)
 
 ```
 searchKey: log.BenchmarkPrintln
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -697,7 +681,7 @@ func BenchmarkPrintln(b *testing.B)
 
 ```
 searchKey: log.BenchmarkPrintlnNoFlags
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -708,7 +692,7 @@ func BenchmarkPrintlnNoFlags(b *testing.B)
 
 ```
 searchKey: log.Fatal
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -721,7 +705,7 @@ Fatal is equivalent to Print() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Fatalf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -734,7 +718,7 @@ Fatalf is equivalent to Printf() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Fatalln
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -760,7 +744,7 @@ Flags returns the output flags for the standard logger. The flag bits are Ldate,
 
 ```
 searchKey: log.Output
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -773,7 +757,7 @@ Output writes the output for a logging event. The string s contains the text to 
 
 ```
 searchKey: log.Panic
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -786,7 +770,7 @@ Panic is equivalent to Print() followed by a call to panic().
 
 ```
 searchKey: log.Panicf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -799,7 +783,7 @@ Panicf is equivalent to Printf() followed by a call to panic().
 
 ```
 searchKey: log.Panicln
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -825,7 +809,7 @@ Prefix returns the output prefix for the standard logger.
 
 ```
 searchKey: log.Print
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -838,7 +822,7 @@ Print calls Output to print to the standard logger. Arguments are handled in the
 
 ```
 searchKey: log.Printf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -851,7 +835,7 @@ Printf calls Output to print to the standard logger. Arguments are handled in th
 
 ```
 searchKey: log.Println
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -864,7 +848,7 @@ Println calls Output to print to the standard logger. Arguments are handled in t
 
 ```
 searchKey: log.SetFlags
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -877,7 +861,7 @@ SetFlags sets the output flags for the standard logger. The flag bits are Ldate,
 
 ```
 searchKey: log.SetOutput
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -890,7 +874,7 @@ SetOutput sets the output destination for the standard logger.
 
 ```
 searchKey: log.SetPrefix
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -903,7 +887,7 @@ SetPrefix sets the output prefix for the standard logger.
 
 ```
 searchKey: log.TestAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -914,7 +898,7 @@ func TestAll(t *testing.T)
 
 ```
 searchKey: log.TestDefault
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -925,7 +909,7 @@ func TestDefault(t *testing.T)
 
 ```
 searchKey: log.TestEmptyPrintCreatesLine
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -936,7 +920,7 @@ func TestEmptyPrintCreatesLine(t *testing.T)
 
 ```
 searchKey: log.TestFlagAndPrefixSetting
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -947,7 +931,7 @@ func TestFlagAndPrefixSetting(t *testing.T)
 
 ```
 searchKey: log.TestOutput
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -958,7 +942,7 @@ func TestOutput(t *testing.T)
 
 ```
 searchKey: log.TestOutputRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -969,7 +953,7 @@ func TestOutputRace(t *testing.T)
 
 ```
 searchKey: log.TestUTCFlag
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -993,7 +977,7 @@ Writer returns the output destination for the standard logger.
 
 ```
 searchKey: log.itoa
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1006,7 +990,7 @@ Cheap integer to fixed-width decimal ASCII. Give a negative width to avoid zero-
 
 ```
 searchKey: log.testPrint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

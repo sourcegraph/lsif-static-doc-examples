@@ -111,10 +111,6 @@ Because these interfaces and primitives wrap lower-level operations with various
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="SeekCurrent" href="#SeekCurrent">const SeekCurrent</a>
 
 ```
@@ -158,10 +154,6 @@ const SeekStart = 0 // seek relative to the origin of the file
 Seek whence values. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Discard" href="#Discard">var Discard</a>
 
@@ -315,10 +307,6 @@ var errWhence = errors.New("Seek: invalid whence")
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ByteReader" href="#ByteReader">type ByteReader interface</a>
 
 ```
@@ -451,7 +439,7 @@ It is safe to call Read and Write in parallel with each other or with Close. Par
 
 ```
 searchKey: io.PipeReader.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -507,7 +495,7 @@ A PipeWriter is the write half of a pipe.
 
 ```
 searchKey: io.PipeWriter.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -564,7 +552,7 @@ ReadCloser is the interface that groups the basic Read and Close methods.
 
 ```
 searchKey: io.NopCloser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -685,7 +673,7 @@ Implementations must not retain p.
 
 ```
 searchKey: io.LimitReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -698,7 +686,7 @@ LimitReader returns a Reader that reads from r but stops with EOF after n bytes.
 
 ```
 searchKey: io.MultiReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -711,7 +699,7 @@ MultiReader returns a Reader that's the logical concatenation of the provided in
 
 ```
 searchKey: io.TeeReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -825,7 +813,7 @@ SectionReader implements Read, Seek, and ReadAt on a section of an underlying Re
 
 ```
 searchKey: io.NewSectionReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -871,7 +859,7 @@ func (s *SectionReader) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: io.SectionReader.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -969,7 +957,7 @@ Implementations must not retain p.
 
 ```
 searchKey: io.MultiWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1164,7 +1152,7 @@ type nopCloser struct {
 
 ```
 searchKey: io.nopCloser.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1191,7 +1179,7 @@ onceError is an object that will only store an error once.
 
 ```
 searchKey: io.onceError.Load
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1279,7 +1267,7 @@ func (p *pipe) Write(b []byte) (n int, err error)
 
 ```
 searchKey: io.pipe.readCloseError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1290,7 +1278,7 @@ func (p *pipe) readCloseError() error
 
 ```
 searchKey: io.pipe.writeCloseError
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1324,15 +1312,11 @@ func (t *teeReader) Read(p []byte) (n int, err error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Copy" href="#Copy">func Copy(dst Writer, src Reader) (written int64, err error)</a>
 
 ```
 searchKey: io.Copy
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1349,7 +1333,7 @@ If src implements the WriterTo interface, the copy is implemented by calling src
 
 ```
 searchKey: io.CopyBuffer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1364,7 +1348,7 @@ If either src implements WriterTo or dst implements ReaderFrom, buf will not be 
 
 ```
 searchKey: io.CopyN
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1379,7 +1363,7 @@ If dst implements the ReaderFrom interface, the copy is implemented using it.
 
 ```
 searchKey: io.ReadAll
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1392,7 +1376,7 @@ ReadAll reads from r until an error or EOF and returns the data it read. A succe
 
 ```
 searchKey: io.ReadAtLeast
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1405,7 +1389,7 @@ ReadAtLeast reads from r into buf until it has read at least min bytes. It retur
 
 ```
 searchKey: io.ReadFull
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1418,7 +1402,7 @@ ReadFull reads exactly len(buf) bytes from r into buf. It returns the number of 
 
 ```
 searchKey: io.WriteString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1431,7 +1415,7 @@ WriteString writes the contents of the string s to w, which accepts a slice of b
 
 ```
 searchKey: io.copyBuffer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

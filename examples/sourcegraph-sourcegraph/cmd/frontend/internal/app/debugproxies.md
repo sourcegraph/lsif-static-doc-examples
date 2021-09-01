@@ -31,7 +31,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Endpoint" href="#Endpoint">type Endpoint struct</a>
@@ -157,7 +157,7 @@ clusterScanner scans the cluster for endpoints belonging to services that have a
 
 ```
 searchKey: debugproxies.clusterScanner.runEventLoop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -170,7 +170,7 @@ Runs the k8s.Watch endpoints event loop, and triggers a rescan of cluster when s
 
 ```
 searchKey: debugproxies.clusterScanner.scanCluster
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -183,7 +183,7 @@ scanCluster looks for endpoints belonging to services that have annotation sourc
 
 ```
 searchKey: debugproxies.clusterScanner.watchEndpointEvents
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -211,14 +211,14 @@ proxyEndpoint couples the reverse proxy with the endpoint it proxies.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="StartClusterScanner" href="#StartClusterScanner">func StartClusterScanner(consumer ScanConsumer) error</a>
 
 ```
 searchKey: debugproxies.StartClusterScanner
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -231,7 +231,7 @@ Starts a cluster scanner with the specified consumer. Does not block.
 
 ```
 searchKey: debugproxies.TestClusterScan
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -242,7 +242,7 @@ func TestClusterScan(t *testing.T)
 
 ```
 searchKey: debugproxies.TestDisplayNameFromEndpoint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -253,7 +253,7 @@ func TestDisplayNameFromEndpoint(t *testing.T)
 
 ```
 searchKey: debugproxies.TestIndexLinks
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -264,7 +264,7 @@ func TestIndexLinks(t *testing.T)
 
 ```
 searchKey: debugproxies.TestReverseProxyRequestPaths
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -275,7 +275,7 @@ func TestReverseProxyRequestPaths(t *testing.T)
 
 ```
 searchKey: debugproxies.adminOnly
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -288,7 +288,7 @@ adminOnly is a HTTP middleware which only allows requests by admins.
 
 ```
 searchKey: debugproxies.displayNameFromEndpoint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -314,7 +314,7 @@ namespace returns the namespace the pod is currently running in this is done bec
 
 ```
 searchKey: debugproxies.reverseProxyFromHost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -327,7 +327,7 @@ reverseProxyFromHost creates a reverse proxy from specified host with the path p
 
 ```
 searchKey: debugproxies.startClusterScannerWithClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

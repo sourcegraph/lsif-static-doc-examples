@@ -38,10 +38,6 @@ Package internal contains HTTP internals shared by net/http and net/http/httputi
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="maxLineLength" href="#maxLineLength">const maxLineLength</a>
 
 ```
@@ -56,10 +52,6 @@ const maxLineLength = 4096 // assumed <= bufio.defaultBufSize
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrLineTooLong" href="#ErrLineTooLong">var ErrLineTooLong</a>
 
 ```
@@ -72,10 +64,6 @@ var ErrLineTooLong = errors.New("header line too long")
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="FlushAfterChunkWriter" href="#FlushAfterChunkWriter">type FlushAfterChunkWriter struct</a>
 
@@ -124,7 +112,7 @@ func (cr *chunkedReader) Read(b []uint8) (n int, err error)
 
 ```
 searchKey: internal.chunkedReader.beginChunk
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -135,7 +123,7 @@ func (cr *chunkedReader) beginChunk()
 
 ```
 searchKey: internal.chunkedReader.chunkHeaderAvailable
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -161,7 +149,7 @@ Writing to chunkedWriter translates to writing in HTTP chunked Transfer Encoding
 
 ```
 searchKey: internal.chunkedWriter.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -183,15 +171,11 @@ Write the contents of data as one chunk to Wire. NOTE: Note that the correspondi
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="NewChunkedReader" href="#NewChunkedReader">func NewChunkedReader(r io.Reader) io.Reader</a>
 
 ```
 searchKey: internal.NewChunkedReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -206,7 +190,7 @@ NewChunkedReader is not needed by normal applications. The http package automati
 
 ```
 searchKey: internal.NewChunkedWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -221,7 +205,7 @@ NewChunkedWriter is not needed by normal applications. The http package adds chu
 
 ```
 searchKey: internal.TestChunk
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -232,7 +216,7 @@ func TestChunk(t *testing.T)
 
 ```
 searchKey: internal.TestChunkReadMultiple
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -243,7 +227,7 @@ func TestChunkReadMultiple(t *testing.T)
 
 ```
 searchKey: internal.TestChunkReadPartial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -256,7 +240,7 @@ Issue 17355: ChunkedReader shouldn't block waiting for more data if it can retur
 
 ```
 searchKey: internal.TestChunkReaderAllocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -267,7 +251,7 @@ func TestChunkReaderAllocs(t *testing.T)
 
 ```
 searchKey: internal.TestChunkReadingIgnoresExtensions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -278,7 +262,7 @@ func TestChunkReadingIgnoresExtensions(t *testing.T)
 
 ```
 searchKey: internal.TestParseHexUint
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -289,7 +273,7 @@ func TestParseHexUint(t *testing.T)
 
 ```
 searchKey: internal.isASCIISpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -300,7 +284,7 @@ func isASCIISpace(b byte) bool
 
 ```
 searchKey: internal.parseHexUint
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -311,7 +295,7 @@ func parseHexUint(v []byte) (n uint64, err error)
 
 ```
 searchKey: internal.readChunkLine
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -324,7 +308,7 @@ Read a line of bytes (up to \n) from b. Give up if the line exceeds maxLineLengt
 
 ```
 searchKey: internal.removeChunkExtension
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -344,7 +328,7 @@ removeChunkExtension removes any chunk-extension from p. For example,
 
 ```
 searchKey: internal.trimTrailingWhitespace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

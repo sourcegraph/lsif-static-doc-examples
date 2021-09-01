@@ -904,7 +904,7 @@ Package database contains PostgreSQL DB-backed stores.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AuthenticatorTypeBasicAuth" href="#AuthenticatorTypeBasicAuth">const AuthenticatorTypeBasicAuth</a>
@@ -1474,7 +1474,7 @@ const usersUsageCountsQuery = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AfterCreateUser" href="#AfterCreateUser">var AfterCreateUser</a>
@@ -1991,7 +1991,7 @@ usernamesForTests is a list of test cases containing valid and invalid usernames
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AccessToken" href="#AccessToken">type AccessToken struct</a>
@@ -2034,7 +2034,7 @@ AccessTokenStore implements autocert.Cache
 
 ```
 searchKey: database.AccessTokens
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2047,7 +2047,7 @@ AccessTokens instantiates and returns a new AccessTokenStore with prepared state
 
 ```
 searchKey: database.AccessTokensWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2255,7 +2255,7 @@ AccessTokensListOptions contains options for listing access tokens.
 
 ```
 searchKey: database.AccessTokensListOptions.sqlConditions
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2359,7 +2359,7 @@ ErrOrgMemberNotFound is the error that is returned when a user is not in an org.
 
 ```
 searchKey: database.ErrOrgMemberNotFound.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2370,7 +2370,7 @@ func (err *ErrOrgMemberNotFound) Error() string
 
 ```
 searchKey: database.ErrOrgMemberNotFound.NotFound
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2404,7 +2404,7 @@ Event contains information needed for logging an event.
 
 ```
 searchKey: database.makeTestEvent
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2472,7 +2472,7 @@ type EventLogStore struct {
 
 ```
 searchKey: database.EventLogs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2485,7 +2485,7 @@ EventLogs instantiates and returns a new EventLogStore with prepared statements.
 
 ```
 searchKey: database.EventLogsWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3022,7 +3022,7 @@ ExternalAccountsMigrator is a background job that encrypts external accounts dat
 
 ```
 searchKey: database.NewExternalAccountsMigrator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3033,7 +3033,7 @@ func NewExternalAccountsMigrator(store *basestore.Store) *ExternalAccountsMigrat
 
 ```
 searchKey: database.NewExternalAccountsMigratorWithDB
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3055,7 +3055,7 @@ func (m *ExternalAccountsMigrator) Down(ctx context.Context) (err error)
 
 ```
 searchKey: database.ExternalAccountsMigrator.ID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3111,7 +3111,7 @@ ExternalServiceConfigMigrator is a background job that encrypts external service
 
 ```
 searchKey: database.NewExternalServiceConfigMigrator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3122,7 +3122,7 @@ func NewExternalServiceConfigMigrator(store *basestore.Store) *ExternalServiceCo
 
 ```
 searchKey: database.NewExternalServiceConfigMigratorWithDB
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3144,7 +3144,7 @@ func (m *ExternalServiceConfigMigrator) Down(ctx context.Context) (err error)
 
 ```
 searchKey: database.ExternalServiceConfigMigrator.ID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -3236,7 +3236,7 @@ An ExternalServiceStore stores external services and their configuration. Before
 
 ```
 searchKey: database.ExternalServices
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3249,7 +3249,7 @@ ExternalServices instantiates and returns a new ExternalServicesStore with prepa
 
 ```
 searchKey: database.ExternalServicesWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3517,7 +3517,7 @@ func (e *ExternalServiceStore) WithEncryptionKey(key encryption.Key) *ExternalSe
 
 ```
 searchKey: database.ExternalServiceStore.copy
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3528,7 +3528,7 @@ func (e *ExternalServiceStore) copy() *ExternalServiceStore
 
 ```
 searchKey: database.ExternalServiceStore.ensureStore
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3718,7 +3718,7 @@ ExternalServicesListOptions contains options for listing external services.
 
 ```
 searchKey: database.ExternalServicesListOptions.sqlConditions
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3742,7 +3742,7 @@ type FeatureFlagStore struct {
 
 ```
 searchKey: database.FeatureFlags
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3753,7 +3753,7 @@ func FeatureFlags(db dbutil.DB) *FeatureFlagStore
 
 ```
 searchKey: database.FeatureFlagsWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4000,7 +4000,7 @@ GitserverReposStore is responsible for data stored in the gitserver_repos table.
 
 ```
 searchKey: database.GitserverRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4013,7 +4013,7 @@ GitserverRepos instantiates and returns a new GitserverRepoStore.
 
 ```
 searchKey: database.NewGitserverReposWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4168,7 +4168,7 @@ LimitOffset specifies SQL LIMIT and OFFSET counts. A pointer to it is typically 
 
 ```
 searchKey: database.LimitOffset.SQL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4711,7 +4711,7 @@ type NamespaceStore struct {
 
 ```
 searchKey: database.Namespaces
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4724,7 +4724,7 @@ Namespaces instantiates and returns a new NamespaceStore with prepared statement
 
 ```
 searchKey: database.NamespacesWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4872,7 +4872,7 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: database.NullAuthenticator.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4908,7 +4908,7 @@ An OrgInvitation is an invitation for a user to join an organization as a member
 
 ```
 searchKey: database.OrgInvitation.Pending
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4936,7 +4936,7 @@ OrgInvitationNotFoundError occurs when an org invitation is not found.
 
 ```
 searchKey: database.OrgInvitationNotFoundError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4947,7 +4947,7 @@ func (err OrgInvitationNotFoundError) Error() string
 
 ```
 searchKey: database.OrgInvitationNotFoundError.NotFound
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -4973,7 +4973,7 @@ type OrgInvitationStore struct {
 
 ```
 searchKey: database.OrgInvitations
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4986,7 +4986,7 @@ OrgInvitations instantiates and returns a new OrgInvitationStore with prepared s
 
 ```
 searchKey: database.OrgInvitationsWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5159,7 +5159,7 @@ OrgInvitationsListOptions contains options for listing org invitations.
 
 ```
 searchKey: database.OrgInvitationsListOptions.sqlConditions
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -5183,7 +5183,7 @@ type OrgMemberStore struct {
 
 ```
 searchKey: database.OrgMembers
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5196,7 +5196,7 @@ OrgMembers instantiates and returns a new OrgMemberStore with prepared statement
 
 ```
 searchKey: database.OrgMembersWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5338,7 +5338,7 @@ OrgNotFoundError occurs when an organization is not found.
 
 ```
 searchKey: database.OrgNotFoundError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5349,7 +5349,7 @@ func (e *OrgNotFoundError) Error() string
 
 ```
 searchKey: database.OrgNotFoundError.NotFound
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5373,7 +5373,7 @@ type OrgStore struct {
 
 ```
 searchKey: database.Orgs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5386,7 +5386,7 @@ Orgs instantiates and returns a new OrgStore with prepared statements.
 
 ```
 searchKey: database.OrgsWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5593,7 +5593,7 @@ type PhabricatorStore struct {
 
 ```
 searchKey: database.Phabricator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5606,7 +5606,7 @@ Phabricator instantiates and returns a new PhabricatorStore with prepared statem
 
 ```
 searchKey: database.PhabricatorWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5720,7 +5720,7 @@ type QueryRunnerStateStore struct {
 
 ```
 searchKey: database.QueryRunnerState
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5733,7 +5733,7 @@ QueryRunnerState instantiates and returns a new QueryRunnerStateStore with prepa
 
 ```
 searchKey: database.QueryRunnerStateWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5831,7 +5831,7 @@ type RepoListOrderBy []RepoListSort
 
 ```
 searchKey: database.RepoListOrderBy.SQL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5859,7 +5859,7 @@ RepoListSort is a field by which to sort and the direction of the sorting.
 
 ```
 searchKey: database.RepoListSort.SQL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5884,7 +5884,7 @@ type RepoNotFoundErr struct {
 
 ```
 searchKey: database.RepoNotFoundErr.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5895,7 +5895,7 @@ func (e *RepoNotFoundErr) Error() string
 
 ```
 searchKey: database.RepoNotFoundErr.NotFound
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -5923,7 +5923,7 @@ RepoStore handles access to the repo table
 
 ```
 searchKey: database.Repos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -5936,7 +5936,7 @@ Repos instantiates and returns a new RepoStore with prepared statements.
 
 ```
 searchKey: database.ReposWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6144,7 +6144,7 @@ func (s *RepoStore) With(other basestore.ShareableStore) *RepoStore
 
 ```
 searchKey: database.RepoStore.ensureStore
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -6368,7 +6368,7 @@ type SavedSearchStore struct {
 
 ```
 searchKey: database.SavedSearches
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6381,7 +6381,7 @@ SavedSearches instantiates and returns a new SavedSearchStore with prepared stat
 
 ```
 searchKey: database.SavedSearchesWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6558,7 +6558,7 @@ type SearchContextsStore struct {
 
 ```
 searchKey: database.SearchContexts
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6756,7 +6756,7 @@ A SecurityEventLogStore provides persistence for security events.
 
 ```
 searchKey: database.SecurityEventLogs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6795,7 +6795,7 @@ type SettingStore struct {
 
 ```
 searchKey: database.Settings
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6808,7 +6808,7 @@ Settings instantiates and returns a new SettingStore with prepared statements.
 
 ```
 searchKey: database.SettingsWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6943,7 +6943,7 @@ type SurveyResponseStore struct {
 
 ```
 searchKey: database.SurveyResponses
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -6956,7 +6956,7 @@ SurveyResponses instantiates and returns a new SurveyResponseStore with prepared
 
 ```
 searchKey: database.SurveyResponsesWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7177,7 +7177,7 @@ UserCredentialNotFoundErr is returned when a credential cannot be found from its
 
 ```
 searchKey: database.UserCredentialNotFoundErr.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7188,7 +7188,7 @@ func (err UserCredentialNotFoundErr) Error() string
 
 ```
 searchKey: database.UserCredentialNotFoundErr.NotFound
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7246,7 +7246,7 @@ UserCredentialsListOpts provide the options when listing credentials. At least o
 
 ```
 searchKey: database.UserCredentialsListOpts.sql
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7275,7 +7275,7 @@ UserCredentialsStore provides access to the `user_credentials` table.
 
 ```
 searchKey: database.UserCredentials
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7288,7 +7288,7 @@ UserCredentials instantiates and returns a new UserCredentialsStore with prepare
 
 ```
 searchKey: database.UserCredentialsWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7422,7 +7422,7 @@ UserEmail represents a row in the `user_emails` table.
 
 ```
 searchKey: database.UserEmail.NeedsVerificationCoolDown
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -7470,7 +7470,7 @@ UserEmailsStore provides access to the `user_emails` table.
 
 ```
 searchKey: database.UserEmails
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7483,7 +7483,7 @@ UserEmails instantiates and returns a new UserEmailsStore with prepared statemen
 
 ```
 searchKey: database.UserEmailsWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7676,7 +7676,7 @@ func (s *UserEmailsStore) With(other basestore.ShareableStore) *UserEmailsStore
 
 ```
 searchKey: database.UserEmailsStore.ensureStore
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7720,7 +7720,7 @@ UserExternalAccountsStore provides access to the `user_external_accounts` table.
 
 ```
 searchKey: database.ExternalAccounts
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7733,7 +7733,7 @@ ExternalAccounts instantiates and returns a new UserExternalAccountsStore with p
 
 ```
 searchKey: database.ExternalAccountsWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -7900,7 +7900,7 @@ func (s *UserExternalAccountsStore) WithEncryptionKey(key encryption.Key) *UserE
 
 ```
 searchKey: database.UserExternalAccountsStore.ensureStore
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7924,7 +7924,7 @@ func (s *UserExternalAccountsStore) getBySQL(ctx context.Context, querySuffix *s
 
 ```
 searchKey: database.UserExternalAccountsStore.getEncryptionKey
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -7996,7 +7996,7 @@ type UserPublicRepoStore struct {
 
 ```
 searchKey: database.UserPublicRepos
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8007,7 +8007,7 @@ func UserPublicRepos(db dbutil.DB) *UserPublicRepoStore
 
 ```
 searchKey: database.UserPublicReposWithStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8074,7 +8074,7 @@ For a detailed overview of the schema, see schema.md.
 
 ```
 searchKey: database.Users
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8087,7 +8087,7 @@ Users instantiates and returns a new RepoStore with prepared statements.
 
 ```
 searchKey: database.UsersWith
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -8481,7 +8481,7 @@ create is like Create, except it is expected to be run from within a transaction
 
 ```
 searchKey: database.UserStore.ensureStore
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8663,7 +8663,7 @@ func (*badAuthenticator) Authenticate(*http.Request) error
 
 ```
 searchKey: database.badAuthenticator.Hash
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8689,7 +8689,7 @@ errCannotCreateUser is the error that is returned when a user cannot be added to
 
 ```
 searchKey: database.errCannotCreateUser.Code
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8700,7 +8700,7 @@ func (err errCannotCreateUser) Code() string
 
 ```
 searchKey: database.errCannotCreateUser.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8724,7 +8724,7 @@ type errPhabricatorRepoNotFound struct {
 
 ```
 searchKey: database.errPhabricatorRepoNotFound.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8735,7 +8735,7 @@ func (err errPhabricatorRepoNotFound) Error() string
 
 ```
 searchKey: database.errPhabricatorRepoNotFound.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8759,7 +8759,7 @@ type externalServiceNotFoundError struct {
 
 ```
 searchKey: database.externalServiceNotFoundError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8770,7 +8770,7 @@ func (e externalServiceNotFoundError) Error() string
 
 ```
 searchKey: database.externalServiceNotFoundError.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8843,7 +8843,7 @@ func (p *fakeProvider) FetchUserPerms(context.Context, *extsvc.Account) (*authz.
 
 ```
 searchKey: database.fakeProvider.ServiceID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8854,7 +8854,7 @@ func (p *fakeProvider) ServiceID() string
 
 ```
 searchKey: database.fakeProvider.ServiceType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8865,7 +8865,7 @@ func (p *fakeProvider) ServiceType() string
 
 ```
 searchKey: database.fakeProvider.URN
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8876,7 +8876,7 @@ func (p *fakeProvider) URN() string
 
 ```
 searchKey: database.fakeProvider.Validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -8909,7 +8909,7 @@ func (*invalidAuth) Authenticate(_ *http.Request) error
 
 ```
 searchKey: database.invalidAuth.Hash
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9020,7 +9020,7 @@ repoRecord is the json representation of a repository as used in this package Po
 
 ```
 searchKey: database.newRepoRecord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -9061,7 +9061,7 @@ userEmailNotFoundError is the error that is returned when a user email is not fo
 
 ```
 searchKey: database.userEmailNotFoundError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9072,7 +9072,7 @@ func (err userEmailNotFoundError) Error() string
 
 ```
 searchKey: database.userEmailNotFoundError.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9098,7 +9098,7 @@ userExternalAccountNotFoundError is the error that is returned when a user exter
 
 ```
 searchKey: database.userExternalAccountNotFoundError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9109,7 +9109,7 @@ func (err userExternalAccountNotFoundError) Error() string
 
 ```
 searchKey: database.userExternalAccountNotFoundError.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9135,7 +9135,7 @@ userNotFoundErr is the error that is returned when a user is not found.
 
 ```
 searchKey: database.userNotFoundErr.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9146,7 +9146,7 @@ func (err userNotFoundErr) Error() string
 
 ```
 searchKey: database.userNotFoundErr.NotFound
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -9156,14 +9156,14 @@ func (err userNotFoundErr) NotFound() bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AuthzQueryConds" href="#AuthzQueryConds">func AuthzQueryConds(ctx context.Context, db dbutil.DB) (*sqlf.Query, error)</a>
 
 ```
 searchKey: database.AuthzQueryConds
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9176,7 +9176,7 @@ AuthzQueryConds returns a query clause for enforcing repository permissions. It 
 
 ```
 searchKey: database.CheckPasswordLength
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9189,7 +9189,7 @@ CheckPasswordLength returns an error if the length of the password is not in the
 
 ```
 searchKey: database.EncryptAuthenticator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9202,7 +9202,7 @@ EncryptAuthenticator encodes _and_ encrypts an Authenticator into a byte slice.
 
 ```
 searchKey: database.IsEmailExists
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9215,7 +9215,7 @@ IsEmailExists reports whether err is an error indicating that the intended email
 
 ```
 searchKey: database.IsRepoNotFoundErr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9226,7 +9226,7 @@ func IsRepoNotFoundErr(err error) bool
 
 ```
 searchKey: database.IsUsernameExists
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9239,7 +9239,7 @@ IsUsernameExists reports whether err is an error indicating that the intended us
 
 ```
 searchKey: database.MaybeDecrypt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9252,7 +9252,7 @@ MaybeDecrypt decrypts data with the given key if keyIdent is not empty.
 
 ```
 searchKey: database.MaybeEncrypt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9287,7 +9287,7 @@ func MockUsernameExistsErr() error
 
 ```
 searchKey: database.NewUserNotFoundError
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -9300,7 +9300,7 @@ NewUserNotFoundError returns a new error indicating that the user with the given
 
 ```
 searchKey: database.TestAccessTokens_Create
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9313,7 +9313,7 @@ func TestAccessTokens_Create(t *testing.T)
 
 ```
 searchKey: database.TestAccessTokens_List
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9324,7 +9324,7 @@ func TestAccessTokens_List(t *testing.T)
 
 ```
 searchKey: database.TestAccessTokens_Lookup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9337,7 +9337,7 @@ func TestAccessTokens_Lookup(t *testing.T)
 
 ```
 searchKey: database.TestAccessTokens_Lookup_deletedUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9350,7 +9350,7 @@ func TestAccessTokens_Lookup_deletedUser(t *testing.T)
 
 ```
 searchKey: database.TestAuthzQueryConds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9363,7 +9363,7 @@ func TestAuthzQueryConds(t *testing.T)
 
 ```
 searchKey: database.TestCountRepoCount
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9374,7 +9374,7 @@ func TestCountRepoCount(t *testing.T)
 
 ```
 searchKey: database.TestCreateIfUpToDate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9385,7 +9385,7 @@ func TestCreateIfUpToDate(t *testing.T)
 
 ```
 searchKey: database.TestEncryptAuthenticator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9396,7 +9396,7 @@ func TestEncryptAuthenticator(t *testing.T)
 
 ```
 searchKey: database.TestErrorsInterface
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9407,7 +9407,7 @@ func TestErrorsInterface(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_AggregatedCodeIntelEvents
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9418,7 +9418,7 @@ func TestEventLogs_AggregatedCodeIntelEvents(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_AggregatedSearchEvents
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9429,7 +9429,7 @@ func TestEventLogs_AggregatedSearchEvents(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_AggregatedSparseCodeIntelEvents
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9440,7 +9440,7 @@ func TestEventLogs_AggregatedSparseCodeIntelEvents(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_AggregatedSparseSearchEvents
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9451,7 +9451,7 @@ func TestEventLogs_AggregatedSparseSearchEvents(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_CountUniqueUsersPerPeriod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9462,7 +9462,7 @@ func TestEventLogs_CountUniqueUsersPerPeriod(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_LatestPing
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9473,7 +9473,7 @@ func TestEventLogs_LatestPing(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_ListAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9484,7 +9484,7 @@ func TestEventLogs_ListAll(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_SiteUsage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9495,7 +9495,7 @@ func TestEventLogs_SiteUsage(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_TestCodeIntelligenceRepositoryCounts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9506,7 +9506,7 @@ func TestEventLogs_TestCodeIntelligenceRepositoryCounts(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_UsersUsageCounts
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9517,7 +9517,7 @@ func TestEventLogs_UsersUsageCounts(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_ValidInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9528,7 +9528,7 @@ func TestEventLogs_ValidInfo(t *testing.T)
 
 ```
 searchKey: database.TestEventLogs_codeIntelligenceWeeklyUsersCount
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9539,7 +9539,7 @@ func TestEventLogs_codeIntelligenceWeeklyUsersCount(t *testing.T)
 
 ```
 searchKey: database.TestExternalAccountsMigrator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9550,7 +9550,7 @@ func TestExternalAccountsMigrator(t *testing.T)
 
 ```
 searchKey: database.TestExternalAccounts_AssociateUserAndSave
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9561,7 +9561,7 @@ func TestExternalAccounts_AssociateUserAndSave(t *testing.T)
 
 ```
 searchKey: database.TestExternalAccounts_CreateUserAndSave
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9572,7 +9572,7 @@ func TestExternalAccounts_CreateUserAndSave(t *testing.T)
 
 ```
 searchKey: database.TestExternalAccounts_CreateUserAndSave_NilData
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9583,7 +9583,7 @@ func TestExternalAccounts_CreateUserAndSave_NilData(t *testing.T)
 
 ```
 searchKey: database.TestExternalAccounts_Encryption
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9594,7 +9594,7 @@ func TestExternalAccounts_Encryption(t *testing.T)
 
 ```
 searchKey: database.TestExternalAccounts_List
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9605,7 +9605,7 @@ func TestExternalAccounts_List(t *testing.T)
 
 ```
 searchKey: database.TestExternalAccounts_LookupUserAndSave
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9616,7 +9616,7 @@ func TestExternalAccounts_LookupUserAndSave(t *testing.T)
 
 ```
 searchKey: database.TestExternalAccounts_expiredAt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9627,7 +9627,7 @@ func TestExternalAccounts_expiredAt(t *testing.T)
 
 ```
 searchKey: database.TestExternalServiceConfigMigrator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9638,7 +9638,7 @@ func TestExternalServiceConfigMigrator(t *testing.T)
 
 ```
 searchKey: database.TestExternalServiceStore_GetExternalServiceSyncJobs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9649,7 +9649,7 @@ func TestExternalServiceStore_GetExternalServiceSyncJobs(t *testing.T)
 
 ```
 searchKey: database.TestExternalServiceStore_SyncDue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9660,7 +9660,7 @@ func TestExternalServiceStore_SyncDue(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesListOptions_sqlConditions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9671,7 +9671,7 @@ func TestExternalServicesListOptions_sqlConditions(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_Count
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9682,7 +9682,7 @@ func TestExternalServicesStore_Count(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_Create
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9693,7 +9693,7 @@ func TestExternalServicesStore_Create(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_CreateWithTierEnforcement
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9704,7 +9704,7 @@ func TestExternalServicesStore_CreateWithTierEnforcement(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_Delete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9715,7 +9715,7 @@ func TestExternalServicesStore_Delete(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_DistinctKinds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9726,7 +9726,7 @@ func TestExternalServicesStore_DistinctKinds(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_GetByID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9737,7 +9737,7 @@ func TestExternalServicesStore_GetByID(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_GetByID_Encrypted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9748,7 +9748,7 @@ func TestExternalServicesStore_GetByID_Encrypted(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_List
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9759,7 +9759,7 @@ func TestExternalServicesStore_List(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_OneCloudDefaultPerKind
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9770,7 +9770,7 @@ func TestExternalServicesStore_OneCloudDefaultPerKind(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_Update
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9781,7 +9781,7 @@ func TestExternalServicesStore_Update(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_Upsert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9792,7 +9792,7 @@ func TestExternalServicesStore_Upsert(t *testing.T)
 
 ```
 searchKey: database.TestExternalServicesStore_ValidateConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9803,7 +9803,7 @@ func TestExternalServicesStore_ValidateConfig(t *testing.T)
 
 ```
 searchKey: database.TestFeatureFlagStore
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9814,7 +9814,7 @@ func TestFeatureFlagStore(t *testing.T)
 
 ```
 searchKey: database.TestGetAffiliatedSyncErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9825,7 +9825,7 @@ func TestGetAffiliatedSyncErrors(t *testing.T)
 
 ```
 searchKey: database.TestGetLastSyncError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9836,7 +9836,7 @@ func TestGetLastSyncError(t *testing.T)
 
 ```
 searchKey: database.TestGetLatestSchemaSettings
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9847,7 +9847,7 @@ func TestGetLatestSchemaSettings(t *testing.T)
 
 ```
 searchKey: database.TestGitserverRepoUpsert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9858,7 +9858,7 @@ func TestGitserverRepoUpsert(t *testing.T)
 
 ```
 searchKey: database.TestGitserverRepoUpsertNullShard
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9869,7 +9869,7 @@ func TestGitserverRepoUpsertNullShard(t *testing.T)
 
 ```
 searchKey: database.TestGitserverReposGetByID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9880,7 +9880,7 @@ func TestGitserverReposGetByID(t *testing.T)
 
 ```
 searchKey: database.TestIterateRepoGitserverStatus
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9891,7 +9891,7 @@ func TestIterateRepoGitserverStatus(t *testing.T)
 
 ```
 searchKey: database.TestListDefaultReposUncloned
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9902,7 +9902,7 @@ func TestListDefaultReposUncloned(t *testing.T)
 
 ```
 searchKey: database.TestListSavedSearchesByUserID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9913,7 +9913,7 @@ func TestListSavedSearchesByUserID(t *testing.T)
 
 ```
 searchKey: database.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9924,7 +9924,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: database.TestNamespaces
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9935,7 +9935,7 @@ func TestNamespaces(t *testing.T)
 
 ```
 searchKey: database.TestOrgInvitations
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9948,7 +9948,7 @@ func TestOrgInvitations(t *testing.T)
 
 ```
 searchKey: database.TestOrgMembers_CreateMembershipInOrgsForAllUsers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9959,7 +9959,7 @@ func TestOrgMembers_CreateMembershipInOrgsForAllUsers(t *testing.T)
 
 ```
 searchKey: database.TestOrgs_Count
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9970,7 +9970,7 @@ func TestOrgs_Count(t *testing.T)
 
 ```
 searchKey: database.TestOrgs_Delete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9981,7 +9981,7 @@ func TestOrgs_Delete(t *testing.T)
 
 ```
 searchKey: database.TestOrgs_ValidNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -9992,7 +9992,7 @@ func TestOrgs_ValidNames(t *testing.T)
 
 ```
 searchKey: database.TestParseIncludePattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10003,7 +10003,7 @@ func TestParseIncludePattern(t *testing.T)
 
 ```
 searchKey: database.TestPassword
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10014,7 +10014,7 @@ func TestPassword(t *testing.T)
 
 ```
 searchKey: database.TestRepos_Count
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10025,7 +10025,7 @@ func TestRepos_Count(t *testing.T)
 
 ```
 searchKey: database.TestRepos_Create
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10036,7 +10036,7 @@ func TestRepos_Create(t *testing.T)
 
 ```
 searchKey: database.TestRepos_Delete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10047,7 +10047,7 @@ func TestRepos_Delete(t *testing.T)
 
 ```
 searchKey: database.TestRepos_Get
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10058,7 +10058,7 @@ func TestRepos_Get(t *testing.T)
 
 ```
 searchKey: database.TestRepos_GetByIDs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10069,7 +10069,7 @@ func TestRepos_GetByIDs(t *testing.T)
 
 ```
 searchKey: database.TestRepos_List
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10080,7 +10080,7 @@ func TestRepos_List(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepoNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10091,7 +10091,7 @@ func TestRepos_ListRepoNames(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepoNames_UserIDAndExternalServiceIDsMutuallyExclusive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10102,7 +10102,7 @@ func TestRepos_ListRepoNames_UserIDAndExternalServiceIDsMutuallyExclusive(t *tes
 
 ```
 searchKey: database.TestRepos_ListRepoNames_cloned
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10113,7 +10113,7 @@ func TestRepos_ListRepoNames_cloned(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepoNames_correctFiltering
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10126,7 +10126,7 @@ TestRepos_ListRepoNames_query tests the behavior of Repos.ListRepoNames when cal
 
 ```
 searchKey: database.TestRepos_ListRepoNames_externalRepoPrefixes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10139,7 +10139,7 @@ This function tests for both individual uses of ExternalRepoIncludePrefixes, Ext
 
 ```
 searchKey: database.TestRepos_ListRepoNames_externalServiceID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10150,7 +10150,7 @@ func TestRepos_ListRepoNames_externalServiceID(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepoNames_fork
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10161,7 +10161,7 @@ func TestRepos_ListRepoNames_fork(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepoNames_ids
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10172,7 +10172,7 @@ func TestRepos_ListRepoNames_ids(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepoNames_pagination
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10183,7 +10183,7 @@ func TestRepos_ListRepoNames_pagination(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepoNames_patterns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10196,7 +10196,7 @@ TestRepos_ListRepoNames_patterns tests the behavior of Repos.List when called wi
 
 ```
 searchKey: database.TestRepos_ListRepoNames_query2
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10209,7 +10209,7 @@ Test batch 2 (correct ranking)
 
 ```
 searchKey: database.TestRepos_ListRepoNames_queryAndPatternsMutuallyExclusive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10220,7 +10220,7 @@ func TestRepos_ListRepoNames_queryAndPatternsMutuallyExclusive(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepoNames_queryPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10233,7 +10233,7 @@ TestRepos_ListRepoNames_patterns tests the behavior of Repos.List when called wi
 
 ```
 searchKey: database.TestRepos_ListRepoNames_serviceTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10244,7 +10244,7 @@ func TestRepos_ListRepoNames_serviceTypes(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepoNames_sort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10257,7 +10257,7 @@ Test sort
 
 ```
 searchKey: database.TestRepos_ListRepoNames_useOr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10268,7 +10268,7 @@ func TestRepos_ListRepoNames_useOr(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepoNames_userID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10279,7 +10279,7 @@ func TestRepos_ListRepoNames_userID(t *testing.T)
 
 ```
 searchKey: database.TestRepos_ListRepos_UserPublicRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10290,7 +10290,7 @@ func TestRepos_ListRepos_UserPublicRepos(t *testing.T)
 
 ```
 searchKey: database.TestRepos_List_FailedSync
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10301,7 +10301,7 @@ func TestRepos_List_FailedSync(t *testing.T)
 
 ```
 searchKey: database.TestRepos_List_cloned
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10312,7 +10312,7 @@ func TestRepos_List_cloned(t *testing.T)
 
 ```
 searchKey: database.TestRepos_List_correct_ranking
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10325,7 +10325,7 @@ Test batch 2 (correct ranking)
 
 ```
 searchKey: database.TestRepos_List_externalServiceID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10336,7 +10336,7 @@ func TestRepos_List_externalServiceID(t *testing.T)
 
 ```
 searchKey: database.TestRepos_List_fork
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10347,7 +10347,7 @@ func TestRepos_List_fork(t *testing.T)
 
 ```
 searchKey: database.TestRepos_List_ids
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10358,7 +10358,7 @@ func TestRepos_List_ids(t *testing.T)
 
 ```
 searchKey: database.TestRepos_List_pagination
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10369,7 +10369,7 @@ func TestRepos_List_pagination(t *testing.T)
 
 ```
 searchKey: database.TestRepos_List_patterns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10382,7 +10382,7 @@ TestRepos_List_patterns tests the behavior of Repos.List when called with Includ
 
 ```
 searchKey: database.TestRepos_List_query1
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10395,7 +10395,7 @@ TestRepos_List_query tests the behavior of Repos.List when called with a query. 
 
 ```
 searchKey: database.TestRepos_List_queryAndPatternsMutuallyExclusive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10406,7 +10406,7 @@ func TestRepos_List_queryAndPatternsMutuallyExclusive(t *testing.T)
 
 ```
 searchKey: database.TestRepos_List_queryPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10419,7 +10419,7 @@ TestRepos_List_patterns tests the behavior of Repos.List when called with a Quer
 
 ```
 searchKey: database.TestRepos_List_serviceTypes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10430,7 +10430,7 @@ func TestRepos_List_serviceTypes(t *testing.T)
 
 ```
 searchKey: database.TestRepos_List_sort
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10443,7 +10443,7 @@ Test sort
 
 ```
 searchKey: database.TestRepos_List_useOr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10454,7 +10454,7 @@ func TestRepos_List_useOr(t *testing.T)
 
 ```
 searchKey: database.TestRepos_RepoExternalServices
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10465,7 +10465,7 @@ func TestRepos_RepoExternalServices(t *testing.T)
 
 ```
 searchKey: database.TestRepos_Upsert
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10476,7 +10476,7 @@ func TestRepos_Upsert(t *testing.T)
 
 ```
 searchKey: database.TestRepos_UpsertForkAndArchivedFields
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10487,7 +10487,7 @@ func TestRepos_UpsertForkAndArchivedFields(t *testing.T)
 
 ```
 searchKey: database.TestRepos_createRepo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10498,7 +10498,7 @@ func TestRepos_createRepo(t *testing.T)
 
 ```
 searchKey: database.TestRepos_createRepo_dupe
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10509,7 +10509,7 @@ func TestRepos_createRepo_dupe(t *testing.T)
 
 ```
 searchKey: database.TestRepos_getReposBySQL_checkPermissions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10522,7 +10522,7 @@ func TestRepos_getReposBySQL_checkPermissions(t *testing.T)
 
 ```
 searchKey: database.TestRepos_getReposBySQL_permissionsUserMapping
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10535,7 +10535,7 @@ func TestRepos_getReposBySQL_permissionsUserMapping(t *testing.T)
 
 ```
 searchKey: database.TestRepos_nonSiteAdminCanViewOwnPrivateCode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10546,7 +10546,7 @@ func TestRepos_nonSiteAdminCanViewOwnPrivateCode(t *testing.T)
 
 ```
 searchKey: database.TestSanitizeToUTF8
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10557,7 +10557,7 @@ func TestSanitizeToUTF8(t *testing.T)
 
 ```
 searchKey: database.TestSavedSearchesCreate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10568,7 +10568,7 @@ func TestSavedSearchesCreate(t *testing.T)
 
 ```
 searchKey: database.TestSavedSearchesDelete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10579,7 +10579,7 @@ func TestSavedSearchesDelete(t *testing.T)
 
 ```
 searchKey: database.TestSavedSearchesGetByID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10590,7 +10590,7 @@ func TestSavedSearchesGetByID(t *testing.T)
 
 ```
 searchKey: database.TestSavedSearchesGetByUserID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10601,7 +10601,7 @@ func TestSavedSearchesGetByUserID(t *testing.T)
 
 ```
 searchKey: database.TestSavedSearchesIsEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10612,7 +10612,7 @@ func TestSavedSearchesIsEmpty(t *testing.T)
 
 ```
 searchKey: database.TestSavedSearchesUpdate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10623,7 +10623,7 @@ func TestSavedSearchesUpdate(t *testing.T)
 
 ```
 searchKey: database.TestSearchContexts_CaseInsensitiveNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10634,7 +10634,7 @@ func TestSearchContexts_CaseInsensitiveNames(t *testing.T)
 
 ```
 searchKey: database.TestSearchContexts_CreateAndSetRepositoryRevisions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10645,7 +10645,7 @@ func TestSearchContexts_CreateAndSetRepositoryRevisions(t *testing.T)
 
 ```
 searchKey: database.TestSearchContexts_Delete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10656,7 +10656,7 @@ func TestSearchContexts_Delete(t *testing.T)
 
 ```
 searchKey: database.TestSearchContexts_Get
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10667,7 +10667,7 @@ func TestSearchContexts_Get(t *testing.T)
 
 ```
 searchKey: database.TestSearchContexts_List
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10678,7 +10678,7 @@ func TestSearchContexts_List(t *testing.T)
 
 ```
 searchKey: database.TestSearchContexts_OrderBy
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10689,7 +10689,7 @@ func TestSearchContexts_OrderBy(t *testing.T)
 
 ```
 searchKey: database.TestSearchContexts_PaginationAndCount
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10700,7 +10700,7 @@ func TestSearchContexts_PaginationAndCount(t *testing.T)
 
 ```
 searchKey: database.TestSearchContexts_Permissions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10711,7 +10711,7 @@ func TestSearchContexts_Permissions(t *testing.T)
 
 ```
 searchKey: database.TestSearchContexts_Update
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10722,7 +10722,7 @@ func TestSearchContexts_Update(t *testing.T)
 
 ```
 searchKey: database.TestSecurityEventLogs_ValidInfo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10733,7 +10733,7 @@ func TestSecurityEventLogs_ValidInfo(t *testing.T)
 
 ```
 searchKey: database.TestSetCloneStatus
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10744,7 +10744,7 @@ func TestSetCloneStatus(t *testing.T)
 
 ```
 searchKey: database.TestSetLastError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10755,7 +10755,7 @@ func TestSetLastError(t *testing.T)
 
 ```
 searchKey: database.TestSettings_ListAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10766,7 +10766,7 @@ func TestSettings_ListAll(t *testing.T)
 
 ```
 searchKey: database.TestSurveyResponses_Create_Count
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10779,7 +10779,7 @@ TestSurveyResponses_Create_Count tests creation and counting of database survey 
 
 ```
 searchKey: database.TestUpsertAuthorizationToExternalService
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10790,7 +10790,7 @@ func TestUpsertAuthorizationToExternalService(t *testing.T)
 
 ```
 searchKey: database.TestUserCredentialNotFoundErr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10801,7 +10801,7 @@ func TestUserCredentialNotFoundErr(t *testing.T)
 
 ```
 searchKey: database.TestUserCredential_Authenticator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10812,7 +10812,7 @@ func TestUserCredential_Authenticator(t *testing.T)
 
 ```
 searchKey: database.TestUserCredential_SetAuthenticator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10823,7 +10823,7 @@ func TestUserCredential_SetAuthenticator(t *testing.T)
 
 ```
 searchKey: database.TestUserCredentials_CreateUpdate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10834,7 +10834,7 @@ func TestUserCredentials_CreateUpdate(t *testing.T)
 
 ```
 searchKey: database.TestUserCredentials_Delete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10845,7 +10845,7 @@ func TestUserCredentials_Delete(t *testing.T)
 
 ```
 searchKey: database.TestUserCredentials_GetByID
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10856,7 +10856,7 @@ func TestUserCredentials_GetByID(t *testing.T)
 
 ```
 searchKey: database.TestUserCredentials_GetByScope
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10867,7 +10867,7 @@ func TestUserCredentials_GetByScope(t *testing.T)
 
 ```
 searchKey: database.TestUserCredentials_Invalid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10878,7 +10878,7 @@ func TestUserCredentials_Invalid(t *testing.T)
 
 ```
 searchKey: database.TestUserCredentials_List
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10889,7 +10889,7 @@ func TestUserCredentials_List(t *testing.T)
 
 ```
 searchKey: database.TestUserEmail_NeedsVerificationCoolDown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10900,7 +10900,7 @@ func TestUserEmail_NeedsVerificationCoolDown(t *testing.T)
 
 ```
 searchKey: database.TestUserEmails_Add_Remove
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10911,7 +10911,7 @@ func TestUserEmails_Add_Remove(t *testing.T)
 
 ```
 searchKey: database.TestUserEmails_Get
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10922,7 +10922,7 @@ func TestUserEmails_Get(t *testing.T)
 
 ```
 searchKey: database.TestUserEmails_GetLatestVerificationSentEmail
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10933,7 +10933,7 @@ func TestUserEmails_GetLatestVerificationSentEmail(t *testing.T)
 
 ```
 searchKey: database.TestUserEmails_GetPrimary
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10944,7 +10944,7 @@ func TestUserEmails_GetPrimary(t *testing.T)
 
 ```
 searchKey: database.TestUserEmails_GetVerifiedEmails
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10955,7 +10955,7 @@ func TestUserEmails_GetVerifiedEmails(t *testing.T)
 
 ```
 searchKey: database.TestUserEmails_ListByUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10966,7 +10966,7 @@ func TestUserEmails_ListByUser(t *testing.T)
 
 ```
 searchKey: database.TestUserEmails_SetLastVerificationSentAt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10977,7 +10977,7 @@ func TestUserEmails_SetLastVerificationSentAt(t *testing.T)
 
 ```
 searchKey: database.TestUserEmails_SetPrimary
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10988,7 +10988,7 @@ func TestUserEmails_SetPrimary(t *testing.T)
 
 ```
 searchKey: database.TestUserEmails_SetVerified
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -10999,7 +10999,7 @@ func TestUserEmails_SetVerified(t *testing.T)
 
 ```
 searchKey: database.TestUserPublicRepos_Set
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11010,7 +11010,7 @@ func TestUserPublicRepos_Set(t *testing.T)
 
 ```
 searchKey: database.TestUserPublicRepos_SetUserRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11021,7 +11021,7 @@ func TestUserPublicRepos_SetUserRepos(t *testing.T)
 
 ```
 searchKey: database.TestUsers_BuiltinAuth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11032,7 +11032,7 @@ func TestUsers_BuiltinAuth(t *testing.T)
 
 ```
 searchKey: database.TestUsers_BuiltinAuthPasswordResetRateLimit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11043,7 +11043,7 @@ func TestUsers_BuiltinAuthPasswordResetRateLimit(t *testing.T)
 
 ```
 searchKey: database.TestUsers_BuiltinAuth_VerifiedEmail
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11054,7 +11054,7 @@ func TestUsers_BuiltinAuth_VerifiedEmail(t *testing.T)
 
 ```
 searchKey: database.TestUsers_CheckAndDecrementInviteQuota
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11065,7 +11065,7 @@ func TestUsers_CheckAndDecrementInviteQuota(t *testing.T)
 
 ```
 searchKey: database.TestUsers_CreatePassword
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11076,7 +11076,7 @@ func TestUsers_CreatePassword(t *testing.T)
 
 ```
 searchKey: database.TestUsers_Create_SiteAdmin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11087,7 +11087,7 @@ func TestUsers_Create_SiteAdmin(t *testing.T)
 
 ```
 searchKey: database.TestUsers_Create_checkPasswordLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11098,7 +11098,7 @@ func TestUsers_Create_checkPasswordLength(t *testing.T)
 
 ```
 searchKey: database.TestUsers_Delete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11109,7 +11109,7 @@ func TestUsers_Delete(t *testing.T)
 
 ```
 searchKey: database.TestUsers_GetByUsernames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11120,7 +11120,7 @@ func TestUsers_GetByUsernames(t *testing.T)
 
 ```
 searchKey: database.TestUsers_GetByVerifiedEmail
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11131,7 +11131,7 @@ func TestUsers_GetByVerifiedEmail(t *testing.T)
 
 ```
 searchKey: database.TestUsers_HasTag
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11142,7 +11142,7 @@ func TestUsers_HasTag(t *testing.T)
 
 ```
 searchKey: database.TestUsers_InvalidateSessions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11153,7 +11153,7 @@ func TestUsers_InvalidateSessions(t *testing.T)
 
 ```
 searchKey: database.TestUsers_ListCount
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11164,7 +11164,7 @@ func TestUsers_ListCount(t *testing.T)
 
 ```
 searchKey: database.TestUsers_PasswordResetExpiry
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11175,7 +11175,7 @@ func TestUsers_PasswordResetExpiry(t *testing.T)
 
 ```
 searchKey: database.TestUsers_SetTag
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11186,7 +11186,7 @@ func TestUsers_SetTag(t *testing.T)
 
 ```
 searchKey: database.TestUsers_Update
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11197,7 +11197,7 @@ func TestUsers_Update(t *testing.T)
 
 ```
 searchKey: database.TestUsers_UpdatePassword
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11208,7 +11208,7 @@ func TestUsers_UpdatePassword(t *testing.T)
 
 ```
 searchKey: database.TestUsers_ValidUsernames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -11219,7 +11219,7 @@ func TestUsers_ValidUsernames(t *testing.T)
 
 ```
 searchKey: database.UnmarshalAuthenticator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -11232,7 +11232,7 @@ UnmarshalAuthenticator decodes a JSON string into an Authenticator.
 
 ```
 searchKey: database.allMatchingStrings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11245,7 +11245,7 @@ allMatchingStrings returns a complete list of the strings that re matches, if it
 
 ```
 searchKey: database.asJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11256,7 +11256,7 @@ func asJSON(t *testing.T, v interface{}) string
 
 ```
 searchKey: database.assertJSONEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11267,7 +11267,7 @@ func assertJSONEqual(t *testing.T, want, got interface{})
 
 ```
 searchKey: database.assertUsageValue
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11278,7 +11278,7 @@ func assertUsageValue(t *testing.T, v UsageValue, start time.Time, count int)
 
 ```
 searchKey: database.authzQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11289,7 +11289,7 @@ func authzQuery(bypassAuthz, usePermissionsUserMapping bool, authenticatedUserID
 
 ```
 searchKey: database.boolptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11300,7 +11300,7 @@ func boolptr(b bool) *bool
 
 ```
 searchKey: database.calcEndDate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11313,7 +11313,7 @@ calcEndDate calculates the the ending date of a number of periods given the peri
 
 ```
 searchKey: database.calcStartDate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11326,7 +11326,7 @@ calcStartDate calculates the the starting date of a number of periods given the 
 
 ```
 searchKey: database.cleanup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11337,7 +11337,7 @@ func cleanup(t *testing.T, db *sql.DB) func()
 
 ```
 searchKey: database.createRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11348,7 +11348,7 @@ func createRepo(ctx context.Context, t *testing.T, db *sql.DB, repo *types.Repo)
 
 ```
 searchKey: database.createSearchContexts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11359,7 +11359,7 @@ func createSearchContexts(ctx context.Context, store *SearchContextsStore, searc
 
 ```
 searchKey: database.createUserCredentialAuths
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11370,7 +11370,7 @@ func createUserCredentialAuths(t *testing.T) map[string]auth.Authenticator
 
 ```
 searchKey: database.errorContains
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11381,7 +11381,7 @@ func errorContains(s string) require.ErrorAssertionFunc
 
 ```
 searchKey: database.functionName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11392,7 +11392,7 @@ func functionName(i interface{}) string
 
 ```
 searchKey: database.getNamespaceQuery
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11403,7 +11403,7 @@ func getNamespaceQuery(preds []*sqlf.Query) *sqlf.Query
 
 ```
 searchKey: database.getSearchContextNames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11414,7 +11414,7 @@ func getSearchContextNames(s []*types.SearchContext) []string
 
 ```
 searchKey: database.getSearchContextNamespaceQueryConditions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11425,7 +11425,7 @@ func getSearchContextNamespaceQueryConditions(namespaceUserID, namespaceOrgID in
 
 ```
 searchKey: database.getSearchContextOrderByClause
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11436,7 +11436,7 @@ func getSearchContextOrderByClause(orderBy SearchContextsOrderByOption, descendi
 
 ```
 searchKey: database.getSearchContextsQueryConditions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11447,7 +11447,7 @@ func getSearchContextsQueryConditions(opts ListSearchContextsOptions) ([]*sqlf.Q
 
 ```
 searchKey: database.hasNoID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11458,7 +11458,7 @@ func hasNoID(r *types.Repo) bool
 
 ```
 searchKey: database.hashPassword
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11469,7 +11469,7 @@ func hashPassword(password string) (sql.NullString, error)
 
 ```
 searchKey: database.idsToQueries
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11502,7 +11502,7 @@ func init()
 
 ```
 searchKey: database.initUserAndRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11513,7 +11513,7 @@ func initUserAndRepo(t *testing.T, ctx context.Context, db dbutil.DB) (*types.Us
 
 ```
 searchKey: database.isInternalActor
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11528,7 +11528,7 @@ isInternalActor returns true if the actor represents an internal agent (i.e., no
 
 ```
 searchKey: database.isUserEmailPrimary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11539,7 +11539,7 @@ func isUserEmailPrimary(ctx context.Context, db dbutil.DB, userID int32, email s
 
 ```
 searchKey: database.isUserEmailVerified
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11550,7 +11550,7 @@ func isUserEmailVerified(ctx context.Context, db dbutil.DB, userID int32, email 
 
 ```
 searchKey: database.jsonEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11561,7 +11561,7 @@ func jsonEqual(t *testing.T, a, b interface{}) bool
 
 ```
 searchKey: database.keyID
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11572,7 +11572,7 @@ func keyID(ctx context.Context, key encryption.Key) (string, error)
 
 ```
 searchKey: database.makeDateTruncExpression
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11585,7 +11585,7 @@ makeDateTruncExpression returns an expresson that converts the given SQL express
 
 ```
 searchKey: database.marshalAuthenticator
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11598,7 +11598,7 @@ marshalAuthenticator encodes an Authenticator into a JSON string.
 
 ```
 searchKey: database.metadataColumn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11609,7 +11609,7 @@ func metadataColumn(metadata interface{}) (msg json.RawMessage, err error)
 
 ```
 searchKey: database.minimalColumns
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11620,7 +11620,7 @@ func minimalColumns(columns []string) []string
 
 ```
 searchKey: database.mustCreate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11631,7 +11631,7 @@ func mustCreate(ctx context.Context, t *testing.T, db *sql.DB, repo *types.Repo,
 
 ```
 searchKey: database.normalizeUserEmails
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11642,7 +11642,7 @@ func normalizeUserEmails(userEmails []*UserEmail)
 
 ```
 searchKey: database.normalizeUsers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11653,7 +11653,7 @@ func normalizeUsers(users []*types.User) []*types.User
 
 ```
 searchKey: database.nullInt32Column
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11664,7 +11664,7 @@ func nullInt32Column(n int32) *int32
 
 ```
 searchKey: database.nullStringColumn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11675,7 +11675,7 @@ func nullStringColumn(s string) *string
 
 ```
 searchKey: database.nullTimeColumn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11686,7 +11686,7 @@ func nullTimeColumn(t time.Time) *time.Time
 
 ```
 searchKey: database.orgsForAllUsersToJoin
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11699,7 +11699,7 @@ orgsForAllUsersToJoin returns the list of org names that all users should be joi
 
 ```
 searchKey: database.parseCursorConds
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11712,7 +11712,7 @@ parseCursorConds checks whether the query is using cursor-based pagination, and 
 
 ```
 searchKey: database.parseIncludePattern
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11729,7 +11729,7 @@ This optimization is necessary for good performance when there are many repos in
 
 ```
 searchKey: database.parsePattern
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11740,7 +11740,7 @@ func parsePattern(p string) ([]*sqlf.Query, error)
 
 ```
 searchKey: database.queriesToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11751,7 +11751,7 @@ func queriesToString(qs []*sqlf.Query) string
 
 ```
 searchKey: database.rawMessagePtr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11762,7 +11762,7 @@ func rawMessagePtr(s string) *json.RawMessage
 
 ```
 searchKey: database.repoNames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11773,7 +11773,7 @@ func repoNames(repos []*types.Repo) []api.RepoName
 
 ```
 searchKey: database.repoNamesFromRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11784,7 +11784,7 @@ func repoNamesFromRepos(repos []*types.Repo) []types.RepoName
 
 ```
 searchKey: database.reposFromRepoNames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11795,7 +11795,7 @@ func reposFromRepoNames(names []types.RepoName) []*types.Repo
 
 ```
 searchKey: database.reverseSearchContextsSlice
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11806,7 +11806,7 @@ func reverseSearchContextsSlice(s []*types.SearchContext) []*types.SearchContext
 
 ```
 searchKey: database.sanitizeToUTF8
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11825,7 +11825,7 @@ See this for a detailed answer: [https://stackoverflow.com/a/38008565/1773961](h
 
 ```
 searchKey: database.scanFeatureFlag
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11836,7 +11836,7 @@ func scanFeatureFlag(scanner rowScanner) (*ff.FeatureFlag, error)
 
 ```
 searchKey: database.scanFeatureFlagOverride
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11847,7 +11847,7 @@ func scanFeatureFlagOverride(scanner rowScanner) (*ff.Override, error)
 
 ```
 searchKey: database.scanFeatureFlagOverrides
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11858,7 +11858,7 @@ func scanFeatureFlagOverrides(rows *sql.Rows) ([]*ff.Override, error)
 
 ```
 searchKey: database.scanRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11869,7 +11869,7 @@ func scanRepo(rows *sql.Rows, r *types.Repo) (err error)
 
 ```
 searchKey: database.scanSearchContexts
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11880,7 +11880,7 @@ func scanSearchContexts(rows *sql.Rows) ([]*types.SearchContext, error)
 
 ```
 searchKey: database.scanSingleSearchContext
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11891,7 +11891,7 @@ func scanSingleSearchContext(rows *sql.Rows) (*types.SearchContext, error)
 
 ```
 searchKey: database.scanUserCredential
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11908,7 +11908,7 @@ s is inspired by the BatchChange scanner type, but also matches sql.Row, which i
 
 ```
 searchKey: database.searchContextsPermissionsCondition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11919,7 +11919,7 @@ func searchContextsPermissionsCondition(ctx context.Context, db dbutil.DB) (*sql
 
 ```
 searchKey: database.setUpUserCredentialTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11930,7 +11930,7 @@ func setUpUserCredentialTest(t *testing.T, db *sql.DB) (context.Context, encrypt
 
 ```
 searchKey: database.simplifyExternalAccount
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11941,7 +11941,7 @@ func simplifyExternalAccount(account *extsvc.Account)
 
 ```
 searchKey: database.sortedRepoNames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11952,7 +11952,7 @@ func sortedRepoNames(repos []*types.Repo) []api.RepoName
 
 ```
 searchKey: database.sourcesColumn
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11963,7 +11963,7 @@ func sourcesColumn(repoID api.RepoID, sources map[string]*types.SourceInfo) (jso
 
 ```
 searchKey: database.strptr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11974,7 +11974,7 @@ func strptr(s string) *string
 
 ```
 searchKey: database.testAnonymousUserFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11985,7 +11985,7 @@ func testAnonymousUserFlags(t *testing.T)
 
 ```
 searchKey: database.testListFeatureFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -11996,7 +11996,7 @@ func testListFeatureFlags(t *testing.T)
 
 ```
 searchKey: database.testListOrgOverrides
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12007,7 +12007,7 @@ func testListOrgOverrides(t *testing.T)
 
 ```
 searchKey: database.testListUserOverrides
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12018,7 +12018,7 @@ func testListUserOverrides(t *testing.T)
 
 ```
 searchKey: database.testNewFeatureFlagRoundtrip
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12029,7 +12029,7 @@ func testNewFeatureFlagRoundtrip(t *testing.T)
 
 ```
 searchKey: database.testNewOverrideRoundtrip
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12040,7 +12040,7 @@ func testNewOverrideRoundtrip(t *testing.T)
 
 ```
 searchKey: database.testUserFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12051,7 +12051,7 @@ func testUserFlags(t *testing.T)
 
 ```
 searchKey: database.testUserlessFeatureFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12073,7 +12073,7 @@ func thirtyDaysAgo() string
 
 ```
 searchKey: database.toSHA256Bytes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12084,7 +12084,7 @@ func toSHA256Bytes(input []byte) []byte
 
 ```
 searchKey: database.upsertAuthorizationToExternalService
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12097,7 +12097,7 @@ upsertAuthorizationToExternalService adds "authorization" field to the external 
 
 ```
 searchKey: database.validPassword
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -12108,7 +12108,7 @@ func validPassword(hash, password string) bool
 
 ```
 searchKey: database.validateOtherExternalServiceConnection
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -114,7 +114,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SearchContextsOrderBySpec" href="#SearchContextsOrderBySpec">const SearchContextsOrderBySpec</a>
@@ -142,7 +142,7 @@ const SearchContextsOrderByUpdatedAt SearchContextsOrderBy = "SEARCH_CONTEXT_UPD
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrContinueRetry" href="#ErrContinueRetry">var ErrContinueRetry</a>
@@ -170,7 +170,7 @@ var graphqlQueryNameRe = lazyregexp.New(`(query|mutation) +(\w)+`)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AddExternalServiceInput" href="#AddExternalServiceInput">type AddExternalServiceInput struct</a>
@@ -236,7 +236,7 @@ Client is an authenticated client for a Sourcegraph user for doing e2e testing. 
 
 ```
 searchKey: gqltestutil.SignIn
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -249,7 +249,7 @@ SignIn performs the sign in with given user credentials. It returns an authentic
 
 ```
 searchKey: gqltestutil.SignUp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -262,7 +262,7 @@ SignUp signs up a new user with given credentials. It returns an authenticated c
 
 ```
 searchKey: gqltestutil.SiteAdminInit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -275,7 +275,7 @@ SiteAdminInit initializes the instance with given admin account. It returns an a
 
 ```
 searchKey: gqltestutil.authenticate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -288,7 +288,7 @@ authenticate initializes an authenticated client with given request body.
 
 ```
 searchKey: gqltestutil.newClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -316,7 +316,7 @@ This method requires the authenticated user to be a site admin.
 
 ```
 searchKey: gqltestutil.Client.AuthenticatedUserID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -755,7 +755,7 @@ SettingsCascade returns settings of given subject ID with contents.
 
 ```
 searchKey: gqltestutil.Client.SiteConfiguration
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -822,7 +822,7 @@ UserOrganizations returns organizations name the given user belongs to.
 
 ```
 searchKey: gqltestutil.Client.ViewerSettings
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1332,7 +1332,7 @@ Exists returns the list of missing repositories from given names that do not exi
 
 ```
 searchKey: gqltestutil.SearchRepositoryResults.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1372,7 +1372,7 @@ type SearchStreamClient struct {
 
 ```
 searchKey: gqltestutil.SearchStreamClient.AuthenticatedUserID
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1516,14 +1516,14 @@ type UpdateSearchContextInput struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NeedsSiteInit" href="#NeedsSiteInit">func NeedsSiteInit(baseURL string) (bool, error)</a>
 
 ```
 searchKey: gqltestutil.NeedsSiteInit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1536,7 +1536,7 @@ NeedsSiteInit returns true if the instance hasn't done "Site admin init" step.
 
 ```
 searchKey: gqltestutil.Retry
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1549,7 +1549,7 @@ Retry retries the given function until the timeout is reached. The function shou
 
 ```
 searchKey: gqltestutil.extractCSRFToken
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

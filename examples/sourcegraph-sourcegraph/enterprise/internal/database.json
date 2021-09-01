@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/internal/database",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -167,7 +166,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -274,7 +272,7 @@
                       "newPage": false,
                       "searchKey": "database.Perms",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -995,7 +993,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -1016,7 +1013,7 @@
                 "newPage": false,
                 "searchKey": "database.NewAuthzStore",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1038,7 +1035,7 @@
                 "newPage": false,
                 "searchKey": "database.NewExternalServicesStore",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1060,7 +1057,7 @@
                 "newPage": false,
                 "searchKey": "database.TestAuthzStore_AuthorizedRepos",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1084,7 +1081,7 @@
                 "newPage": false,
                 "searchKey": "database.TestAuthzStore_GrantPendingPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1108,7 +1105,7 @@
                 "newPage": false,
                 "searchKey": "database.TestAuthzStore_RevokeUserPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1132,7 +1129,7 @@
                 "newPage": false,
                 "searchKey": "database.TestExternalServices_ValidateConfig",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1156,7 +1153,7 @@
                 "newPage": false,
                 "searchKey": "database.TestIntegration_PermsStore",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1180,7 +1177,7 @@
                 "newPage": false,
                 "searchKey": "database.bitmapToArray",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1203,7 +1200,7 @@
                 "newPage": false,
                 "searchKey": "database.checkRegularPermsTable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1226,7 +1223,7 @@
                 "newPage": false,
                 "searchKey": "database.checkRepoPendingPermsTable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1249,7 +1246,7 @@
                 "newPage": false,
                 "searchKey": "database.checkUserPendingPermsTable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1272,7 +1269,7 @@
                 "newPage": false,
                 "searchKey": "database.cleanupPermsTables",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1295,7 +1292,7 @@
                 "newPage": false,
                 "searchKey": "database.cleanupReposTable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1318,7 +1315,7 @@
                 "newPage": false,
                 "searchKey": "database.cleanupUsersTable",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1364,7 +1361,7 @@
                 "newPage": false,
                 "searchKey": "database.deleteUserPendingPermissionsQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1387,7 +1384,7 @@
                 "newPage": false,
                 "searchKey": "database.equal",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1433,7 +1430,7 @@
                 "newPage": false,
                 "searchKey": "database.insertUserPendingPermissionsBatchQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1456,7 +1453,7 @@
                 "newPage": false,
                 "searchKey": "database.loadRepoPendingPermissionsQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1479,7 +1476,7 @@
                 "newPage": false,
                 "searchKey": "database.loadRepoPermissionsQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1502,7 +1499,7 @@
                 "newPage": false,
                 "searchKey": "database.loadUserPendingPermissionsQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1525,7 +1522,7 @@
                 "newPage": false,
                 "searchKey": "database.loadUserPermissionsQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1548,7 +1545,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_DatabaseDeadlocks",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1571,7 +1568,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_DeleteAllUserPendingPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1594,7 +1591,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_DeleteAllUserPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1617,7 +1614,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_GetUserIDsByExternalAccounts",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1640,7 +1637,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_GrantPendingPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1663,7 +1660,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_ListExternalAccounts",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1686,7 +1683,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_ListPendingUsers",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1709,7 +1706,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_LoadRepoPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1732,7 +1729,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_LoadUserPendingPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1755,7 +1752,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_LoadUserPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1778,7 +1775,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_Metrics",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1801,7 +1798,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_RepoIDsWithNoPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1824,7 +1821,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_ReposIDsWithOldestPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1847,7 +1844,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_SetPendingPermissionsAfterGrant",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1870,7 +1867,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_SetRepoPendingPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1893,7 +1890,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_SetRepoPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1916,7 +1913,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_SetUserPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1939,7 +1936,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_TouchRepoPermissions",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1962,7 +1959,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_UserIDsWithNoPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1985,7 +1982,7 @@
                 "newPage": false,
                 "searchKey": "database.testPermsStore_UserIDsWithOldestPerms",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2008,7 +2005,7 @@
                 "newPage": false,
                 "searchKey": "database.toBitmap",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2031,7 +2028,7 @@
                 "newPage": false,
                 "searchKey": "database.updateUserPendingPermissionsBatchQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2054,7 +2051,7 @@
                 "newPage": false,
                 "searchKey": "database.upsertRepoPendingPermissionsBatchQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2077,7 +2074,7 @@
                 "newPage": false,
                 "searchKey": "database.upsertRepoPermissionsBatchQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2100,7 +2097,7 @@
                 "newPage": false,
                 "searchKey": "database.upsertRepoPermissionsQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2123,7 +2120,7 @@
                 "newPage": false,
                 "searchKey": "database.upsertUserPermissionsBatchQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2146,7 +2143,7 @@
                 "newPage": false,
                 "searchKey": "database.upsertUserPermissionsQuery",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

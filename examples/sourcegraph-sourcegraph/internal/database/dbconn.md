@@ -54,7 +54,7 @@ Most services should connect to the frontend for DB access instead, using api.In
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="bulkInsertionKey" href="#bulkInsertionKey">const bulkInsertionKey</a>
@@ -71,7 +71,7 @@ const bulkInsertionKey key = iota
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CodeInsights" href="#CodeInsights">var CodeInsights</a>
@@ -204,7 +204,7 @@ var versionPattern = lazyregexp.New(`^PostgreSQL (\d+)\.`)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Database" href="#Database">type Database struct</a>
@@ -320,7 +320,7 @@ func (stdoutLogger) Printf(format string, v ...interface{})
 
 ```
 searchKey: dbconn.stdoutLogger.Verbose
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -330,14 +330,14 @@ func (logger stdoutLogger) Verbose() bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BulkInsertion" href="#BulkInsertion">func BulkInsertion(ctx context.Context) bool</a>
 
 ```
 searchKey: dbconn.BulkInsertion
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -350,7 +350,7 @@ BulkInsertion returns true if the bulkInsertionKey context value is true.
 
 ```
 searchKey: dbconn.DoMigrate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -363,7 +363,7 @@ DoMigrate runs all up migrations.
 
 ```
 searchKey: dbconn.MigrateDB
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -374,7 +374,7 @@ func MigrateDB(db *sql.DB, database *Database) error
 
 ```
 searchKey: dbconn.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -389,7 +389,7 @@ Note: github.com/jackc/pgx parses the environment as well. This function will al
 
 ```
 searchKey: dbconn.NewMigrate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -402,7 +402,7 @@ NewMigrate returns a new configured migration object for the given database. The
 
 ```
 searchKey: dbconn.NewRaw
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -417,7 +417,7 @@ Prefer to call New as it also configures a connection pool and metrics. Use this
 
 ```
 searchKey: dbconn.Open
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -432,7 +432,7 @@ Open assumes that the database already exists.
 
 ```
 searchKey: dbconn.Ping
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -445,7 +445,7 @@ Ping attempts to contact the database and returns a non-nil error upon failure. 
 
 ```
 searchKey: dbconn.SetupGlobalConnection
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -460,7 +460,7 @@ Note: github.com/jackc/pgx parses the environment as well. This function will al
 
 ```
 searchKey: dbconn.TestBuildConfig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -471,7 +471,7 @@ func TestBuildConfig(t *testing.T)
 
 ```
 searchKey: dbconn.WithBulkInsertion
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -484,7 +484,7 @@ WithBulkInsertion sets the bulkInsertionKey context value.
 
 ```
 searchKey: dbconn.buildConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -497,7 +497,7 @@ buildConfig takes either a Postgres connection string or connection URI, parses 
 
 ```
 searchKey: dbconn.checkVersion
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -508,7 +508,7 @@ func checkVersion(db *sql.DB) error
 
 ```
 searchKey: dbconn.configureConnectionPool
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -521,7 +521,7 @@ configureConnectionPool sets reasonable sizes on the built in DB queue. By defau
 
 ```
 searchKey: dbconn.isDatabaseLikelyStartingUp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -534,7 +534,7 @@ isDatabaseLikelyStartingUp returns whether the err likely just means the Postgre
 
 ```
 searchKey: dbconn.open
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -545,7 +545,7 @@ func open(cfg *pgx.ConnConfig) (*sql.DB, error)
 
 ```
 searchKey: dbconn.openDBWithStartupWait
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -556,7 +556,7 @@ func openDBWithStartupWait(cfg *pgx.ConnConfig) (db *sql.DB, err error)
 
 ```
 searchKey: dbconn.registerPrometheusCollector
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

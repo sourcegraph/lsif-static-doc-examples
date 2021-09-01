@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -167,9 +165,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -411,9 +407,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -452,7 +446,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Dial",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -474,7 +468,7 @@
                       "newPage": false,
                       "searchKey": "textproto.NewConn",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -496,7 +490,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Conn.Close",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -563,7 +557,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Error.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -785,7 +779,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Pipeline.Next",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -874,7 +868,7 @@
                       "newPage": false,
                       "searchKey": "textproto.ProtocolError.Error",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -919,7 +913,7 @@
                       "newPage": false,
                       "searchKey": "textproto.NewReader",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -941,7 +935,7 @@
                       "newPage": false,
                       "searchKey": "textproto.reader",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -964,7 +958,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.DotReader",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1008,7 +1002,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadContinuedLine",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1030,7 +1024,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadContinuedLineBytes",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1052,7 +1046,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadDotBytes",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1074,7 +1068,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadDotLines",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1096,7 +1090,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadLine",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1118,7 +1112,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadLineBytes",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1140,7 +1134,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.ReadMIMEHeader",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1184,7 +1178,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.closeDot",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1253,7 +1247,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.readLineSlice",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1276,7 +1270,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.skipSpace",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1299,7 +1293,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Reader.upcomingHeaderNewlines",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1345,7 +1339,7 @@
                       "newPage": false,
                       "searchKey": "textproto.NewWriter",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -1367,7 +1361,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Writer.DotWriter",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1411,7 +1405,7 @@
                       "newPage": false,
                       "searchKey": "textproto.Writer.closeDot",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1528,7 +1522,7 @@
                       "newPage": false,
                       "searchKey": "textproto.dotWriter.Close",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1672,9 +1666,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1693,7 +1685,7 @@
                 "newPage": false,
                 "searchKey": "textproto.BenchmarkReadMIMEHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1717,7 +1709,7 @@
                 "newPage": false,
                 "searchKey": "textproto.BenchmarkUncommon",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1741,7 +1733,7 @@
                 "newPage": false,
                 "searchKey": "textproto.CanonicalMIMEHeaderKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1763,7 +1755,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestCanonicalMIMEHeaderKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1787,7 +1779,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestCommonHeaders",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1811,7 +1803,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestDotWriter",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1835,7 +1827,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestDotWriterCloseEmptyWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1859,7 +1851,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestDotWriterCloseNoWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1883,7 +1875,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestLargeReadMIMEHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1907,7 +1899,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestMIMEHeaderMultipleValues",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1931,7 +1923,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestPrintfLine",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1955,7 +1947,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestRFC959Lines",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1979,7 +1971,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadCodeLine",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2003,7 +1995,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadContinuedLine",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2027,7 +2019,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadDotBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2051,7 +2043,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadDotLines",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2075,7 +2067,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadLine",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2099,7 +2091,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeader",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2123,7 +2115,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeaderMalformed",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2147,7 +2139,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeaderNoKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2171,7 +2163,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeaderNonCompliant",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2195,7 +2187,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeaderSingle",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2219,7 +2211,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadMIMEHeaderTrimContinued",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2243,7 +2235,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TestReadMultiLineError",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2267,7 +2259,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TrimBytes",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2289,7 +2281,7 @@
                 "newPage": false,
                 "searchKey": "textproto.TrimString",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2311,7 +2303,7 @@
                 "newPage": false,
                 "searchKey": "textproto.canonicalMIMEHeaderKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2357,7 +2349,7 @@
                 "newPage": false,
                 "searchKey": "textproto.isASCIILetter",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2380,7 +2372,7 @@
                 "newPage": false,
                 "searchKey": "textproto.isASCIISpace",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2403,7 +2395,7 @@
                 "newPage": false,
                 "searchKey": "textproto.mustHaveFieldNameColon",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2426,7 +2418,7 @@
                 "newPage": false,
                 "searchKey": "textproto.noValidation",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2449,7 +2441,7 @@
                 "newPage": false,
                 "searchKey": "textproto.parseCodeLine",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2472,7 +2464,7 @@
                 "newPage": false,
                 "searchKey": "textproto.trim",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2495,7 +2487,7 @@
                 "newPage": false,
                 "searchKey": "textproto.validHeaderFieldByte",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

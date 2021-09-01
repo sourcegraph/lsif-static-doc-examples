@@ -152,10 +152,6 @@ Package pe implements access to PE (Microsoft Windows Portable Executable) files
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="COFFSymbolSize" href="#COFFSymbolSize">const COFFSymbolSize</a>
 
 ```
@@ -1194,10 +1190,6 @@ const testprog = ...
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="fileTests" href="#fileTests">var fileTests</a>
 
 ```
@@ -1210,10 +1202,6 @@ var fileTests = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="COFFSymbol" href="#COFFSymbol">type COFFSymbol struct</a>
 
@@ -1288,7 +1276,7 @@ A File represents an open PE file.
 
 ```
 searchKey: pe.NewFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1301,7 +1289,7 @@ NewFile creates a new File for accessing a PE binary in an underlying reader.
 
 ```
 searchKey: pe.Open
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1314,7 +1302,7 @@ Open opens the named file using os.Open and prepares it for use as a PE binary.
 
 ```
 searchKey: pe.File.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1327,7 +1315,7 @@ Close closes the File. If the File was created using NewFile directly instead of
 
 ```
 searchKey: pe.File.DWARF
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1338,7 +1326,7 @@ func (f *File) DWARF() (*dwarf.Data, error)
 
 ```
 searchKey: pe.File.ImportedLibraries
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1351,7 +1339,7 @@ ImportedLibraries returns the names of all libraries referred to by the binary f
 
 ```
 searchKey: pe.File.ImportedSymbols
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1410,7 +1398,7 @@ FormatError is unused. The type is retained for compatibility.
 
 ```
 searchKey: pe.FormatError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1567,7 +1555,7 @@ Section provides access to PE COFF section.
 
 ```
 searchKey: pe.Section.Data
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1580,7 +1568,7 @@ Data reads and returns the contents of the PE section s.
 
 ```
 searchKey: pe.Section.Open
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1667,7 +1655,7 @@ StringTable is a COFF string table.
 
 ```
 searchKey: pe.readStringTable
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1752,15 +1740,11 @@ ReadAt writes len(p) 0s into p.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestBSSHasZeros" href="#TestBSSHasZeros">func TestBSSHasZeros(t *testing.T)</a>
 
 ```
 searchKey: pe.TestBSSHasZeros
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1771,7 +1755,7 @@ func TestBSSHasZeros(t *testing.T)
 
 ```
 searchKey: pe.TestBuildingWindowsGUI
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1782,7 +1766,7 @@ func TestBuildingWindowsGUI(t *testing.T)
 
 ```
 searchKey: pe.TestDWARF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1793,7 +1777,7 @@ func TestDWARF(t *testing.T)
 
 ```
 searchKey: pe.TestDefaultLinkerDWARF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1804,7 +1788,7 @@ func TestDefaultLinkerDWARF(t *testing.T)
 
 ```
 searchKey: pe.TestExternalLinkerDWARF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1815,7 +1799,7 @@ func TestExternalLinkerDWARF(t *testing.T)
 
 ```
 searchKey: pe.TestImportTableInUnknownSection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1826,7 +1810,7 @@ func TestImportTableInUnknownSection(t *testing.T)
 
 ```
 searchKey: pe.TestImportedSymbolsNoPanicMissingOptionalHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1837,7 +1821,7 @@ func TestImportedSymbolsNoPanicMissingOptionalHeader(t *testing.T)
 
 ```
 searchKey: pe.TestImportedSymbolsNoPanicWithSliceOutOfBound
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1848,7 +1832,7 @@ func TestImportedSymbolsNoPanicWithSliceOutOfBound(t *testing.T)
 
 ```
 searchKey: pe.TestInternalLinkerDWARF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1859,7 +1843,7 @@ func TestInternalLinkerDWARF(t *testing.T)
 
 ```
 searchKey: pe.TestInvalidOptionalHeaderMagic
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1870,7 +1854,7 @@ func TestInvalidOptionalHeaderMagic(t *testing.T)
 
 ```
 searchKey: pe.TestOpen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1881,7 +1865,7 @@ func TestOpen(t *testing.T)
 
 ```
 searchKey: pe.TestOpenFailure
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1892,7 +1876,7 @@ func TestOpenFailure(t *testing.T)
 
 ```
 searchKey: pe.cstring
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1905,7 +1889,7 @@ cstring converts ASCII byte sequence b to string. It stops once it finds 0 or re
 
 ```
 searchKey: pe.getImageBase
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1916,7 +1900,7 @@ func getImageBase(f *File) uintptr
 
 ```
 searchKey: pe.getString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1929,7 +1913,7 @@ getString extracts a string from symbol string table.
 
 ```
 searchKey: pe.isOptHdrEq
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1940,7 +1924,7 @@ func isOptHdrEq(a, b interface{}) bool
 
 ```
 searchKey: pe.isSymNameOffset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1953,7 +1937,7 @@ isSymNameOffset checks symbol name if it is encoded as offset into string table.
 
 ```
 searchKey: pe.readCOFFSymbols
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1964,7 +1948,7 @@ func readCOFFSymbols(fh *FileHeader, r io.ReadSeeker) ([]COFFSymbol, error)
 
 ```
 searchKey: pe.readDataDirectories
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1977,7 +1961,7 @@ readDataDirectories accepts a io.ReadSeeker pointing to data directories in the 
 
 ```
 searchKey: pe.readOptionalHeader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1990,7 +1974,7 @@ readOptionalHeader accepts a io.ReadSeeker pointing to optional header in the PE
 
 ```
 searchKey: pe.readRelocs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2001,7 +1985,7 @@ func readRelocs(sh *SectionHeader, r io.ReadSeeker) ([]Reloc, error)
 
 ```
 searchKey: pe.removeAuxSymbols
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2012,7 +1996,7 @@ func removeAuxSymbols(allsyms []COFFSymbol, st StringTable) ([]*Symbol, error)
 
 ```
 searchKey: pe.testCgoDWARF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2023,7 +2007,7 @@ func testCgoDWARF(t *testing.T, linktype int)
 
 ```
 searchKey: pe.testDWARF
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

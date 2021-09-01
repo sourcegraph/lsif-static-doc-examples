@@ -34,10 +34,6 @@ For example, pre-submit checks that use this package directly would behave diffe
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="parserMode" href="#parserMode">const parserMode</a>
 
 ```
@@ -105,10 +101,6 @@ const testfile = "format_test.go"
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="config" href="#config">var config</a>
 
 ```
@@ -135,15 +127,11 @@ Test cases that are expected to fail are marked by the prefix "ERROR". The forma
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Node" href="#Node">func Node(dst io.Writer, fset *token.FileSet, node interface{}) error</a>
 
 ```
 searchKey: format.Node
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -160,7 +148,7 @@ The function may return early (before the entire result is written) and return a
 
 ```
 searchKey: format.Source
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -175,7 +163,7 @@ If src is a partial source file, the leading and trailing space of src is applie
 
 ```
 searchKey: format.String
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -186,7 +174,7 @@ func String(s string) (string, error)
 
 ```
 searchKey: format.TestNode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -197,7 +185,7 @@ func TestNode(t *testing.T)
 
 ```
 searchKey: format.TestNodeNoModify
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -210,7 +198,7 @@ Node is documented to not modify the AST. Test that it is so even when numbers a
 
 ```
 searchKey: format.TestPartial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -221,7 +209,7 @@ func TestPartial(t *testing.T)
 
 ```
 searchKey: format.TestSource
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -232,7 +220,7 @@ func TestSource(t *testing.T)
 
 ```
 searchKey: format.diff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -243,7 +231,7 @@ func diff(t *testing.T, dst, src []byte)
 
 ```
 searchKey: format.format
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -263,7 +251,7 @@ format formats the given package file originally obtained from src and adjusts t
 
 ```
 searchKey: format.hasUnsortedImports
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -274,7 +262,7 @@ func hasUnsortedImports(file *ast.File) bool
 
 ```
 searchKey: format.isSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -287,7 +275,7 @@ isSpace reports whether the byte is a space character. isSpace defines a space a
 
 ```
 searchKey: format.parse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

@@ -77,7 +77,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="numTestSamples" href="#numTestSamples">const numTestSamples</a>
@@ -94,7 +94,7 @@ const numTestSamples = 10000
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="fe" href="#fe">var fe</a>
@@ -221,7 +221,7 @@ var rn, kn, wn, fn = GetNormalDistributionParameters()
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="statsResults" href="#statsResults">type statsResults struct</a>
@@ -244,7 +244,7 @@ type statsResults struct {
 
 ```
 searchKey: rand_test.getStatsResults
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -267,14 +267,14 @@ checkSimilarDistribution returns success if the mean and stddev of the two stats
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkFloat32" href="#BenchmarkFloat32">func BenchmarkFloat32(b *testing.B)</a>
 
 ```
 searchKey: rand_test.BenchmarkFloat32
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -285,7 +285,7 @@ func BenchmarkFloat32(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkFloat64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -296,7 +296,7 @@ func BenchmarkFloat64(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkInt31n1000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -307,7 +307,7 @@ func BenchmarkInt31n1000(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkInt63Threadsafe
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -318,7 +318,7 @@ func BenchmarkInt63Threadsafe(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkInt63ThreadsafeParallel
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -329,7 +329,7 @@ func BenchmarkInt63ThreadsafeParallel(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkInt63Unthreadsafe
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -340,7 +340,7 @@ func BenchmarkInt63Unthreadsafe(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkInt63n1000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -351,7 +351,7 @@ func BenchmarkInt63n1000(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkIntn1000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -362,7 +362,7 @@ func BenchmarkIntn1000(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkPerm3
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -373,7 +373,7 @@ func BenchmarkPerm3(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkPerm30
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -384,7 +384,7 @@ func BenchmarkPerm30(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkPerm30ViaShuffle
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -395,7 +395,7 @@ func BenchmarkPerm30ViaShuffle(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkRead1000
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -406,7 +406,7 @@ func BenchmarkRead1000(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkRead3
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -417,7 +417,7 @@ func BenchmarkRead3(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkRead64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -428,7 +428,7 @@ func BenchmarkRead64(b *testing.B)
 
 ```
 searchKey: rand_test.BenchmarkShuffleOverhead
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -509,7 +509,7 @@ This example shows the use of each of the methods on a *Rand. The use of the glo
 
 ```
 searchKey: rand_test.TestConcurrent
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -522,7 +522,7 @@ TestConcurrent exercises the rand API concurrently, triggering situations where 
 
 ```
 searchKey: rand_test.TestExpTables
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -533,7 +533,7 @@ func TestExpTables(t *testing.T)
 
 ```
 searchKey: rand_test.TestFloat32
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -544,7 +544,7 @@ func TestFloat32(t *testing.T)
 
 ```
 searchKey: rand_test.TestNonStandardExponentialValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -555,7 +555,7 @@ func TestNonStandardExponentialValues(t *testing.T)
 
 ```
 searchKey: rand_test.TestNonStandardNormalValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -566,7 +566,7 @@ func TestNonStandardNormalValues(t *testing.T)
 
 ```
 searchKey: rand_test.TestNormTables
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -577,7 +577,7 @@ func TestNormTables(t *testing.T)
 
 ```
 searchKey: rand_test.TestReadByOneByte
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -588,7 +588,7 @@ func TestReadByOneByte(t *testing.T)
 
 ```
 searchKey: rand_test.TestReadEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -599,7 +599,7 @@ func TestReadEmpty(t *testing.T)
 
 ```
 searchKey: rand_test.TestReadSeedReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -610,7 +610,7 @@ func TestReadSeedReset(t *testing.T)
 
 ```
 searchKey: rand_test.TestReadUniformity
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -621,7 +621,7 @@ func TestReadUniformity(t *testing.T)
 
 ```
 searchKey: rand_test.TestRegress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -632,7 +632,7 @@ func TestRegress(t *testing.T)
 
 ```
 searchKey: rand_test.TestShuffleSmall
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -643,7 +643,7 @@ func TestShuffleSmall(t *testing.T)
 
 ```
 searchKey: rand_test.TestStandardExponentialValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -654,7 +654,7 @@ func TestStandardExponentialValues(t *testing.T)
 
 ```
 searchKey: rand_test.TestStandardNormalValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -665,7 +665,7 @@ func TestStandardNormalValues(t *testing.T)
 
 ```
 searchKey: rand_test.TestUniformFactorial
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -678,7 +678,7 @@ TestUniformFactorial tests several ways of generating a uniform value in [0, n!)
 
 ```
 searchKey: rand_test.checkSampleDistribution
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -689,7 +689,7 @@ func checkSampleDistribution(t *testing.T, samples []float64, expected *statsRes
 
 ```
 searchKey: rand_test.checkSampleSliceDistributions
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -700,7 +700,7 @@ func checkSampleSliceDistributions(t *testing.T, samples []float64, nslices int,
 
 ```
 searchKey: rand_test.compareFloat32Slices
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -713,7 +713,7 @@ compareFloat32Slices returns the first index where the two slices disagree, or <
 
 ```
 searchKey: rand_test.compareUint32Slices
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -726,7 +726,7 @@ compareUint32Slices returns the first index where the two slices disagree, or <0
 
 ```
 searchKey: rand_test.encodePerm
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -739,7 +739,7 @@ encodePerm converts from a permuted slice of length n, such as Perm generates, t
 
 ```
 searchKey: rand_test.generateExponentialSamples
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -750,7 +750,7 @@ func generateExponentialSamples(nsamples int, rate float64, seed int64) []float6
 
 ```
 searchKey: rand_test.generateNormalSamples
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -794,7 +794,7 @@ func initNorm() (testKn []uint32, testWn, testFn []float32)
 
 ```
 searchKey: rand_test.max
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -805,7 +805,7 @@ func max(a, b float64) float64
 
 ```
 searchKey: rand_test.nearEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -816,7 +816,7 @@ func nearEqual(a, b, closeEnough, maxError float64) bool
 
 ```
 searchKey: rand_test.testExponentialDistribution
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -827,7 +827,7 @@ func testExponentialDistribution(t *testing.T, nsamples int, rate float64, seed 
 
 ```
 searchKey: rand_test.testNormalDistribution
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -838,7 +838,7 @@ func testNormalDistribution(t *testing.T, nsamples int, mean, stddev float64, se
 
 ```
 searchKey: rand_test.testReadUniformity
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

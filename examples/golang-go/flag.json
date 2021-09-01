@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -116,9 +114,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -280,9 +276,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -343,7 +337,7 @@
                       "newPage": false,
                       "searchKey": "flag.Lookup",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -388,7 +382,7 @@
                       "newPage": false,
                       "searchKey": "flag.NewFlagSet",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -432,7 +426,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.Args",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -542,7 +536,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.ErrorHandling",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -762,7 +756,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.NArg",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -784,7 +778,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.NFlag",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -806,7 +800,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.Name",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -828,7 +822,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.Output",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -872,7 +866,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.Parsed",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -894,7 +888,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.PrintDefaults",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1158,7 +1152,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.defaultUsage",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1204,7 +1198,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.parseOne",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1250,7 +1244,7 @@
                       "newPage": false,
                       "searchKey": "flag.FlagSet.usage",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1364,7 +1358,7 @@
                       "newPage": false,
                       "searchKey": "flag.newBoolValue",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1387,7 +1381,7 @@
                       "newPage": false,
                       "searchKey": "flag.boolValue.Get",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1410,7 +1404,7 @@
                       "newPage": false,
                       "searchKey": "flag.boolValue.IsBoolFlag",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1456,7 +1450,7 @@
                       "newPage": false,
                       "searchKey": "flag.boolValue.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1503,7 +1497,7 @@
                       "newPage": false,
                       "searchKey": "flag.newDurationValue",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1526,7 +1520,7 @@
                       "newPage": false,
                       "searchKey": "flag.durationValue.Get",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1572,7 +1566,7 @@
                       "newPage": false,
                       "searchKey": "flag.durationValue.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1619,7 +1613,7 @@
                       "newPage": false,
                       "searchKey": "flag.newFloat64Value",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1642,7 +1636,7 @@
                       "newPage": false,
                       "searchKey": "flag.float64Value.Get",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1688,7 +1682,7 @@
                       "newPage": false,
                       "searchKey": "flag.float64Value.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1758,7 +1752,7 @@
                       "newPage": false,
                       "searchKey": "flag.funcValue.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1805,7 +1799,7 @@
                       "newPage": false,
                       "searchKey": "flag.newInt64Value",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1828,7 +1822,7 @@
                       "newPage": false,
                       "searchKey": "flag.int64Value.Get",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1874,7 +1868,7 @@
                       "newPage": false,
                       "searchKey": "flag.int64Value.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1921,7 +1915,7 @@
                       "newPage": false,
                       "searchKey": "flag.newIntValue",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -1944,7 +1938,7 @@
                       "newPage": false,
                       "searchKey": "flag.intValue.Get",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1990,7 +1984,7 @@
                       "newPage": false,
                       "searchKey": "flag.intValue.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2037,7 +2031,7 @@
                       "newPage": false,
                       "searchKey": "flag.newStringValue",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2060,7 +2054,7 @@
                       "newPage": false,
                       "searchKey": "flag.stringValue.Get",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2106,7 +2100,7 @@
                       "newPage": false,
                       "searchKey": "flag.stringValue.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2153,7 +2147,7 @@
                       "newPage": false,
                       "searchKey": "flag.newUint64Value",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2176,7 +2170,7 @@
                       "newPage": false,
                       "searchKey": "flag.uint64Value.Get",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2222,7 +2216,7 @@
                       "newPage": false,
                       "searchKey": "flag.uint64Value.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2269,7 +2263,7 @@
                       "newPage": false,
                       "searchKey": "flag.newUintValue",
                       "tags": [
-                        "method",
+                        "function",
                         "private"
                       ]
                     },
@@ -2292,7 +2286,7 @@
                       "newPage": false,
                       "searchKey": "flag.uintValue.Get",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2338,7 +2332,7 @@
                       "newPage": false,
                       "searchKey": "flag.uintValue.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -2366,9 +2360,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -2387,7 +2379,7 @@
                 "newPage": false,
                 "searchKey": "flag.Arg",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2431,7 +2423,7 @@
                 "newPage": false,
                 "searchKey": "flag.Bool",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2453,7 +2445,7 @@
                 "newPage": false,
                 "searchKey": "flag.BoolVar",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2475,7 +2467,7 @@
                 "newPage": false,
                 "searchKey": "flag.Duration",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2497,7 +2489,7 @@
                 "newPage": false,
                 "searchKey": "flag.DurationVar",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2519,7 +2511,7 @@
                 "newPage": false,
                 "searchKey": "flag.Float64",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2541,7 +2533,7 @@
                 "newPage": false,
                 "searchKey": "flag.Float64Var",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2563,7 +2555,7 @@
                 "newPage": false,
                 "searchKey": "flag.Func",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2585,7 +2577,7 @@
                 "newPage": false,
                 "searchKey": "flag.Int",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2607,7 +2599,7 @@
                 "newPage": false,
                 "searchKey": "flag.Int64",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2629,7 +2621,7 @@
                 "newPage": false,
                 "searchKey": "flag.Int64Var",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2651,7 +2643,7 @@
                 "newPage": false,
                 "searchKey": "flag.IntVar",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2783,7 +2775,7 @@
                 "newPage": false,
                 "searchKey": "flag.ResetForTesting",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2806,7 +2798,7 @@
                 "newPage": false,
                 "searchKey": "flag.Set",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2828,7 +2820,7 @@
                 "newPage": false,
                 "searchKey": "flag.String",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2850,7 +2842,7 @@
                 "newPage": false,
                 "searchKey": "flag.StringVar",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2872,7 +2864,7 @@
                 "newPage": false,
                 "searchKey": "flag.Uint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2894,7 +2886,7 @@
                 "newPage": false,
                 "searchKey": "flag.Uint64",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2916,7 +2908,7 @@
                 "newPage": false,
                 "searchKey": "flag.Uint64Var",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2938,7 +2930,7 @@
                 "newPage": false,
                 "searchKey": "flag.UintVar",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2960,7 +2952,7 @@
                 "newPage": false,
                 "searchKey": "flag.UnquoteUsage",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2982,7 +2974,7 @@
                 "newPage": false,
                 "searchKey": "flag.Var",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3004,7 +2996,7 @@
                 "newPage": false,
                 "searchKey": "flag.Visit",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3026,7 +3018,7 @@
                 "newPage": false,
                 "searchKey": "flag.VisitAll",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -3094,7 +3086,7 @@
                 "newPage": false,
                 "searchKey": "flag.isZeroValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3117,7 +3109,7 @@
                 "newPage": false,
                 "searchKey": "flag.numError",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3140,7 +3132,7 @@
                 "newPage": false,
                 "searchKey": "flag.sortFlags",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

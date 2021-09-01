@@ -21,7 +21,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Mock" href="#Mock">var Mock</a>
@@ -40,7 +40,7 @@ var Mock = struct {
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="State" href="#State">type State struct</a>
@@ -61,7 +61,7 @@ type State struct {
 
 ```
 searchKey: globalstatedb.Get
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -72,7 +72,7 @@ func Get(ctx context.Context) (*State, error)
 
 ```
 searchKey: globalstatedb.getConfiguration
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -109,14 +109,14 @@ type queryExecDatabaseHandler interface {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EnsureInitialized" href="#EnsureInitialized">func EnsureInitialized(ctx context.Context, dbh queryExecDatabaseHandler) (alreadyInitialized bool, err error)</a>
 
 ```
 searchKey: globalstatedb.EnsureInitialized
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -131,7 +131,7 @@ EnsureInitialized ensures the site is marked as having been initialized. If the 
 
 ```
 searchKey: globalstatedb.SiteInitialized
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -142,7 +142,7 @@ func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)
 
 ```
 searchKey: globalstatedb.TestGet
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -164,7 +164,7 @@ func init()
 
 ```
 searchKey: globalstatedb.tryInsertNew
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

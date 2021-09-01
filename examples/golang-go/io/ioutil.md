@@ -20,10 +20,6 @@ As of Go 1.16, the same functionality is now provided by package io or package o
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Discard" href="#Discard">var Discard</a>
 
 ```
@@ -41,15 +37,11 @@ As of Go 1.16, this value is simply io.Discard.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="NopCloser" href="#NopCloser">func NopCloser(r io.Reader) io.ReadCloser</a>
 
 ```
 searchKey: ioutil.NopCloser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -64,7 +56,7 @@ As of Go 1.16, this function simply calls io.NopCloser.
 
 ```
 searchKey: ioutil.ReadAll
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -79,7 +71,7 @@ As of Go 1.16, this function simply calls io.ReadAll.
 
 ```
 searchKey: ioutil.ReadDir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -94,7 +86,7 @@ As of Go 1.16, os.ReadDir is a more efficient and correct choice: it returns a l
 
 ```
 searchKey: ioutil.ReadFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -109,7 +101,7 @@ As of Go 1.16, this function simply calls os.ReadFile.
 
 ```
 searchKey: ioutil.TempDir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -124,7 +116,7 @@ As of Go 1.17, this function simply calls os.MkdirTemp.
 
 ```
 searchKey: ioutil.TempFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -139,7 +131,7 @@ As of Go 1.17, this function simply calls os.CreateTemp.
 
 ```
 searchKey: ioutil.WriteFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go

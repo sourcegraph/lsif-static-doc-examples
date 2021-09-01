@@ -32,7 +32,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="saveTraces" href="#saveTraces">var saveTraces</a>
@@ -49,7 +49,7 @@ var saveTraces = flag.Bool("savetraces", false, "save traces collected by tests"
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="frame" href="#frame">type frame struct</a>
@@ -69,14 +69,14 @@ type frame struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkNewTask" href="#BenchmarkNewTask">func BenchmarkNewTask(b *testing.B)</a>
 
 ```
 searchKey: trace_test.BenchmarkNewTask
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -87,7 +87,7 @@ func BenchmarkNewTask(b *testing.B)
 
 ```
 searchKey: trace_test.BenchmarkStartRegion
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -122,7 +122,7 @@ func RunMyProgram()
 
 ```
 searchKey: trace_test.TestEventBatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -135,7 +135,7 @@ TestEventBatch tests Flush calls that happen during Start don't produce corrupte
 
 ```
 searchKey: trace_test.TestTrace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -146,7 +146,7 @@ func TestTrace(t *testing.T)
 
 ```
 searchKey: trace_test.TestTraceDoubleStart
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -157,7 +157,7 @@ func TestTraceDoubleStart(t *testing.T)
 
 ```
 searchKey: trace_test.TestTraceFutileWakeup
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -168,7 +168,7 @@ func TestTraceFutileWakeup(t *testing.T)
 
 ```
 searchKey: trace_test.TestTraceStartStop
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -179,7 +179,7 @@ func TestTraceStartStop(t *testing.T)
 
 ```
 searchKey: trace_test.TestTraceStress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -190,7 +190,7 @@ func TestTraceStress(t *testing.T)
 
 ```
 searchKey: trace_test.TestTraceStressStartStop
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -203,7 +203,7 @@ Do a bunch of various stuff (timers, GC, network, etc) in a separate goroutine. 
 
 ```
 searchKey: trace_test.TestTraceSymbolize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -216,7 +216,7 @@ TestTraceSymbolize tests symbolization and that events has proper stacks. In par
 
 ```
 searchKey: trace_test.TestUserTaskRegion
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -227,7 +227,7 @@ func TestUserTaskRegion(t *testing.T)
 
 ```
 searchKey: trace_test.dumpEventStacks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -238,7 +238,7 @@ func dumpEventStacks(typ byte, events []*trace.Event) ([]byte, int)
 
 ```
 searchKey: trace_test.dumpFrames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -262,7 +262,7 @@ isMemoryConstrained reports whether the current machine is likely to be memory c
 
 ```
 searchKey: trace_test.parseTrace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -273,7 +273,7 @@ func parseTrace(t *testing.T, r io.Reader) ([]*trace.Event, map[uint64]*trace.GD
 
 ```
 searchKey: trace_test.saveTrace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -284,7 +284,7 @@ func saveTrace(t *testing.T, buf *bytes.Buffer, name string)
 
 ```
 searchKey: trace_test.skipTraceSymbolizeTestIfNecessary
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -295,7 +295,7 @@ func skipTraceSymbolizeTestIfNecessary(t *testing.T)
 
 ```
 searchKey: trace_test.testBrokenTimestamps
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

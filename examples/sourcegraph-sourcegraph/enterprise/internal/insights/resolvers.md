@@ -43,7 +43,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="testRealGlobalSettings" href="#testRealGlobalSettings">var testRealGlobalSettings</a>
@@ -60,7 +60,7 @@ var testRealGlobalSettings = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Resolver" href="#Resolver">type Resolver struct</a>
@@ -84,7 +84,7 @@ Resolver is the GraphQL resolver of all things related to Insights.
 
 ```
 searchKey: resolvers.newWithClock
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -212,7 +212,7 @@ type insightResolver struct {
 
 ```
 searchKey: resolvers.insightResolver.Description
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -223,7 +223,7 @@ func (r *insightResolver) Description() string
 
 ```
 searchKey: resolvers.insightResolver.Series
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -234,7 +234,7 @@ func (r *insightResolver) Series() []graphqlbackend.InsightSeriesResolver
 
 ```
 searchKey: resolvers.insightResolver.Title
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -260,7 +260,7 @@ type insightSeriesResolver struct {
 
 ```
 searchKey: resolvers.insightSeriesResolver.Label
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ type insightStatusResolver struct {
 
 ```
 searchKey: resolvers.insightStatusResolver.CompletedJobs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -317,7 +317,7 @@ func (i insightStatusResolver) CompletedJobs() int32
 
 ```
 searchKey: resolvers.insightStatusResolver.FailedJobs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -328,7 +328,7 @@ func (i insightStatusResolver) FailedJobs() int32
 
 ```
 searchKey: resolvers.insightStatusResolver.PendingJobs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -339,7 +339,7 @@ func (i insightStatusResolver) PendingJobs() int32
 
 ```
 searchKey: resolvers.insightStatusResolver.TotalPoints
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -361,7 +361,7 @@ type insightsDataPointResolver struct{ p store.SeriesPoint }
 
 ```
 searchKey: resolvers.insightsDataPointResolver.DateTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -372,7 +372,7 @@ func (i insightsDataPointResolver) DateTime() graphqlbackend.DateTime
 
 ```
 searchKey: resolvers.insightsDataPointResolver.Value
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -382,14 +382,14 @@ func (i insightsDataPointResolver) Value() float64
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="New" href="#New">func New(timescale, postgres dbutil.DB) graphqlbackend.InsightsResolver</a>
 
 ```
 searchKey: resolvers.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -402,7 +402,7 @@ New returns a new Resolver whose store uses the given Timescale and Postgres DBs
 
 ```
 searchKey: resolvers.NewDisabledResolver
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -413,7 +413,7 @@ func NewDisabledResolver(reason string) graphqlbackend.InsightsResolver
 
 ```
 searchKey: resolvers.TestResolver_InsightConnection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -426,7 +426,7 @@ TestResolver_InsightConnection tests that the InsightConnection GraphQL resolver
 
 ```
 searchKey: resolvers.TestResolver_InsightSeries
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -439,7 +439,7 @@ TestResolver_InsightSeries tests that the InsightSeries GraphQL resolver works.
 
 ```
 searchKey: resolvers.TestResolver_Insights
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

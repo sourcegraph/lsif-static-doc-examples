@@ -24,7 +24,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="addRepos" href="#addRepos">var addRepos</a>
@@ -151,7 +151,7 @@ var username = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="addReposCommand" href="#addReposCommand">func addReposCommand()</a>
@@ -191,7 +191,7 @@ func main()
 
 ```
 searchKey: main.mustMarshalJSONString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

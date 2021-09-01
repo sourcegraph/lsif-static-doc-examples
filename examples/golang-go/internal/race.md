@@ -24,7 +24,7 @@ The runtime package intentionally exports these functions only in the race build
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Enabled" href="#Enabled">const Enabled</a>
@@ -41,14 +41,14 @@ const Enabled = false
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Acquire" href="#Acquire">func Acquire(addr unsafe.Pointer)</a>
 
 ```
 searchKey: race.Acquire
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -92,7 +92,7 @@ func Errors() int
 
 ```
 searchKey: race.Read
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -103,7 +103,7 @@ func Read(addr unsafe.Pointer)
 
 ```
 searchKey: race.ReadRange
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -114,7 +114,7 @@ func ReadRange(addr unsafe.Pointer, len int)
 
 ```
 searchKey: race.Release
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -125,7 +125,7 @@ func Release(addr unsafe.Pointer)
 
 ```
 searchKey: race.ReleaseMerge
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -136,7 +136,7 @@ func ReleaseMerge(addr unsafe.Pointer)
 
 ```
 searchKey: race.Write
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -147,7 +147,7 @@ func Write(addr unsafe.Pointer)
 
 ```
 searchKey: race.WriteRange
-tags: [method]
+tags: [function]
 ```
 
 ```Go

@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/dotcom/billing",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -122,7 +121,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -323,7 +321,7 @@
                       "newPage": false,
                       "searchKey": "billing.planTier.FlatAmount",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -346,7 +344,7 @@
                       "newPage": false,
                       "searchKey": "billing.planTier.UnitAmount",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -369,7 +367,7 @@
                       "newPage": false,
                       "searchKey": "billing.planTier.UpTo",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -416,7 +414,7 @@
                       "newPage": false,
                       "searchKey": "billing.productPlan.BillingPlanID",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -439,7 +437,7 @@
                       "newPage": false,
                       "searchKey": "billing.productPlan.MaxQuantity",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -462,7 +460,7 @@
                       "newPage": false,
                       "searchKey": "billing.productPlan.MinQuantity",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -485,7 +483,7 @@
                       "newPage": false,
                       "searchKey": "billing.productPlan.Name",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -508,7 +506,7 @@
                       "newPage": false,
                       "searchKey": "billing.productPlan.NameWithBrand",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -531,7 +529,7 @@
                       "newPage": false,
                       "searchKey": "billing.productPlan.PlanTiers",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -554,7 +552,7 @@
                       "newPage": false,
                       "searchKey": "billing.productPlan.PricePerUserPerYear",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -577,7 +575,7 @@
                       "newPage": false,
                       "searchKey": "billing.productPlan.ProductPlanID",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -600,7 +598,7 @@
                       "newPage": false,
                       "searchKey": "billing.productPlan.TiersMode",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -647,7 +645,7 @@
                       "newPage": false,
                       "searchKey": "billing.productSubscriptionEvent.Date",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -670,7 +668,7 @@
                       "newPage": false,
                       "searchKey": "billing.productSubscriptionEvent.Description",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -693,7 +691,7 @@
                       "newPage": false,
                       "searchKey": "billing.productSubscriptionEvent.ID",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -716,7 +714,7 @@
                       "newPage": false,
                       "searchKey": "billing.productSubscriptionEvent.Title",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -739,7 +737,7 @@
                       "newPage": false,
                       "searchKey": "billing.productSubscriptionEvent.URL",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -768,7 +766,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -789,7 +786,7 @@
                 "newPage": false,
                 "searchKey": "billing.GetDummyCustomerID",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -811,7 +808,7 @@
                 "newPage": false,
                 "searchKey": "billing.GetOrAssignUserCustomerID",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -833,7 +830,7 @@
                 "newPage": false,
                 "searchKey": "billing.GetSubscriptionItemIDToReplace",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -855,7 +852,7 @@
                 "newPage": false,
                 "searchKey": "billing.InfoForProductPlan",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -877,7 +874,7 @@
                 "newPage": false,
                 "searchKey": "billing.ProductPlanMinMaxQuantity",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -899,7 +896,7 @@
                 "newPage": false,
                 "searchKey": "billing.TestDBUsersBillingCustomerID",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -923,7 +920,7 @@
                 "newPage": false,
                 "searchKey": "billing.TestGetOrAssignUserCustomerID",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -947,7 +944,7 @@
                 "newPage": false,
                 "searchKey": "billing.ToProductPlan",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -969,7 +966,7 @@
                 "newPage": false,
                 "searchKey": "billing.ToProductSubscriptionEvent",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -991,7 +988,7 @@
                 "newPage": false,
                 "searchKey": "billing.ToSubscriptionItemsParams",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1013,7 +1010,7 @@
                 "newPage": false,
                 "searchKey": "billing.createCustomerID",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1036,7 +1033,7 @@
                 "newPage": false,
                 "searchKey": "billing.deleteCustomerID",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1059,7 +1056,7 @@
                 "newPage": false,
                 "searchKey": "billing.getProductSubscriptionEventInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1105,7 +1102,7 @@
                 "newPage": false,
                 "searchKey": "billing.strptr",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1128,7 +1125,7 @@
                 "newPage": false,
                 "searchKey": "billing.usdCentsToString",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

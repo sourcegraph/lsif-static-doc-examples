@@ -67,10 +67,6 @@ r.Close()
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BestCompression" href="#BestCompression">const BestCompression</a>
 
 ```
@@ -149,10 +145,6 @@ const zlibDeflate = 8
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ErrChecksum" href="#ErrChecksum">var ErrChecksum</a>
 
 ```
@@ -229,10 +221,6 @@ var zlibTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Resetter" href="#Resetter">type Resetter interface</a>
 
 ```
@@ -276,7 +264,7 @@ A Writer takes data written to it and writes the compressed form of that data to
 
 ```
 searchKey: zlib.NewWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -291,7 +279,7 @@ It is the caller's responsibility to call Close on the Writer when done. Writes 
 
 ```
 searchKey: zlib.NewWriterLevel
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -306,7 +294,7 @@ The compression level can be DefaultCompression, NoCompression, HuffmanOnly or a
 
 ```
 searchKey: zlib.NewWriterLevelDict
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -321,7 +309,7 @@ The dictionary may be nil. If not, its contents should not be modified until the
 
 ```
 searchKey: zlib.Writer.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -334,7 +322,7 @@ Close closes the Writer, flushing any unwritten data to the underlying io.Writer
 
 ```
 searchKey: zlib.Writer.Flush
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -373,7 +361,7 @@ Write writes a compressed form of p to the underlying io.Writer. The compressed 
 
 ```
 searchKey: zlib.Writer.writeHeader
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -403,7 +391,7 @@ type reader struct {
 
 ```
 searchKey: zlib.reader.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -453,15 +441,11 @@ type zlibTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="NewReader" href="#NewReader">func NewReader(r io.Reader) (io.ReadCloser, error)</a>
 
 ```
 searchKey: zlib.NewReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -476,7 +460,7 @@ The ReadCloser returned by NewReader also implements Resetter.
 
 ```
 searchKey: zlib.NewReaderDict
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -491,7 +475,7 @@ The ReadCloser returned by NewReaderDict also implements Resetter.
 
 ```
 searchKey: zlib.TestDecompressor
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -502,7 +486,7 @@ func TestDecompressor(t *testing.T)
 
 ```
 searchKey: zlib.TestWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -513,7 +497,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: zlib.TestWriterBig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -524,7 +508,7 @@ func TestWriterBig(t *testing.T)
 
 ```
 searchKey: zlib.TestWriterDict
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -535,7 +519,7 @@ func TestWriterDict(t *testing.T)
 
 ```
 searchKey: zlib.TestWriterDictIsUsed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -546,7 +530,7 @@ func TestWriterDictIsUsed(t *testing.T)
 
 ```
 searchKey: zlib.TestWriterReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -557,7 +541,7 @@ func TestWriterReset(t *testing.T)
 
 ```
 searchKey: zlib.testFileLevelDict
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -570,7 +554,7 @@ Tests that compressing and then decompressing the given file at the given compre
 
 ```
 searchKey: zlib.testFileLevelDictReset
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -581,7 +565,7 @@ func testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)
 
 ```
 searchKey: zlib.testLevelDict
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

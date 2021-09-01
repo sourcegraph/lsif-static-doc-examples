@@ -93,7 +93,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="priorityHigh" href="#priorityHigh">const priorityHigh</a>
@@ -147,7 +147,7 @@ A list of request types, the larger the value, the higher the priority. requestT
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="cmpOpts" href="#cmpOpts">var cmpOpts</a>
@@ -266,7 +266,7 @@ var updateRegex = flag.String("update", "", "Update testdata of tests matching t
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="PermsSyncer" href="#PermsSyncer">type PermsSyncer struct</a>
@@ -301,7 +301,7 @@ It is meant to be running in the background.
 
 ```
 searchKey: authz.NewPermsSyncer
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -319,7 +319,7 @@ NewPermsSyncer returns a new permissions syncing manager.
 
 ```
 searchKey: authz.PermsSyncer.DebugDump
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -388,7 +388,7 @@ collectMetrics periodically collecting metrics values from both database and mem
 
 ```
 searchKey: authz.PermsSyncer.isDisabled
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -419,7 +419,7 @@ func (s *PermsSyncer) observe(ctx context.Context, family, title string) (contex
 
 ```
 searchKey: authz.PermsSyncer.providersByServiceID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -432,7 +432,7 @@ providersByServiceID returns a list of authz.Provider configured in the external
 
 ```
 searchKey: authz.PermsSyncer.providersByURNs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -664,7 +664,7 @@ func (p *mockProvider) FetchUserPerms(ctx context.Context, acct *extsvc.Account)
 
 ```
 searchKey: authz.mockProvider.ServiceID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -675,7 +675,7 @@ func (p *mockProvider) ServiceID() string
 
 ```
 searchKey: authz.mockProvider.ServiceType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -686,7 +686,7 @@ func (p *mockProvider) ServiceType() string
 
 ```
 searchKey: authz.mockProvider.URN
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -697,7 +697,7 @@ func (p *mockProvider) URN() string
 
 ```
 searchKey: authz.mockProvider.Validate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -773,7 +773,7 @@ func newRequestQueue() *requestQueue
 
 ```
 searchKey: authz.requestQueue.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -795,7 +795,7 @@ func (q *requestQueue) Less(i, j int) bool
 
 ```
 searchKey: authz.requestQueue.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -828,7 +828,7 @@ func (q *requestQueue) Swap(i, j int)
 
 ```
 searchKey: authz.requestQueue.acquireNext
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1001,14 +1001,14 @@ syncRequest is a permissions syncing request with its current status in the queu
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestIntegration_GitHubPermissions" href="#TestIntegration_GitHubPermissions">func TestIntegration_GitHubPermissions(t *testing.T)</a>
 
 ```
 searchKey: authz.TestIntegration_GitHubPermissions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1023,7 +1023,7 @@ NOTE: To update VCR for this test, please use the token of "sourcegraph-vcr" for
 
 ```
 searchKey: authz.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1034,7 +1034,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: authz.TestPermsSyncer_ScheduleRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1045,7 +1045,7 @@ func TestPermsSyncer_ScheduleRepos(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_ScheduleUsers
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1056,7 +1056,7 @@ func TestPermsSyncer_ScheduleUsers(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_syncPerms
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1067,7 +1067,7 @@ func TestPermsSyncer_syncPerms(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_syncRepoPerms
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1078,7 +1078,7 @@ func TestPermsSyncer_syncRepoPerms(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_syncUserPerms
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1089,7 +1089,7 @@ func TestPermsSyncer_syncUserPerms(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_syncUserPerms_prefixSpecs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1100,7 +1100,7 @@ func TestPermsSyncer_syncUserPerms_prefixSpecs(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_syncUserPerms_tokenExpire
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1111,7 +1111,7 @@ func TestPermsSyncer_syncUserPerms_tokenExpire(t *testing.T)
 
 ```
 searchKey: authz.TestPermsSyncer_waitForRateLimit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1122,7 +1122,7 @@ func TestPermsSyncer_waitForRateLimit(t *testing.T)
 
 ```
 searchKey: authz.Test_requestQueue_Less
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1133,7 +1133,7 @@ func Test_requestQueue_Less(t *testing.T)
 
 ```
 searchKey: authz.Test_requestQueue_acquireNext
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1144,7 +1144,7 @@ func Test_requestQueue_acquireNext(t *testing.T)
 
 ```
 searchKey: authz.Test_requestQueue_enqueue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1155,7 +1155,7 @@ func Test_requestQueue_enqueue(t *testing.T)
 
 ```
 searchKey: authz.Test_requestQueue_release
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1166,7 +1166,7 @@ func Test_requestQueue_release(t *testing.T)
 
 ```
 searchKey: authz.Test_requestQueue_remove
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1177,7 +1177,7 @@ func Test_requestQueue_remove(t *testing.T)
 
 ```
 searchKey: authz.notify
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1190,7 +1190,7 @@ notify performs a non-blocking send to the channel, so the channel must be buffe
 
 ```
 searchKey: authz.update
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

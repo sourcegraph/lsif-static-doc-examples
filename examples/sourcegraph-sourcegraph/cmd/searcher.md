@@ -20,10 +20,6 @@ Command searcher is a simple service which exposes an API to text search a repo 
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="port" href="#port">const port</a>
 
 ```
@@ -36,10 +32,6 @@ const port = "3181"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="cacheDir" href="#cacheDir">var cacheDir</a>
 
@@ -65,10 +57,6 @@ var cacheSizeMB = ...
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="main" href="#main">func main()</a>
 
 ```
@@ -84,7 +72,7 @@ func main()
 
 ```
 searchKey: main.shutdownOnSIGINT
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

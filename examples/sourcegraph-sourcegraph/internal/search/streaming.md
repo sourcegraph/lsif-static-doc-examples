@@ -48,7 +48,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="commonFileFilters" href="#commonFileFilters">var commonFileFilters</a>
@@ -67,7 +67,7 @@ commonFileFilters are common filters used. It is used by SearchFilters to propos
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Filter" href="#Filter">type Filter struct</a>
@@ -143,7 +143,7 @@ Add the count to the filter with value.
 
 ```
 searchKey: streaming.Filters.Compute
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -229,7 +229,7 @@ Note: it currently live in graphqlbackend. However, once we have a non resolver 
 
 ```
 searchKey: streaming.SearchFilters.Compute
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -268,7 +268,7 @@ type Sender interface {
 
 ```
 searchKey: streaming.WithLimit
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -283,7 +283,7 @@ Canceling this context releases resources associated with it, so code should cal
 
 ```
 searchKey: streaming.WithSelect
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -330,7 +330,7 @@ Stats contains fields that should be returned by all funcs that contribute to th
 
 ```
 searchKey: streaming.CollectStream
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -343,7 +343,7 @@ CollectStream will call search and aggregates all events it sends. It then retur
 
 ```
 searchKey: streaming.Stats.AllReposTimedOut
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -367,7 +367,7 @@ Equal provides custom comparison which is used by go-cmp
 
 ```
 searchKey: streaming.Stats.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -391,7 +391,7 @@ update updates c with the other data, deduping as necessary. It modifies c but d
 
 ```
 searchKey: streaming.Stats.Zero
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -464,7 +464,7 @@ func (h *filterHeap) Less(i, j int) bool
 
 ```
 searchKey: streaming.filterHeap.Pop
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -497,7 +497,7 @@ type filterSlice []*Filter
 
 ```
 searchKey: streaming.filterSlice.Len
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -529,14 +529,14 @@ func (fs filterSlice) Swap(i, j int)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestFilters" href="#TestFilters">func TestFilters(t *testing.T)</a>
 
 ```
 searchKey: streaming.TestFilters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

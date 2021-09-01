@@ -50,7 +50,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BaseClient" href="#BaseClient">type BaseClient struct</a>
@@ -96,7 +96,7 @@ func (c *SprocketClient) Fabricate(ctx context.Context(), spec SprocketSpec) (Sp
 
 ```
 searchKey: apiclient.NewBaseClient
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -183,7 +183,7 @@ Client is the client used to communicate with a remote job queue API.
 
 ```
 searchKey: apiclient.New
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -343,7 +343,7 @@ type operations struct {
 
 ```
 searchKey: apiclient.newOperations
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -372,14 +372,14 @@ type routeSpec struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MakeJSONRequest" href="#MakeJSONRequest">func MakeJSONRequest(method string, url *url.URL, payload interface{}) (*http.Request, error)</a>
 
 ```
 searchKey: apiclient.MakeJSONRequest
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -392,7 +392,7 @@ MakeJSONRequest creates an HTTP request with the given payload serialized as JSO
 
 ```
 searchKey: apiclient.TestAddExecutionLogEntry
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -403,7 +403,7 @@ func TestAddExecutionLogEntry(t *testing.T)
 
 ```
 searchKey: apiclient.TestAddExecutionLogEntryBadResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -414,7 +414,7 @@ func TestAddExecutionLogEntryBadResponse(t *testing.T)
 
 ```
 searchKey: apiclient.TestDequeue
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -425,7 +425,7 @@ func TestDequeue(t *testing.T)
 
 ```
 searchKey: apiclient.TestDequeueBadResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -436,7 +436,7 @@ func TestDequeueBadResponse(t *testing.T)
 
 ```
 searchKey: apiclient.TestDequeueNoRecord
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -447,7 +447,7 @@ func TestDequeueNoRecord(t *testing.T)
 
 ```
 searchKey: apiclient.TestHeartbeat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -458,7 +458,7 @@ func TestHeartbeat(t *testing.T)
 
 ```
 searchKey: apiclient.TestHeartbeatBadResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -469,7 +469,7 @@ func TestHeartbeatBadResponse(t *testing.T)
 
 ```
 searchKey: apiclient.TestMarkComplete
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -480,7 +480,7 @@ func TestMarkComplete(t *testing.T)
 
 ```
 searchKey: apiclient.TestMarkCompleteBadResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -491,7 +491,7 @@ func TestMarkCompleteBadResponse(t *testing.T)
 
 ```
 searchKey: apiclient.TestMarkErrored
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -502,7 +502,7 @@ func TestMarkErrored(t *testing.T)
 
 ```
 searchKey: apiclient.TestMarkErroredBadResponse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -513,7 +513,7 @@ func TestMarkErroredBadResponse(t *testing.T)
 
 ```
 searchKey: apiclient.TestMarkFailed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -524,7 +524,7 @@ func TestMarkFailed(t *testing.T)
 
 ```
 searchKey: apiclient.intsToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -535,7 +535,7 @@ func intsToString(ints []int) string
 
 ```
 searchKey: apiclient.makeHTTPClient
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -548,7 +548,7 @@ makeHTTPClient creates an HTTP client with the given round tripper.
 
 ```
 searchKey: apiclient.makeRelativeURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -559,7 +559,7 @@ func makeRelativeURL(base string, path ...string) (*url.URL, error)
 
 ```
 searchKey: apiclient.makeURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -570,7 +570,7 @@ func makeURL(base, username, password string, path ...string) (*url.URL, error)
 
 ```
 searchKey: apiclient.normalizeJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -581,7 +581,7 @@ func normalizeJSON(v []byte) string
 
 ```
 searchKey: apiclient.testRoute
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -592,7 +592,7 @@ func testRoute(t *testing.T, spec routeSpec, f func(client *Client))
 
 ```
 searchKey: apiclient.testServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

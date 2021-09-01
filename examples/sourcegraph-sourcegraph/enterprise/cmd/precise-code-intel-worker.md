@@ -21,10 +21,6 @@
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="addr" href="#addr">const addr</a>
 
 ```
@@ -37,10 +33,6 @@ const addr = ":3188"
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Config" href="#Config">type Config struct</a>
 
@@ -64,7 +56,7 @@ type Config struct {
 
 ```
 searchKey: main.Config.Load
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -73,15 +65,11 @@ func (c *Config) Load()
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="initializeUploadStore" href="#initializeUploadStore">func initializeUploadStore(ctx context.Context, uploadStore uploadstore.Store) error</a>
 
 ```
 searchKey: main.initializeUploadStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -92,7 +80,7 @@ func initializeUploadStore(ctx context.Context, uploadStore uploadstore.Store) e
 
 ```
 searchKey: main.isRequestError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -114,7 +102,7 @@ func main()
 
 ```
 searchKey: main.makeWorkerMetrics
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -147,7 +135,7 @@ func mustInitializeDB() *sql.DB
 
 ```
 searchKey: main.mustRegisterQueueMetric
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

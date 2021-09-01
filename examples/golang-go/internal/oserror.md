@@ -17,7 +17,7 @@ These types are defined here to permit the syscall package to reference them.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrClosed" href="#ErrClosed">var ErrClosed</a>

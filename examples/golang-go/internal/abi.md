@@ -23,7 +23,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="EffectiveFloatRegSize" href="#EffectiveFloatRegSize">const EffectiveFloatRegSize</a>
@@ -72,7 +72,7 @@ IntArgRegs is the number of registers dedicated to passing integer argument valu
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FuncPCTestFnAddr" href="#FuncPCTestFnAddr">var FuncPCTestFnAddr</a>
@@ -90,7 +90,7 @@ var FuncPCTestFnAddr uintptr // address of FuncPCTestFn, directly retrieved from
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="IntArgRegBitmap" href="#IntArgRegBitmap">type IntArgRegBitmap [0]uint8</a>
@@ -168,14 +168,14 @@ RegArgs also contains additional space to hold pointers when it may not be safe 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="FuncPCABI0" href="#FuncPCABI0">func FuncPCABI0(f interface{}) uintptr</a>
 
 ```
 searchKey: abi.FuncPCABI0
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -190,7 +190,7 @@ Implemented as a compile intrinsic.
 
 ```
 searchKey: abi.FuncPCABIInternal
-tags: [method]
+tags: [function]
 ```
 
 ```Go

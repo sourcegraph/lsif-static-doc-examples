@@ -27,7 +27,7 @@ Package dbtesting provides database test helpers.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BeforeTest" href="#BeforeTest">var BeforeTest</a>
@@ -105,7 +105,7 @@ var connectOnce sync.Once
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MockDB" href="#MockDB">type MockDB struct{}</a>
@@ -157,14 +157,14 @@ func (db *MockDB) QueryRowContext(ctx context.Context, query string, args ...int
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GetDB" href="#GetDB">func GetDB(t testing.TB) *sql.DB</a>
 
 ```
 searchKey: dbtesting.GetDB
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -179,7 +179,7 @@ New callers and callers actually wishing to migrate fully away from a global DB 
 
 ```
 searchKey: dbtesting.SetupGlobalTestDB
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -194,7 +194,7 @@ Callers (other than github.com/sourcegraph/sourcegraph/internal/database) must s
 
 ```
 searchKey: dbtesting.emptyDBPreserveSchema
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -205,7 +205,7 @@ func emptyDBPreserveSchema(t testing.TB, d *sql.DB)
 
 ```
 searchKey: dbtesting.initTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

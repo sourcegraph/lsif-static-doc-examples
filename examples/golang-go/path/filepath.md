@@ -68,10 +68,6 @@ The filepath package uses either forward slashes or backslashes, depending on th
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="ListSeparator" href="#ListSeparator">const ListSeparator</a>
 
 ```
@@ -95,10 +91,6 @@ const Separator = os.PathSeparator
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="ErrBadPattern" href="#ErrBadPattern">var ErrBadPattern</a>
 
@@ -150,10 +142,6 @@ var lstat = os.Lstat // for testing
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="WalkFunc" href="#WalkFunc">type WalkFunc func(path string, info io/fs.FileInfo, err error) error</a>
 
@@ -229,7 +217,7 @@ func (b *lazybuf) index(i int) byte
 
 ```
 searchKey: filepath.lazybuf.string
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -253,7 +241,7 @@ type statDirEntry struct {
 
 ```
 searchKey: filepath.statDirEntry.Info
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -264,7 +252,7 @@ func (d *statDirEntry) Info() (fs.FileInfo, error)
 
 ```
 searchKey: filepath.statDirEntry.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -275,7 +263,7 @@ func (d *statDirEntry) IsDir() bool
 
 ```
 searchKey: filepath.statDirEntry.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -286,7 +274,7 @@ func (d *statDirEntry) Name() string
 
 ```
 searchKey: filepath.statDirEntry.Type
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -295,15 +283,11 @@ func (d *statDirEntry) Type() fs.FileMode
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Abs" href="#Abs">func Abs(path string) (string, error)</a>
 
 ```
 searchKey: filepath.Abs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -316,7 +300,7 @@ Abs returns an absolute representation of path. If the path is not absolute it w
 
 ```
 searchKey: filepath.Base
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -329,7 +313,7 @@ Base returns the last element of path. Trailing path separators are removed befo
 
 ```
 searchKey: filepath.Clean
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -360,7 +344,7 @@ See also Rob Pike, `Lexical File Names in Plan 9 or Getting Dot-Dot Right,' [htt
 
 ```
 searchKey: filepath.Dir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -373,7 +357,7 @@ Dir returns all but the last element of path, typically the path's directory. Af
 
 ```
 searchKey: filepath.EvalSymlinks
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -386,7 +370,7 @@ EvalSymlinks returns the path name after the evaluation of any symbolic links. I
 
 ```
 searchKey: filepath.Ext
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -399,7 +383,7 @@ Ext returns the file name extension used by path. The extension is the suffix be
 
 ```
 searchKey: filepath.FromSlash
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -412,7 +396,7 @@ FromSlash returns the result of replacing each slash ('/') character in path wit
 
 ```
 searchKey: filepath.Glob
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -427,7 +411,7 @@ Glob ignores file system errors such as I/O errors reading directories. The only
 
 ```
 searchKey: filepath.HasPrefix
-tags: [method deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -442,7 +426,7 @@ Deprecated: HasPrefix does not respect path boundaries and does not ignore case 
 
 ```
 searchKey: filepath.IsAbs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -455,7 +439,7 @@ IsAbs reports whether the path is absolute.
 
 ```
 searchKey: filepath.Join
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -468,7 +452,7 @@ Join joins any number of path elements into a single path, separating them with 
 
 ```
 searchKey: filepath.Match
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -502,7 +486,7 @@ On Windows, escaping is disabled. Instead, '\\' is treated as path separator.
 
 ```
 searchKey: filepath.Rel
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -515,7 +499,7 @@ Rel returns a relative path that is lexically equivalent to targpath when joined
 
 ```
 searchKey: filepath.Split
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -528,7 +512,7 @@ Split splits path immediately following the final Separator, separating it into 
 
 ```
 searchKey: filepath.SplitList
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -541,7 +525,7 @@ SplitList splits a list of paths joined by the OS-specific ListSeparator, usuall
 
 ```
 searchKey: filepath.ToSlash
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -554,7 +538,7 @@ ToSlash returns the result of replacing each separator character in path with a 
 
 ```
 searchKey: filepath.VolumeName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -567,7 +551,7 @@ VolumeName returns leading volume name. Given "C:\foo\bar" it returns "C:" on Wi
 
 ```
 searchKey: filepath.Walk
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -588,7 +572,7 @@ Walk is less efficient than WalkDir, introduced in Go 1.16, which avoids calling
 
 ```
 searchKey: filepath.WalkDir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -607,7 +591,7 @@ WalkDir does not follow symbolic links.
 
 ```
 searchKey: filepath.abs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -618,7 +602,7 @@ func abs(path string) (string, error)
 
 ```
 searchKey: filepath.cleanGlobPath
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -631,7 +615,7 @@ cleanGlobPath prepares path for glob matching.
 
 ```
 searchKey: filepath.cleanGlobPathWindows
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -644,7 +628,7 @@ cleanGlobPathWindows is windows version of cleanGlobPath.
 
 ```
 searchKey: filepath.evalSymlinks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -655,7 +639,7 @@ func evalSymlinks(path string) (string, error)
 
 ```
 searchKey: filepath.getEsc
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -668,7 +652,7 @@ getEsc gets a possibly-escaped character from chunk, for a character class.
 
 ```
 searchKey: filepath.glob
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -681,7 +665,7 @@ glob searches for files matching pattern in the directory dir and appends them t
 
 ```
 searchKey: filepath.hasMeta
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -694,7 +678,7 @@ hasMeta reports whether path contains any of the magic characters recognized by 
 
 ```
 searchKey: filepath.join
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -705,7 +689,7 @@ func join(elem []string) string
 
 ```
 searchKey: filepath.matchChunk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -718,7 +702,7 @@ matchChunk checks whether chunk matches the beginning of s. If so, it returns th
 
 ```
 searchKey: filepath.readDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -731,7 +715,7 @@ readDir reads the directory named by dirname and returns a sorted list of direct
 
 ```
 searchKey: filepath.readDirNames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -744,7 +728,7 @@ readDirNames reads the directory named by dirname and returns a sorted list of d
 
 ```
 searchKey: filepath.sameWord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -755,7 +739,7 @@ func sameWord(a, b string) bool
 
 ```
 searchKey: filepath.scanChunk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -768,7 +752,7 @@ scanChunk gets the next segment of pattern, which is a non-star string possibly 
 
 ```
 searchKey: filepath.splitList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -779,7 +763,7 @@ func splitList(path string) []string
 
 ```
 searchKey: filepath.unixAbs
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -790,7 +774,7 @@ func unixAbs(path string) (string, error)
 
 ```
 searchKey: filepath.volumeNameLen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -803,7 +787,7 @@ volumeNameLen returns length of the leading volume name on Windows. It returns 0
 
 ```
 searchKey: filepath.walk
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -816,7 +800,7 @@ walk recursively descends path, calling walkFn.
 
 ```
 searchKey: filepath.walkDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -829,7 +813,7 @@ walkDir recursively descends path, calling walkDirFn.
 
 ```
 searchKey: filepath.walkSymlinks
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

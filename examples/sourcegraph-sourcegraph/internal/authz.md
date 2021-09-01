@@ -76,7 +76,7 @@ Package authz contains common logic and interfaces for authorization to external
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="None" href="#None">const None</a>
@@ -210,7 +210,7 @@ Perm constants.
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AllScopes" href="#AllScopes">var AllScopes</a>
@@ -352,7 +352,7 @@ var isTest = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrStalePermissions" href="#ErrStalePermissions">type ErrStalePermissions struct</a>
@@ -376,7 +376,7 @@ ErrStalePermissions is returned by LoadPermissions when the stored permissions a
 
 ```
 searchKey: authz.ErrStalePermissions.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -447,7 +447,7 @@ Include is a convenience method to test if Perms includes all the other Perms.
 
 ```
 searchKey: authz.Perms.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -561,7 +561,7 @@ Expired returns true if these RepoPermissions have elapsed the given ttl.
 
 ```
 searchKey: authz.RepoPermissions.TracingFields
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -603,7 +603,7 @@ RepoPermsSort sorts a slice of RepoPerms to guarantee a stable ordering.
 
 ```
 searchKey: authz.RepoPermsSort.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -673,7 +673,7 @@ UserPendingPermissions defines permissions that a not-yet-created user has to pe
 
 ```
 searchKey: authz.UserPendingPermissions.TracingFields
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -732,7 +732,7 @@ Expired returns true if these UserPermissions have elapsed the given ttl.
 
 ```
 searchKey: authz.UserPermissions.TracingFields
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -744,14 +744,14 @@ TracingFields returns tracing fields for the opentracing log.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkPermsInclude" href="#BenchmarkPermsInclude">func BenchmarkPermsInclude(b *testing.B)</a>
 
 ```
 searchKey: authz.BenchmarkPermsInclude
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -762,7 +762,7 @@ func BenchmarkPermsInclude(b *testing.B)
 
 ```
 searchKey: authz.BenchmarkPermsString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -788,7 +788,7 @@ It blocks until SetProviders has been called at least once.
 
 ```
 searchKey: authz.IsUnrecognizedScheme
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -801,7 +801,7 @@ IsUnrecognizedScheme reports whether err indicates that the request's Authorizat
 
 ```
 searchKey: authz.ParseAuthorizationHeader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -824,7 +824,7 @@ The returned values are derived directly from user input and have not been valid
 
 ```
 searchKey: authz.SetProviders
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -837,7 +837,7 @@ SetProviders sets the current authz parameters. It is concurrency-safe.
 
 ```
 searchKey: authz.TestParseAuthorizationHeader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -848,7 +848,7 @@ func TestParseAuthorizationHeader(t *testing.T)
 
 ```
 searchKey: authz.TestParseHTTPCredentials
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -859,7 +859,7 @@ func TestParseHTTPCredentials(t *testing.T)
 
 ```
 searchKey: authz.TestPermsInclude
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -870,7 +870,7 @@ func TestPermsInclude(t *testing.T)
 
 ```
 searchKey: authz.TestPermsString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -881,7 +881,7 @@ func TestPermsString(t *testing.T)
 
 ```
 searchKey: authz.TestUserPermissions_AuthorizedRepos
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -892,7 +892,7 @@ func TestUserPermissions_AuthorizedRepos(t *testing.T)
 
 ```
 searchKey: authz.bitmap
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -903,7 +903,7 @@ func bitmap(ids ...uint32) *roaring.Bitmap
 
 ```
 searchKey: authz.parseHTTPAuthParams
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -918,7 +918,7 @@ The resulting values are unquoted. The keys are matched case-insensitively, and 
 
 ```
 searchKey: authz.parseHTTPCredentials
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -931,7 +931,7 @@ parseHTTPCredentials parses the "credentials" token as defined in [RFC 7235 Appe
 
 ```
 searchKey: authz.parseHTTPHeaderList
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

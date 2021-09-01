@@ -14,7 +14,7 @@ Package randutil contains internal randomness utilities for various crypto packa
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="closedChan" href="#closedChan">var closedChan</a>
@@ -42,14 +42,14 @@ var closedChanOnce sync.Once
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MaybeReadByte" href="#MaybeReadByte">func MaybeReadByte(r io.Reader)</a>
 
 ```
 searchKey: randutil.MaybeReadByte
-tags: [method]
+tags: [function]
 ```
 
 ```Go

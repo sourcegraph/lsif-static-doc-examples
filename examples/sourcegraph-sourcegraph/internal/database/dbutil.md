@@ -45,7 +45,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CommitBytea" href="#CommitBytea">type CommitBytea string</a>
@@ -78,7 +78,7 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.CommitBytea.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -134,7 +134,7 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.JSONInt64Set.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -160,7 +160,7 @@ NullInt represents an int that may be null. NullInt implements the sql.Scanner i
 
 ```
 searchKey: dbutil.NewNullInt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -186,7 +186,7 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullInt.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -225,7 +225,7 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullInt32.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -251,7 +251,7 @@ NullInt64 represents an int64 that may be null. NullInt64 implements the sql.Sca
 
 ```
 searchKey: dbutil.NewNullInt64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -277,7 +277,7 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullInt64.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -318,7 +318,7 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullJSONRawMessage.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -344,7 +344,7 @@ NullString represents a string that may be null. NullString implements the sql.S
 
 ```
 searchKey: dbutil.NewNullString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -370,7 +370,7 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullString.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -409,7 +409,7 @@ Scan implements the Scanner interface.
 
 ```
 searchKey: dbutil.NullTime.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -480,14 +480,14 @@ A TxBeginner captures BeginTx method of a sql.DB
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="IsPostgresError" href="#IsPostgresError">func IsPostgresError(err error, codename string) bool</a>
 
 ```
 searchKey: dbutil.IsPostgresError
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -498,7 +498,7 @@ func IsPostgresError(err error, codename string) bool
 
 ```
 searchKey: dbutil.PostgresDSN
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -509,7 +509,7 @@ func PostgresDSN(prefix, currentUser string, getenv func(string) string) string
 
 ```
 searchKey: dbutil.TestPostgresDSN
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -520,7 +520,7 @@ func TestPostgresDSN(t *testing.T)
 
 ```
 searchKey: dbutil.Transaction
-tags: [method]
+tags: [function]
 ```
 
 ```Go

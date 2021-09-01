@@ -39,7 +39,7 @@ Key rotation, license key revocation, etc., are not implemented.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="formatVersion" href="#formatVersion">const formatVersion</a>
@@ -57,7 +57,7 @@ const formatVersion = 1 // (encodedInfo).Version value
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="infoFixture" href="#infoFixture">var infoFixture</a>
@@ -107,7 +107,7 @@ var timeFixture = time.Date(2018, time.September, 22, 21, 33, 44, 0, time.UTC)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Info" href="#Info">type Info struct</a>
@@ -133,7 +133,7 @@ NOTE: If you change these fields, you MUST handle backward compatibility. Existi
 
 ```
 searchKey: license.ParseSignedKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -159,7 +159,7 @@ HasTag reports whether tag is in l's list of tags.
 
 ```
 searchKey: license.Info.IsExpired
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -172,7 +172,7 @@ IsExpired reports whether the license has expired.
 
 ```
 searchKey: license.Info.IsExpiredWithGracePeriod
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -185,7 +185,7 @@ IsExpiredWithGracePeriod reports whether the license has expired, adding a grace
 
 ```
 searchKey: license.Info.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -207,7 +207,7 @@ func (l *Info) decode(data []byte) error
 
 ```
 searchKey: license.Info.encode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -246,14 +246,14 @@ type signedKey struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GenerateSignedKey" href="#GenerateSignedKey">func GenerateSignedKey(info Info, privateKey ssh.Signer) (string, error)</a>
 
 ```
 searchKey: license.GenerateSignedKey
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -266,7 +266,7 @@ GenerateSignedKey generates a new signed license key with the given license info
 
 ```
 searchKey: license.ParseTagsInput
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -279,7 +279,7 @@ ParseTagsInput parses a string of comma-separated tags. It removes whitespace ar
 
 ```
 searchKey: license.TestGenerateParseSignedKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -290,7 +290,7 @@ func TestGenerateParseSignedKey(t *testing.T)
 
 ```
 searchKey: license.TestInfo_EncodeDecode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -301,7 +301,7 @@ func TestInfo_EncodeDecode(t *testing.T)
 
 ```
 searchKey: license.TestParseSignedKey
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -312,7 +312,7 @@ func TestParseSignedKey(t *testing.T)
 
 ```
 searchKey: license.TestParseTagsInput
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

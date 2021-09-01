@@ -92,7 +92,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TypeCommit" href="#TypeCommit">const TypeCommit</a>
@@ -227,7 +227,7 @@ Match ranks are used for sorting the different match types. Match types with low
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TypeFromString" href="#TypeFromString">var TypeFromString</a>
@@ -257,7 +257,7 @@ toSelectKind maps an internal symbol kind (cf. ctagsKind) to a corresponding sym
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CommitMatch" href="#CommitMatch">type CommitMatch struct</a>
@@ -283,7 +283,7 @@ type CommitMatch struct {
 
 ```
 searchKey: result.CommitMatch.Detail
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -294,7 +294,7 @@ func (r *CommitMatch) Detail() string
 
 ```
 searchKey: result.CommitMatch.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -307,7 +307,7 @@ Key implements Match interface's Key() method
 
 ```
 searchKey: result.CommitMatch.Label
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -329,7 +329,7 @@ func (r *CommitMatch) Limit(limit int) int
 
 ```
 searchKey: result.CommitMatch.RepoName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -340,7 +340,7 @@ func (r *CommitMatch) RepoName() types.RepoName
 
 ```
 searchKey: result.CommitMatch.ResultCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -364,7 +364,7 @@ func (r *CommitMatch) Select(path filter.SelectPath) Match
 
 ```
 searchKey: result.CommitMatch.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -375,7 +375,7 @@ func (r *CommitMatch) URL() *url.URL
 
 ```
 searchKey: result.CommitMatch.searchResultMarker
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -407,7 +407,7 @@ File represents all the information we need to identify a file in a repository
 
 ```
 searchKey: result.File.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -451,7 +451,7 @@ AppendMatches appends the line matches from src as well as updating match counts
 
 ```
 searchKey: result.FileMatch.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -480,7 +480,7 @@ if limit < ResultCount then ResultCount becomes limit and we return 0.
 
 ```
 searchKey: result.FileMatch.RepoName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -491,7 +491,7 @@ func (fm *FileMatch) RepoName() types.RepoName
 
 ```
 searchKey: result.FileMatch.ResultCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -513,7 +513,7 @@ func (fm *FileMatch) Select(path filter.SelectPath) Match
 
 ```
 searchKey: result.FileMatch.searchResultMarker
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -637,7 +637,7 @@ Match is *FileMatch | *RepoMatch | *CommitMatch. We have a private method to ens
 
 ```
 searchKey: result.selectCommitDiffKind
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -663,7 +663,7 @@ Matches implements sort.Interface
 
 ```
 searchKey: result.Matches.Len
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -713,7 +713,7 @@ type RepoMatch struct {
 
 ```
 searchKey: result.RepoMatch.Key
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -735,7 +735,7 @@ func (r RepoMatch) Limit(limit int) int
 
 ```
 searchKey: result.RepoMatch.RepoName
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -746,7 +746,7 @@ func (r RepoMatch) RepoName() types.RepoName
 
 ```
 searchKey: result.RepoMatch.ResultCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -768,7 +768,7 @@ func (r *RepoMatch) Select(path filter.SelectPath) Match
 
 ```
 searchKey: result.RepoMatch.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -779,7 +779,7 @@ func (r *RepoMatch) URL() *url.URL
 
 ```
 searchKey: result.RepoMatch.searchResultMarker
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -819,7 +819,7 @@ Symbol is a code symbol.
 
 ```
 searchKey: result.Symbol.LSPKind
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -830,7 +830,7 @@ func (s Symbol) LSPKind() lsp.SymbolKind
 
 ```
 searchKey: result.Symbol.Range
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -841,7 +841,7 @@ func (s Symbol) Range() lsp.Range
 
 ```
 searchKey: result.Symbol.offset
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -870,7 +870,7 @@ SymbolMatch is a symbol search result decorated with extra metadata in the front
 
 ```
 searchKey: result.SymbolMatch.URL
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -920,7 +920,7 @@ func (r Types) Has(t Types) bool
 
 ```
 searchKey: result.Types.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -986,7 +986,7 @@ func (d deduper) Add(m Match)
 
 ```
 searchKey: result.deduper.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1007,14 +1007,14 @@ func (d deduper) Seen(m Match) bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SelectSymbolKind" href="#SelectSymbolKind">func SelectSymbolKind(symbols []*SymbolMatch, field string) []*SymbolMatch</a>
 
 ```
 searchKey: result.SelectSymbolKind
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1025,7 +1025,7 @@ func SelectSymbolKind(symbols []*SymbolMatch, field string) []*SymbolMatch
 
 ```
 searchKey: result.TestDeduper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1036,7 +1036,7 @@ func TestDeduper(t *testing.T)
 
 ```
 searchKey: result.TestSelect
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1047,7 +1047,7 @@ func TestSelect(t *testing.T)
 
 ```
 searchKey: result.TestSymbolRange
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1058,7 +1058,7 @@ func TestSymbolRange(t *testing.T)
 
 ```
 searchKey: result.TestSymbolURL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1069,7 +1069,7 @@ func TestSymbolURL(t *testing.T)
 
 ```
 searchKey: result.displayRepoName
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1080,7 +1080,7 @@ func displayRepoName(repoPath string) string
 
 ```
 searchKey: result.lineSpecFromPosition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1091,7 +1091,7 @@ func lineSpecFromPosition(pos lsp.Position, forceIncludeCharacter bool) string
 
 ```
 searchKey: result.modifiedLinesExist
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1104,7 +1104,7 @@ modifiedLinesExist checks whether any `line` in lines starts with `prefix`.
 
 ```
 searchKey: result.pick
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1115,7 +1115,7 @@ func pick(symbols []*SymbolMatch, satisfy func(*SymbolMatch) bool) []*SymbolMatc
 
 ```
 searchKey: result.selectModifiedLines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1128,7 +1128,7 @@ selectModifiedLines extracts the highlight ranges that correspond to lines that 
 
 ```
 searchKey: result.unescapePattern
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1141,7 +1141,7 @@ unescapePattern expects a regexp pattern of the form /^ ... $/ and unescapes the
 
 ```
 searchKey: result.urlFragmentFromRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

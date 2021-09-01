@@ -99,7 +99,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ScriptsPath" href="#ScriptsPath">const ScriptsPath</a>
@@ -129,7 +129,7 @@ const firecrackerContainerDir = "/work"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ErrIllegalCommand" href="#ErrIllegalCommand">var ErrIllegalCommand</a>
@@ -221,7 +221,7 @@ var imagePattern = lazyregexp.New(`([^:@]+)(?::([^@]+))?(?:@sha256:([a-z0-9]{64}
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CommandRunnerRunCommandFunc" href="#CommandRunnerRunCommandFunc">type CommandRunnerRunCommandFunc struct</a>
@@ -246,7 +246,7 @@ CommandRunnerRunCommandFunc describes the behavior when the RunCommand method of
 
 ```
 searchKey: command.CommandRunnerRunCommandFunc.History
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -322,7 +322,7 @@ func (f *CommandRunnerRunCommandFunc) appendCall(r0 CommandRunnerRunCommandFuncC
 
 ```
 searchKey: command.CommandRunnerRunCommandFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -359,7 +359,7 @@ CommandRunnerRunCommandFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: command.CommandRunnerRunCommandFuncCall.Args
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -372,7 +372,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: command.CommandRunnerRunCommandFuncCall.Results
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -442,7 +442,7 @@ Logger tracks command invocations and stores the command's output and error stre
 
 ```
 searchKey: command.NewLogger
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -455,7 +455,7 @@ NewLogger creates a new logger instance with the given replacement map. When the
 
 ```
 searchKey: command.Logger.Entries
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -511,7 +511,7 @@ NewMockCommandRunner creates a new mock of the commandRunner interface. All meth
 
 ```
 searchKey: command.NewMockCommandRunnerFrom
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -561,7 +561,7 @@ type Operations struct {
 
 ```
 searchKey: command.NewOperations
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -635,7 +635,7 @@ Runner is the interface between an executor and the host on which commands are i
 
 ```
 searchKey: command.NewRunner
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -665,7 +665,7 @@ type command struct {
 
 ```
 searchKey: command.formatFirecrackerCommand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -680,7 +680,7 @@ The name value supplied here refers to the Firecracker virtual machine, which mu
 
 ```
 searchKey: command.formatRawOrDockerCommand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -840,14 +840,14 @@ surrogateMockCommandRunner is a copy of the commandRunner interface (from the pa
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestFlatten" href="#TestFlatten">func TestFlatten(t *testing.T)</a>
 
 ```
 searchKey: command.TestFlatten
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -858,7 +858,7 @@ func TestFlatten(t *testing.T)
 
 ```
 searchKey: command.TestFormatFirecrackerCommandDockerCommand
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -869,7 +869,7 @@ func TestFormatFirecrackerCommandDockerCommand(t *testing.T)
 
 ```
 searchKey: command.TestFormatFirecrackerCommandDockerScript
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -880,7 +880,7 @@ func TestFormatFirecrackerCommandDockerScript(t *testing.T)
 
 ```
 searchKey: command.TestFormatFirecrackerCommandRaw
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -891,7 +891,7 @@ func TestFormatFirecrackerCommandRaw(t *testing.T)
 
 ```
 searchKey: command.TestFormatRawOrDockerCommandDockerCommand
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -902,7 +902,7 @@ func TestFormatRawOrDockerCommandDockerCommand(t *testing.T)
 
 ```
 searchKey: command.TestFormatRawOrDockerCommandDockerScript
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -913,7 +913,7 @@ func TestFormatRawOrDockerCommandDockerScript(t *testing.T)
 
 ```
 searchKey: command.TestFormatRawOrDockerCommandRaw
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -924,7 +924,7 @@ func TestFormatRawOrDockerCommandRaw(t *testing.T)
 
 ```
 searchKey: command.TestIntersperse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -935,7 +935,7 @@ func TestIntersperse(t *testing.T)
 
 ```
 searchKey: command.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -946,7 +946,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: command.TestRunCommandEmptyCommand
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -957,7 +957,7 @@ func TestRunCommandEmptyCommand(t *testing.T)
 
 ```
 searchKey: command.TestRunCommandIllegalCommand
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -968,7 +968,7 @@ func TestRunCommandIllegalCommand(t *testing.T)
 
 ```
 searchKey: command.TestSanitizeImage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -979,7 +979,7 @@ func TestSanitizeImage(t *testing.T)
 
 ```
 searchKey: command.TestSetupFirecracker
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -990,7 +990,7 @@ func TestSetupFirecracker(t *testing.T)
 
 ```
 searchKey: command.TestTeardownFirecracker
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1001,7 +1001,7 @@ func TestTeardownFirecracker(t *testing.T)
 
 ```
 searchKey: command.compareStrings
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1023,7 +1023,7 @@ func dockerEntrypointFlags() []string
 
 ```
 searchKey: command.dockerEnvFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1034,7 +1034,7 @@ func dockerEnvFlags(env []string) []string
 
 ```
 searchKey: command.dockerResourceFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1045,7 +1045,7 @@ func dockerResourceFlags(options ResourceOptions) []string
 
 ```
 searchKey: command.dockerVolumeFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1056,7 +1056,7 @@ func dockerVolumeFlags(wd, scriptPath string) []string
 
 ```
 searchKey: command.dockerWorkingdirectoryFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1067,7 +1067,7 @@ func dockerWorkingdirectoryFlags(dir string) []string
 
 ```
 searchKey: command.firecrackerCopyfileFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1078,7 +1078,7 @@ func firecrackerCopyfileFlags(dir string, imageKeys []string, options Options) [
 
 ```
 searchKey: command.firecrackerResourceFlags
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1089,7 +1089,7 @@ func firecrackerResourceFlags(options ResourceOptions) []string
 
 ```
 searchKey: command.flatten
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1102,7 +1102,7 @@ flatten combines string values and (non-recursive) string slice values into a si
 
 ```
 searchKey: command.intersperse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1126,7 +1126,7 @@ func makeTestOperation() *observation.Operation
 
 ```
 searchKey: command.monitorCommand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1139,7 +1139,7 @@ monitorCommand starts the given command and waits for the given wait group to co
 
 ```
 searchKey: command.prepCommand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1150,7 +1150,7 @@ func prepCommand(ctx context.Context, command command) (cmd *exec.Cmd, stdout, s
 
 ```
 searchKey: command.readProcessPipes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1161,7 +1161,7 @@ func readProcessPipes(stdout, stderr io.Reader) (*bytes.Buffer, *sync.WaitGroup)
 
 ```
 searchKey: command.redact
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1172,7 +1172,7 @@ func redact(entry workerutil.ExecutionLogEntry, replacer *strings.Replacer) work
 
 ```
 searchKey: command.runCommand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1185,7 +1185,7 @@ runCommand invokes the given command on the host machine. The standard output an
 
 ```
 searchKey: command.sanitizeImage
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1198,7 +1198,7 @@ sanitizeImage sanitizes the given docker image for use by ignite. The ignite uti
 
 ```
 searchKey: command.setupFirecracker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1223,7 +1223,7 @@ setupFirecracker invokes a set of commands to provision and prepare a Firecracke
 
 ```
 searchKey: command.tarfilePathInVM
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1234,7 +1234,7 @@ func tarfilePathInVM(key string) string
 
 ```
 searchKey: command.tarfilePathOnHost
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1245,7 +1245,7 @@ func tarfilePathOnHost(key string, options Options) string
 
 ```
 searchKey: command.teardownFirecracker
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1258,7 +1258,7 @@ teardownFirecracker issues a stop and a remove request for the Firecracker VM wi
 
 ```
 searchKey: command.validateCommand
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -1269,7 +1269,7 @@ func validateCommand(command []string) error
 
 ```
 searchKey: command.watchWaitGroup
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

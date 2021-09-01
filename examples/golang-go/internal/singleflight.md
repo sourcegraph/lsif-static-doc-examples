@@ -21,7 +21,7 @@ Package singleflight provides a duplicate function call suppression mechanism.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Group" href="#Group">type Group struct</a>
@@ -138,14 +138,14 @@ call is an in-flight or completed singleflight.Do call
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestDo" href="#TestDo">func TestDo(t *testing.T)</a>
 
 ```
 searchKey: singleflight.TestDo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -156,7 +156,7 @@ func TestDo(t *testing.T)
 
 ```
 searchKey: singleflight.TestDoDupSuppress
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -167,7 +167,7 @@ func TestDoDupSuppress(t *testing.T)
 
 ```
 searchKey: singleflight.TestDoErr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

@@ -20,10 +20,6 @@
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="HappinessFeedbackFormID" href="#HappinessFeedbackFormID">var HappinessFeedbackFormID</a>
 
 ```
@@ -115,10 +111,6 @@ var client *hubspot.Client
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Client" href="#Client">func Client() *hubspot.Client</a>
 
 ```
@@ -149,7 +141,7 @@ HasAPIKey returns true if a HubspotAPI key is present. A subset of requests requ
 
 ```
 searchKey: hubspotutil.SyncUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -173,7 +165,7 @@ func init()
 
 ```
 searchKey: hubspotutil.syncHubSpotContact
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

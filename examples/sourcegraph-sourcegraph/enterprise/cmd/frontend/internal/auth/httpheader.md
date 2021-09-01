@@ -28,7 +28,7 @@ Package httpheader implements auth via HTTP Headers.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="providerType" href="#providerType">const providerType</a>
@@ -45,7 +45,7 @@ const providerType = "http-header"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Middleware" href="#Middleware">var Middleware</a>
@@ -69,7 +69,7 @@ See the "func middleware" docs for more information.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="provider" href="#provider">type provider struct</a>
@@ -89,7 +89,7 @@ type provider struct {
 
 ```
 searchKey: httpheader.provider.CachedInfo
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -102,7 +102,7 @@ CachedInfo implements providers.Provider.
 
 ```
 searchKey: httpheader.provider.Config
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -115,7 +115,7 @@ Config implements providers.Provider.
 
 ```
 searchKey: httpheader.provider.ConfigID
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -140,14 +140,14 @@ Refresh implements providers.Provider.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestMiddleware" href="#TestMiddleware">func TestMiddleware(t *testing.T)</a>
 
 ```
 searchKey: httpheader.TestMiddleware
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -160,7 +160,7 @@ SEE ALSO FOR MANUAL TESTING: See the Middleware docstring for information about 
 
 ```
 searchKey: httpheader.TestMiddleware_stripPrefix
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -171,7 +171,7 @@ func TestMiddleware_stripPrefix(t *testing.T)
 
 ```
 searchKey: httpheader.TestValidateCustom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -219,7 +219,7 @@ Watch for configuration changes related to the http-header auth provider.
 
 ```
 searchKey: httpheader.middleware
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -236,7 +236,7 @@ TESTING: Use the testproxy test program to test HTTP auth proxy behavior. For ex
 
 ```
 searchKey: httpheader.validateConfig
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

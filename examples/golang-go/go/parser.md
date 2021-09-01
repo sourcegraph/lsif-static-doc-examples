@@ -204,10 +204,6 @@ The parser accepts a larger language than is syntactically permitted by the Go s
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="AllErrors" href="#AllErrors">const AllErrors</a>
 
 ```
@@ -366,10 +362,6 @@ const testdata = "testdata"
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="declStart" href="#declStart">var declStart</a>
 
@@ -541,10 +533,6 @@ var valids = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Mode" href="#Mode">type Mode uint</a>
 
 ```
@@ -645,7 +633,7 @@ The parser structure holds the parser's internal state.
 
 ```
 searchKey: parser.trace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -717,7 +705,7 @@ checkExprOrType checks that x is an expression or a type (and not a raw type suc
 
 ```
 searchKey: parser.parser.consumeComment
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -802,7 +790,7 @@ expectClosing is like expect but provides a better error message for the common 
 
 ```
 searchKey: parser.parser.expectSemi
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -846,7 +834,7 @@ func (p *parser) makeExpr(s ast.Stmt, want string) ast.Expr
 
 ```
 searchKey: parser.parser.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -865,7 +853,7 @@ Lead and line comments may be considered documentation that is stored in the AST
 
 ```
 searchKey: parser.parser.next0
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -889,7 +877,7 @@ func (p *parser) parseArrayFieldOrTypeInstance(x *ast.Ident) (*ast.Ident, ast.Ex
 
 ```
 searchKey: parser.parser.parseArrayLen
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -911,7 +899,7 @@ func (p *parser) parseBinaryExpr(prec1 int) ast.Expr
 
 ```
 searchKey: parser.parser.parseBlockStmt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -922,7 +910,7 @@ func (p *parser) parseBlockStmt() *ast.BlockStmt
 
 ```
 searchKey: parser.parser.parseBody
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -977,7 +965,7 @@ func (p *parser) parseCaseClause(typeSwitch bool) *ast.CaseClause
 
 ```
 searchKey: parser.parser.parseChanType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -988,7 +976,7 @@ func (p *parser) parseChanType() *ast.ChanType
 
 ```
 searchKey: parser.parser.parseCommClause
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1010,7 +998,7 @@ func (p *parser) parseDecl(sync map[token.Token]bool) ast.Decl
 
 ```
 searchKey: parser.parser.parseDeferStmt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1021,7 +1009,7 @@ func (p *parser) parseDeferStmt() ast.Stmt
 
 ```
 searchKey: parser.parser.parseDotsType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1032,7 +1020,7 @@ func (p *parser) parseDotsType() *ast.Ellipsis
 
 ```
 searchKey: parser.parser.parseElement
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1043,7 +1031,7 @@ func (p *parser) parseElement() ast.Expr
 
 ```
 searchKey: parser.parser.parseElementList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1054,7 +1042,7 @@ func (p *parser) parseElementList() (list []ast.Expr)
 
 ```
 searchKey: parser.parser.parseExpr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1067,7 +1055,7 @@ The result may be a type or even a raw type ([...]int). Callers must check the r
 
 ```
 searchKey: parser.parser.parseExprList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1080,7 +1068,7 @@ If lhs is set, result list elements which are identifiers are not resolved.
 
 ```
 searchKey: parser.parser.parseFieldDecl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1091,7 +1079,7 @@ func (p *parser) parseFieldDecl() *ast.Field
 
 ```
 searchKey: parser.parser.parseFile
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1102,7 +1090,7 @@ func (p *parser) parseFile() *ast.File
 
 ```
 searchKey: parser.parser.parseForStmt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1113,7 +1101,7 @@ func (p *parser) parseForStmt() ast.Stmt
 
 ```
 searchKey: parser.parser.parseFuncDecl
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1124,7 +1112,7 @@ func (p *parser) parseFuncDecl() *ast.FuncDecl
 
 ```
 searchKey: parser.parser.parseFuncType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1135,7 +1123,7 @@ func (p *parser) parseFuncType() *ast.FuncType
 
 ```
 searchKey: parser.parser.parseFuncTypeOrLit
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1168,7 +1156,7 @@ func (p *parser) parseGenericType(spec *ast.TypeSpec, openPos token.Pos, name0 *
 
 ```
 searchKey: parser.parser.parseGoStmt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1179,7 +1167,7 @@ func (p *parser) parseGoStmt() ast.Stmt
 
 ```
 searchKey: parser.parser.parseIdent
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1190,7 +1178,7 @@ func (p *parser) parseIdent() *ast.Ident
 
 ```
 searchKey: parser.parser.parseIdentList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1201,7 +1189,7 @@ func (p *parser) parseIdentList() (list []*ast.Ident)
 
 ```
 searchKey: parser.parser.parseIfHeader
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1214,7 +1202,7 @@ parseIfHeader is an adjusted version of parser.header in cmd/compile/internal/sy
 
 ```
 searchKey: parser.parser.parseIfStmt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1247,7 +1235,7 @@ func (p *parser) parseIndexOrSliceOrInstance(x ast.Expr) ast.Expr
 
 ```
 searchKey: parser.parser.parseInterfaceType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1280,7 +1268,7 @@ func (p *parser) parseLiteralValue(typ ast.Expr) ast.Expr
 
 ```
 searchKey: parser.parser.parseMapType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1291,7 +1279,7 @@ func (p *parser) parseMapType() *ast.MapType
 
 ```
 searchKey: parser.parser.parseMethodSpec
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1302,7 +1290,7 @@ func (p *parser) parseMethodSpec() *ast.Field
 
 ```
 searchKey: parser.parser.parseOperand
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1348,7 +1336,7 @@ func (p *parser) parseParameters(acceptTParams bool) (tparams, params *ast.Field
 
 ```
 searchKey: parser.parser.parsePointerType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1359,7 +1347,7 @@ func (p *parser) parsePointerType() *ast.StarExpr
 
 ```
 searchKey: parser.parser.parsePrimaryExpr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1381,7 +1369,7 @@ func (p *parser) parseQualifiedIdent(ident *ast.Ident) ast.Expr
 
 ```
 searchKey: parser.parser.parseResult
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1392,7 +1380,7 @@ func (p *parser) parseResult() *ast.FieldList
 
 ```
 searchKey: parser.parser.parseReturnStmt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1403,7 +1391,7 @@ func (p *parser) parseReturnStmt() *ast.ReturnStmt
 
 ```
 searchKey: parser.parser.parseRhs
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1414,7 +1402,7 @@ func (p *parser) parseRhs() ast.Expr
 
 ```
 searchKey: parser.parser.parseRhsOrType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1425,7 +1413,7 @@ func (p *parser) parseRhsOrType() ast.Expr
 
 ```
 searchKey: parser.parser.parseSelectStmt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1460,7 +1448,7 @@ parseSimpleStmt returns true as 2nd result if it parsed the assignment of a rang
 
 ```
 searchKey: parser.parser.parseStmt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1471,7 +1459,7 @@ func (p *parser) parseStmt() (s ast.Stmt)
 
 ```
 searchKey: parser.parser.parseStmtList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1482,7 +1470,7 @@ func (p *parser) parseStmtList() (list []ast.Stmt)
 
 ```
 searchKey: parser.parser.parseStructType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1493,7 +1481,7 @@ func (p *parser) parseStructType() *ast.StructType
 
 ```
 searchKey: parser.parser.parseSwitchStmt
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1504,7 +1492,7 @@ func (p *parser) parseSwitchStmt() ast.Stmt
 
 ```
 searchKey: parser.parser.parseType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1537,7 +1525,7 @@ func (p *parser) parseTypeInstance(typ ast.Expr) ast.Expr
 
 ```
 searchKey: parser.parser.parseTypeList
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1561,7 +1549,7 @@ If the result is an identifier, it is not resolved.
 
 ```
 searchKey: parser.parser.parseTypeParams
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1583,7 +1571,7 @@ func (p *parser) parseTypeSpec(doc *ast.CommentGroup, _ token.Pos, _ token.Token
 
 ```
 searchKey: parser.parser.parseUnaryExpr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1594,7 +1582,7 @@ func (p *parser) parseUnaryExpr() ast.Expr
 
 ```
 searchKey: parser.parser.parseValue
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1642,7 +1630,7 @@ This is hack to work around "artificial" end positions in the AST which are comp
 
 ```
 searchKey: parser.parser.tokPrec
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1653,7 +1641,7 @@ func (p *parser) tokPrec() (token.Token, int)
 
 ```
 searchKey: parser.parser.tryIdentOrType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1699,7 +1687,7 @@ func (r *resolver) Visit(node ast.Node) ast.Visitor
 
 ```
 searchKey: parser.resolver.closeLabelScope
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1710,7 +1698,7 @@ func (r *resolver) closeLabelScope()
 
 ```
 searchKey: parser.resolver.closeScope
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1754,7 +1742,7 @@ func (r *resolver) dump(format string, args ...interface{})
 
 ```
 searchKey: parser.resolver.openLabelScope
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1899,15 +1887,11 @@ walkTParams is like walkFieldList, but declares type parameters eagerly so that 
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkParse" href="#BenchmarkParse">func BenchmarkParse(b *testing.B)</a>
 
 ```
 searchKey: parser.BenchmarkParse
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1918,7 +1902,7 @@ func BenchmarkParse(b *testing.B)
 
 ```
 searchKey: parser.BenchmarkParseOnly
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1929,7 +1913,7 @@ func BenchmarkParseOnly(b *testing.B)
 
 ```
 searchKey: parser.BenchmarkResolve
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -1940,7 +1924,7 @@ func BenchmarkResolve(b *testing.B)
 
 ```
 searchKey: parser.ParseDir
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1957,7 +1941,7 @@ If the directory couldn't be read, a nil map and the respective error are return
 
 ```
 searchKey: parser.ParseExpr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1972,7 +1956,7 @@ If syntax errors were found, the result is a partial AST (with ast.Bad* nodes re
 
 ```
 searchKey: parser.ParseExprFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1987,7 +1971,7 @@ If the source couldn't be read, the returned AST is nil and the error indicates 
 
 ```
 searchKey: parser.ParseFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2008,7 +1992,7 @@ If the source couldn't be read, the returned AST is nil and the error indicates 
 
 ```
 searchKey: parser.TestColonEqualsScope
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2019,7 +2003,7 @@ func TestColonEqualsScope(t *testing.T)
 
 ```
 searchKey: parser.TestCommentGroups
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2030,7 +2014,7 @@ func TestCommentGroups(t *testing.T)
 
 ```
 searchKey: parser.TestErrors
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2041,7 +2025,7 @@ func TestErrors(t *testing.T)
 
 ```
 searchKey: parser.TestImports
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2052,7 +2036,7 @@ func TestImports(t *testing.T)
 
 ```
 searchKey: parser.TestIncompleteSelection
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2065,7 +2049,7 @@ TestIncompleteSelection ensures that an incomplete selector expression is parsed
 
 ```
 searchKey: parser.TestInvalid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2076,7 +2060,7 @@ func TestInvalid(t *testing.T)
 
 ```
 searchKey: parser.TestIssue42951
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2087,7 +2071,7 @@ func TestIssue42951(t *testing.T)
 
 ```
 searchKey: parser.TestIssue9979
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2100,7 +2084,7 @@ TestIssue9979 verifies that empty statements are contained within their enclosin
 
 ```
 searchKey: parser.TestLastLineComment
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2111,7 +2095,7 @@ func TestLastLineComment(t *testing.T)
 
 ```
 searchKey: parser.TestLeadAndLineComments
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2122,7 +2106,7 @@ func TestLeadAndLineComments(t *testing.T)
 
 ```
 searchKey: parser.TestObjects
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2133,7 +2117,7 @@ func TestObjects(t *testing.T)
 
 ```
 searchKey: parser.TestParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2144,7 +2128,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: parser.TestParseDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2155,7 +2139,7 @@ func TestParseDir(t *testing.T)
 
 ```
 searchKey: parser.TestParseExpr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2166,7 +2150,7 @@ func TestParseExpr(t *testing.T)
 
 ```
 searchKey: parser.TestParseExprFrom
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2177,7 +2161,7 @@ func TestParseExprFrom(t *testing.T)
 
 ```
 searchKey: parser.TestParseFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2188,7 +2172,7 @@ func TestParseFile(t *testing.T)
 
 ```
 searchKey: parser.TestResolution
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2203,7 +2187,7 @@ In the test source, any comment prefixed with '=' or '@' (or both) marks the pre
 
 ```
 searchKey: parser.TestSingle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2216,7 +2200,7 @@ TestSingle is useful to track down a problem with a single short test program.
 
 ```
 searchKey: parser.TestUnresolved
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2227,7 +2211,7 @@ func TestUnresolved(t *testing.T)
 
 ```
 searchKey: parser.TestValid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2238,7 +2222,7 @@ func TestValid(t *testing.T)
 
 ```
 searchKey: parser.TestVarScope
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2249,7 +2233,7 @@ func TestVarScope(t *testing.T)
 
 ```
 searchKey: parser.annotatedObj
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2260,7 +2244,7 @@ func annotatedObj(lit string) (name string, decl, use bool)
 
 ```
 searchKey: parser.assert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2271,7 +2255,7 @@ func assert(cond bool, msg string)
 
 ```
 searchKey: parser.checkErrors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2282,7 +2266,7 @@ func checkErrors(t *testing.T, filename string, input interface{}, mode Mode, ex
 
 ```
 searchKey: parser.checkFieldComments
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2293,7 +2277,7 @@ func checkFieldComments(t *testing.T, file *ast.File, fieldname, lead, line stri
 
 ```
 searchKey: parser.commentText
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2306,7 +2290,7 @@ Don't use ast.CommentGroup.Text() - we want to see exact comment text.
 
 ```
 searchKey: parser.compareErrors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2319,7 +2303,7 @@ compareErrors compares the map of expected error messages with the list of found
 
 ```
 searchKey: parser.declsFromComments
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2332,7 +2316,7 @@ declsFromComments looks at comments annotating uses and declarations, and maps e
 
 ```
 searchKey: parser.declsFromParser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2345,7 +2329,7 @@ declsFromParser walks the file and collects the map associating an identifier po
 
 ```
 searchKey: parser.dirFilter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2356,7 +2340,7 @@ func dirFilter(f fs.FileInfo) bool
 
 ```
 searchKey: parser.expectedErrors
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2369,7 +2353,7 @@ expectedErrors collects the regular expressions of ERROR comments found in files
 
 ```
 searchKey: parser.getField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2380,7 +2364,7 @@ func getField(file *ast.File, fieldname string) *ast.Field
 
 ```
 searchKey: parser.getFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2393,7 +2377,7 @@ getFile assumes that each filename occurs at most once
 
 ```
 searchKey: parser.getPos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2404,7 +2388,7 @@ func getPos(fset *token.FileSet, filename string, offset int) token.Pos
 
 ```
 searchKey: parser.isTypeSwitchAssert
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2415,7 +2399,7 @@ func isTypeSwitchAssert(x ast.Expr) bool
 
 ```
 searchKey: parser.isValidImport
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2426,7 +2410,7 @@ func isValidImport(lit string) bool
 
 ```
 searchKey: parser.nameFilter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2437,7 +2421,7 @@ func nameFilter(filename string) bool
 
 ```
 searchKey: parser.positionMarkers
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2450,7 +2434,7 @@ positionMarkers extracts named positions from the source denoted by comments pre
 
 ```
 searchKey: parser.readFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2461,7 +2445,7 @@ func readFile(filename string) []byte
 
 ```
 searchKey: parser.readSource
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2474,7 +2458,7 @@ If src != nil, readSource converts src to a []byte if possible; otherwise it ret
 
 ```
 searchKey: parser.resolveFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2489,7 +2473,7 @@ If declErr is non-nil, it is used to report declaration errors during resolution
 
 ```
 searchKey: parser.un
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2502,7 +2486,7 @@ Usage pattern: defer un(trace(p, "..."))
 
 ```
 searchKey: parser.unparen
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

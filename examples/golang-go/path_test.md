@@ -41,7 +41,7 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="basetests" href="#basetests">var basetests</a>
@@ -135,7 +135,7 @@ var splittests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExtTest" href="#ExtTest">type ExtTest struct</a>
@@ -223,7 +223,7 @@ type SplitTest struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleBase" href="#ExampleBase">func ExampleBase()</a>
@@ -318,7 +318,7 @@ func ExampleSplit()
 
 ```
 searchKey: path_test.TestBase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -329,7 +329,7 @@ func TestBase(t *testing.T)
 
 ```
 searchKey: path_test.TestClean
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -340,7 +340,7 @@ func TestClean(t *testing.T)
 
 ```
 searchKey: path_test.TestCleanMallocs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -351,7 +351,7 @@ func TestCleanMallocs(t *testing.T)
 
 ```
 searchKey: path_test.TestDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -362,7 +362,7 @@ func TestDir(t *testing.T)
 
 ```
 searchKey: path_test.TestExt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -373,7 +373,7 @@ func TestExt(t *testing.T)
 
 ```
 searchKey: path_test.TestIsAbs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -384,7 +384,7 @@ func TestIsAbs(t *testing.T)
 
 ```
 searchKey: path_test.TestJoin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -395,7 +395,7 @@ func TestJoin(t *testing.T)
 
 ```
 searchKey: path_test.TestMatch
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -406,7 +406,7 @@ func TestMatch(t *testing.T)
 
 ```
 searchKey: path_test.TestSplit
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

@@ -44,7 +44,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CommittedAtMigrationID" href="#CommittedAtMigrationID">const CommittedAtMigrationID</a>
@@ -107,7 +107,7 @@ const committedAtSelectUpQuery = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="GitserverClient" href="#GitserverClient">type GitserverClient interface</a>
@@ -145,7 +145,7 @@ GitserverClientCommitDateFunc describes the behavior when the CommitDate method 
 
 ```
 searchKey: migration.GitserverClientCommitDateFunc.History
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -221,7 +221,7 @@ func (f *GitserverClientCommitDateFunc) appendCall(r0 GitserverClientCommitDateF
 
 ```
 searchKey: migration.GitserverClientCommitDateFunc.nextHook
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -261,7 +261,7 @@ GitserverClientCommitDateFuncCall is an object that describes an invocation of m
 
 ```
 searchKey: migration.GitserverClientCommitDateFuncCall.Args
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -274,7 +274,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: migration.GitserverClientCommitDateFuncCall.Results
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -317,7 +317,7 @@ NewMockGitserverClient creates a new mock of the GitserverClient interface. All 
 
 ```
 searchKey: migration.NewMockGitserverClientFrom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -418,14 +418,14 @@ func (m *committedAtMigrator) handleSourcedCommits(ctx context.Context, tx *dbst
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewCommittedAtMigrator" href="#NewCommittedAtMigrator">func NewCommittedAtMigrator(store *dbstore.Store, gitserverClient GitserverClient, batchSize int) oobmigration.Migrator</a>
 
 ```
 searchKey: migration.NewCommittedAtMigrator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -438,7 +438,7 @@ NewCommittedAtMigrator creates a new Migrator instance that reads records from t
 
 ```
 searchKey: migration.TestCommittedAtMigrator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -449,7 +449,7 @@ func TestCommittedAtMigrator(t *testing.T)
 
 ```
 searchKey: migration.TestCommittedAtMigratorUnknownCommits
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -460,7 +460,7 @@ func TestCommittedAtMigratorUnknownCommits(t *testing.T)
 
 ```
 searchKey: migration.TestCommittedAtMigratorUnknownRepository
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -482,7 +482,7 @@ func init()
 
 ```
 searchKey: migration.isRepositoryNotFound
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -493,7 +493,7 @@ func isRepositoryNotFound(err error) bool
 
 ```
 searchKey: migration.isRevisionNotFound
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

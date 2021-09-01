@@ -30,7 +30,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ActionJobs" href="#ActionJobs">const ActionJobs</a>
@@ -146,7 +146,7 @@ const testQuery = "repo:github\\.com/sourcegraph/sourcegraph func type:diff patt
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="JobState" href="#JobState">type JobState int</a>
@@ -188,7 +188,7 @@ type TestStore struct {
 
 ```
 searchKey: storetest.NewTestStoreWithStore
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -220,14 +220,14 @@ func (s *TestStore) SetJobStatus(ctx context.Context, table JobTable, state JobS
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewTestUser" href="#NewTestUser">func NewTestUser(ctx context.Context, t *testing.T) (name string, id int32, namespace graphql.ID, userContext context.Context)</a>
 
 ```
 searchKey: storetest.NewTestUser
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -249,7 +249,7 @@ func init()
 
 ```
 searchKey: storetest.insertTestUser
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -260,7 +260,7 @@ func insertTestUser(t *testing.T, db *sql.DB, name string, isAdmin bool) (userID
 
 ```
 searchKey: storetest.quote
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

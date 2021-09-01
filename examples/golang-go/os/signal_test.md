@@ -12,7 +12,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleNotify" href="#ExampleNotify">func ExampleNotify()</a>
@@ -54,7 +54,7 @@ func ExampleNotify_allSignals()
 
 ```
 searchKey: signal_test.TestTerminalSignal
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

@@ -265,7 +265,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="executable_EnvVar" href="#executable_EnvVar">const executable_EnvVar</a>
@@ -293,7 +293,7 @@ const testExecutableDeletion = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="dot" href="#dot">var dot</a>
@@ -488,7 +488,7 @@ var writeTimeoutTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="isExistTest" href="#isExistTest">type isExistTest struct</a>
@@ -609,14 +609,14 @@ For TestRawConnReadWrite.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="BenchmarkExpand" href="#BenchmarkExpand">func BenchmarkExpand(b *testing.B)</a>
 
 ```
 searchKey: os_test.BenchmarkExpand
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -627,7 +627,7 @@ func BenchmarkExpand(b *testing.B)
 
 ```
 searchKey: os_test.BenchmarkLstatDir
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -638,7 +638,7 @@ func BenchmarkLstatDir(b *testing.B)
 
 ```
 searchKey: os_test.BenchmarkLstatDot
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -649,7 +649,7 @@ func BenchmarkLstatDot(b *testing.B)
 
 ```
 searchKey: os_test.BenchmarkLstatFile
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -660,7 +660,7 @@ func BenchmarkLstatFile(b *testing.B)
 
 ```
 searchKey: os_test.BenchmarkReadDir
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -671,7 +671,7 @@ func BenchmarkReadDir(b *testing.B)
 
 ```
 searchKey: os_test.BenchmarkReaddir
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -682,7 +682,7 @@ func BenchmarkReaddir(b *testing.B)
 
 ```
 searchKey: os_test.BenchmarkReaddirname
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -693,7 +693,7 @@ func BenchmarkReaddirname(b *testing.B)
 
 ```
 searchKey: os_test.BenchmarkStatDir
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -704,7 +704,7 @@ func BenchmarkStatDir(b *testing.B)
 
 ```
 searchKey: os_test.BenchmarkStatDot
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -715,7 +715,7 @@ func BenchmarkStatDot(b *testing.B)
 
 ```
 searchKey: os_test.BenchmarkStatFile
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -924,7 +924,7 @@ func ExampleWriteFile()
 
 ```
 searchKey: os_test.TestAppend
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -935,7 +935,7 @@ func TestAppend(t *testing.T)
 
 ```
 searchKey: os_test.TestChdirAndGetwd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -946,7 +946,7 @@ func TestChdirAndGetwd(t *testing.T)
 
 ```
 searchKey: os_test.TestChmod
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -957,7 +957,7 @@ func TestChmod(t *testing.T)
 
 ```
 searchKey: os_test.TestChown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -968,7 +968,7 @@ func TestChown(t *testing.T)
 
 ```
 searchKey: os_test.TestChtimes
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -981,7 +981,7 @@ Use TempDir (via newFile) to make sure we're on a local file system, so that tim
 
 ```
 searchKey: os_test.TestChtimesDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -994,7 +994,7 @@ Use TempDir (via newDir) to make sure we're on a local file system, so that timi
 
 ```
 searchKey: os_test.TestClearenv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1005,7 +1005,7 @@ func TestClearenv(t *testing.T)
 
 ```
 searchKey: os_test.TestCloseWithBlockingReadByFd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1016,7 +1016,7 @@ func TestCloseWithBlockingReadByFd(t *testing.T)
 
 ```
 searchKey: os_test.TestCloseWithBlockingReadByNewFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1027,7 +1027,7 @@ func TestCloseWithBlockingReadByNewFile(t *testing.T)
 
 ```
 searchKey: os_test.TestClosedPipeRaceRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1038,7 +1038,7 @@ func TestClosedPipeRaceRead(t *testing.T)
 
 ```
 searchKey: os_test.TestClosedPipeRaceWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1049,7 +1049,7 @@ func TestClosedPipeRaceWrite(t *testing.T)
 
 ```
 searchKey: os_test.TestConsistentEnviron
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1060,7 +1060,7 @@ func TestConsistentEnviron(t *testing.T)
 
 ```
 searchKey: os_test.TestCreateTemp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1071,7 +1071,7 @@ func TestCreateTemp(t *testing.T)
 
 ```
 searchKey: os_test.TestCreateTempBadPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1082,7 +1082,7 @@ func TestCreateTempBadPattern(t *testing.T)
 
 ```
 searchKey: os_test.TestCreateTempPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1093,7 +1093,7 @@ func TestCreateTempPattern(t *testing.T)
 
 ```
 searchKey: os_test.TestDevNullFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1104,7 +1104,7 @@ func TestDevNullFile(t *testing.T)
 
 ```
 searchKey: os_test.TestDirAndSymlinkStats
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1115,7 +1115,7 @@ func TestDirAndSymlinkStats(t *testing.T)
 
 ```
 searchKey: os_test.TestDirFS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1126,7 +1126,7 @@ func TestDirFS(t *testing.T)
 
 ```
 searchKey: os_test.TestDirFSPathsValid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1137,7 +1137,7 @@ func TestDirFSPathsValid(t *testing.T)
 
 ```
 searchKey: os_test.TestDirSeek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1148,7 +1148,7 @@ func TestDirSeek(t *testing.T)
 
 ```
 searchKey: os_test.TestDoubleCloseError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1159,7 +1159,7 @@ func TestDoubleCloseError(t *testing.T)
 
 ```
 searchKey: os_test.TestEPIPE
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1170,7 +1170,7 @@ func TestEPIPE(t *testing.T)
 
 ```
 searchKey: os_test.TestErrIsExist
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1181,7 +1181,7 @@ func TestErrIsExist(t *testing.T)
 
 ```
 searchKey: os_test.TestErrIsNotExist
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1192,7 +1192,7 @@ func TestErrIsNotExist(t *testing.T)
 
 ```
 searchKey: os_test.TestErrPathNUL
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1203,7 +1203,7 @@ func TestErrPathNUL(t *testing.T)
 
 ```
 searchKey: os_test.TestErrProcessDone
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1214,7 +1214,7 @@ func TestErrProcessDone(t *testing.T)
 
 ```
 searchKey: os_test.TestErrorIsMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1225,7 +1225,7 @@ func TestErrorIsMethods(t *testing.T)
 
 ```
 searchKey: os_test.TestExecutable
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1236,7 +1236,7 @@ func TestExecutable(t *testing.T)
 
 ```
 searchKey: os_test.TestExecutableDeleted
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1247,7 +1247,7 @@ func TestExecutableDeleted(t *testing.T)
 
 ```
 searchKey: os_test.TestExpand
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1258,7 +1258,7 @@ func TestExpand(t *testing.T)
 
 ```
 searchKey: os_test.TestExpandEnvShellSpecialVar
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1269,7 +1269,7 @@ func TestExpandEnvShellSpecialVar(t *testing.T)
 
 ```
 searchKey: os_test.TestFTruncate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1280,7 +1280,7 @@ func TestFTruncate(t *testing.T)
 
 ```
 searchKey: os_test.TestFdRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1293,7 +1293,7 @@ Issue 24481.
 
 ```
 searchKey: os_test.TestFdReadRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1304,7 +1304,7 @@ func TestFdReadRace(t *testing.T)
 
 ```
 searchKey: os_test.TestFifoEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1317,7 +1317,7 @@ Issue 24164.
 
 ```
 searchKey: os_test.TestFileAndSymlinkStats
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1328,7 +1328,7 @@ func TestFileAndSymlinkStats(t *testing.T)
 
 ```
 searchKey: os_test.TestFileChdir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1339,7 +1339,7 @@ func TestFileChdir(t *testing.T)
 
 ```
 searchKey: os_test.TestFileChown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1350,7 +1350,7 @@ func TestFileChown(t *testing.T)
 
 ```
 searchKey: os_test.TestFileReadDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1361,7 +1361,7 @@ func TestFileReadDir(t *testing.T)
 
 ```
 searchKey: os_test.TestFileReaddir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1372,7 +1372,7 @@ func TestFileReaddir(t *testing.T)
 
 ```
 searchKey: os_test.TestFileReaddirnames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1383,7 +1383,7 @@ func TestFileReaddirnames(t *testing.T)
 
 ```
 searchKey: os_test.TestFstat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1394,7 +1394,7 @@ func TestFstat(t *testing.T)
 
 ```
 searchKey: os_test.TestGetppid
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1405,7 +1405,7 @@ func TestGetppid(t *testing.T)
 
 ```
 searchKey: os_test.TestHardLink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1416,7 +1416,7 @@ func TestHardLink(t *testing.T)
 
 ```
 searchKey: os_test.TestHostname
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1427,7 +1427,7 @@ func TestHostname(t *testing.T)
 
 ```
 searchKey: os_test.TestIsExist
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1438,7 +1438,7 @@ func TestIsExist(t *testing.T)
 
 ```
 searchKey: os_test.TestIsPermission
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1449,7 +1449,7 @@ func TestIsPermission(t *testing.T)
 
 ```
 searchKey: os_test.TestKillFindProcess
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1460,7 +1460,7 @@ func TestKillFindProcess(t *testing.T)
 
 ```
 searchKey: os_test.TestKillStartProcess
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1471,7 +1471,7 @@ func TestKillStartProcess(t *testing.T)
 
 ```
 searchKey: os_test.TestLargeWriteToConsole
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1482,7 +1482,7 @@ func TestLargeWriteToConsole(t *testing.T)
 
 ```
 searchKey: os_test.TestLchown
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1493,7 +1493,7 @@ func TestLchown(t *testing.T)
 
 ```
 searchKey: os_test.TestLongPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1504,7 +1504,7 @@ func TestLongPath(t *testing.T)
 
 ```
 searchKey: os_test.TestLongSymlink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1515,7 +1515,7 @@ func TestLongSymlink(t *testing.T)
 
 ```
 searchKey: os_test.TestLookupEnv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1526,7 +1526,7 @@ func TestLookupEnv(t *testing.T)
 
 ```
 searchKey: os_test.TestLstat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1537,7 +1537,7 @@ func TestLstat(t *testing.T)
 
 ```
 searchKey: os_test.TestMkdirAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1548,7 +1548,7 @@ func TestMkdirAll(t *testing.T)
 
 ```
 searchKey: os_test.TestMkdirAllAtSlash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1559,7 +1559,7 @@ func TestMkdirAllAtSlash(t *testing.T)
 
 ```
 searchKey: os_test.TestMkdirAllWithSymlink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1570,7 +1570,7 @@ func TestMkdirAllWithSymlink(t *testing.T)
 
 ```
 searchKey: os_test.TestMkdirStickyUmask
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1583,7 +1583,7 @@ Issue 23120: respect umask when doing Mkdir with the sticky bit
 
 ```
 searchKey: os_test.TestMkdirTemp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1594,7 +1594,7 @@ func TestMkdirTemp(t *testing.T)
 
 ```
 searchKey: os_test.TestMkdirTempBadDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1607,7 +1607,7 @@ test that we return a nice error message if the dir argument to TempDir doesn't 
 
 ```
 searchKey: os_test.TestMkdirTempBadPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1618,7 +1618,7 @@ func TestMkdirTempBadPattern(t *testing.T)
 
 ```
 searchKey: os_test.TestNewFileBlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1629,7 +1629,7 @@ func TestNewFileBlock(t *testing.T)
 
 ```
 searchKey: os_test.TestNewFileNonBlock
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1640,7 +1640,7 @@ func TestNewFileNonBlock(t *testing.T)
 
 ```
 searchKey: os_test.TestNilFileMethods
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1653,7 +1653,7 @@ Test that all File methods give ErrInvalid if the receiver is nil.
 
 ```
 searchKey: os_test.TestNilProcessStateString
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1664,7 +1664,7 @@ func TestNilProcessStateString(t *testing.T)
 
 ```
 searchKey: os_test.TestNonpollableDeadline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1675,7 +1675,7 @@ func TestNonpollableDeadline(t *testing.T)
 
 ```
 searchKey: os_test.TestOpenError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1686,7 +1686,7 @@ func TestOpenError(t *testing.T)
 
 ```
 searchKey: os_test.TestOpenFileKeepsPermissions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1699,7 +1699,7 @@ Test that opening a file does not change its permissions.  Issue 38225.
 
 ```
 searchKey: os_test.TestOpenNoName
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1710,7 +1710,7 @@ func TestOpenNoName(t *testing.T)
 
 ```
 searchKey: os_test.TestPathErrorUnwrap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1721,7 +1721,7 @@ func TestPathErrorUnwrap(t *testing.T)
 
 ```
 searchKey: os_test.TestPipeEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1734,7 +1734,7 @@ Issue 24164, for pipes.
 
 ```
 searchKey: os_test.TestPipeThreads
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1747,7 +1747,7 @@ Test that reading from a pipe doesn't use up a thread.
 
 ```
 searchKey: os_test.TestProgWideChdir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1760,7 +1760,7 @@ Test that Chdir+Getwd is program-wide.
 
 ```
 searchKey: os_test.TestRacyRead
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1773,7 +1773,7 @@ TestRacyRead tests that it is safe to mutate the input Read buffer immediately a
 
 ```
 searchKey: os_test.TestRacyWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1786,7 +1786,7 @@ TestRacyWrite tests that it is safe to mutate the input Write buffer immediately
 
 ```
 searchKey: os_test.TestRawConnReadWrite
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1797,7 +1797,7 @@ func TestRawConnReadWrite(t *testing.T)
 
 ```
 searchKey: os_test.TestRead0
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1810,7 +1810,7 @@ Read with length 0 should not return EOF.
 
 ```
 searchKey: os_test.TestReadAt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1821,7 +1821,7 @@ func TestReadAt(t *testing.T)
 
 ```
 searchKey: os_test.TestReadAtEOF
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1832,7 +1832,7 @@ func TestReadAtEOF(t *testing.T)
 
 ```
 searchKey: os_test.TestReadAtNegativeOffset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1845,7 +1845,7 @@ Verify that ReadAt doesn't allow negative offset.
 
 ```
 searchKey: os_test.TestReadAtOffset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1858,7 +1858,7 @@ Verify that ReadAt doesn't affect seek offset. In the Plan 9 kernel, there used 
 
 ```
 searchKey: os_test.TestReadClosed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1871,7 +1871,7 @@ Reading a closed file should return ErrClosed error
 
 ```
 searchKey: os_test.TestReadDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1882,7 +1882,7 @@ func TestReadDir(t *testing.T)
 
 ```
 searchKey: os_test.TestReadFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1893,7 +1893,7 @@ func TestReadFile(t *testing.T)
 
 ```
 searchKey: os_test.TestReadFileProc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1904,7 +1904,7 @@ func TestReadFileProc(t *testing.T)
 
 ```
 searchKey: os_test.TestReadNonblockingFd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1917,7 +1917,7 @@ Issue 20915: Reading on nonblocking fd should not return "waiting for unsupporte
 
 ```
 searchKey: os_test.TestReadOnlyWriteFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1928,7 +1928,7 @@ func TestReadOnlyWriteFile(t *testing.T)
 
 ```
 searchKey: os_test.TestReadTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1939,7 +1939,7 @@ func TestReadTimeout(t *testing.T)
 
 ```
 searchKey: os_test.TestReadTimeoutFluctuation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1950,7 +1950,7 @@ func TestReadTimeoutFluctuation(t *testing.T)
 
 ```
 searchKey: os_test.TestReadTimeoutMustNotReturn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1961,7 +1961,7 @@ func TestReadTimeoutMustNotReturn(t *testing.T)
 
 ```
 searchKey: os_test.TestReadWriteDeadlineRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1972,7 +1972,7 @@ func TestReadWriteDeadlineRace(t *testing.T)
 
 ```
 searchKey: os_test.TestReaddirNValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1983,7 +1983,7 @@ func TestReaddirNValues(t *testing.T)
 
 ```
 searchKey: os_test.TestReaddirOfFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -1996,7 +1996,7 @@ Readdir on a regular file should fail.
 
 ```
 searchKey: os_test.TestReaddirRemoveRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2009,7 +2009,7 @@ Issue 16919: Readdir must return a non-empty slice or an error.
 
 ```
 searchKey: os_test.TestReaddirSmallSeek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2020,7 +2020,7 @@ func TestReaddirSmallSeek(t *testing.T)
 
 ```
 searchKey: os_test.TestReaddirStatFailures
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2031,7 +2031,7 @@ func TestReaddirStatFailures(t *testing.T)
 
 ```
 searchKey: os_test.TestReaddirnamesOneAtATime
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2044,7 +2044,7 @@ Check that reading a directory one entry at a time gives the same result as read
 
 ```
 searchKey: os_test.TestRemoveAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2055,7 +2055,7 @@ func TestRemoveAll(t *testing.T)
 
 ```
 searchKey: os_test.TestRemoveAllButReadOnlyAndPathError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2068,7 +2068,7 @@ Issue #29983.
 
 ```
 searchKey: os_test.TestRemoveAllDot
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2079,7 +2079,7 @@ func TestRemoveAllDot(t *testing.T)
 
 ```
 searchKey: os_test.TestRemoveAllDotDot
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2090,7 +2090,7 @@ func TestRemoveAllDotDot(t *testing.T)
 
 ```
 searchKey: os_test.TestRemoveAllLarge
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2103,7 +2103,7 @@ Test RemoveAll on a large directory.
 
 ```
 searchKey: os_test.TestRemoveAllLongPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2114,7 +2114,7 @@ func TestRemoveAllLongPath(t *testing.T)
 
 ```
 searchKey: os_test.TestRemoveAllRace
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2127,7 +2127,7 @@ Test that simultaneous RemoveAll do not report an error. As long as it gets remo
 
 ```
 searchKey: os_test.TestRemoveAllWithMoreErrorThanReqSize
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2140,7 +2140,7 @@ Issue 29921
 
 ```
 searchKey: os_test.TestRemoveReadOnlyDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2153,7 +2153,7 @@ Issue #29178.
 
 ```
 searchKey: os_test.TestRemoveUnreadableDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2164,7 +2164,7 @@ func TestRemoveUnreadableDir(t *testing.T)
 
 ```
 searchKey: os_test.TestRename
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2175,7 +2175,7 @@ func TestRename(t *testing.T)
 
 ```
 searchKey: os_test.TestRenameCaseDifference
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2186,7 +2186,7 @@ func TestRenameCaseDifference(pt *testing.T)
 
 ```
 searchKey: os_test.TestRenameFailed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2197,7 +2197,7 @@ func TestRenameFailed(t *testing.T)
 
 ```
 searchKey: os_test.TestRenameNotExisting
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2208,7 +2208,7 @@ func TestRenameNotExisting(t *testing.T)
 
 ```
 searchKey: os_test.TestRenameOverwriteDest
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2219,7 +2219,7 @@ func TestRenameOverwriteDest(t *testing.T)
 
 ```
 searchKey: os_test.TestRenameToDirFailed
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2230,7 +2230,7 @@ func TestRenameToDirFailed(t *testing.T)
 
 ```
 searchKey: os_test.TestSameFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2241,7 +2241,7 @@ func TestSameFile(t *testing.T)
 
 ```
 searchKey: os_test.TestSeek
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2252,7 +2252,7 @@ func TestSeek(t *testing.T)
 
 ```
 searchKey: os_test.TestSeekError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2263,7 +2263,7 @@ func TestSeekError(t *testing.T)
 
 ```
 searchKey: os_test.TestSetenvUnixEinval
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2274,7 +2274,7 @@ func TestSetenvUnixEinval(t *testing.T)
 
 ```
 searchKey: os_test.TestSleep
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2287,7 +2287,7 @@ TestSleep emulates "sleep 1". It is a helper for testKillProcess, so we don't ha
 
 ```
 searchKey: os_test.TestSplitPath
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2298,7 +2298,7 @@ func TestSplitPath(t *testing.T)
 
 ```
 searchKey: os_test.TestStartProcess
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2309,7 +2309,7 @@ func TestStartProcess(t *testing.T)
 
 ```
 searchKey: os_test.TestStat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2320,7 +2320,7 @@ func TestStat(t *testing.T)
 
 ```
 searchKey: os_test.TestStatDirModeExec
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2331,7 +2331,7 @@ func TestStatDirModeExec(t *testing.T)
 
 ```
 searchKey: os_test.TestStatDirWithTrailingSlash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2342,7 +2342,7 @@ func TestStatDirWithTrailingSlash(t *testing.T)
 
 ```
 searchKey: os_test.TestStatError
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2353,7 +2353,7 @@ func TestStatError(t *testing.T)
 
 ```
 searchKey: os_test.TestStatRelativeSymlink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2364,7 +2364,7 @@ func TestStatRelativeSymlink(t *testing.T)
 
 ```
 searchKey: os_test.TestStatStdin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2375,7 +2375,7 @@ func TestStatStdin(t *testing.T)
 
 ```
 searchKey: os_test.TestStdPipe
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2386,7 +2386,7 @@ func TestStdPipe(t *testing.T)
 
 ```
 searchKey: os_test.TestStdPipeHelper
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2399,7 +2399,7 @@ This is a helper for TestStdPipe. It's not a test in itself.
 
 ```
 searchKey: os_test.TestSymlink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2410,7 +2410,7 @@ func TestSymlink(t *testing.T)
 
 ```
 searchKey: os_test.TestSymlinkWithTrailingSlash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2423,7 +2423,7 @@ see issue 27225 for details
 
 ```
 searchKey: os_test.TestTTYClose
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2436,7 +2436,7 @@ Closing a TTY while reading from it should not hang.  Issue 23943.
 
 ```
 searchKey: os_test.TestTruncate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2447,7 +2447,7 @@ func TestTruncate(t *testing.T)
 
 ```
 searchKey: os_test.TestUnsetenv
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2458,7 +2458,7 @@ func TestUnsetenv(t *testing.T)
 
 ```
 searchKey: os_test.TestUserHomeDir
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2469,7 +2469,7 @@ func TestUserHomeDir(t *testing.T)
 
 ```
 searchKey: os_test.TestVariousDeadlines
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2480,7 +2480,7 @@ func TestVariousDeadlines(t *testing.T)
 
 ```
 searchKey: os_test.TestVariousDeadlines1Proc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2491,7 +2491,7 @@ func TestVariousDeadlines1Proc(t *testing.T)
 
 ```
 searchKey: os_test.TestVariousDeadlines4Proc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2502,7 +2502,7 @@ func TestVariousDeadlines4Proc(t *testing.T)
 
 ```
 searchKey: os_test.TestWriteAt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2513,7 +2513,7 @@ func TestWriteAt(t *testing.T)
 
 ```
 searchKey: os_test.TestWriteAtInAppendMode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2526,7 +2526,7 @@ Verify that WriteAt doesn't work in append mode.
 
 ```
 searchKey: os_test.TestWriteAtNegativeOffset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2539,7 +2539,7 @@ Verify that WriteAt doesn't allow negative offset.
 
 ```
 searchKey: os_test.TestWriteFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2550,7 +2550,7 @@ func TestWriteFile(t *testing.T)
 
 ```
 searchKey: os_test.TestWriteStringAlloc
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2561,7 +2561,7 @@ func TestWriteStringAlloc(t *testing.T)
 
 ```
 searchKey: os_test.TestWriteTimeout
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2572,7 +2572,7 @@ func TestWriteTimeout(t *testing.T)
 
 ```
 searchKey: os_test.TestWriteTimeoutFluctuation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2583,7 +2583,7 @@ func TestWriteTimeoutFluctuation(t *testing.T)
 
 ```
 searchKey: os_test.TestWriteTimeoutMustNotReturn
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -2594,7 +2594,7 @@ func TestWriteTimeoutMustNotReturn(t *testing.T)
 
 ```
 searchKey: os_test.benchmarkLstat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2605,7 +2605,7 @@ func benchmarkLstat(b *testing.B, path string)
 
 ```
 searchKey: os_test.benchmarkReadDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2616,7 +2616,7 @@ func benchmarkReadDir(path string, b *testing.B)
 
 ```
 searchKey: os_test.benchmarkReaddir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2627,7 +2627,7 @@ func benchmarkReaddir(path string, b *testing.B)
 
 ```
 searchKey: os_test.benchmarkReaddirname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2638,7 +2638,7 @@ func benchmarkReaddirname(path string, b *testing.B)
 
 ```
 searchKey: os_test.benchmarkStat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2649,7 +2649,7 @@ func benchmarkStat(b *testing.B, path string)
 
 ```
 searchKey: os_test.checkErrorPredicate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2660,7 +2660,7 @@ func checkErrorPredicate(predName string, pred func(error) bool, err, target err
 
 ```
 searchKey: os_test.checkMode
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2671,7 +2671,7 @@ func checkMode(t *testing.T, path string, mode FileMode)
 
 ```
 searchKey: os_test.checkNamedSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2682,7 +2682,7 @@ func checkNamedSize(t *testing.T, path string, size int64)
 
 ```
 searchKey: os_test.checkSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2693,7 +2693,7 @@ func checkSize(t *testing.T, f *File, size int64)
 
 ```
 searchKey: os_test.checkUidGid
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2704,7 +2704,7 @@ func checkUidGid(t *testing.T, path string, uid, gid int)
 
 ```
 searchKey: os_test.chtmpdir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2717,7 +2717,7 @@ chtmpdir changes the working directory to a new temporary directory and provides
 
 ```
 searchKey: os_test.equal
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2728,7 +2728,7 @@ func equal(name1, name2 string) (r bool)
 
 ```
 searchKey: os_test.exec
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2772,7 +2772,7 @@ func init()
 
 ```
 searchKey: os_test.isDeadlineExceeded
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2798,7 +2798,7 @@ localTmp returns a local temporary directory not on NFS.
 
 ```
 searchKey: os_test.mkdirTree
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2809,7 +2809,7 @@ func mkdirTree(t *testing.T, root string, level, max int)
 
 ```
 searchKey: os_test.newDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2820,7 +2820,7 @@ func newDir(testName string, t *testing.T) (name string)
 
 ```
 searchKey: os_test.newFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2831,7 +2831,7 @@ func newFile(testName string, t *testing.T) (f *File)
 
 ```
 searchKey: os_test.newFileTest
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2844,7 +2844,7 @@ See also issues: 22939, 24331
 
 ```
 searchKey: os_test.runBinHostname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2855,7 +2855,7 @@ func runBinHostname(t *testing.T) string
 
 ```
 searchKey: os_test.sameFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2866,7 +2866,7 @@ func sameFile(fn1, fn2 string) bool
 
 ```
 searchKey: os_test.size
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2877,7 +2877,7 @@ func size(name string, t *testing.T) int64
 
 ```
 searchKey: os_test.smallReaddirnames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2890,7 +2890,7 @@ Read the directory one entry at a time.
 
 ```
 searchKey: os_test.testChtimes
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2901,7 +2901,7 @@ func testChtimes(t *testing.T, name string)
 
 ```
 searchKey: os_test.testCloseWithBlockingRead
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2914,7 +2914,7 @@ Test that we don't let a blocking read prevent a close.
 
 ```
 searchKey: os_test.testClosedPipeRace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2925,7 +2925,7 @@ func testClosedPipeRace(t *testing.T, read bool)
 
 ```
 searchKey: os_test.testDevNullFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2936,7 +2936,7 @@ func testDevNullFile(t *testing.T, devNullName string, ignoreCase bool)
 
 ```
 searchKey: os_test.testDevNullFileInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2947,7 +2947,7 @@ func testDevNullFileInfo(t *testing.T, statname, devNullName string, fi FileInfo
 
 ```
 searchKey: os_test.testDirStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2958,7 +2958,7 @@ func testDirStats(t *testing.T, path string)
 
 ```
 searchKey: os_test.testDoubleCloseError
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2969,7 +2969,7 @@ func testDoubleCloseError(t *testing.T, path string)
 
 ```
 searchKey: os_test.testErrNotExist
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2980,7 +2980,7 @@ func testErrNotExist(t *testing.T, name string) string
 
 ```
 searchKey: os_test.testFileStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2991,7 +2991,7 @@ func testFileStats(t *testing.T, path string)
 
 ```
 searchKey: os_test.testGetenv
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3004,7 +3004,7 @@ testGetenv gives us a controlled set of variables for testing Expand.
 
 ```
 searchKey: os_test.testIsDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3017,7 +3017,7 @@ testIsDir verifies that fi refers to directory.
 
 ```
 searchKey: os_test.testIsFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3030,7 +3030,7 @@ testIsFile verifies that fi refers to file.
 
 ```
 searchKey: os_test.testIsSymlink
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3043,7 +3043,7 @@ testIsSymlink verifies that fi refers to symlink.
 
 ```
 searchKey: os_test.testKillProcess
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3054,7 +3054,7 @@ func testKillProcess(t *testing.T, processKiller func(p *Process))
 
 ```
 searchKey: os_test.testReadDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3065,7 +3065,7 @@ func testReadDir(dir string, contents []string, t *testing.T)
 
 ```
 searchKey: os_test.testReaddir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3076,7 +3076,7 @@ func testReaddir(dir string, contents []string, t *testing.T)
 
 ```
 searchKey: os_test.testReaddirnames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3087,7 +3087,7 @@ func testReaddirnames(dir string, contents []string, t *testing.T)
 
 ```
 searchKey: os_test.testStatAndLstat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3100,7 +3100,7 @@ testStatAndLstat verifies that all os.Stat, os.Lstat os.File.Stat and os.Readdir
 
 ```
 searchKey: os_test.testSymlinkSameFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3111,7 +3111,7 @@ func testSymlinkSameFile(t *testing.T, path, link string)
 
 ```
 searchKey: os_test.testSymlinkStats
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3122,7 +3122,7 @@ func testSymlinkStats(t *testing.T, path string, isdir bool)
 
 ```
 searchKey: os_test.testVariousDeadlines
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3133,7 +3133,7 @@ func testVariousDeadlines(t *testing.T)
 
 ```
 searchKey: os_test.testWindowsHostname
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3144,7 +3144,7 @@ func testWindowsHostname(t *testing.T, hostname string)
 
 ```
 searchKey: os_test.timeoutReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3155,7 +3155,7 @@ func timeoutReader(r *os.File, d, min, max time.Duration, ch chan<- error)
 
 ```
 searchKey: os_test.timeoutWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3166,7 +3166,7 @@ func timeoutWriter(w *os.File, d, min, max time.Duration, ch chan<- error)
 
 ```
 searchKey: os_test.touch
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3177,7 +3177,7 @@ func touch(t *testing.T, name string)
 
 ```
 searchKey: os_test.writeFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

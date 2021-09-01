@@ -16,7 +16,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="authenticationMiddleware" href="#authenticationMiddleware">type authenticationMiddleware struct</a>
@@ -51,7 +51,7 @@ Middleware function, which will be called for each request
 
 ```
 searchKey: mux_test.authenticationMiddleware.Populate
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -63,7 +63,7 @@ Initialize it somewhere
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleCORSMethodMiddleware" href="#ExampleCORSMethodMiddleware">func ExampleCORSMethodMiddleware()</a>

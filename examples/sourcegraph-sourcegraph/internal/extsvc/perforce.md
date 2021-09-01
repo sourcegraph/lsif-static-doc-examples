@@ -11,7 +11,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AccountData" href="#AccountData">type AccountData struct</a>
@@ -34,7 +34,7 @@ AccountData stores information of a Perforce Server account.
 
 ```
 searchKey: perforce.GetExternalAccountData
-tags: [method]
+tags: [function]
 ```
 
 ```Go

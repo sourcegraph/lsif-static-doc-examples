@@ -39,7 +39,7 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="CreateCommitFromPatchError" href="#CreateCommitFromPatchError">type CreateCommitFromPatchError struct</a>
@@ -70,7 +70,7 @@ CreateCommitFromPatchError is populated on errors running CreateCommitFromPatch
 
 ```
 searchKey: protocol.CreateCommitFromPatchError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -546,14 +546,14 @@ SSHConfig configures and authenticates SSH for communication with remotes.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NormalizeRepo" href="#NormalizeRepo">func NormalizeRepo(input api.RepoName) api.RepoName</a>
 
 ```
 searchKey: protocol.NormalizeRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -564,7 +564,7 @@ func NormalizeRepo(input api.RepoName) api.RepoName
 
 ```
 searchKey: protocol.TestNormalizeRepo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -575,7 +575,7 @@ func TestNormalizeRepo(t *testing.T)
 
 ```
 searchKey: protocol.hasUpperASCII
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

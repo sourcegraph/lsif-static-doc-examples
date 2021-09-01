@@ -49,7 +49,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Batch" href="#Batch">const Batch</a>
@@ -132,7 +132,7 @@ const port = "8080"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="UserLatencyBuckets" href="#UserLatencyBuckets">var UserLatencyBuckets</a>
@@ -182,7 +182,7 @@ var graphQLQuery = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Config" href="#Config">type Config struct</a>
@@ -202,7 +202,7 @@ type Config struct {
 
 ```
 searchKey: main.loadQueries
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -297,7 +297,7 @@ func newClient() (*client, error)
 
 ```
 searchKey: main.client.clientType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -319,7 +319,7 @@ func (s *client) search(ctx context.Context, query, queryName string) (*metrics,
 
 ```
 searchKey: main.client.url
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -456,7 +456,7 @@ func newStreamClient() (*streamClient, error)
 
 ```
 searchKey: main.streamClient.clientType
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -477,7 +477,7 @@ func (s *streamClient) search(ctx context.Context, query, queryName string) (*me
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="SignalSensitiveContext" href="#SignalSensitiveContext">func SignalSensitiveContext() (ctx context.Context, cleanup func())</a>
@@ -497,7 +497,7 @@ SignalSensitiveContext returns a background context that is canceled after recei
 
 ```
 searchKey: main.health
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -530,7 +530,7 @@ func main()
 
 ```
 searchKey: main.run
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -541,7 +541,7 @@ func run(ctx context.Context, wg *sync.WaitGroup)
 
 ```
 searchKey: main.startServer
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

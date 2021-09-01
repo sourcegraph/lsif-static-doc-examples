@@ -38,7 +38,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="exampleEmpty" href="#exampleEmpty">const exampleEmpty</a>
@@ -239,7 +239,7 @@ const exampleWholeFileOutput = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="exampleTestCases" href="#exampleTestCases">var exampleTestCases</a>
@@ -267,7 +267,7 @@ var exampleWholeFileTestCases = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleNewFromFiles" href="#ExampleNewFromFiles">func ExampleNewFromFiles()</a>
@@ -287,7 +287,7 @@ This example illustrates how to use NewFromFiles to compute package documentatio
 
 ```
 searchKey: doc_test.TestClassifyExamples
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -298,7 +298,7 @@ func TestClassifyExamples(t *testing.T)
 
 ```
 searchKey: doc_test.TestExampleEmpty
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -309,7 +309,7 @@ func TestExampleEmpty(t *testing.T)
 
 ```
 searchKey: doc_test.TestExampleInspectSignature
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -320,7 +320,7 @@ func TestExampleInspectSignature(t *testing.T)
 
 ```
 searchKey: doc_test.TestExamples
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -331,7 +331,7 @@ func TestExamples(t *testing.T)
 
 ```
 searchKey: doc_test.TestExamplesWholeFile
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -342,7 +342,7 @@ func TestExamplesWholeFile(t *testing.T)
 
 ```
 searchKey: doc_test.exampleNames
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -353,7 +353,7 @@ func exampleNames(exs []*doc.Example) (out []string)
 
 ```
 searchKey: doc_test.formatFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -364,7 +364,7 @@ func formatFile(t *testing.T, fset *token.FileSet, n *ast.File) string
 
 ```
 searchKey: doc_test.mustParse
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

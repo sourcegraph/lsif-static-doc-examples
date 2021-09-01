@@ -66,10 +66,6 @@ The TIFF file format uses a similar but incompatible version of the LZW algorith
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="LSB" href="#LSB">const LSB</a>
 
 ```
@@ -192,10 +188,6 @@ There are 1<<12 possible codes, which is an upper bound on the number of valid h
 
 ## <a id="var" href="#var">Variables</a>
 
-```
-tags: [package]
-```
-
 ### <a id="errClosed" href="#errClosed">var errClosed</a>
 
 ```
@@ -243,10 +235,6 @@ var lzwTests = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Order" href="#Order">type Order int</a>
 
@@ -318,7 +306,7 @@ Reader is an io.Reader which can be used to read compressed data in the LZW form
 
 ```
 searchKey: lzw.newReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -329,7 +317,7 @@ func newReader(src io.Reader, order Order, litWidth int) *Reader
 
 ```
 searchKey: lzw.Reader.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -368,7 +356,7 @@ Reset clears the Reader's state and allows it to be reused again as a new Reader
 
 ```
 searchKey: lzw.Reader.decode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -392,7 +380,7 @@ func (r *Reader) init(src io.Reader, order Order, litWidth int)
 
 ```
 searchKey: lzw.Reader.readLSB
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -405,7 +393,7 @@ readLSB returns the next code for "Least Significant Bits first" data.
 
 ```
 searchKey: lzw.Reader.readMSB
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -457,7 +445,7 @@ Writer is an LZW compressor. It writes the compressed form of the data to an und
 
 ```
 searchKey: lzw.newWriter
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -468,7 +456,7 @@ func newWriter(dst io.Writer, order Order, litWidth int) *Writer
 
 ```
 searchKey: lzw.Writer.Close
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -507,7 +495,7 @@ Write writes a compressed representation of p to w's underlying writer.
 
 ```
 searchKey: lzw.Writer.incHi
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -609,15 +597,11 @@ A writer is a buffered, flushable writer.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDecoder" href="#BenchmarkDecoder">func BenchmarkDecoder(b *testing.B)</a>
 
 ```
 searchKey: lzw.BenchmarkDecoder
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -628,7 +612,7 @@ func BenchmarkDecoder(b *testing.B)
 
 ```
 searchKey: lzw.BenchmarkEncoder
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -639,7 +623,7 @@ func BenchmarkEncoder(b *testing.B)
 
 ```
 searchKey: lzw.NewReader
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -654,7 +638,7 @@ It is guaranteed that the underlying type of the returned io.ReadCloser is a *Re
 
 ```
 searchKey: lzw.NewWriter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -669,7 +653,7 @@ It is guaranteed that the underlying type of the returned io.WriteCloser is a *W
 
 ```
 searchKey: lzw.TestHiCodeDoesNotOverflow
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -680,7 +664,7 @@ func TestHiCodeDoesNotOverflow(t *testing.T)
 
 ```
 searchKey: lzw.TestNoLongerSavingPriorExpansions
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -693,7 +677,7 @@ TestNoLongerSavingPriorExpansions tests the decoder state when codes other than 
 
 ```
 searchKey: lzw.TestReader
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -704,7 +688,7 @@ func TestReader(t *testing.T)
 
 ```
 searchKey: lzw.TestReaderReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -715,7 +699,7 @@ func TestReaderReset(t *testing.T)
 
 ```
 searchKey: lzw.TestSmallLitWidth
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -726,7 +710,7 @@ func TestSmallLitWidth(t *testing.T)
 
 ```
 searchKey: lzw.TestWriter
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -737,7 +721,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: lzw.TestWriterReset
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -748,7 +732,7 @@ func TestWriterReset(t *testing.T)
 
 ```
 searchKey: lzw.TestWriterReturnValues
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -759,7 +743,7 @@ func TestWriterReturnValues(t *testing.T)
 
 ```
 searchKey: lzw.testFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

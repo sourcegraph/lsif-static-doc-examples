@@ -10,15 +10,11 @@ Package race implements data race detection logic. No public interface is provid
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestIssue37485" href="#TestIssue37485">func TestIssue37485(t *testing.T)</a>
 
 ```
 searchKey: race.TestIssue37485
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

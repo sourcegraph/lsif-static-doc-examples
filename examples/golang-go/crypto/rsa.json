@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -93,9 +91,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -477,9 +473,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -607,7 +601,7 @@
                       "newPage": false,
                       "searchKey": "rsa.PSSOptions.HashFunc",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -629,7 +623,7 @@
                       "newPage": false,
                       "searchKey": "rsa.PSSOptions.saltLength",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -697,7 +691,7 @@
                       "newPage": false,
                       "searchKey": "rsa.GenerateKey",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -719,7 +713,7 @@
                       "newPage": false,
                       "searchKey": "rsa.GenerateMultiPrimeKey",
                       "tags": [
-                        "method"
+                        "function"
                       ]
                     },
                     "label": {
@@ -785,7 +779,7 @@
                       "newPage": false,
                       "searchKey": "rsa.PrivateKey.Precompute",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -807,7 +801,7 @@
                       "newPage": false,
                       "searchKey": "rsa.PrivateKey.Public",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -851,7 +845,7 @@
                       "newPage": false,
                       "searchKey": "rsa.PrivateKey.Validate",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -918,7 +912,7 @@
                       "newPage": false,
                       "searchKey": "rsa.PublicKey.Size",
                       "tags": [
-                        "function"
+                        "method"
                       ]
                     },
                     "label": {
@@ -1014,9 +1008,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1035,7 +1027,7 @@
                 "newPage": false,
                 "searchKey": "rsa.Benchmark3PrimeRSA2048Decrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1059,7 +1051,7 @@
                 "newPage": false,
                 "searchKey": "rsa.BenchmarkRSA2048Decrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1083,7 +1075,7 @@
                 "newPage": false,
                 "searchKey": "rsa.BenchmarkRSA2048Sign",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1107,7 +1099,7 @@
                 "newPage": false,
                 "searchKey": "rsa.DecryptOAEP",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1129,7 +1121,7 @@
                 "newPage": false,
                 "searchKey": "rsa.DecryptPKCS1v15",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1151,7 +1143,7 @@
                 "newPage": false,
                 "searchKey": "rsa.DecryptPKCS1v15SessionKey",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1173,7 +1165,7 @@
                 "newPage": false,
                 "searchKey": "rsa.EncryptOAEP",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1195,7 +1187,7 @@
                 "newPage": false,
                 "searchKey": "rsa.EncryptPKCS1v15",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1332,7 +1324,7 @@
                 "newPage": false,
                 "searchKey": "rsa.SignPKCS1v15",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1354,7 +1346,7 @@
                 "newPage": false,
                 "searchKey": "rsa.SignPSS",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1376,7 +1368,7 @@
                 "newPage": false,
                 "searchKey": "rsa.Test3PrimeKeyGeneration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1400,7 +1392,7 @@
                 "newPage": false,
                 "searchKey": "rsa.Test4PrimeKeyGeneration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1424,7 +1416,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestDecryptOAEP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1448,7 +1440,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestDecryptPKCS1v15",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1472,7 +1464,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestEMSAPSS",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1496,7 +1488,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestEncryptOAEP",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1520,7 +1512,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestEncryptPKCS1v15",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1544,7 +1536,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestEncryptPKCS1v15DecrypterSessionKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1568,7 +1560,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestEncryptPKCS1v15SessionKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1592,7 +1584,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestGnuTLSKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1616,7 +1608,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestImpossibleKeyGeneration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1640,7 +1632,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestKeyGeneration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1664,7 +1656,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestNPrimeKeyGeneration",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1688,7 +1680,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestNonZeroRandomBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1712,7 +1704,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestOverlongMessagePKCS1v15",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1736,7 +1728,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestPSSGolden",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1760,7 +1752,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestPSSNilOpts",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1784,7 +1776,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestPSSOpenSSL",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1808,7 +1800,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestPSSSigning",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1832,7 +1824,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestShortPKCS1v15Signature",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1856,7 +1848,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestShortSessionKey",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1880,7 +1872,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestSignPKCS1v15",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1904,7 +1896,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestSignWithPSSSaltLengthAuto",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1928,7 +1920,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestUnpaddedSignature",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1952,7 +1944,7 @@
                 "newPage": false,
                 "searchKey": "rsa.TestVerifyPKCS1v15",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1976,7 +1968,7 @@
                 "newPage": false,
                 "searchKey": "rsa.VerifyPKCS1v15",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -1998,7 +1990,7 @@
                 "newPage": false,
                 "searchKey": "rsa.VerifyPSS",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2020,7 +2012,7 @@
                 "newPage": false,
                 "searchKey": "rsa.bigFromHex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2043,7 +2035,7 @@
                 "newPage": false,
                 "searchKey": "rsa.checkPub",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2066,7 +2058,7 @@
                 "newPage": false,
                 "searchKey": "rsa.decodeBase64",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2089,7 +2081,7 @@
                 "newPage": false,
                 "searchKey": "rsa.decrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2112,7 +2104,7 @@
                 "newPage": false,
                 "searchKey": "rsa.decryptAndCheck",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2135,7 +2127,7 @@
                 "newPage": false,
                 "searchKey": "rsa.decryptPKCS1v15",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2158,7 +2150,7 @@
                 "newPage": false,
                 "searchKey": "rsa.emsaPSSEncode",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2181,7 +2173,7 @@
                 "newPage": false,
                 "searchKey": "rsa.emsaPSSVerify",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2204,7 +2196,7 @@
                 "newPage": false,
                 "searchKey": "rsa.encrypt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2227,7 +2219,7 @@
                 "newPage": false,
                 "searchKey": "rsa.fromBase10",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2250,7 +2242,7 @@
                 "newPage": false,
                 "searchKey": "rsa.fromHex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2273,7 +2265,7 @@
                 "newPage": false,
                 "searchKey": "rsa.incCounter",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2319,7 +2311,7 @@
                 "newPage": false,
                 "searchKey": "rsa.intFromHex",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2342,7 +2334,7 @@
                 "newPage": false,
                 "searchKey": "rsa.mgf1XOR",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2365,7 +2357,7 @@
                 "newPage": false,
                 "searchKey": "rsa.nonZeroRandomBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2388,7 +2380,7 @@
                 "newPage": false,
                 "searchKey": "rsa.pkcs1v15HashInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2411,7 +2403,7 @@
                 "newPage": false,
                 "searchKey": "rsa.signPSSWithSalt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2434,7 +2426,7 @@
                 "newPage": false,
                 "searchKey": "rsa.testKeyBasics",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

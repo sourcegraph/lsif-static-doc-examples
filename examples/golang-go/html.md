@@ -41,10 +41,6 @@ Package html provides functions for escaping and unescaping HTML text.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="longestEntityWithoutSemicolon" href="#longestEntityWithoutSemicolon">const longestEntityWithoutSemicolon</a>
 
 ```
@@ -59,10 +55,6 @@ const longestEntityWithoutSemicolon = 6
 All entities that do not end with ';' are 6 or fewer bytes long. 
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="benchEscapeData" href="#benchEscapeData">var benchEscapeData</a>
 
@@ -186,10 +178,6 @@ var unescapeTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="unescapeTest" href="#unescapeTest">type unescapeTest struct</a>
 
 ```
@@ -210,15 +198,11 @@ type unescapeTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkEscape" href="#BenchmarkEscape">func BenchmarkEscape(b *testing.B)</a>
 
 ```
 searchKey: html.BenchmarkEscape
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -229,7 +213,7 @@ func BenchmarkEscape(b *testing.B)
 
 ```
 searchKey: html.BenchmarkEscapeNone
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -240,7 +224,7 @@ func BenchmarkEscapeNone(b *testing.B)
 
 ```
 searchKey: html.BenchmarkUnescape
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -251,7 +235,7 @@ func BenchmarkUnescape(b *testing.B)
 
 ```
 searchKey: html.BenchmarkUnescapeDense
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -262,7 +246,7 @@ func BenchmarkUnescapeDense(b *testing.B)
 
 ```
 searchKey: html.BenchmarkUnescapeNone
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -273,7 +257,7 @@ func BenchmarkUnescapeNone(b *testing.B)
 
 ```
 searchKey: html.BenchmarkUnescapeSparse
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -284,7 +268,7 @@ func BenchmarkUnescapeSparse(b *testing.B)
 
 ```
 searchKey: html.EscapeString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -297,7 +281,7 @@ EscapeString escapes special characters like "<" to become "&lt;". It escapes on
 
 ```
 searchKey: html.TestEntityLength
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -308,7 +292,7 @@ func TestEntityLength(t *testing.T)
 
 ```
 searchKey: html.TestUnescape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -319,7 +303,7 @@ func TestUnescape(t *testing.T)
 
 ```
 searchKey: html.TestUnescapeEscape
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -330,7 +314,7 @@ func TestUnescapeEscape(t *testing.T)
 
 ```
 searchKey: html.UnescapeString
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -367,7 +351,7 @@ populateMaps populates entity and entity2.
 
 ```
 searchKey: html.unescapeEntity
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

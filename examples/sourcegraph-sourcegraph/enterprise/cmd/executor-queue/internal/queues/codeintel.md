@@ -22,7 +22,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="MaximumNumResets" href="#MaximumNumResets">const MaximumNumResets</a>
@@ -76,7 +76,7 @@ const uploadRoute = "/.executors/lsif/upload"
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Config" href="#Config">type Config struct</a>
@@ -100,7 +100,7 @@ type Config struct {
 
 ```
 searchKey: codeintel.Config.Load
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -110,14 +110,14 @@ func (c *Config) Load()
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="QueueOptions" href="#QueueOptions">func QueueOptions(db dbutil.DB, config *Config, observationContext *observation.Context) apiserver.QueueOptions</a>
 
 ```
 searchKey: codeintel.QueueOptions
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -128,7 +128,7 @@ func QueueOptions(db dbutil.DB, config *Config, observationContext *observation.
 
 ```
 searchKey: codeintel.TestTransformRecord
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -139,7 +139,7 @@ func TestTransformRecord(t *testing.T)
 
 ```
 searchKey: codeintel.TestTransformRecordWithoutIndexer
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -150,7 +150,7 @@ func TestTransformRecordWithoutIndexer(t *testing.T)
 
 ```
 searchKey: codeintel.makeURL
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -161,7 +161,7 @@ func makeURL(base, username, password string) (string, error)
 
 ```
 searchKey: codeintel.newWorkerStore
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -174,7 +174,7 @@ newWorkerStore creates a dbworker store that wraps the lsif_indexes table.
 
 ```
 searchKey: codeintel.transformRecord
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

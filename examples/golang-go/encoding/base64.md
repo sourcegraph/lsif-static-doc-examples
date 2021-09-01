@@ -78,10 +78,6 @@ Package base64 implements base64 encoding as specified by RFC 4648.
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="NoPadding" href="#NoPadding">const NoPadding</a>
 
 ```
@@ -129,10 +125,6 @@ const encodeURL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="RawStdEncoding" href="#RawStdEncoding">var RawStdEncoding</a>
 
@@ -234,10 +226,6 @@ var pairs = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="CorruptInputError" href="#CorruptInputError">type CorruptInputError int64</a>
 
 ```
@@ -253,7 +241,7 @@ type CorruptInputError int64
 
 ```
 searchKey: base64.CorruptInputError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -282,7 +270,7 @@ An Encoding is a radix 64 encoding/decoding scheme, defined by a 64-character al
 
 ```
 searchKey: base64.NewEncoding
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -375,7 +363,7 @@ EncodedLen returns the length in bytes of the base64 encoding of an input buffer
 
 ```
 searchKey: base64.Encoding.Strict
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -465,7 +453,7 @@ type encoder struct {
 
 ```
 searchKey: base64.encoder.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -579,15 +567,11 @@ type testpair struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkDecodeString" href="#BenchmarkDecodeString">func BenchmarkDecodeString(b *testing.B)</a>
 
 ```
 searchKey: base64.BenchmarkDecodeString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -598,7 +582,7 @@ func BenchmarkDecodeString(b *testing.B)
 
 ```
 searchKey: base64.BenchmarkEncodeToString
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -609,7 +593,7 @@ func BenchmarkEncodeToString(b *testing.B)
 
 ```
 searchKey: base64.NewDecoder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -622,7 +606,7 @@ NewDecoder constructs a new base64 stream decoder.
 
 ```
 searchKey: base64.NewEncoder
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -635,7 +619,7 @@ NewEncoder returns a new base64 stream encoder. Data written to the returned wri
 
 ```
 searchKey: base64.TestBig
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -646,7 +630,7 @@ func TestBig(t *testing.T)
 
 ```
 searchKey: base64.TestDecode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -657,7 +641,7 @@ func TestDecode(t *testing.T)
 
 ```
 searchKey: base64.TestDecodeBounds
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -668,7 +652,7 @@ func TestDecodeBounds(t *testing.T)
 
 ```
 searchKey: base64.TestDecodeCorrupt
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -679,7 +663,7 @@ func TestDecodeCorrupt(t *testing.T)
 
 ```
 searchKey: base64.TestDecodedLen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -690,7 +674,7 @@ func TestDecodedLen(t *testing.T)
 
 ```
 searchKey: base64.TestDecoder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -701,7 +685,7 @@ func TestDecoder(t *testing.T)
 
 ```
 searchKey: base64.TestDecoderBuffering
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -712,7 +696,7 @@ func TestDecoderBuffering(t *testing.T)
 
 ```
 searchKey: base64.TestDecoderIssue15656
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -723,7 +707,7 @@ func TestDecoderIssue15656(t *testing.T)
 
 ```
 searchKey: base64.TestDecoderIssue3577
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -736,7 +720,7 @@ tests that we don't ignore errors from our underlying reader
 
 ```
 searchKey: base64.TestDecoderIssue4779
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -747,7 +731,7 @@ func TestDecoderIssue4779(t *testing.T)
 
 ```
 searchKey: base64.TestDecoderIssue7733
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -758,7 +742,7 @@ func TestDecoderIssue7733(t *testing.T)
 
 ```
 searchKey: base64.TestDecoderRaw
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -769,7 +753,7 @@ func TestDecoderRaw(t *testing.T)
 
 ```
 searchKey: base64.TestEncode
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -780,7 +764,7 @@ func TestEncode(t *testing.T)
 
 ```
 searchKey: base64.TestEncodedLen
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -791,7 +775,7 @@ func TestEncodedLen(t *testing.T)
 
 ```
 searchKey: base64.TestEncoder
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -802,7 +786,7 @@ func TestEncoder(t *testing.T)
 
 ```
 searchKey: base64.TestEncoderBuffering
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -813,7 +797,7 @@ func TestEncoderBuffering(t *testing.T)
 
 ```
 searchKey: base64.TestNewLineCharacters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -824,7 +808,7 @@ func TestNewLineCharacters(t *testing.T)
 
 ```
 searchKey: base64.assemble32
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -837,7 +821,7 @@ assemble32 assembles 4 base64 digits into 3 bytes. Each digit comes from the dec
 
 ```
 searchKey: base64.assemble64
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -850,7 +834,7 @@ assemble64 assembles 8 base64 digits into 6 bytes. Each digit comes from the dec
 
 ```
 searchKey: base64.funnyRef
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -861,7 +845,7 @@ func funnyRef(ref string) string
 
 ```
 searchKey: base64.rawRef
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -874,7 +858,7 @@ Convert a reference string to raw, unpadded format
 
 ```
 searchKey: base64.rawURLRef
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -887,7 +871,7 @@ Both URL and unpadding conversions
 
 ```
 searchKey: base64.stdRef
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -900,7 +884,7 @@ Do nothing to a reference base64 string (leave in standard format)
 
 ```
 searchKey: base64.testEqual
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -911,7 +895,7 @@ func testEqual(t *testing.T, msg string, args ...interface{}) bool
 
 ```
 searchKey: base64.urlRef
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

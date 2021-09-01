@@ -280,10 +280,6 @@ See "The Go image package" for more details: [https://golang.org/doc/articles/im
 
 ## <a id="const" href="#const">Constants</a>
 
-```
-tags: [package]
-```
-
 ### <a id="YCbCrSubsampleRatio410" href="#YCbCrSubsampleRatio410">const YCbCrSubsampleRatio410</a>
 
 ```
@@ -351,10 +347,6 @@ const YCbCrSubsampleRatio444 YCbCrSubsampleRatio = iota
 ```
 
 ## <a id="var" href="#var">Variables</a>
-
-```
-tags: [package]
-```
 
 ### <a id="Black" href="#Black">var Black</a>
 
@@ -490,10 +482,6 @@ var testImages = ...
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="Alpha" href="#Alpha">type Alpha struct</a>
 
 ```
@@ -519,7 +507,7 @@ Alpha is an in-memory image whose At method returns color.Alpha values.
 
 ```
 searchKey: image.NewAlpha
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -554,7 +542,7 @@ func (p *Alpha) At(x, y int) color.Color
 
 ```
 searchKey: image.Alpha.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -565,7 +553,7 @@ func (p *Alpha) Bounds() Rectangle
 
 ```
 searchKey: image.Alpha.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -576,7 +564,7 @@ func (p *Alpha) ColorModel() color.Model
 
 ```
 searchKey: image.Alpha.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -680,7 +668,7 @@ Alpha16 is an in-memory image whose At method returns color.Alpha16 values.
 
 ```
 searchKey: image.NewAlpha16
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -715,7 +703,7 @@ func (p *Alpha16) At(x, y int) color.Color
 
 ```
 searchKey: image.Alpha16.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -726,7 +714,7 @@ func (p *Alpha16) Bounds() Rectangle
 
 ```
 searchKey: image.Alpha16.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -737,7 +725,7 @@ func (p *Alpha16) ColorModel() color.Model
 
 ```
 searchKey: image.Alpha16.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -841,7 +829,7 @@ CMYK is an in-memory image whose At method returns color.CMYK values.
 
 ```
 searchKey: image.NewCMYK
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -865,7 +853,7 @@ func (p *CMYK) At(x, y int) color.Color
 
 ```
 searchKey: image.CMYK.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -887,7 +875,7 @@ func (p *CMYK) CMYKAt(x, y int) color.CMYK
 
 ```
 searchKey: image.CMYK.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -898,7 +886,7 @@ func (p *CMYK) ColorModel() color.Model
 
 ```
 searchKey: image.CMYK.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -997,7 +985,7 @@ Config holds an image's color model and dimensions.
 
 ```
 searchKey: image.DecodeConfig
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1031,7 +1019,7 @@ Gray is an in-memory image whose At method returns color.Gray values.
 
 ```
 searchKey: image.NewGray
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1055,7 +1043,7 @@ func (p *Gray) At(x, y int) color.Color
 
 ```
 searchKey: image.Gray.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1066,7 +1054,7 @@ func (p *Gray) Bounds() Rectangle
 
 ```
 searchKey: image.Gray.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1088,7 +1076,7 @@ func (p *Gray) GrayAt(x, y int) color.Gray
 
 ```
 searchKey: image.Gray.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1192,7 +1180,7 @@ Gray16 is an in-memory image whose At method returns color.Gray16 values.
 
 ```
 searchKey: image.NewGray16
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1216,7 +1204,7 @@ func (p *Gray16) At(x, y int) color.Color
 
 ```
 searchKey: image.Gray16.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1227,7 +1215,7 @@ func (p *Gray16) Bounds() Rectangle
 
 ```
 searchKey: image.Gray16.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1249,7 +1237,7 @@ func (p *Gray16) Gray16At(x, y int) color.Gray16
 
 ```
 searchKey: image.Gray16.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1355,7 +1343,7 @@ Image is a finite rectangular grid of color.Color values taken from a color mode
 
 ```
 searchKey: image.Decode
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1389,7 +1377,7 @@ NRGBA is an in-memory image whose At method returns color.NRGBA values.
 
 ```
 searchKey: image.NewNRGBA
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1413,7 +1401,7 @@ func (p *NRGBA) At(x, y int) color.Color
 
 ```
 searchKey: image.NRGBA.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1424,7 +1412,7 @@ func (p *NRGBA) Bounds() Rectangle
 
 ```
 searchKey: image.NRGBA.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1446,7 +1434,7 @@ func (p *NRGBA) NRGBAAt(x, y int) color.NRGBA
 
 ```
 searchKey: image.NRGBA.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1550,7 +1538,7 @@ NRGBA64 is an in-memory image whose At method returns color.NRGBA64 values.
 
 ```
 searchKey: image.NewNRGBA64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1574,7 +1562,7 @@ func (p *NRGBA64) At(x, y int) color.Color
 
 ```
 searchKey: image.NRGBA64.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1585,7 +1573,7 @@ func (p *NRGBA64) Bounds() Rectangle
 
 ```
 searchKey: image.NRGBA64.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1607,7 +1595,7 @@ func (p *NRGBA64) NRGBA64At(x, y int) color.NRGBA64
 
 ```
 searchKey: image.NRGBA64.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1707,7 +1695,7 @@ NYCbCrA is an in-memory image of non-alpha-premultiplied Y'CbCr-with-alpha color
 
 ```
 searchKey: image.NewNYCbCrA
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1744,7 +1732,7 @@ func (p *NYCbCrA) At(x, y int) color.Color
 
 ```
 searchKey: image.NYCbCrA.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1766,7 +1754,7 @@ func (p *NYCbCrA) NYCbCrAAt(x, y int) color.NYCbCrA
 
 ```
 searchKey: image.NYCbCrA.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1826,7 +1814,7 @@ Paletted is an in-memory image of uint8 indices into a given palette.
 
 ```
 searchKey: image.NewPaletted
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1850,7 +1838,7 @@ func (p *Paletted) At(x, y int) color.Color
 
 ```
 searchKey: image.Paletted.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1872,7 +1860,7 @@ func (p *Paletted) ColorIndexAt(x, y int) uint8
 
 ```
 searchKey: image.Paletted.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1883,7 +1871,7 @@ func (p *Paletted) ColorModel() color.Model
 
 ```
 searchKey: image.Paletted.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1998,7 +1986,7 @@ A Point is an X, Y coordinate pair. The axes increase right and down.
 
 ```
 searchKey: image.Pt
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2089,7 +2077,7 @@ Mul returns the vector p*k.
 
 ```
 searchKey: image.Point.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2136,7 +2124,7 @@ RGBA is an in-memory image whose At method returns color.RGBA values.
 
 ```
 searchKey: image.NewRGBA
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2160,7 +2148,7 @@ func (p *RGBA) At(x, y int) color.Color
 
 ```
 searchKey: image.RGBA.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2171,7 +2159,7 @@ func (p *RGBA) Bounds() Rectangle
 
 ```
 searchKey: image.RGBA.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2182,7 +2170,7 @@ func (p *RGBA) ColorModel() color.Model
 
 ```
 searchKey: image.RGBA.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2297,7 +2285,7 @@ RGBA64 is an in-memory image whose At method returns color.RGBA64 values.
 
 ```
 searchKey: image.NewRGBA64
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2321,7 +2309,7 @@ func (p *RGBA64) At(x, y int) color.Color
 
 ```
 searchKey: image.RGBA64.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2332,7 +2320,7 @@ func (p *RGBA64) Bounds() Rectangle
 
 ```
 searchKey: image.RGBA64.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2343,7 +2331,7 @@ func (p *RGBA64) ColorModel() color.Model
 
 ```
 searchKey: image.RGBA64.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2452,7 +2440,7 @@ A Rectangle is also an Image whose bounds are the rectangle itself. At returns c
 
 ```
 searchKey: image.Rect
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2491,7 +2479,7 @@ At implements the Image interface.
 
 ```
 searchKey: image.Rectangle.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2504,7 +2492,7 @@ Bounds implements the Image interface.
 
 ```
 searchKey: image.Rectangle.Canon
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2517,7 +2505,7 @@ Canon returns the canonical version of r. The returned rectangle has minimum and
 
 ```
 searchKey: image.Rectangle.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2530,7 +2518,7 @@ ColorModel implements the Image interface.
 
 ```
 searchKey: image.Rectangle.Dx
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2543,7 +2531,7 @@ Dx returns r's width.
 
 ```
 searchKey: image.Rectangle.Dy
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2556,7 +2544,7 @@ Dy returns r's height.
 
 ```
 searchKey: image.Rectangle.Empty
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2634,7 +2622,7 @@ Overlaps reports whether r and s have a non-empty intersection.
 
 ```
 searchKey: image.Rectangle.Size
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2647,7 +2635,7 @@ Size returns r's width and height.
 
 ```
 searchKey: image.Rectangle.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2701,7 +2689,7 @@ Uniform is an infinite-sized Image of uniform color. It implements the color.Col
 
 ```
 searchKey: image.NewUniform
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2725,7 +2713,7 @@ func (c *Uniform) At(x, y int) color.Color
 
 ```
 searchKey: image.Uniform.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2736,7 +2724,7 @@ func (c *Uniform) Bounds() Rectangle
 
 ```
 searchKey: image.Uniform.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2758,7 +2746,7 @@ func (c *Uniform) Convert(color.Color) color.Color
 
 ```
 searchKey: image.Uniform.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2771,7 +2759,7 @@ Opaque scans the entire image and reports whether it is fully opaque.
 
 ```
 searchKey: image.Uniform.RGBA
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2810,7 +2798,7 @@ For 4:1:0, CStride == YStride/4 && len(Cb) == len(Cr) == len(Y)/8.
 
 ```
 searchKey: image.NewYCbCr
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2834,7 +2822,7 @@ func (p *YCbCr) At(x, y int) color.Color
 
 ```
 searchKey: image.YCbCr.Bounds
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2858,7 +2846,7 @@ COffset returns the index of the first element of Cb or Cr that corresponds to t
 
 ```
 searchKey: image.YCbCr.ColorModel
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2869,7 +2857,7 @@ func (p *YCbCr) ColorModel() color.Model
 
 ```
 searchKey: image.YCbCr.Opaque
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2941,7 +2929,7 @@ YCbCrSubsampleRatio is the chroma subsample ratio used in a YCbCr image.
 
 ```
 searchKey: image.YCbCrSubsampleRatio.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2969,7 +2957,7 @@ A format holds an image format's name, magic header and how to decode it.
 
 ```
 searchKey: image.sniff
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3014,7 +3002,7 @@ A reader is an io.Reader that can also peek ahead.
 
 ```
 searchKey: image.asReader
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3025,15 +3013,11 @@ asReader converts an io.Reader to a reader.
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="BenchmarkAlpha16At" href="#BenchmarkAlpha16At">func BenchmarkAlpha16At(b *testing.B)</a>
 
 ```
 searchKey: image.BenchmarkAlpha16At
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3044,7 +3028,7 @@ func BenchmarkAlpha16At(b *testing.B)
 
 ```
 searchKey: image.BenchmarkAlphaAt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3055,7 +3039,7 @@ func BenchmarkAlphaAt(b *testing.B)
 
 ```
 searchKey: image.BenchmarkAlphaSetAlpha
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3066,7 +3050,7 @@ func BenchmarkAlphaSetAlpha(b *testing.B)
 
 ```
 searchKey: image.BenchmarkAlphaSetAlpha16
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3077,7 +3061,7 @@ func BenchmarkAlphaSetAlpha16(b *testing.B)
 
 ```
 searchKey: image.BenchmarkAt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3088,7 +3072,7 @@ func BenchmarkAt(b *testing.B)
 
 ```
 searchKey: image.BenchmarkGray16At
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3099,7 +3083,7 @@ func BenchmarkGray16At(b *testing.B)
 
 ```
 searchKey: image.BenchmarkGrayAt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3110,7 +3094,7 @@ func BenchmarkGrayAt(b *testing.B)
 
 ```
 searchKey: image.BenchmarkGraySetGray
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3121,7 +3105,7 @@ func BenchmarkGraySetGray(b *testing.B)
 
 ```
 searchKey: image.BenchmarkGraySetGray16
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3132,7 +3116,7 @@ func BenchmarkGraySetGray16(b *testing.B)
 
 ```
 searchKey: image.BenchmarkNRGBA64At
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3143,7 +3127,7 @@ func BenchmarkNRGBA64At(b *testing.B)
 
 ```
 searchKey: image.BenchmarkNRGBA64SetNRGBA64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3154,7 +3138,7 @@ func BenchmarkNRGBA64SetNRGBA64(b *testing.B)
 
 ```
 searchKey: image.BenchmarkNRGBAAt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3165,7 +3149,7 @@ func BenchmarkNRGBAAt(b *testing.B)
 
 ```
 searchKey: image.BenchmarkNRGBASetNRGBA
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3176,7 +3160,7 @@ func BenchmarkNRGBASetNRGBA(b *testing.B)
 
 ```
 searchKey: image.BenchmarkRGBA64At
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3187,7 +3171,7 @@ func BenchmarkRGBA64At(b *testing.B)
 
 ```
 searchKey: image.BenchmarkRGBA64SetRGBA64
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3198,7 +3182,7 @@ func BenchmarkRGBA64SetRGBA64(b *testing.B)
 
 ```
 searchKey: image.BenchmarkRGBAAt
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3209,7 +3193,7 @@ func BenchmarkRGBAAt(b *testing.B)
 
 ```
 searchKey: image.BenchmarkRGBASetRGBA
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3220,7 +3204,7 @@ func BenchmarkRGBASetRGBA(b *testing.B)
 
 ```
 searchKey: image.BenchmarkSet
-tags: [method private benchmark]
+tags: [function private benchmark]
 ```
 
 ```Go
@@ -3231,7 +3215,7 @@ func BenchmarkSet(b *testing.B)
 
 ```
 searchKey: image.RegisterFormat
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3244,7 +3228,7 @@ RegisterFormat registers an image format for use by Decode. Name is the name of 
 
 ```
 searchKey: image.Test16BitsPerColorChannel
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3255,7 +3239,7 @@ func Test16BitsPerColorChannel(t *testing.T)
 
 ```
 searchKey: image.TestImage
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3266,7 +3250,7 @@ func TestImage(t *testing.T)
 
 ```
 searchKey: image.TestNewXxxBadRectangle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3277,7 +3261,7 @@ func TestNewXxxBadRectangle(t *testing.T)
 
 ```
 searchKey: image.TestRGBA64Image
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3288,7 +3272,7 @@ func TestRGBA64Image(t *testing.T)
 
 ```
 searchKey: image.TestRectangle
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3299,7 +3283,7 @@ func TestRectangle(t *testing.T)
 
 ```
 searchKey: image.TestYCbCr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3310,7 +3294,7 @@ func TestYCbCr(t *testing.T)
 
 ```
 searchKey: image.TestYCbCrSlicesDontOverlap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3321,7 +3305,7 @@ func TestYCbCrSlicesDontOverlap(t *testing.T)
 
 ```
 searchKey: image.add2NonNeg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3334,7 +3318,7 @@ add2NonNeg returns (x + y), unless at least one argument is negative or if the c
 
 ```
 searchKey: image.cmp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3345,7 +3329,7 @@ func cmp(cm color.Model, c0, c1 color.Color) bool
 
 ```
 searchKey: image.match
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3358,7 +3342,7 @@ Match reports whether magic matches b. Magic may contain "?" wildcards.
 
 ```
 searchKey: image.mul3NonNeg
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3371,7 +3355,7 @@ mul3NonNeg returns (x * y * z), unless at least one argument is negative or if t
 
 ```
 searchKey: image.pixelBufferLength
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3386,7 +3370,7 @@ This panics instead of returning an error because of backwards compatibility. Th
 
 ```
 searchKey: image.testYCbCr
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3397,7 +3381,7 @@ func testYCbCr(t *testing.T, r Rectangle, subsampleRatio YCbCrSubsampleRatio, de
 
 ```
 searchKey: image.yCbCrSize
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

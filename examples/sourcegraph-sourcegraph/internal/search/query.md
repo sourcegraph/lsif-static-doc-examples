@@ -390,7 +390,7 @@
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AND" href="#AND">const AND</a>
@@ -1177,7 +1177,7 @@ If set, balanced parentheses, which would normally be treated as delimiting expr
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="DefaultPredicateRegistry" href="#DefaultPredicateRegistry">var DefaultPredicateRegistry</a>
@@ -1320,7 +1320,7 @@ var predicateRegexp = regexp.MustCompile(`^(?P<name>[a-z\.]+)\((?s:(?P<params>.*
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="Annotation" href="#Annotation">type Annotation struct</a>
@@ -1486,7 +1486,7 @@ Basic represents a leaf expression to evaluate in our search engine. A basic que
 
 ```
 searchKey: query.ConcatRevFilters
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1499,7 +1499,7 @@ concatRevFilters removes rev: filters from parameters and attaches their value a
 
 ```
 searchKey: query.Identity
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1512,7 +1512,7 @@ Identity is the identity transformer for basic queries.
 
 ```
 searchKey: query.PatternToFile
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1525,7 +1525,7 @@ PatternToFile transforms a search query such that `file:` is prefixed to the pat
 
 ```
 searchKey: query.ToBasicQuery
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1577,7 +1577,7 @@ FindValue returns the first value of a parameter matching field in b. It doesn't
 
 ```
 searchKey: query.Basic.GetCount
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1603,7 +1603,7 @@ HasPatternLabel returns whether a pattern atom has a specified label.
 
 ```
 searchKey: query.Basic.Index
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1614,7 +1614,7 @@ func (b Basic) Index() YesNoOnly
 
 ```
 searchKey: query.Basic.IsCaseSensitive
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1625,7 +1625,7 @@ func (b Basic) IsCaseSensitive() bool
 
 ```
 searchKey: query.Basic.IsLiteral
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1636,7 +1636,7 @@ func (b Basic) IsLiteral() bool
 
 ```
 searchKey: query.Basic.IsRegexp
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1647,7 +1647,7 @@ func (b Basic) IsRegexp() bool
 
 ```
 searchKey: query.Basic.IsStructural
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1697,7 +1697,7 @@ MapPattern returns a copy of a basic query with updated pattern.
 
 ```
 searchKey: query.Basic.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1708,7 +1708,7 @@ func (b Basic) String() string
 
 ```
 searchKey: query.Basic.ToParseTree
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1756,7 +1756,7 @@ type ExpectedOperand struct {
 
 ```
 searchKey: query.ExpectedOperand.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1855,7 +1855,7 @@ type Node interface {
 
 ```
 searchKey: query.PartitionSearchPattern
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -1885,7 +1885,7 @@ Operator is a nonterminal node of kind Kind with child nodes Operands.
 
 ```
 searchKey: query.Operator.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1896,7 +1896,7 @@ func (node Operator) String() string
 
 ```
 searchKey: query.Operator.node
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -1981,7 +1981,7 @@ Parameter is a leaf node of expressions representing a parameter of format "repo
 
 ```
 searchKey: query.Parameter.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -1992,7 +1992,7 @@ func (node Parameter) String() string
 
 ```
 searchKey: query.Parameter.node
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2076,7 +2076,7 @@ Pattern is a leaf node of expressions representing a search pattern fragment.
 
 ```
 searchKey: query.fuzzyRegexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2089,7 +2089,7 @@ fuzzyRegexp interpolates patterns with .*? regular expressions and concatenates 
 
 ```
 searchKey: query.newPattern
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2100,7 +2100,7 @@ func newPattern(value string, negated bool, labels labels, range_ Range) Pattern
 
 ```
 searchKey: query.space
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2113,7 +2113,7 @@ fuzzyRegexp interpolates patterns with spaces and concatenates them. Invariant: 
 
 ```
 searchKey: query.Pattern.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2124,7 +2124,7 @@ func (node Pattern) String() string
 
 ```
 searchKey: query.Pattern.node
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -2204,7 +2204,7 @@ A query plan represents a set of disjoint queries for the search engine to execu
 
 ```
 searchKey: query.MapPlan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2217,7 +2217,7 @@ MapPlan applies a conversion to all Basic queries in a plan. It expects a valid 
 
 ```
 searchKey: query.Pipeline
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2230,7 +2230,7 @@ Pipeline processes zero or more steps to produce a query. The first step must be
 
 ```
 searchKey: query.ToPlan
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2241,7 +2241,7 @@ func ToPlan(disjuncts [][]Node) (Plan, error)
 
 ```
 searchKey: query.Plan.ToParseTree
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2294,7 +2294,7 @@ A query is a tree of Nodes. We choose the type name Q so that external uses like
 
 ```
 searchKey: query.ParseLiteral
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2305,7 +2305,7 @@ func ParseLiteral(in string) (Q, error)
 
 ```
 searchKey: query.ParseRegexp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2316,7 +2316,7 @@ func ParseRegexp(in string) (Q, error)
 
 ```
 searchKey: query.ParseSearchType
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2327,7 +2327,7 @@ func ParseSearchType(in string, searchType SearchType) (Q, error)
 
 ```
 searchKey: query.Q.Archived
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2349,7 +2349,7 @@ func (q Q) BoolValue(field string) bool
 
 ```
 searchKey: query.Q.Count
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2360,7 +2360,7 @@ func (q Q) Count() *int
 
 ```
 searchKey: query.Q.Fields
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2371,7 +2371,7 @@ func (q Q) Fields() map[string][]*Value
 
 ```
 searchKey: query.Q.Fork
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2382,7 +2382,7 @@ func (q Q) Fork() *YesNoOnly
 
 ```
 searchKey: query.Q.IsCaseSensitive
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2404,7 +2404,7 @@ func (q Q) RegexpPatterns(field string) (values, negatedValues []string)
 
 ```
 searchKey: query.Q.Repositories
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2415,7 +2415,7 @@ func (q Q) Repositories() (repos []string, negatedRepos []string)
 
 ```
 searchKey: query.Q.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2448,7 +2448,7 @@ func (q Q) StringValues(field string) (values, negatedValues []string)
 
 ```
 searchKey: query.Q.Timeout
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2534,7 +2534,7 @@ type Range struct {
 
 ```
 searchKey: query.newRange
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -2547,7 +2547,7 @@ Returns a new range that assumes the string happens on one line. Column position
 
 ```
 searchKey: query.Range.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2571,7 +2571,7 @@ type RepoContainsCommitAfterPredicate struct {
 
 ```
 searchKey: query.RepoContainsCommitAfterPredicate.Field
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2582,7 +2582,7 @@ func (f RepoContainsCommitAfterPredicate) Field() string
 
 ```
 searchKey: query.RepoContainsCommitAfterPredicate.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2628,7 +2628,7 @@ type RepoContainsContentPredicate struct {
 
 ```
 searchKey: query.RepoContainsContentPredicate.Field
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2639,7 +2639,7 @@ func (f *RepoContainsContentPredicate) Field() string
 
 ```
 searchKey: query.RepoContainsContentPredicate.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2685,7 +2685,7 @@ type RepoContainsFilePredicate struct {
 
 ```
 searchKey: query.RepoContainsFilePredicate.Field
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2696,7 +2696,7 @@ func (f *RepoContainsFilePredicate) Field() string
 
 ```
 searchKey: query.RepoContainsFilePredicate.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2745,7 +2745,7 @@ RepoContainsPredicate represents the `repo:contains()` predicate, which filters 
 
 ```
 searchKey: query.RepoContainsPredicate.Field
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2756,7 +2756,7 @@ func (f *RepoContainsPredicate) Field() string
 
 ```
 searchKey: query.RepoContainsPredicate.Name
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2811,7 +2811,7 @@ type SearchType int
 
 ```
 searchKey: query.SearchType.String
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2835,7 +2835,7 @@ type UnsupportedError struct {
 
 ```
 searchKey: query.UnsupportedError.Error
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2863,7 +2863,7 @@ A Value is a field value in a query.
 
 ```
 searchKey: query.Value.ToString
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2874,7 +2874,7 @@ func (v *Value) ToString() string
 
 ```
 searchKey: query.Value.Value
-tags: [function]
+tags: [method]
 ```
 
 ```Go
@@ -2929,7 +2929,7 @@ type YesNoOnly string
 
 ```
 searchKey: query.ParseYesNoOnly
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -2956,7 +2956,7 @@ globError carries the error message and the name of field where the error occurr
 
 ```
 searchKey: query.globError.Error
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3002,7 +3002,7 @@ Labels are general-purpose annotations that store information about a node.
 
 ```
 searchKey: query.collectLabels
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3024,7 +3024,7 @@ func (l *labels) IsSet(label labels) bool
 
 ```
 searchKey: query.labels.String
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3098,7 +3098,7 @@ ParseFieldValue parses a value after a field like "repo:". It returns the parsed
 
 ```
 searchKey: query.parser.ParseParameter
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3124,7 +3124,7 @@ ParsePattern parses a leaf node Pattern that corresponds to a search pattern. No
 
 ```
 searchKey: query.parser.TryParseDelimitedPattern
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3137,7 +3137,7 @@ Try parse a delimited pattern, quoted as "...", '...', or /.../.
 
 ```
 searchKey: query.parser.TryParseDelimiter
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3161,7 +3161,7 @@ func (p *parser) TryScanBalancedPattern(label labels) (Pattern, bool)
 
 ```
 searchKey: query.parser.done
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3224,7 +3224,7 @@ matchUnaryKeyword is like match but expects the keyword to be followed by whites
 
 ```
 searchKey: query.parser.next
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3235,7 +3235,7 @@ func (p *parser) next() rune
 
 ```
 searchKey: query.parser.parseAnd
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3261,7 +3261,7 @@ parseLeaves scans for consecutive leaf nodes and applies label to patterns.
 
 ```
 searchKey: query.parser.parseOr
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3287,7 +3287,7 @@ peek looks ahead n runes in the input and returns a string if it succeeds, or an
 
 ```
 searchKey: query.parser.skipSpaces
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -3373,7 +3373,7 @@ type repoVisibility string
 
 ```
 searchKey: query.ParseVisibility
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3397,7 +3397,7 @@ A step performs a transformation on nodes, which may fail.
 
 ```
 searchKey: query.For
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3410,7 +3410,7 @@ For runs processing steps for a given search type. This includes normalization, 
 
 ```
 searchKey: query.Init
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3423,7 +3423,7 @@ Init creates a step from an input string and search type. It parses the initial 
 
 ```
 searchKey: query.InitLiteral
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3436,7 +3436,7 @@ InitLiteral is Init where SearchType is Literal.
 
 ```
 searchKey: query.InitRegexp
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3449,7 +3449,7 @@ InitRegexp is Init where SearchType is Regex.
 
 ```
 searchKey: query.InitStructural
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3462,7 +3462,7 @@ InitStructural is Init where SearchType is Structural.
 
 ```
 searchKey: query.With
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3475,7 +3475,7 @@ With returns step if enabled is true. Use it to compose a pipeline that conditio
 
 ```
 searchKey: query.sequence
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3488,7 +3488,7 @@ sequence sequences zero or more steps to create a single step.
 
 ```
 searchKey: query.succeeds
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -3500,14 +3500,14 @@ succeeds converts a sequence of passes into a single step.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="AddRegexpField" href="#AddRegexpField">func AddRegexpField(q Q, field, pattern string) string</a>
 
 ```
 searchKey: query.AddRegexpField
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3522,7 +3522,7 @@ It tries to remove redundancy in the result. For example, given a query like "x:
 
 ```
 searchKey: query.ContainsNoGlobSyntax
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3533,7 +3533,7 @@ func ContainsNoGlobSyntax(value string) bool
 
 ```
 searchKey: query.ContainsRefGlobs
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3544,7 +3544,7 @@ func ContainsRefGlobs(q Q) bool
 
 ```
 searchKey: query.ContainsRegexpMetasyntax
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3557,7 +3557,7 @@ ContainsRegexpMetasyntax returns true if a string is a valid regular expression 
 
 ```
 searchKey: query.Dnf
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3574,7 +3574,7 @@ Using the DNF expression makes it easy to support general nested queries that im
 
 ```
 searchKey: query.FuzzifyRegexPatterns
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3585,7 +3585,7 @@ func FuzzifyRegexPatterns(nodes []Node) []Node
 
 ```
 searchKey: query.Globbing
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3598,7 +3598,7 @@ Globbing translates glob to regexp for fields repo, file, and repohasfile.
 
 ```
 searchKey: query.HasTypeRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3609,7 +3609,7 @@ func HasTypeRepo(q Q) bool
 
 ```
 searchKey: query.Hoist
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3632,7 +3632,7 @@ repo:foo a or b or repo:bar c => (repo:foo a) or (b) or (repo:bar c)
 
 ```
 searchKey: query.IsBasic
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3645,7 +3645,7 @@ IsBasic returns whether a query is a basic query. A basic query is one which doe
 
 ```
 searchKey: query.IsPatternAtom
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3658,7 +3658,7 @@ IsPatternAtom returns whether a node is a non-negated pattern atom.
 
 ```
 searchKey: query.IsStreamingCompatible
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3671,7 +3671,7 @@ IsStreamingCompatible returns whether a backend search process may immediately s
 
 ```
 searchKey: query.LooksLikeGitHubRepo
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3684,7 +3684,7 @@ LooksLikeGitHubRepo returns whether string value looks like a valid GitHub repo 
 
 ```
 searchKey: query.LowercaseFieldNames
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3697,7 +3697,7 @@ LowercaseFieldNames performs strings.ToLower on every field name.
 
 ```
 searchKey: query.Map
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3710,7 +3710,7 @@ Map pipes query through one or more query transformer functions.
 
 ```
 searchKey: query.MapField
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3723,7 +3723,7 @@ MapField is a convenience function that calls callback on all parameter nodes wh
 
 ```
 searchKey: query.MapOperator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3736,7 +3736,7 @@ MapOperator is a convenience function that calls callback on all operator nodes,
 
 ```
 searchKey: query.MapParameter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3749,7 +3749,7 @@ MapParameter is a convenience function that calls callback on all parameter node
 
 ```
 searchKey: query.MapPattern
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3762,7 +3762,7 @@ MapPattern is a convenience function that calls callback on all pattern nodes, s
 
 ```
 searchKey: query.OmitField
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3775,7 +3775,7 @@ OmitField removes all fields `field` from a query. The `field` string should be 
 
 ```
 searchKey: query.OverrideField
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3786,7 +3786,7 @@ func OverrideField(nodes []Node, field, value string) []Node
 
 ```
 searchKey: query.Parse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3799,7 +3799,7 @@ Parse parses a raw input string into a parse tree comprising Nodes.
 
 ```
 searchKey: query.ParseAsPredicate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3812,7 +3812,7 @@ ParsePredicate returns the name and value of syntax conforming to name(value). I
 
 ```
 searchKey: query.Run
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3823,7 +3823,7 @@ func Run(step step) ([]Node, error)
 
 ```
 searchKey: query.ScanAnyPattern
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3836,7 +3836,7 @@ ScanAnyPattern consumes all characters up to a whitespace character and returns 
 
 ```
 searchKey: query.ScanBalancedParens
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3849,7 +3849,7 @@ ScanBalancedParens will return the full string including and inside the paranthe
 
 ```
 searchKey: query.ScanBalancedPattern
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3872,7 +3872,7 @@ So, this scanner detects parentheses as patterns without needing the user to exp
 
 ```
 searchKey: query.ScanDelimited
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3885,7 +3885,7 @@ ScanDelimited takes a delimited (e.g., quoted) value for some arbitrary delimite
 
 ```
 searchKey: query.ScanField
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3898,7 +3898,7 @@ ScanField scans an optional '-' at the beginning of a string, and then scans one
 
 ```
 searchKey: query.ScanPredicate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3911,7 +3911,7 @@ ScanPredicate scans for a predicate that exists in the predicate registry. It ta
 
 ```
 searchKey: query.ScanPredicateName
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3924,7 +3924,7 @@ ScanPredicateName scans for a well-known predicate name for he given field
 
 ```
 searchKey: query.ScanValue
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3937,7 +3937,7 @@ ScanValue scans for a value (e.g., of a parameter, or a string corresponding to 
 
 ```
 searchKey: query.StringHuman
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3954,7 +3954,7 @@ It strives to be syntax preserving, but may in some cases affect whitespace, ope
 
 ```
 searchKey: query.SubstituteAliases
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3967,7 +3967,7 @@ SubstituteAliases substitutes field name aliases for their canonical names, and 
 
 ```
 searchKey: query.SubstituteCountAll
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -3980,7 +3980,7 @@ SubstituteCountAll replaces count:all with count:99999999.
 
 ```
 searchKey: query.TestAndOrQuery_IsCaseSensitive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -3991,7 +3991,7 @@ func TestAndOrQuery_IsCaseSensitive(t *testing.T)
 
 ```
 searchKey: query.TestAndOrQuery_RegexpPatterns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4002,7 +4002,7 @@ func TestAndOrQuery_RegexpPatterns(t *testing.T)
 
 ```
 searchKey: query.TestAndOrQuery_Validation
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4013,7 +4013,7 @@ func TestAndOrQuery_Validation(t *testing.T)
 
 ```
 searchKey: query.TestConcatRevFilters
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4024,7 +4024,7 @@ func TestConcatRevFilters(t *testing.T)
 
 ```
 searchKey: query.TestConcatRevFiltersTopLevelAnd
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4035,7 +4035,7 @@ func TestConcatRevFiltersTopLevelAnd(t *testing.T)
 
 ```
 searchKey: query.TestContainsNoGlobSyntax
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4046,7 +4046,7 @@ func TestContainsNoGlobSyntax(t *testing.T)
 
 ```
 searchKey: query.TestContainsRefGlobs
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4057,7 +4057,7 @@ func TestContainsRefGlobs(t *testing.T)
 
 ```
 searchKey: query.TestConvertEmptyGroupsToLiteral
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4068,7 +4068,7 @@ func TestConvertEmptyGroupsToLiteral(t *testing.T)
 
 ```
 searchKey: query.TestEllipsesForHoles
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4079,7 +4079,7 @@ func TestEllipsesForHoles(t *testing.T)
 
 ```
 searchKey: query.TestExpandOr
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4090,7 +4090,7 @@ func TestExpandOr(t *testing.T)
 
 ```
 searchKey: query.TestForAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4101,7 +4101,7 @@ func TestForAll(t *testing.T)
 
 ```
 searchKey: query.TestFuzzifyGlobPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4112,7 +4112,7 @@ func TestFuzzifyGlobPattern(t *testing.T)
 
 ```
 searchKey: query.TestFuzzifyRegexPatterns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4123,7 +4123,7 @@ func TestFuzzifyRegexPatterns(t *testing.T)
 
 ```
 searchKey: query.TestHasTypeRepo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4134,7 +4134,7 @@ func TestHasTypeRepo(t *testing.T)
 
 ```
 searchKey: query.TestHoist
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4145,7 +4145,7 @@ func TestHoist(t *testing.T)
 
 ```
 searchKey: query.TestLowercaseFieldNames
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4156,7 +4156,7 @@ func TestLowercaseFieldNames(t *testing.T)
 
 ```
 searchKey: query.TestMap
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4167,7 +4167,7 @@ func TestMap(t *testing.T)
 
 ```
 searchKey: query.TestMapField
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4178,7 +4178,7 @@ func TestMapField(t *testing.T)
 
 ```
 searchKey: query.TestMapGlobToRegex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4189,7 +4189,7 @@ func TestMapGlobToRegex(t *testing.T)
 
 ```
 searchKey: query.TestMapOperator
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4200,7 +4200,7 @@ func TestMapOperator(t *testing.T)
 
 ```
 searchKey: query.TestMatchUnaryKeyword
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4211,7 +4211,7 @@ func TestMatchUnaryKeyword(t *testing.T)
 
 ```
 searchKey: query.TestMergePatterns
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4222,7 +4222,7 @@ func TestMergePatterns(t *testing.T)
 
 ```
 searchKey: query.TestParse
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4233,7 +4233,7 @@ func TestParse(t *testing.T)
 
 ```
 searchKey: query.TestParseAndOrLiteral
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4244,7 +4244,7 @@ func TestParseAndOrLiteral(t *testing.T)
 
 ```
 searchKey: query.TestParseAsPredicate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4255,7 +4255,7 @@ func TestParseAsPredicate(t *testing.T)
 
 ```
 searchKey: query.TestParseParameterList
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4266,7 +4266,7 @@ func TestParseParameterList(t *testing.T)
 
 ```
 searchKey: query.TestPartitionSearchPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4277,7 +4277,7 @@ func TestPartitionSearchPattern(t *testing.T)
 
 ```
 searchKey: query.TestPipeline
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4288,7 +4288,7 @@ func TestPipeline(t *testing.T)
 
 ```
 searchKey: query.TestPipeline_equivalence
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4299,7 +4299,7 @@ func TestPipeline_equivalence(t *testing.T)
 
 ```
 searchKey: query.TestQueryField
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4310,7 +4310,7 @@ func TestQueryField(t *testing.T)
 
 ```
 searchKey: query.TestRepoContainsPredicate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4321,7 +4321,7 @@ func TestRepoContainsPredicate(t *testing.T)
 
 ```
 searchKey: query.TestReporevToRegex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4332,7 +4332,7 @@ func TestReporevToRegex(t *testing.T)
 
 ```
 searchKey: query.TestScanBalancedPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4343,7 +4343,7 @@ func TestScanBalancedPattern(t *testing.T)
 
 ```
 searchKey: query.TestScanDelimited
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4354,7 +4354,7 @@ func TestScanDelimited(t *testing.T)
 
 ```
 searchKey: query.TestScanField
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4365,7 +4365,7 @@ func TestScanField(t *testing.T)
 
 ```
 searchKey: query.TestScanPredicate
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4376,7 +4376,7 @@ func TestScanPredicate(t *testing.T)
 
 ```
 searchKey: query.TestStringHuman
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4387,7 +4387,7 @@ func TestStringHuman(t *testing.T)
 
 ```
 searchKey: query.TestSubstituteAliases
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4398,7 +4398,7 @@ func TestSubstituteAliases(t *testing.T)
 
 ```
 searchKey: query.TestSubstituteConcat
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4409,7 +4409,7 @@ func TestSubstituteConcat(t *testing.T)
 
 ```
 searchKey: query.TestSubstituteCountAll
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4420,7 +4420,7 @@ func TestSubstituteCountAll(t *testing.T)
 
 ```
 searchKey: query.TestSubstituteOrForRegexp
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4431,7 +4431,7 @@ func TestSubstituteOrForRegexp(t *testing.T)
 
 ```
 searchKey: query.TestTranslateBadGlobPattern
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4442,7 +4442,7 @@ func TestTranslateBadGlobPattern(t *testing.T)
 
 ```
 searchKey: query.TestTranslateGlobToRegex
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -4453,7 +4453,7 @@ func TestTranslateGlobToRegex(t *testing.T)
 
 ```
 searchKey: query.ToNodes
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4464,7 +4464,7 @@ func ToNodes(parameters []Parameter) []Node
 
 ```
 searchKey: query.Validate
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4475,7 +4475,7 @@ func Validate(disjuncts [][]Node) error
 
 ```
 searchKey: query.VisitField
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4488,7 +4488,7 @@ VisitField convenience function that calls callback on all parameter nodes whose
 
 ```
 searchKey: query.VisitOperator
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4501,7 +4501,7 @@ VisitOperator is a convenience function that calls callback on all operator node
 
 ```
 searchKey: query.VisitParameter
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4514,7 +4514,7 @@ VisitParameter is a convenience function that calls callback on all parameter no
 
 ```
 searchKey: query.VisitPattern
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -4527,7 +4527,7 @@ VisitPattern is a convenience function that calls callback on all pattern nodes.
 
 ```
 searchKey: query.containsPattern
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4540,7 +4540,7 @@ containsPattern returns true if any descendent of nodes is a search pattern.
 
 ```
 searchKey: query.distribute
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4553,7 +4553,7 @@ distribute applies the distributed property to nodes. See the dnf function for c
 
 ```
 searchKey: query.ellipsesForHoles
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4566,7 +4566,7 @@ ellipsesForHoles substitutes ellipses ... for :[_] holes in structural search qu
 
 ```
 searchKey: query.escapeParens
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4585,7 +4585,7 @@ Any other forms are ignored, for example, foo.*(bar is unchanged. In the parser 
 
 ```
 searchKey: query.escapeParensHeuristic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4598,7 +4598,7 @@ escapeParensHeuristic escapes certain parentheses in search patterns (see escape
 
 ```
 searchKey: query.exists
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4611,7 +4611,7 @@ exists traverses every node in nodes and returns early as soon as fn is satisfie
 
 ```
 searchKey: query.forAll
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4624,7 +4624,7 @@ forAll traverses every node in nodes and returns whether all nodes satisfy fn.
 
 ```
 searchKey: query.fuzzifyGlobPattern
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4635,7 +4635,7 @@ func fuzzifyGlobPattern(value string) string
 
 ```
 searchKey: query.globToRegex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4648,7 +4648,7 @@ globToRegex converts a glob string to a regular expression. We support: *, ?, an
 
 ```
 searchKey: query.identity
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4659,7 +4659,7 @@ func identity(nodes []Node) ([]Node, error)
 
 ```
 searchKey: query.isPatternExpression
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4672,7 +4672,7 @@ isPatternExpression returns true if every leaf node in nodes is a search pattern
 
 ```
 searchKey: query.isSet
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4683,7 +4683,7 @@ func isSet(h, heuristic heuristics) bool
 
 ```
 searchKey: query.isSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4694,7 +4694,7 @@ func isSpace(buf []byte) bool
 
 ```
 searchKey: query.labelStructural
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4707,7 +4707,7 @@ labelStructural converts Literal labels to Structural labels. Structural queries
 
 ```
 searchKey: query.labelsToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4718,7 +4718,7 @@ func labelsToString(nodes []Node) string
 
 ```
 searchKey: query.newOperator
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4731,7 +4731,7 @@ newOperator constructs a new node of kind operatorKind with operands nodes, redu
 
 ```
 searchKey: query.nodesToJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4742,7 +4742,7 @@ func nodesToJSON(nodes []Node) string
 
 ```
 searchKey: query.nonPredicateRepos
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4755,7 +4755,7 @@ nonPredicateRepos returns the repo nodes in a query that aren't predicates, resp
 
 ```
 searchKey: query.parseAndOrGrammar
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4766,7 +4766,7 @@ func parseAndOrGrammar(in string) ([]Node, error)
 
 ```
 searchKey: query.parseBool
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4779,7 +4779,7 @@ parseBool is like strconv.ParseBool except that it also accepts y, Y, yes, YES, 
 
 ```
 searchKey: query.parseRegexpOrPanic
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4790,7 +4790,7 @@ func parseRegexpOrPanic(field, value string) *regexp.Regexp
 
 ```
 searchKey: query.partition
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4803,7 +4803,7 @@ partition partitions nodes into left and right groups. A node is put in the left
 
 ```
 searchKey: query.partitionParameters
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4818,7 +4818,7 @@ The resulting tree defines an ordering relation on nodes in the following cases:
 
 ```
 searchKey: query.planToString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4829,7 +4829,7 @@ func planToString(disjuncts [][]Node) string
 
 ```
 searchKey: query.processTopLevel
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4842,7 +4842,7 @@ processTopLevel processes the top level of a query. It validates that we can pro
 
 ```
 searchKey: query.product
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4855,7 +4855,7 @@ product appends the list of n elements in right to each of the m rows in left. I
 
 ```
 searchKey: query.reduce
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4868,7 +4868,7 @@ reduce takes lists of left and right nodes and reduces them if possible. For exa
 
 ```
 searchKey: query.reporevToRegex
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4881,7 +4881,7 @@ reporevToRegex is a wrapper around globToRegex that takes care of treating repo 
 
 ```
 searchKey: query.resolveFieldAlias
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4894,7 +4894,7 @@ resolveFieldAlias resolves an aliased field like `r:` to its canonical name like
 
 ```
 searchKey: query.skipSpace
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4907,7 +4907,7 @@ skipSpace returns the number of whitespace bytes skipped from the beginning of a
 
 ```
 searchKey: query.stringHumanParameters
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4918,7 +4918,7 @@ func stringHumanParameters(parameters []Parameter) string
 
 ```
 searchKey: query.stringHumanPattern
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4929,7 +4929,7 @@ func stringHumanPattern(nodes []Node) string
 
 ```
 searchKey: query.substituteConcat
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4944,7 +4944,7 @@ The callback parameter defines how the function concatenates patterns. The retur
 
 ```
 searchKey: query.substituteOrForRegexp
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4955,7 +4955,7 @@ func substituteOrForRegexp(nodes []Node) []Node
 
 ```
 searchKey: query.toJSON
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4966,7 +4966,7 @@ func toJSON(node Node) interface{}
 
 ```
 searchKey: query.toParameters
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4979,7 +4979,7 @@ Converts a flat list of nodes to parameters. Invariant: nodes are parameters. Th
 
 ```
 searchKey: query.toString
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -4992,7 +4992,7 @@ toString returns a string representation of a query's structure.
 
 ```
 searchKey: query.translateCharacterClass
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5005,7 +5005,7 @@ translateCharacterClass translates character classes like [a-zA-Z].
 
 ```
 searchKey: query.validate
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5016,7 +5016,7 @@ func validate(nodes []Node) error
 
 ```
 searchKey: query.validateCommitParameters
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5029,7 +5029,7 @@ Queries containing commit parameters without type:diff or type:commit are not va
 
 ```
 searchKey: query.validateField
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5040,7 +5040,7 @@ func validateField(field, value string, negated bool, seen map[string]struct{}) 
 
 ```
 searchKey: query.validateParameters
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5051,7 +5051,7 @@ func validateParameters(nodes []Node) error
 
 ```
 searchKey: query.validatePattern
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5062,7 +5062,7 @@ func validatePattern(nodes []Node) error
 
 ```
 searchKey: query.validatePredicates
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5075,7 +5075,7 @@ validatePredicates validates predicate parameters with respect to their validati
 
 ```
 searchKey: query.validatePureLiteralPattern
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5088,7 +5088,7 @@ validatePureLiteralPattern checks that no pattern expression contains and/or ope
 
 ```
 searchKey: query.validateRepoHasFile
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5101,7 +5101,7 @@ validateRepoHasFile validates that the repohasfile parameter can be executed. A 
 
 ```
 searchKey: query.validateRepoRevPair
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -5114,7 +5114,7 @@ A query is invalid if it contains a rev: filter and a repo is specified with @.
 
 ```
 searchKey: query.validateTypeStructural
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

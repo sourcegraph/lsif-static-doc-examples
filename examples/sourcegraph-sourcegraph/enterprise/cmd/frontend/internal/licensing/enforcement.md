@@ -28,7 +28,7 @@ Package enforcement provides hooks that enforce validations on a per-tier basis.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExternalServicesStore" href="#ExternalServicesStore">type ExternalServicesStore interface</a>
@@ -95,7 +95,7 @@ func (db *fakeDB) QueryRowContext(ctx context.Context, query string, args ...int
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="NewAfterCreateUserHook" href="#NewAfterCreateUserHook">func NewAfterCreateUserHook() func(context.Context, dbutil.DB, *types.User) error</a>
@@ -167,7 +167,7 @@ NewPreMountGrafanaHook enforces any per-tier validations prior to mounting the G
 
 ```
 searchKey: enforcement.TestEnforcement_AfterCreateUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -178,7 +178,7 @@ func TestEnforcement_AfterCreateUser(t *testing.T)
 
 ```
 searchKey: enforcement.TestEnforcement_PreCreateUser
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -189,7 +189,7 @@ func TestEnforcement_PreCreateUser(t *testing.T)
 
 ```
 searchKey: enforcement.TestEnforcement_PreSetUserIsSiteAdmin
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -200,7 +200,7 @@ func TestEnforcement_PreSetUserIsSiteAdmin(t *testing.T)
 
 ```
 searchKey: enforcement.TestMain
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -211,7 +211,7 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: enforcement.TestNewPreCreateExternalServiceHook
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -222,7 +222,7 @@ func TestNewPreCreateExternalServiceHook(t *testing.T)
 
 ```
 searchKey: enforcement.WriteSubscriptionErrorResponse
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -237,7 +237,7 @@ The title and message should be full sentences that describe the problem and how
 
 ```
 searchKey: enforcement.WriteSubscriptionErrorResponseForFeature
-tags: [method]
+tags: [function]
 ```
 
 ```Go

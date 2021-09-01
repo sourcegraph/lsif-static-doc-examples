@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "crypto/cipher_test",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -98,7 +97,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -397,7 +395,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -439,7 +436,7 @@
                       "newPage": false,
                       "searchKey": "cipher_test.noopBlock.BlockSize",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -555,7 +552,7 @@
                       "newPage": false,
                       "searchKey": "cipher_test.wrapper.BlockSize",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -630,7 +627,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -651,7 +647,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCBCDecrypt1K",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -675,7 +671,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCBCEncrypt1K",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -699,7 +695,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCFBDecrypt1K",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -723,7 +719,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCFBDecrypt8K",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -747,7 +743,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCFBEncrypt1K",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -771,7 +767,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCTR1K",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -795,7 +791,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCTR8K",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -819,7 +815,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESGCM",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -843,7 +839,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESOFB1K",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -867,7 +863,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkXORBytes",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1121,7 +1117,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestAESGCM",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1145,7 +1141,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestCBCDecrypterAES",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1169,7 +1165,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestCBCEncrypterAES",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1193,7 +1189,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestCFBInverse",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1217,7 +1213,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestCFBVectors",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1241,7 +1237,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestCTR",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1265,7 +1261,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestCTR_AES",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1289,7 +1285,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestCryptBlocks",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1313,7 +1309,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestEmptyPlaintext",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1337,7 +1333,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestGCMAsm",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1361,7 +1357,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestGCMCounterWrap",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1385,7 +1381,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestGCMInvalidTagSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1409,7 +1405,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestOFB",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1433,7 +1429,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestTagFailureOverwrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1457,7 +1453,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestXOR",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -1481,7 +1477,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.benchmarkAESGCMOpen",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1504,7 +1500,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.benchmarkAESGCMSeal",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1527,7 +1523,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.benchmarkAESStream",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1550,7 +1546,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.inc",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1573,7 +1569,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.min",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1596,7 +1592,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.mustPanic",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1619,7 +1615,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.wrap",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1642,7 +1638,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.xor",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

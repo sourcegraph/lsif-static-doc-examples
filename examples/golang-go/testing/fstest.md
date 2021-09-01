@@ -60,10 +60,6 @@ Package fstest implements support for testing implementations and users of file 
 
 ## <a id="type" href="#type">Types</a>
 
-```
-tags: [package]
-```
-
 ### <a id="MapFS" href="#MapFS">type MapFS map[string]*fstest.MapFile</a>
 
 ```
@@ -346,7 +342,7 @@ A mapDir is a directory fs.File (so also an fs.ReadDirFile) open for reading.
 
 ```
 searchKey: fstest.mapDir.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -379,7 +375,7 @@ func (d *mapDir) ReadDir(count int) ([]fs.DirEntry, error)
 
 ```
 searchKey: fstest.mapDir.Stat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -406,7 +402,7 @@ A mapFileInfo implements fs.FileInfo and fs.DirEntry for a given map file.
 
 ```
 searchKey: fstest.mapFileInfo.Info
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -417,7 +413,7 @@ func (i *mapFileInfo) Info() (fs.FileInfo, error)
 
 ```
 searchKey: fstest.mapFileInfo.IsDir
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -428,7 +424,7 @@ func (i *mapFileInfo) IsDir() bool
 
 ```
 searchKey: fstest.mapFileInfo.ModTime
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -439,7 +435,7 @@ func (i *mapFileInfo) ModTime() time.Time
 
 ```
 searchKey: fstest.mapFileInfo.Mode
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -450,7 +446,7 @@ func (i *mapFileInfo) Mode() fs.FileMode
 
 ```
 searchKey: fstest.mapFileInfo.Name
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -461,7 +457,7 @@ func (i *mapFileInfo) Name() string
 
 ```
 searchKey: fstest.mapFileInfo.Size
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -472,7 +468,7 @@ func (i *mapFileInfo) Size() int64
 
 ```
 searchKey: fstest.mapFileInfo.Sys
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -483,7 +479,7 @@ func (i *mapFileInfo) Sys() interface{}
 
 ```
 searchKey: fstest.mapFileInfo.Type
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -507,7 +503,7 @@ type noSub struct {
 
 ```
 searchKey: fstest.noSub.Sub
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -535,7 +531,7 @@ An openMapFile is a regular (non-directory) fs.File open for reading.
 
 ```
 searchKey: fstest.openMapFile.Close
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -579,7 +575,7 @@ func (f *openMapFile) Seek(offset int64, whence int) (int64, error)
 
 ```
 searchKey: fstest.openMapFile.Stat
-tags: [function private]
+tags: [method private]
 ```
 
 ```Go
@@ -588,15 +584,11 @@ func (f *openMapFile) Stat() (fs.FileInfo, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-```
-tags: [package]
-```
-
 ### <a id="TestDash" href="#TestDash">func TestDash(t *testing.T)</a>
 
 ```
 searchKey: fstest.TestDash
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -607,7 +599,7 @@ func TestDash(t *testing.T)
 
 ```
 searchKey: fstest.TestFS
-tags: [method]
+tags: [function]
 ```
 
 ```Go
@@ -630,7 +622,7 @@ if err := fstest.TestFS(myFS, "file/that/should/be/present"); err != nil {
 
 ```
 searchKey: fstest.TestMapFS
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -641,7 +633,7 @@ func TestMapFS(t *testing.T)
 
 ```
 searchKey: fstest.TestSymlink
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -652,7 +644,7 @@ func TestSymlink(t *testing.T)
 
 ```
 searchKey: fstest.formatEntry
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -665,7 +657,7 @@ formatEntry formats an fs.DirEntry into a string for error messages and comparis
 
 ```
 searchKey: fstest.formatInfo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -678,7 +670,7 @@ formatInfo formats an fs.FileInfo into a string for error messages and compariso
 
 ```
 searchKey: fstest.formatInfoEntry
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -691,7 +683,7 @@ formatInfoEntry formats an fs.FileInfo into a string like the result of formatEn
 
 ```
 searchKey: fstest.testFS
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

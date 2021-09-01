@@ -24,9 +24,7 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -116,9 +114,7 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -432,9 +428,7 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -611,7 +605,7 @@
                       "newPage": false,
                       "searchKey": "binary.bigEndian.GoString",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -703,7 +697,7 @@
                       "newPage": false,
                       "searchKey": "binary.bigEndian.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -889,7 +883,7 @@
                       "newPage": false,
                       "searchKey": "binary.decoder.bool",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -912,7 +906,7 @@
                       "newPage": false,
                       "searchKey": "binary.decoder.int16",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -935,7 +929,7 @@
                       "newPage": false,
                       "searchKey": "binary.decoder.int32",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -958,7 +952,7 @@
                       "newPage": false,
                       "searchKey": "binary.decoder.int64",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -981,7 +975,7 @@
                       "newPage": false,
                       "searchKey": "binary.decoder.int8",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1027,7 +1021,7 @@
                       "newPage": false,
                       "searchKey": "binary.decoder.uint16",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1050,7 +1044,7 @@
                       "newPage": false,
                       "searchKey": "binary.decoder.uint32",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1073,7 +1067,7 @@
                       "newPage": false,
                       "searchKey": "binary.decoder.uint64",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1096,7 +1090,7 @@
                       "newPage": false,
                       "searchKey": "binary.decoder.uint8",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1443,7 +1437,7 @@
                       "newPage": false,
                       "searchKey": "binary.littleEndian.GoString",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1535,7 +1529,7 @@
                       "newPage": false,
                       "searchKey": "binary.littleEndian.String",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -1632,9 +1626,7 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": [
-            "package"
-          ]
+          "tags": []
         },
         "label": {
           "kind": "plaintext",
@@ -1653,7 +1645,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkLittleEndianPutUint16",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1677,7 +1669,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkLittleEndianPutUint32",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1701,7 +1693,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkLittleEndianPutUint64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1725,7 +1717,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkPutUint16",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1749,7 +1741,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkPutUint32",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1773,7 +1765,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkPutUint64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1797,7 +1789,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkPutUvarint32",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1821,7 +1813,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkPutUvarint64",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1845,7 +1837,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadFloats",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1869,7 +1861,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadInts",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1893,7 +1885,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadSlice1000Float32s",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1917,7 +1909,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadSlice1000Int32s",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1941,7 +1933,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadSlice1000Uint8s",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1965,7 +1957,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkReadStruct",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -1989,7 +1981,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteFloats",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -2013,7 +2005,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteInts",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -2037,7 +2029,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteSlice1000Float32s",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -2061,7 +2053,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteSlice1000Int32s",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -2085,7 +2077,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteSlice1000Uint8s",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -2109,7 +2101,7 @@
                 "newPage": false,
                 "searchKey": "binary.BenchmarkWriteStruct",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "benchmark"
                 ]
@@ -2133,7 +2125,7 @@
                 "newPage": false,
                 "searchKey": "binary.PutUvarint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2155,7 +2147,7 @@
                 "newPage": false,
                 "searchKey": "binary.PutVarint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2177,7 +2169,7 @@
                 "newPage": false,
                 "searchKey": "binary.Read",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2199,7 +2191,7 @@
                 "newPage": false,
                 "searchKey": "binary.ReadUvarint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2221,7 +2213,7 @@
                 "newPage": false,
                 "searchKey": "binary.ReadVarint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2243,7 +2235,7 @@
                 "newPage": false,
                 "searchKey": "binary.Size",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2265,7 +2257,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestBigEndianPtrWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2289,7 +2281,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestBigEndianRead",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2313,7 +2305,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestBigEndianWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2337,7 +2329,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestBlankFields",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2361,7 +2353,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestBufferTooBigWithOverflow",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2385,7 +2377,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestBufferTooSmall",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2409,7 +2401,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestConstants",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2433,7 +2425,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestEarlyBoundsChecks",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2457,7 +2449,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestLittleEndianPtrWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2481,7 +2473,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestLittleEndianRead",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2505,7 +2497,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestLittleEndianWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2529,7 +2521,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestNonCanonicalZero",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2553,7 +2545,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestOverflow",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2577,7 +2569,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestReadBool",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2601,7 +2593,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestReadBoolSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2625,7 +2617,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestReadErrorMsg",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2649,7 +2641,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestReadInvalidDestination",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2673,7 +2665,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestReadSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2697,7 +2689,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestReadTruncated",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2721,7 +2713,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestSizeStructCache",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2745,7 +2737,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestSliceRoundTrip",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2769,7 +2761,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestUnexportedRead",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2793,7 +2785,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestUvarint",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2817,7 +2809,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestVarint",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2841,7 +2833,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestWriteSlice",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2865,7 +2857,7 @@
                 "newPage": false,
                 "searchKey": "binary.TestWriteT",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -2889,7 +2881,7 @@
                 "newPage": false,
                 "searchKey": "binary.Uvarint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2911,7 +2903,7 @@
                 "newPage": false,
                 "searchKey": "binary.Varint",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2933,7 +2925,7 @@
                 "newPage": false,
                 "searchKey": "binary.Write",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -2955,7 +2947,7 @@
                 "newPage": false,
                 "searchKey": "binary.checkResult",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -2978,7 +2970,7 @@
                 "newPage": false,
                 "searchKey": "binary.dataSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3001,7 +2993,7 @@
                 "newPage": false,
                 "searchKey": "binary.intDataSize",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3024,7 +3016,7 @@
                 "newPage": false,
                 "searchKey": "binary.sizeof",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3047,7 +3039,7 @@
                 "newPage": false,
                 "searchKey": "binary.testConstant",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3070,7 +3062,7 @@
                 "newPage": false,
                 "searchKey": "binary.testOverflow",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3116,7 +3108,7 @@
                 "newPage": false,
                 "searchKey": "binary.testRead",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3139,7 +3131,7 @@
                 "newPage": false,
                 "searchKey": "binary.testReadInvalidDestination",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3185,7 +3177,7 @@
                 "newPage": false,
                 "searchKey": "binary.testUvarint",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3208,7 +3200,7 @@
                 "newPage": false,
                 "searchKey": "binary.testVarint",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -3231,7 +3223,7 @@
                 "newPage": false,
                 "searchKey": "binary.testWrite",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },

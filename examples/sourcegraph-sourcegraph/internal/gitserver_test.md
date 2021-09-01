@@ -14,14 +14,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="TestAddrForRepo" href="#TestAddrForRepo">func TestAddrForRepo(t *testing.T)</a>
 
 ```
 searchKey: gitserver_test.TestAddrForRepo
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -32,7 +32,7 @@ func TestAddrForRepo(t *testing.T)
 
 ```
 searchKey: gitserver_test.TestClient_Archive
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -43,7 +43,7 @@ func TestClient_Archive(t *testing.T)
 
 ```
 searchKey: gitserver_test.TestClient_ListCloned
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -54,7 +54,7 @@ func TestClient_ListCloned(t *testing.T)
 
 ```
 searchKey: gitserver_test.TestClient_P4Exec
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -65,7 +65,7 @@ func TestClient_P4Exec(t *testing.T)
 
 ```
 searchKey: gitserver_test.createRepoWithDotGitDir
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go
@@ -76,7 +76,7 @@ func createRepoWithDotGitDir(t *testing.T, root string) string
 
 ```
 searchKey: gitserver_test.createSimpleGitRepo
-tags: [method private]
+tags: [function private]
 ```
 
 ```Go

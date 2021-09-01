@@ -12,7 +12,7 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [package private]
+tags: [private]
 ```
 
 ### <a id="ExampleEval" href="#ExampleEval">func ExampleEval()</a>
@@ -41,7 +41,7 @@ func ExampleEval_types()
 
 ```
 searchKey: query_test.TestEval_cornercase
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go
@@ -52,7 +52,7 @@ func TestEval_cornercase(t *testing.T)
 
 ```
 searchKey: query_test.TestEval_error
-tags: [method private test]
+tags: [function private test]
 ```
 
 ```Go

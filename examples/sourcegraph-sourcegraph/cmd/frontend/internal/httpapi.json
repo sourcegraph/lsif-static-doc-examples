@@ -5,8 +5,8 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/httpapi",
     "tags": [
-      "package",
-      "private"
+      "private",
+      "package"
     ]
   },
   "label": {
@@ -26,7 +26,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -147,7 +146,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -516,7 +514,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.suffixIndexers.Enabled",
                       "tags": [
-                        "function",
+                        "method",
                         "private"
                       ]
                     },
@@ -591,7 +589,6 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
-            "package",
             "private"
           ]
         },
@@ -612,7 +609,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.AccessTokenAuthMiddleware",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -634,7 +631,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.NewHandler",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -656,7 +653,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.NewInternalHandler",
                 "tags": [
-                  "method"
+                  "function"
                 ]
               },
               "label": {
@@ -678,7 +675,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.TestAccessTokenAuthMiddleware",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -702,7 +699,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.TestGitServiceHandlers",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -726,7 +723,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.TestRepoRankFromConfig",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -750,7 +747,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.TestRepoRefresh",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -774,7 +771,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.TestRepoShield",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -798,7 +795,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.TestRepoShieldFmt",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -822,7 +819,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.TestReposIndex",
                 "tags": [
-                  "method",
+                  "function",
                   "private",
                   "test"
                 ]
@@ -846,7 +843,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.badgeValue",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -869,7 +866,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.badgeValueFmt",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -892,7 +889,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.getUID",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -915,7 +912,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.handlePing",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1007,7 +1004,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.isExpectedRelease",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1030,7 +1027,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.jsonMiddleware",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1076,7 +1073,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.repoRankFromConfig",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1099,7 +1096,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveCanSendEmail",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1122,7 +1119,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveConfiguration",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1145,7 +1142,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveExternalServiceConfigs",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1168,7 +1165,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveExternalServicesList",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1191,7 +1188,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveExternalURL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1214,7 +1211,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveGitExec",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1237,7 +1234,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveGitResolveRevision",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1260,7 +1257,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveGitTar",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1283,7 +1280,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveGraphQL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1306,7 +1303,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveOrgsGetByName",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1329,7 +1326,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveOrgsListUsers",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1352,7 +1349,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.servePhabricatorRepoCreate",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1375,7 +1372,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveRepoRefresh",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1398,7 +1395,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveRepoShield",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1421,7 +1418,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveReposGetByName",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1444,7 +1441,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveReposListEnabled",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1467,7 +1464,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveSavedQueriesDeleteInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1490,7 +1487,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveSavedQueriesGetInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1513,7 +1510,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveSavedQueriesListAll",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1536,7 +1533,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveSavedQueriesSetInfo",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1559,7 +1556,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveSearchConfiguration",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1582,7 +1579,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveSendEmail",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1605,7 +1602,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveSettingsGetForSubject",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1628,7 +1625,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveUserEmailsGetEmail",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1651,7 +1648,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.serveUsersGetByUsername",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1674,7 +1671,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.srcCliDownloadServe",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1720,7 +1717,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.srcCliVersionServe",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1743,7 +1740,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.telemetryHandler",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1766,7 +1763,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.traceGraphQL",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
@@ -1789,7 +1786,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.writeJSON",
                 "tags": [
-                  "method",
+                  "function",
                   "private"
                 ]
               },
