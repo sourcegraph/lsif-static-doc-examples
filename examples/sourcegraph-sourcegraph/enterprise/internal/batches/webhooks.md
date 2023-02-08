@@ -342,7 +342,7 @@ tags: [method private]
 func (h *GitHubWebhook) handleGitHubWebhook(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error
 ```
 
-handleGithubWebhook is the entry point for webhooks from the webhook router, see the events it's registered to handle in GitHubWebhook.Register 
+handleGitHubWebhook is the entry point for webhooks from the webhook router, see the events it's registered to handle in GitHubWebhook.Register 
 
 #### <a id="GitHubWebhook.issueComment" href="#GitHubWebhook.issueComment">func (*GitHubWebhook) issueComment(e *gh.IssueCommentEvent) *github.IssueComment</a>
 

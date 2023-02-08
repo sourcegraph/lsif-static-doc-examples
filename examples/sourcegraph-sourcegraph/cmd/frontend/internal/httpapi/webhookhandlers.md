@@ -87,7 +87,7 @@ tags: [function private]
 func handleGitHubRepoAuthzEvent(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error
 ```
 
-handleGithubRepoAuthzEvent handles any github event containing a repository field, and enqueues the contained repo for permissions synchronisation. 
+handleGitHubRepoAuthzEvent handles any github event containing a repository field, and enqueues the contained repo for permissions synchronisation. 
 
 ### <a id="handleGitHubUserAuthzEvent" href="#handleGitHubUserAuthzEvent">func handleGitHubUserAuthzEvent(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error</a>
 

@@ -121,29 +121,29 @@ Package repos providers workers to monitor code host APIs.
         * [func (s *GitLabSource) listAllProjects(ctx context.Context, results chan SourceResult)](#GitLabSource.listAllProjects)
         * [func (s GitLabSource) makeRepo(proj *gitlab.Project) *types.Repo](#GitLabSource.makeRepo)
         * [func (s *GitLabSource) remoteURL(proj *gitlab.Project) string](#GitLabSource.remoteURL)
-    * [type GithubSource struct](#GithubSource)
-        * [func NewGithubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GithubSource, error)](#NewGithubSource)
-        * [func newGithubSource(svc *types.ExternalService, c *schema.GitHubConnection, cf *httpcli.Factory) (*GithubSource, error)](#newGithubSource)
-        * [func (s *GithubSource) AffiliatedRepositories(ctx context.Context) ([]types.CodeHostRepository, error)](#GithubSource.AffiliatedRepositories)
-        * [func (s GithubSource) ExternalServices() types.ExternalServices](#GithubSource.ExternalServices)
-        * [func (s GithubSource) GetRepo(ctx context.Context, nameWithOwner string) (*types.Repo, error)](#GithubSource.GetRepo)
-        * [func (s GithubSource) ListRepos(ctx context.Context, results chan SourceResult)](#GithubSource.ListRepos)
-        * [func (s GithubSource) ValidateAuthenticator(ctx context.Context) error](#GithubSource.ValidateAuthenticator)
-        * [func (s GithubSource) WithAuthenticator(a auth.Authenticator) (Source, error)](#GithubSource.WithAuthenticator)
-        * [func (s *GithubSource) excludes(r *github.Repository) bool](#GithubSource.excludes)
-        * [func (s *GithubSource) fetchAllRepositoriesInBatches(ctx context.Context, results chan *githubResult) error](#GithubSource.fetchAllRepositoriesInBatches)
-        * [func (s *GithubSource) getRepository(ctx context.Context, nameWithOwner string) (*github.Repository, error)](#GithubSource.getRepository)
-        * [func (s *GithubSource) listAffiliated(ctx context.Context, results chan *githubResult)](#GithubSource.listAffiliated)
-        * [func (s *GithubSource) listAllRepositories(ctx context.Context, results chan *githubResult)](#GithubSource.listAllRepositories)
-        * [func (s *GithubSource) listOrg(ctx context.Context, org string, results chan *githubResult)](#GithubSource.listOrg)
-        * [func (s *GithubSource) listPublic(ctx context.Context, results chan *githubResult)](#GithubSource.listPublic)
-        * [func (s *GithubSource) listRepos(ctx context.Context, repos []string, results chan *githubResult)](#GithubSource.listRepos)
-        * [func (s *GithubSource) listRepositoryQuery(ctx context.Context, query string, results chan *githubResult)](#GithubSource.listRepositoryQuery)
-        * [func (s *GithubSource) listSearch(ctx context.Context, query string, results chan *githubResult)](#GithubSource.listSearch)
-        * [func (s *GithubSource) listUser(ctx context.Context, user string, results chan *githubResult) (fail error)](#GithubSource.listUser)
-        * [func (s GithubSource) makeRepo(r *github.Repository) *types.Repo](#GithubSource.makeRepo)
-        * [func (s *GithubSource) paginate(ctx context.Context, results chan *githubResult, pager repositoryPager)](#GithubSource.paginate)
-        * [func (s *GithubSource) remoteURL(repo *github.Repository) string](#GithubSource.remoteURL)
+    * [type GitHubSource struct](#GitHubSource)
+        * [func NewGitHubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GitHubSource, error)](#NewGitHubSource)
+        * [func newGitHubSource(svc *types.ExternalService, c *schema.GitHubConnection, cf *httpcli.Factory) (*GitHubSource, error)](#newGitHubSource)
+        * [func (s *GitHubSource) AffiliatedRepositories(ctx context.Context) ([]types.CodeHostRepository, error)](#GitHubSource.AffiliatedRepositories)
+        * [func (s GitHubSource) ExternalServices() types.ExternalServices](#GitHubSource.ExternalServices)
+        * [func (s GitHubSource) GetRepo(ctx context.Context, nameWithOwner string) (*types.Repo, error)](#GitHubSource.GetRepo)
+        * [func (s GitHubSource) ListRepos(ctx context.Context, results chan SourceResult)](#GitHubSource.ListRepos)
+        * [func (s GitHubSource) ValidateAuthenticator(ctx context.Context) error](#GitHubSource.ValidateAuthenticator)
+        * [func (s GitHubSource) WithAuthenticator(a auth.Authenticator) (Source, error)](#GitHubSource.WithAuthenticator)
+        * [func (s *GitHubSource) excludes(r *github.Repository) bool](#GitHubSource.excludes)
+        * [func (s *GitHubSource) fetchAllRepositoriesInBatches(ctx context.Context, results chan *githubResult) error](#GitHubSource.fetchAllRepositoriesInBatches)
+        * [func (s *GitHubSource) getRepository(ctx context.Context, nameWithOwner string) (*github.Repository, error)](#GitHubSource.getRepository)
+        * [func (s *GitHubSource) listAffiliated(ctx context.Context, results chan *githubResult)](#GitHubSource.listAffiliated)
+        * [func (s *GitHubSource) listAllRepositories(ctx context.Context, results chan *githubResult)](#GitHubSource.listAllRepositories)
+        * [func (s *GitHubSource) listOrg(ctx context.Context, org string, results chan *githubResult)](#GitHubSource.listOrg)
+        * [func (s *GitHubSource) listPublic(ctx context.Context, results chan *githubResult)](#GitHubSource.listPublic)
+        * [func (s *GitHubSource) listRepos(ctx context.Context, repos []string, results chan *githubResult)](#GitHubSource.listRepos)
+        * [func (s *GitHubSource) listRepositoryQuery(ctx context.Context, query string, results chan *githubResult)](#GitHubSource.listRepositoryQuery)
+        * [func (s *GitHubSource) listSearch(ctx context.Context, query string, results chan *githubResult)](#GitHubSource.listSearch)
+        * [func (s *GitHubSource) listUser(ctx context.Context, user string, results chan *githubResult) (fail error)](#GitHubSource.listUser)
+        * [func (s GitHubSource) makeRepo(r *github.Repository) *types.Repo](#GitHubSource.makeRepo)
+        * [func (s *GitHubSource) paginate(ctx context.Context, results chan *githubResult, pager repositoryPager)](#GitHubSource.paginate)
+        * [func (s *GitHubSource) remoteURL(repo *github.Repository) string](#GitHubSource.remoteURL)
     * [type GitolitePhabricatorMetadataSyncer struct](#GitolitePhabricatorMetadataSyncer)
         * [func NewGitolitePhabricatorMetadataSyncer(s *Store) *GitolitePhabricatorMetadataSyncer](#NewGitolitePhabricatorMetadataSyncer)
         * [func (s *GitolitePhabricatorMetadataSyncer) Sync(ctx context.Context, repos []*types.Repo) error](#GitolitePhabricatorMetadataSyncer.Sync)
@@ -337,11 +337,11 @@ Package repos providers workers to monitor code host APIs.
     * [func TestGitLabSource_GetRepo(t *testing.T)](#TestGitLabSource_GetRepo)
     * [func TestGitLabSource_WithAuthenticator(t *testing.T)](#TestGitLabSource_WithAuthenticator)
     * [func TestGitLabSource_makeRepo(t *testing.T)](#TestGitLabSource_makeRepo)
-    * [func TestGithubSource_GetRepo(t *testing.T)](#TestGithubSource_GetRepo)
-    * [func TestGithubSource_ListRepos(t *testing.T)](#TestGithubSource_ListRepos)
-    * [func TestGithubSource_WithAuthenticator(t *testing.T)](#TestGithubSource_WithAuthenticator)
-    * [func TestGithubSource_excludes_disabledAndLocked(t *testing.T)](#TestGithubSource_excludes_disabledAndLocked)
-    * [func TestGithubSource_makeRepo(t *testing.T)](#TestGithubSource_makeRepo)
+    * [func TestGitHubSource_GetRepo(t *testing.T)](#TestGitHubSource_GetRepo)
+    * [func TestGitHubSource_ListRepos(t *testing.T)](#TestGitHubSource_ListRepos)
+    * [func TestGitHubSource_WithAuthenticator(t *testing.T)](#TestGitHubSource_WithAuthenticator)
+    * [func TestGitHubSource_excludes_disabledAndLocked(t *testing.T)](#TestGitHubSource_excludes_disabledAndLocked)
+    * [func TestGitHubSource_makeRepo(t *testing.T)](#TestGitHubSource_makeRepo)
     * [func TestGrantedScopes(t *testing.T)](#TestGrantedScopes)
     * [func TestHashToken(t *testing.T)](#TestHashToken)
     * [func TestIsSaturdayNight(t *testing.T)](#TestIsSaturdayNight)
@@ -1836,15 +1836,15 @@ remoteURL returns the GitLab projects's Git remote URL
 
 note: this used to contain credentials but that is no longer the case if you need to get an authenticated clone url use repos.CloneURL 
 
-### <a id="GithubSource" href="#GithubSource">type GithubSource struct</a>
+### <a id="GitHubSource" href="#GitHubSource">type GitHubSource struct</a>
 
 ```
-searchKey: repos.GithubSource
+searchKey: repos.GitHubSource
 tags: [struct]
 ```
 
 ```Go
-type GithubSource struct {
+type GitHubSource struct {
 	svc             *types.ExternalService
 	config          *schema.GitHubConnection
 	exclude         excludeFunc
@@ -1864,282 +1864,282 @@ type GithubSource struct {
 }
 ```
 
-A GithubSource yields repositories from a single Github connection configured in Sourcegraph via the external services configuration. 
+A GitHubSource yields repositories from a single GitHub connection configured in Sourcegraph via the external services configuration. 
 
-#### <a id="NewGithubSource" href="#NewGithubSource">func NewGithubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GithubSource, error)</a>
+#### <a id="NewGitHubSource" href="#NewGitHubSource">func NewGitHubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GitHubSource, error)</a>
 
 ```
-searchKey: repos.NewGithubSource
+searchKey: repos.NewGitHubSource
 tags: [function]
 ```
 
 ```Go
-func NewGithubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GithubSource, error)
+func NewGitHubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GitHubSource, error)
 ```
 
-NewGithubSource returns a new GithubSource from the given external service. 
+NewGitHubSource returns a new GitHubSource from the given external service. 
 
-#### <a id="newGithubSource" href="#newGithubSource">func newGithubSource(svc *types.ExternalService, c *schema.GitHubConnection, cf *httpcli.Factory) (*GithubSource, error)</a>
+#### <a id="newGitHubSource" href="#newGitHubSource">func newGitHubSource(svc *types.ExternalService, c *schema.GitHubConnection, cf *httpcli.Factory) (*GitHubSource, error)</a>
 
 ```
-searchKey: repos.newGithubSource
+searchKey: repos.newGitHubSource
 tags: [function private]
 ```
 
 ```Go
-func newGithubSource(svc *types.ExternalService, c *schema.GitHubConnection, cf *httpcli.Factory) (*GithubSource, error)
+func newGitHubSource(svc *types.ExternalService, c *schema.GitHubConnection, cf *httpcli.Factory) (*GitHubSource, error)
 ```
 
-#### <a id="GithubSource.AffiliatedRepositories" href="#GithubSource.AffiliatedRepositories">func (s *GithubSource) AffiliatedRepositories(ctx context.Context) ([]types.CodeHostRepository, error)</a>
+#### <a id="GitHubSource.AffiliatedRepositories" href="#GitHubSource.AffiliatedRepositories">func (s *GitHubSource) AffiliatedRepositories(ctx context.Context) ([]types.CodeHostRepository, error)</a>
 
 ```
-searchKey: repos.GithubSource.AffiliatedRepositories
+searchKey: repos.GitHubSource.AffiliatedRepositories
 tags: [method]
 ```
 
 ```Go
-func (s *GithubSource) AffiliatedRepositories(ctx context.Context) ([]types.CodeHostRepository, error)
+func (s *GitHubSource) AffiliatedRepositories(ctx context.Context) ([]types.CodeHostRepository, error)
 ```
 
-#### <a id="GithubSource.ExternalServices" href="#GithubSource.ExternalServices">func (s GithubSource) ExternalServices() types.ExternalServices</a>
+#### <a id="GitHubSource.ExternalServices" href="#GitHubSource.ExternalServices">func (s GitHubSource) ExternalServices() types.ExternalServices</a>
 
 ```
-searchKey: repos.GithubSource.ExternalServices
+searchKey: repos.GitHubSource.ExternalServices
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) ExternalServices() types.ExternalServices
+func (s GitHubSource) ExternalServices() types.ExternalServices
 ```
 
 ExternalServices returns a singleton slice containing the external service. 
 
-#### <a id="GithubSource.GetRepo" href="#GithubSource.GetRepo">func (s GithubSource) GetRepo(ctx context.Context, nameWithOwner string) (*types.Repo, error)</a>
+#### <a id="GitHubSource.GetRepo" href="#GitHubSource.GetRepo">func (s GitHubSource) GetRepo(ctx context.Context, nameWithOwner string) (*types.Repo, error)</a>
 
 ```
-searchKey: repos.GithubSource.GetRepo
+searchKey: repos.GitHubSource.GetRepo
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) GetRepo(ctx context.Context, nameWithOwner string) (*types.Repo, error)
+func (s GitHubSource) GetRepo(ctx context.Context, nameWithOwner string) (*types.Repo, error)
 ```
 
-GetRepo returns the Github repository with the given name and owner ("org/repo-name") 
+GetRepo returns the GitHub repository with the given name and owner ("org/repo-name") 
 
-#### <a id="GithubSource.ListRepos" href="#GithubSource.ListRepos">func (s GithubSource) ListRepos(ctx context.Context, results chan SourceResult)</a>
+#### <a id="GitHubSource.ListRepos" href="#GitHubSource.ListRepos">func (s GitHubSource) ListRepos(ctx context.Context, results chan SourceResult)</a>
 
 ```
-searchKey: repos.GithubSource.ListRepos
+searchKey: repos.GitHubSource.ListRepos
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) ListRepos(ctx context.Context, results chan SourceResult)
+func (s GitHubSource) ListRepos(ctx context.Context, results chan SourceResult)
 ```
 
-ListRepos returns all Github repositories accessible to all connections configured in Sourcegraph via the external services configuration. 
+ListRepos returns all GitHub repositories accessible to all connections configured in Sourcegraph via the external services configuration. 
 
-#### <a id="GithubSource.ValidateAuthenticator" href="#GithubSource.ValidateAuthenticator">func (s GithubSource) ValidateAuthenticator(ctx context.Context) error</a>
+#### <a id="GitHubSource.ValidateAuthenticator" href="#GitHubSource.ValidateAuthenticator">func (s GitHubSource) ValidateAuthenticator(ctx context.Context) error</a>
 
 ```
-searchKey: repos.GithubSource.ValidateAuthenticator
+searchKey: repos.GitHubSource.ValidateAuthenticator
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) ValidateAuthenticator(ctx context.Context) error
+func (s GitHubSource) ValidateAuthenticator(ctx context.Context) error
 ```
 
-#### <a id="GithubSource.WithAuthenticator" href="#GithubSource.WithAuthenticator">func (s GithubSource) WithAuthenticator(a auth.Authenticator) (Source, error)</a>
+#### <a id="GitHubSource.WithAuthenticator" href="#GitHubSource.WithAuthenticator">func (s GitHubSource) WithAuthenticator(a auth.Authenticator) (Source, error)</a>
 
 ```
-searchKey: repos.GithubSource.WithAuthenticator
+searchKey: repos.GitHubSource.WithAuthenticator
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) WithAuthenticator(a auth.Authenticator) (Source, error)
+func (s GitHubSource) WithAuthenticator(a auth.Authenticator) (Source, error)
 ```
 
-#### <a id="GithubSource.excludes" href="#GithubSource.excludes">func (s *GithubSource) excludes(r *github.Repository) bool</a>
+#### <a id="GitHubSource.excludes" href="#GitHubSource.excludes">func (s *GitHubSource) excludes(r *github.Repository) bool</a>
 
 ```
-searchKey: repos.GithubSource.excludes
+searchKey: repos.GitHubSource.excludes
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) excludes(r *github.Repository) bool
+func (s *GitHubSource) excludes(r *github.Repository) bool
 ```
 
-#### <a id="GithubSource.fetchAllRepositoriesInBatches" href="#GithubSource.fetchAllRepositoriesInBatches">func (s *GithubSource) fetchAllRepositoriesInBatches(ctx context.Context, results chan *githubResult) error</a>
+#### <a id="GitHubSource.fetchAllRepositoriesInBatches" href="#GitHubSource.fetchAllRepositoriesInBatches">func (s *GitHubSource) fetchAllRepositoriesInBatches(ctx context.Context, results chan *githubResult) error</a>
 
 ```
-searchKey: repos.GithubSource.fetchAllRepositoriesInBatches
+searchKey: repos.GitHubSource.fetchAllRepositoriesInBatches
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) fetchAllRepositoriesInBatches(ctx context.Context, results chan *githubResult) error
+func (s *GitHubSource) fetchAllRepositoriesInBatches(ctx context.Context, results chan *githubResult) error
 ```
 
 fetchAllRepositoriesInBatches fetches the repositories configured in config.Repos in batches and adds them to the supplied set 
 
-#### <a id="GithubSource.getRepository" href="#GithubSource.getRepository">func (s *GithubSource) getRepository(ctx context.Context, nameWithOwner string) (*github.Repository, error)</a>
+#### <a id="GitHubSource.getRepository" href="#GitHubSource.getRepository">func (s *GitHubSource) getRepository(ctx context.Context, nameWithOwner string) (*github.Repository, error)</a>
 
 ```
-searchKey: repos.GithubSource.getRepository
+searchKey: repos.GitHubSource.getRepository
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) getRepository(ctx context.Context, nameWithOwner string) (*github.Repository, error)
+func (s *GitHubSource) getRepository(ctx context.Context, nameWithOwner string) (*github.Repository, error)
 ```
 
-#### <a id="GithubSource.listAffiliated" href="#GithubSource.listAffiliated">func (s *GithubSource) listAffiliated(ctx context.Context, results chan *githubResult)</a>
+#### <a id="GitHubSource.listAffiliated" href="#GitHubSource.listAffiliated">func (s *GitHubSource) listAffiliated(ctx context.Context, results chan *githubResult)</a>
 
 ```
-searchKey: repos.GithubSource.listAffiliated
+searchKey: repos.GitHubSource.listAffiliated
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) listAffiliated(ctx context.Context, results chan *githubResult)
+func (s *GitHubSource) listAffiliated(ctx context.Context, results chan *githubResult)
 ```
 
 listAffiliated handles the `affiliated` keyword of the `repositoryQuery` config option. It returns the repositories affiliated with the client token by hitting the /user/repos endpoint. 
 
 Affiliation is present if the user: (1) owns the repo, (2) is apart of an org that the repo belongs to, or (3) is a collaborator. 
 
-#### <a id="GithubSource.listAllRepositories" href="#GithubSource.listAllRepositories">func (s *GithubSource) listAllRepositories(ctx context.Context, results chan *githubResult)</a>
+#### <a id="GitHubSource.listAllRepositories" href="#GitHubSource.listAllRepositories">func (s *GitHubSource) listAllRepositories(ctx context.Context, results chan *githubResult)</a>
 
 ```
-searchKey: repos.GithubSource.listAllRepositories
+searchKey: repos.GitHubSource.listAllRepositories
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) listAllRepositories(ctx context.Context, results chan *githubResult)
+func (s *GitHubSource) listAllRepositories(ctx context.Context, results chan *githubResult)
 ```
 
 listAllRepositories returns the repositories from the given `orgs`, `repos`, and `repositoryQuery` config options excluding the ones specified by `exclude`. 
 
-#### <a id="GithubSource.listOrg" href="#GithubSource.listOrg">func (s *GithubSource) listOrg(ctx context.Context, org string, results chan *githubResult)</a>
+#### <a id="GitHubSource.listOrg" href="#GitHubSource.listOrg">func (s *GitHubSource) listOrg(ctx context.Context, org string, results chan *githubResult)</a>
 
 ```
-searchKey: repos.GithubSource.listOrg
+searchKey: repos.GitHubSource.listOrg
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) listOrg(ctx context.Context, org string, results chan *githubResult)
+func (s *GitHubSource) listOrg(ctx context.Context, org string, results chan *githubResult)
 ```
 
 listOrg handles the `org` config option. It returns all the repositories belonging to the given organization by hitting the /orgs/:org/repos endpoint. 
 
 It returns an error if the request fails on the first page. 
 
-#### <a id="GithubSource.listPublic" href="#GithubSource.listPublic">func (s *GithubSource) listPublic(ctx context.Context, results chan *githubResult)</a>
+#### <a id="GitHubSource.listPublic" href="#GitHubSource.listPublic">func (s *GitHubSource) listPublic(ctx context.Context, results chan *githubResult)</a>
 
 ```
-searchKey: repos.GithubSource.listPublic
+searchKey: repos.GitHubSource.listPublic
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) listPublic(ctx context.Context, results chan *githubResult)
+func (s *GitHubSource) listPublic(ctx context.Context, results chan *githubResult)
 ```
 
 listPublic handles the `public` keyword of the `repositoryQuery` config option. It returns the public repositories listed on the /repositories endpoint. 
 
-#### <a id="GithubSource.listRepos" href="#GithubSource.listRepos">func (s *GithubSource) listRepos(ctx context.Context, repos []string, results chan *githubResult)</a>
+#### <a id="GitHubSource.listRepos" href="#GitHubSource.listRepos">func (s *GitHubSource) listRepos(ctx context.Context, repos []string, results chan *githubResult)</a>
 
 ```
-searchKey: repos.GithubSource.listRepos
+searchKey: repos.GitHubSource.listRepos
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) listRepos(ctx context.Context, repos []string, results chan *githubResult)
+func (s *GitHubSource) listRepos(ctx context.Context, repos []string, results chan *githubResult)
 ```
 
 listRepos returns the valid repositories from the given list of repository names. This is done by hitting the /repos/:owner/:name endpoint for each of the given repository names. 
 
-#### <a id="GithubSource.listRepositoryQuery" href="#GithubSource.listRepositoryQuery">func (s *GithubSource) listRepositoryQuery(ctx context.Context, query string, results chan *githubResult)</a>
+#### <a id="GitHubSource.listRepositoryQuery" href="#GitHubSource.listRepositoryQuery">func (s *GitHubSource) listRepositoryQuery(ctx context.Context, query string, results chan *githubResult)</a>
 
 ```
-searchKey: repos.GithubSource.listRepositoryQuery
+searchKey: repos.GitHubSource.listRepositoryQuery
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) listRepositoryQuery(ctx context.Context, query string, results chan *githubResult)
+func (s *GitHubSource) listRepositoryQuery(ctx context.Context, query string, results chan *githubResult)
 ```
 
 listRepositoryQuery handles the `repositoryQuery` config option. The supported keywords to select repositories are: - `public`: public repositories (from endpoint: /repositories) - `affiliated`: repositories affiliated with client token (from endpoint: /user/repos) - `none`: disables `repositoryQuery` Inputs other than these three keywords will be queried using GitHub advanced repository search (endpoint: /search/repositories) 
 
-#### <a id="GithubSource.listSearch" href="#GithubSource.listSearch">func (s *GithubSource) listSearch(ctx context.Context, query string, results chan *githubResult)</a>
+#### <a id="GitHubSource.listSearch" href="#GitHubSource.listSearch">func (s *GitHubSource) listSearch(ctx context.Context, query string, results chan *githubResult)</a>
 
 ```
-searchKey: repos.GithubSource.listSearch
+searchKey: repos.GitHubSource.listSearch
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) listSearch(ctx context.Context, query string, results chan *githubResult)
+func (s *GitHubSource) listSearch(ctx context.Context, query string, results chan *githubResult)
 ```
 
 listSearch handles the `repositoryQuery` config option when a keyword is not present. It returns the repositories resulting from from GitHub's advanced repository search by hitting the /search/repositories endpoint. 
 
-#### <a id="GithubSource.listUser" href="#GithubSource.listUser">func (s *GithubSource) listUser(ctx context.Context, user string, results chan *githubResult) (fail error)</a>
+#### <a id="GitHubSource.listUser" href="#GitHubSource.listUser">func (s *GitHubSource) listUser(ctx context.Context, user string, results chan *githubResult) (fail error)</a>
 
 ```
-searchKey: repos.GithubSource.listUser
+searchKey: repos.GitHubSource.listUser
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) listUser(ctx context.Context, user string, results chan *githubResult) (fail error)
+func (s *GitHubSource) listUser(ctx context.Context, user string, results chan *githubResult) (fail error)
 ```
 
 listUser returns all the repositories belonging to the given user by hitting the /users/:user/repos endpoint. 
 
 It returns an error if the request fails on the first page. 
 
-#### <a id="GithubSource.makeRepo" href="#GithubSource.makeRepo">func (s GithubSource) makeRepo(r *github.Repository) *types.Repo</a>
+#### <a id="GitHubSource.makeRepo" href="#GitHubSource.makeRepo">func (s GitHubSource) makeRepo(r *github.Repository) *types.Repo</a>
 
 ```
-searchKey: repos.GithubSource.makeRepo
+searchKey: repos.GitHubSource.makeRepo
 tags: [method private]
 ```
 
 ```Go
-func (s GithubSource) makeRepo(r *github.Repository) *types.Repo
+func (s GitHubSource) makeRepo(r *github.Repository) *types.Repo
 ```
 
-#### <a id="GithubSource.paginate" href="#GithubSource.paginate">func (s *GithubSource) paginate(ctx context.Context, results chan *githubResult, pager repositoryPager)</a>
+#### <a id="GitHubSource.paginate" href="#GitHubSource.paginate">func (s *GitHubSource) paginate(ctx context.Context, results chan *githubResult, pager repositoryPager)</a>
 
 ```
-searchKey: repos.GithubSource.paginate
+searchKey: repos.GitHubSource.paginate
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) paginate(ctx context.Context, results chan *githubResult, pager repositoryPager)
+func (s *GitHubSource) paginate(ctx context.Context, results chan *githubResult, pager repositoryPager)
 ```
 
 paginate returns all the repositories from the given repositoryPager. It repeatedly calls `pager` with incrementing page count until it returns false for hasNext. 
 
-#### <a id="GithubSource.remoteURL" href="#GithubSource.remoteURL">func (s *GithubSource) remoteURL(repo *github.Repository) string</a>
+#### <a id="GitHubSource.remoteURL" href="#GitHubSource.remoteURL">func (s *GitHubSource) remoteURL(repo *github.Repository) string</a>
 
 ```
-searchKey: repos.GithubSource.remoteURL
+searchKey: repos.GitHubSource.remoteURL
 tags: [method private]
 ```
 
 ```Go
-func (s *GithubSource) remoteURL(repo *github.Repository) string
+func (s *GitHubSource) remoteURL(repo *github.Repository) string
 ```
 
 remoteURL returns the repository's Git remote URL 
@@ -4777,59 +4777,59 @@ tags: [function private test]
 func TestGitLabSource_makeRepo(t *testing.T)
 ```
 
-### <a id="TestGithubSource_GetRepo" href="#TestGithubSource_GetRepo">func TestGithubSource_GetRepo(t *testing.T)</a>
+### <a id="TestGitHubSource_GetRepo" href="#TestGitHubSource_GetRepo">func TestGitHubSource_GetRepo(t *testing.T)</a>
 
 ```
-searchKey: repos.TestGithubSource_GetRepo
+searchKey: repos.TestGitHubSource_GetRepo
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_GetRepo(t *testing.T)
+func TestGitHubSource_GetRepo(t *testing.T)
 ```
 
-### <a id="TestGithubSource_ListRepos" href="#TestGithubSource_ListRepos">func TestGithubSource_ListRepos(t *testing.T)</a>
+### <a id="TestGitHubSource_ListRepos" href="#TestGitHubSource_ListRepos">func TestGitHubSource_ListRepos(t *testing.T)</a>
 
 ```
-searchKey: repos.TestGithubSource_ListRepos
+searchKey: repos.TestGitHubSource_ListRepos
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_ListRepos(t *testing.T)
+func TestGitHubSource_ListRepos(t *testing.T)
 ```
 
-### <a id="TestGithubSource_WithAuthenticator" href="#TestGithubSource_WithAuthenticator">func TestGithubSource_WithAuthenticator(t *testing.T)</a>
+### <a id="TestGitHubSource_WithAuthenticator" href="#TestGitHubSource_WithAuthenticator">func TestGitHubSource_WithAuthenticator(t *testing.T)</a>
 
 ```
-searchKey: repos.TestGithubSource_WithAuthenticator
+searchKey: repos.TestGitHubSource_WithAuthenticator
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_WithAuthenticator(t *testing.T)
+func TestGitHubSource_WithAuthenticator(t *testing.T)
 ```
 
-### <a id="TestGithubSource_excludes_disabledAndLocked" href="#TestGithubSource_excludes_disabledAndLocked">func TestGithubSource_excludes_disabledAndLocked(t *testing.T)</a>
+### <a id="TestGitHubSource_excludes_disabledAndLocked" href="#TestGitHubSource_excludes_disabledAndLocked">func TestGitHubSource_excludes_disabledAndLocked(t *testing.T)</a>
 
 ```
-searchKey: repos.TestGithubSource_excludes_disabledAndLocked
+searchKey: repos.TestGitHubSource_excludes_disabledAndLocked
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_excludes_disabledAndLocked(t *testing.T)
+func TestGitHubSource_excludes_disabledAndLocked(t *testing.T)
 ```
 
-### <a id="TestGithubSource_makeRepo" href="#TestGithubSource_makeRepo">func TestGithubSource_makeRepo(t *testing.T)</a>
+### <a id="TestGitHubSource_makeRepo" href="#TestGitHubSource_makeRepo">func TestGitHubSource_makeRepo(t *testing.T)</a>
 
 ```
-searchKey: repos.TestGithubSource_makeRepo
+searchKey: repos.TestGitHubSource_makeRepo
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_makeRepo(t *testing.T)
+func TestGitHubSource_makeRepo(t *testing.T)
 ```
 
 ### <a id="TestGrantedScopes" href="#TestGrantedScopes">func TestGrantedScopes(t *testing.T)</a>

@@ -85,7 +85,7 @@ Package types defines types used by the frontend.
     * [type Repo struct](#Repo)
         * [func MakeAWSCodeCommitRepo(services ...*ExternalService) *Repo](#MakeAWSCodeCommitRepo)
         * [func MakeBitbucketServerRepo(services ...*ExternalService) *Repo](#MakeBitbucketServerRepo)
-        * [func MakeGithubRepo(services ...*ExternalService) *Repo](#MakeGithubRepo)
+        * [func MakeGitHubRepo(services ...*ExternalService) *Repo](#MakeGitHubRepo)
         * [func MakeGitlabRepo(services ...*ExternalService) *Repo](#MakeGitlabRepo)
         * [func MakeGitoliteRepo(services ...*ExternalService) *Repo](#MakeGitoliteRepo)
         * [func MakeOtherRepo(services ...*ExternalService) *Repo](#MakeOtherRepo)
@@ -1457,18 +1457,18 @@ func MakeBitbucketServerRepo(services ...*ExternalService) *Repo
 
 MakeBitbucketServerRepo returns a configured Bitbucket Server repository. 
 
-#### <a id="MakeGithubRepo" href="#MakeGithubRepo">func MakeGithubRepo(services ...*ExternalService) *Repo</a>
+#### <a id="MakeGitHubRepo" href="#MakeGitHubRepo">func MakeGitHubRepo(services ...*ExternalService) *Repo</a>
 
 ```
-searchKey: types.MakeGithubRepo
+searchKey: types.MakeGitHubRepo
 tags: [function]
 ```
 
 ```Go
-func MakeGithubRepo(services ...*ExternalService) *Repo
+func MakeGitHubRepo(services ...*ExternalService) *Repo
 ```
 
-MakeGithubRepo returns a configured Github repository. 
+MakeGitHubRepo returns a configured GitHub repository. 
 
 #### <a id="MakeGitlabRepo" href="#MakeGitlabRepo">func MakeGitlabRepo(services ...*ExternalService) *Repo</a>
 

@@ -15,11 +15,11 @@
     * [type Registerer interface](#Registerer)
     * [type WebhookHandler func(ctx context.Context, extSvc *github.com/sourcegraph/sourcegraph/internal/types.ExternalService, event interface{}) error](#WebhookHandler)
 * [Functions](#func)
-    * [func TestGithubWebhookDispatchError(t *testing.T)](#TestGithubWebhookDispatchError)
-    * [func TestGithubWebhookDispatchNoHandler(t *testing.T)](#TestGithubWebhookDispatchNoHandler)
-    * [func TestGithubWebhookDispatchSuccess(t *testing.T)](#TestGithubWebhookDispatchSuccess)
-    * [func TestGithubWebhookDispatchSuccessMultiple(t *testing.T)](#TestGithubWebhookDispatchSuccessMultiple)
-    * [func TestGithubWebhookExternalServices(t *testing.T)](#TestGithubWebhookExternalServices)
+    * [func TestGitHubWebhookDispatchError(t *testing.T)](#TestGitHubWebhookDispatchError)
+    * [func TestGitHubWebhookDispatchNoHandler(t *testing.T)](#TestGitHubWebhookDispatchNoHandler)
+    * [func TestGitHubWebhookDispatchSuccess(t *testing.T)](#TestGitHubWebhookDispatchSuccess)
+    * [func TestGitHubWebhookDispatchSuccessMultiple(t *testing.T)](#TestGitHubWebhookDispatchSuccessMultiple)
+    * [func TestGitHubWebhookExternalServices(t *testing.T)](#TestGitHubWebhookExternalServices)
     * [func errString(err error) string](#errString)
     * [func marshalJSON(t testing.TB, v interface{}) string](#marshalJSON)
     * [func sign(t *testing.T, message, secret []byte) string](#sign)
@@ -67,7 +67,7 @@ type GitHubWebhook struct {
 }
 ```
 
-GitHubWebhook is responsible for handling incoming http requests for github webhooks and routing to any registered WebhookHandlers, events are routed by their event type, passed in the X-Github-Event header 
+GitHubWebhook is responsible for handling incoming http requests for github webhooks and routing to any registered WebhookHandlers, events are routed by their event type, passed in the X-GitHub-Event header 
 
 #### <a id="GitHubWebhook.Dispatch" href="#GitHubWebhook.Dispatch">func (h *GitHubWebhook) Dispatch(ctx context.Context, eventType string, extSvc *types.ExternalService, e interface{}) error</a>
 
@@ -158,59 +158,59 @@ WebhookHandler is a handler for a webhook event, the 'event' param could be any 
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="TestGithubWebhookDispatchError" href="#TestGithubWebhookDispatchError">func TestGithubWebhookDispatchError(t *testing.T)</a>
+### <a id="TestGitHubWebhookDispatchError" href="#TestGitHubWebhookDispatchError">func TestGitHubWebhookDispatchError(t *testing.T)</a>
 
 ```
-searchKey: webhooks.TestGithubWebhookDispatchError
+searchKey: webhooks.TestGitHubWebhookDispatchError
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubWebhookDispatchError(t *testing.T)
+func TestGitHubWebhookDispatchError(t *testing.T)
 ```
 
-### <a id="TestGithubWebhookDispatchNoHandler" href="#TestGithubWebhookDispatchNoHandler">func TestGithubWebhookDispatchNoHandler(t *testing.T)</a>
+### <a id="TestGitHubWebhookDispatchNoHandler" href="#TestGitHubWebhookDispatchNoHandler">func TestGitHubWebhookDispatchNoHandler(t *testing.T)</a>
 
 ```
-searchKey: webhooks.TestGithubWebhookDispatchNoHandler
+searchKey: webhooks.TestGitHubWebhookDispatchNoHandler
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubWebhookDispatchNoHandler(t *testing.T)
+func TestGitHubWebhookDispatchNoHandler(t *testing.T)
 ```
 
-### <a id="TestGithubWebhookDispatchSuccess" href="#TestGithubWebhookDispatchSuccess">func TestGithubWebhookDispatchSuccess(t *testing.T)</a>
+### <a id="TestGitHubWebhookDispatchSuccess" href="#TestGitHubWebhookDispatchSuccess">func TestGitHubWebhookDispatchSuccess(t *testing.T)</a>
 
 ```
-searchKey: webhooks.TestGithubWebhookDispatchSuccess
+searchKey: webhooks.TestGitHubWebhookDispatchSuccess
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubWebhookDispatchSuccess(t *testing.T)
+func TestGitHubWebhookDispatchSuccess(t *testing.T)
 ```
 
-### <a id="TestGithubWebhookDispatchSuccessMultiple" href="#TestGithubWebhookDispatchSuccessMultiple">func TestGithubWebhookDispatchSuccessMultiple(t *testing.T)</a>
+### <a id="TestGitHubWebhookDispatchSuccessMultiple" href="#TestGitHubWebhookDispatchSuccessMultiple">func TestGitHubWebhookDispatchSuccessMultiple(t *testing.T)</a>
 
 ```
-searchKey: webhooks.TestGithubWebhookDispatchSuccessMultiple
+searchKey: webhooks.TestGitHubWebhookDispatchSuccessMultiple
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubWebhookDispatchSuccessMultiple(t *testing.T)
+func TestGitHubWebhookDispatchSuccessMultiple(t *testing.T)
 ```
 
-### <a id="TestGithubWebhookExternalServices" href="#TestGithubWebhookExternalServices">func TestGithubWebhookExternalServices(t *testing.T)</a>
+### <a id="TestGitHubWebhookExternalServices" href="#TestGitHubWebhookExternalServices">func TestGitHubWebhookExternalServices(t *testing.T)</a>
 
 ```
-searchKey: webhooks.TestGithubWebhookExternalServices
+searchKey: webhooks.TestGitHubWebhookExternalServices
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubWebhookExternalServices(t *testing.T)
+func TestGitHubWebhookExternalServices(t *testing.T)
 ```
 
 ### <a id="errString" href="#errString">func errString(err error) string</a>

@@ -514,7 +514,7 @@ type AuthProviders struct {
 	Saml          *SAMLAuthProvider
 	Openidconnect *OpenIDConnectAuthProvider
 	HttpHeader    *HTTPHeaderAuthProvider
-	Github        *GitHubAuthProvider
+	GitHub        *GitHubAuthProvider
 	Gitlab        *GitLabAuthProvider
 }
 ```
@@ -2814,10 +2814,10 @@ type SiteConfiguration struct {
 	GitMaxConcurrentClones int `json:"gitMaxConcurrentClones,omitempty"`
 	// GitUpdateInterval description: JSON array of repo name patterns and update intervals. If a repo matches a pattern, the associated interval will be used. If it matches no patterns a default backoff heuristic will be used. Pattern matches are attempted in the order they are provided.
 	GitUpdateInterval []*UpdateIntervalRule `json:"gitUpdateInterval,omitempty"`
-	// GithubClientID description: Client ID for GitHub. (DEPRECATED)
-	GithubClientID string `json:"githubClientID,omitempty"`
-	// GithubClientSecret description: Client secret for GitHub. (DEPRECATED)
-	GithubClientSecret string `json:"githubClientSecret,omitempty"`
+	// GitHubClientID description: Client ID for GitHub. (DEPRECATED)
+	GitHubClientID string `json:"githubClientID,omitempty"`
+	// GitHubClientSecret description: Client secret for GitHub. (DEPRECATED)
+	GitHubClientSecret string `json:"githubClientSecret,omitempty"`
 	// HtmlBodyBottom description: HTML to inject at the bottom of the `<body>` element on each page, for analytics scripts
 	HtmlBodyBottom string `json:"htmlBodyBottom,omitempty"`
 	// HtmlBodyTop description: HTML to inject at the top of the `<body>` element on each page, for analytics scripts

@@ -75,22 +75,22 @@
         * [func (s *GitLabSource) getMergeRequestNotes(ctx context.Context, project *gitlab.Project, mr *gitlab.MergeRequest) ([]*gitlab.Note, error)](#GitLabSource.getMergeRequestNotes)
         * [func (s *GitLabSource) getMergeRequestPipelines(ctx context.Context, project *gitlab.Project, mr *gitlab.MergeRequest) ([]*gitlab.Pipeline, error)](#GitLabSource.getMergeRequestPipelines)
         * [func (s *GitLabSource) getMergeRequestResourceStateEvents(ctx context.Context, project *gitlab.Project, mr *gitlab.MergeRequest) ([]*gitlab.ResourceStateEvent, error)](#GitLabSource.getMergeRequestResourceStateEvents)
-    * [type GithubSource struct](#GithubSource)
-        * [func NewGithubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GithubSource, error)](#NewGithubSource)
-        * [func newGithubSource(c *schema.GitHubConnection, cf *httpcli.Factory, au auth.Authenticator) (*GithubSource, error)](#newGithubSource)
-        * [func (s GithubSource) CloseChangeset(ctx context.Context, c *Changeset) error](#GithubSource.CloseChangeset)
-        * [func (s GithubSource) CreateChangeset(ctx context.Context, c *Changeset) (bool, error)](#GithubSource.CreateChangeset)
-        * [func (s GithubSource) CreateComment(ctx context.Context, c *Changeset, text string) error](#GithubSource.CreateComment)
-        * [func (s GithubSource) CreateDraftChangeset(ctx context.Context, c *Changeset) (bool, error)](#GithubSource.CreateDraftChangeset)
-        * [func (s GithubSource) GitserverPushConfig(ctx context.Context, store *database.ExternalServiceStore, repo *types.Repo) (*protocol.PushConfig, error)](#GithubSource.GitserverPushConfig)
-        * [func (s GithubSource) LoadChangeset(ctx context.Context, cs *Changeset) error](#GithubSource.LoadChangeset)
-        * [func (s GithubSource) MergeChangeset(ctx context.Context, c *Changeset, squash bool) error](#GithubSource.MergeChangeset)
-        * [func (s GithubSource) ReopenChangeset(ctx context.Context, c *Changeset) error](#GithubSource.ReopenChangeset)
-        * [func (s GithubSource) UndraftChangeset(ctx context.Context, c *Changeset) error](#GithubSource.UndraftChangeset)
-        * [func (s GithubSource) UpdateChangeset(ctx context.Context, c *Changeset) error](#GithubSource.UpdateChangeset)
-        * [func (s GithubSource) ValidateAuthenticator(ctx context.Context) error](#GithubSource.ValidateAuthenticator)
-        * [func (s GithubSource) WithAuthenticator(a auth.Authenticator) (ChangesetSource, error)](#GithubSource.WithAuthenticator)
-        * [func (s GithubSource) createChangeset(ctx context.Context, c *Changeset, prInput *github.CreatePullRequestInput) (bool, error)](#GithubSource.createChangeset)
+    * [type GitHubSource struct](#GitHubSource)
+        * [func NewGitHubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GitHubSource, error)](#NewGitHubSource)
+        * [func newGitHubSource(c *schema.GitHubConnection, cf *httpcli.Factory, au auth.Authenticator) (*GitHubSource, error)](#newGitHubSource)
+        * [func (s GitHubSource) CloseChangeset(ctx context.Context, c *Changeset) error](#GitHubSource.CloseChangeset)
+        * [func (s GitHubSource) CreateChangeset(ctx context.Context, c *Changeset) (bool, error)](#GitHubSource.CreateChangeset)
+        * [func (s GitHubSource) CreateComment(ctx context.Context, c *Changeset, text string) error](#GitHubSource.CreateComment)
+        * [func (s GitHubSource) CreateDraftChangeset(ctx context.Context, c *Changeset) (bool, error)](#GitHubSource.CreateDraftChangeset)
+        * [func (s GitHubSource) GitserverPushConfig(ctx context.Context, store *database.ExternalServiceStore, repo *types.Repo) (*protocol.PushConfig, error)](#GitHubSource.GitserverPushConfig)
+        * [func (s GitHubSource) LoadChangeset(ctx context.Context, cs *Changeset) error](#GitHubSource.LoadChangeset)
+        * [func (s GitHubSource) MergeChangeset(ctx context.Context, c *Changeset, squash bool) error](#GitHubSource.MergeChangeset)
+        * [func (s GitHubSource) ReopenChangeset(ctx context.Context, c *Changeset) error](#GitHubSource.ReopenChangeset)
+        * [func (s GitHubSource) UndraftChangeset(ctx context.Context, c *Changeset) error](#GitHubSource.UndraftChangeset)
+        * [func (s GitHubSource) UpdateChangeset(ctx context.Context, c *Changeset) error](#GitHubSource.UpdateChangeset)
+        * [func (s GitHubSource) ValidateAuthenticator(ctx context.Context) error](#GitHubSource.ValidateAuthenticator)
+        * [func (s GitHubSource) WithAuthenticator(a auth.Authenticator) (ChangesetSource, error)](#GitHubSource.WithAuthenticator)
+        * [func (s GitHubSource) createChangeset(ctx context.Context, c *Changeset, prInput *github.CreatePullRequestInput) (bool, error)](#GitHubSource.createChangeset)
     * [type Sourcer interface](#Sourcer)
         * [func NewFakeSourcer(err error, source ChangesetSource) Sourcer](#NewFakeSourcer)
         * [func NewSourcer(cf *httpcli.Factory) Sourcer](#NewSourcer)
@@ -132,13 +132,13 @@
     * [func TestExtractCloneURL(t *testing.T)](#TestExtractCloneURL)
     * [func TestGitLabSource_ChangesetSource(t *testing.T)](#TestGitLabSource_ChangesetSource)
     * [func TestGitLabSource_WithAuthenticator(t *testing.T)](#TestGitLabSource_WithAuthenticator)
-    * [func TestGithubSource_CloseChangeset(t *testing.T)](#TestGithubSource_CloseChangeset)
-    * [func TestGithubSource_CreateChangeset(t *testing.T)](#TestGithubSource_CreateChangeset)
-    * [func TestGithubSource_CreateComment(t *testing.T)](#TestGithubSource_CreateComment)
-    * [func TestGithubSource_LoadChangeset(t *testing.T)](#TestGithubSource_LoadChangeset)
-    * [func TestGithubSource_ReopenChangeset(t *testing.T)](#TestGithubSource_ReopenChangeset)
-    * [func TestGithubSource_UpdateChangeset(t *testing.T)](#TestGithubSource_UpdateChangeset)
-    * [func TestGithubSource_WithAuthenticator(t *testing.T)](#TestGithubSource_WithAuthenticator)
+    * [func TestGitHubSource_CloseChangeset(t *testing.T)](#TestGitHubSource_CloseChangeset)
+    * [func TestGitHubSource_CreateChangeset(t *testing.T)](#TestGitHubSource_CreateChangeset)
+    * [func TestGitHubSource_CreateComment(t *testing.T)](#TestGitHubSource_CreateComment)
+    * [func TestGitHubSource_LoadChangeset(t *testing.T)](#TestGitHubSource_LoadChangeset)
+    * [func TestGitHubSource_ReopenChangeset(t *testing.T)](#TestGitHubSource_ReopenChangeset)
+    * [func TestGitHubSource_UpdateChangeset(t *testing.T)](#TestGitHubSource_UpdateChangeset)
+    * [func TestGitHubSource_WithAuthenticator(t *testing.T)](#TestGitHubSource_WithAuthenticator)
     * [func TestGitserverPushConfig(t *testing.T)](#TestGitserverPushConfig)
     * [func TestLoadExternalService(t *testing.T)](#TestLoadExternalService)
     * [func TestMain(m *testing.M)](#TestMain)
@@ -1150,201 +1150,201 @@ func (s *GitLabSource) getMergeRequestResourceStateEvents(ctx context.Context, p
 
 getMergeRequestResourceStateEvents retrieves the events attached to a merge request in descending time order. 
 
-### <a id="GithubSource" href="#GithubSource">type GithubSource struct</a>
+### <a id="GitHubSource" href="#GitHubSource">type GitHubSource struct</a>
 
 ```
-searchKey: sources.GithubSource
+searchKey: sources.GitHubSource
 tags: [struct]
 ```
 
 ```Go
-type GithubSource struct {
+type GitHubSource struct {
 	client *github.V4Client
 	au     auth.Authenticator
 }
 ```
 
-#### <a id="NewGithubSource" href="#NewGithubSource">func NewGithubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GithubSource, error)</a>
+#### <a id="NewGitHubSource" href="#NewGitHubSource">func NewGitHubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GitHubSource, error)</a>
 
 ```
-searchKey: sources.NewGithubSource
+searchKey: sources.NewGitHubSource
 tags: [function]
 ```
 
 ```Go
-func NewGithubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GithubSource, error)
+func NewGitHubSource(svc *types.ExternalService, cf *httpcli.Factory) (*GitHubSource, error)
 ```
 
-#### <a id="newGithubSource" href="#newGithubSource">func newGithubSource(c *schema.GitHubConnection, cf *httpcli.Factory, au auth.Authenticator) (*GithubSource, error)</a>
+#### <a id="newGitHubSource" href="#newGitHubSource">func newGitHubSource(c *schema.GitHubConnection, cf *httpcli.Factory, au auth.Authenticator) (*GitHubSource, error)</a>
 
 ```
-searchKey: sources.newGithubSource
+searchKey: sources.newGitHubSource
 tags: [function private]
 ```
 
 ```Go
-func newGithubSource(c *schema.GitHubConnection, cf *httpcli.Factory, au auth.Authenticator) (*GithubSource, error)
+func newGitHubSource(c *schema.GitHubConnection, cf *httpcli.Factory, au auth.Authenticator) (*GitHubSource, error)
 ```
 
-#### <a id="GithubSource.CloseChangeset" href="#GithubSource.CloseChangeset">func (s GithubSource) CloseChangeset(ctx context.Context, c *Changeset) error</a>
+#### <a id="GitHubSource.CloseChangeset" href="#GitHubSource.CloseChangeset">func (s GitHubSource) CloseChangeset(ctx context.Context, c *Changeset) error</a>
 
 ```
-searchKey: sources.GithubSource.CloseChangeset
+searchKey: sources.GitHubSource.CloseChangeset
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) CloseChangeset(ctx context.Context, c *Changeset) error
+func (s GitHubSource) CloseChangeset(ctx context.Context, c *Changeset) error
 ```
 
 CloseChangeset closes the given *Changeset on the code host and updates the Metadata column in the *batches.Changeset to the newly closed pull request. 
 
-#### <a id="GithubSource.CreateChangeset" href="#GithubSource.CreateChangeset">func (s GithubSource) CreateChangeset(ctx context.Context, c *Changeset) (bool, error)</a>
+#### <a id="GitHubSource.CreateChangeset" href="#GitHubSource.CreateChangeset">func (s GitHubSource) CreateChangeset(ctx context.Context, c *Changeset) (bool, error)</a>
 
 ```
-searchKey: sources.GithubSource.CreateChangeset
+searchKey: sources.GitHubSource.CreateChangeset
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) CreateChangeset(ctx context.Context, c *Changeset) (bool, error)
+func (s GitHubSource) CreateChangeset(ctx context.Context, c *Changeset) (bool, error)
 ```
 
 CreateChangeset creates the given changeset on the code host. 
 
-#### <a id="GithubSource.CreateComment" href="#GithubSource.CreateComment">func (s GithubSource) CreateComment(ctx context.Context, c *Changeset, text string) error</a>
+#### <a id="GitHubSource.CreateComment" href="#GitHubSource.CreateComment">func (s GitHubSource) CreateComment(ctx context.Context, c *Changeset, text string) error</a>
 
 ```
-searchKey: sources.GithubSource.CreateComment
+searchKey: sources.GitHubSource.CreateComment
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) CreateComment(ctx context.Context, c *Changeset, text string) error
+func (s GitHubSource) CreateComment(ctx context.Context, c *Changeset, text string) error
 ```
 
 CreateComment posts a comment on the Changeset. 
 
-#### <a id="GithubSource.CreateDraftChangeset" href="#GithubSource.CreateDraftChangeset">func (s GithubSource) CreateDraftChangeset(ctx context.Context, c *Changeset) (bool, error)</a>
+#### <a id="GitHubSource.CreateDraftChangeset" href="#GitHubSource.CreateDraftChangeset">func (s GitHubSource) CreateDraftChangeset(ctx context.Context, c *Changeset) (bool, error)</a>
 
 ```
-searchKey: sources.GithubSource.CreateDraftChangeset
+searchKey: sources.GitHubSource.CreateDraftChangeset
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) CreateDraftChangeset(ctx context.Context, c *Changeset) (bool, error)
+func (s GitHubSource) CreateDraftChangeset(ctx context.Context, c *Changeset) (bool, error)
 ```
 
 CreateDraftChangeset creates the given changeset on the code host in draft mode. 
 
-#### <a id="GithubSource.GitserverPushConfig" href="#GithubSource.GitserverPushConfig">func (s GithubSource) GitserverPushConfig(ctx context.Context, store *database.ExternalServiceStore, repo *types.Repo) (*protocol.PushConfig, error)</a>
+#### <a id="GitHubSource.GitserverPushConfig" href="#GitHubSource.GitserverPushConfig">func (s GitHubSource) GitserverPushConfig(ctx context.Context, store *database.ExternalServiceStore, repo *types.Repo) (*protocol.PushConfig, error)</a>
 
 ```
-searchKey: sources.GithubSource.GitserverPushConfig
+searchKey: sources.GitHubSource.GitserverPushConfig
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) GitserverPushConfig(ctx context.Context, store *database.ExternalServiceStore, repo *types.Repo) (*protocol.PushConfig, error)
+func (s GitHubSource) GitserverPushConfig(ctx context.Context, store *database.ExternalServiceStore, repo *types.Repo) (*protocol.PushConfig, error)
 ```
 
-#### <a id="GithubSource.LoadChangeset" href="#GithubSource.LoadChangeset">func (s GithubSource) LoadChangeset(ctx context.Context, cs *Changeset) error</a>
+#### <a id="GitHubSource.LoadChangeset" href="#GitHubSource.LoadChangeset">func (s GitHubSource) LoadChangeset(ctx context.Context, cs *Changeset) error</a>
 
 ```
-searchKey: sources.GithubSource.LoadChangeset
+searchKey: sources.GitHubSource.LoadChangeset
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) LoadChangeset(ctx context.Context, cs *Changeset) error
+func (s GitHubSource) LoadChangeset(ctx context.Context, cs *Changeset) error
 ```
 
 LoadChangeset loads the latest state of the given Changeset from the codehost. 
 
-#### <a id="GithubSource.MergeChangeset" href="#GithubSource.MergeChangeset">func (s GithubSource) MergeChangeset(ctx context.Context, c *Changeset, squash bool) error</a>
+#### <a id="GitHubSource.MergeChangeset" href="#GitHubSource.MergeChangeset">func (s GitHubSource) MergeChangeset(ctx context.Context, c *Changeset, squash bool) error</a>
 
 ```
-searchKey: sources.GithubSource.MergeChangeset
+searchKey: sources.GitHubSource.MergeChangeset
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) MergeChangeset(ctx context.Context, c *Changeset, squash bool) error
+func (s GitHubSource) MergeChangeset(ctx context.Context, c *Changeset, squash bool) error
 ```
 
 MergeChangeset merges a Changeset on the code host, if in a mergeable state. If squash is true, a squash-then-merge merge will be performed. 
 
-#### <a id="GithubSource.ReopenChangeset" href="#GithubSource.ReopenChangeset">func (s GithubSource) ReopenChangeset(ctx context.Context, c *Changeset) error</a>
+#### <a id="GitHubSource.ReopenChangeset" href="#GitHubSource.ReopenChangeset">func (s GitHubSource) ReopenChangeset(ctx context.Context, c *Changeset) error</a>
 
 ```
-searchKey: sources.GithubSource.ReopenChangeset
+searchKey: sources.GitHubSource.ReopenChangeset
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) ReopenChangeset(ctx context.Context, c *Changeset) error
+func (s GitHubSource) ReopenChangeset(ctx context.Context, c *Changeset) error
 ```
 
 ReopenChangeset reopens the given *Changeset on the code host. 
 
-#### <a id="GithubSource.UndraftChangeset" href="#GithubSource.UndraftChangeset">func (s GithubSource) UndraftChangeset(ctx context.Context, c *Changeset) error</a>
+#### <a id="GitHubSource.UndraftChangeset" href="#GitHubSource.UndraftChangeset">func (s GitHubSource) UndraftChangeset(ctx context.Context, c *Changeset) error</a>
 
 ```
-searchKey: sources.GithubSource.UndraftChangeset
+searchKey: sources.GitHubSource.UndraftChangeset
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) UndraftChangeset(ctx context.Context, c *Changeset) error
+func (s GitHubSource) UndraftChangeset(ctx context.Context, c *Changeset) error
 ```
 
 UndraftChangeset will update the Changeset on the source to be not in draft mode anymore. 
 
-#### <a id="GithubSource.UpdateChangeset" href="#GithubSource.UpdateChangeset">func (s GithubSource) UpdateChangeset(ctx context.Context, c *Changeset) error</a>
+#### <a id="GitHubSource.UpdateChangeset" href="#GitHubSource.UpdateChangeset">func (s GitHubSource) UpdateChangeset(ctx context.Context, c *Changeset) error</a>
 
 ```
-searchKey: sources.GithubSource.UpdateChangeset
+searchKey: sources.GitHubSource.UpdateChangeset
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) UpdateChangeset(ctx context.Context, c *Changeset) error
+func (s GitHubSource) UpdateChangeset(ctx context.Context, c *Changeset) error
 ```
 
 UpdateChangeset updates the given *Changeset in the code host. 
 
-#### <a id="GithubSource.ValidateAuthenticator" href="#GithubSource.ValidateAuthenticator">func (s GithubSource) ValidateAuthenticator(ctx context.Context) error</a>
+#### <a id="GitHubSource.ValidateAuthenticator" href="#GitHubSource.ValidateAuthenticator">func (s GitHubSource) ValidateAuthenticator(ctx context.Context) error</a>
 
 ```
-searchKey: sources.GithubSource.ValidateAuthenticator
+searchKey: sources.GitHubSource.ValidateAuthenticator
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) ValidateAuthenticator(ctx context.Context) error
+func (s GitHubSource) ValidateAuthenticator(ctx context.Context) error
 ```
 
-#### <a id="GithubSource.WithAuthenticator" href="#GithubSource.WithAuthenticator">func (s GithubSource) WithAuthenticator(a auth.Authenticator) (ChangesetSource, error)</a>
+#### <a id="GitHubSource.WithAuthenticator" href="#GitHubSource.WithAuthenticator">func (s GitHubSource) WithAuthenticator(a auth.Authenticator) (ChangesetSource, error)</a>
 
 ```
-searchKey: sources.GithubSource.WithAuthenticator
+searchKey: sources.GitHubSource.WithAuthenticator
 tags: [method]
 ```
 
 ```Go
-func (s GithubSource) WithAuthenticator(a auth.Authenticator) (ChangesetSource, error)
+func (s GitHubSource) WithAuthenticator(a auth.Authenticator) (ChangesetSource, error)
 ```
 
-#### <a id="GithubSource.createChangeset" href="#GithubSource.createChangeset">func (s GithubSource) createChangeset(ctx context.Context, c *Changeset, prInput *github.CreatePullRequestInput) (bool, error)</a>
+#### <a id="GitHubSource.createChangeset" href="#GitHubSource.createChangeset">func (s GitHubSource) createChangeset(ctx context.Context, c *Changeset, prInput *github.CreatePullRequestInput) (bool, error)</a>
 
 ```
-searchKey: sources.GithubSource.createChangeset
+searchKey: sources.GitHubSource.createChangeset
 tags: [method private]
 ```
 
 ```Go
-func (s GithubSource) createChangeset(ctx context.Context, c *Changeset, prInput *github.CreatePullRequestInput) (bool, error)
+func (s GitHubSource) createChangeset(ctx context.Context, c *Changeset, prInput *github.CreatePullRequestInput) (bool, error)
 ```
 
 ### <a id="Sourcer" href="#Sourcer">type Sourcer interface</a>
@@ -1840,81 +1840,81 @@ tags: [function private test]
 func TestGitLabSource_WithAuthenticator(t *testing.T)
 ```
 
-### <a id="TestGithubSource_CloseChangeset" href="#TestGithubSource_CloseChangeset">func TestGithubSource_CloseChangeset(t *testing.T)</a>
+### <a id="TestGitHubSource_CloseChangeset" href="#TestGitHubSource_CloseChangeset">func TestGitHubSource_CloseChangeset(t *testing.T)</a>
 
 ```
-searchKey: sources.TestGithubSource_CloseChangeset
+searchKey: sources.TestGitHubSource_CloseChangeset
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_CloseChangeset(t *testing.T)
+func TestGitHubSource_CloseChangeset(t *testing.T)
 ```
 
-### <a id="TestGithubSource_CreateChangeset" href="#TestGithubSource_CreateChangeset">func TestGithubSource_CreateChangeset(t *testing.T)</a>
+### <a id="TestGitHubSource_CreateChangeset" href="#TestGitHubSource_CreateChangeset">func TestGitHubSource_CreateChangeset(t *testing.T)</a>
 
 ```
-searchKey: sources.TestGithubSource_CreateChangeset
+searchKey: sources.TestGitHubSource_CreateChangeset
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_CreateChangeset(t *testing.T)
+func TestGitHubSource_CreateChangeset(t *testing.T)
 ```
 
-### <a id="TestGithubSource_CreateComment" href="#TestGithubSource_CreateComment">func TestGithubSource_CreateComment(t *testing.T)</a>
+### <a id="TestGitHubSource_CreateComment" href="#TestGitHubSource_CreateComment">func TestGitHubSource_CreateComment(t *testing.T)</a>
 
 ```
-searchKey: sources.TestGithubSource_CreateComment
+searchKey: sources.TestGitHubSource_CreateComment
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_CreateComment(t *testing.T)
+func TestGitHubSource_CreateComment(t *testing.T)
 ```
 
-### <a id="TestGithubSource_LoadChangeset" href="#TestGithubSource_LoadChangeset">func TestGithubSource_LoadChangeset(t *testing.T)</a>
+### <a id="TestGitHubSource_LoadChangeset" href="#TestGitHubSource_LoadChangeset">func TestGitHubSource_LoadChangeset(t *testing.T)</a>
 
 ```
-searchKey: sources.TestGithubSource_LoadChangeset
+searchKey: sources.TestGitHubSource_LoadChangeset
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_LoadChangeset(t *testing.T)
+func TestGitHubSource_LoadChangeset(t *testing.T)
 ```
 
-### <a id="TestGithubSource_ReopenChangeset" href="#TestGithubSource_ReopenChangeset">func TestGithubSource_ReopenChangeset(t *testing.T)</a>
+### <a id="TestGitHubSource_ReopenChangeset" href="#TestGitHubSource_ReopenChangeset">func TestGitHubSource_ReopenChangeset(t *testing.T)</a>
 
 ```
-searchKey: sources.TestGithubSource_ReopenChangeset
+searchKey: sources.TestGitHubSource_ReopenChangeset
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_ReopenChangeset(t *testing.T)
+func TestGitHubSource_ReopenChangeset(t *testing.T)
 ```
 
-### <a id="TestGithubSource_UpdateChangeset" href="#TestGithubSource_UpdateChangeset">func TestGithubSource_UpdateChangeset(t *testing.T)</a>
+### <a id="TestGitHubSource_UpdateChangeset" href="#TestGitHubSource_UpdateChangeset">func TestGitHubSource_UpdateChangeset(t *testing.T)</a>
 
 ```
-searchKey: sources.TestGithubSource_UpdateChangeset
+searchKey: sources.TestGitHubSource_UpdateChangeset
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_UpdateChangeset(t *testing.T)
+func TestGitHubSource_UpdateChangeset(t *testing.T)
 ```
 
-### <a id="TestGithubSource_WithAuthenticator" href="#TestGithubSource_WithAuthenticator">func TestGithubSource_WithAuthenticator(t *testing.T)</a>
+### <a id="TestGitHubSource_WithAuthenticator" href="#TestGitHubSource_WithAuthenticator">func TestGitHubSource_WithAuthenticator(t *testing.T)</a>
 
 ```
-searchKey: sources.TestGithubSource_WithAuthenticator
+searchKey: sources.TestGitHubSource_WithAuthenticator
 tags: [function private test]
 ```
 
 ```Go
-func TestGithubSource_WithAuthenticator(t *testing.T)
+func TestGitHubSource_WithAuthenticator(t *testing.T)
 ```
 
 ### <a id="TestGitserverPushConfig" href="#TestGitserverPushConfig">func TestGitserverPushConfig(t *testing.T)</a>

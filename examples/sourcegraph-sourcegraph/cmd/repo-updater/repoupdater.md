@@ -136,7 +136,7 @@ type Server struct {
 	*repos.Store
 	*repos.Syncer
 	SourcegraphDotComMode bool
-	GithubDotComSource    interface {
+	GitHubDotComSource    interface {
 		GetRepo(ctx context.Context, nameWithOwner string) (*types.Repo, error)
 	}
 	GitLabDotComSource interface {

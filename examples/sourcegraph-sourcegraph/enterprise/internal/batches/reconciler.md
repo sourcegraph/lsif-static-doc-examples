@@ -74,7 +74,7 @@
     * [func TestReconcilerProcess_IntegrationTest(t *testing.T)](#TestReconcilerProcess_IntegrationTest)
     * [func batchChangeURL(ctx context.Context, ns *database.Namespace, c *btypes.BatchChange) (string, error)](#batchChangeURL)
     * [func buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *protocol.PushConfig) (opts protocol.CreateCommitFromPatchRequest, err error)](#buildCommitOpts)
-    * [func buildGithubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest](#buildGithubPR)
+    * [func buildGitHubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest](#buildGitHubPR)
     * [func decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getNamespacer, cs *sources.Changeset) error](#decorateChangesetBody)
     * [func executePlan(ctx context.Context, gitserverClient GitserverClient, sourcer sources.Sourcer, noSleepBeforeSync bool, tx *store.Store, plan *Plan) (err error)](#executePlan)
     * [func loadBatchChange(ctx context.Context, tx getBatchChanger, id int64) (*btypes.BatchChange, error)](#loadBatchChange)
@@ -959,15 +959,15 @@ tags: [function private]
 func buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *protocol.PushConfig) (opts protocol.CreateCommitFromPatchRequest, err error)
 ```
 
-### <a id="buildGithubPR" href="#buildGithubPR">func buildGithubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest</a>
+### <a id="buildGitHubPR" href="#buildGitHubPR">func buildGitHubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest</a>
 
 ```
-searchKey: reconciler.buildGithubPR
+searchKey: reconciler.buildGitHubPR
 tags: [function private]
 ```
 
 ```Go
-func buildGithubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest
+func buildGitHubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest
 ```
 
 ### <a id="decorateChangesetBody" href="#decorateChangesetBody">func decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getNamespacer, cs *sources.Changeset) error</a>

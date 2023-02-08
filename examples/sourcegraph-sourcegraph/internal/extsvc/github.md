@@ -1607,7 +1607,7 @@ type Team struct {
 }
 ```
 
-A Team represents a team on Github. 
+A Team represents a team on GitHub. 
 
 ### <a id="TimelineItem" href="#TimelineItem">type TimelineItem struct</a>
 
@@ -2248,7 +2248,7 @@ tags: [method]
 func (c *V4Client) ClosePullRequest(ctx context.Context, pr *PullRequest) error
 ```
 
-ClosePullRequest closes the PullRequest on Github. 
+ClosePullRequest closes the PullRequest on GitHub. 
 
 #### <a id="V4Client.CreatePullRequest" href="#V4Client.CreatePullRequest">func (c *V4Client) CreatePullRequest(ctx context.Context, in *CreatePullRequestInput) (*PullRequest, error)</a>
 
@@ -2261,7 +2261,7 @@ tags: [method]
 func (c *V4Client) CreatePullRequest(ctx context.Context, in *CreatePullRequestInput) (*PullRequest, error)
 ```
 
-CreatePullRequest creates a PullRequest on Github. 
+CreatePullRequest creates a PullRequest on GitHub. 
 
 #### <a id="V4Client.CreatePullRequestComment" href="#V4Client.CreatePullRequestComment">func (c *V4Client) CreatePullRequestComment(ctx context.Context, pr *PullRequest, body string) error</a>
 
@@ -2274,7 +2274,7 @@ tags: [method]
 func (c *V4Client) CreatePullRequestComment(ctx context.Context, pr *PullRequest, body string) error
 ```
 
-CreatePullRequestComment creates a comment on the PullRequest on Github. 
+CreatePullRequestComment creates a comment on the PullRequest on GitHub. 
 
 #### <a id="V4Client.GetAuthenticatedUser" href="#V4Client.GetAuthenticatedUser">func (c *V4Client) GetAuthenticatedUser(ctx context.Context) (*Actor, error)</a>
 
@@ -2328,7 +2328,7 @@ tags: [method]
 func (c *V4Client) LoadPullRequest(ctx context.Context, pr *PullRequest) error
 ```
 
-LoadPullRequest loads a PullRequest from Github. 
+LoadPullRequest loads a PullRequest from GitHub. 
 
 #### <a id="V4Client.MarkPullRequestReadyForReview" href="#V4Client.MarkPullRequestReadyForReview">func (c *V4Client) MarkPullRequestReadyForReview(ctx context.Context, pr *PullRequest) error</a>
 
@@ -2341,7 +2341,7 @@ tags: [method]
 func (c *V4Client) MarkPullRequestReadyForReview(ctx context.Context, pr *PullRequest) error
 ```
 
-MarkPullRequestReadyForReview marks the PullRequest on Github as ready for review. 
+MarkPullRequestReadyForReview marks the PullRequest on GitHub as ready for review. 
 
 #### <a id="V4Client.MergePullRequest" href="#V4Client.MergePullRequest">func (c *V4Client) MergePullRequest(ctx context.Context, pr *PullRequest, squash bool) error</a>
 
@@ -2354,7 +2354,7 @@ tags: [method]
 func (c *V4Client) MergePullRequest(ctx context.Context, pr *PullRequest, squash bool) error
 ```
 
-MergePullRequest tries to merge the PullRequest on Github. 
+MergePullRequest tries to merge the PullRequest on GitHub. 
 
 #### <a id="V4Client.RateLimitMonitor" href="#V4Client.RateLimitMonitor">func (c *V4Client) RateLimitMonitor() *ratelimit.Monitor</a>
 
@@ -2380,7 +2380,7 @@ tags: [method]
 func (c *V4Client) ReopenPullRequest(ctx context.Context, pr *PullRequest) error
 ```
 
-ReopenPullRequest reopens the PullRequest on Github. 
+ReopenPullRequest reopens the PullRequest on GitHub. 
 
 #### <a id="V4Client.UpdatePullRequest" href="#V4Client.UpdatePullRequest">func (c *V4Client) UpdatePullRequest(ctx context.Context, in *UpdatePullRequestInput) (*PullRequest, error)</a>
 
@@ -2393,7 +2393,7 @@ tags: [method]
 func (c *V4Client) UpdatePullRequest(ctx context.Context, in *UpdatePullRequestInput) (*PullRequest, error)
 ```
 
-UpdatePullRequest creates a PullRequest on Github. 
+UpdatePullRequest creates a PullRequest on GitHub. 
 
 #### <a id="V4Client.WithAuthenticator" href="#V4Client.WithAuthenticator">func (c *V4Client) WithAuthenticator(a auth.Authenticator) *V4Client</a>
 

@@ -10,7 +10,7 @@
     * [func AssertGolden(t testing.TB, path string, update bool, want interface{})](#AssertGolden)
     * [func CreateZip(files map[string]string) ([]byte, error)](#CreateZip)
     * [func Diff(b1, b2 string) (string, error)](#Diff)
-    * [func FetchTarFromGithub(ctx context.Context, repo api.RepoName, commit api.CommitID) (io.ReadCloser, error)](#FetchTarFromGithub)
+    * [func FetchTarFromGitHub(ctx context.Context, repo api.RepoName, commit api.CommitID) (io.ReadCloser, error)](#FetchTarFromGitHub)
     * [func MockZipFile(data []byte) (*store.ZipFile, error)](#MockZipFile)
     * [func NewStore(files map[string]string) (*store.Store, func(), error)](#NewStore)
     * [func TempZipFileOnDisk(data []byte) (string, func(), error)](#TempZipFileOnDisk)
@@ -102,15 +102,15 @@ tags: [function]
 func Diff(b1, b2 string) (string, error)
 ```
 
-### <a id="FetchTarFromGithub" href="#FetchTarFromGithub">func FetchTarFromGithub(ctx context.Context, repo api.RepoName, commit api.CommitID) (io.ReadCloser, error)</a>
+### <a id="FetchTarFromGitHub" href="#FetchTarFromGitHub">func FetchTarFromGitHub(ctx context.Context, repo api.RepoName, commit api.CommitID) (io.ReadCloser, error)</a>
 
 ```
-searchKey: testutil.FetchTarFromGithub
+searchKey: testutil.FetchTarFromGitHub
 tags: [function]
 ```
 
 ```Go
-func FetchTarFromGithub(ctx context.Context, repo api.RepoName, commit api.CommitID) (io.ReadCloser, error)
+func FetchTarFromGitHub(ctx context.Context, repo api.RepoName, commit api.CommitID) (io.ReadCloser, error)
 ```
 
 ### <a id="MockZipFile" href="#MockZipFile">func MockZipFile(data []byte) (*store.ZipFile, error)</a>

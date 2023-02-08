@@ -27,7 +27,7 @@
     * [func TestComputeBitbucketBuildStatus(t *testing.T)](#TestComputeBitbucketBuildStatus)
     * [func TestComputeExternalState(t *testing.T)](#TestComputeExternalState)
     * [func TestComputeGitLabCheckState(t *testing.T)](#TestComputeGitLabCheckState)
-    * [func TestComputeGithubCheckState(t *testing.T)](#TestComputeGithubCheckState)
+    * [func TestComputeGitHubCheckState(t *testing.T)](#TestComputeGitHubCheckState)
     * [func TestComputeLabels(t *testing.T)](#TestComputeLabels)
     * [func TestComputeReviewState(t *testing.T)](#TestComputeReviewState)
     * [func bbsActivity(id int64, t time.Time, username string, kind btypes.ChangesetEventKind) *btypes.ChangesetEvent](#bbsActivity)
@@ -63,8 +63,8 @@
     * [func initialExternalState(ch *btypes.Changeset, ce ChangesetEvents) btypes.ChangesetExternalState](#initialExternalState)
     * [func parseBitbucketBuildState(s string) btypes.ChangesetCheckState](#parseBitbucketBuildState)
     * [func parseGitLabPipelineStatus(status gitlab.PipelineStatus) btypes.ChangesetCheckState](#parseGitLabPipelineStatus)
-    * [func parseGithubCheckState(s string) btypes.ChangesetCheckState](#parseGithubCheckState)
-    * [func parseGithubCheckSuiteState(status, conclusion string) btypes.ChangesetCheckState](#parseGithubCheckSuiteState)
+    * [func parseGitHubCheckState(s string) btypes.ChangesetCheckState](#parseGitHubCheckState)
+    * [func parseGitHubCheckSuiteState(status, conclusion string) btypes.ChangesetCheckState](#parseGitHubCheckSuiteState)
     * [func reduceReviewStates(statesByAuthor map[string]btypes.ChangesetReviewState) btypes.ChangesetReviewState](#reduceReviewStates)
     * [func selectReviewState(states map[btypes.ChangesetReviewState]bool) btypes.ChangesetReviewState](#selectReviewState)
     * [func setDeletedAt(c *btypes.Changeset, deletedAt time.Time) *btypes.Changeset](#setDeletedAt)
@@ -367,15 +367,15 @@ tags: [function private test]
 func TestComputeGitLabCheckState(t *testing.T)
 ```
 
-### <a id="TestComputeGithubCheckState" href="#TestComputeGithubCheckState">func TestComputeGithubCheckState(t *testing.T)</a>
+### <a id="TestComputeGitHubCheckState" href="#TestComputeGitHubCheckState">func TestComputeGitHubCheckState(t *testing.T)</a>
 
 ```
-searchKey: state.TestComputeGithubCheckState
+searchKey: state.TestComputeGitHubCheckState
 tags: [function private test]
 ```
 
 ```Go
-func TestComputeGithubCheckState(t *testing.T)
+func TestComputeGitHubCheckState(t *testing.T)
 ```
 
 ### <a id="TestComputeLabels" href="#TestComputeLabels">func TestComputeLabels(t *testing.T)</a>
@@ -785,26 +785,26 @@ tags: [function private]
 func parseGitLabPipelineStatus(status gitlab.PipelineStatus) btypes.ChangesetCheckState
 ```
 
-### <a id="parseGithubCheckState" href="#parseGithubCheckState">func parseGithubCheckState(s string) btypes.ChangesetCheckState</a>
+### <a id="parseGitHubCheckState" href="#parseGitHubCheckState">func parseGitHubCheckState(s string) btypes.ChangesetCheckState</a>
 
 ```
-searchKey: state.parseGithubCheckState
+searchKey: state.parseGitHubCheckState
 tags: [function private]
 ```
 
 ```Go
-func parseGithubCheckState(s string) btypes.ChangesetCheckState
+func parseGitHubCheckState(s string) btypes.ChangesetCheckState
 ```
 
-### <a id="parseGithubCheckSuiteState" href="#parseGithubCheckSuiteState">func parseGithubCheckSuiteState(status, conclusion string) btypes.ChangesetCheckState</a>
+### <a id="parseGitHubCheckSuiteState" href="#parseGitHubCheckSuiteState">func parseGitHubCheckSuiteState(status, conclusion string) btypes.ChangesetCheckState</a>
 
 ```
-searchKey: state.parseGithubCheckSuiteState
+searchKey: state.parseGitHubCheckSuiteState
 tags: [function private]
 ```
 
 ```Go
-func parseGithubCheckSuiteState(status, conclusion string) btypes.ChangesetCheckState
+func parseGitHubCheckSuiteState(status, conclusion string) btypes.ChangesetCheckState
 ```
 
 ### <a id="reduceReviewStates" href="#reduceReviewStates">func reduceReviewStates(statesByAuthor map[string]btypes.ChangesetReviewState) btypes.ChangesetReviewState</a>

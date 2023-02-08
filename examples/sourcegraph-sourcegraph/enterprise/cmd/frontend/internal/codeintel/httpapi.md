@@ -122,7 +122,7 @@
     * [func clientError(message string, vals ...interface{}) error](#clientError)
     * [func copyAll(w http.ResponseWriter, r io.Reader)](#copyAll)
     * [func enforceAuth(ctx context.Context, w http.ResponseWriter, r *http.Request, repoName string) bool](#enforceAuth)
-    * [func enforceAuthGithub(ctx context.Context, w http.ResponseWriter, r *http.Request, repoName string) (int, error)](#enforceAuthGithub)
+    * [func enforceAuthGitHub(ctx context.Context, w http.ResponseWriter, r *http.Request, repoName string) (int, error)](#enforceAuthGitHub)
     * [func ensureRepoAndCommitExist(ctx context.Context, w http.ResponseWriter, repoName, commit string) (*types.Repo, bool)](#ensureRepoAndCommitExist)
     * [func formatAWSError(err error) string](#formatAWSError)
     * [func getQuery(r *http.Request, name string) string](#getQuery)
@@ -1789,15 +1789,15 @@ tags: [function private]
 func enforceAuth(ctx context.Context, w http.ResponseWriter, r *http.Request, repoName string) bool
 ```
 
-### <a id="enforceAuthGithub" href="#enforceAuthGithub">func enforceAuthGithub(ctx context.Context, w http.ResponseWriter, r *http.Request, repoName string) (int, error)</a>
+### <a id="enforceAuthGitHub" href="#enforceAuthGitHub">func enforceAuthGitHub(ctx context.Context, w http.ResponseWriter, r *http.Request, repoName string) (int, error)</a>
 
 ```
-searchKey: httpapi.enforceAuthGithub
+searchKey: httpapi.enforceAuthGitHub
 tags: [function private]
 ```
 
 ```Go
-func enforceAuthGithub(ctx context.Context, w http.ResponseWriter, r *http.Request, repoName string) (int, error)
+func enforceAuthGitHub(ctx context.Context, w http.ResponseWriter, r *http.Request, repoName string) (int, error)
 ```
 
 ### <a id="ensureRepoAndCommitExist" href="#ensureRepoAndCommitExist">func ensureRepoAndCommitExist(ctx context.Context, w http.ResponseWriter, repoName, commit string) (*types.Repo, bool)</a>
